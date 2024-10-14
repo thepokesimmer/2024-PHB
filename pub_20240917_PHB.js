@@ -29,7 +29,7 @@ SourceList.LEGACYCLASS = {
   defaultExcluded : true,
 };
 
-// Coded By: ThePokésimmer with contributions from morepurplemorebetter (Joost), MasterJedi2014, Shroo, TrackAtNite, evanelric, TappyTap, Mente, Rocky, ShadowzAll
+// Coded By: ThePokésimmer with contributions from morepurplemorebetter (Joost), MasterJedi2014, Shroo, Reading Toskr, TrackAtNite, evanelric, TappyTap, Mente, Rocky, ShadowzAll
 
 //Functions
 
