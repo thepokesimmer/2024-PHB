@@ -1786,12 +1786,17 @@ legacyClassRefactor("druid", {
       source: [["PHB2024", 80]],
       minlevel: 1,
       languageProfs: ["Druidic"],
-      spellcastingBonus: [{
-        name: "Druidic",
-        spells: ["speak with animals"],
-        selection: ["speak with animals"],
-        times: 1,
-      }],
+      calcChanges : {
+        spellAdd : [
+          function (spellKey, spellObj, spName) {
+            // only change the spell if it's from druid CurrentSpells object.
+            if(spellKey === "speak with animals" && spName === "druid") {
+              spellObj.firstCol = "markedbox" // Always prepared
+
+            }
+          }
+        ]
+      },
       description: desc([
         "I know Druidic, the secret language of druids. I can leave hidden messages in it. I always have Speak with Animals prepared.",
       ]),
@@ -1865,8 +1870,24 @@ legacyClassRefactor("druid", {
         name: "Wild Companion",
         spells: ["find familiar"],
         selection: ["find familiar"],
-        times: 1,
       }],
+      spellChanges : {
+        "find familiar" : {
+          components : "V,S", // Does not require materials anymore
+          compMaterial : "",
+          changes : "\"Gain the services of a familiar; bns see through its eyes; it can deliver touch spells"
+        }
+      },
+      calcChanges : {
+        spellAdd : [
+          function (spellKey, spellObj, spName) {
+            // only change the spell if it's from druid CurrentSpells object.
+            if(spellKey === "find familiar" && spName === "druid") {
+              spellObj.firstCol = "markedbox" // Always prepared
+            }
+          }
+        ]
+      },
       description: desc([
         "As a Magic action, I can expend a spell slot or a use of Wild Shape to cast the Find Familiar spell without Material components.",
         "When I cast the spell in this way, the familiar is Fey and disappears when I finish a Long Rest.",
@@ -1884,8 +1905,6 @@ legacyClassRefactor("druid", {
       name: "Wild Resurgence",
       source: [["PHB2024", 81]],
       minlevel: 5,
-      usages: 1,
-      recovery: "long rest",
       description: desc([
         "Once per turn, I can regain a Wild Shape use by expending a spell slot. I can also exchange a Wild Shape use for a level 1 spell slot once per long rest.",
       ]),
@@ -2192,9 +2211,12 @@ legacySubClassRefactor("druid", "stars", {
       source: [["PHB2024", 88]],
       minlevel: 3,
       description: desc([
-        "I create a star map as my Spellcasting Focus. With it, I have Guidance and Guiding Bolt prepared. I can cast Guiding Bolt without a spell slot, up to my Wisdom modifier times per Long Rest. If lost, I can recreate the map during a Short or Long Rest.",
+        "I've created a star map, a Tiny object which i can use as my spellcasting focus.",
+        "If I lose it, I can recreate the map during a Short or Long Rest.",
+        "While holding it, I know the Guidance cantrip and always have Guiding Bolt prepared.",
+        "I can cast Guiding Bolt without expending a spell slot, up to my Wisdom modifier times per long rest. ",
       ]),
-	  spellcastingBonus : [{
+	    spellcastingBonus : [{
         name : "Star Map",
         spells : ["guidance"],
         selection : ["guidance"],
@@ -2202,39 +2224,89 @@ legacySubClassRefactor("druid", "stars", {
         name : "Star Map",
         spells : ["guiding bolt"],
         selection : ["guiding bolt"],
-        prepared : true,
+        firstCol: "markedbox"
       }],
       additional : "Guiding Bolt",
       usages: "Wisdom modifier per ",
-	  usagescalc: "event.value = Math.max(1, What('Wis Mod'));",
+	    usagescalc: "event.value = Math.max(1, What('Wis Mod'));",
       recovery : "long rest"
     },
     "subclassfeature3.1": {
       name: "Starry Form",
       source: [["PHB2024", 88]],
       minlevel: 3,
-      toNotesPage: [{
-        name: "Starry Forms",
-        note: [
-          "Archer : A constellation of an archer appears on me. When I activate this form and as a Bonus Action on my subsequent turns while it lasts, I can make a ranged spell attack, hurling a luminous arrow that targets one creature within 60 feet. On a hit, the attack deals Radiant damage equal to 1d8 + 1d8(at level 10) plus my Wisdom modifier.",
-          "Chalice : A constellation of a life-giving goblet appears on me. Whenever I cast a spell using a spell slot that restores Hit Points to a creature, I or another creature within 30 feet of me can regain Hit Points equal to 1d8 + 1d8(at level 10) plus my Wisdom modifier.",
-          "Dragon : A constellation of a wise dragon appears on me. When I make an Intelligence or a Wisdom check or a Constitution saving throw to maintain Concentration, I can treat a roll of 9 or lower on the d20 as a 10. At level 10, I gain a Fly Speed of 20 feet.",
-        ],
-      }],
-      description: desc([
-        "As a Bonus Action, I can use Wild Shape to assume a starry form for 10 minutes. I choose one constellation (see notes page) for options."
+      description : desc([
+        "As a bonus action, I can expend a use of wild shape to take on a starry form for 10 min",
+        "In that form I become luminous and shed bright light in a 10-ft radius and dim light for an extra 10-ft radius",
+        "When I do so, I choose one constellation that glimmers on my body, granting me benefits",
+        "See the 3rd page's \"Notes\" section for the benefits of the possible constellations"
       ]),
+      weaponOptions : [{
+        regExpSearch : /^(?=.*luminous)(?=.*arrow).*$/i,
+        name : "Luminous Arrow",
+        source : [["PHB2024", 89]],
+        ability : 5,
+        type : "Spell",
+        damage : [1, 8, "radiant"],
+        range : "60 ft",
+        description : "Use as bonus action",
+        abilitytodamage : true,
+        useSpellMod : "druid",
+        luminousarrow : true,
+        selectNow : true
+      }],
+      extraname : "Starry Form",
+      "archer constellation" : {
+        name : "Archer Constellation",
+        source : [["PHB2024", 89]],
+        description : desc([
+          "As a bonus action, I can make a ranged spell attack to hurl a luminous arrow 60 ft"
+        ]),
+        additional : levels.map(function (n) {
+          return n < 2 ? "" : (n < 10 ? 1 : 2) + "d8 + Wisdom modifier radiant damage";
+        }),
+        action : [["bonus action", " (Luminous Arrow)"]]
+      },
+      "chalice constellation" : {
+        name : "Chalice Constellation",
+        source : [["PHB2024", 89]],
+        description : desc([
+          "When I cast a healing spell with a spell slot, I can heal myself or another within 30 ft of me"
+        ]),
+        additional : levels.map(function (n) {
+          return n < 2 ? "" : (n < 10 ? 1 : 2) + "d8 + Wisdom modifier hit points restored";
+        })
+      },
+      "dragon constellation" : {
+        name : "Dragon Constellation",
+        source : [["PHB2024", 89]],
+        description : desc([
+          "I can treat a roll below 10 as a 10 for Int/Wis/Con checks and saves to maintain concentration",
+          "From 10th-level onwards, I also gain a flying speed of 20 ft and can hover"
+        ])
+      },
+      autoSelectExtrachoices : [{
+        extrachoice : "archer constellation"
+      }, {
+        extrachoice : "chalice constellation"
+      }, {
+        extrachoice : "dragon constellation"
+      }]
     },
     "subclassfeature6": {
       name: "Cosmic Omen",
       source: [["PHB2024", 89]],
       minlevel: 6,
-	  usages: "Wisdom modifier per ",
-	  usagescalc: "event.value = Math.max(1, What('Wis Mod'));",
-	  recovery: "long rest",
-      description: desc([
-        "After a long rest, I roll a die for omens. If even, I can add 1d6 to an ally's roll; if odd, subtract 1d6 from an enemy's roll. I can use this Reaction equal to my Wisdom modifier per Long Rest.",      
-	  ]),
+      description : desc([
+        "When I finish a long rest, I roll a die to gain an omen based on the result (odd/even)",
+        "As a reaction when a creature I can see in 30 ft makes an D20 Test, I can:",
+        " \u2022 Weal (even): add 1d6 to the number rolled to the total",
+        " \u2022 Woe (odd): subtract 1d6 from the number rolled to the total"
+      ]),
+      action: [["reaction", "Cosmic Omen"]],
+	    usages: "Wisdom modifier per ",
+	    usagescalc: "event.value = Math.max(1, What('Wis Mod'));",
+	    recovery: "long rest"
     },
     "subclassfeature10": {
       name: "Twinkling Constellations",
@@ -2243,15 +2315,34 @@ legacySubClassRefactor("druid", "stars", {
       description: desc([
         "My starry form improves, see notes page for improvements. I can also change constellations at the start of each turn.",
       ]),
+      description : desc([
+        "While in my starry form, I can change the constellation at the start of each of my turns",
+        "The benefit of my constellations improve, see the 3rd page's \"Notes\" section"
+      ]),
+      calcChanges : {
+        atkAdd : [
+          function (fields, v) {
+            if (v.theWea.luminousarrow && fields.Damage_Die.indexOf('1d8') !== -1) {
+              fields.Damage_Die = fields.Damage_Die.replace('1d8', '2d8');
+            };
+          },
+          '',
+          1
+        ]
+      }
     },
     "subclassfeature14": {
       name: "Full of Stars",
       source: [["PHB2024", 89]],
       minlevel: 14,
-      dmgres: ["Bludgeoning", "Piercing", "Slashing"],
       description: desc([
         "while in starry form, I gain Resistance to Bludgeoning, Piercing, and Slashing damage.",
       ]),
+      dmgres : [
+        ["Bludgeoning", "Bludgeon. (in form)"],
+        ["Piercing", "Piercing (in form)"],
+        ["Slashing", "Slashing (in form)"]
+      ]
     },
   },
 });
