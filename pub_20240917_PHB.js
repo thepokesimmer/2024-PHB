@@ -1786,12 +1786,17 @@ legacyClassRefactor("druid", {
       source: [["PHB2024", 80]],
       minlevel: 1,
       languageProfs: ["Druidic"],
-      spellcastingBonus: [{
-        name: "Druidic",
-        spells: ["speak with animals"],
-        selection: ["speak with animals"],
-        firstCol: "markedbox"
-      }],
+      calcChanges : {
+        spellAdd : [
+          function (spellKey, spellObj, spName) {
+            // only change the spell if it's from druid CurrentSpells object.
+            if(spellKey === "speak with animals" && spName === "druid") {
+              spellObj.firstCol = "markedbox" // Always prepared
+
+            }
+          }
+        ]
+      },
       description: desc([
         "I know Druidic, the secret language of druids. I can leave hidden messages in it. I always have Speak with Animals prepared.",
       ]),
