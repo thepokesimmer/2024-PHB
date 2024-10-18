@@ -1790,7 +1790,7 @@ legacyClassRefactor("druid", {
         name: "Druidic",
         spells: ["speak with animals"],
         selection: ["speak with animals"],
-        times: 1,
+        firstCol: "markedbox"
       }],
       description: desc([
         "I know Druidic, the secret language of druids. I can leave hidden messages in it. I always have Speak with Animals prepared.",
