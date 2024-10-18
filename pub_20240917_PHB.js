@@ -2235,17 +2235,63 @@ legacySubClassRefactor("druid", "stars", {
       name: "Starry Form",
       source: [["PHB2024", 88]],
       minlevel: 3,
-      toNotesPage: [{
-        name: "Starry Forms",
-        note: [
-          "Archer : A constellation of an archer appears on me. When I activate this form and as a Bonus Action on my subsequent turns while it lasts, I can make a ranged spell attack, hurling a luminous arrow that targets one creature within 60 feet. On a hit, the attack deals Radiant damage equal to 1d8 + 1d8(at level 10) plus my Wisdom modifier.",
-          "Chalice : A constellation of a life-giving goblet appears on me. Whenever I cast a spell using a spell slot that restores Hit Points to a creature, I or another creature within 30 feet of me can regain Hit Points equal to 1d8 + 1d8(at level 10) plus my Wisdom modifier.",
-          "Dragon : A constellation of a wise dragon appears on me. When I make an Intelligence or a Wisdom check or a Constitution saving throw to maintain Concentration, I can treat a roll of 9 or lower on the d20 as a 10. At level 10, I gain a Fly Speed of 20 feet.",
-        ],
-      }],
-      description: desc([
-        "As a Bonus Action, I can use Wild Shape to assume a starry form for 10 minutes. I choose one constellation (see notes page) for options."
+      description : desc([
+        "As a bonus action, I can expend a use of wild shape to take on a starry form for 10 min",
+        "In that form I become luminous and shed bright light in a 10-ft radius and dim light for an extra 10-ft radius",
+        "When I do so, I choose one constellation that glimmers on my body, granting me benefits",
+        "See the 3rd page's \"Notes\" section for the benefits of the possible constellations"
       ]),
+      weaponOptions : [{
+        regExpSearch : /^(?=.*luminous)(?=.*arrow).*$/i,
+        name : "Luminous Arrow",
+        source : [["PHB2024", 89]],
+        ability : 5,
+        type : "Spell",
+        damage : [1, 8, "radiant"],
+        range : "60 ft",
+        description : "Use as bonus action",
+        abilitytodamage : true,
+        useSpellMod : "druid",
+        luminousarrow : true,
+        selectNow : true
+      }],
+      extraname : "Starry Form",
+      "archer constellation" : {
+        name : "Archer Constellation",
+        source : [["PHB2024", 89]],
+        description : desc([
+          "As a bonus action, I can make a ranged spell attack to hurl a luminous arrow 60 ft"
+        ]),
+        additional : levels.map(function (n) {
+          return n < 2 ? "" : (n < 10 ? 1 : 2) + "d8 + Wisdom modifier radiant damage";
+        }),
+        action : [["bonus action", " (Luminous Arrow)"]]
+      },
+      "chalice constellation" : {
+        name : "Chalice Constellation",
+        source : [["PHB2024", 89]],
+        description : desc([
+          "When I cast a healing spell with a spell slot, I can heal myself or another within 30 ft of me"
+        ]),
+        additional : levels.map(function (n) {
+          return n < 2 ? "" : (n < 10 ? 1 : 2) + "d8 + Wisdom modifier hit points restored";
+        })
+      },
+      "dragon constellation" : {
+        name : "Dragon Constellation",
+        source : [["PHB2024", 89]],
+        description : desc([
+          "I can treat a roll below 10 as a 10 for Int/Wis/Con checks and saves to maintain concentration",
+          "From 10th-level onwards, I also gain a flying speed of 20 ft and can hover"
+        ])
+      },
+      autoSelectExtrachoices : [{
+        extrachoice : "archer constellation"
+      }, {
+        extrachoice : "chalice constellation"
+      }, {
+        extrachoice : "dragon constellation"
+      }]
     },
     "subclassfeature6": {
       name: "Cosmic Omen",
