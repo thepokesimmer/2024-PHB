@@ -2225,7 +2225,7 @@ legacySubClassRefactor("druid", "stars", {
       }],
       additional : "Guiding Bolt",
       usages: "Wisdom modifier per ",
-	  usagescalc: "event.value = Math.max(1, What('Wis Mod'));",
+	    usagescalc: "event.value = Math.max(1, What('Wis Mod'));",
       recovery : "long rest"
     },
     "subclassfeature3.1": {
