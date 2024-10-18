@@ -2297,12 +2297,16 @@ legacySubClassRefactor("druid", "stars", {
       name: "Cosmic Omen",
       source: [["PHB2024", 89]],
       minlevel: 6,
-	  usages: "Wisdom modifier per ",
-	  usagescalc: "event.value = Math.max(1, What('Wis Mod'));",
-	  recovery: "long rest",
-      description: desc([
-        "After a long rest, I roll a die for omens. If even, I can add 1d6 to an ally's roll; if odd, subtract 1d6 from an enemy's roll. I can use this Reaction equal to my Wisdom modifier per Long Rest.",      
-	  ]),
+      description : desc([
+        "When I finish a long rest, I roll a die to gain an omen based on the result (odd/even)",
+        "As a reaction when a creature I can see in 30 ft makes an D20 Test, I can:",
+        " \u2022 Weal (even): add 1d6 to the number rolled to the total",
+        " \u2022 Woe (odd): subtract 1d6 from the number rolled to the total"
+      ]),
+      action: [["reaction", "Cosmic Omen"]],
+	    usages: "Wisdom modifier per ",
+	    usagescalc: "event.value = Math.max(1, What('Wis Mod'));",
+	    recovery: "long rest"
     },
     "subclassfeature10": {
       name: "Twinkling Constellations",
