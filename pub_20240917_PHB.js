@@ -2221,7 +2221,7 @@ legacySubClassRefactor("druid", "stars", {
         name : "Star Map",
         spells : ["guiding bolt"],
         selection : ["guiding bolt"],
-        prepared : true,
+        firstCol: "markedbox"
       }],
       additional : "Guiding Bolt",
       usages: "Wisdom modifier per ",
