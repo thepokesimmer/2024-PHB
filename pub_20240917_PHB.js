@@ -2211,7 +2211,10 @@ legacySubClassRefactor("druid", "stars", {
       source: [["PHB2024", 88]],
       minlevel: 3,
       description: desc([
-        "I create a star map as my Spellcasting Focus. With it, I have Guidance and Guiding Bolt prepared. I can cast Guiding Bolt without a spell slot, up to my Wisdom modifier times per Long Rest. If lost, I can recreate the map during a Short or Long Rest.",
+        "I've created a star map, a Tiny object which i can use as my spellcasting focus.",
+        "If I lose it, I can recreate the map during a Short or Long Rest.",
+        "While holding it, I know the Guidance cantrip and always have Guiding Bolt prepared.",
+        "I can cast Guiding Bolt without expending a spell slot, up to my Wisdom modifier times per long rest. ",
       ]),
 	    spellcastingBonus : [{
         name : "Star Map",
