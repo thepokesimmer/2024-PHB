@@ -1870,7 +1870,6 @@ legacyClassRefactor("druid", {
         name: "Wild Companion",
         spells: ["find familiar"],
         selection: ["find familiar"],
-        times: 1,
       }],
       description: desc([
         "As a Magic action, I can expend a spell slot or a use of Wild Shape to cast the Find Familiar spell without Material components.",
