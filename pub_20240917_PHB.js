@@ -1871,6 +1871,23 @@ legacyClassRefactor("druid", {
         spells: ["find familiar"],
         selection: ["find familiar"],
       }],
+      spellChanges : {
+        "find familiar" : {
+          components : "V,S", // Does not require materials anymore
+          compMaterial : "",
+          changes : "\"Gain the services of a familiar; bns see through its eyes; it can deliver touch spells"
+        }
+      },
+      calcChanges : {
+        spellAdd : [
+          function (spellKey, spellObj, spName) {
+            // only change the spell if it's from druid CurrentSpells object.
+            if(spellKey === "find familiar" && spName === "druid") {
+              spellObj.firstCol = "markedbox" // Always prepared
+            }
+          }
+        ]
+      },
       description: desc([
         "As a Magic action, I can expend a spell slot or a use of Wild Shape to cast the Find Familiar spell without Material components.",
         "When I cast the spell in this way, the familiar is Fey and disappears when I finish a Long Rest.",
