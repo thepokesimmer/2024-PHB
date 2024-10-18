@@ -2335,10 +2335,14 @@ legacySubClassRefactor("druid", "stars", {
       name: "Full of Stars",
       source: [["PHB2024", 89]],
       minlevel: 14,
-      dmgres: ["Bludgeoning", "Piercing", "Slashing"],
       description: desc([
         "while in starry form, I gain Resistance to Bludgeoning, Piercing, and Slashing damage.",
       ]),
+      dmgres : [
+        ["Bludgeoning", "Bludgeon. (in form)"],
+        ["Piercing", "Piercing (in form)"],
+        ["Slashing", "Slashing (in form)"]
+      ]
     },
   },
 });
