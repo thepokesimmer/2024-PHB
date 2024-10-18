@@ -2213,7 +2213,7 @@ legacySubClassRefactor("druid", "stars", {
       description: desc([
         "I create a star map as my Spellcasting Focus. With it, I have Guidance and Guiding Bolt prepared. I can cast Guiding Bolt without a spell slot, up to my Wisdom modifier times per Long Rest. If lost, I can recreate the map during a Short or Long Rest.",
       ]),
-	  spellcastingBonus : [{
+	    spellcastingBonus : [{
         name : "Star Map",
         spells : ["guidance"],
         selection : ["guidance"],
