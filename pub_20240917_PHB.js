@@ -1905,8 +1905,6 @@ legacyClassRefactor("druid", {
       name: "Wild Resurgence",
       source: [["PHB2024", 81]],
       minlevel: 5,
-      usages: 1,
-      recovery: "long rest",
       description: desc([
         "Once per turn, I can regain a Wild Shape use by expending a spell slot. I can also exchange a Wild Shape use for a level 1 spell slot once per long rest.",
       ]),
