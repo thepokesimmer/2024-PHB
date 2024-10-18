@@ -4541,7 +4541,6 @@ legacyClassRefactor("ranger", {
 	spellcastingTable: [[0, 0, 0, 0, 0, 0, 0, 0, 0]].concat(levels.map(function (n) {
 		return defaultSpellTable[Math.ceil(n / 2)];
 	})),
-	spellcastingExtra: ["hunter's mark"],
 	features: {
 		"favored enemy": {
 			name: "Favored Enemy",
@@ -4550,6 +4549,17 @@ legacyClassRefactor("ranger", {
 			usages: [2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6],
 			recovery: "LR",
 			altResource: "SS",
+			calcChanges : {
+				spellAdd : [
+					function (spellKey, spellObj, spName) {
+					// only change the spell if it's from druid CurrentSpells object.
+						if(spellKey === "hunter's mark" && spName === "ranger") {
+							spellObj.firstCol = "markedbox" // Always prepared
+
+						}
+					}
+				]
+			},
 			description: desc([
 				"I always have the Hunter's Mark spell prepared and can cast it a number of times without expending a spell slot per long rest.",
 			]),
@@ -5062,7 +5072,7 @@ legacySubClassRefactor("ranger", "fey wanderer", {
 	regExpSearch: /^(?=.*(ranger))(?=.*(fey))(?=.*(wanderer)).*$/i,
 	subname: "Fey Wanderer",
 	source: [["PHB2024", 124]],
-	spellcastingExtra: ["charm person", "hunter's mark", "misty step", "summon fey", "dimension door", "mislead"],
+	spellcastingExtra: ["charm person", "misty step", "summon fey", "dimension door", "mislead"],
 	features: {
 		"subclassfeature3": {
 			name: "Dreadful Strikes",
@@ -5154,7 +5164,7 @@ legacySubClassRefactor("ranger", "gloom stalker", {
 	regExpSearch: /^(?=.*(ranger))(?=.*(gloom))(?=.*(stalker)).*$/i,
 	subname: "Gloom Stalker",
 	source: [["PHB2024", 125]],
-	spellcastingExtra: ["disguise self", "hunter's mark", "rope trick", "fear", "greater invisibility", "seeming"],
+	spellcastingExtra: ["disguise self", "rope trick", "fear", "greater invisibility", "seeming"],
 	features: {
 		"subclassfeature3": {
 			name: "Dread Ambusher",
