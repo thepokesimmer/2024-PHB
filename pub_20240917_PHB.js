@@ -2315,6 +2315,21 @@ legacySubClassRefactor("druid", "stars", {
       description: desc([
         "My starry form improves, see notes page for improvements. I can also change constellations at the start of each turn.",
       ]),
+      description : desc([
+        "While in my starry form, I can change the constellation at the start of each of my turns",
+        "The benefit of my constellations improve, see the 3rd page's \"Notes\" section"
+      ]),
+      calcChanges : {
+        atkAdd : [
+          function (fields, v) {
+            if (v.theWea.luminousarrow && fields.Damage_Die.indexOf('1d8') !== -1) {
+              fields.Damage_Die = fields.Damage_Die.replace('1d8', '2d8');
+            };
+          },
+          '',
+          1
+        ]
+      }
     },
     "subclassfeature14": {
       name: "Full of Stars",
