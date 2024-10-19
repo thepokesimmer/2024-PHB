@@ -26,7 +26,7 @@ SourceList.LEGACYCLASS = {
   date: "2014/01/01",
   defaultExcluded : true,
 };
-// Coded By: ThePokésimmer with contributions from morepurplemorebetter (Joost), MasterJedi2014, Shroo, Reading Toskr, TrackAtNite, evanelric, TappyTap, Mente, Rocky, ShadowzAll, Herpaderp Aldent
+// Coded By: ThePokésimmer with contributions from morepurplemorebetter (Joost), MasterJedi2014, Shroo, Reading Toskr, TrackAtNite, evanelric, TappyTap, Mente, Rocky, ShadowzAll
 //Functions
 function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
@@ -2693,7 +2693,7 @@ legacyClassRefactor("fighter", {
       source: [["PHB2024", 91]],
       minlevel: 2,
       usages: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2],
-	  recovery: "long rest",
+	  recovery: "short rest",
       description: desc([
         "I can take one additional action on my turn (no Magic action)",
       ]),
