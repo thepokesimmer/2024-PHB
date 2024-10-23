@@ -55,7 +55,7 @@ function legacySpellRefactor(spellKey, newSpell) {
               name: "Legacy spells",
               source: [["LEGACYSPELLS", 1]],
               minlevel: 1,
-              description: "\n I can choose to have access to the legacy version of spells",
+              description: "\n I can choose to access to the legacy version of spells",
               choices: ["Show Legacy", "Hide Legacy"],
               "show legacy": {
                 name: "Show legacy spells",
@@ -5975,9 +5975,9 @@ legacyClassRefactor("sorcerer", {
         ]
       },
       description: desc([
-        "I can cast Cantrips and Prepared level 1+ Sorceror spells with Cha as my Spellcasting Ability and an Arcane Focus as my Spellcasting Focus.",
-		"I can replace a cantrip and a Level 1+ spell each time I gain a Sorceror level.",
-        "Prepared spells for other Sorcerer features don't count against me & count as Sorceror spells.",
+        "I can cast Cantrips and Prepared level 1+ Sorcerer spells with Cha as my Spellcasting Ability and an Arcane Focus as my Spellcasting Focus.",
+		"I can replace a cantrip and a Level 1+ spell each time I gain a Sorcerer level.",
+        "Prepared spells for other Sorcerer features don't count against me & count as Sorcerer spells.",
       ]),
     },
     "innate sorcery": {
@@ -6018,7 +6018,7 @@ legacyClassRefactor("sorcerer", {
       extrachoices: ["Careful Spell", "Distant Spell", "Empowered Spell", "Extended Spell", "Heightened Spell", "Quickened Spell", "Seeking Spell", "Subtle Spell", "Transmuted Spell", "Twinned Spell"],
       extraTimes: [0, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 6, 6, 6, 6],
       description: desc([
-        "Use 'Choose Feature' above to select Metamagic options. Only one can be used per spell cast unless noted. I can replace one Metamagic option when I gain a Sorceror level.",
+        "Use 'Choose Feature' above to select Metamagic options. Only one can be used per spell cast unless noted. I can replace one Metamagic option when I gain a Sorcerer level.",
       ]),
       "careful spell": {
         name: "Careful Spell",
@@ -6099,7 +6099,7 @@ legacyClassRefactor("sorcerer", {
       usages: 1,
       recovery: "long rest",
       description: desc([
-        "Once per Long Rest I can regain spent SP up to half my Sorceror level at the end of a Short Rest.",
+        "Once per Long Rest I can regain spent SP up to half my Sorcerer level at the end of a Short Rest.",
       ]),
     },
     "sorcery incarnate": {
@@ -6141,7 +6141,7 @@ legacySubClassRefactor("sorcerer", "aberrant", {
       minlevel: 3,
       action: "bonus action",
       description: desc([
-        "As a Bonus Action, one creature I can see within 30 ft of myself & I can speak telepathically with each other while within my Cha mod miles (min 1) for my Sorceror level minutes as long as we share a language. It lasts until I use it with another creature.",
+        "As a Bonus Action, one creature I can see within 30 ft of myself & I can speak telepathically with each other while within my Cha mod miles (min 1) for my Sorcerer level minutes as long as we share a language. It lasts until I use it with another creature.",
       ]),
     },
     "subclassfeature6": {
@@ -6234,7 +6234,7 @@ legacySubClassRefactor("sorcerer", "clockwork", {
       source: [["PHB2024", 146]],
       minlevel: 3,
       description: desc([
-        "Choose a Manifestation of Order from Page 3; it appears when I cast a Sorceror spell.",
+        "Choose a Manifestation of Order from Page 3; it appears when I cast a Sorcerer spell.",
       ]),
       toNotesPage: [{
         name: "Manifestations of Order",
@@ -7596,7 +7596,7 @@ legacyClassRefactor("wizard", {
       },
       description: desc([
         "I can cast Prepared Level 1+ Wizard spells using Int as my spellcasting ability.",
-		"I have a unique spellbook for Level 1+ spells; only I or the Identify spell can read it. Prepared spells from other Wizard features count as Wizard spells & don't count against my Prepared Spells.<-MOVE THIS PARAGRAPH TO NOTES PAGE WITH OTHER SPELLBOOK INFO?",
+		"I have a unique spellbook for Level 1+ spells; only I or the Identify spell can read it. Prepared spells from other Wizard features count as Wizard spells & don't count against my Prepared Spells.",
         "I regain all slots and can replace my Prepared Spells & one cantrip when I finish a Long Rest. I can use an Arcane Focus as a Spellcasting Focus for my Wizard spells.",
       ]),
       toNotesPage: [{
@@ -8035,8 +8035,8 @@ BackgroundList["criminal"] = {
     ["Belt pouch (with coins)", 2, 1],
   ],
   equipleft: [
-    ["Crowbar", "", ""],
-    ["Thieves' Tools", "", ""],
+    ["Crowbar", "", 5],
+    ["Thieves' Tools", "", 1],
   ],
   feature: "Alert [Origin]",
   trait: [
@@ -8057,7 +8057,7 @@ BackgroundList["entertainer"] = {
     ["Belt pouch (with coins)", 1, 1],
   ],
   equipleft: [
-    ["Mirror", "", ""],
+    ["Mirror", "", 0.5],
     ["Perfume", "", ""],
     ["Musical Instrument", "", ""],
   ],
@@ -8080,10 +8080,10 @@ BackgroundList["farmer"] = {
     ["Belt pouch (with coins)", 1, 1],
   ],
   equipleft: [
-    ["Iron Pot", "", ""],
-    ["Shovel", "", ""],
-    ["Healer's Kit", "", ""],
-    ["Carpenter's Tools", "", ""],
+    ["Iron Pot", "", 10],
+    ["Shovel", "", 5],
+    ["Healer's Kit", "", 3],
+    ["Carpenter's Tools", "", 6],
   ],
   feature: "Tough [Origin]",
   trait: [
@@ -8101,14 +8101,14 @@ BackgroundList["guard"] = {
   equipright: [
     ["Traveler's Clothes", "", 4],
     ["Spear", "", 1],
-    ["Light Crossbow", "", ""],
-    ["Bolt(s)", 20, ""],
-    ["Quiver", "", ""],
+    ["Light Crossbow", "", 5],
+    ["Bolt(s)", 20, 0.075],
+    ["Case, Crossbow bolt", "", 1],
     ["Belt pouch (with coins)", 1, 1],
   ],
   equipleft: [
-    ["Manacles", "", ""],
-    ["Hooded Lantern", "", ""],
+    ["Manacles", "", 6],
+    ["Hooded Lantern", "", 2],
     ["Gaming Set", "", ""],
   ],
   feature: "Alert [Origin]",
@@ -8127,14 +8127,14 @@ BackgroundList["guide"] = {
   equipright: [
     ["Traveler's Clothes", "", 4],
     ["Shortbow", "", 1],
-    ["Arrow(s)", 20, ""],
-    ["Quiver", "", ""],
+    ["Arrow(s)", 20, 0.05],
+    ["Quiver", "", 1],
     ["Belt pouch (with coins)", 1, 1],
   ],
   equipleft: [
-    ["Bedroll", "", ""],
-    ["Tent", "", ""],
-    ["Cartographer's Tools", "", ""],
+    ["Bedroll", "", 7],
+    ["Tent", "", 20],
+    ["Cartographer's Tools", "", 6],
   ],
   feature: "Magic Initiate (Druid) [Origin]",
   trait: [
@@ -8156,9 +8156,9 @@ BackgroundList["hermit"] = {
     ["Belt pouch (with coins)", 1, 1],
   ],
   equipleft: [
-    ["Bedroll", "", ""],
-    ["Lamp Oil", 3, ""],
-    ["Herbalism Kit", "", ""],
+    ["Bedroll", "", 7],
+    ["Lamp Oil", 3, 1],
+    ["Herbalism Kit", "", 3],
   ],
   feature: "Healer [Origin]",
   trait: [
@@ -8178,7 +8178,7 @@ BackgroundList["merchant"] = {
     ["Belt pouch (with coins)", 2, 1],
   ],
   equipleft: [
-    ["Navigator's Tools", "", ""],
+    ["Navigator's Tools", "", 2],
   ],
   feature: "Lucky [Origin]",
   trait: [
@@ -8222,7 +8222,7 @@ BackgroundList["sage"] = {
   ],
   equipleft: [
     ["Parchment, Sheets of", 8, ""],
-    ["Calligrapher's Supplies", "", ""],
+    ["Calligrapher's Supplies", "", 5],
   ],
   feature: "Magic Initiate (Wizard) [Origin]",
   trait: [
@@ -8243,8 +8243,8 @@ BackgroundList["sailor"] = {
     ["Dagger", "", 1],
   ],
   equipleft: [
-    ["Navigator's Tools", "", ""],
-    ["Rope, Feet of", "", ""],
+    ["Navigator's Tools", "", 2],
+    ["Rope, Feet of", 50, 0.1],
   ],
   feature: "Tavern Brawler [Origin]",
   trait: [
@@ -8264,8 +8264,8 @@ BackgroundList["scribe"] = {
     ["Belt pouch (with coins)", 2, 1],
   ],
   equipleft: [
-    ["Calligrapher's Supplies", "", ""],
-    ["Lamp Oil, Flasks of", 3, ""],
+    ["Calligrapher's Supplies", "", 5],
+    ["Lamp Oil, Flasks of", 3, 1],
     ["Parchment, Sheets of", 12, ""],
   ],
   feature: "Skilled [Origin]",
@@ -8285,13 +8285,13 @@ BackgroundList["soldier"] = {
     ["Traveler's Clothes", "", 4],
     ["Belt pouch (with coins)", 2, 1],
     ["Spear", "", 1],
-    ["Shortbow", "", ""],
-    ["Arrow(s)", 20, ""],
-    ["Quiver", "", ""],
+    ["Shortbow", "", 1],
+    ["Arrow(s)", 20, 0.05],
+    ["Quiver", "", 1],
   ],
   equipleft: [
     ["Gaming Set", "", ""],
-    ["Healer's kit", "", ""],
+    ["Healer's kit", "", 3],
   ],
   feature: "Savage Attacker [Origin]",
   trait: [
@@ -8312,9 +8312,9 @@ BackgroundList["wayfarer"] = {
     ["Dagger", 2, 1],
   ],
   equipleft: [
-    ["Thieves' Tools", "", ""],
+    ["Thieves' Tools", "", 1],
     ["Gaming Set", "", ""],
-    ["Bedroll", "", ""],
+    ["Bedroll", "", 7],
   ],
   feature: "Lucky [Origin]",
   trait: [
@@ -8323,7 +8323,7 @@ BackgroundList["wayfarer"] = {
 };
 BackgroundFeatureList["magic initiate (cleric) [origin]"] = {
   description: desc([
-    "I devoted myself to service in a temple, either nestled in a town or secluded in a sacred grove. There I performed rites in honor of a god or pantheon. I served under a priest and studied religion. Thanks to my priest's instruction and my own devotion, I also learned how to channel a modicum of divine power in service to my place of worship and the people who prayed there. I gain the Magic Initiate (Cleric) feat.",
+    "",
   ]),
   source: [["PHB2024", 178]],
   eval: function () {
@@ -8335,7 +8335,7 @@ BackgroundFeatureList["magic initiate (cleric) [origin]"] = {
 };
 BackgroundFeatureList["crafter [origin]"] = {
   description: desc([
-    "I began mopping floors and scrubbing counters in an artisan's workshop for a few coppers per day as soon as I was strong enough to carry a bucket. When I was old enough to apprentice, I learned to create basic crafts of my own, as well as how to sweet talk the occasional demanding customer. My trade has also given me a keen eye for detail. I gain the Crafter feat.",
+    "",
   ]),
   source: [["PHB2024", 178]],
   eval: function () {
@@ -8347,7 +8347,7 @@ BackgroundFeatureList["crafter [origin]"] = {
 };
 BackgroundFeatureList["skilled [origin]"] = {
   description: desc([
-    "Once I was old enough to order an ale, I soon had a favorite stool in every tavern within ten miles of where I was born. As I traveled the circuit from public house to watering hole, I learned to prey on unfortunates who were in the market for a comforting lie or two - perhaps a sham potion or forged ancestry records./I was raised in a castle, surrounded by wealth, power, and privilege. My family of minor aristocrats ensured that I received a first-class education, some of which I appreciated and some of which I resented. My time in the castle, especially the many hours I spent observing my family at court, also taught me a great deal about leadership./I spent formative years in a scriptorium, a monastery dedicated to the preservation of knowledge, or a government agency, where I learned to write with a clear hand and produce finely written texts. Perhaps I scribed government documents or copied tomes of literature, I might have some skill as a writer of poetry, narrative, or scholarly research. Above all, I have a careful attention to detail, helping me avoid introducing mistakes to the documents I copy and create. I gain the Skilled feat.",
+    "",
   ]),
   source: [["PHB2024", 179]],
   eval: function () {
@@ -8359,7 +8359,7 @@ BackgroundFeatureList["skilled [origin]"] = {
 };
 BackgroundFeatureList["alert [origin]"] = {
   description: desc([
-    "I eked out a living in dark alleyways, cutting purses or burgling shops. Perhaps I were part of a small gang of like-minded wrongdoers who looked out for each other. Or maybe I was a lone wolf, fending for myself against the local thieves' guild and more fearsome lawbreakers./my feet ache when I remember the countless hours I spent at my post in the tower. I was trained to keep one eye looking outside the wall watching for marauders sweeping from the nearby forest, and my other eye looking inside the wall searching for cut purses and troublemakers. I gain the Alert feat.",
+    "",
   ]),
   source: [["PHB2024", 179]],
   eval: function () {
@@ -8371,7 +8371,7 @@ BackgroundFeatureList["alert [origin]"] = {
 };
 BackgroundFeatureList["musician [origin]"] = {
   description: desc([
-    "I spent much of my youth following roving fairs and carnivals, performing odd jobs for musicians and acrobats in exchange for lessons. I may have learned how to walk a tightrope, how to play a lute in a distinct style, or how to recite poetry with impeccable diction. To this day, I thrive on applause and long for the stage. I gain the Musician feat.",
+    "",
   ]),
   source: [["PHB2024", 180]],
   eval: function () {
@@ -8383,7 +8383,7 @@ BackgroundFeatureList["musician [origin]"] = {
 };
 BackgroundFeatureList["tough [origin]"] = {
   description: desc([
-    "I grew up close to the land. Years tending animals and cultivating the earth rewarded me with patience and good health. I have a keen appreciation for nature's bounty alongside a healthy respect for nature's wrath. I gain the Tough feat.",
+    "",
   ]),
   source: [["PHB2024", 180]],
   eval: function () {
@@ -8395,7 +8395,7 @@ BackgroundFeatureList["tough [origin]"] = {
 };
 BackgroundFeatureList["magic initiate (druid) [origin]"] = {
   description: desc([
-    "I came of age outdoors, far from settled lands. My home was anywhere I chose to spread my bedroll. There are wonders in the wilderness - strange monsters, pristine forests, streams, overgrown ruins of great halls once trod by giants - and I learned to fend for myself as I explored them. From time to time, I guided friendly nature priests who instructed me in the fundamentals of channeling the magic of the wild. I gain the Magic Initiate (Druid) feat.",
+    "",
   ]),
   source: [["PHB2024", 181]],
   eval: function () {
@@ -8407,7 +8407,7 @@ BackgroundFeatureList["magic initiate (druid) [origin]"] = {
 };
 BackgroundFeatureList["healer [origin]"] = {
   description: desc([
-    "I spent my early years secluded in a hut or monastery located well beyond the outskirts of the nearest settlement. In those days, my only companions were the creatures of the forest and those who would occasionally visit to bring news of the outside world and supplies. The solitude allowed me to spend many hours pondering the mysteries of creation. I gain the Healer feat.",
+    "",
   ]),
   source: [["PHB2024", 182]],
   eval: function () {
@@ -8419,7 +8419,7 @@ BackgroundFeatureList["healer [origin]"] = {
 };
 BackgroundFeatureList["lucky [origin["] = {
   description: desc([
-    "I was apprenticed to a trader, caravan master, or shopkeeper, learning the fundamentals of commerce. I traveled broadly, and I earned a living by buying and selling the raw materials artisans need to practice their craft or finished works from such crafters. I might have transported goods from one place to another (by ship, wagon, or caravan) or bought them from traveling traders and sold them in my own shop./I grew up on the streets surrounded by similarly ill-fated castoffs, a few of them friends and a few of them rivals. I slept where I could and did odd jobs for food. At times, when the hunger became unbearable, I resorted to theft. Still, I never lost my pride and never abandoned hope. Fate is not finished with me. I gain the Lucky feat.",
+    "",
   ]),
   source: [["PHB2024", 182]],
   eval: function () {
@@ -8431,7 +8431,7 @@ BackgroundFeatureList["lucky [origin["] = {
 };
 BackgroundFeatureList["magic initiate (wizard) [origin]"] = {
   description: desc([
-    "I spent my formative years traveling between manors and monasteries, performing various odd jobs and services in exchange for access to their libraries. I whiled away many a long evening studying books and scrolls, learning the lore of the multiverse - even the rudiments of magic - and my mind yearns for more. I gain the Magic Initiate (Wizard) feat.",
+    "",
   ]),
   source: [["PHB2024", 183]],
   eval: function () {
@@ -8443,7 +8443,7 @@ BackgroundFeatureList["magic initiate (wizard) [origin]"] = {
 };
 BackgroundFeatureList["tavern brawler [origin]"] = {
   description: desc([
-    "I lived as a seafarer, wind at my back and decks swaying beneath my feet. I've perched on bar stools in more ports of call than I can remember, faced mighty storm, and swapped stories with folk who live beneath the waves. I gain the Tavern Brawler feat.",
+    "",
   ]),
   source: [["PHB2024", 184]],
   eval: function () {
@@ -8455,7 +8455,7 @@ BackgroundFeatureList["tavern brawler [origin]"] = {
 };
 BackgroundFeatureList["savage attacker [origin]"] = {
   description: desc([
-    "I began raining for war as soon as I reached adulthood and carry precious few memories of life before I took up arms. Battle is in my blood. Sometimes I catch myself reflexively performing the basic fighting exercises I learned first. Eventually, I put that training to use on the battlefield, protecting the realm by waging war. I gain the Savage Attacker feat.",
+    "",
   ]),
   source: [["PHB2024", 185]],
   eval: function () {
@@ -13614,7 +13614,7 @@ GearList["healer's kit"] = {
   infoname: "Healer's kit [5 gp]",
   name: "Healer's kit",
   amount: "",
-  weight: 3
+  weight: 3,
 };
 GearList["amulet"] = {
   infoname: "Amulet [5 gp]",
@@ -14018,6 +14018,7 @@ PacksList["scholar"] = {
   ]
 };
 //Spells
+//Spells
 legacySpellRefactor("acid splash", {
 	name : "Acid Splash",
 	classes : ["artificer","sorcerer", "wizard"],
@@ -14030,8 +14031,8 @@ legacySpellRefactor("acid splash", {
 	duration : "Instantaneous",
 	save : "Dex",
 	description : "Each creature in 5-ft radius sphere save or 1d6 Acid dmg; +1d6 at CL 5, 11, and 17",
-	descriptionCantripDie : "Each creature in 5-ft rad. sphere save or `CD`d6 Acid dmg",
-	descriptionFull : "I create an acidic bubble at a point within range, where it explode in a 5-foot radius Sphere. Each creature in that Sphere must succeed on a Dexterity saving throw or take 1d6 Acid damage." + "\n   " + toUni("Cantrip Upgrade") + ". This spell's damage increases by 1d6 when I reach 5th Level (2d6), 11th level (3d6) and 17th level (4d6).",
+	descriptionCantripDie : "Each creature in 5-ft radius sphere save or `CD`d6 Acid dmg",
+	descriptionFull : "You create an acidic bubble at a point within range, where it explode in a 5-foot radius Sphere. Each creature in that Sphere must succeed on a Dexterity saving throw or take 1d6 Acid damage." + "\n   " + toUni("Cantrip Upgrade") + ". This spell's damage increases by 1d6 when you reach 5th Level (2d6), 11th level (3d6) and 17th level (4d6).",
 });
 legacySpellRefactor("aid", {
 	name : "Aid",
@@ -14060,7 +14061,7 @@ legacySpellRefactor("alarm", {
 	compMaterial : "A bell and silver wire",
 	duration : "8 h",
 	description : "Door, window, or 20-ft cube area; audible (60 ft) or mental alarm (1 mile) if undesignated crea enters",
-	descriptionFull : "I set an alarm against intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot Cube. Until the spell ends, an alarm alerts I whenever a creature touches or enters the warded area. When I cast the spell, I can designate creatures that won't set off the alarm. I also choose whether the alarm is audible or mental." + toUni("Audible Alarm") + ". The alarm produces the sound of a handbell for 10 seconds within 60 feet of the warded area." + toUni("Mental Alarm") + ". I are alerted by a mental ping if I are within 1 mile of the warded area. This ping awakens I if I're asleep."
+	descriptionFull : "You set an alarm against intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot Cube. Until the spell ends, an alarm alerts you whenever a creature touches or enters the warded area. When you cast the spell, you can designate creatures that won't set off the alarm. You also choose whether the alarm is audible or mental." + toUni("Audible Alarm") + ". The alarm produces the sound of a handbell for 10 seconds within 60 feet of the warded area." + toUni("Mental Alarm") + ". You are alerted by a mental ping if you are within 1 mile of the warded area. This ping awakens you if you're asleep."
 });
 legacySpellRefactor("alter self", {
 	name : "Alter Self",
@@ -14072,11 +14073,12 @@ legacySpellRefactor("alter self", {
 	range : "Self",
 	components : "V,S",
 	duration : "Conc, 1 h",
-	description : "Change appearance, gain natural wea (1d6, spell ability), or water breathing \u0026 swim spd; a to switch",
-	descriptionFull : "I alter my physical form. Choose one of the following options. Its effects last for the duration, during which I can take a Magic action to replace the option I chose with a different one." + "\n   " + toUni("Aquatic Adaptation") + ": I sprout gills and grow webs between my fingers. I can breathe underwater and gain a Swim Speed equal to my Speed." + "\n   " + toUni("Change Appearance") + ": I alter my appearance. I decide what I look like, including my height, weight, facial features, sound of my voice, hair length, coloration, and other distinguishing characteristics. I can make yourself appear as a member of another species, though none of my statistics change. I can't appear as a creature of a different size, and my basic shape stays the same; if I're bipedal, I can't use this spell to become quadrupedal, for instance. For the duration, I can take a Magic action to change my appearance in this way again." + "\n   " + toUni("Natural Weapons") + ": I grow claws (Slashing), fangs (Piercing), horns (Piercing), or hooves (Bludgeoning). When I use my Unarmed Strike to deal damage with that new growth, it deals 1d6 damage of the type in parenthesis instead of dealing the normal damage for my Unarmed Strike, and I use my spellcasting ability modifier for the attack and damage rolls rather than using Strength."
+	description : "Alter appearance, gain natural wea (1d6, use spell ability), or water breathing \u0026 swim spd; a to switch",
+	descriptionFull : "You alter your physical form. Choose one of the following options. Its effects last for the duration, during which you can take a Magic action to replace the option you chose with a different one." + "\n   " + toUni("Aquatic Adaptation") + ": You sprout gills and grow webs between your fingers. You can breathe underwater and gain a Swim Speed equal to your Speed." + "\n   " + toUni("Change Appearance") + ": You alter your appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and other distinguishing characteristics. You can make yourself appear as a member of another species, though none of your statistics change. You can't appear as a creature of a different size, and your basic shape stays the same; if you're bipedal, you can't use this spell to become quadrupedal, for instance. For the duration, you can take a Magic action to change your appearance in this way again." + "\n   " + toUni("Natural Weapons") + ": You grow claws (Slashing), fangs (Piercing), horns (Piercing), or hooves (Bludgeoning). When you use your Unarmed Strike to deal damage with that new growth, it deals 1d6 damage of the type in parenthesis instead of dealing the normal damage for your Unarmed Strike, and you use your spellcasting ability modifier for the attack and damage rolls rather than using Strength."
 });
 legacySpellRefactor("animal friendship", {
 	name : "Animal Friendship",
+	nameShort : "Animal Friendship*",
 	classes : ["bard", "druid", "ranger"],
 	source : [["PHB2024", 239]],
 	level : 1,
@@ -14087,11 +14089,12 @@ legacySpellRefactor("animal friendship", {
 	compMaterial : "A morsel of food",
 	duration : "24 h",
 	save : "Wis",
-	description : "1+1/SL beasts save or Charmed. Ends if target damaged by me or allies.",
-	descriptionFull : "Target a Beast that I can see within range. The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration. If I or one of my allies deals damage to the target, the spell ends." + AtHigherLevels + "I can target one additional Beast for each spell slot above 1."
+	description : "1+1/SL beasts save or Charmed. Ends if the beast is damaged by me or my allies.",
+	descriptionFull : "Target a Beast that you can see within range. The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration. If you or one of your allies deals damage to the target, the spell ends." + AtHigherLevels + "You can target one additional Beast for each spell slot above 1."
 });
 legacySpellRefactor("animal messenger", {
 	name : "Animal Messenger",
+	nameShort : "Animal Messenger*",
 	classes : ["bard", "druid", "ranger"],
 	source : [["PHB2024", 240]],
 	ritual : true,
@@ -14103,11 +14106,12 @@ legacySpellRefactor("animal messenger", {
 	compMaterial : "A morsel of food",
 	duration : "24 h",
 	save : "Cha",
-	description : "Tiny beast save or delivers 25 word message up to 25 miles (50 miles if flyer); +48h/SL duration",
-	descriptionFull : "A Tiny Beast of my choice that I can see within range must succeed on a Charisma saving throw, or it attempts to deliver a message for I (if the target's Challenge Rating isn't 0, it automatically succeeds). I specify a location I have visited and a recipient who matches a general description such as 'a person dressed in the uniform of the town guard' or 'a red-haired dwarf wearing a pointed hat'. I also communicate a message of up to twenty-five words. The Beast travels for the duration toward the specified location, covering 25 miles per 24 hours or 50 miles if the Beast can fly." + "\n   " + "When the Beast arrives, it delivers my message to the creature that I described, mimicking my communication. If the Beast doesn't reach its destination before the spell ends, the message is lost, and the Beast returns to where I cast the spell." + AtHigherLevels + "The spell's duration increases by 48 hours for each spell slot level above 2."
+	description : "Tiny CR0 beast save or delivers 25 word message up to 25 miles (50 miles if flyer); +48h/SL duration",
+	descriptionFull : "A Tiny Beast of your choice that you can see within range must succeed on a Charisma saving throw, or it attempts to deliver a message for you (if the target's Challenge Rating isn't 0, it automatically succeeds). You specify a location you have visited and a recipient who matches a general description such as 'a person dressed in the uniform of the town guard' or 'a red-haired dwarf wearing a pointed hat'. You also communicate a message of up to twenty-five words. The Beast travels for the duration toward the specified location, covering 25 miles per 24 hours or 50 miles if the Beast can fly." + "\n   " + "When the Beast arrives, it delivers your message to the creature that you described, mimicking your communication. If the Beast doesn't reach its destination before the spell ends, the message is lost, and the Beast returns to where you cast the spell." + AtHigherLevels + "The spell's duration increases by 48 hours for each spell slot level above 2."
 });
 legacySpellRefactor("animal shapes", {
 	name : "Animal Shapes",
+	nameShort : "Animal Shapes*",
 	classes : ["druid"],
 	source : [["PHB2024", 240]],
 	level : 8,
@@ -14116,8 +14120,8 @@ legacySpellRefactor("animal shapes", {
 	range : "30 ft",
 	components : "V,S",
 	duration : "24 h",
-	description : "Any willing crea into up to Lg CR4 beast; a to change again; beast HP as THP; ends 0 THP or bns; see B",
-	descriptionFull : "Choose any number of willing creatures tat I can see within range. Each target shape-shifts into a Large or smaller Beast of my choice that has a Challenge Rating of 4 or lower. I can choose a different form for each target. On later turns, I can take a Magic action to transform the targets again." + "\n   " + "A target's game statistics are replaced by the chosen Beast's statistics, but the target retains its creature type; Hit Points; Hit Point Dice; alignment; ability to communicate and Intelligence, Wisdom, and Charisma scores. The target's actions are limited by the Beast form's anatomy, and it can't cast spells, the target's equipment melds into the new form, and the target can't use any of that equipment while in that form." + "\n   " + "The target gains a number of Temporary Hit Points equal to the Beast form's Hit Points. The transformation lasts for the duration for each target, until the target has no Temporary Hit Points, or until the target leaves the form as a Bonus Action."
+	description : "Any willing crea into \u2264CR4 beast (\u2264Lg); a to change again; beast HP as THP; ends 0 THP or bns; see B",
+	descriptionFull : "Choose any number of willing creatures that you can see within range. Each target shape-shifts into a Large or smaller Beast of your choice that has a Challenge Rating of 4 or lower. You can choose a different form for each target. On later turns, you can take a Magic action to transform the targets again." + "\n   " + "A target's game statistics are replaced by the chosen Beast's statistics, but the target retains its creature type; Hit Points; Hit Point Dice; alignment; ability to communicate and Intelligence, Wisdom, and Charisma scores. The target's actions are limited by the Beast form's anatomy, and it can't cast spells, the target's equipment melds into the new form, and the target can't use any of that equipment while in that form." + "\n   " + "The target gains a number of Temporary Hit Points equal to the Beast form's Hit Points. The transformation lasts for the duration for each target, until the target has no Temporary Hit Points, or until the target leaves the form as a Bonus Action."
 });
 legacySpellRefactor("animate dead", {
 	name : "Animate Dead",
@@ -14131,7 +14135,7 @@ legacySpellRefactor("animate dead", {
 	compMaterial : "A drop of blood, a piece of flesh, and a pinch of bone dust",
 	duration : "Instantaneous",
 	description : "Turn corpses into 1+2/SL Skeletons or Zombies; control for 24h; bns command within 60 ft",
-	descriptionFull : "Choose a pile of bones or a corpse of a Medium or Small Humanoid within range. The target becomes an Undead creature: a Skeleton if I chose bones or a Zombie if I chose a corpse (see appendix B for the stat blocks)." + "\n   " + "On each of my turns, I can take a Bonus Action to mentally command any creature I made with this spell if the creature is within 60 feet of I (if I control multiple creatures, I can command all of them at the same time, issuing the same command to each one). I decide what action the creature will take and where it will move on its next turn, or I can issue a general command, such as to guard a chamber or corridor. If I issue no commands, the creature takes the Dodge action and moves only to avoid harm. Once given an order, the creature continues to follow it until its task is complete." + "\n   " + "The creature is under my control for 24 hours, after which it stops obeying any command I've given it. To maintain control of the creature for another 24 hours, I must cast this spell on the creature again before the current 24-hour period ends. This use of the spell reasserts my control over up to four creatures I have animated with this spell rather than animating a new creature." + AtHigherLevels + "I animate or reassert control over two additional Undead creatures for each spell slot level above 3.Each of the creatures must come from a different corpse or pile of bones."
+	descriptionFull : "Choose a pile of bones or a corpse of a Medium or Small Humanoid within range. The target becomes an Undead creature: a Skeleton if you chose bones or a Zombie if you chose a corpse (see appendix B for the stat blocks)." + "\n   " + "On each of your turns, you can take a Bonus Action to mentally command any creature you made with this spell if the creature is within 60 feet of you (if you control multiple creatures, you can command all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move on its next turn, or you can issue a general command, such as to guard a chamber or corridor. If you issue no commands, the creature takes the Dodge action and moves only to avoid harm. Once given an order, the creature continues to follow it until its task is complete." + "\n   " + "The creature is under your control for 24 hours, after which it stops obeying any command you've given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature again before the current 24-hour period ends. This use of the spell reasserts your control over up to four creatures you have animated with this spell rather than animating a new creature." + AtHigherLevels + "You animate or reassert control over two additional Undead creatures for each spell slot level above 3.Each of the creatures must come from a different corpse or pile of bones."
 });
 legacySpellRefactor("animate objects", {
 	name : "Animate Objects",
@@ -14144,7 +14148,7 @@ legacySpellRefactor("animate objects", {
 	components : "V,S",
 	duration : "Conc, 1 min",
 	description : "Spell modifier nonmagical unattended loose objects (M=1/L=2/H=3); bns command in 500 ft; see B",
-	descriptionFull : "Objects animate at my command. Choose a number of nonmagical objects within range that aren't being worn or carried, aren't fixed to a surface, and aren't Gargantuan. The maximum number of objects is equal to my spellcasting ability modifier, for this number, a Medium or smaller target counts as one object, a Large target counts as two, and a Huge target counts as four." + "\n   " + "Each target animates, sprouts legs, and becomes a Construct that uses the Animated Object stat block; this creature is under my control until the spell ends or until it is reduced to 0 Hit Points. Each creature I make with this spell is an ally to I and my allies. In combat, it shares my Initiative count and takes its turn immediately after yours." + "\n   " + "Until the spell ends I can take a Bonus Action I can mentally command any creatures I made with this spell if the creature is within 500 feet of I (if I control multiple creatures, I can command any of them at the same time, issuing the same command to each one). If I issue no commands, the creature takes the Dodge action and moves only to avoid harm. When the creature drops to 0 Hit Points it reverts to its object form, and any remaining damage carries over to that form." + AtHigherLevels + "The creature's Slam damage increases by 1d4 (Medium or smaller), 1d6 (Large), or 1d12 (Huge) for each spell slot level above 5."
+	descriptionFull : "Objects animate at your command. Choose a number of nonmagical objects within range that aren't being worn or carried, aren't fixed to a surface, and aren't Gargantuan. The maximum number of objects is equal to your spellcasting ability modifier, for this number, a Medium or smaller target counts as one object, a Large target counts as two, and a Huge target counts as three." + "\n   " + "Each target animates, sprouts legs, and becomes a Construct that uses the Animated Object stat block; this creature is under your control until the spell ends or until it is reduced to 0 Hit Points. Each creature you make with this spell is an ally to you and your allies. In combat, it shares your Initiative count and takes its turn immediately after yours." + "\n   " + "Until the spell ends you can take a Bonus Action you can mentally command any creatures you made with this spell if the creature is within 500 feet of you (if you control multiple creatures, you can command any of them at the same time, issuing the same command to each one). If you issue no commands, the creature takes the Dodge action and moves only to avoid harm. When the creature drops to 0 Hit Points it reverts to its object form, and any remaining damage carries over to that form." + AtHigherLevels + "The creature's Slam damage increases by 1d4 (Medium or smaller), 1d6 (Large), or 1d12 (Huge) for each spell slot level above 5."
 });
 legacySpellRefactor("antilife shell", {
 	name : "Antilife Shell",
@@ -14156,8 +14160,8 @@ legacySpellRefactor("antilife shell", {
 	range : "S:10-ft rad",
 	components : "V,S",
 	duration : "Conc, 1 h",
-	description : "Only undead and constructs can come within 10ft; spell ends if I move in 10ft of living creature",
-	descriptionFull : "An aura extends from I in a 10-foot Emanation for the duration. The aura prevents creatures other than Constructs and Undead from passing or reaching through it. An affected creature can cast spells or making attacks with Ranged or Reach weapons through the barrier." + "\n   " + "If I move so that an affected creature is forced to pass through the barrier, the spell ends.",
+	description : "Only undead and constructs can enter area; spell ends if I move within 10ft of living creature",
+	descriptionFull : "An aura extends from you in a 10-foot Emanation for the duration. The aura prevents creatures other than Constructs and Undead from passing or reaching through it. An affected creature can cast spells or making attacks with Ranged or Reach weapons through the barrier." + "\n   " + "If you move so that an affected creature is forced to pass through the barrier, the spell ends.",
 });
 legacySpellRefactor("antimagic field", {
 	name : "Antimagic Field",
@@ -14170,8 +14174,8 @@ legacySpellRefactor("antimagic field", {
 	components : "V,S,M",
 	compMaterial : "iron filings",
 	duration : "Conc, 1 h",
-	description : "Nothing magical functions in area except spells cast by an artifact or a deity",
-	descriptionFull : "An aura of antimagic surrounds I in a 10-foot Emanation. No one ca cast spells, take Magic actions, or create other magical effects inside the aura, and those things can't target or otherwise affect anything inside it. Magical properties of magic items don't work inside the aura or on anything inside it." + "\n   " + "Areas of effect created by spells or other magic can't extend into the aura, and no one can teleport into or out of it, or use planar travel there. Portals close temporarily while in the aura." + "\n   " + "Ongoing spells, except those cast by an Artifact or a deity, are suppressed in the are. While an effect is suppressed, it doesn't function, but the time it spends suppressed counts against its duration." + "\n   " + "Dispel Magic has no effect on the aura, and the auras created by different Antimagic Field spells don't nullify each other."
+	description : "Nothing magical functions in area except spells cast by an artifact or a deity; can't teleport or Dispel",
+	descriptionFull : "An aura of antimagic surrounds you in a 10-foot Emanation. No one can cast spells, take Magic actions, or create other magical effects inside the aura, and those things can't target or otherwise affect anything inside it. Magical properties of magic items don't work inside the aura or on anything inside it." + "\n   " + "Areas of effect created by spells or other magic can't extend into the aura, and no one can teleport into or out of it, or use planar travel there. Portals close temporarily while in the aura." + "\n   " + "Ongoing spells, except those cast by an Artifact or a deity, are suppressed in the are. While an effect is suppressed, it doesn't function, but the time it spends suppressed counts against its duration." + "\n   " + "Dispel Magic has no effect on the aura, and the auras created by different Antimagic Field spells don't nullify each other."
 });
 legacySpellRefactor("antipathy/sympathy", {
 	name : "Antipathy/Sympathy",
@@ -14185,8 +14189,8 @@ legacySpellRefactor("antipathy/sympathy", {
 	compMaterial : "a mix of vinegar and honey",
 	duration : "10 days",
 	save : "Wis",
-	description : "Crea or up to Huge obj attracts (save vs Charm) or repels (save vs Fear) certain crea type; see B",
-	descriptionFull : "As I cast the spell, choose whether it creates antipathy or sympathy, and target one creature or object that is Huge or smaller. Then specify a kind of creature, such as red dragons, goblins, or vampires. A creature of the chosen kind makes a Wisdom saving throw when it comes within 120 feet of the target. I choice of antipathy or sympathy determines what happens to a creature when it fails the save:" + "\n   " + toUni("Antipathy") + ": The creature has the Frightened condition. The Frightened creature must use its movement on its turn to get as far away as possible from the target, moving by the safest route." + "\n   " + toUni("Sympathy") + ": The creature has the Charmed condition. The Charmed creature must use its movement on its turns to get as close as possible to the target, moving by the safest route. If the creature is within 5 feet of the target, the creature can't willingly move away. IF the target damages the Charmed creature, that creature can make a Wisdom saving throw to end the effect, as described below." + "\n   " + toUni("Ending the Effect") + ": If the Frightened or Charmed creature ends its turn more than 120 feet away from the target, the creature makes a Wisdom saving throw. On a Successful save, the creature is no longer affected by the target. A creature that successfully saves against this effect is immune to it for 1 minute, after which it can be affected again.",
+	description : "1 creature or object (\u2264Huge) attracts (save vs Charm) or repels (save vs Fear) chosen crea type; see B",
+	descriptionFull : "As you cast the spell, choose whether it creates antipathy or sympathy, and target one creature or object that is Huge or smaller. Then specify a kind of creature, such as red dragons, goblins, or vampires. A creature of the chosen kind makes a Wisdom saving throw when it comes within 120 feet of the target. You choice of antipathy or sympathy determines what happens to a creature when it fails the save:" + "\n   " + toUni("Antipathy") + ": The creature has the Frightened condition. The Frightened creature must use its movement on its turn to get as far away as possible from the target, moving by the safest route." + "\n   " + toUni("Sympathy") + ": The creature has the Charmed condition. The Charmed creature must use its movement on its turns to get as close as possible to the target, moving by the safest route. If the creature is within 5 feet of the target, the creature can't willingly move away. IF the target damages the Charmed creature, that creature can make a Wisdom saving throw to end the effect, as described below." + "\n   " + toUni("Ending the Effect") + ": If the Frightened or Charmed creature ends its turn more than 120 feet away from the target, the creature makes a Wisdom saving throw. On a Successful save, the creature is no longer affected by the target. A creature that successfully saves against this effect is immune to it for 1 minute, after which it can be affected again.",
 });
 legacySpellRefactor("arcane eye", {
 	name : "Arcane Eye",
@@ -14199,11 +14203,12 @@ legacySpellRefactor("arcane eye", {
 	components : "V,S,M",
 	compMaterial : "A bit of bat fur",
 	duration : "Conc, 1 h",
-	description : "Create invisible, 1\" magic eye with darkvision I see through; bns to move (unlimited range, 30 ft/rnd)",
-	descriptionFull : "I create an Invisible, invulnerable eye within range that hovers for the duration. I mentally receive visual information from the eye, which can see in every direction. It also has Darkvision with a range of 30 feet." + "\n   " + "As a Bonus Action, I can move the eye up to 30 feet in any direction. A solid barrier blocks the eye's movement, but the eye can pass through an opening as small as 1 inch in diameter."
+	description : "Create Invisible 1\" magic eye I see through; 30ft Darkvision; bns to move (unlimited range, 30 ft/rnd)",
+	descriptionFull : "You create an Invisible, invulnerable eye within range that hovers for the duration. You mentally receive visual information from the eye, which can see in every direction. It also has Darkvision with a range of 30 feet." + "\n   " + "As a Bonus Action, you can move the eye up to 30 feet in any direction. A solid barrier blocks the eye's movement, but the eye can pass through an opening as small as 1 inch in diameter."
 });
 legacySpellRefactor("arcane gate", {
 	name : "Arcane Gate",
+	nameShort : "Arcane Gate*",
 	classes : ["sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 242]],
 	level : 6,
@@ -14213,7 +14218,7 @@ legacySpellRefactor("arcane gate", {
 	components : "V,S",
 	duration : "Conc, 10 min",
 	description : "Two portals up to 500 ft apart filled with opaque mist; teleport any between; bns change orientation",
-	descriptionFull : "I create linked teleportation portals. Choose two Large, unoccupied spaces on the ground that I can see, one space within range and the other one within 10 feet of I. A circular portal opens in each of those spaces and remains for the duration." + "\n   " + "The portals are two-dimensional glowing rings filled with mist that blocks sight. They hover inches from the ground and are perpendicular to it." + "\n   " + "A portal is open on only one side (I choose which). Anything entering the open side of a portal exits from the open side on the other portal as if they two were adjacent to each other. As a Bonus Action, I can change the facing of the open sides."
+	descriptionFull : "You create linked teleportation portals. Choose two Large, unoccupied spaces on the ground that you can see, one space within range and the other one within 10 feet of you. A circular portal opens in each of those spaces and remains for the duration." + "\n   " + "The portals are two-dimensional glowing rings filled with mist that blocks sight. They hover inches from the ground and are perpendicular to it." + "\n   " + "A portal is open on only one side (you choose which). Anything entering the open side of a portal exits from the open side on the other portal as if they two were adjacent to each other. As a Bonus Action, you can change the facing of the open sides."
 });
 legacySpellRefactor("arcane lock", {
 	name : "Arcane Lock",
@@ -14227,7 +14232,7 @@ legacySpellRefactor("arcane lock", {
 	compMaterial : "Gold dust worth 25+ gp, which the spell consumes",
 	duration : "Till dispelled",
 	description : "Entryway/lid locked; only password, designated creature or magic opens (25gp cons.)",
-	descriptionFull : "I touch a closed door, window, gate, container, or hatch and magically lock it for the duration. This lock can't be unlocked by any nonmagical means. I and any creatures I designate when I cast the spell can open and close the object despite the lock. I can also set a password that, when spoken within 5 feet of the object, unlocks it for 1 minute."
+	descriptionFull : "You touch a closed door, window, gate, container, or hatch and magically lock it for the duration. This lock can't be unlocked by any nonmagical means. You and any creatures you designate when you cast the spell can open and close the object despite the lock. You can also set a password that, when spoken within 5 feet of the object, unlocks it for 1 minute."
 });
 legacySpellRefactor("arcane vigor", {
 	name : "Arcane Vigor",
@@ -14239,8 +14244,8 @@ legacySpellRefactor("arcane vigor", {
 	range : "Self",
 	components : "V,S",
 	duration : "Instantaneous",
-	description : "Roll 1-2 +1/SL unused hit dice and regain roll + spellcasting mod HP. Hit dice then expended.",
-	descriptionFull : "I tap into my life force to heal yourself. Roll one or two of my unexpended Hit Point Dice, and regain a number of Hit Point's equal to the rolls total plus my spellcasting ability modifier. Those dice are expended." + AtHigherLevels + "The number of unexpended Hit Dice I can roll increases by one for each spell slot level above 2.",
+	description : "Roll 1-2+1/SL unused hit dice and regain roll + spellcasting mod HP. Hit dice then expended.",
+	descriptionFull : "You tap into your life force to heal yourself. Roll one or two of your unexpended Hit Point Dice, and regain a number of Hit Point's equal to the rolls total plus your spellcasting ability modifier. Those dice are expended." + AtHigherLevels + "The number of unexpended Hit Dice you can roll increases by one for each spell slot level above 2.",
 });
 legacySpellRefactor("armor of agathys", {
 	name : "Armor of Agathys",
@@ -14253,8 +14258,8 @@ legacySpellRefactor("armor of agathys", {
 	components : "V,S,M",
 	compMaterial : "A shard of blue glass",
 	duration : "1 h",
-	description : "5+5/SL temp HP; while I have any temp HP any crea that hits melee atk takes 5+5/SL Cold",
-	descriptionFull : "Protective magical frost surrounds I. I gain 5 Temporary Hit Points. IF a creature hits I with a melee attack roll before the spell ends, the creature takes 5 Cold damage. The spell ends early if I have no Temporary Hit Points." + AtHigherLevels + "The Temporary Hit Points and the Cold damage both increase by 5 for each spell slot above 1."
+	description : "5+5/SL temp HP; while I have any temp HP any crea that hits me with melee atk takes 5+5/SL Cold",
+	descriptionFull : "Protective magical frost surrounds you. You gain 5 Temporary Hit Points. If a creature hits you with a melee attack roll before the spell ends, the creature takes 5 Cold damage. The spell ends early if you have no Temporary Hit Points." + AtHigherLevels + "The Temporary Hit Points and the Cold damage both increase by 5 for each spell slot above 1."
 });
 legacySpellRefactor("arms of hadar", {
 	name : "Arms of Hadar",
@@ -14268,7 +14273,7 @@ legacySpellRefactor("arms of hadar", {
 	duration : "Instantaneous",
 	save : "Str",
 	description : "2d6+1d6/SL Necrotic dmg; save halves; on failed save no reactions until next turn",
-	descriptionFull : "Invoking Hadar, I cause tendrils to erupt from yourself. Each creature in a 10-foot Emanation originating from I makes a Strength saving throw. On a failed save, a target takes 2d6 necrotic damage and can't take Reactions until the start of its next turn. On a successful save, a target takes half as much damage only." + AtHigherLevels + "The damage increases by 1d6 for each spell slot levels above 1."
+	descriptionFull : "Invoking Hadar, you cause tendrils to erupt from yourself. Each creature in a 10-foot Emanation originating from you makes a Strength saving throw. On a failed save, a target takes 2d6 necrotic damage and can't take Reactions until the start of its next turn. On a successful save, a target takes half as much damage only." + AtHigherLevels + "The damage increases by 1d6 for each spell slot levels above 1."
 });
 legacySpellRefactor("astral projection", {
 	name : "Astral Projection",
@@ -14282,7 +14287,7 @@ legacySpellRefactor("astral projection", {
 	compMaterial : "For each of the spell's targets, one jacinth worth 1,000+ gp and one silver bar worth 100+ gp, all of which the spell consumes",
 	duration : "Till dispelled",
 	description : "Me + 8 willing crea projected to Astral Plane with identical stats; see book (per crea 1100gp cons.)",
-	descriptionFull : "I and up to eight willing creatures within range project my astral bodies into the Astral Plane (the spell ends instantly if I are already on that plane). Each target's body is left behind in a state of suspended animation; it has the Unconscious condition, doesn't need food or air, and doesn't age." + "\n   " + "A target's astral form resembles its body in almost every way, replicating its game statistics and possessions. The principal difference is the addition of a silvery cord that trails from between the shoulder blades of the astral form. The cord fades from view after 1 foot. If the cord is cut—which happens only when an effect states that it does so—the target's body and astral form both die." + "\n   " + "A target's astral form can travel through the Astral Plane. The moment an astral form leaves that plane, the target's body and possessions travel along the silver cord, causing the target to re-enter its body on the new plane." + "\n   " + "Any damage or other effects that apply to an astral form have no effect on the target's body and vice versa. If a target's body or astral form drops to 0 Hit Points, the spell ends for that target. The spell ends for all the targets if I take a Magic action to dismiss it." + "\n   " + "When the spell ends for a target who isn't dead, the target reappears in a body and exits the state of suspended animation."
+	descriptionFull : "You and up to eight willing creatures within range project your astral bodies into the Astral Plane (the spell ends instantly if you are already on that plane). Each target's body is left behind in a state of suspended animation; it has the Unconscious condition, doesn't need food or air, and doesn't age." + "\n   " + "A target's astral form resembles its body in almost every way, replicating its game statistics and possessions. The principal difference is the addition of a silvery cord that trails from between the shoulder blades of the astral form. The cord fades from view after 1 foot. If the cord is cut—which happens only when an effect states that it does so—the target's body and astral form both die." + "\n   " + "A target's astral form can travel through the Astral Plane. The moment an astral form leaves that plane, the target's body and possessions travel along the silver cord, causing the target to re-enter its body on the new plane." + "\n   " + "Any damage or other effects that apply to an astral form have no effect on the target's body and vice versa. If a target's body or astral form drops to 0 Hit Points, the spell ends for that target. The spell ends for all the targets if you take a Magic action to dismiss it." + "\n   " + "When the spell ends for a target who isn't dead, the target reappears in a body and exits the state of suspended animation."
 });
 legacySpellRefactor("augury", {
 	name : "Augury",
@@ -14297,7 +14302,7 @@ legacySpellRefactor("augury", {
 	compMaterial : "Specially marked sticks, bones, cards, or other divinatory tokens worth 25+ gp",
 	duration : "Instantaneous",
 	description : "Omen about specific course of action I plan to take in next 30 min: weal/woe/both/neither (25gp)",
-	descriptionFull : "I receive an omen from an otherworldly entity about the result of a course of action that I plan to take within the next 30 minutes. The DM chooses the omen from the Omens table." + "\n " + "\u2022 Weal, for good results" + "\n " + "\u2022 Woe, for bad results" + "\n " + "\u2022 Weal and woe, for both good and bad results" + "\n " + "\u2022 Indifference, for results that aren't especially good or bad" + "\n\n" + "The spell doesn't account for circumstances, such as other spells, that might change the results." + "\n   " + "If I cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that I get no answer."
+	descriptionFull : "You receive an omen from an otherworldly entity about the result of a course of action that you plan to take within the next 30 minutes. The DM chooses the omen from the Omens table." + "\n " + "\u2022 Weal, for good results" + "\n " + "\u2022 Woe, for bad results" + "\n " + "\u2022 Weal and woe, for both good and bad results" + "\n " + "\u2022 Indifference, for results that aren't especially good or bad" + "\n\n" + "The spell doesn't account for circumstances, such as other spells, that might change the results." + "\n   " + "If you cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer."
 });
 legacySpellRefactor("aura of life", {
 	name : "Aura of Life",
@@ -14309,8 +14314,8 @@ legacySpellRefactor("aura of life", {
 	range : "S:30-ft rad",
 	components : "V",
 	duration : "Conc, 10 min",
-	description : "While in area me + allies resist Necrotic dmg; at turn start, 0 HP ally heal 1 HP",
-	descriptionFull : "An aura radiates from I in a 30-foot Emanation for the duration. While in the aura, I and my allies have Resistance to Necrotic damage, and my Hit Point maximums can't be reduced. If an ally with 0 Hit Points starts its turn in the aura, that ally regains 1 Hit Point."
+	description : "Me + allies in area resist Necrotic dmg \u0026 no max HP reduction; at turn start, 0 HP ally heal 1 HP",
+	descriptionFull : "An aura radiates from you in a 30-foot Emanation for the duration. While in the aura, you and your allies have Resistance to Necrotic damage, and your Hit Point maximums can't be reduced. If an ally with 0 Hit Points starts its turn in the aura, that ally regains 1 Hit Point."
 });
 legacySpellRefactor("aura of purity", {
 	name : "Aura of Purity",
@@ -14322,8 +14327,8 @@ legacySpellRefactor("aura of purity", {
 	range : "S:30-ft rad",
 	components : "V",
 	duration : "Conc, 10 min",
-	description : "Me \u0026 allies in area resist Poison, adv. on saves vs. Blind/Charm/Deaf/Frightened/Paralyze/Poison/Stun",
-	descriptionFull : "An aura radiates from I in a 30-foot Emanation for the duration. While in the aura, I and my allies have Resistance to Poison damage and Advantage on saving throws to avoid or end effects that include the Blinded, Charmed, Deafened, Frightened, Paralyzed, Poisoned, or Stunned condition."
+	description : "Me + allies in area resist Poison, adv. on saves vs. Blind/Charm/Deaf/Frightened/Paralyze/Poison/Stun",
+	descriptionFull : "An aura radiates from you in a 30-foot Emanation for the duration. While in the aura, you and your allies have Resistance to Poison damage and Advantage on saving throws to avoid or end effects that include the Blinded, Charmed, Deafened, Frightened, Paralyzed, Poisoned, or Stunned condition."
 });
 legacySpellRefactor("aura of vitality", {
 	name : "Aura of Vitality",
@@ -14336,7 +14341,7 @@ legacySpellRefactor("aura of vitality", {
 	components : "V",
 	duration : "Conc, 1 min",
 	description : "On cast and at the start of each of my turns, I can heal 2d6 HP to 1 creature in range",
-	descriptionFull : "An aura radiates from I in a 30-foot Emanation for the duration. When I create the aura and at the start of each of my turns while it persists, I can restore 2d6 Hit Points to one creature in it."
+	descriptionFull : "An aura radiates from you in a 30-foot Emanation for the duration. When you create the aura and at the start of each of your turns while it persists, you can restore 2d6 Hit Points to one creature in it."
 });
 legacySpellRefactor("awaken", {
 	name : "Awaken",
@@ -14349,11 +14354,12 @@ legacySpellRefactor("awaken", {
 	components : "V,S,M\u2020",
 	compMaterial : "An agate worth 1,000+ gp, which the spell consumes",
 	duration : "Instantaneous",
-	description : "Give beast or plant Int 10, speech and ability to move. Charmed for 30 days; see book (1000gp cons.)",
-	descriptionFull : "I spend the casting time tracing magical pathways within a precious gemstone, and then touch the target. The target must be either a Beast or Plant creature with an Intelligence of 3 or less or a natural plant that isn't a creature. The target gains an Intelligence of 10 and the ability to speak one language I know. If the target is a natural plant, it becomes a Plant creature and gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human's. The DM chooses statistics appropriate for the awakened Plant, such as the statistics for the Awakened Shrub or Awakened Tree in the Monster Manual." + "\n   " + "The awakened target has the Charmed condition for 30 days or until I or my allies deal damage to it. When the condition ends, the awakened creature chooses its attitude toward I."
+	description : "Give beast or plant speech, Int 10 and ability to move. Charmed for 30 days; see book (1000gp cons.)",
+	descriptionFull : "You spend the casting time tracing magical pathways within a precious gemstone, and then touch the target. The target must be either a Beast or Plant creature with an Intelligence of 3 or less or a natural plant that isn't a creature. The target gains an Intelligence of 10 and the ability to speak one language you know. If the target is a natural plant, it becomes a Plant creature and gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human's. The DM chooses statistics appropriate for the awakened Plant, such as the statistics for the Awakened Shrub or Awakened Tree in the Monster Manual." + "\n   " + "The awakened target has the Charmed condition for 30 days or until you or your allies deal damage to it. When the condition ends, the awakened creature chooses its attitude toward you."
 });
 legacySpellRefactor("bane", {
 	name : "Bane",
+	nameShort : "Bane*",
 	classes : ["bard", "cleric", "warlock"],
 	source : [["PHB2024", 245]],
 	level : 1,
@@ -14365,7 +14371,7 @@ legacySpellRefactor("bane", {
 	duration : "Conc, 1 min",
 	save : "Cha",
 	description : "3+1/SL creatures save or subtract 1d4 on every attack and save for the duration",
-	descriptionFull : "Up to three creatures of my choice that I can see within range must each make a Charisma saving throw. Whenever a target that fails this save makes an attack roll or a saving throw before the spell ends, the target must subtract 1d4 from the attack roll or save." + AtHigherLevels + "I can target one additional creature for each spell slot level above 1."
+	descriptionFull : "Up to three creatures of your choice that you can see within range must each make a Charisma saving throw. Whenever a target that fails this save makes an attack roll or a saving throw before the spell ends, the target must subtract 1d4 from the attack roll or save." + AtHigherLevels + "You can target one additional creature for each spell slot level above 1."
 });
 legacySpellRefactor("banishing smite", {
 	name : "Banishing Smite",
@@ -14374,7 +14380,7 @@ legacySpellRefactor("banishing smite", {
 	level : 5,
 	school : "Conj",
 	time : "1 bns*",
-	timeFull : "1 Bonus Action, which I take immediately after hitting a creature with a melee weapon or an Unarmed Strike",
+	timeFull : "1 Bonus Action, which you take immediately after hitting a creature with a melee weapon or an Unarmed Strike",
 	range : "Self",
 	components : "V",
 	duration : "Conc, 1 min",
@@ -14383,6 +14389,7 @@ legacySpellRefactor("banishing smite", {
 });
 legacySpellRefactor("banishment", {
 	name : "Banishment",
+	nameShort : "Banishment*",
 	classes : ["cleric", "paladin", "sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 245]],
 	level : 4,
@@ -14393,8 +14400,8 @@ legacySpellRefactor("banishment", {
 	compMaterial : "A pentacle",
 	duration : "Conc, 1 min",
 	save : "Cha",
-	description : "1+1/SL crea  save or banished; aberration/celestial/elemental/fey/fiend don't return if spell lasts 1 min",
-	descriptionFull : "One creature that I can see within range must succeed on a Charisma saving throw or be transported to a harmless demiplane for the duration. While there, the target has the Incapacitated condition. When the spell ends, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied." + "\n   " + "If the target is an Aberration, a Celestial, an Elemental, a Fey, or a Fiend, the target doesn't return if the spell lasts for 1 minute. The target is instead transported to a random location on a plane (DM's choice) associated with its creature type." + AtHigherLevels + "I can target one additional creature for each spell slot above 4."
+	description : "1+1/SL crea save or banished; aberration/celestial/elemental/fey/fiend don't return if spell lasts 1 min",
+	descriptionFull : "One creature that you can see within range must succeed on a Charisma saving throw or be transported to a harmless demiplane for the duration. While there, the target has the Incapacitated condition. When the spell ends, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied." + "\n   " + "If the target is an Aberration, a Celestial, an Elemental, a Fey, or a Fiend, the target doesn't return if the spell lasts for 1 minute. The target is instead transported to a random location on a plane (DM's choice) associated with its creature type." + AtHigherLevels + "You can target one additional creature for each spell slot above 4."
 });
 legacySpellRefactor("barkskin", {
 	name : "Barkskin",
@@ -14407,8 +14414,8 @@ legacySpellRefactor("barkskin", {
 	components : "V,S,M",
 	compMaterial : "A handful of bark",
 	duration : "1 h",
-	description : "1 willing crea AC cannot be reduced below 17, regardless of armor it is wearing",
-	descriptionFull : "I touch a willing creature. Until the spell ends, the target's skin assumes a bark-like appearance, and the target has an AC of 17 if its AC is lower than that."
+	description : "1 willing creature's AC cannot be reduced below 17, regardless of armor it is wearing",
+	descriptionFull : "You touch a willing creature. Until the spell ends, the target's skin assumes a bark-like appearance, and the target has an AC of 17 if its AC is lower than that."
 });
 legacySpellRefactor("beacon of hope", {
 	name : "Beacon of Hope",
@@ -14420,7 +14427,7 @@ legacySpellRefactor("beacon of hope", {
 	range : "30 ft",
 	components : "V,S",
 	duration : "Conc, 1 min",
-	description : "Any crea in range adv. on Wis \u0026 Death saves, \u0026 gain max HP from any healing",
+	description : "For duration, any crea has adv. on Wisdom \u0026 Death saves, \u0026 gain max HP from any healing",
 	descriptionFull : "Choose any number of creatures within range. For the duration, each target has Advantage on Wisdom saving throws and Death Saving Throws and regains the maximum number of Hit Points possible from any healing."
 });
 legacySpellRefactor("beast sense", {
@@ -14435,10 +14442,11 @@ legacySpellRefactor("beast sense", {
 	components : "S",
 	duration : "Conc, 1 h",
 	description : "Use 1 willing beast's senses as well as my own for the duration",
-	descriptionFull : "I touch a willing Beast. For the duration, I can perceive through the Beast's senses as well as my own. When perceiving through the Beast's senses, I benefit from any special senses it has."
+	descriptionFull : "You touch a willing Beast. For the duration, you can perceive through the Beast's senses as well as your own. When perceiving through the Beast's senses, you benefit from any special senses it has."
 });
 legacySpellRefactor("befuddlement", {
 	name : "Befuddlement",
+	nameShort : "Befuddlement*",
 	replaces : "feeblemind",
 	classes : ["bard", "druid", "warlock", "wizard"],
 	source : [["PHB2024", 245]],
@@ -14451,7 +14459,7 @@ legacySpellRefactor("befuddlement", {
 	duration : "Instantaneous",
 	save : "Int",
 	description : "1 crea 10d12 Psychic \u0026 can't cast spells/take Magic action; save 1/2 dmg only; resave every 30 days ",
-	descriptionFull : "I blast the mind of a creature that I can see within range. The target makes an Intelligence saving throw." + "\n   " + "On a failed save, the target takes 10d12 Psychic damage and can't cast spells or take the Magic action. At the end of every 30 days, he target repeats the save, ending the effect on a success. The effect can also be ended by the Greater Restoration, Heal, or Wish spell." + "\n   " + "On a successful save, the target takes half as much damage only",
+	descriptionFull : "You blast the mind of a creature that you can see within range. The target makes an Intelligence saving throw." + "\n   " + "On a failed save, the target takes 10d12 Psychic damage and can't cast spells or take the Magic action. At the end of every 30 days, he target repeats the save, ending the effect on a success. The effect can also be ended by the Greater Restoration, Heal, or Wish spell." + "\n   " + "On a successful save, the target takes half as much damage only",
 });
 legacySpellRefactor("bestow curse", {
 	name : "Bestow Curse",
@@ -14465,10 +14473,11 @@ legacySpellRefactor("bestow curse", {
 	duration : "Conc, 1 min",
 	save : "Wis",
 	description : "1 creature save or cursed, see B; duration SL4: conc, 10 min; SL5: 8h; SL7: 24h; SL9: until dispelled",
-	descriptionFull : "I touch a creature, which must succeed on a Wisdom saving throw or become cursed for the duration. Until the curse ends, the target suffers one of the following effects of my choice:." + "\n " + "\u2022 Choose one ability. The target has Disadvantage on ability check and saving throws made with that ability." + "\n " + "\u2022 The target has Disadvantage on attack rolls against I." + "\n " + "\u2022 In combat, the target must succeed on a Wisdom saving throw at the start of each of its turns or be forced to take the Dodge action on that turn." + "\n " + "\u2022 If I deal damage to the target with an attack roll or a spell, the target takes an extra 1d8 Necrotic damage." + AtHigherLevels + "If I cast this spell using a level 4 spell slot, I can maintain Concentration on it for up to 10 minutes. If I use a level 5+ spell slot, the spell doesn't require Concentration, and the duration becomes 8 hours (level 5-6 slot) or 24 hours (7-8 slot). If I use a level 9 spell slot, the spell lasts until dispelled."
+	descriptionFull : "You touch a creature, which must succeed on a Wisdom saving throw or become cursed for the duration. Until the curse ends, the target suffers one of the following effects of your choice:." + "\n " + "\u2022 Choose one ability. The target has Disadvantage on ability check and saving throws made with that ability." + "\n " + "\u2022 The target has Disadvantage on attack rolls against you." + "\n " + "\u2022 In combat, the target must succeed on a Wisdom saving throw at the start of each of its turns or be forced to take the Dodge action on that turn." + "\n " + "\u2022 If you deal damage to the target with an attack roll or a spell, the target takes an extra 1d8 Necrotic damage." + AtHigherLevels + "If you cast this spell using a level 4 spell slot, you can maintain Concentration on it for up to 10 minutes. If you use a level 5+ spell slot, the spell doesn't require Concentration, and the duration becomes 8 hours (level 5-6 slot) or 24 hours (7-8 slot). If you use a level 9 spell slot, the spell lasts until dispelled."
 });
 legacySpellRefactor("bigby's hand", {
 	name : "Bigby's Hand",
+	nameShort : "Bigby's Hand*",
 	nameAlt : "Arcane Hand",
 	classes : ["artificer","sorcerer", "wizard"],
 	source : [["PHB2024", 246]],
@@ -14479,8 +14488,8 @@ legacySpellRefactor("bigby's hand", {
 	components : "V,S,M",
 	compMaterial : "An eggshell and a glove",
 	duration : "Conc, 1 min",
-	description : "Large hand attacks, pushes, grapples or protects; AC 20, my max HP; bns a move 60 ft \u0026 act; see B",
-	descriptionFull : "I create a Large hand of shimmering magical energy in an unoccupied space that I can see within range. The hand lasts for the duration, and it moves at my command, mimicking the movements of my own hand." + "\n   " + "The hand is an object that has AC 20 and Hit Points equal to my Hit Point maximum. If it drops to 0 Hit Points, the spell ends. The hand doesn't occupy its space." + "\n   " + "When I cast the spell and as a Bonus Action on my later turns, I can move the hand up to 60 feet and then cause one of the following effects:" + toUni("Clenched Fist") + ". The hand strikes a target within 5 feet of it. Make a melee spell attack. On a hit, the target takes 5d8 Force damage." + toUni("Forceful Hand") + ". The hand attempts to push a Huge or smaller creature within 5 feet of it. The target must succeed on a Strength saving throw, or the hand pushes the target up to 5 feet plus a number of feet equal to five times my spellcasting ability modifier. The hand moves with the target, remaining within 5 feet of it." + toUni("Grasping Hand") + ". The hand attempts to grapple a Huge or smaller creature within 5 feet of it. The target must succeed on a Dexterity saving throw, or the target has the Grappled condition, with an escape DC equal to my spell save DC. While the hand grapples the target, I can take a Bonus Action to cause the hand to crush it, dealing Bludgeoning damage to the target equal to 4d6 plus my spellcasting ability modifier." + toUni("Interposing Hand") + ". The hand grants I Half Cover against attacks and other effects that originate from its space or that pass through it. In addition, the space counts as Difficult Terrain for my enemies." + AtHigherLevels + "The damage of the Clenched Fist increases by 2d8 and the damage of the Grasping Hand increases by 2d6 for each spell slot level above 5."
+	description : "Large hand attacks, pushes, grapples or protects; see B; AC 20, my max HP; bns move 60 ft \u0026 act",
+	descriptionFull : "You create a Large hand of shimmering magical energy in an unoccupied space that you can see within range. The hand lasts for the duration, and it moves at your command, mimicking the movements of your own hand." + "\n   " + "The hand is an object that has AC 20 and Hit Points equal to your Hit Point maximum. If it drops to 0 Hit Points, the spell ends. The hand doesn't occupy its space." + "\n   " + "When you cast the spell and as a Bonus Action on your later turns, you can move the hand up to 60 feet and then cause one of the following effects:" + toUni("Clenched Fist") + ". The hand strikes a target within 5 feet of it. Make a melee spell attack. On a hit, the target takes 5d8 Force damage." + toUni("Forceful Hand") + ". The hand attempts to push a Huge or smaller creature within 5 feet of it. The target must succeed on a Strength saving throw, or the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target, remaining within 5 feet of it." + toUni("Grasping Hand") + ". The hand attempts to grapple a Huge or smaller creature within 5 feet of it. The target must succeed on a Dexterity saving throw, or the target has the Grappled condition, with an escape DC equal to your spell save DC. While the hand grapples the target, you can take a Bonus Action to cause the hand to crush it, dealing Bludgeoning damage to the target equal to 4d6 plus your spellcasting ability modifier." + toUni("Interposing Hand") + ". The hand grants you Half Cover against attacks and other effects that originate from its space or that pass through it. In addition, the space counts as Difficult Terrain for your enemies." + AtHigherLevels + "The damage of the Clenched Fist increases by 2d8 and the damage of the Grasping Hand increases by 2d6 for each spell slot level above 5."
 });
 legacySpellRefactor("blade barrier", {
 	name : "Blade Barrier",
@@ -14493,11 +14502,11 @@ legacySpellRefactor("blade barrier", {
 	components : "V,S",
 	duration : "Conc, 10 min",
 	save : "Dex",
-	description : "100\xD720\xD75ft (l\xD7w\xD7h) wall or 60 d. 20\xD75ft (w\xD7h) cir; 3/4 cover; now/enter/end 6d10 Slash. (1/t/c, S:1/2)",
-	descriptionMetric : "60\xD76\xD71,5m (l\xD7w\xD7h) wall or 9 rad 6\xD71,5m (w\xD7h) cir; 3/4 cover; now/enter/end 6d10 Slash. (1/t/c, S:1/2)",
-	descriptionShorter : typePF ? false : "100|20|5ft (l|w|h) wall or 30|20|5ft (r|w|h) ring; 6d10 Slash.; save half; \u00BEcover",
-	descriptionShorterMetric : typePF ? false : "60|6|1,5m (l|w|h) wall or 9|6|1,5m (r|w|h) ring; 6d10 Slash.; save half; \u00BEcover",
-	descriptionFull : "I create a wall of whirling blades made of magical energy. The wall appears within range and lasts for the duration. I make a straight wall up to 100 feet long, 20 feet high, and 5 feet thick, or a ringed wall up to 60 feet in diameter, 20 feet high, and 5 feet thick. The wall provides Three-Quarters Cover, and its space is Difficult Terrain." + "\n   " + "Any creature in the wall's space makes a Dexterity saving throw, taking 6d10 Force damage on a failed save or half as much damage on a successful one. A creature also makes that save if it enters the wall's space or ends it turn there. A creature makes that save only once per turn.",
+	description : "100|20|5ft (l|h|w) wall or 30|20|5ft (r|h|w) cir; 3/4 cover; dif. ter.; now/enter/end 6d10 Slash. (1/t/c, S:1/2)",
+	descriptionMetric : "60|6|1,5m (l|h|w) wall or 9|6|1,5m (r|h|w) cir; 3/4 cover; dif. ter.; now/enter/end 6d10 Slash. (1/t/c, S:1/2)",
+	descriptionShorter : typePF ? false : "100|20|5ft (l|h|w) wall or 30|20|5ft (r|h|w) ring; now/enter/end 6d10 Slash.; save 1/2; \u00BEcover",
+	descriptionShorterMetric : typePF ? false : "60|6|1,5m (l|h|w) wall or 9|6|1,5m (r|h|w) ring; now/enter/end 6d10 Slash.; save 1/2; \u00BEcover",
+	descriptionFull : "You create a wall of whirling blades made of magical energy. The wall appears within range and lasts for the duration. You make a straight wall up to 100 feet long, 20 feet high, and 5 feet thick, or a ringed wall up to 60 feet in diameter, 20 feet high, and 5 feet thick. The wall provides Three-Quarters Cover, and its space is Difficult Terrain." + "\n   " + "Any creature in the wall's space makes a Dexterity saving throw, taking 6d10 Force damage on a failed save or half as much damage on a successful one. A creature also makes that save if it enters the wall's space or ends it turn there. A creature makes that save only once per turn.",
 });
 legacySpellRefactor("blade ward", {
 	name : "Blade Ward",
@@ -14510,7 +14519,7 @@ legacySpellRefactor("blade ward", {
 	components : "V,S",
 	duration : "Conc, 1 min",
 	description : "For the duration, creatures subtract 1d4 from attack rolls made against me",
-	descriptionFull : "Whenever a creature makes an attack roll against I before the spell ends, the attacker subtracts 1d4 from the attack roll."
+	descriptionFull : "Whenever a creature makes an attack roll against you before the spell ends, the attacker subtracts 1d4 from the attack roll."
 });
 legacySpellRefactor("bless", {
 	name : "Bless",
@@ -14524,10 +14533,11 @@ legacySpellRefactor("bless", {
 	compMaterial : "A holy symbol worth 5+ gp",
 	duration : "Conc, 1 min",
 	description : "3+1/SL creatures can add 1d4 on every attack roll and saving throw for the duration (5gp)",
-	descriptionFull : "I bless up to three creatures within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target adds 1d4 to the attack roll or save." + AtHigherLevels + "I can target one additional creature for each spell slot above 1."
+	descriptionFull : "You bless up to three creatures within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target adds 1d4 to the attack roll or save." + AtHigherLevels + "You can target one additional creature for each spell slot above 1."
 });
 legacySpellRefactor("blight", {
 	name : "Blight",
+	nameShort : "Blight*",
 	classes : ["druid", "sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 247]],
 	level : 4,
@@ -14537,8 +14547,8 @@ legacySpellRefactor("blight", {
 	components : "V,S",
 	duration : "Instantaneous",
 	save : "Con",
-	description : "1 creature takes 8d8+1d8/SL Necrotic dmg; save halves; plant crea auto fails; nonmagical plant dies",
-	descriptionFull : "A creature that I can see within range makes a Constitution saving throw, taking 8d8 Necrotic damage on a failed save or half as much damage on a successful one. A Plant creature automatically fails the save." + "\n   " + "Alternatively, target a nonmagical plant that isn't a creature, such as a tree or shrub. It doesn't make a save; it simply withers and dies." + AtHigherLevels + "The damage increases by 1d8 for each spell slot above 4."
+	description : "Kill nonmagical plant or target 1 crea for 8d8+1d8/SL Necrotic dmg; save halves; plant crea auto fails",
+	descriptionFull : "A creature that you can see within range makes a Constitution saving throw, taking 8d8 Necrotic damage on a failed save or half as much damage on a successful one. A Plant creature automatically fails the save." + "\n   " + "Alternatively, target a nonmagical plant that isn't a creature, such as a tree or shrub. It doesn't make a save; it simply withers and dies." + AtHigherLevels + "The damage increases by 1d8 for each spell slot above 4."
 });
 legacySpellRefactor("blinding smite", {
 	name : "Blinding Smite",
@@ -14547,16 +14557,17 @@ legacySpellRefactor("blinding smite", {
 	level : 3,
 	school : "Evoc",
 	time : "1 bns*",
-	timeFull : "1 Bonus Action, which I take immediately after hitting a creature with a melee weapon or an Unarmed Strike",
+	timeFull : "1 Bonus Action, which you take immediately after hitting a creature with a melee weapon or an Unarmed Strike",
 	range : "Self",
 	components : "V",
 	duration : "1 min",
 	save : "Con",
-	description : "Melee weapon/unarmed hit +3d8 +1d8/SL Radiant dmg; crea Blinded for 1 min; EoT save to end",
+	description : "Melee weapon/unarmed hit +3d8+1d8/SL Radiant dmg; crea Blinded for 1 min; EoT save to end",
 	descriptionFull : "The target hit by the strike takes an extra 3d8 Radiant damage from the attack, and the target has the Blinded condition until the spell ends. At the end of each of its turns, the Blinded target makes a Constitution saving throw, ending the spell on itself on a success." + AtHigherLevels + "The extra damage increases by 1d8 for each spell slot level above 3."
 });
 legacySpellRefactor("blindness/deafness", {
 	name : "Blindness/Deafness",
+	nameShort : "Blindness/Deafness*",
 	classes : ["bard", "cleric", "sorcerer", "wizard"],
 	source : [["PHB2024", 248]],
 	level : 2,
@@ -14566,8 +14577,8 @@ legacySpellRefactor("blindness/deafness", {
 	components : "V",
 	duration : "1 min",
 	save : "Con",
-	description : "1+1/SL crea save vs Blinded or Deafened; extra save at end of every turn",
-	descriptionFull : "One creature that I can see within range must succeed on a Constitution saving throw, or it has the Blinded or deafened condition (my choice) for the duration. At the end of each of its turns, the target repeats the save, ending the spell on itself on a success." + AtHigherLevels + "I can target one additional creature for each spell slot level above 2."
+	description : "1+1/SL creature save vs Blinded or Deafened; repeat save at end of each turn",
+	descriptionFull : "One creature that you can see within range must succeed on a Constitution saving throw, or it has the Blinded or deafened condition (your choice) for the duration. At the end of each of its turns, the target repeats the save, ending the spell on itself on a success." + AtHigherLevels + "You can target one additional creature for each spell slot level above 2."
 });
 legacySpellRefactor("blink", {
 	name : "Blink",
@@ -14579,8 +14590,8 @@ legacySpellRefactor("blink", {
 	range : "Self",
 	components : "V,S",
 	duration : "1 min",
-	description : "50% chance every EoT to travel to Ethereal Plane and return to an empty space within 10 ft next turn",
-	descriptionFull : "Roll 1d6 at the end of each of my turns for the duration. On a roll of 4-6, I vanish from my current plane of existence and appear in the Ethereal Plane (the spell ends instantly if I are already on that plane). While on the Ethereal Plane, I can perceive the plane I left, which is cast in shades of gray, but I can't see anything there more than 60 feet away. I can affect and be affected only by other creatures on the Ethereal Plane, and creatures on the other plane can't perceive I unless they have a special ability that lets them perceive things on the Ethereal Plane." + "\n   " + "I return to the other plane at the start of my next turn and when the spell ends if I are on the Ethereal Plane. I return to an unoccupied space of my choice that I can see within 10 feet of the space I left. If no unoccupied space is available within that range, I appear in the nearest unoccupied space."
+	description : "50% chance to travel to Ethereal Plane each EoT; return to an empty space within 10ft next turn",
+	descriptionFull : "Roll 1d6 at the end of each of your turns for the duration. On a roll of 4-6, you vanish from your current plane of existence and appear in the Ethereal Plane (the spell ends instantly if you are already on that plane). While on the Ethereal Plane, you can perceive the plane you left, which is cast in shades of gray, but you can't see anything there more than 60 feet away. You can affect and be affected only by other creatures on the Ethereal Plane, and creatures on the other plane can't perceive you unless they have a special ability that lets them perceive things on the Ethereal Plane." + "\n   " + "You return to the other plane at the start of your next turn and when the spell ends if you are on the Ethereal Plane. You return to an unoccupied space of your choice that you can see within 10 feet of the space you left. If no unoccupied space is available within that range, you appear in the nearest unoccupied space."
 });
 legacySpellRefactor("blur", {
 	name : "Blur",
@@ -14592,8 +14603,8 @@ legacySpellRefactor("blur", {
 	range : "Self",
 	components : "V",
 	duration : "Conc, 1 min",
-	description : "Creatures have dis. on attacks vs. me; no effect against creature with Blindsight or Truesight",
-	descriptionFull : "my body becomes blurred. For the duration, any creature has Disadvantage on attack rolls against I. An attacker is immune to the effect if it perceives I with Blindsight or Truesight."
+	description : "Creatures have disadvantage on attacks vs me unless creature has Blindsight or Truesight",
+	descriptionFull : "Your body becomes blurred. For the duration, any creature has Disadvantage on attack rolls against you. An attacker is immune to the effect if it perceives you with Blindsight or Truesight."
 });
 legacySpellRefactor("burning hands", {
 	name : "Burning Hands",
@@ -14607,10 +14618,11 @@ legacySpellRefactor("burning hands", {
 	duration : "Instantaneous",
 	save : "Dex",
 	description : "All in area 3d6+1d6/SL Fire dmg; save halves; unattended flammable objects ignite",
-	descriptionFull : "A thin sheet of flames shoots forth from I. Each creature in a 15-foot Cone makes a Dexterity saving throw, taking 3d6 Fire damage on a failed save or half as much damage on a successful one." + "\n   " + "Flammable objects in the Cone that aren't being worn or carried start burning." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 1."
+	descriptionFull : "A thin sheet of flames shoots forth from you. Each creature in a 15-foot Cone makes a Dexterity saving throw, taking 3d6 Fire damage on a failed save or half as much damage on a successful one." + "\n   " + "Flammable objects in the Cone that aren't being worn or carried start burning." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 1."
 });
 legacySpellRefactor("call lightning", {
 	name : "Call Lightning",
+	nameShort : "Call Lightning*",
 	classes : ["druid"],
 	source : [["PHB2024", 248]],
 	level : 3,
@@ -14620,9 +14632,9 @@ legacySpellRefactor("call lightning", {
 	components : "V,S",
 	duration : "Conc, 10 min",
 	save : "Dex",
-	description : "60-ft rad 10-ft high cloud; 1 a all in 5-ft rad under cloud 3d10+1d10/SL Lightning dmg; save half",
-	descriptionShorter : "60-ft rad 10-ft high cloud; all in 5-ft rad under it 3d10+1d10/SL Lghtng; save half; 1 a to repeat",
-	descriptionFull : "A storm cloud appears at a point within range that I can see above yourself. It takes the shape of a Cylinder that is 10 feet tall with a 60-foot radius." + "\n   " + "When I cast the spell, choose a point I can see under the cloud. A lightning bolt shoots from the cloud to that point. Each creature within 5 feet of that point makes a Dexterity saving throw, taking 3d10 Lightning damage on a failed save or half as much damage on a successful one." + "\n   " + "Until the spell ends, I can take a Magic action to call down lightning in that way again, targeting the same point or a different one." + "\n   " + "If I're outdoors in a storm when I cast this spell, the spell gives I control over that storm instead of creating a new one. Under such conditions, the spell's damage increases by 1d10." + AtHigherLevels + "The damage increases by 1d10 for each spell slot level above 3."
+	description : "60-ft rad 10-ft high cloud; 1 a 5-ft rad of visible point under cloud all 3d10+1d10/SL Lightn.; save 1/2",
+	descriptionShorter : "60-ft rad 10-ft high cloud; all in 5-ft rad under it 3d10+1d10/SL Lightn.; save half; 1 a to repeat",
+	descriptionFull : "A storm cloud appears at a point within range that you can see above yourself. It takes the shape of a Cylinder that is 10 feet tall with a 60-foot radius." + "\n   " + "When you cast the spell, choose a point you can see under the cloud. A lightning bolt shoots from the cloud to that point. Each creature within 5 feet of that point makes a Dexterity saving throw, taking 3d10 Lightning damage on a failed save or half as much damage on a successful one." + "\n   " + "Until the spell ends, you can take a Magic action to call down lightning in that way again, targeting the same point or a different one." + "\n   " + "If you're outdoors in a storm when you cast this spell, the spell gives you control over that storm instead of creating a new one. Under such conditions, the spell's damage increases by 1d10." + AtHigherLevels + "The damage increases by 1d10 for each spell slot level above 3."
 });
 legacySpellRefactor("calm emotions", {
 	name : "Calm Emotions",
@@ -14635,13 +14647,14 @@ legacySpellRefactor("calm emotions", {
 	components : "V,S",
 	duration : "Conc, 1 min",
 	save : "Cha",
-	description : "20-ft rad all humanoids suppress either Charmed Frightened or hostility toward any creature",
-	descriptionFull : "Each Humanoid in a 20-foot-radius Sphere centered on a point I choose within range must succeed on a Charisma saving throw or be affected by one of the following effects (choose for each creature):"+
+	description : "20-ft rad all humanoids suppress Charmed \u0026 Frightened, or hostility to any crea till it or allies dmged",
+	descriptionFull : "Each Humanoid in a 20-foot-radius Sphere centered on a point you choose within range must succeed on a Charisma saving throw or be affected by one of the following effects (choose for each creature):"+
 	"\n The creature has Immunity to the Charmed and Frightened conditions until the spell ends. If the creature was already Charmed or Frightened, those conditions are suppressed for the duration."+
-	"\n The creature becomes indifferent about creatures of my choice that it's Hostile toward. This indifference ends if the target takes damage or witnesses its allies taking damage. When the spell ends, the creature's attitude returns to normal."
+	"\n The creature becomes indifferent about creatures of your choice that it's Hostile toward. This indifference ends if the target takes damage or witnesses its allies taking damage. When the spell ends, the creature's attitude returns to normal."
 });
 legacySpellRefactor("chain lightning", {
 	name : "Chain Lightning",
+	nameShort : "Chain Lightning*",
 	classes : ["sorcerer", "wizard"],
 	source : [["PHB2024", 249]],
 	level : 6,
@@ -14652,11 +14665,12 @@ legacySpellRefactor("chain lightning", {
 	compMaterial : "Three silver pins",
 	duration : "Instantaneous",
 	save : "Dex",
-	description : "Lightning bolt 1 crea/obj and 3+1/SL crea/obj within 30 ft; 10d8 Lightning dmg; save halves",
-	descriptionFull : "I launch a lightning bolt toward a target I can see within range. Three bolts then leap from that target to as many as three other targets of my choice, each of which must be within 30 feet of the first target. A target can be a creature or an object and can be targeted by only one of the bolts." + "\n   " + "Each target makes a Dexterity saving throw, taking 10d8 Lightning damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "One additional bolt leaps from the first target to another target for each spell slot level above 6."
+	description : "Lightning bolt 1 visible crea/obj and 3+1/SL crea/obj in 30 ft of 1st; 10d8 Lightning dmg; save halves",
+	descriptionFull : "You launch a lightning bolt toward a target you can see within range. Three bolts then leap from that target to as many as three other targets of your choice, each of which must be within 30 feet of the first target. A target can be a creature or an object and can be targeted by only one of the bolts." + "\n   " + "Each target makes a Dexterity saving throw, taking 10d8 Lightning damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "One additional bolt leaps from the first target to another target for each spell slot level above 6."
 });
 legacySpellRefactor("charm monster", {
 	name : "Charm Monster",
+	nameShort : "Charm Monster*",
 	classes : ["bard", "druid", "sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 249]],
 	level : 4,
@@ -14667,10 +14681,11 @@ legacySpellRefactor("charm monster", {
 	duration : "1 h",
 	save : "Wis",
 	description : "1+1/SL crea save or Charmed \u0026 Friendly; adv. on save if fighting me/ally; ends if we dmg it",
-	descriptionFull : "One creature I can see within range makes a Wisdom saving throw. It does so with Advantage if I or my allies are fighting it. On a failed save, the target has the Charmed condition until the spell ends or until I or my allies damage it. The Charmed creature is Friendly to I. When the spell ends, the target knows it was Charmed by I." + AtHigherLevels + "I can target one additional creature for each spell slot level above 4."
+	descriptionFull : "One creature you can see within range makes a Wisdom saving throw. It does so with Advantage if you or your allies are fighting it. On a failed save, the target has the Charmed condition until the spell ends or until you or your allies damage it. The Charmed creature is Friendly to you. When the spell ends, the target knows it was Charmed by you." + AtHigherLevels + "You can target one additional creature for each spell slot level above 4."
 });
 legacySpellRefactor("charm person", {
 	name : "Charm Person",
+	nameShort : "Charm Person*",
 	classes : ["bard", "druid", "sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 249]],
 	level : 1,
@@ -14680,8 +14695,8 @@ legacySpellRefactor("charm person", {
 	components : "V,S",
 	duration : "1 h",
 	save : "Wis",
-	description : "1+1/SL humanoids save or Charmed \u0026 Friendly;  adv. on save if fighting me/ally; ends if we dmg it",
-	descriptionFull : "One Humanoid I can see within range makes a Wisdom saving throw. It does so with Advantage if I or my allies are fighting it. On a failed save, the target has the Charmed condition until the spell ends or until I or my allies damage it. The Charmed creature is Friendly to I. When the spell ends, the target knows it was Charmed by I." + AtHigherLevels + "I can target on additional creature for each spell slot level above 1."
+	description : "1+1/SL humanoids save or Charmed \u0026 Friendly; adv. on save if fighting me/ally; ends if we dmg it",
+	descriptionFull : "One Humanoid you can see within range makes a Wisdom saving throw. It does so with Advantage if you or your allies are fighting it. On a failed save, the target has the Charmed condition until the spell ends or until you or your allies damage it. The Charmed creature is Friendly to you. When the spell ends, the target knows it was Charmed by you." + AtHigherLevels + "you can target on additional creature for each spell slot level above 1."
 });
 legacySpellRefactor("chill touch", {
 	name : "Chill Touch",
@@ -14696,7 +14711,7 @@ legacySpellRefactor("chill touch", {
 	description : "Melee spell atk for 1d10 Necrotic; can't regain HP until my next EoT; +1d10 at CL 5, 11, and 17",
 	descriptionShorter : "Melee spell atk for 1d10 Necrotic; can't regain HP until my next EoT; +1d10 at CL 5/11/17",
 	descriptionCantripDie : "Melee spell attack for `CD`d10 Necrotic; can't regain HP until my next EoT",
-	descriptionFull : "Channeling the chill of the grave, make a melee spell attack against a target within reach. On a hit, the target takes 1d10 Necrotic damage, and it can't regain Hit Points until the end of my next turn." + "\n   " + toUni("Cantrip Upgrade") + ".  The damage increases by 1d10 when I reach levels 5 (2d10), 11 (3d10), and 17 (4d10)."
+	descriptionFull : "Channeling the chill of the grave, make a melee spell attack against a target within reach. On a hit, the target takes 1d10 Necrotic damage, and it can't regain Hit Points until the end of your next turn." + "\n   " + toUni("Cantrip Upgrade") + ".  The damage increases by 1d10 when you reach levels 5 (2d10), 11 (3d10), and 17 (4d10)."
 });
 legacySpellRefactor("chromatic orb", {
 	name : "Chromatic Orb",
@@ -14710,7 +14725,7 @@ legacySpellRefactor("chromatic orb", {
 	compMaterial : "A diamond worth 50+ gp",
 	duration : "Instantaneous",
 	description : "Spell atk 3d8+1d8/SL Acid/Cold/Fire/Lghtn/Poison/Thdr; if dup. atk new target in 30ft; leap 1/SL (50gp)",
-	descriptionFull : "I hurl an orb of energy at a target within range. Choose Acid, Cold, Fire, Lightning, Poison, or Thunder for the type of orb I create, and then make a ranged spell attack against the target. On a hit, the target takes 3d8 damage of the chosen type." + "\n   " +  "If I roll the same number on two or more of the d8s, the orb leaps to a different target of my choice within 30 feet of the target. Make a new attack roll against the new target, and make a new damage roll. The orb can't leap again unless I cast the spell with a level 2+ spell slot." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 1. The orb can leap a maximum number of times equal to the level of the slot expended, and a creature can be targeted only once by each casting of this spell..",
+	descriptionFull : "You hurl an orb of energy at a target within range. Choose Acid, Cold, Fire, Lightning, Poison, or Thunder for the type of orb you create, and then make a ranged spell attack against the target. On a hit, the target takes 3d8 damage of the chosen type." + "\n   " +  "If you roll the same number on two or more of the d8s, the orb leaps to a different target of your choice within 30 feet of the target. Make a new attack roll against the new target, and make a new damage roll. The orb can't leap again unless you cast the spell with a level 2+ spell slot." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 1. The orb can leap a maximum number of times equal to the level of the slot expended, and a creature can be targeted only once by each casting of this spell..",
 	dynamicDamageBonus : {
 		multipleDmgTypes : {
 			dmgTypes : ["acid", "cold", "fire", "lightning", "poison", "thunder"],
@@ -14731,7 +14746,7 @@ legacySpellRefactor("circle of death", {
 	duration : "Instantaneous",
 	save : "Con",
 	description : "60-ft radius all creatures 8d8+2d8/SL Necrotic dmg; save halves (500gp)",
-	descriptionFull : "Negative energy ripples out in a 60-foot-radius Sphere from a point I choose within range. Each creature in that area makes a Constitution saving throw, taking 8d8 Necrotic damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage increases by 2d8 for each spell slot level above 6."
+	descriptionFull : "Negative energy ripples out in a 60-foot-radius Sphere from a point you choose within range. Each creature in that area makes a Constitution saving throw, taking 8d8 Necrotic damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage increases by 2d8 for each spell slot level above 6."
 });
 legacySpellRefactor("circle of power", {
 	name : "Circle of Power",
@@ -14743,8 +14758,8 @@ legacySpellRefactor("circle of power", {
 	range : "S:30-ft rad",
 	components : "V",
 	duration : "Conc, 10 min",
-	description : "While in area, me + allies adv. on saves vs magical effects; if save would half dmg, takes no dmg",
-	descriptionFull : "An aura radiates from I in a 30-foot Emanation for the duration. While in the aura, I and my allies have Advantage on saving throws against spells and other magical effects. When an affected creature makes a saving throw against a spell or magical effect that allows a save to take only half damage, it takes no damage if it succeeds on the save."
+	description : "While in area, me + allies adv. on saves vs magical effects; if save would half dmg, we take no dmg",
+	descriptionFull : "An aura radiates from you in a 30-foot Emanation for the duration. While in the aura, you and your allies have Advantage on saving throws against spells and other magical effects. When an affected creature makes a saving throw against a spell or magical effect that allows a save to take only half damage, it takes no damage if it succeeds on the save."
 });
 legacySpellRefactor("clairvoyance", {
 	name : "Clairvoyance",
@@ -14758,7 +14773,7 @@ legacySpellRefactor("clairvoyance", {
 	compMaterial : "A focus worth 100+ gp, either a jeweled horn for hearing or a glass eye for seeing",
 	duration : "Conc, 10 min",
 	description : "See or hear familiar place or obvious location; bns switch between seeing and hearing (100gp)",
-	descriptionFull : "I create an invisible sensor within range in a location familiar to I (a place I have visited or seen before) or in an obvious location that is unfamiliar to I (such as behind a door, around a corner, or in a grove of trees). The intangible, invulnerable sensor remains in place for the duration." + "\n   " + "When I cast the spell, choose seeing or hearing. I can use the chosen sense through the sensor as if I were in its space. As a Bonus Action, I can switch between seeing and hearing." + "\n   " + "A creature that sees the sensor (such as a creature benefiting from See Invisibility or Truesight) sees a luminous orb about the size of my fist."
+	descriptionFull : "You create an invisible sensor within range in a location familiar to you (a place you have visited or seen before) or in an obvious location that is unfamiliar to you (such as behind a door, around a corner, or in a grove of trees). The intangible, invulnerable sensor remains in place for the duration." + "\n   " + "When you cast the spell, choose seeing or hearing. You can use the chosen sense through the sensor as if you were in its space. As a Bonus Action, you can switch between seeing and hearing." + "\n   " + "A creature that sees the sensor (such as a creature benefiting from See Invisibility or Truesight) sees a luminous orb about the size of your fist."
 });
 legacySpellRefactor("clone", {
 	name : "Clone",
@@ -14772,7 +14787,7 @@ legacySpellRefactor("clone", {
 	compMaterial : "A diamond worth 1000+ gp, which the spell consumes, and a sealable vessel worth 2000+ gp that is large enough to hold the creature being cloned",
 	duration : "Instantaneous",
 	description : "Create a clone of living crea; after 120 days its soul can move to the clone if dies (1K gp cons.; 2K gp)",
-	descriptionFull : "I touch a creature or at least 1 cubic inch of its flesh. An inert duplicate of that creature forms inside the vessel used in the spell's casting and finishes growing after 120 days; I choose whether the finished clone is the same age as the creature or younger. The clone remains inert and endures indefinitely while its vessel remains undisturbed." + "\n   " + "If the original creature dies after the clone finishes forming, the creature's soul transfers to the clone if the soul is free and willing to return. The clone is physically identical to the original and has the same personality, memories, and abilities, but none of the original's equipment. The creature's original remains, if any, become inert and can't be revived, since the creature's soul is elsewhere."
+	descriptionFull : "You touch a creature or at least 1 cubic inch of its flesh. An inert duplicate of that creature forms inside the vessel used in the spell's casting and finishes growing after 120 days; you choose whether the finished clone is the same age as the creature or younger. The clone remains inert and endures indefinitely while its vessel remains undisturbed." + "\n   " + "If the original creature dies after the clone finishes forming, the creature's soul transfers to the clone if the soul is free and willing to return. The clone is physically identical to the original and has the same personality, memories, and abilities, but none of the original's equipment. The creature's original remains, if any, become inert and can't be revived, since the creature's soul is elsewhere."
 });
 legacySpellRefactor("cloudkill", {
 	name : "Cloudkill",
@@ -14787,7 +14802,7 @@ legacySpellRefactor("cloudkill", {
 	save : "Con",
 	description : "Heavily obsc. 20ft rad; now/cover/enter/end 5d8+1d8/SL Poison (1/turn/crea, save 1/2); move 10ft/rnd",
 	descriptionShorter : "20ft rad 5d8+1d8/SL Poison; save halves; move 10 ft/rnd; heavily obscured",
-	descriptionFull : "I create a 20-foot-radius Sphere of yellow-green fog centered on a point within range. The fog lasts for the duration or until string wind (such as the one created by Gust of Wind) disperses it, ending the spell. Its area is Heavily Obscured." + "\n   " + "Each creature in the Sphere makes a Constitution saving throw, taking 5d8 Poison damage on a failed save or half as much damage on a successful one. A creature must also make this save when the Sphere moves into its space and when it enters the Sphere or ends its turn there. A creature makes this save only once per turn." + "\n   " + "The Sphere moves 10 feet away from I at the start of each of my turns." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 5."
+	descriptionFull : "You create a 20-foot-radius Sphere of yellow-green fog centered on a point within range. The fog lasts for the duration or until string wind (such as the one created by Gust of Wind) disperses it, ending the spell. Its area is Heavily Obscured." + "\n   " + "Each creature in the Sphere makes a Constitution saving throw, taking 5d8 Poison damage on a failed save or half as much damage on a successful one. A creature must also make this save when the Sphere moves into its space and when it enters the Sphere or ends its turn there. A creature makes this save only once per turn." + "\n   " + "The Sphere moves 10 feet away from you at the start of each of your turns." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 5."
 });
 legacySpellRefactor("cloud of daggers", {
 	name : "Cloud of Daggers",
@@ -14800,8 +14815,8 @@ legacySpellRefactor("cloud of daggers", {
 	components : "V,S,M",
 	compMaterial : "A sliver of glass",
 	duration : "Conc, 1 min",
-	description : "5ft cube 4d4+2d4/SL Slashing to crea in area on cast/cover/enter/end (1/turn/crea); a to teleport 30ft",
-	descriptionFull : "I conjure spinning daggers in a 5-foot Cube centered on a point within range. Each creature in that area takes 4d4 Slashing damage. A creature also takes this damage if it enters the Cube or ends its turn there or if the Cube moves into its space. A creature takes this damage only once per turn." + "\n   " + "On my later turns, I can take a Magic action to teleport the Cube up to 30 feet." + AtHigherLevels + "The damage increases by 2d4 for each spell slot level above 2."
+	description : "5-ft cube all now/cover/enter/end 4d4+2d4/SL Slashing (1/turn/creature); a to teleport cube 30 ft",
+	descriptionFull : "You conjure spinning daggers in a 5-foot Cube centered on a point within range. Each creature in that area takes 4d4 Slashing damage. A creature also takes this damage if it enters the Cube or ends its turn there or if the Cube moves into its space. A creature takes this damage only once per turn." + "\n   " + "On your later turns, you can take a Magic action to teleport the Cube up to 30 feet." + AtHigherLevels + "The damage increases by 2d4 for each spell slot level above 2."
 });
 legacySpellRefactor("color spray", {
 	name : "Color Spray",
@@ -14816,10 +14831,11 @@ legacySpellRefactor("color spray", {
 	duration : "Instantaneous",
 	save : "Con",
 	description : "All creatures in area save or Blinded until my next turn ends",
-	descriptionFull : "I launch a dazzling array of flashing, colorful light. Each creature in a 15-foot Cone originating from I must succeed on a Constitution saving throw or have the Blinded condition until the end of my next turn."
+	descriptionFull : "You launch a dazzling array of flashing, colorful light. Each creature in a 15-foot Cone originating from you must succeed on a Constitution saving throw or have the Blinded condition until the end of your next turn."
 });
 legacySpellRefactor("command", {
 	name : "Command",
+	nameShort : "Command*",
 	classes : ["bard", "cleric", "paladin"],
 	source : [["PHB2024", 251]],
 	level : 1,
@@ -14830,7 +14846,7 @@ legacySpellRefactor("command", {
 	duration : "Instantaneous",
 	save : "Wis",
 	description : "1+1/SL crea, save or follow one word command: Approach, Drop, Flee, Grovel or Halt; see book",
-	descriptionFull : "I speak a one-word command to a creature I can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn. Choose the command from these options:" + "\n   " + toUni("Approach") + ": The target moves toward I by the shortest and most direct route, ending its turn if it moves within 5 feet of I." + "\n   " + toUni("Drop") + ": The target drops whatever it is holding and then ends its turn." + "\n   " + toUni("Flee") + ": The target spends its turn moving away from I by the fastest available means." + "\n   " + toUni("Grovel") + ": The target has the Prone condition and then ends its turn." + "\n   " + toUni("Halt") + ": On its turn, the target doesn't move and takes no action or Bonus Action." + AtHigherLevels + "I can affect one additional creature for each spell slot level above 1."
+	descriptionFull : "You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn. Choose the command from these options:" + "\n   " + toUni("Approach") + ": The target moves toward you by the shortest and most direct route, ending its turn if it moves within 5 feet of you." + "\n   " + toUni("Drop") + ": The target drops whatever it is holding and then ends its turn." + "\n   " + toUni("Flee") + ": The target spends its turn moving away from you by the fastest available means." + "\n   " + toUni("Grovel") + ": The target has the Prone condition and then ends its turn." + "\n   " + toUni("Halt") + ": On its turn, the target doesn't move and takes no action or Bonus Action." + AtHigherLevels + "You can affect one additional creature for each spell slot level above 1."
 });
 legacySpellRefactor("commune", {
 	name : "Commune",
@@ -14844,8 +14860,8 @@ legacySpellRefactor("commune", {
 	components : "V,S,M",
 	compMaterial : "Incense",
 	duration : "1 min",
-	description : "Ask up to 3 yes/no questions of deity or divine proxy; receive correct word or short phrase (if knows)",
-	descriptionFull : "I contact a deity or a divine proxy and ask up to three questions that can be answered with a yes or no. I must ask my questions before the spell ends. I receive a correct answer for each question." + "\n   " + "Divine beings aren't necessarily omniscient, so I might receive \"unclear\" as an answer if a question pertains to information that lies beyond the deity's knowledge. In a case where a one-word answer could be misleading or contrary to the deity's interests, the DM might offer a short phrase as an answer instead." + "\n   " + "If I cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that I get no answer."
+	description : "Ask 3 yes/no questions of deity or divine proxy; receive correct word or short phrase (if knows answer)",
+	descriptionFull : "You contact a deity or a divine proxy and ask up to three questions that can be answered with a yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question." + "\n   " + "Divine beings aren't necessarily omniscient, so you might receive \"unclear\" as an answer if a question pertains to information that lies beyond the deity's knowledge. In a case where a one-word answer could be misleading or contrary to the deity's interests, the DM might offer a short phrase as an answer instead." + "\n   " + "If you cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer."
 });
 legacySpellRefactor("commune with nature", {
 	name : "Commune with Nature",
@@ -14860,10 +14876,11 @@ legacySpellRefactor("commune with nature", {
 	components : "V,S",
 	duration : "Instantaneous",
 	description : "Know 3 facts about natural features within 3 miles (300 ft underground); see book",
-	descriptionFull : "I commune with nature spirits and gain knowledge of the surrounding area. In the outdoors, the spell gives I knowledge of the area within 3 miles of I. In caves and other natural underground settings, the radius is limited to 300 feet. The spell doesn't function where nature has been replaced by construction, such as in castles and settlements." + "\n   " + "Choose three of the following facts; I learn those facts as the pertain to the spell's area:\n \u2022Locations of Settlements\n \u2022Locations of portals to other planes of existence\n \u2022Location of one Challenge Rating 10+ creature (DM's choice) that is a Celestial, an Elemental, a Fey, a Fiend, or an Undead\n \u2022The most prevalent, kind of plant, mineral, or Beast (I choose which to learn)\n \u2022Locations of bodies of water." + "\n   " + "For example, I could determine the location of a powerful monster in the area, the locations of bodies of water, and the locations of any towns"
+	descriptionFull : "You commune with nature spirits and gain knowledge of the surrounding area. In the outdoors, the spell gives you knowledge of the area within 3 miles of you. In caves and other natural underground settings, the radius is limited to 300 feet. The spell doesn't function where nature has been replaced by construction, such as in castles and settlements." + "\n   " + "Choose three of the following facts; you learn those facts as the pertain to the spell's area:\n \u2022Locations of Settlements\n \u2022Locations of portals to other planes of existence\n \u2022Location of one Challenge Rating 10+ creature (DM's choice) that is a Celestial, an Elemental, a Fey, a Fiend, or an Undead\n \u2022The most prevalent, kind of plant, mineral, or Beast (you choose which to learn)\n \u2022Locations of bodies of water." + "\n   " + "For example, you could determine the location of a powerful monster in the area, the locations of bodies of water, and the locations of any towns"
 });
 legacySpellRefactor("compelled duel", {
 	name : "Compelled Duel",
+	nameShort : "Compelled Duel*",
 	classes : ["paladin"],
 	source : [["PHB2024", 252]],
 	level : 1,
@@ -14873,8 +14890,8 @@ legacySpellRefactor("compelled duel", {
 	components : "V",
 	duration : "Conc, 1 min",
 	save : "Wis",
-	description : "1 crea save or dis. on atks vs. not-me and can't move >30ft away; ends early if target other crea/see B",
-	descriptionFull : "I try to compel a creature into a duel. One creature that I can see within range makes a Wisdom saving throw. On a failed save, the target has Disadvantage on attack rolls against creatures other than I, and it can't willingly move to a space that is more than 30 feet away from I." + "\n   " + "The spell ends if I make an attack roll against a creature other than the target, if I cast a spell on an enemy other than the target, if an ally of yours damages the target, or if my end my turn more than 30 feet away form the target."
+	description : "1 crea save or dis. atks vs not-me, can't move >30ft away; ends if ally dmgs/I target dif. crea/end>30ft",
+	descriptionFull : "You try to compel a creature into a duel. One creature that you can see within range makes a Wisdom saving throw. On a failed save, the target has Disadvantage on attack rolls against creatures other than you, and it can't willingly move to a space that is more than 30 feet away from you." + "\n   " + "The spell ends if you make an attack roll against a creature other than the target, if you cast a spell on an enemy other than the target, if an ally of yours damages the target, or if your end your turn more than 30 feet away from the target."
 });
 legacySpellRefactor("comprehend languages", {
 	name : "Comprehend Languages",
@@ -14890,10 +14907,11 @@ legacySpellRefactor("comprehend languages", {
 	compMaterial : "A pinch of soot and salt",
 	duration : "1 h",
 	description : "Understand all spoken and signed languages and writing when touched; doesn't help vs codes",
-	descriptionFull : "For the duration, I understand the literal meaning of any language that I hear or see signed. I also understand any written language that I see, but I must be touching the surface on which the words are written. It takes about 1 minute to read one page of text. This spell doesn't decode symbols or secret messages."
+	descriptionFull : "For the duration, you understand the literal meaning of any language that you hear or see signed. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text. This spell doesn't decode symbols or secret messages."
 });
 legacySpellRefactor("compulsion", {
 	name : "Compulsion",
+	nameShort : "Compulsion*",
 	classes : ["bard"],
 	source : [["PHB2024", 252]],
 	level : 4,
@@ -14904,7 +14922,7 @@ legacySpellRefactor("compulsion", {
 	duration : "Conc, 1 min",
 	save : "Wis",
 	description : "Any crea save or Charmed; bns pick horizontal direction; on turn Charmed crea move then redo save",
-	descriptionFull : "Each creature of my choice that I can see within range must succeed on a Wisdom saving throw or have the Charmed condition until the spell ends." + "\n   " + "For the duration, I can take a Bonus Action to designate a direction that is horizontal to I. Each Charmed target must use as much of its movement as possible to move in that direction on its next turn, taking the safest route. After moving in this way, a target repeats the save, ending the spell on itself on a success."
+	descriptionFull : "Each creature of your choice that you can see within range must succeed on a Wisdom saving throw or have the Charmed condition until the spell ends." + "\n   " + "For the duration, you can take a Bonus Action to designate a direction that is horizontal to you. Each Charmed target must use as much of its movement as possible to move in that direction on its next turn, taking the safest route. After moving in this way, a target repeats the save, ending the spell on itself on a success."
 });
 legacySpellRefactor("cone of cold", {
 	name : "Cone of Cold",
@@ -14918,8 +14936,8 @@ legacySpellRefactor("cone of cold", {
 	compMaterial : "A small crystal or glass cone",
 	duration : "Instantaneous",
 	save : "Con",
-	description : "8d8+1d8/SL Cold dmg; save halves; crea killed become frozen statues until thawed",
-	descriptionFull : "I unleash a blast of cold air. Each creature in a 60-foot Cone originating from I makes a Constitution saving throw, taking 8d8 Cold damage on a failed save or half as much damage on a successful one. A creature killed by this spell becomes a frozen statue until it thaws." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 5."
+	description : "8d8+1d8/SL Cold dmg; save halves; creatures killed become frozen statues until thawed",
+	descriptionFull : "You unleash a blast of cold air. Each creature in a 60-foot Cone originating from you makes a Constitution saving throw, taking 8d8 Cold damage on a failed save or half as much damage on a successful one. A creature killed by this spell becomes a frozen statue until it thaws." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 5."
 });
 legacySpellRefactor("confusion", {
 	name : "Confusion",
@@ -14933,11 +14951,12 @@ legacySpellRefactor("confusion", {
 	compMaterial : "Three nut shells",
 	duration : "Conc, 1 min",
 	save : "Wis",
-	description : "10+5ft/SL rad all crea save or no bns/rea and confused; see book; extra save at end",
-	descriptionFull : "Each creature in a 10-foot-radius Sphere centered on a point I choose within range must succeed on a Wisdom saving throw, or that target can't take Bonus Actions or Reactions and must roll 1d10 at the start of each of its turns to determine its behavior for that turn, consulting the table below." + "\n\n" + toUni("d10") + "\t" + toUni("Behavior for the Turn") + "\n   " + "1\tThe target doesn't take an action, and it uses all its movement to move. Roll 1d4 for the direction: 1, north; 2, east; 3, south; or 4,west." + "\n   " + "2-6\tThe target doesn't move or take actions." + "\n   " + "7-8\tThe target doesn't move, and it takes the Attack action to make one melee attack against a random creature within reach. If none are within reach, the target takes no action." + "\n   " + "9-10\tThe target chooses its behavior." + "\n\n" + "At the end of each of its turns, an affected target repeats the save, ending the spell on itself on a success." + AtHigherLevels + "The Sphere's radius increases by 5 feet for each spell slot level above 4."
+	description : "10+5ft/SL rad all crea save or no bns/reactions and confused; see book; repeat save at end of turn",
+	descriptionFull : "Each creature in a 10-foot-radius Sphere centered on a point you choose within range must succeed on a Wisdom saving throw, or that target can't take Bonus Actions or Reactions and must roll 1d10 at the start of each of its turns to determine its behavior for that turn, consulting the table below." + "\n\n" + toUni("d10") + "\t" + toUni("Behavior for the Turn") + "\n   " + "1\tThe target doesn't take an action, and it uses all its movement to move. Roll 1d4 for the direction: 1, north; 2, east; 3, south; or 4,west." + "\n   " + "2-6\tThe target doesn't move or take actions." + "\n   " + "7-8\tThe target doesn't move, and it takes the Attack action to make one melee attack against a random creature within reach. If none are within reach, the target takes no action." + "\n   " + "9-10\tThe target chooses its behavior." + "\n\n" + "At the end of each of its turns, an affected target repeats the save, ending the spell on itself on a success." + AtHigherLevels + "The Sphere's radius increases by 5 feet for each spell slot level above 4."
 });
 legacySpellRefactor("conjure animals", {
 	name : "Conjure Animals",
+	nameShort : "Conjure Animals*",
 	classes : ["druid", "ranger"],
 	source : [["PHB2024", 254]],
 	level : 3,
@@ -14947,11 +14966,12 @@ legacySpellRefactor("conjure animals", {
 	components : "V,S",
 	save : "Dex",
 	duration : "Conc, 10 min",
-	description : "Lg spirit; moves/enters/end in 10ft save or 3d10+1d10/SL Slashing (1/t/c); Adv STR save 5ft; 30ft move",
-	descriptionFull : "I conjure nature spirits that appear as a Large pack of spectral, intangible animals in an unoccupied space I can see within range. The pack lasts for the duration, and I choose the spirits' animal form, such as wolves, serpents, or birds." + "\n   " + "I have Advantage on Strength saving throws while I're within 5 feet of the pack, and when I move on my turn, I can also move the pack up to 30 feet to an unoccupied space I can see." + "\n   " + "Whenever the pack moves within 10 feet of a creature I can see and whenever a creature I can see enters a space within 10 feet of the pack or ends its turn there, I can force that creature to make a Dexterity saving throw. On a failed save, the creature takes 3d10 Slashing damage. A creature makes this save only once per turn." + AtHigherLevels + "The damage increases by 1d10 for each sell slot level above 3."
+	description : "Lg spirit; moves/enter/end in 10ft save or 3d10+1d10/SL Slashing (1/t/c); Adv STR save 5ft; 30ft move",
+	descriptionFull : "You conjure nature spirits that appear as a Large pack of spectral, intangible animals in an unoccupied space you can see within range. The pack lasts for the duration, and you choose the spirits' animal form, such as wolves, serpents, or birds." + "\n   " + "You have Advantage on Strength saving throws while you're within 5 feet of the pack, and when you move on your turn, you can also move the pack up to 30 feet to an unoccupied space you can see." + "\n   " + "Whenever the pack moves within 10 feet of a creature you can see and whenever a creature you can see enters a space within 10 feet of the pack or ends its turn there, you can force that creature to make a Dexterity saving throw. On a failed save, the creature takes 3d10 Slashing damage. A creature makes this save only once per turn." + AtHigherLevels + "The damage increases by 1d10 for each sell slot level above 3."
 });
 legacySpellRefactor("conjure barrage", {
 	name : "Conjure Barrage",
+	nameShort : "Conjure Barrage*",
 	classes : ["ranger"],
 	source : [["PHB2024", 254]],
 	level : 3,
@@ -14962,11 +14982,12 @@ legacySpellRefactor("conjure barrage", {
 	compMaterial : "A Melee or Ranged weapon worth at least 1 cp",
 	duration : "Instantaneous",
 	save : "Dex",
-	description : "Conjure weapon or ammo; any visible creatures in area 5d8+1d8/SL Force dmg; save halves",
-	descriptionFull : "I brandish the weapon used to cast the spell and conjure similar spectral weapons (or ammunition appropriate to the weapon) that launch forward and then disappear. Each creature of my choice that I can see in a 60-foot Cone makes a Dexterity saving throw, taking 5d8 Force damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 3."
+	description : "Conjure weapon or ammo; any creatures in area 5d8+1d8/SL Force dmg; save halves",
+	descriptionFull : "You brandish the weapon used to cast the spell and conjure similar spectral weapons (or ammunition appropriate to the weapon) that launch forward and then disappear. Each creature of your choice that you can see in a 60-foot Cone makes a Dexterity saving throw, taking 5d8 Force damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 3."
 });
 legacySpellRefactor("conjure celestial", {
 	name : "Conjure Celestial",
+	nameShort : "Conjure Celestial*",
 	classes : ["cleric"],
 	source : [["PHB2024", 254]],
 	level : 7,
@@ -14976,10 +14997,11 @@ legacySpellRefactor("conjure celestial", {
 	components : "V,S",
 	duration : "Conc, 10 min",
 	description : "20\xD740ft cyl.; now/cover/enter/end (1/t/c) heal 4d12+mod or 6d12 Rad.; save 1/2; +1d12/SL; 30ft move",
-	descriptionFull : "I conjure a spirit from the Upper planes, which manifests as a pillar of light in a 10-foot-radius, 40-foot-high Cylinder centered on a point within range. For each creature I can see in the Cylinder, choose which of these lights shines on it:" + toUni("Healing Light") + ". The target regains Hit Points equal to 4d12 plus my spellcasting ability modifier." + toUni("Searing Light") + ". The target makes a Dexterity saving throw, taking 6d12 Radiant damage on a failed save or half as much damage on a successful one." + "\n   " + "Until the spell ends, Bright Light fills the Cylinder, and when I move on my turn, I can also move the Cylinder up to 30 feet." + "\n   " + "Whenever the Cylinder moves into the space of a creature I can see and whenever a creature I can see enters the Cylinder or ends its turn there I can bathe it in one of the lights. A creature can be affected by this spell only once per turn." + AtHigherLevels + "The healing and damage increases by 1d12 for each spell slot level above 7."
+	descriptionFull : "You conjure a spirit from the Upper planes, which manifests as a pillar of light in a 10-foot-radius, 40-foot-high Cylinder centered on a point within range. For each creature you can see in the Cylinder, choose which of these lights shines on it:" + toUni("Healing Light") + ". The target regains Hit Points equal to 4d12 plus your spellcasting ability modifier." + toUni("Searing Light") + ". The target makes a Dexterity saving throw, taking 6d12 Radiant damage on a failed save or half as much damage on a successful one." + "\n   " + "Until the spell ends, Bright Light fills the Cylinder, and when you move on your turn, you can also move the Cylinder up to 30 feet." + "\n   " + "Whenever the Cylinder moves into the space of a creature you can see and whenever a creature you can see enters the Cylinder or ends its turn there you can bathe it in one of the lights. A creature can be affected by this spell only once per turn." + AtHigherLevels + "The healing and damage increases by 1d12 for each spell slot level above 7."
 });
 legacySpellRefactor("conjure elemental", {
 	name : "Conjure Elemental",
+	nameShort : "Conjure Elemental*",
 	classes : ["druid", "wizard"],
 	source : [["PHB2024", 254]],
 	level : 5,
@@ -14988,11 +15010,12 @@ legacySpellRefactor("conjure elemental", {
 	range : "60 ft",
 	components : "V,S",
 	duration : "Conc, 10 min",
-	description : "10ft cu; no R enter/SoT 5ft 8d8+2d8/SL Lghtng/Thdr/Fire/Cold + Restrain; S:1/2 no R; SoT R save or 4d8",
-	descriptionFull : "I conjure a Large, intangible spirit from the Elemental Planes that appears in an unoccupied space within range. Choose the spirit's element, which determines its damage type: air (Lightning), earth (Thunder), fire (Fire), or water (Cold), the spirit lasts for the duration." + "\n   " + "Whenever a creature I can see enters the spirit's space or starts its turn within 5 feet of the spirit, I can force that creature to make a Dexterity saving throw if the spirit has no creature Restrained. On failed save, the target takes 8d8 damage of the spirit's type, and the target has the Restrained condition until the spell ends. At the start of each of its turns, the Restrained target repeats the save. On a failed save, the target takes 4d8 damage of the spirit's type. On a successful save, the target isn't Restrained by the spirit." + AtHigherLevels + "The damage increases by 2d8 for each spell slot level above 5.",
+	description : "10ft cu; no R enter/SoT 5ft 8d8+2d8/SL Lightn./Thdr/Fire/Cold + Restrain; S:1/2 only; SoT R save or 4d8",
+	descriptionFull : "You conjure a Large, intangible spirit from the Elemental Planes that appears in an unoccupied space within range. Choose the spirit's element, which determines its damage type: air (Lightning), earth (Thunder), fire (Fire), or water (Cold), the spirit lasts for the duration." + "\n   " + "Whenever a creature you can see enters the spirit's space or starts its turn within 5 feet of the spirit, you can force that creature to make a Dexterity saving throw if the spirit has no creature Restrained. On failed save, the target takes 8d8 damage of the spirit's type, and the target has the Restrained condition until the spell ends. At the start of each of its turns, the Restrained target repeats the save. On a failed save, the target takes 4d8 damage of the spirit's type. On a successful save, the target isn't Restrained by the spirit." + AtHigherLevels + "The damage increases by 2d8 for each spell slot level above 5.",
 });
 legacySpellRefactor("conjure fey", {
 	name : "Conjure Fey",
+	nameShort : "Conjure Fey*",
 	classes : ["druid"],
 	source : [["PHB2024", 255]],
 	level : 6,
@@ -15001,8 +15024,8 @@ legacySpellRefactor("conjure fey", {
 	range : "60 ft",
 	components : "V,S",
 	duration : "Conc, 10 min",
-	description : "Medium fey; spell atk in 5ft; 3d12+2d12/SL+mod Psychic \u0026 Frightened 1 rnd; bns teleport 30ft+atk",
-	descriptionFull : "I conjure a Medium spirit from the Feywild in an unoccupied space I can see within range. The spirit lasts for the duration, and it looks like a Fey creature of my choice. When the spirit appears, I can make one melee spell attack against a creature within 5 feet of it. On a hit, the target takes Psychic damage equal to 3d12 plus my spellcasting ability modifier, and the target has the Frightened condition until the start of my next turn, with both I and the spirit as the source of the fear." + "\n   " + "As a Bonus Action on my later turns, I can teleport the spirit to an unoccupied space I can see within 30 feet of the space it left and make the attack against a creature within 5 feet of it." + AtHigherLevels + "The damage increases by 2d12 for each spell slot level above 6."
+	description : "Med. fey; spell atk any 1 in 5ft; 3d12+2d12/SL+mod Psychic \u0026 Frightened 1 rnd; bns teleport 30ft \u0026 atk",
+	descriptionFull : "You conjure a Medium spirit from the Feywild in an unoccupied space you can see within range. The spirit lasts for the duration, and it looks like a Fey creature of your choice. When the spirit appears, you can make one melee spell attack against a creature within 5 feet of it. On a hit, the target takes Psychic damage equal to 3d12 plus your spellcasting ability modifier, and the target has the Frightened condition until the start of your next turn, with both you and the spirit as the source of the fear." + "\n   " + "As a Bonus Action on your later turns, you can teleport the spirit to an unoccupied space you can see within 30 feet of the space it left and make the attack against a creature within 5 feet of it." + AtHigherLevels + "The damage increases by 2d12 for each spell slot level above 6."
 });
 legacySpellRefactor("conjure minor elementals", {
 	name : "Conjure Minor Elementals",
@@ -15015,11 +15038,12 @@ legacySpellRefactor("conjure minor elementals", {
 	range : "S:15-ft rad",
 	components : "V,S",
 	duration : "Conc, 10 min",
-	description : "Atks at targets in area deal +2d8+2d8/SL Acid/Cold/Fire/Lghtng (choice); area is dif. ter. for enemies",
-	descriptionFull : "I conjure spirits from the Elemental Plans that flit around I in a 15-foot Emanation for the duration. Until the spell ends, any attack I make deals an extra 2d8 damage when I hit a creature in the Emanation. This damage is Acid, Cold, Fire, or Lightning (my choice when I make the attack)." + "\n   " + "In addition, the ground in the Emanation is Difficult Terrain for my enemies." + AtHigherLevels + "The damage increases by 2d8 for each spell slot level above 4."
+	description : "Atks at targets in area deal +2d8+2d8/SL Acid/Cold/Fire/Lightn. (choice); area is dif. ter. for enemies",
+	descriptionFull : "You conjure spirits from the Elemental Plans that flit around you in a 15-foot Emanation for the duration. Until the spell ends, any attack you make deals an extra 2d8 damage when you hit a creature in the Emanation. This damage is Acid, Cold, Fire, or Lightning (your choice when you make the attack)." + "\n   " + "In addition, the ground in the Emanation is Difficult Terrain for your enemies." + AtHigherLevels + "The damage increases by 2d8 for each spell slot level above 4."
 });
 legacySpellRefactor("conjure volley", {
 	name : "Conjure Volley",
+	nameShort : "Conjure Volley*",
 	classes : ["ranger"],
 	source : [["PHB2024", 255]],
 	level : 5,
@@ -15030,12 +15054,12 @@ legacySpellRefactor("conjure volley", {
 	compMaterial : "A Melee or Ranged weapon worth at least 1 cp",
 	duration : "Instantaneous",
 	save : "Dex",
-	description : "Volley falls in 40-ft rad 20-ft high cylinder; any visible creatures take 8d8 Force dmg; save halves",
-	descriptionFull : "I brandish the weapon used to cast the spell and choose a point within range. Hundreds of similar spectral weapons (or ammunition appropriate to the weapon) fall in a volley and then disappear. Each creature of my choice that I can see in a 40-foot-radius, 20-foot-high Cylinder centered on that point makes a Dexterity saving throw. A creature takes 8d8 Force damage on a failed save or half as much damage on a successful one."
+	description : "Volley falls in 40-ft rad 20-ft high cylinder; any creatures take 8d8 Force dmg; save halves",
+	descriptionFull : "You brandish the weapon used to cast the spell and choose a point within range. Hundreds of similar spectral weapons (or ammunition appropriate to the weapon) fall in a volley and then disappear. Each creature of your choice that you can see in a 40-foot-radius, 20-foot-high Cylinder centered on that point makes a Dexterity saving throw. A creature takes 8d8 Force damage on a failed save or half as much damage on a successful one."
 });
 legacySpellRefactor("conjure woodland beings", {
 	name : "Conjure Woodland Beings",
-	nameShort : "Conj. Woodland Beings",
+	nameShort : "Conj. Woodland Beings*",
 	classes : ["druid", "ranger"],
 	source : [["PHB2024", 255]],
 	level : 4,
@@ -15045,8 +15069,8 @@ legacySpellRefactor("conjure woodland beings", {
 	components : "V,S",
 	duration : "Conc, 1 h",
 	save : "Wis",
-	description : "Disengage as bns; when visible crea covered/enter/end in area (1/t/c) 5d8+1d8/SL Force (save 1/2)",
-	descriptionFull : "I conjure nature spirits that flit around I in a 10-foot Emanation for the duration. Whenever the Emanation enters the space of a creature I can see and whenever a creature I can see enters the Emanation or ends its turn there, I can force that creature to make a Wisdom saving throw. The creature takes 5d8 Force damage on a failed save or half as much damage on a successful one. A creature makes this save only once per turn." + "\n   " + "In addition, I can take the Disengage action as a Bonus Action for the spell's duration." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 4."
+	description : "Disengage as bns; when crea covered/enters/ends in area (1/turn/crea) 5d8+1d8/SL Force; save 1/2",
+	descriptionFull : "You conjure nature spirits that flit around you in a 10-foot Emanation for the duration. Whenever the Emanation enters the space of a creature you can see and whenever a creature you can see enters the Emanation or ends its turn there, you can force that creature to make a Wisdom saving throw. The creature takes 5d8 Force damage on a failed save or half as much damage on a successful one. A creature makes this save only once per turn." + "\n   " + "In addition, you can take the Disengage action as a Bonus Action for the spell's duration." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 4."
 });
 legacySpellRefactor("contact other plane", {
 	name : "Contact Other Plane",
@@ -15060,8 +15084,8 @@ legacySpellRefactor("contact other plane", {
 	components : "V",
 	duration : "1 min",
 	save : "Int",
-	description : "DC 15 to ask planar entity 5 questions; 1 word/phrase answer; fail 6d6 Psych \u0026 Incapac. until LR/Gr Rest",
-	descriptionFull : "I mentally contact a demigod, the spirit of a long-dead sage, or some other knowledgeable entity from another plane. Contacting this otherworldly intelligence can break my mind. When I cast this spell, make a DC 15 Intelligence saving throw. On a successful save, I can ask the entity up to five questions. I must ask my questions before the spell ends. The DM answers each question with one word, such as \"yes\", \"no\", \"maybe\", \"maybe\", \"never\", \"irrelevant\", or \"unclear\" (if the entity doesn't know the answer to the question). If a one-word answer would be misleading, the DM might instead offer a short phrase as an answer." + "\n   " + "On a failed save, I take 6d6 Psychic damage and have the Incapacitated condition until I finish a Long Rest. A Greater Restoration spell cast on I ends this effect."
+	description : "DC 15 to ask planar entity 5 questions; 1 word/phrase answer; fail 6d6 Psychic \u0026 Incapac. till Gr Rest/LR",
+	descriptionFull : "You mentally contact a demigod, the spirit of a long-dead sage, or some other knowledgeable entity from another plane. Contacting this otherworldly intelligence can break your mind. When you cast this spell, make a DC 15 Intelligence saving throw. On a successful save, you can ask the entity up to five questions. You must ask your questions before the spell ends. The DM answers each question with one word, such as \"yes\", \"no\", \"maybe\", \"maybe\", \"never\", \"irrelevant\", or \"unclear\" (if the entity doesn't know the answer to the question). If a one-word answer would be misleading, the DM might instead offer a short phrase as an answer." + "\n   " + "On a failed save, you take 6d6 Psychic damage and have the Incapacitated condition until you finish a Long Rest. A Greater Restoration spell cast on you ends this effect."
 });
 legacySpellRefactor("contagion", {
 	name : "Contagion",
@@ -15075,7 +15099,7 @@ legacySpellRefactor("contagion", {
 	duration : "7 days",
 	save : "Con",
 	description : "Target save or 11d8 Necrotic, Poisoned \u0026 Disadv 1 save type; EoT save till 3 pass (end) or 3 fail (7 days)",
-	descriptionFull : "my touch inflicts a magical contagion. The target must succeed on a Constitution saving throw or take 11d8 Necrotic damage and have the Poisoned condition. Also, choose one ability when I cast the spell. While Poisoned, the target has Disadvantage on saving throws made with the chosen ability." + "\n   " + "The target must repeat the saving throw at the end of each of its turns until it gets three successes or failures. If the target succeeds on three of these saves, the spell ends on the target. If the target fails three of the saves, the spell lasts for 7 days on it." + "\n   " + "Whenever the Poisoned target receives an effect that would end the Poisoned condition, the target must succeed on a Constitution saving throw, or the Poisoned condition doesn't end on it."
+	descriptionFull : "Your touch inflicts a magical contagion. The target must succeed on a Constitution saving throw or take 11d8 Necrotic damage and have the Poisoned condition. Also, choose one ability when you cast the spell. While Poisoned, the target has Disadvantage on saving throws made with the chosen ability." + "\n   " + "The target must repeat the saving throw at the end of each of its turns until it gets three successes or failures. If the target succeeds on three of these saves, the spell ends on the target. If the target fails three of the saves, the spell lasts for 7 days on it." + "\n   " + "Whenever the Poisoned target receives an effect that would end the Poisoned condition, the target must succeed on a Constitution saving throw, or the Poisoned condition doesn't end on it."
 });
 legacySpellRefactor("contingency", {
 	name : "Contingency",
@@ -15089,7 +15113,7 @@ legacySpellRefactor("contingency", {
 	compMaterial : "a gem-encrusted statuette of yourself worth 1500 gp",
 	duration : "10 days",
 	description : "Cast another SL<6 action spell that targets me to activate when a condition is met (1500gp)",
-	descriptionFull : "Choose a spell of level 5 or lower that I can cast, that has a casting time of an action, and that can target I. I cast that spell — called the contingent spell — as part of casting Contingency, expending spell slots for both, but the contingent spell doesn't come into effect. Instead, it takes effect when a certain trigger occurs. I describe that trigger when I cast the two spells. For example, a Contingency cast with Water Breathing might stipulate that Water Breathing comes into effect when I are engulfed in water or a similar liquid." + "\n   " + "The contingent spell takes effect immediately after the trigger occurs for the first time, whether or not I want it to, and then Contingency ends." + "\n   " + "The contingent spell takes effect only on I, even if it can normally target others. I can use only one Contingency spell at a time. If I cast this spell again, the effect of another Contingency spell on I ends. Also, Contingency ends on I if its material component is ever not on my person."
+	descriptionFull : "Choose a spell of level 5 or lower that you can cast, that has a casting time of an action, and that can target you. You cast that spell — called the contingent spell — as part of casting Contingency, expending spell slots for both, but the contingent spell doesn't come into effect. Instead, it takes effect when a certain trigger occurs. You describe that trigger when you cast the two spells. For example, a Contingency cast with Water Breathing might stipulate that Water Breathing comes into effect when you are engulfed in water or a similar liquid." + "\n   " + "The contingent spell takes effect immediately after the trigger occurs for the first time, whether or not you want it to, and then Contingency ends." + "\n   " + "The contingent spell takes effect only on you, even if it can normally target others. You can use only one Contingency spell at a time. If you cast this spell again, the effect of another Contingency spell on you ends. Also, Contingency ends on you if its material component is ever not on your person."
 });
 legacySpellRefactor("continual flame", {
 	name : "Continual Flame",
@@ -15102,8 +15126,8 @@ legacySpellRefactor("continual flame", {
 	components : "V,S,M\u2020",
 	compMaterial : "Ruby dust worth 50+ gp, which the spell consumes",
 	duration : "Till dispelled",
-	description : "Create a permanent magical flame that emits 20 ft bright/20 ft dim light (50gp cons.)",
-	descriptionFull : "A flame springs from an object that I touch. The effect casts Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. It looks like a regular flame, but it creates no heat and consumes no fuel. The flame can be covered or hidden but not smothered or quenched."
+	description : "Create a permanent magical flame on obj that emits 20-ft rad bright light \u0026 20-ft dim (50gp cons.)",
+	descriptionFull : "A flame springs from an object that you touch. The effect casts Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. It looks like a regular flame, but it creates no heat and consumes no fuel. The flame can be covered or hidden but not smothered or quenched."
 });
 legacySpellRefactor("control water", {
 	name : "Control Water",
@@ -15117,7 +15141,7 @@ legacySpellRefactor("control water", {
 	compMaterial : "A mixture of water and dust",
 	duration : "Conc, 10 min",
 	description : "Control any water in a 100 ft cube as 1 a: Flood, Part Water, Redirect Flow, or Whirlpool, see book",
-	descriptionFull : "Until the spell ends, I control any water inside an area I choose that is a Cube up to 100 feet on a side, using one of the following effects. As a Magic action on my later turns, I can repeat the same effect or choose a different one." + "\n   " + toUni("Flood") + ": I cause the water level of all standing water in the area to rise by as much as 20 feet. If I choose an area in a large body of water, I instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes. Any Huge or smaller vehicles in the wave's path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a 25 percent chance of capsizing." + "\n   " + "The water level remains elevated until the spell ends or I choose a different effect. If this effect produces a wave, the wave repeats on the start of my next turn while the flood effect lasts." + "\n   " +  toUni("Part Water") + ": I part water in the area and create a trench. The trench extends across the spell's area, and the separated water forms a wall to either side. The trench remains until the spell ends or I choose a different effect. The water then slowly fills in the trench over the course of the next round until the normal water level is restored." + "\n   " + toUni("Redirect Flow") + ": I cause flowing water in the area to move in a direction I choose, even if the water has to flow over obstacles, up walls, or in other unlikely directions. The water in the area moves as I direct it, but once it moves beyond the spell's area, it resumes its flow based on the terrain. The water continues to move in the direction I chose until the spell ends or I choose a different effect." + "\n   " + toUni("Whirlpool") + ": I cause a whirlpool to form in the center of the area, which must be at least 50 feet square and 25 feet deep. The whirlpool lasts until I choose a different effect or the spell ends. The whirlpool is 5 feet wide at the base, up to 50 feet wide at the top, and 25 feet tall. Any creature in the water and within 25 feet of the whirlpool is pulled 10 feet toward it. When a creature enters the whirlpool for the first time on a turn or ends its turn there, it makes a strength saving throw. On a failed save, the creature takes 2d8 Bludgeoning damage. On a successful save, the creature takes half as much damage. A creature can swim away from the whirlpool only if it first takes an action to pull away and succeeds on a Strength (Athletics) check against my spell save DC."
+	descriptionFull : "Until the spell ends, you control any water inside an area you choose that is a Cube up to 100 feet on a side, using one of the following effects. As a Magic action on your later turns, you can repeat the same effect or choose a different one." + "\n   " + toUni("Flood") + ": You cause the water level of all standing water in the area to rise by as much as 20 feet. If you choose an area in a large body of water, you instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes. Any Huge or smaller vehicles in the wave's path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a 25 percent chance of capsizing." + "\n   " + "The water level remains elevated until the spell ends or you choose a different effect. If this effect produces a wave, the wave repeats on the start of your next turn while the flood effect lasts." + "\n   " +  toUni("Part Water") + ": You part water in the area and create a trench. The trench extends across the spell's area, and the separated water forms a wall to either side. The trench remains until the spell ends or you choose a different effect. The water then slowly fills in the trench over the course of the next round until the normal water level is restored." + "\n   " + toUni("Redirect Flow") + ": You cause flowing water in the area to move in a direction you choose, even if the water has to flow over obstacles, up walls, or in other unlikely directions. The water in the area moves as you direct it, but once it moves beyond the spell's area, it resumes its flow based on the terrain. The water continues to move in the direction you chose until the spell ends or you choose a different effect." + "\n   " + toUni("Whirlpool") + ": You cause a whirlpool to form in the center of the area, which must be at least 50 feet square and 25 feet deep. The whirlpool lasts until you choose a different effect or the spell ends. The whirlpool is 5 feet wide at the base, up to 50 feet wide at the top, and 25 feet tall. Any creature in the water and within 25 feet of the whirlpool is pulled 10 feet toward it. When a creature enters the whirlpool for the first time on a turn or ends its turn there, it makes a strength saving throw. On a failed save, the creature takes 2d8 Bludgeoning damage. On a successful save, the creature takes half as much damage. A creature can swim away from the whirlpool only if it first takes an action to pull away and succeeds on a Strength (Athletics) check against your spell save DC."
 });
 legacySpellRefactor("control weather", {
 	name : "Control Weather",
@@ -15131,7 +15155,7 @@ legacySpellRefactor("control weather", {
 	compMaterial : "Burning incense",
 	duration : "Conc, 8 h",
 	description : "Change weather precipitation, temp, and wind in 5 miles; changes take 1d4\xD710 min; see book",
-	descriptionFull : "I take control of the weather within 5 miles of I for the duration. I must be outdoors to cast this spell, and it ends early if I go indoors." + "\n   " + "When I cast the spell, I change the current weather conditions, which are determined by the DM. I can change precipitation, temperature, and wind. It takes 1d4 \xD7 10 minutes for the new conditions to take effect. Once they do so, I can change the conditions again. When the spell ends, the weather gradually returns to normal." + "\n   " + "When I change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, I can change its direction." + "\n\n" + toUni("Precipitation") + "\n " + toUni("Stage") + "\t" + toUni("Condition") + "\n     " + "1\tClear" + "\n     " + "2\tLight clouds" + "\n     " + "3\tOvercast or ground fog" + "\n     " + "4\tRain, hail or snow" + "\n     " + "5\tTorrential rain, driving hail or blizzard" + "\n\n" + toUni("Temperature") + "\t\t" + toUni("Wind") + "\n " + toUni("Stage") + "\t" + toUni("Condition") + "\t " + toUni("Stage") + "\t" + toUni("Condition") + "\n     " + "1\tHeat wave" + "\t     " + "1\tCalm" + "\n     " + "2\tHot" + "\t\t     " + "2\tModerate wind" + "\n     " + "3\tWarm" + "\t\t     " + "3\tStrong wind" + "\n     " + "4\tCool" + "\t\t     " + "4\tGale" + "\n     " + "5\tCold" + "\t\t     " + "5\tStorm" + "\n     " + "6\tAFreezing"
+	descriptionFull : "You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell, and it ends early if you go indoors." + "\n   " + "When you cast the spell, you change the current weather conditions, which are determined by the DM. You can change precipitation, temperature, and wind. It takes 1d4 \xD7 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal." + "\n   " + "When you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction." + "\n\n" + toUni("Precipitation") + "\n " + toUni("Stage") + "\t" + toUni("Condition") + "\n     " + "1\tClear" + "\n     " + "2\tLight clouds" + "\n     " + "3\tOvercast or ground fog" + "\n     " + "4\tRain, hail or snow" + "\n     " + "5\tTorrential rain, driving hail or blizzard" + "\n\n" + toUni("Temperature") + "\t\t" + toUni("Wind") + "\n " + toUni("Stage") + "\t" + toUni("Condition") + "\t " + toUni("Stage") + "\t" + toUni("Condition") + "\n     " + "1\tHeat wave" + "\t     " + "1\tCalm" + "\n     " + "2\tHot" + "\t\t     " + "2\tModerate wind" + "\n     " + "3\tWarm" + "\t\t     " + "3\tStrong wind" + "\n     " + "4\tCool" + "\t\t     " + "4\tGale" + "\n     " + "5\tCold" + "\t\t     " + "5\tStorm" + "\n     " + "6\tFreezing"
 });
 legacySpellRefactor("cordon of arrows", {
 	name : "Cordon of Arrows",
@@ -15146,22 +15170,23 @@ legacySpellRefactor("cordon of arrows", {
 	duration : "8 h",
 	save : "Dex",
 	description : "4+2/SL arrows/bolts in space; undesignated crea enter/end in 30ft, 1 ammo atks; save or 2d4 Piercing",
-	descriptionFull : "I touch up to four nonmagical Arrows or Bolts and plant them in the ground in my space. Until the spell ends, the ammunition can't be physically uprooted, and whenever a creature other than I enters a space within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take 2d4 Piercing damage. The piece of ammunition is then destroyed. The spell ends when none of the ammunition remains planted in the ground." + "\n   " + "When I cast this spell, I can designate any creatures I choose, and the spell ignores them." + AtHigherLevels + "The amount of ammunition that can be affected increases by two for each spell slot level above 2."
+	descriptionFull : "You touch up to four nonmagical Arrows or Bolts and plant them in the ground in your space. Until the spell ends, the ammunition can't be physically uprooted, and whenever a creature other than you enters a space within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take 2d4 Piercing damage. The piece of ammunition is then destroyed. The spell ends when none of the ammunition remains planted in the ground." + "\n   " + "When you cast this spell, you can designate any creatures you choose, and the spell ignores them." + AtHigherLevels + "The amount of ammunition that can be affected increases by two for each spell slot level above 2."
 });
 legacySpellRefactor("counterspell", {
 	name : "Counterspell",
+	nameShort : "Counterspell*",
 	classes : ["sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 258]],
 	level : 3,
 	school : "Abjur",
 	time : "1 rea",
-	timeFull : "Reaction, which I take when I see a creature within 60 feet of yourself casting a spell with Verbal, Somatic, or Material components",
+	timeFull : "Reaction, which you take when you see a creature within 60 feet of yourself casting a spell with Verbal, Somatic, or Material components",
 	range : "60 ft",
 	components : "S",
 	duration : "Instantaneous",
 	save : "Con",
 	description : "Stop spell being cast; target save to keep casting; if fail spell action wasted but spell slot unused",
-	descriptionFull : "I attempt to interrupt a creature in the process of casting a spell. The creature makes a Constitution saving throw. On a failed save, the spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn't expended."
+	descriptionFull : "You attempt to interrupt a creature in the process of casting a spell. The creature makes a Constitution saving throw. On a failed save, the spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn't expended."
 });
 legacySpellRefactor("create food and water", {
 	name : "Create Food and Water",
@@ -15174,7 +15199,7 @@ legacySpellRefactor("create food and water", {
 	components : "V,S",
 	duration : "Instantaneous",
 	description : "Create 45 pounds of food and 30 gallons of fresh water on ground/in containers; food lasts 24 hrs",
-	descriptionFull : "I create 45 pounds of food and 30 gallons of fresh water on the ground or in containers within range — both useful in fending off the hazards of malnutrition and dehydration. The food is bland but nourishing and looks like a food of my choice, and the water is clean. The food spoils after 24 hours if uneaten."
+	descriptionFull : "You create 45 pounds of food and 30 gallons of fresh water on the ground or in containers within range — both useful in fending off the hazards of malnutrition and dehydration. The food is bland but nourishing and looks like a food of your choice, and the water is clean. The food spoils after 24 hours if uneaten."
 });
 legacySpellRefactor("create or destroy water", {
 	name : "Create or Destroy Water",
@@ -15188,7 +15213,7 @@ legacySpellRefactor("create or destroy water", {
 	compMaterial : "A mix of water and sand",
 	duration : "Instantaneous",
 	description : "Create/destroy 10+10/SL gal of water in open container or create rain/destroy fog in 30+5ft/SL cu",
-	descriptionFull : "I do one of the following." + "\n   " + toUni("Create Water") + ": I create up to 10 gallons of clean water within range in an open container. Alternatively, the water falls as rain in a 30-foot cube within range, extinguishing exposed flames there." + "\n   " + toUni("Destroy Water") + ": I destroy up to 10 gallons of water in an open container within range. Alternatively, I destroy fog in a 30-foot cube within range." + AtHigherLevels + "I create or destroy 10 additional gallons of water, or the size of the Cube increases by 5 feet, for each spell slot level above 1."
+	descriptionFull : "You do one of the following." + "\n   " + toUni("Create Water") + ": You create up to 10 gallons of clean water within range in an open container. Alternatively, the water falls as rain in a 30-foot cube within range, extinguishing exposed flames there." + "\n   " + toUni("Destroy Water") + ": You destroy up to 10 gallons of water in an open container within range. Alternatively, you destroy fog in a 30-foot cube within range." + AtHigherLevels + "You create or destroy 10 additional gallons of water, or the size of the Cube increases by 5 feet, for each spell slot level above 1."
 });
 legacySpellRefactor("create undead", {
 	name : "Create Undead",
@@ -15202,7 +15227,7 @@ legacySpellRefactor("create undead", {
 	compMaterial : "one 150+ gp black onyx stone for each corpse.",
 	duration : "Instantaneous",
 	description : "Turn corpses into 3+1/SL ghouls i.a.; control 24h; bns command 120 ft; see B (150gp/corpse cons.)", // i.a. -> inter alia -> among others
-	descriptionFull : "I can cast this spell only at night. Choose up to three corpses of Medium or Small Humanoids within range. Each one becomes a Ghoul under my control (see the Monster Manual for its stat block)." + "\n   " + "As a Bonus Action on each of my turns, I can mentally command any creature I animated with this spell if the creature is within 120 feet of I (if I control multiple creatures, I can command any of them at the same time, issuing the same command to them). I decide what action the creature will take and where it will move on its next turn, or I can issue a general command, such as to guard a particular place. If I issue no commands, the creature takes the Dodge action and moves only to avoid harm. Once given an order, the creature continues to follow the order until its task is complete." + "\n   " + "The creature is under my control for 24 hours, after which it stops obeying any command I've given it. To maintain control of the creature for another 24 hours, I must cast this spell on the creature before the current 24-hour period ends. This use of the spell reasserts my control over up to three creatures I have animated with this spell rather than animating new ones." + AtHigherLevels + "If I use a level 7 spell slot, I can animate or reassert control over four Ghouls. If I use a level 8 spell slot, I can animate or reassert control over five Ghouls or two Ghasts or Wights. If I use a level 9 spell slot, I can animate or reassert control over six Ghouls, three Ghasts or Wights, or two Mummies. See the Monster Manual for these stat blocks."
+	descriptionFull : "You can cast this spell only at night. Choose up to three corpses of Medium or Small Humanoids within range. Each one becomes a Ghoul under your control (see the Monster Manual for its stat block)." + "\n   " + "As a Bonus Action on each of your turns, you can mentally command any creature you animated with this spell if the creature is within 120 feet of you (if you control multiple creatures, you can command any of them at the same time, issuing the same command to them). You decide what action the creature will take and where it will move on its next turn, or you can issue a general command, such as to guard a particular place. If you issue no commands, the creature takes the Dodge action and moves only to avoid harm. Once given an order, the creature continues to follow the order until its task is complete." + "\n   " + "The creature is under your control for 24 hours, after which it stops obeying any command you've given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature before the current 24-hour period ends. This use of the spell reasserts your control over up to three creatures you have animated with this spell rather than animating new ones." + AtHigherLevels + "If you use a level 7 spell slot, you can animate or reassert control over four Ghouls. If you use a level 8 spell slot, you can animate or reassert control over five Ghouls or two Ghasts or Wights. If you use a level 9 spell slot, you can animate or reassert control over six Ghouls, three Ghasts or Wights, or two Mummies. See the Monster Manual for these stat blocks."
 });
 legacySpellRefactor("creation", {
 	name : "Creation",
@@ -15216,10 +15241,11 @@ legacySpellRefactor("creation", {
 	compMaterial : "A paintbrush",
 	duration : "Special",
 	description : "Create familiar object up to 5+5ft/SL cube of plant matter, stone, metal, gems or rare metals; see B",
-	descriptionFull : "I pull wisps of shadow material from the Shadowfell to create an object within range. It is either an object of vegetable matter (soft goods, rope, wood, and the like) or mineral matter (stone, crystal, metal, and the like). The object must be no larger than a 5-foot Cube, and the object must be of a form and material that I have seen." + "\n   " + "The spell's duration depends on the object's material, as shown in the Materials table. If the object is composed of multiple materials, use the shortest duration. Using any object created by this spell as another spell's Material component causes the other spell to fail." + "\n\n" + toUni("Material") + "\t\t" + toUni("Duration") + "\n" + "Vegetable matter\t1 day" + "\n" + "Stone or crystal\t12 hours" + "\n" + "Precious metals\t1 hour" + "\n" + "Gems\t\t10 minutes" + "\n\n" + "Adamantine/Mithral - 1 minute" + "\n   " + AtHigherLevels + "The Cube increases by 5 feet for each spell slot level above 5."
+	descriptionFull : "You pull wisps of shadow material from the Shadowfell to create an object within range. It is either an object of vegetable matter (soft goods, rope, wood, and the like) or mineral matter (stone, crystal, metal, and the like). The object must be no larger than a 5-foot Cube, and the object must be of a form and material that you have seen." + "\n   " + "The spell's duration depends on the object's material, as shown in the Materials table. If the object is composed of multiple materials, use the shortest duration. Using any object created by this spell as another spell's Material component causes the other spell to fail." + "\n\n" + toUni("Material") + "\t\t" + toUni("Duration") + "\n" + "Vegetable matter\t1 day" + "\n" + "Stone or crystal\t12 hours" + "\n" + "Precious metals\t1 hour" + "\n" + "Gems\t\t10 minutes" + "\n\n" + "Adamantine/Mithral - 1 minute" + "\n   " + AtHigherLevels + "The Cube increases by 5 feet for each spell slot level above 5."
 });
 legacySpellRefactor("crown of madness", {
 	name : "Crown of Madness",
+	nameShort : "Crown of Madness*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 259]],
 	level : 2,
@@ -15229,8 +15255,8 @@ legacySpellRefactor("crown of madness", {
 	components : "V,S",
 	duration : "Conc, 1 min",
 	save : "Wis",
-	description : "1 humanoid save or Charmed; a to maintain; melee atk crea of my choice before move; repeat save EoT",
-	descriptionFull : "One creature that I can see within range must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The creature succeeds automatically if it isn't Humanoid." + "\n   " + "A spectral crown appears on the Charmed target's head, and it must use its action before moving on each of its turns to make a melee attack against a creature other than itself that I mentally choose. The target can act normally on its turn if I choose no creature or if no creature is within its reach. The target repeats the save at the end of each of its turns, ending the spell on itself on a success." + "\n   " + "On my later turns, I must take the Magic action to maintain control of the target, or the spell ends."
+	description : "1 humanoid save or Charmed; a to maintain; melee atk crea I choose before move; redo save EoT; see B",
+	descriptionFull : "One creature that you can see within range must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The creature succeeds automatically if it isn't Humanoid." + "\n   " + "A spectral crown appears on the Charmed target's head, and it must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target can act normally on its turn if you choose no creature or if no creature is within its reach. The target repeats the save at the end of each of its turns, ending the spell on itself on a success." + "\n   " + "On your later turns, you must take the Magic action to maintain control of the target, or the spell ends."
 });
 legacySpellRefactor("crusader's mantle", {
 	name : "Crusader's Mantle",
@@ -15242,8 +15268,8 @@ legacySpellRefactor("crusader's mantle", {
 	range : "S:30-ft rad",
 	components : "V",
 	duration : "Conc, 1 min",
-	description : "While in range, me and allies deal extra 1d4 Radiant dmg with weapons and unarmed strikes",
-	descriptionFull : "I radiate a magical aura in a 30-foot Emanation. While in the aura, I and my allies each deal an extra 1d4 Radiant damage when hitting with a weapon or an Unarmed Strike."
+	description : "While in area, me and allies deal +1d4 Radiant dmg with weapons and unarmed strikes",
+	descriptionFull : "You radiate a magical aura in a 30-foot Emanation. While in the aura, you and your allies each deal an extra 1d4 Radiant damage when hitting with a weapon or an Unarmed Strike."
 });
 legacySpellRefactor("cure wounds", {
 	name : "Cure Wounds",
@@ -15256,7 +15282,7 @@ legacySpellRefactor("cure wounds", {
 	components : "V,S",
 	duration : "Instantaneous",
 	description : "1 creature heals 2d8+2d8/SL+spellcasting ability modifier HP",
-	descriptionFull : "A creature I touch regains a number of Hit Points equal to 2d8 plus my spellcasting Ability modifier." + AtHigherLevels + "The healing increases by 2d8 for each spell slot level above 1."
+	descriptionFull : "A creature you touch regains a number of Hit Points equal to 2d8 plus your spellcasting Ability modifier." + AtHigherLevels + "The healing increases by 2d8 for each spell slot level above 1."
 });
 legacySpellRefactor("dancing lights", {
 	name : "Dancing Lights",
@@ -15270,7 +15296,7 @@ legacySpellRefactor("dancing lights", {
 	compMaterial : "A bit of phosphorous",
 	duration : "Conc, 1 min",
 	description : "4 torch-sized lights or 1 humanlike Medium light; each emits 10-ft rad dim light; bns to move 60 ft",
-	descriptionFull : "I create up to four torch-size lights within range, making them appear as torches, lanterns, or glowing orbs that hover for the duration. Alternatively, I combine the four lights into one glowing Medium form that is vaguely humanlike. Whichever form I choose, each light sheds Dim Light in a 10-foot radius." + "\n   " + "As a Bonus Action, I can move the lights up to 60 feet to a space within range. A light must be within 20 feet of another light created by this spell, and a light vanishes if it exceeds the spell's range."
+	descriptionFull : "You create up to four torch-size lights within range, making them appear as torches, lanterns, or glowing orbs that hover for the duration. Alternatively, you combine the four lights into one glowing Medium form that is vaguely humanlike. Whichever form you choose, each light sheds Dim Light in a 10-foot radius." + "\n   " + "As a Bonus Action, you can move the lights up to 60 feet to a space within range. A light must be within 20 feet of another light created by this spell, and a light vanishes if it exceeds the spell's range."
 });
 legacySpellRefactor("darkness", {
 	name : "Darkness",
@@ -15284,7 +15310,7 @@ legacySpellRefactor("darkness", {
 	compMaterial : "Bat fur and a piece of coal",
 	duration : "Conc, 10 min",
 	description : "15-ft rad darkness on point or object; Darkvision doesn't work; only magical light of SL 3+ works in it",
-	descriptionFull : "For the duration, magical Darkness spreads from a point within range and fills a 15-foot-radius Sphere. Darkvision can't see through it, and nonmagical light can't illuminate it." + "\n   " + "Alternatively, I cast the spell on an object that isn't being worn or carried, causing the Darkness to fill a 15-foot Emanation originating from that object. Covering that object with something opaque, such as a bowl or helm, blocks the Darkness." + "\n   " + "If any of this spell's area overlaps with an area of Bright Light or Dim Light created by a spell of level 2 or lower, that other spell is dispelled."
+	descriptionFull : "For the duration, magical Darkness spreads from a point within range and fills a 15-foot-radius Sphere. Darkvision can't see through it, and nonmagical light can't illuminate it." + "\n   " + "Alternatively, you cast the spell on an object that isn't being worn or carried, causing the Darkness to fill a 15-foot Emanation originating from that object. Covering that object with something opaque, such as a bowl or helm, blocks the Darkness." + "\n   " + "If any of this spell's area overlaps with an area of Bright Light or Dim Light created by a spell of level 2 or lower, that other spell is dispelled."
 });
 legacySpellRefactor("darkvision", {
 	name : "Darkvision",
@@ -15298,7 +15324,7 @@ legacySpellRefactor("darkvision", {
 	compMaterial : "A dried carrot",
 	duration : "8 h",
 	description : "1 willing creature has Darkvision 150 ft for the duration",
-	descriptionFull : "For the duration, a willing creature I touch has Darkvision with a range of 150 feet."
+	descriptionFull : "For the duration, a willing creature you touch has Darkvision with a range of 150 feet."
 });
 legacySpellRefactor("daylight", {
 	name : "Daylight",
@@ -15310,8 +15336,8 @@ legacySpellRefactor("daylight", {
 	range : "60 ft",
 	components : "V,S",
 	duration : "1 h",
-	description : "Sunlight in 60-ft rad bright + 60-ft dim on point or obj; only magical darkness of SL 4+ works in it",
-	descriptionFull : "For the duration, sunlight spreads from a point within range and fills a 60-foot-radius Sphere. The sunlight's area is Bright Light and sheds Dim Light for an additional 60 feet." + "\n   " + "Alternatively, I cast the spell on an object that isn't being worn or carried, causing the sunlight to fill a 60-foot Emanation originating from that object. Covering that object with something opaque, such as a bowl or helm, blocks the sunlight." + "\n   " + "If any of this spell's area overlaps with an area of Darkness created by a spell of level 3 or lower, that other spell is dispelled."
+	description : "60-ft rad bright sunlight \u0026 60-ft rad dim on point or obj; only magical darkness of SL 4+ works in it",
+	descriptionFull : "For the duration, sunlight spreads from a point within range and fills a 60-foot-radius Sphere. The sunlight's area is Bright Light and sheds Dim Light for an additional 60 feet." + "\n   " + "Alternatively, you cast the spell on an object that isn't being worn or carried, causing the sunlight to fill a 60-foot Emanation originating from that object. Covering that object with something opaque, such as a bowl or helm, blocks the sunlight." + "\n   " + "If any of this spell's area overlaps with an area of Darkness created by a spell of level 3 or lower, that other spell is dispelled."
 });
 legacySpellRefactor("death ward", {
 	name : "Death Ward",
@@ -15324,7 +15350,7 @@ legacySpellRefactor("death ward", {
 	components : "V,S",
 	duration : "8 h",
 	description : "First time crea drops to 0 HP it drops to 1 HP instead; or negates first instantaneous kill effect",
-	descriptionFull : "I touch a creature and grant it a measure of protection from death. The first time the target would drop to 0 Hit Points before the spell ends, the target instead drops to 1 Hit Point, and the spell ends." + "\n   " + "If the spell is still in effect when the target is subjected to an effect that would kill it instantly without dealing damage, that effect is negated against the target, and the spell ends."
+	descriptionFull : "You touch a creature and grant it a measure of protection from death. The first time the target would drop to 0 Hit Points before the spell ends, the target instead drops to 1 Hit Point, and the spell ends." + "\n   " + "If the spell is still in effect when the target is subjected to an effect that would kill it instantly without dealing damage, that effect is negated against the target, and the spell ends."
 });
 legacySpellRefactor("delayed blast fireball", {
 	name : "Delayed Blast Fireball",
@@ -15338,12 +15364,13 @@ legacySpellRefactor("delayed blast fireball", {
 	compMaterial : "A ball of bat guano and sulfur",
 	duration : "Conc, 1 min",
 	save : "Dex",
-	description : "Create bead; when conc dropped/broken 20ft rad 12d6+1d6/SL+1d6/EoT Fire; save 1/2; obj. ignite",
-	descriptionFull : "A beam of yellow light flashes from I, then condenses at a chosen point within range as a glowing bead for the duration. When the spell ends, the bead explodes, and each creature in a 20-foot-radius Sphere centered on that point makes a Dexterity saving throw. A creature takes Fire damage equal to the total accumulated damage on a failed save or half as much damage on a successful one." + "\n   " + "The spell's base damage is 12d6, and the damage increases by 1d6 whenever my turn ends and the spell hasn't ended." + "\n   " + "If a creature touches the glowing bead before the spell ends, that creature makes a Dexterity saving throw. On a failed save, the spell ends, causing the bead to explode. On a successful save, the creature can throw the bead up to 40 feet. If the thrown bead enters a creature's space or collides with a solid object, the spell ends, and the bead explodes." + "\n   " + "When the bead explodes, flammable objects in the explosion that aren't being worn or carried start burning." + AtHigherLevels + "The base damage increases by 1d6 for each spell slot level above 7.",
+	description : "Create bead; when conc. ends all 20ft rad 12d6+1d6/SL+1d6/EoT Fire; save 1/2; unattended obj ignite",
+	descriptionFull : "A beam of yellow light flashes from you, then condenses at a chosen point within range as a glowing bead for the duration. When the spell ends, the bead explodes, and each creature in a 20-foot-radius Sphere centered on that point makes a Dexterity saving throw. A creature takes Fire damage equal to the total accumulated damage on a failed save or half as much damage on a successful one." + "\n   " + "The spell's base damage is 12d6, and the damage increases by 1d6 whenever your turn ends and the spell hasn't ended." + "\n   " + "If a creature touches the glowing bead before the spell ends, that creature makes a Dexterity saving throw. On a failed save, the spell ends, causing the bead to explode. On a successful save, the creature can throw the bead up to 40 feet. If the thrown bead enters a creature's space or collides with a solid object, the spell ends, and the bead explodes." + "\n   " + "When the bead explodes, flammable objects in the explosion that aren't being worn or carried start burning." + AtHigherLevels + "The base damage increases by 1d6 for each spell slot level above 7.",
 	dynamicDamageBonus : { multipleDmgMoments : false }
 });
 legacySpellRefactor("demiplane", {
 	name : "Demiplane",
+	nameShort : "Demiplane*",
 	classes : ["sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 261]],
 	level : 8,
@@ -15352,8 +15379,8 @@ legacySpellRefactor("demiplane", {
 	range : "60 ft",
 	components : "S",
 	duration : "1 h",
-	description : "Create door to 30-ft cu demiplane (new or existing); when spell ends, obj. remain, crea choose if stay",
-	descriptionFull : "I create a shadowy Medium door on a flat solid surface that I can see within range. This door can be opened and closed, and it leads to a demiplane that is an empty room 30 feet in each dimension, made of wood or stone (my choice)." + "\n   " + "When the spell ends, the door vanishes, and any objects inside the demiplane remain there. Any creatures inside also remain unless they opt to be shunted through the door as it vanishes, landing with the Prone condition in the unoccupied spaces closest to the door's former space." + "\n   " + "Each time I cast this spell, I can create a new demiplane or connect the shadowy door to a demiplane I created with a previous casting of this spell. Additionally, if I know the nature and contents of a demiplane created by a casting of this spell by another creature, I can connect the shadowy door to that demiplane instead."
+	description : "Create door to 30-ft cu demiplane (new or existing); when spell ends, obj remain, crea choose if stay",
+	descriptionFull : "You create a shadowy Medium door on a flat solid surface that you can see within range. This door can be opened and closed, and it leads to a demiplane that is an empty room 30 feet in each dimension, made of wood or stone (your choice)." + "\n   " + "When the spell ends, the door vanishes, and any objects inside the demiplane remain there. Any creatures inside also remain unless they opt to be shunted through the door as it vanishes, landing with the Prone condition in the unoccupied spaces closest to the door's former space." + "\n   " + "Each time you cast this spell, you can create a new demiplane or connect the shadowy door to a demiplane you created with a previous casting of this spell. Additionally, if you know the nature and contents of a demiplane created by a casting of this spell by another creature, you can connect the shadowy door to that demiplane instead."
 });
 legacySpellRefactor("destructive wave", {
 	name : "Destructive Wave",
@@ -15368,7 +15395,7 @@ legacySpellRefactor("destructive wave", {
 	save : "Con",
 	description : "Any crea 5d6 Thunder dmg \u0026 5d6 Radiant or Necrotic dmg \u0026 knocked prone; save halves, not prone",
 	descriptionShorter : "Any crea 5d6 Thunder dmg \u0026 5d6 Radiant or Necrotic dmg \u0026 prone; save half, not prone",
-	descriptionFull : "Destructive energy ripples outward from I in a 30-foot Emanation. Each creature I choose in the Emanation makes a Constitution saving throw. On a failed save, a target takes 5d6 Thunder damage and 5d6 Radiant or Necrotic damage (my choice) and has the Prone condition. On a successful save, a target takes half as much damage only.",
+	descriptionFull : "Destructive energy ripples outward from you in a 30-foot Emanation. Each creature you choose in the Emanation makes a Constitution saving throw. On a failed save, a target takes 5d6 Thunder damage and 5d6 Radiant or Necrotic damage (your choice) and has the Prone condition. On a successful save, a target takes half as much damage only.",
 	dynamicDamageBonus : {
 		allDmgTypesSingleMoment : true,
 		multipleDmgTypes : {
@@ -15388,7 +15415,7 @@ legacySpellRefactor("detect evil and good", {
 	components : "V,S",
 	duration : "Conc, 10 min",
 	description : "Know location of aberration, celestial, elemental, fey, fiend, undead, and Hallow spell in 30ft",
-	descriptionFull : "For the duration, I sense the location of any Aberration, Celestial, Elemental, Fey, Fiend, or Undead within 30 feet of yourself. I also sense whether the Hallow spell is active there and, if so, where." + "\n   " + "The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead."
+	descriptionFull : "For the duration, you sense the location of any Aberration, Celestial, Elemental, Fey, Fiend, or Undead within 30 feet of yourself. You also sense whether the Hallow spell is active there and, if so, where." + "\n   " + "The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead."
 });
 legacySpellRefactor("detect magic", {
 	name : "Detect Magic",
@@ -15402,7 +15429,7 @@ legacySpellRefactor("detect magic", {
 	components : "V,S",
 	duration : "Conc, 10 min",
 	description : "Sense magic effects in 30ft; 1 a to see aura on magical object/creature and determine school",
-	descriptionFull : "For the duration, I sense the presence of magical effects within 30 feet of yourself. If I sense such effects, I can take the Magic Action to see a faint aura around any visible creature or object in the area that bears the magic, and if an effect was created by a spell, I learn the spell's school of magic." + "\n   " + "The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead."
+	descriptionFull : "For the duration, you sense the presence of magical effects within 30 feet of yourself. If you sense such effects, you can take the Magic Action to see a faint aura around any visible creature or object in the area that bears the magic, and if an effect was created by a spell, you learn the spell's school of magic." + "\n   " + "The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead."
 });
 legacySpellRefactor("detect poison and disease", {
 	name : "Detect Poison and Disease",
@@ -15418,7 +15445,7 @@ legacySpellRefactor("detect poison and disease", {
 	compMaterial : "A yew leaf",
 	duration : "Conc, 10 min",
 	description : "Know location and type of poisons, poisonous/venomous creatures, and magical contagions in 30 ft",
-	descriptionFull : "For the duration, I sense the location of poisons, poisonous or venomous creatures, and magical contagions within 30 feet of yourself. I sense the kind of poison, creature, or contagion in each case." + "\n   " + "The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead."
+	descriptionFull : "For the duration, you sense the location of poisons, poisonous or venomous creatures, and magical contagions within 30 feet of yourself. You sense the kind of poison, creature, or contagion in each case." + "\n   " + "The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead."
 });
 legacySpellRefactor("detect thoughts", {
 	name : "Detect Thoughts",
@@ -15432,8 +15459,8 @@ legacySpellRefactor("detect thoughts", {
 	compMaterial : "A copper piece",
 	duration : "Conc, 1 min",
 	save : "Wis",
-	description : "Sense thinking crea or read 1 crea surface thoughts; 1 a switch or probe; save or Int (Arcana) to end",
-	descriptionFull : "I activate one of the effects below. Until the spell ends, I can activate either effect as a Magic Action on my later turns." + "\n   " + "Sense Thoughts. I sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. I don't read the thoughts, but I know that a thinking creature is present." + "\n   " + "The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead." + "\n   " + "Read Thoughts. Target one creature I can see within 30 feet of yourself or one creature within 30 feet of yourself that I detected with the Sense Thoughts option. I learn what is most on the target's mind right now. If the target doesn't know any languages and isn't telepathic, I learn nothing." + "\n   " + "As a Magic action on my next turn, I can try to probe deeper into the target's mind. If I probe deeper, the target makes a Wisdom saving throw. On a failed save, I discern the target's reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that I are probing into its mind, and until I shift my attention away from the target's mind, the target can take an action on its turn to make an Intelligence (Arcana) check against my spell save DC, ending the spell on a success."
+	description : "Sense thinking crea/read 1 vis. crea surface thoughts; 1 a switch/probe (save \u0026 knows, Int (Arcana) end)",
+	descriptionFull : "You activate one of the effects below. Until the spell ends, you can activate either effect as a Magic Action on your later turns." + "\n   " + "Sense Thoughts. You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don't read the thoughts, but you know that a thinking creature is present." + "\n   " + "The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead." + "\n   " + "Read Thoughts. Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target's mind right now. If the target doesn't know any languages and isn't telepathic, you learn nothing." + "\n   " + "As a Magic action on your next turn, you can try to probe deeper into the target's mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target's reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target's mind, the target can take an action on its turn to make an Intelligence (Arcana) check against your spell save DC, ending the spell on a success."
 });
 legacySpellRefactor("dimension door", {
 	name : "Dimension Door",
@@ -15446,7 +15473,7 @@ legacySpellRefactor("dimension door", {
 	components : "V",
 	duration : "Instantaneous",
 	description : "Teleport myself and 1 willing crea within 5 ft, up to 500 ft to place I can see, visualize or describe",
-	descriptionFull : "I teleport to a location within range. I arrive at exactly the spot desired. It can be a place I can see, one I can visualize, or one I can describe by stating distance and direction, such as 200 feet straight downward or 300 feet upward to the northwest at a 45-degree angle." + "\n   " + "I can also teleport one willing creature. The creature must be within 5 feet of I when I teleport, and it teleports to a space within 5 feet of my destination space." + "\n   " + "If I, the other creature, or both would arrive in a space occupied by a creature or completely filled by one or more objects, I and any creature traveling with I each take 4d6 Force damage, and the teleportation fails."
+	descriptionFull : "You teleport to a location within range. You arrive at exactly the spot desired. It can be a place you can see, one you can visualize, or one you can describe by stating distance and direction, such as 200 feet straight downward or 300 feet upward to the northwest at a 45-degree angle." + "\n   " + "You can also teleport one willing creature. The creature must be within 5 feet of you when you teleport, and it teleports to a space within 5 feet of your destination space." + "\n   " + "If you, the other creature, or both would arrive in a space occupied by a creature or completely filled by one or more objects, you and any creature traveling with you each take 4d6 Force damage, and the teleportation fails."
 });
 legacySpellRefactor("disguise self", {
 	name : "Disguise Self",
@@ -15459,10 +15486,11 @@ legacySpellRefactor("disguise self", {
 	components : "V,S",
 	duration : "1 h",
 	description : "Alter appearance with illusion; Int (Investigation) check vs. spell DC to determine disguise",
-	descriptionFull : "I make yourself — including my clothing, armor, weapons, and other belongings on my person — look different until the spell ends. I can seem 1 foot shorter or taller and can appear heavier or lighter. I must adopt a form that has the same basic arrangement of limbs as I have. Otherwise, the extent of the illusion is up to I." + "\n   " + "The changes wrought by this spell fail to hold up to physical inspection. For example, if I use this spell to add a hat to my outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel my head and hair. If I use this spell to appear thinner than I are, the hand of someone who reaches out to touch I would bump into I while it was seemingly still in midair." + "\n   " + "To discern that I are disguised, a creature can use its action to inspect my appearance and must succeed on an Intelligence (Investigation) check against my spell save DC."
+	descriptionFull : "You make yourself — including your clothing, armor, weapons, and other belongings on your person — look different until the spell ends. You can seem 1 foot shorter or taller and can appear heavier or lighter. You must adopt a form that has the same basic arrangement of limbs as you have. Otherwise, the extent of the illusion is up to you." + "\n   " + "The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair." + "\n   " + "To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC."
 });
 legacySpellRefactor("disintegrate", {
 	name : "Disintegrate",
+	nameShort : "Disintegrate*",
 	classes : ["sorcerer", "wizard"],
 	source : [["PHB2024", 263]],
 	level : 6,
@@ -15473,8 +15501,8 @@ legacySpellRefactor("disintegrate", {
 	compMaterial : "A lodestone and dust",
 	duration : "Instantaneous",
 	save : "Dex",
-	description : "1 crea save or 40+10d6+3d6/SL Force; or up to 10ft cube nonmagical obj/force creation is destroyed",
-	descriptionFull : "I launch a green ray at a target I can see within range. The target can be a creature, a nonmagical object, or a creation of magical force, such as the wall created by Wall of Force." + "\n   " + "A creature targeted by this spell makes a Dexterity saving throw. On a failed save, the target takes 10d6 + 40 Force damage. If this damage reduces it to 0 Hit Points, it and everything nonmagical it is wearing and carrying are disintegrated into gray dust. The target can be revived only by a True Resurrection or a Wish spell." + "\n   " + "This spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If such a target is Huge or larger, this spell disintegrates a 10-foot-Cube portion of it." + AtHigherLevels + "The damage increases by 3d6 for each spell slot level above 6."
+	description : "1 crea save or 40+10d6+3d6/SL Force; or destroy up to 10ft cube nonmagical obj/force creation",
+	descriptionFull : "You launch a green ray at a target you can see within range. The target can be a creature, a nonmagical object, or a creation of magical force, such as the wall created by Wall of Force." + "\n   " + "A creature targeted by this spell makes a Dexterity saving throw. On a failed save, the target takes 10d6 + 40 Force damage. If this damage reduces it to 0 Hit Points, it and everything nonmagical it is wearing and carrying are disintegrated into gray dust. The target can be revived only by a True Resurrection or a Wish spell." + "\n   " + "This spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If such a target is Huge or larger, this spell disintegrates a 10-foot-Cube portion of it." + AtHigherLevels + "The damage increases by 3d6 for each spell slot level above 6."
 });
 legacySpellRefactor("dispel evil and good", {
 	name : "Dispel Evil and Good",
@@ -15487,8 +15515,8 @@ legacySpellRefactor("dispel evil and good", {
 	components : "V,S,M",
 	compMaterial : "powdered silver and iron",
 	duration : "Conc, 1 min",
-	description : "Cele., elem., fey, fiends, and undead dis. on atks vs. me; a to end for Dismissal/Break enchantment",
-	descriptionFull : "For the duration, Celestials, Elementals, Fey, Fiends, and Undead have Disadvantage on attack rolls against I. I can end the spell early by using either of the following special functions." + "\n   " + toUni("Break Enchantment") + ": As a Magic action, I touch a creature that is possessed by or has the Charmed or Frightened condition from one or more creatures of the types above. The target is no longer possessed, Charmed, or Frightened by such creatures." + "\n   " + toUni("Dismissal") + ": As a Magic action, I target one creature I can see within 5 feet of I that has one of the creature types above. The target must succeed on a Charisma saving throw or be sent back to its home plane if it isn't there already. If they aren't on their home plane, Undead are sent to the Shadowfell, and Fey are sent to the Feywild."
+	description : "Celestial, elem., fey, fiend, undead dis. on atks vs me; a to end for Dismissal/Break enchantment; see B",
+	descriptionFull : "For the duration, Celestials, Elementals, Fey, Fiends, and Undead have Disadvantage on attack rolls against you. You can end the spell early by using either of the following special functions." + "\n   " + toUni("Break Enchantment") + ": As a Magic action, you touch a creature that is possessed by or has the Charmed or Frightened condition from one or more creatures of the types above. The target is no longer possessed, Charmed, or Frightened by such creatures." + "\n   " + toUni("Dismissal") + ": As a Magic action, you target one creature you can see within 5 feet of you that has one of the creature types above. The target must succeed on a Charisma saving throw or be sent back to its home plane if it isn't there already. If they aren't on their home plane, Undead are sent to the Shadowfell, and Fey are sent to the Feywild."
 });
 legacySpellRefactor("dispel magic", {
 	name : "Dispel Magic",
@@ -15501,10 +15529,11 @@ legacySpellRefactor("dispel magic", {
 	components : "V,S",
 	duration : "Instantaneous",
 	description : "Dispel all spells on crea, obj, or magical effect; if above casting SL, DC 10+SL spellcasting ability chk",
-	descriptionFull : "Choose one creature, object, or magical effect within range. Any ongoing spell of level 3 or lower on the target ends. For each ongoing spell of level 4 or higher on the target, make an ability check using my spellcasting ability (DC 10 plus that spell's level). On a successful check, the spell ends." + AtHigherLevels + "I automatically end a spell on the target if the spell's level is equal to or less than the level of the spell slot I use."
+	descriptionFull : "Choose one creature, object, or magical effect within range. Any ongoing spell of level 3 or lower on the target ends. For each ongoing spell of level 4 or higher on the target, make an ability check using your spellcasting ability (DC 10 plus that spell's level). On a successful check, the spell ends." + AtHigherLevels + "You automatically end a spell on the target if the spell's level is equal to or less than the level of the spell slot you use."
 });
 legacySpellRefactor("dissonant whispers", {
 	name : "Dissonant Whispers",
+	nameShort : "Dissonant Whispers*",
 	classes : ["bard"],
 	source : [["PHB2024", 264]],
 	level : 1,
@@ -15514,8 +15543,8 @@ legacySpellRefactor("dissonant whispers", {
 	components : "V",
 	duration : "Instantaneous",
 	save : "Wis",
-	description : "1 visible crea 3d6+1d6/SL Psychic dmg and flee on safest route; save halves and no fleeing",
-	descriptionFull : "One creature of my choice that I can see within range hears a discordant melody in its mind. The target makes a Wisdom saving throw. On a failed save, it takes 3d6 Psychic damage and must immediately use its Reaction, if available, to move as far away from I as it can, using the safest route. On a successful save, the target takes half as much damage only." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 1."
+	description : "1 creature 3d6+1d6/SL Psychic dmg and flee via safest route; save for half damage only",
+	descriptionFull : "One creature of your choice that you can see within range hears a discordant melody in its mind. The target makes a Wisdom saving throw. On a failed save, it takes 3d6 Psychic damage and must immediately use its Reaction, if available, to move as far away from you as it can, using the safest route. On a successful save, the target takes half as much damage only." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 1."
 });
 legacySpellRefactor("divination", {
 	name : "Divination",
@@ -15530,7 +15559,7 @@ legacySpellRefactor("divination", {
 	compMaterial : "Incense worth 25+ gp, which the spell consumes",
 	duration : "Instantaneous",
 	description : "Receive answer to 1 question about goal, event, or activity to occur within the next 7 days (25gp cons.)",
-	descriptionFull : "This spell puts I in contact with a god or a god's servants. I ask one question about a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply, which might be a short phrase or cryptic rhyme. The spell doesn't account for circumstances that might change the answer, such as the casting of other spells." + "\n   " + "If I cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that I get no answer."
+	descriptionFull : "This spell puts you in contact with a god or a god's servants. You ask one question about a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply, which might be a short phrase or cryptic rhyme. The spell doesn't account for circumstances that might change the answer, such as the casting of other spells." + "\n   " + "If you cast the spell more than once before finishing a Long Rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer."
 });
 legacySpellRefactor("divine favor", {
 	name : "Divine Favor",
@@ -15543,7 +15572,7 @@ legacySpellRefactor("divine favor", {
 	components : "V,S",
 	duration : "1 min",
 	description : "My weapon attacks deal +1d4 Radiant damage for the duration",
-	descriptionFull : "Until the spell ends, my attacks with weapons deal an extra 1d4 Radiant damage on a hit."
+	descriptionFull : "Until the spell ends, your attacks with weapons deal an extra 1d4 Radiant damage on a hit."
 });
 legacySpellRefactor("divine smite", {
 	name : "Divine Smite",
@@ -15552,11 +15581,11 @@ legacySpellRefactor("divine smite", {
 	level : 1,
 	school : "Evoc",
 	time : "1 bns*",
-	timeFull : "Bonus Action, which I take immediately after hitting a target with a Melee weapon or Unarmed Strike.",
+	timeFull : "Bonus Action, which you take immediately after hitting a target with a Melee weapon or Unarmed Strike.",
 	range : "Self",
 	components : "V",
 	duration : "Instantaneous",
-	description : "Melee weapon/unarmed hit deals +2d8 +1d8/SL Radiant; Fiends \u0026 Undead take extra 1d8 Radiant",
+	description : "Melee weapon/unarmed hit deals +2d8+1d8/SL Radiant dmg; fiends \u0026 undead take extra 1d8 Radiant",
 	descriptionFull : "The target takes an extra 2d8 Radiant damage from the attack. The damage increases by 1d8 if the target is a Fiend or an Undead." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 1."
 });
 legacySpellRefactor("divine word", {
@@ -15570,11 +15599,12 @@ legacySpellRefactor("divine word", {
 	components : "V",
 	duration : "Instantaneous",
 	save : "Cha",
-	description : "Any crea save or deaf/blind/stunned/dead depending on current HP; banishes extraplanar crea",
-	descriptionFull : "I utter a word imbued with power from the Upper Planes. Each creature of my choice in range makes a Charisma saving throw. On a failed save, a target that has 50 Hit Points or fewer suffers an effect based on its current Hit Points, as shown in the Divine Word Effects table." + "\n " + "\u2022 41-50: Deafened for 1 minute" + "\n " + "\u2022 31-40: Deafened and Blinded for 10 minutes" + "\n " + "\u2022 21-30: Blinded, Deafened, and Stunned for 1 hour" + "\n " + "\u2022 0-20: the target dies" + "\n\n" + "Regardless of its Hit Points, a Celestial, an Elemental, a Fey, or a Fiend target that fails its save is forced back to its plane of origin (if it isn't there already) and can't return to the current plane for 24 hours by any means short of a Wish spell."
+	description : "Any crea save or Deaf/Blind/Stunned/Dead based on current HP; banishes extraplanar crea; see B",
+	descriptionFull : "You utter a word imbued with power from the Upper Planes. Each creature of your choice in range makes a Charisma saving throw. On a failed save, a target that has 50 Hit Points or fewer suffers an effect based on its current Hit Points, as shown in the Divine Word Effects table." + "\n " + "\u2022 41-50: Deafened for 1 minute" + "\n " + "\u2022 31-40: Deafened and Blinded for 10 minutes" + "\n " + "\u2022 21-30: Blinded, Deafened, and Stunned for 1 hour" + "\n " + "\u2022 0-20: the target dies" + "\n\n" + "Regardless of its Hit Points, a Celestial, an Elemental, a Fey, or a Fiend target that fails its save is forced back to its plane of origin (if it isn't there already) and can't return to the current plane for 24 hours by any means short of a Wish spell."
 });
 legacySpellRefactor("dominate beast", {
 	name : "Dominate Beast",
+	nameShort : "Dominate Beast*",
 	classes : ["druid", "ranger", "sorcerer"],
 	source : [["PHB2024", 265]],
 	level : 4,
@@ -15585,10 +15615,11 @@ legacySpellRefactor("dominate beast", {
 	duration : "Conc, 1 min",
 	save : "Wis",
 	description : "1 beast save or Charmed; redo on dmg; follows telepathic commands; rea to use rea; +SL for dur.",
-	descriptionFull : "One Beast I can see within range must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The target has Advantage on the save if I or my allies are fighting it. Whenever the target takes damage, it repeats the save, ending the spell on itself on a success." + "\n   " + "I have a telepathic link with the Charmed target while the two of I are on the same plane of existence. On my turn, I can use this link to issue commands to the target (no action required), such as \"Attack that creature,\" \"Move over there,\" or \"Fetch that object.\" The target does its best to obey on its turn. If it completes an order and doesn't receive further direction from I, it acts and moves as it likes, focusing on protecting itself." + "\n   " + "I can command the target to take a Reaction but must take my own Reaction to do so." + AtHigherLevels + "my Concentration can last longer with a spell slot of level 5 (up to 10 minutes), 6 (up to 1 hour), or 7+ (up to 8 hours)."
+	descriptionFull : "One Beast you can see within range must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The target has Advantage on the save if you or your allies are fighting it. Whenever the target takes damage, it repeats the save, ending the spell on itself on a success." + "\n   " + "You have a telepathic link with the Charmed target while the two of you are on the same plane of existence. On your turn, you can use this link to issue commands to the target (no action required), such as \"Attack that creature,\" \"Move over there,\" or \"Fetch that object.\" The target does its best to obey on its turn. If it completes an order and doesn't receive further direction from you, it acts and moves as it likes, focusing on protecting itself." + "\n   " + "You can command the target to take a Reaction but must take your own Reaction to do so." + AtHigherLevels + "Your Concentration can last longer with a spell slot of level 5 (up to 10 minutes), 6 (up to 1 hour), or 7+ (up to 8 hours)."
 });
 legacySpellRefactor("dominate monster", {
 	name : "Dominate Monster",
+	nameShort : "Dominate Monster*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 265]],
 	level : 8,
@@ -15599,10 +15630,11 @@ legacySpellRefactor("dominate monster", {
 	duration : "Conc, 1 h",
 	save : "Wis",
 	description : "1 crea save or Charmed; redo on dmg; follows telepathic commands; rea to use rea; SL9: conc, 8h",
-	descriptionFull : "One creature I can see within range must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The target has Advantage on the save if I or my allies are fighting it. Whenever the target takes damage, it repeats the save, ending the spell on itself on a success." + "\n   " + "I have a telepathic link with the Charmed target while the two of I are on the same plane of existence. On my turn, I can use this link to issue commands to the target (no action required), such as \"Attack that creature,\" \"Move over there,\" or \"Fetch that object.\" The target does its best to obey on its turn. If it completes an order and doesn't receive further direction from I, it acts and moves as it likes, focusing on protecting itself." + "\n   " + "I can command the target to take a Reaction but must take my own Reaction to do so." + AtHigherLevels + "my Concentration can last longer with a level 9 spell slot (up to 8 hours)."
+	descriptionFull : "One creature you can see within range must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The target has Advantage on the save if you or your allies are fighting it. Whenever the target takes damage, it repeats the save, ending the spell on itself on a success." + "\n   " + "You have a telepathic link with the Charmed target while the two of you are on the same plane of existence. On your turn, you can use this link to issue commands to the target (no action required), such as \"Attack that creature,\" \"Move over there,\" or \"Fetch that object.\" The target does its best to obey on its turn. If it completes an order and doesn't receive further direction from you, it acts and moves as it likes, focusing on protecting itself." + "\n   " + "You can command the target to take a Reaction but must take your own Reaction to do so." + AtHigherLevels + "Your Concentration can last longer with a level 9 spell slot (up to 8 hours)."
 });
 legacySpellRefactor("dominate person", {
 	name : "Dominate Person",
+	nameShort : "Dominate Person*",
 	classes : ["bard", "sorcerer", "wizard"],
 	source : [["PHB2024", 266]],
 	level : 5,
@@ -15613,7 +15645,7 @@ legacySpellRefactor("dominate person", {
 	duration : "Conc, 1 min",
 	save : "Wis",
 	description : "1 humanoid save or Charmed; redo on dmg; follows telepathic commands; rea to use rea; +SL for dur.",
-	descriptionFull : "One Humanoid I can see within range must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The target has Advantage on the save if I or my allies are fighting it. Whenever the target takes damage, it repeats the save, ending the spell on itself on a success." + "\n   " + "I have a telepathic link with the Charmed target while the two of I are on the same plane of existence. On my turn, I can use this link to issue commands to the target (no action required), such as \"Attack that creature,\" \"Move over there,\" or \"Fetch that object.\" The target does its best to obey on its turn. If it completes an order and doesn't receive further direction from I, it acts and moves as it likes, focusing on protecting itself." + "\n   " + "I can command the target to take a Reaction but must take my own Reaction to do so." + AtHigherLevels + "my Concentration can last longer with a spell slot of level 6 (up to 10 minutes), 7 (up to 1 hour), or 8+ (up to 8 hours)."
+	descriptionFull : "One Humanoid you can see within range must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The target has Advantage on the save if you or your allies are fighting it. Whenever the target takes damage, it repeats the save, ending the spell on itself on a success." + "\n   " + "You have a telepathic link with the Charmed target while the two of you are on the same plane of existence. On your turn, you can use this link to issue commands to the target (no action required), such as \"Attack that creature,\" \"Move over there,\" or \"Fetch that object.\" The target does its best to obey on its turn. If it completes an order and doesn't receive further direction from you, it acts and moves as it likes, focusing on protecting itself." + "\n   " + "You can command the target to take a Reaction but must take your own Reaction to do so." + AtHigherLevels + "Your Concentration can last longer with a spell slot of level 6 (up to 10 minutes), 7 (up to 1 hour), or 8+ (up to 8 hours)."
 });
 legacySpellRefactor("dragon's breath", {
 	name : "Dragon's Breath",
@@ -15627,9 +15659,9 @@ legacySpellRefactor("dragon's breath", {
 	compMaterial : "A hot pepper",
 	duration : "Conc, 1 min",
 	save : "Dex",
-	description : "1 willing crea: Magic action breathe 15-ft cone all 3d6+1d6/SL Acid/Cold/Fire/Lghtng/Poison; save half",
-	descriptionShorter : "1 willing crea: 1 a 15ft cone all 3d6+1d6/SL Acid/Cold/Fire/Lghtng/Poison; save 1/2",
-	descriptionFull : "I touch one willing creature, and choose Acid, Cold, Fire, Lightning, or Poison. Until the spell ends, the target can take a Magic action to exhale a 15-foot Cone. Each creature in that area makes a Dexterity saving throw, taking 3d6 damage of the chosen type on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 2.",
+	description : "1 willing crea: for dur. 1 a exhale 15-ft cone all 3d6+1d6/SL Acid/Cold/Fire/Lightn./Poison; save halves",
+	descriptionShorter : "1 willing crea: 1 a 15ft cone all 3d6+1d6/SL Acid/Cold/Fire/Lightn./Poison; save 1/2",
+	descriptionFull : "You touch one willing creature, and choose Acid, Cold, Fire, Lightning, or Poison. Until the spell ends, the target can take a Magic action to exhale a 15-foot Cone. Each creature in that area makes a Dexterity saving throw, taking 3d6 damage of the chosen type on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 2.",
 	dynamicDamageBonus : {
 		multipleDmgTypes : {
 			dmgTypes : ["acid", "cold", "fire", "lightning", "poison"],
@@ -15651,8 +15683,8 @@ legacySpellRefactor("drawmij's instant summons", {
 	components : "V,S,M\u0192",
 	compMaterial : "A sapphire worth 1,000+ gp",
 	duration : "Till dispelled",
-	description : "Link object to sapphire (M); 1 a crush gem to summon the unattended object or learn of holder",
-	descriptionFull : "I touch the sapphire used in the casting and an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an Invisible mark on that object and invisibly inscribes the object's name on the sapphire. Each time I cast this spell, I must use a different sapphire." + "\n   " + "Thereafter, I can take a Magic action to speak the object's name and crush the sapphire. The object instantly appears in my hand regardless of physical or planar distances, and the spell ends." + "\n   " + "If another creature is holding or carrying the object, crushing the sapphire doesn't transport it, but instead I learn who that creature is and where that creature is currently located."
+	description : "Link \u226410 lb, \u22646ft obj to sapphire (M); 1 a crush gem to summon the unattended obj or learn of holder",
+	descriptionFull : "You touch the sapphire used in the casting and an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an Invisible mark on that object and invisibly inscribes the object's name on the sapphire. Each time you cast this spell, you must use a different sapphire." + "\n   " + "Thereafter, you can take a Magic action to speak the object's name and crush the sapphire. The object instantly appears in your hand regardless of physical or planar distances, and the spell ends." + "\n   " + "If another creature is holding or carrying the object, crushing the sapphire doesn't transport it, but instead you learn who that creature is and where that creature is currently located."
 });
 legacySpellRefactor("dream", {
 	name : "Dream",
@@ -15666,8 +15698,8 @@ legacySpellRefactor("dream", {
 	compMaterial : "A handful of sand",
 	duration : "8 h",
 	save : "Wis",
-	description : "Me/willing crea enters other crea's dream; communicate or terrify (save or 3d6 Psych, no rest benefit)",
-	descriptionFull : "I target a creature I know on the same plane of existence. I or a willing creature I touch enters a trance state to act as a dream messenger. While in the trance, the messenger is Incapacitated and has a Speed of 0." + "\n   " + "If the target is asleep, the messenger appears in the target's dreams and can converse with the target as long as it remains asleep, through the spell's duration. The messenger can also shape the dream's environment, creating landscapes, objects, and other images. The messenger can emerge from the trance at any time, ending the spell. The target recalls the dream perfectly upon waking." + "\n   " + "If the target is awake when I cast the spell, the messenger knows it and can either end the trance (and the spell) or wait for the target to sleep, at which point the messenger enters its dreams." + "\n   " + "I can make the messenger terrifying to the target. If I do so, the messenger can deliver a message of no more than ten words, and then the target makes a Wisdom saving throw. On a failed save, the target gains no benefit from its rest, and it takes 3d6 Psychic damage when it wakes up."
+	description : "Me/willing crea enters 1 crea dream; communicate for dur. or terrify (save or 3d6 Psych, no LR benefit)",
+	descriptionFull : "You target a creature you know on the same plane of existence. You or a willing creature you touch enters a trance state to act as a dream messenger. While in the trance, the messenger is Incapacitated and has a Speed of 0." + "\n   " + "If the target is asleep, the messenger appears in the target's dreams and can converse with the target as long as it remains asleep, through the spell's duration. The messenger can also shape the dream's environment, creating landscapes, objects, and other images. The messenger can emerge from the trance at any time, ending the spell. The target recalls the dream perfectly upon waking." + "\n   " + "If the target is awake when you cast the spell, the messenger knows it and can either end the trance (and the spell) or wait for the target to sleep, at which point the messenger enters its dreams." + "\n   " + "You can make the messenger terrifying to the target. If you do so, the messenger can deliver a message of no more than ten words, and then the target makes a Wisdom saving throw. On a failed save, the target gains no benefit from its rest, and it takes 3d6 Psychic damage when it wakes up."
 });
 legacySpellRefactor("druidcraft", {
 	name : "Druidcraft",
@@ -15680,10 +15712,11 @@ legacySpellRefactor("druidcraft", {
 	components : "V,S",
 	duration : "Instantaneous",
 	description : "Predict weather 24 hrs, grow/bloom tiny plant, harmless sensory effect in 5ft cu, snuff/light small fire",
-	descriptionFull : "Whispering to the spirits of nature, I create one of the following effects within range." + "\n " + "\u2022 Weather Sensor. I create a Tiny, harmless sensory effect that predicts what the weather will be at my location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, falling snowflakes for snow, and so on. This effect persists for 1 round." + "\n " + "\u2022 Bloom. I instantly make a flower blossom, a seed pod open, or a leaf bud bloom." + "\n " + "\u2022 Sensory Effect. I create a harmless sensory effect, such as falling leaves, spectral dancing fairies, a gentle breeze, the sound of an animal, or the faint odor of skunk. The effect must fit in a 5-foot Cube." + "\n " + "\u2022 Fire Play. I light or snuff out a candle, a torch, or a campfire."
+	descriptionFull : "Whispering to the spirits of nature, you create one of the following effects within range." + "\n " + "\u2022 Weather Sensor. You create a Tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, falling snowflakes for snow, and so on. This effect persists for 1 round." + "\n " + "\u2022 Bloom. You instantly make a flower blossom, a seed pod open, or a leaf bud bloom." + "\n " + "\u2022 Sensory Effect. You create a harmless sensory effect, such as falling leaves, spectral dancing fairies, a gentle breeze, the sound of an animal, or the faint odor of skunk. The effect must fit in a 5-foot Cube." + "\n " + "\u2022 Fire Play. You light or snuff out a candle, a torch, or a campfire."
 });
 legacySpellRefactor("earthquake", {
 	name : "Earthquake",
+	nameShort : "Earthquake*",
 	classes : ["cleric", "druid", "sorcerer"],
 	source : [["PHB2024", 267]],
 	level : 8,
@@ -15694,7 +15727,7 @@ legacySpellRefactor("earthquake", {
 	compMaterial : "A fractured rock",
 	duration : "Conc, 1 min",
 	description : "Create earthquake in a 100-ft rad, affecting any crea, damaging structures \u0026 creating fissures, see book",
-	descriptionFull : "Choose a point on the ground that I can see within range. For the duration, an intense tremor rips through the ground in a 100-foot-radius circle centered on that point. The ground there is Difficult Terrain." + "\n   " + "When I cast this spell and at the end of each of my turns for the duration, each creature on the ground in the area makes a Dexterity saving throw. On a failed save, a creature has the Prone condition, and its Concentration is broken." + "\n   " + "I can also cause the effects below." + "\n   " + "Fissures. A total of 1d6 fissures open in the spell's area at the end of the turn I cast it. I choose the fissures' locations, which can't be under structures. Each fissure is 1d10 \xD7 10 feet deep and 10 feet wide, and it extends from one edge of the spell's area to another edge. A creature in the same space as a fissure must succeed on a Dexterity saving throw or fall in. A creature that successfully saves moves with the fissure's edge as it opens." + "\n   " + "Structures. The tremor deals 50 Bludgeoning damage to any structure in contact with the ground in the area when I cast the spell and at the end of each of my turns until the spell ends. If a structure drops to 0 Hit Points, it collapses." + "\n   " + "A creature within a distance from a collapsing structure equal to half the structure's height makes a Dexterity saving throw. On a failed save, the creature takes 12d6 Bludgeoning damage, has the Prone condition, and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. On a successful save, the creature takes half as much damage only."
+	descriptionFull : "Choose a point on the ground that you can see within range. For the duration, an intense tremor rips through the ground in a 100-foot-radius circle centered on that point. The ground there is Difficult Terrain." + "\n   " + "When you cast this spell and at the end of each of your turns for the duration, each creature on the ground in the area makes a Dexterity saving throw. On a failed save, a creature has the Prone condition, and its Concentration is broken." + "\n   " + "You can also cause the effects below." + "\n   " + "Fissures. A total of 1d6 fissures open in the spell's area at the end of the turn you cast it. You choose the fissures' locations, which can't be under structures. Each fissure is 1d10 \xD7 10 feet deep and 10 feet wide, and it extends from one edge of the spell's area to another edge. A creature in the same space as a fissure must succeed on a Dexterity saving throw or fall in. A creature that successfully saves moves with the fissure's edge as it opens." + "\n   " + "Structures. The tremor deals 50 Bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the end of each of your turns until the spell ends. If a structure drops to 0 Hit Points, it collapses." + "\n   " + "A creature within a distance from a collapsing structure equal to half the structure's height makes a Dexterity saving throw. On a failed save, the creature takes 12d6 Bludgeoning damage, has the Prone condition, and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. On a successful save, the creature takes half as much damage only."
 });
 legacySpellRefactor("eldritch blast", {
 	name : "Eldritch Blast",
@@ -15708,8 +15741,8 @@ legacySpellRefactor("eldritch blast", {
 	duration : "Instantaneous",
 	description : "Spell attack 1d10 Force damage per beam; same or different targets; CL5: 2, CL11: 3, CL17: 4 beams",
 	descriptionShorter : "Spell atk beam 1d10 Force; can combine/split beams; CL5:2, CL11:3, CL17:4 beams",
-	descriptionCantripDie : "Spell attack for `CD` beam(s), each 1d10 Force damage; beams can be combined or split",
-	descriptionFull : "I hurl a beam of crackling energy. Make a ranged spell attack against one creature or object in range. On a hit, the target takes 1d10 Force damage." + "\n   " + toUni("Cantrip Upgrade") + ". The spell creates two beams at level 5, three beams at level 11, and four beams at level 17. I can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.",
+	descriptionCantripDie : "Spell attack for `CD` beam(s), each 1d10 Force damage; same or different targets",
+	descriptionFull : "You hurl a beam of crackling energy. Make a ranged spell attack against one creature or object in range. On a hit, the target takes 1d10 Force damage." + "\n   " + toUni("Cantrip Upgrade") + ". The spell creates two beams at level 5, three beams at level 11, and four beams at level 17. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.",
 	dynamicDamageBonus : { multipleDmgMoments : true }
 });
 legacySpellRefactor("elementalism", {
@@ -15722,8 +15755,8 @@ legacySpellRefactor("elementalism", {
 	range : "30 ft",
 	components : "V,S",
 	duration : "Instantaneous",
-	description : "Create minor effect (1 min): breeze; dust/sand; embers/smoke; mist/water. Sculpt element (1 hr); See B",
-	descriptionFull : "I exert control over the elements, creating one of the following effects within range." + "\n   " + "Beckon Air. I create a breeze strong enough to ripple cloth, stir dust, rustle leaves, and close open doors and shutters, all in a 5-foot Cube. Doors and shutters being held open by someone or something aren't affected." + "\n   " + "Beckon Earth. I create a thin shroud of dirt or sand that covers surfaces in a 5-foot-square area, or I cause a single word to appear in my handwriting in a patch of dirt or sand." + "\n   " + "Beckon Fire. I create a thin cloud of harmless embers and colored, scented smoke in a 5-foot Cube. I choose the color and scent, and the embers can light candles, torches, or lamps in the area. The smoke's scent lingers for 1 minute." + "\n   " + "Beckon Water. I create a spray of cool mist that lightly dampens creatures and objects in a 5-foot Cube. Alternatively, I create 1 cup of clean water either in an open container or on a surface, and the water evaporates in 1 minute." + "\n   " + "Sculpt Element. I cause dirt, sand, fire, smoke, mist, or water that can fit in a 1-foot cube to assume a crude shape (such as that of a creature or an object) for 1 hour."
+	description : "Create minor effect: strong breeze; dust/sand/word; embers/smoke; mist/water; sculpt element; see B",
+	descriptionFull : "You exert control over the elements, creating one of the following effects within range." + "\n   " + "Beckon Air. You create a breeze strong enough to ripple cloth, stir dust, rustle leaves, and close open doors and shutters, all in a 5-foot Cube. Doors and shutters being held open by someone or something aren't affected." + "\n   " + "Beckon Earth. You create a thin shroud of dirt or sand that covers surfaces in a 5-foot-square area, or you cause a single word to appear in your handwriting in a patch of dirt or sand." + "\n   " + "Beckon Fire. You create a thin cloud of harmless embers and colored, scented smoke in a 5-foot Cube. You choose the color and scent, and the embers can light candles, torches, or lamps in the area. The smoke's scent lingers for 1 minute." + "\n   " + "Beckon Water. You create a spray of cool mist that lightly dampens creatures and objects in a 5-foot Cube. Alternatively, you create 1 cup of clean water either in an open container or on a surface, and the water evaporates in 1 minute." + "\n   " + "Sculpt Element. You cause dirt, sand, fire, smoke, mist, or water that can fit in a 1-foot cube to assume a crude shape (such as that of a creature or an object) for 1 hour."
 });
 legacySpellRefactor("elemental weapon", {
 	name : "Elemental Weapon",
@@ -15735,9 +15768,9 @@ legacySpellRefactor("elemental weapon", {
 	range : "Touch",
 	components : "V,S",
 	duration : "Conc, 1 h",
-	description : "+1 magical weapon; +1d4 Acid, Cold, Fire, Lightning, or Thunder dmg; SL5: +2/+2d4, SL7: +3/+3d4",
+	description : "Mundane wea to +1 magic wea; +1d4 Acid/Cold/Fire/Lightn./Thndr dmg; SL5: +2/+2d4, SL7: +3/+3d4",
 	descriptionShorter : "+1 wea; +1d4 Acid/Cold/Fire/Lightning/Thunder; SL5: +2/+2d4, SL7: +3/+3d4",
-	descriptionFull : "A nonmagical weapon I touch becomes a magic weapon. Choose one of the following damage types: acid, cold, fire, lightning, or thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra 1d4 damage of the chosen type when it hits." + AtHigherLevels + "If I use a level 5–6 spell slot, the bonus to attack rolls increases to +2, and the extra damage increases to 2d4. If I use a level 7+ spell slot, the bonus increases to +3, and the extra damage increases to 3d4.",
+	descriptionFull : "A nonmagical weapon you touch becomes a magic weapon. Choose one of the following damage types: acid, cold, fire, lightning, or thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra 1d4 damage of the chosen type when it hits." + AtHigherLevels + "If you use a level 5–6 spell slot, the bonus to attack rolls increases to +2, and the extra damage increases to 2d4. If you use a level 7+ spell slot, the bonus increases to +3, and the extra damage increases to 3d4.",
 	dynamicDamageBonus : {
 		multipleDmgTypes : {
 			dmgTypes : ["acid", "cold", "fire", "lightning", "thunder"],
@@ -15756,11 +15789,12 @@ legacySpellRefactor("enhance ability", {
 	components : "V,S,M",
 	compMaterial : "Fur or a feather",
 	duration : "Conc, 1 h",
-	description : "1+1/SL crea adv. on checks with 1 stat (choice per target): Str, Dex, Int, Wis, or Cha",
-	descriptionFull : "I touch a creature and choose Strength, Dexterity, Intelligence, Wisdom, or Charisma. For the duration, the target has Advantage on ability checks using the chosen ability." + AtHigherLevels + "I can target one additional creature for each spell slot level above 2. I can choose a different ability for each target."
+	description : "1+1/SL creature adv. on checks with 1 stat (choose for each target): Str, Dex, Int, Wis, or Cha",
+	descriptionFull : "You touch a creature and choose Strength, Dexterity, Intelligence, Wisdom, or Charisma. For the duration, the target has Advantage on ability checks using the chosen ability." + AtHigherLevels + "You can target one additional creature for each spell slot level above 2. You can choose a different ability for each target."
 });
 legacySpellRefactor("enlarge/reduce", {
 	name : "Enlarge/Reduce",
+	nameShort : "Enlarge/Reduce*",
 	classes : ["artificer","bard", "druid", "sorcerer", "wizard"],
 	source : [["PHB2024", 268]],
 	level : 2,
@@ -15772,7 +15806,7 @@ legacySpellRefactor("enlarge/reduce", {
 	duration : "Conc, 1 min",
 	save : "Con",
 	description : "1 crea/obj save or Enlarged (Str adv. +1d4 weapon/unarmed dmg), Reduced (Str disadv; -1d4, min 1)",
-	descriptionFull : "For the duration, the spell enlarges or reduces a creature or an object I can see within range (see the chosen effect below). A targeted object must be neither worn nor carried. If the target is an unwilling creature, it can make a Constitution saving throw. On a successful save, the spell has no effect." + "\n   " + "Everything that a targeted creature is wearing and carrying changes size with it. Any item it drops returns to normal size at once. A thrown weapon or piece of ammunition returns to normal size immediately after it hits or misses a target." + "\n   " + toUni("Enlarge") + ": The target's size increases by one category—from Medium to Large, for example. The target also has Advantage on Strength checks and Strength saving throws. The target's attacks with its enlarged weapons or Unarmed Strikes deal an extra 1d4 damage on a hit." + "\n   " + toUni("Reduce") + ": The target's size decreases by one category—from Medium to Small, for example. The target also has Disadvantage on Strength checks and Strength saving throws. The target's attacks with its reduced weapons or Unarmed Strikes deal 1d4 less damage on a hit (this can't reduce the damage below 1).",
+	descriptionFull : "For the duration, the spell enlarges or reduces a creature or an object you can see within range (see the chosen effect below). A targeted object must be neither worn nor carried. If the target is an unwilling creature, it can make a Constitution saving throw. On a successful save, the spell has no effect." + "\n   " + "Everything that a targeted creature is wearing and carrying changes size with it. Any item it drops returns to normal size at once. A thrown weapon or piece of ammunition returns to normal size immediately after it hits or misses a target." + "\n   " + toUni("Enlarge") + ": The target's size increases by one category—from Medium to Large, for example. The target also has Advantage on Strength checks and Strength saving throws. The target's attacks with its enlarged weapons or Unarmed Strikes deal an extra 1d4 damage on a hit." + "\n   " + toUni("Reduce") + ": The target's size decreases by one category—from Medium to Small, for example. The target also has Disadvantage on Strength checks and Strength saving throws. The target's attacks with its reduced weapons or Unarmed Strikes deal 1d4 less damage on a hit (this can't reduce the damage below 1).",
 	dynamicDamageBonus : { doNotProcess : true } // Not actual damage from the spell
 });
 legacySpellRefactor("ensnaring strike", {
@@ -15782,14 +15816,14 @@ legacySpellRefactor("ensnaring strike", {
 	level : 1,
 	school : "Conj",
 	time : "1 bns*",
-	timeFull : "Bonus Action, which I take immediately after hitting a creature with a weapon",
+	timeFull : "Bonus Action, which you take immediately after hitting a creature with a weapon",
 	range : "Self",
 	components : "V",
 	duration : "Conc, 1 min",
 	save : "Str",
-	description : "Hit crea save (Large adv.) or Restrained, 1d6+1d6/SL Piercing at start of turn; Str (Ath) check to escape",
+	description : "Hit crea save (Large adv.) or Restrained, 1d6+1d6/SL Piercing each turn; Str (Ath) chk vs DC to end",
 	descriptionShorter : "Hit crea save (Large adv.) or restrained, 1d6+1d6/SL Piercing each turn; Str (Ath) to escape",
-	descriptionFull : "As I hit the target, grasping vines appear on it, and it makes a Strength saving throw. A Large or larger creature has Advantage on this save. On a failed save, the target has the Restrained condition until the spell ends. On a successful save, the vines shrivel away, and the spell ends." + "\n   " + "While Restrained, the target takes 1d6 Piercing damage at the start of each of its turns. The target or a creature within reach of it can take an action to make a Strength (Athletics) check against my spell save DC. On a success, the spell ends." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 1."
+	descriptionFull : "As you hit the target, grasping vines appear on it, and it makes a Strength saving throw. A Large or larger creature has Advantage on this save. On a failed save, the target has the Restrained condition until the spell ends. On a successful save, the vines shrivel away, and the spell ends." + "\n   " + "While Restrained, the target takes 1d6 Piercing damage at the start of each of its turns. The target or a creature within reach of it can take an action to make a Strength (Athletics) check against your spell save DC. On a success, the spell ends." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 1."
 });
 legacySpellRefactor("entangle", {
 	name : "Entangle",
@@ -15802,11 +15836,12 @@ legacySpellRefactor("entangle", {
 	components : "V,S",
 	duration : "Conc, 1 min",
 	save : "Str",
-	description : "20-ft square save or Restrained; Str (Ath) check vs. spell DC to escape; for duration area is dif. ter.",
-	descriptionFull : "Grasping plants sprout from the ground in a 20-foot square within range. For the duration, these plants turn the ground in the area into Difficult Terrain. They disappear when the spell ends." + "\n   " + "Each creature (other than I) in the area when I cast the spell must succeed on a Strength saving throw or have the Restrained condition until the spell ends. A Restrained creature can take an action to make a Strength (Athletics) check against my spell save DC. On a success, it frees itself from the grasping plants and is no longer Restrained by them."
+	description : "20-ft square all but me save or Restrained; Str (Ath) check vs DC to escape; for duration area is dif. ter.",
+	descriptionFull : "Grasping plants sprout from the ground in a 20-foot square within range. For the duration, these plants turn the ground in the area into Difficult Terrain. They disappear when the spell ends." + "\n   " + "Each creature (other than you) in the area when you cast the spell must succeed on a Strength saving throw or have the Restrained condition until the spell ends. A Restrained creature can take an action to make a Strength (Athletics) check against your spell save DC. On a success, it frees itself from the grasping plants and is no longer Restrained by them."
 });
 legacySpellRefactor("enthrall", {
 	name : "Enthrall",
+	nameShort : "Enthrall*",
 	classes : ["bard", "warlock"],
 	source : [["PHB2024", 269]],
 	level : 2,
@@ -15816,8 +15851,8 @@ legacySpellRefactor("enthrall", {
 	components : "V,S",
 	duration : "Conc, 1 min",
 	save : "Wis",
-	description : "While I speak, any crea save (success if fighting) or -10 on Wis (Perception) and Passive Perception",
-	descriptionFull : "I weave a distracting string of words, causing creatures of my choice that I can see within range to make a Wisdom saving throw. Any creature I or my companions are fighting automatically succeeds on this save. On a failed save, a target has a -10 penalty to Wisdom (Perception) checks and Passive Perception until the spell ends."
+	description : "Any creature save (auto pass if fighting) or -10 on Wis (Perception) chks and Passive Perception",
+	descriptionFull : "You weave a distracting string of words, causing creatures of your choice that you can see within range to make a Wisdom saving throw. Any creature you or your companions are fighting automatically succeeds on this save. On a failed save, a target has a -10 penalty to Wisdom (Perception) checks and Passive Perception until the spell ends."
 });
 legacySpellRefactor("etherealness", {
 	name : "Etherealness",
@@ -15829,11 +15864,12 @@ legacySpellRefactor("etherealness", {
 	range : "Self",
 	components : "V,S",
 	duration : "8 h",
-	description : "Me or 3/SL willing crea in 10ft to Ethereal Plane for duration; able to perceive 60ft into source plane",
-	descriptionFull : "I step into the border regions of the Ethereal Plane, where it overlaps with my current plane. I remain in the Border Ethereal for the duration. During this time, I can move in any direction. If I move up or down, every foot of movement costs an extra foot. I can perceive the plane I left, which looks gray, and I can't see anything there more than 60 feet away." + "\n   " + "While on the Ethereal Plane, I can affect and be affected only by creatures, objects, and effects on that plane. Creatures that aren't on the Ethereal Plane can't perceive or interact with I unless a feature gives them the ability to do so." + "\n   " + "I ignore all objects and effects that aren't on the Ethereal Plane, allowing I to move through objects I perceive on the plane I originated from." + "\n   " + "When the spell ends, I return to the plane I left in the spot that corresponds to my space in the Border Ethereal. If I appear in an occupied space, I are shunted to the nearest unoccupied space and take Force damage equal to twice the number of feet I are moved." + "\n   " + "This spell ends instantly if I cast it while I are on the Ethereal Plane or a plane that doesn't border it, such as one of the Outer Planes." + AtHigherLevels + "I can target up to three willing creatures (including yourself) for each spell slot level above 7. The creatures must be within 10 feet of I when I cast the spell."
+	description : "Me or 3/SL willing crea in 10ft to Ethereal Plane for duration; can perceive 60ft into source plane",
+	descriptionFull : "You step into the border regions of the Ethereal Plane, where it overlaps with your current plane. You remain in the Border Ethereal for the duration. During this time, you can move in any direction. If you move up or down, every foot of movement costs an extra foot. You can perceive the plane you left, which looks gray, and you can't see anything there more than 60 feet away." + "\n   " + "While on the Ethereal Plane, you can affect and be affected only by creatures, objects, and effects on that plane. Creatures that aren't on the Ethereal Plane can't perceive or interact with you unless a feature gives them the ability to do so." + "\n   " + "You ignore all objects and effects that aren't on the Ethereal Plane, allowing you to move through objects you perceive on the plane you originated from." + "\n   " + "When the spell ends, you return to the plane you left in the spot that corresponds to your space in the Border Ethereal. If you appear in an occupied space, you are shunted to the nearest unoccupied space and take Force damage equal to twice the number of feet you are moved." + "\n   " + "This spell ends instantly if you cast it while you are on the Ethereal Plane or a plane that doesn't border it, such as one of the Outer Planes." + AtHigherLevels + "You can target up to three willing creatures (including yourself) for each spell slot level above 7. The creatures must be within 10 feet of you when you cast the spell."
 });
 legacySpellRefactor("evard's black tentacles", {
 	name : "Evard's Black Tentacles",
+	nameShort : "Evard's Black Tentacles*",
 	nameAlt : "Black Tentacles",
 	classes : ["wizard"],
 	source : [["PHB2024", 270]],
@@ -15845,9 +15881,9 @@ legacySpellRefactor("evard's black tentacles", {
 	compMaterial : "A tentacle",
 	duration : "Conc, 1 min",
 	save : "Dex",
-	description : "20-ft square now/enter/end save or Restrained \u0026 3d6 Bludg. (1/turn/crea); Str (Ath) check to escape",
-	descriptionShorter : "20-ft square now/enter/end save or restrained \u0026 3d6 Bludg.; Str (Ath) chk escape",
-	descriptionFull : "Squirming, ebony tentacles fill a 20-foot square on ground that I can see within range. For the duration, these tentacles turn the ground in that area into Difficult Terrain." + "\n   " + "Each creature in that area makes a Strength saving throw. On a failed save, it takes 3d6 Bludgeoning damage, and it has the Restrained condition until the spell ends. A creature also makes that save if it enters the area or ends it turn there. A creature makes that save only once per turn." + "\n   " + "A Restrained creature can take an action to make a Strength (Athletics) check against my spell save DC, ending the condition on itself on a success."
+	description : "20-ft vis. sq. dif. ter.; all now/enter/end save or Restrained \u0026 3d6 Bludg. (1/t/c); Str (Ath) chk to escape",
+	descriptionShorter : "20-ft sq dif. ter.; now/enter/end save or restrained \u0026 3d6 Bludg. (1/t/c); Str (Ath) chk escape",
+	descriptionFull : "Squirming, ebony tentacles fill a 20-foot square on ground that you can see within range. For the duration, these tentacles turn the ground in that area into Difficult Terrain." + "\n   " + "Each creature in that area makes a Strength saving throw. On a failed save, it takes 3d6 Bludgeoning damage, and it has the Restrained condition until the spell ends. A creature also makes that save if it enters the area or ends it turn there. A creature makes that save only once per turn." + "\n   " + "A Restrained creature can take an action to make a Strength (Athletics) check against your spell save DC, ending the condition on itself on a success."
 });
 legacySpellRefactor("expeditious retreat", {
 	name : "Expeditious Retreat",
@@ -15859,11 +15895,12 @@ legacySpellRefactor("expeditious retreat", {
 	range : "Self",
 	components : "V,S",
 	duration : "Conc, 10 min",
-	description : "I can take Dash action now, and as a bonus action for the duration",
-	descriptionFull : "I take the Dash action, and until the spell ends, I can take that action again as a Bonus Action."
+	description : "I can take the Dash action now and as a bonus action for the duration",
+	descriptionFull : "You take the Dash action, and until the spell ends, you can take that action again as a Bonus Action."
 });
 legacySpellRefactor("eyebite", {
 	name : "Eyebite",
+	nameShort : "Eyebite*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 270]],
 	level : 6,
@@ -15874,7 +15911,7 @@ legacySpellRefactor("eyebite", {
 	duration : "Conc, 1 min",
 	save : "Wis",
 	description : "1 crea in 60 ft save vs Unconscious, Frightened, or Poisoned. 1 a target another crea that hasn't saved",
-	descriptionFull : "For the duration, my eyes become an inky void. One creature of my choice within 60 feet of I that I can see must succeed on a Wisdom saving throw or be affected by one of the following effects of my choice for the duration." + "\n   " + "On each of my turns until the spell ends, I can take a Magic action to target another creature but can't target a creature again if it has succeeded on a save against this casting of the spell." + "\n   " + toUni("Asleep") + ": The target has the Unconscious condition. It wakes up if it takes any damage or if another creature takes an action to shake it awake." + "\n   " + toUni("Panicked") + ": The target has the Frightened condition. On each of its turns, the Frightened target must take the Dash action and move away from I by the safest and shortest route available. If the target moves to a space at least 60 feet away from I where it can't see I, this effect ends." + "\n   " + toUni("Sickened") + ": The target has the Poisoned condition."
+	descriptionFull : "For the duration, your eyes become an inky void. One creature of your choice within 60 feet of you that you can see must succeed on a Wisdom saving throw or be affected by one of the following effects of your choice for the duration." + "\n   " + "On each of your turns until the spell ends, you can take a Magic action to target another creature but can't target a creature again if it has succeeded on a save against this casting of the spell." + "\n   " + toUni("Asleep") + ": The target has the Unconscious condition. It wakes up if it takes any damage or if another creature takes an action to shake it awake." + "\n   " + toUni("Panicked") + ": The target has the Frightened condition. On each of its turns, the Frightened target must take the Dash action and move away from you by the safest and shortest route available. If the target moves to a space at least 60 feet away from you where it can't see you, this effect ends." + "\n   " + toUni("Sickened") + ": The target has the Poisoned condition."
 });
 legacySpellRefactor("fabricate", {
 	name : "Fabricate",
@@ -15886,8 +15923,8 @@ legacySpellRefactor("fabricate", {
 	range : "120 ft",
 	components : "V,S",
 	duration : "Instantaneous",
-	description : "Create Lg or smaller obj from raw materials (10 ft cu or 8 5ft cu); or complex obj if prof. in right tools",
-	descriptionFull : "I convert raw materials into products of the same material. For example, I can fabricate a wooden bridge from a clump of trees, a rope from a patch of hemp, or clothes from flax or wool." + "\n   " + "Choose raw materials that I can see within range. I can fabricate a Large or smaller object (contained within a 10-foot Cube or eight connected 5-foot Cubes) given a sufficient quantity of material. If I're working with metal, stone, or another mineral substance, however, the fabricated object can be no larger than Medium (contained within a 5-foot Cube). The quality of any fabricated objects is based on the quality of the raw materials." + "\n   " + "Creatures and magic items can't be created by this spell. I also can't use it to create items that require a high degree of skill—such as weapons and armor—unless I have proficiency with the type of Artisan's Tools used to craft such objects."
+	description : "Create \u2264Large object from raw materials (10 ft cu or 8 5ft cu); or complex obj if prof. in right tools",
+	descriptionFull : "You convert raw materials into products of the same material. For example, you can fabricate a wooden bridge from a clump of trees, a rope from a patch of hemp, or clothes from flax or wool." + "\n   " + "Choose raw materials that you can see within range. You can fabricate a Large or smaller object (contained within a 10-foot Cube or eight connected 5-foot Cubes) given a sufficient quantity of material. If you're working with metal, stone, or another mineral substance, however, the fabricated object can be no larger than Medium (contained within a 5-foot Cube). The quality of any fabricated objects is based on the quality of the raw materials." + "\n   " + "Creatures and magic items can't be created by this spell. You also can't use it to create items that require a high degree of skill—such as weapons and armor—unless you have proficiency with the type of Artisan's Tools used to craft such objects."
 });
 legacySpellRefactor("faerie fire", {
 	name : "Faerie Fire",
@@ -15901,7 +15938,7 @@ legacySpellRefactor("faerie fire", {
 	duration : "Conc, 1 min",
 	save : "Dex",
 	description : "20-ft cube all obj/crea save or emit 10 ft dim light and attacks have adv.; no benefit from Invisible",
-	descriptionFull : "Objects in a 20-foot Cube within range are outlined in blue, green, or violet light (my choice). Each creature in the Cube is also outlined if it fails a Dexterity saving throw. For the duration, objects and affected creatures shed Dim Light in a 10-foot radius and can't benefit from the Invisible condition." + "\n   " + "Attack rolls against an affected creature or object have Advantage if the attacker can see it."
+	descriptionFull : "Objects in a 20-foot Cube within range are outlined in blue, green, or violet light (your choice). Each creature in the Cube is also outlined if it fails a Dexterity saving throw. For the duration, objects and affected creatures shed Dim Light in a 10-foot radius and can't benefit from the Invisible condition." + "\n   " + "Attack rolls against an affected creature or object have Advantage if the attacker can see it."
 });
 legacySpellRefactor("false life", {
 	name : "False Life",
@@ -15915,7 +15952,7 @@ legacySpellRefactor("false life", {
 	compMaterial : "A drop of alcohol",
 	duration : "Instantaneous",
 	description : "I gain 2d4+4+5/SL temporary hit points.",
-	descriptionFull : "I gain 2d4 + 4 Temporary Hit Points." + AtHigherLevels + "I gain 5 additional Temporary Hit Points for each spell slot level above 1."
+	descriptionFull : "You gain 2d4 + 4 Temporary Hit Points." + AtHigherLevels + "You gain 5 additional Temporary Hit Points for each spell slot level above 1."
 });
 legacySpellRefactor("fear", {
 	name : "Fear",
@@ -15929,8 +15966,8 @@ legacySpellRefactor("fear", {
 	compMaterial : "A white feather",
 	duration : "Conc, 1 min",
 	save : "Wis",
-	description : "All crea save or drop held items and Frightened; dash away; extra save at EoT if not in line of sight",
-	descriptionFull : "Each creature in a 30-foot Cone must succeed on a Wisdom saving throw or drop whatever it is holding and have the Frightened condition for the duration." + "\n   " + "A Frightened creature takes the Dash action and moves away from I by the safest route on each of its turns unless there is nowhere to move. If the creature ends its turn in a space where it doesn't have line of sight to I, the creature makes a Wisdom saving throw. On a successful save, the spell ends on that creature."
+	description : "All crea save or drop held items and Frightened; Dash away; extra save at EoT if no line of sight",
+	descriptionFull : "Each creature in a 30-foot Cone must succeed on a Wisdom saving throw or drop whatever it is holding and have the Frightened condition for the duration." + "\n   " + "A Frightened creature takes the Dash action and moves away from you by the safest route on each of its turns unless there is nowhere to move. If the creature ends its turn in a space where it doesn't have line of sight to you, the creature makes a Wisdom saving throw. On a successful save, the spell ends on that creature."
 });
 legacySpellRefactor("feather fall", {
 	name : "Feather Fall",
@@ -15939,13 +15976,13 @@ legacySpellRefactor("feather fall", {
 	level : 1,
 	school : "Trans",
 	time : "1 rea",
-	timeFull : "Reaction, which I take when I or a creature I can see within 60 feet of I falls",
+	timeFull : "Reaction, which you take when you or a creature you can see within 60 feet of you falls",
 	range : "60 ft",
 	components : "V,M",
 	compMaterial : "A small feather or piece of down",
 	duration : "1 min",
-	description : "5 creatures descend only 60 ft/rnd for duration or until landed, taking no falling damage",
-	descriptionFull : "Reaction - Choose up to five falling creatures within range. A falling creature's rate of descent slows to 60 feet per round until the spell ends. If a creature lands before the spell ends, the creature takes no damage from the fall, and the spell ends for that creature."
+	description : "5 creatures descend only 60 ft/rnd for duration or until land, taking no falling damage",
+	descriptionFull : "Choose up to five falling creatures within range. A falling creature's rate of descent slows to 60 feet per round until the spell ends. If a creature lands before the spell ends, the creature takes no damage from the fall, and the spell ends for that creature."
 });
 legacySpellRefactor("feign death", {
 	name : "Feign Death",
@@ -15960,7 +15997,7 @@ legacySpellRefactor("feign death", {
 	compMaterial : "A pinch of graveyard dirt",
 	duration : "1 h",
 	description : "Willing crea looks dead: Blinded, Incapacitated, resist. all dmg but Psychic, speed 0, immune Poisoned",
-	descriptionFull : "I touch a willing creature and put it into a cataleptic state that is indistinguishable from death." + "\n   " + "For the duration, the target appears dead to outward inspection and to spells used to determine the target's status. The target has the Blinded and Incapacitated conditions, and its Speed is 0." + "\n   " + "The target also has Resistance to all damage except Psychic damage, and it has Immunity to the Poisoned condition."
+	descriptionFull : "You touch a willing creature and put it into a cataleptic state that is indistinguishable from death." + "\n   " + "For the duration, the target appears dead to outward inspection and to spells used to determine the target's status. The target has the Blinded and Incapacitated conditions, and its Speed is 0." + "\n   " + "The target also has Resistance to all damage except Psychic damage, and it has Immunity to the Poisoned condition."
 });
 legacySpellRefactor("find familiar", {
 	name : "Find Familiar",
@@ -15975,7 +16012,7 @@ legacySpellRefactor("find familiar", {
 	compMaterial : "burning incense worth 10+ gp, which the spell consumes",
 	duration : "Instantaneous",
 	description : "Gain the services of a familiar; bns see through its eyes; it can deliver touch spells; see B (10gp cons.)",
-	descriptionFull : "I gain the service of a familiar, a spirit that takes an animal form I choose: Bat, Cat, Frog, Hawk, Lizard, Octopus, Owl, Rat, Raven, Spider, Weasel, or another Beast that has a Challenge Rating of 0. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form (see appendix B), though it is a Celestial, Fey, or Fiend (my choice) instead of a Beast. my familiar acts independently of I, but it obeys my commands." + "\n   " + "Telepathic Connection. While my familiar is within 100 feet of I, I can communicate with it telepathically. Additionally, as a Bonus Action, I can see through the familiar's eyes and hear what it hears until the start of my next turn, gaining the benefits of any special senses it has." + "\n   " + "Finally, when I cast a spell with a range of touch, my familiar can deliver the touch. my familiar must be within 100 feet of I, and it must take a Reaction to deliver the touch when I cast the spell." + "\n   " + "Combat. The familiar is an ally to I and my allies. It rolls its own Initiative and acts on its own turn. A familiar can't attack, but it can take other actions as normal." + "\n   " + "Disappearance of the Familiar. When the familiar drops to 0 Hit Points, it disappears. It reappears after I cast this spell again. As a Magic action, I can temporarily dismiss the familiar to a pocket dimension. Alternatively, I can dismiss it forever. As a Magic action while it is temporarily dismissed, I can cause it to reappear in an unoccupied space within 30 feet of I. Whenever the familiar drops to 0 Hit Points or disappears into the pocket dimension, it leaves behind in its space anything it was wearing or carrying." + "\n   " + "One Familiar Only. I can't have more than one familiar at a time. If I cast this spell while I have a familiar, I instead cause it to adopt a new eligible form."
+	descriptionFull : "You gain the service of a familiar, a spirit that takes an animal form you choose: Bat, Cat, Frog, Hawk, Lizard, Octopus, Owl, Rat, Raven, Spider, Weasel, or another Beast that has a Challenge Rating of 0. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form (see appendix B), though it is a Celestial, Fey, or Fiend (your choice) instead of a Beast. Your familiar acts independently of you, but it obeys your commands." + "\n   " + "Telepathic Connection. While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as a Bonus Action, you can see through the familiar's eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses it has." + "\n   " + "Finally, when you cast a spell with a range of touch, your familiar can deliver the touch. Your familiar must be within 100 feet of you, and it must take a Reaction to deliver the touch when you cast the spell." + "\n   " + "Combat. The familiar is an ally to you and your allies. It rolls its own Initiative and acts on its own turn. A familiar can't attack, but it can take other actions as normal." + "\n   " + "Disappearance of the Familiar. When the familiar drops to 0 Hit Points, it disappears. It reappears after you cast this spell again. As a Magic action, you can temporarily dismiss the familiar to a pocket dimension. Alternatively, you can dismiss it forever. As a Magic action while it is temporarily dismissed, you can cause it to reappear in an unoccupied space within 30 feet of you. Whenever the familiar drops to 0 Hit Points or disappears into the pocket dimension, it leaves behind in its space anything it was wearing or carrying." + "\n   " + "One Familiar Only. You can't have more than one familiar at a time. If you cast this spell while you have a familiar, you instead cause it to adopt a new eligible form."
 });
 legacySpellRefactor("find steed", {
 	name : "Find Steed",
@@ -15987,8 +16024,8 @@ legacySpellRefactor("find steed", {
 	range : "30 ft",
 	components : "V,S",
 	duration : "Instantaneous",
-	description : "Gain otherworldly steed; telepathic with me; share initiative \u0026 healing spells; controlled if mount; see B",
-	descriptionFull : "I summon an otherworldly being that appears as a loyal steed in an unoccupied space of my choice within range. This creature uses the Otherworldly Steed stat block. If I already have a steed from this spell, the steed is replaced by the new one." + "\n   " + "The steed resembles a Large, rideable animal of my choice, such as a horse, a camel, a dire wolf, or an elk. Whenever I cast the spell, choose the steed's creature type — Celestial, Fey, or Fiend — which determines certain traits in the stat block." + "\n   " + "Combat. The steed is an ally to I and my allies. In combat, it shares my Initiative count, and it functions as a controlled mount while I ride it (as defined in the rules on mounted combat). If I have the Incapacitated condition, the steed takes its turn immediately after yours and acts independently, focusing on protecting I." + "\n   " + "Disappearance of the Steed. The steed disappears if it drops to 0 Hit Points or if I die. When it disappears, it leaves behind anything it was wearing or carrying, if I cast this spell again, I decide whether I summon the steed that disappeared or a different one." + "\n   " + "Use the spell slot's level for the spell's level in the stat block."
+	description : "Gain otherworldly steed; telepathic bond; share initiative \u0026 healing spells; controlled if mount; see B",
+	descriptionFull : "You summon an otherworldly being that appears as a loyal steed in an unoccupied space of your choice within range. This creature uses the Otherworldly Steed stat block. If you already have a steed from this spell, the steed is replaced by the new one." + "\n   " + "The steed resembles a Large, rideable animal of your choice, such as a horse, a camel, a dire wolf, or an elk. Whenever you cast the spell, choose the steed's creature type — Celestial, Fey, or Fiend — which determines certain traits in the stat block." + "\n   " + "Combat. The steed is an ally to you and your allies. In combat, it shares your Initiative count, and it functions as a controlled mount while you ride it (as defined in the rules on mounted combat). If you have the Incapacitated condition, the steed takes its turn immediately after yours and acts independently, focusing on protecting you." + "\n   " + "Disappearance of the Steed. The steed disappears if it drops to 0 Hit Points or if you die. When it disappears, it leaves behind anything it was wearing or carrying, if you cast this spell again, you decide whether you summon the steed that disappeared or a different one." + "\n   " + "Use the spell slot's level for the spell's level in the stat block."
 });
 legacySpellRefactor("find the path", {
 	name : "Find the Path",
@@ -16001,8 +16038,8 @@ legacySpellRefactor("find the path", {
 	components : "V,S,M\u0192",
 	compMaterial : "A set of divination tools - such as cards or runes - worth 100+ gp",
 	duration : "Conc, 1 day",
-	description : "I know the direction, distance and shortest route to a familiar location on the same plane (100gp)",
-	descriptionFull : "I magically sense the most direct physical route to a location I name. I must be familiar with the location, and the spell fails if I name a destination on another plane of existence, a moving destination (such as a mobile fortress), or an unspecific destination (such as \"a green dragon's lair\")." + "\n   " + "For the duration, as long as I are on the same plane of existence as the destination, I know how far it is and in what direction it lies. Whenever I face a choice of paths along the way there, I know which path is the most direct."
+	description : "I know the direction, distance \u0026 shortest route to familiar immobile location on same plane (100gp)",
+	descriptionFull : "You magically sense the most direct physical route to a location you name. You must be familiar with the location, and the spell fails if you name a destination on another plane of existence, a moving destination (such as a mobile fortress), or an unspecific destination (such as \"a green dragon's lair\")." + "\n   " + "For the duration, as long as you are on the same plane of existence as the destination, you know how far it is and in what direction it lies. Whenever you face a choice of paths along the way there, you know which path is the most direct."
 });
 legacySpellRefactor("find traps", {
 	name : "Find Traps",
@@ -16015,10 +16052,11 @@ legacySpellRefactor("find traps", {
 	components : "V,S",
 	duration : "Instantaneous",
 	description : "Sense presence of any trap in line of sight; not exact location, but general nature of trap",
-	descriptionFull : "I sense any trap within range that is within line of sight. A trap, for the purpose of this spell, includes any object or mechanism that was created to cause damage or other danger. Thus, the spell would sense the Alarm or Glyph of Warding spell or a mechanical pit trap, but it wouldn't reveal a natural weakness in the floor, an unstable ceiling, or a hidden sinkhole." + "\n   " + "This spell reveals that a trap is present but not its location. I do learn the general nature of the danger posed by a trap I sense."
+	descriptionFull : "You sense any trap within range that is within line of sight. A trap, for the purpose of this spell, includes any object or mechanism that was created to cause damage or other danger. Thus, the spell would sense the Alarm or Glyph of Warding spell or a mechanical pit trap, but it wouldn't reveal a natural weakness in the floor, an unstable ceiling, or a hidden sinkhole." + "\n   " + "This spell reveals that a trap is present but not its location. You do learn the general nature of the danger posed by a trap you sense."
 });
 legacySpellRefactor("finger of death", {
 	name : "Finger of Death",
+	nameShort : "Finger of Death*",
 	classes : ["sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 273]],
 	level : 7,
@@ -16029,7 +16067,7 @@ legacySpellRefactor("finger of death", {
 	duration : "Instantaneous",
 	save : "Con",
 	description : "1 crea 7d8+30 Necrotic dmg; save halves; humanoid killed becomes zombie under my command",
-	descriptionFull : "I unleash negative energy toward a creature I can see within range. The target makes a Constitution saving throw, taking 7d8 + 30 Necrotic damage on a failed save or half as much damage on a successful one." + "\n   " + "A Humanoid killed by this spell rises at the start of my next turn as a Zombie (see appendix B) that follows my verbal orders."
+	descriptionFull : "You unleash negative energy toward a creature you can see within range. The target makes a Constitution saving throw, taking 7d8 + 30 Necrotic damage on a failed save or half as much damage on a successful one." + "\n   " + "A Humanoid killed by this spell rises at the start of your next turn as a Zombie (see appendix B) that follows your verbal orders."
 });
 legacySpellRefactor("fireball", {
 	name : "Fireball",
@@ -16044,7 +16082,7 @@ legacySpellRefactor("fireball", {
 	duration : "Instantaneous",
 	save : "Dex",
 	description : "20-ft rad all crea 8d6+1d6/SL Fire dmg; save halves; unattended flammable objects ignite",
-	descriptionFull : "A bright streak flashes from I to a point I choose within range and then blossoms with a low roar into a fiery explosion. Each creature in a 20-foot-radius Sphere centered on that point makes a Dexterity saving throw, taking 8d6 Fire damage on a failed save or half as much damage on a successful one." + "\n   " + "Flammable objects in the area that aren't being worn or carried start burning." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 3."
+	descriptionFull : "A bright streak flashes from you to a point you choose within range and then blossoms with a low roar into a fiery explosion. Each creature in a 20-foot-radius Sphere centered on that point makes a Dexterity saving throw, taking 8d6 Fire damage on a failed save or half as much damage on a successful one." + "\n   " + "Flammable objects in the area that aren't being worn or carried start burning." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 3."
 });
 legacySpellRefactor("fire bolt", {
 	name : "Fire Bolt",
@@ -16058,7 +16096,7 @@ legacySpellRefactor("fire bolt", {
 	duration : "Instantaneous",
 	description : "Spell attack for 1d10 Fire dmg; unattended flammable objects ignite; +1d10 at CL 5, 11, and 17",
 	descriptionCantripDie : "Spell attack for `CD`d10 Fire dmg; unattended flammable objects ignite",
-	descriptionFull : "I hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell starts burning if it isn't being worn or carried." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d10 when I reach levels 5 (2d10), 11 (3d10), and 17 (4d10)."
+	descriptionFull : "You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell starts burning if it isn't being worn or carried." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d10 when you reach levels 5 (2d10), 11 (3d10), and 17 (4d10)."
 });
 legacySpellRefactor("fire shield", {
 	name : "Fire Shield",
@@ -16071,9 +16109,9 @@ legacySpellRefactor("fire shield", {
 	components : "V,S,M",
 	compMaterial : "A bit of phosphorous or a firefly",
 	duration : "10 min",
-	description : "Fire or Cold resist; deals 2d8 of other dmg type to melee atkers in 5ft; 10-ft rad bright/10-ft dim light",
+	description : "Resist Fire or Cold; 2d8 of other dmg type to melee atkers if hit in 5ft; 10-ft rad bright/10-ft dim light",
 	descriptionShorter : "Fiery shield; Fire or Cold resist; 2d8 of other dmg to melee atkers in 5ft; 10ft bright/10ft dim",
-	descriptionFull : "Wispy flames wreathe my body for the duration, shedding Bright Light in a 10-foot radius and Dim Light for an additional 10 feet." + "\n   " + "The flames provide I with a warm shield or a chill shield, as I choose. The warm shield grants I Resistance to Cold damage, and the chill shield grants I Resistance to Fire damage." + "\n   " + "In addition, whenever a creature within 5 feet of I hits I with a melee attack roll, the shield erupts with flame. The attacker takes 2d8 Fire damage from a warm shield, or 2d8 Cold damage from a cold shield.",
+	descriptionFull : "Wispy flames wreathe your body for the duration, shedding Bright Light in a 10-foot radius and Dim Light for an additional 10 feet." + "\n   " + "The flames provide you with a warm shield or a chill shield, as you choose. The warm shield grants you Resistance to Cold damage, and the chill shield grants you Resistance to Fire damage." + "\n   " + "In addition, whenever a creature within 5 feet of you hits you with a melee attack roll, the shield erupts with flame. The attacker takes 2d8 Fire damage from a warm shield, or 2d8 Cold damage from a cold shield.",
 	dynamicDamageBonus : {
 		multipleDmgTypes : {
 			dmgTypes : ["cold", "fire"],
@@ -16093,7 +16131,7 @@ legacySpellRefactor("fire storm", {
 	duration : "Instantaneous",
 	save : "Dex",
 	description : "10 connected 10-ft cubes all crea 7d10 Fire dmg; save halves; unattended flammable objects ignite",
-	descriptionFull : "A storm of fire appears within range. The area of the storm consists of up to ten 10-foot Cubes, which I arrange as I like. Each Cube must be contiguous with at least one other Cube. Each creature in the area makes a Dexterity saving throw, taking 7d10 Fire damage on a failed save or half as much damage on a successful one." + "\n   " + "Flammable objects in the area that aren't being worn or carried start burning."
+	descriptionFull : "A storm of fire appears within range. The area of the storm consists of up to ten 10-foot Cubes, which you arrange as you like. Each Cube must be contiguous with at least one other Cube. Each creature in the area makes a Dexterity saving throw, taking 7d10 Fire damage on a failed save or half as much damage on a successful one." + "\n   " + "Flammable objects in the area that aren't being worn or carried start burning."
 });
 legacySpellRefactor("flame blade", {
 	name : "Flame Blade",
@@ -16106,9 +16144,9 @@ legacySpellRefactor("flame blade", {
 	components : "V,S,M",
 	compMaterial : "Leaf of sumac",
 	duration : "Conc, 10 min",
-	description : "Summon fiery blade; 1 a melee spell atk for 3d6+1d6/2SL+mod Fire; 10ft rad bright/10ft dim light",
+	description : "Summon blade; 1 a melee spell atk for 3d6+1d6/2SL+spell mod Fire; 10ft rad bright/10ft dim light",
 	descriptionShorter : "Summon fiery blade; 1 a melee spell atk 3d6+1d6/2SL+mod Fire; 10ft bright/10ft dim",
-	descriptionFull : "I evoke a fiery blade in my free hand. The blade is similar in size and shape to a scimitar, and it lasts for the duration. If I let go of the blade, it disappears, but I can evoke it again as a Bonus Action." + "\n   " + "As a Magic action, I can make a melee spell attack with the fiery blade. On a hit, the target takes Fire damage equal to 3d6 plus my spellcasting ability modifier." + "\n   " + "The flaming blade sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 2."
+	descriptionFull : "You evoke a fiery blade in your free hand. The blade is similar in size and shape to a scimitar, and it lasts for the duration. If you let go of the blade, it disappears, but you can evoke it again as a Bonus Action." + "\n   " + "As a Magic action, you can make a melee spell attack with the fiery blade. On a hit, the target takes Fire damage equal to 3d6 plus your spellcasting ability modifier." + "\n   " + "The flaming blade sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 2."
 });
 legacySpellRefactor("flame strike", {
 	name : "Flame Strike",
@@ -16139,12 +16177,13 @@ legacySpellRefactor("flaming sphere", {
 	compMaterial : "A ball of wax",
 	duration : "Conc, 1 min",
 	save : "Dex",
-	description : "5ft dia flaming sphere; 20ft bright/20ft dim; bns move 30ft; if hit/end in 5ft 2d6+1d6/SL Fire; save 1/2",
-	descriptionShorter : "5ft dia flaming sphere; bns move 30 ft; if hit/end in 5ft 2d6+1d6/SL Fire; save 1/2",
-	descriptionFull : "I create a 5-foot-diameter sphere of fire in an unoccupied space on the ground within range. It lasts for the duration. Any creature that ends its turn within 5 feet of the sphere makes a Dexterity saving throw, taking 2d6 Fire damage on a failed save or half as much damage on a successful one." + "\n   " + "As a Bonus Action, I can move the sphere up to 30 feet, rolling it along the ground. If I move the sphere into a creature's space, that creature makes the save against the sphere, and the sphere stops moving for the turn." + "\n   " + "When I move the sphere, I can direct it over barriers up to 5 feet tall and jump it across pits up to 10 feet wide. Flammable objects that aren't being worn or carried start burning if touched by the sphere, and it sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 2."
+	description : "5ft dia fiery sphere; 20ft bright/20ft dim; bns move 30ft; if crea hit/end in 5ft 2d6+1d6/SL Fire; save 1/2",
+	descriptionShorter : "5ft dia fiery sphere; bns move 30 ft; if hit/end in 5ft 2d6+1d6/SL Fire; save 1/2",
+	descriptionFull : "You create a 5-foot-diameter sphere of fire in an unoccupied space on the ground within range. It lasts for the duration. Any creature that ends its turn within 5 feet of the sphere makes a Dexterity saving throw, taking 2d6 Fire damage on a failed save or half as much damage on a successful one." + "\n   " + "As a Bonus Action, you can move the sphere up to 30 feet, rolling it along the ground. If you move the sphere into a creature's space, that creature makes the save against the sphere, and the sphere stops moving for the turn." + "\n   " + "When you move the sphere, you can direct it over barriers up to 5 feet tall and jump it across pits up to 10 feet wide. Flammable objects that aren't being worn or carried start burning if touched by the sphere, and it sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 2."
 });
 legacySpellRefactor("flesh to stone", {
 	name : "Flesh to Stone",
+	nameShort : "Flesh to Stone*",
 	classes : ["druid", "sorcerer", "wizard"],
 	source : [["PHB2024", 275]],
 	level : 6,
@@ -16156,7 +16195,7 @@ legacySpellRefactor("flesh to stone", {
 	duration : "Conc, 1 min",
 	save : "Con",
 	description : "1 crea save or Restrained; EoT save until 3 fails: Petrified, or 3 successes: free; if full duration perm.",
-	descriptionFull : "I attempt to turn one creature that I can see within range into stone. The target makes a Constitution saving throw. On a failed save, it has the Restrained condition for the duration. On a successful save, its Speed is 0 until the start of my next turn. Constructs automatically succeed on the save." + "\n   " + "A Restrained target makes another Constitution saving throw at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and has the Petrified condition for the duration. The successes and failures needn't be consecutive; keep track of both until the target collects three of a kind." + "\n   " + "If I maintain my Concentration on this spell for the entire possible duration, the target is Petrified until the condition is ended by Greater Restoration or similar magic."
+	descriptionFull : "You attempt to turn one creature that you can see within range into stone. The target makes a Constitution saving throw. On a failed save, it has the Restrained condition for the duration. On a successful save, its Speed is 0 until the start of your next turn. Constructs automatically succeed on the save." + "\n   " + "A Restrained target makes another Constitution saving throw at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and has the Petrified condition for the duration. The successes and failures needn't be consecutive; keep track of both until the target collects three of a kind." + "\n   " + "If you maintain your Concentration on this spell for the entire possible duration, the target is Petrified until the condition is ended by Greater Restoration or similar magic."
 });
 legacySpellRefactor("fly", {
 	name : "Fly",
@@ -16170,7 +16209,7 @@ legacySpellRefactor("fly", {
 	compMaterial : "A feather",
 	duration : "Conc, 10 min",
 	description : "1+1/SL willing creatures gain 60 feet fly speed and hover",
-	descriptionFull : "I touch a willing creature. For the duration, the target gains a Fly Speed of 60 feet and can hover. When the spell ends, the target falls if it is still aloft unless it can stop the fall." + AtHigherLevels + "I can target one additional creature for each spell slot level above 3."
+	descriptionFull : "You touch a willing creature. For the duration, the target gains a Fly Speed of 60 feet and can hover. When the spell ends, the target falls if it is still aloft unless it can stop the fall." + AtHigherLevels + "You can target one additional creature for each spell slot level above 3."
 });
 legacySpellRefactor("fog cloud", {
 	name : "Fog Cloud",
@@ -16182,8 +16221,8 @@ legacySpellRefactor("fog cloud", {
 	range : "120 ft",
 	components : "V,S",
 	duration : "Conc, 1 h",
-	description : "20ft + 20ft/SL radius fog that heavily obscures; strong wind disperses it",
-	descriptionFull : "I create a 20-foot-radius Sphere of fog centered on a point within range. The Sphere is Heavily Obscured. It lasts for the duration or until a strong wind (such as one created by Gust of Wind) disperses it." + AtHigherLevels + "The fog's radius increases by 20 feet for each spell slot level above 1."
+	description : "20ft + 20ft/SL radius fog that heavily obscures area; dispersed by strong wind",
+	descriptionFull : "You create a 20-foot-radius Sphere of fog centered on a point within range. The Sphere is Heavily Obscured. It lasts for the duration or until a strong wind (such as one created by Gust of Wind) disperses it." + AtHigherLevels + "The fog's radius increases by 20 feet for each spell slot level above 1."
 });
 legacySpellRefactor("forbiddance", {
 	name : "Forbiddance",
@@ -16201,7 +16240,7 @@ legacySpellRefactor("forbiddance", {
 	descriptionMetric : "3,7k m2 9-m high no extraplanar travel; 1 crea type 5d10 Radiant or Necrotic enters/ends turn (1000gp)",
 	descriptionShorter : "40k sq ft 30ft high no planar travel; 1 crea type 5d10 Radiant/Necro. enters/end (1k gp)",
 	descriptionShorterMetric : "3,6k m2 9-m high no planar travel; 1 crea type 5d10 Radiant/Necro. enters/end (1k gp)",
-	descriptionFull : "I create a ward against magical travel that protects up to 40,000 square feet of floor space to a height of 30 feet above the floor. For the duration, creatures can't teleport into the area or use portals, such as those created by the gate spell, to enter the area. The spell proofs the area against planar travel, and therefore prevents creatures from accessing the area by way of the Astral Plane, the Ethereal Plane, the Feywild, the Shadowfell, or the Plane Shift spell." + "\n   " + "In addition, the spell damages types of creatures that I choose when I cast it. Choose one or more of the following: Aberrations, Celestials, Elementals, Fey, Fiends, and Undead. When a creature of a chosen type enters the spell's area for the first time on a turn or ends its turn there, the creature takes 5d10 Radiant or Necrotic damage (my choice when I cast this spell)." + "\n   " + "I can designate a password when I cast the spell. A creature that speaks the password as it enters the area takes no damage from the spell." + "\n   " + "The spell's area can't overlap with the area of another forbiddance spell. If I cast forbiddance every day for 30 days in the same location, the spell lasts until it is dispelled, and the material components are consumed on the last casting.",
+	descriptionFull : "You create a ward against magical travel that protects up to 40,000 square feet of floor space to a height of 30 feet above the floor. For the duration, creatures can't teleport into the area or use portals, such as those created by the gate spell, to enter the area. The spell proofs the area against planar travel, and therefore prevents creatures from accessing the area by way of the Astral Plane, the Ethereal Plane, the Feywild, the Shadowfell, or the Plane Shift spell." + "\n   " + "In addition, the spell damages types of creatures that you choose when you cast it. Choose one or more of the following: Aberrations, Celestials, Elementals, Fey, Fiends, and Undead. When a creature of a chosen type enters the spell's area for the first time on a turn or ends its turn there, the creature takes 5d10 Radiant or Necrotic damage (your choice when you cast this spell)." + "\n   " + "You can designate a password when you cast the spell. A creature that speaks the password as it enters the area takes no damage from the spell." + "\n   " + "The spell's area can't overlap with the area of another forbiddance spell. If you cast forbiddance every day for 30 days in the same location, the spell lasts until it is dispelled, and the material components are consumed on the last casting.",
 	dynamicDamageBonus : {
 		multipleDmgTypes : {
 			dmgTypes : ["radiant", "necrotic"],
@@ -16219,10 +16258,10 @@ legacySpellRefactor("forcecage", {
 	range : "100 ft",
 	components : "V,S,M\u0192",
 	compMaterial : "Ruby dust worth 1,500+ gp, which the spell consumes",
-	duration : "Conc. 1 h",
+	duration : "Conc, 1 h",
 	save : "Cha",
 	description : "20-ft cu cage or 10-ft cu solid box; blocks spells; teleport or extraplanar travel in/out if save (1500gp)",
-	descriptionFull : "An immobile, invisible, cube-shaped prison composed of magical force springs into existence around an area I choose within range. The prison can be a cage or a solid box, as I choose." + "\n   " + "A prison in the shape of a cage can be up to 20 feet on a side and is made from 1/2-inch diameter bars spaced 1/2 inch apart." + "\n   " + "A prison in the shape of a box can be up to 10 feet on a side, creating a solid barrier that prevents any matter from passing through it and blocking any spells cast into or out from the area." + "\n   " + "When I cast the spell, any creature that is completely inside the cage's area is trapped. Creatures only partially within the area, or those too large to fit inside it, are pushed away from the center of the area until they are completely outside it." + "\n   " + "A creature inside the cage can't leave it by nonmagical means. If the creature tries to use teleportation or interplanar travel to leave, it must first make a Charisma saving throw. On a successful save, the creature can use that magic to exit the cage. On a failed save, the creature doesn't exit the cage and wastes the spell or effect. The cage also extends into the Ethereal Plane, blocking ethereal travel." + "\n   " + "This spell can't be dispelled by dispel magic."
+	descriptionFull : "An immobile, invisible, cube-shaped prison composed of magical force springs into existence around an area you choose within range. The prison can be a cage or a solid box, as you choose." + "\n   " + "A prison in the shape of a cage can be up to 20 feet on a side and is made from 1/2-inch diameter bars spaced 1/2 inch apart." + "\n   " + "A prison in the shape of a box can be up to 10 feet on a side, creating a solid barrier that prevents any matter from passing through it and blocking any spells cast into or out from the area." + "\n   " + "When you cast the spell, any creature that is completely inside the cage's area is trapped. Creatures only partially within the area, or those too large to fit inside it, are pushed away from the center of the area until they are completely outside it." + "\n   " + "A creature inside the cage can't leave it by nonmagical means. If the creature tries to use teleportation or interplanar travel to leave, it must first make a Charisma saving throw. On a successful save, the creature can use that magic to exit the cage. On a failed save, the creature doesn't exit the cage and wastes the spell or effect. The cage also extends into the Ethereal Plane, blocking ethereal travel." + "\n   " + "This spell can't be dispelled by dispel magic."
 });
 legacySpellRefactor("foresight", {
 	name : "Foresight",
@@ -16236,7 +16275,7 @@ legacySpellRefactor("foresight", {
 	compMaterial : "A hummingbird feather",
 	duration : "8 h",
 	description : "1 willing creature adv. on attacks, checks and saves; attackers dis. vs. them; ends if cast again",
-	descriptionFull : "I touch a willing creature and bestow a limited ability to see into the immediate future. For the duration, the target has Advantage on d20 Tests, and other creatures have Disadvantage on attack rolls against it. The spell ends early if I cast it again."
+	descriptionFull : "You touch a willing creature and bestow a limited ability to see into the immediate future. For the duration, the target has Advantage on d20 Tests, and other creatures have Disadvantage on attack rolls against it. The spell ends early if you cast it again."
 });
 legacySpellRefactor("fount of moonlight", {
 	name : "Fount of Moonlight",
@@ -16248,8 +16287,9 @@ legacySpellRefactor("fount of moonlight", {
 	range : "Self",
 	components : "V,S",
 	duration : "Conc, 10 mins",
-	description : "Emit 20/20 bright/dim; resist Rad.; melee atks+2d6 Rad.; rea if dmg, crea save or Blind to my next EoT",
-	descriptionFull : "A cool light wreathes my body for the duration, emitting Bright Light in a 20-foot radius and Dim Light for an additional 20 feet." + "\n   " + "Until the spell ends, I have Resistance to Radiant damage, and my melee attacks deal and extra 2d6 Radiant damage on a hit." + "\n   " + "In addition, immediately after I take damage from a creature I can see within 60 feet of yourself, I can take a Reaction to force the creature to make a Constitution saving throw. On a failed save, the creature has the Blinded condition until the end of my turn."
+	save : "Con",
+	description : "20/20 light; resist Rad.; melee atk +2d6 Rad.; 60ft rea if vis. crea dmgs me, save or Blind to my next EoT",
+	descriptionFull : "A cool light wreathes your body for the duration, emitting Bright Light in a 20-foot radius and Dim Light for an additional 20 feet." + "\n   " + "Until the spell ends, you have Resistance to Radiant damage, and your melee attacks deal and extra 2d6 Radiant damage on a hit." + "\n   " + "In addition, immediately after you take damage from a creature you can see within 60 feet of yourself, you can take a Reaction to force the creature to make a Constitution saving throw. On a failed save, the creature has the Blinded condition until the end of your turn."
 });
 legacySpellRefactor("freedom of movement", {
 	name : "Freedom of Movement",
@@ -16263,10 +16303,11 @@ legacySpellRefactor("freedom of movement", {
 	compMaterial : "A leather strap",
 	duration : "1 h",
 	description : "1+1/SL crea; swim spd; magic can't lower spd, paralyze, restrain; 5ft to leave nonmagic restraints",
-	descriptionFull : "I touch a willing creature. For the duration, the target's movement is unaffected by Difficult Terrain, and spells and other magical effects can neither reduce the target's speed nor cause the target to have the Paralyzed or Restrained conditions. The target also has a Swim Speed equal to its Speed." + "\n   " + "In addition, the target can spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature imposing the Grappled condition on it." + AtHigherLevels + "I can target one additional creature for each spell slot level above 4."
+	descriptionFull : "You touch a willing creature. For the duration, the target's movement is unaffected by Difficult Terrain, and spells and other magical effects can neither reduce the target's speed nor cause the target to have the Paralyzed or Restrained conditions. The target also has a Swim Speed equal to its Speed." + "\n   " + "In addition, the target can spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature imposing the Grappled condition on it." + AtHigherLevels + "You can target one additional creature for each spell slot level above 4."
 });
 legacySpellRefactor("friends", {
 	name : "Friends",
+	nameShort : "Friends*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 277]],
 	level : 0,
@@ -16276,8 +16317,8 @@ legacySpellRefactor("friends", {
 	components : "S,M",
 	compMaterial : "some makeup",
 	duration : "Conc, 1 min",
-	description : "1 non-hostile humanoid save or Charmed (once/day); ends if dmged, I atk, dmg, force save; knows after",
-	descriptionFull : "I magically emanate a sense of friendship toward one creature I can see within range. The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The target succeeds automatically if it isn't a Humanoid, if I're fighting it, or if I have cast this spell on it within the past 24 hours." + "\n   " + "The spell ends early if the target takes damage or if I make an attack roll, deal damage, or force anyone to make a saving throw. When the spell ends, the target knows it was Charmed by I."
+	description : "1 non-hostile humanoid save or Charmed (once/day); ends if dmged/I atk, dmg, force save; knows after",
+	descriptionFull : "You magically emanate a sense of friendship toward one creature you can see within range. The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The target succeeds automatically if it isn't a Humanoid, if you're fighting it, or if you have cast this spell on it within the past 24 hours." + "\n   " + "The spell ends early if the target takes damage or if you make an attack roll, deal damage, or force anyone to make a saving throw. When the spell ends, the target knows it was Charmed by you."
 });
 legacySpellRefactor("gaseous form", {
 	name : "Gaseous Form",
@@ -16291,10 +16332,11 @@ legacySpellRefactor("gaseous form", {
 	compMaterial : "A bit of gauze",
 	duration : "Conc, 1 h",
 	description : "1+1/SL willing crea into mist; fly 10ft, resist. physical dmg, adv. on Str/Dex/Con saves; 1 a/0 hp revert",
-	descriptionFull : "A willing creature I touch shape-shifts, along with everything it's wearing and carrying, into a misty cloud for the duration. The spell ends on the target if it drops to 0 Hit Points or if it takes a Magic action to end the spell on itself." + "\n   " + "While in this form, the target's only method of movement is a Fly Speed of 10 feet, and it can hover. The target can enter and occupy the space of another creature. The target has Resistance to Bludgeoning, Piercing, and Slashing damage; it has Immunity to the Prone condition; and it has Advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through narrow openings, but it treats liquids as though they were solid surfaces." + "\n   " + "The target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. Finally, the target can't attack or cast spells." + AtHigherLevels + "I can target one additional creature for each spell slot level above 3."
+	descriptionFull : "A willing creature you touch shape-shifts, along with everything it's wearing and carrying, into a misty cloud for the duration. The spell ends on the target if it drops to 0 Hit Points or if it takes a Magic action to end the spell on itself." + "\n   " + "While in this form, the target's only method of movement is a Fly Speed of 10 feet, and it can hover. The target can enter and occupy the space of another creature. The target has Resistance to Bludgeoning, Piercing, and Slashing damage; it has Immunity to the Prone condition; and it has Advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through narrow openings, but it treats liquids as though they were solid surfaces." + "\n   " + "The target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. Finally, the target can't attack or cast spells." + AtHigherLevels + "You can target one additional creature for each spell slot level above 3."
 });
 legacySpellRefactor("gate", {
 	name : "Gate",
+	nameShort : "Gate*",
 	classes : ["cleric", "sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 277]],
 	level : 9,
@@ -16304,11 +16346,12 @@ legacySpellRefactor("gate", {
 	components : "V,S,M\u0192",
 	compMaterial : "A diamond worth 5,000+ gp",
 	duration : "Conc, 1 min",
-	description : "Create a 5-20ft portal to precise location on different plane; can transport named crea to me (5000gp)",
-	descriptionFull : "I conjure a portal linking an unoccupied space I can see within range to a precise location on a different plane of existence. The portal is a circular opening, which I can make 5 to 20 feet in diameter. I can orient the portal in any direction I choose. The portal lasts for the duration, and the portal's destination is visible through it." + "\n   " + "The portal has a front and a back on each plane where it appears. Travel through the portal is possible only by moving through its front. Anything that does so is instantly transported to the other plane, appearing in the unoccupied space nearest to the portal." + "\n   " + "Deities and other planar rulers can prevent portals created by this spell from opening in their presence or anywhere within their domains." + "\n   " + "When I cast this spell, I can speak the name of a specific creature (a pseudonym, title, or nickname doesn't work). If that creature is on a plane other than the one I are on, the portal opens next to the named creature and transports it to the nearest unoccupied space on my side of the portal. I gain no special power over the creature, and it is free to act as the DM deems appropriate. It might leave, attack I, or help I."
+	description : "Create a 5ft-20ft portal to precise location on other plane; can transport named crea to me (5000gp)",
+	descriptionFull : "You conjure a portal linking an unoccupied space you can see within range to a precise location on a different plane of existence. The portal is a circular opening, which you can make 5 to 20 feet in diameter. You can orient the portal in any direction you choose. The portal lasts for the duration, and the portal's destination is visible through it." + "\n   " + "The portal has a front and a back on each plane where it appears. Travel through the portal is possible only by moving through its front. Anything that does so is instantly transported to the other plane, appearing in the unoccupied space nearest to the portal." + "\n   " + "Deities and other planar rulers can prevent portals created by this spell from opening in their presence or anywhere within their domains." + "\n   " + "When you cast this spell, you can speak the name of a specific creature (a pseudonym, title, or nickname doesn't work). If that creature is on a plane other than the one you are on, the portal opens next to the named creature and transports it to the nearest unoccupied space on your side of the portal. You gain no special power over the creature, and it is free to act as the DM deems appropriate. It might leave, attack you, or help you."
 });
 legacySpellRefactor("geas", {
 	name : "Geas",
+	nameShort : "Geas*",
 	classes : ["bard", "cleric", "druid", "paladin", "wizard"],
 	source : [["PHB2024", 278]],
 	level : 5,
@@ -16320,7 +16363,7 @@ legacySpellRefactor("geas", {
 	save : "Wis",
 	description : "1 crea save or Charmed; obey nonlethal commands or 5d10 Psychic (1/day); SL7: 1 year, SL9: until disp.",
 	descriptionShorter : "1 crea save or charmed, obey nonlethal order or 5d10 Psychic; SL7: 1 year, SL9: 'til disp.",
-	descriptionFull : "I give a verbal command to a creature that I can see within range, ordering it to carry out some service or refrain from an action or a course of activity as I decide. The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The target automatically succeeds if it can't understand my command." + "\n   " + "While Charmed, the creature takes 5d10 Psychic damage if it acts in a manner directly counter to my command. It takes this damage no more than once each day." + "\n   " + "I can issue any command I choose, short of an activity that would result in certain death. Should I issue a suicidal command, the spell ends." + "\n   " + "A Remove Curse, Greater Restoration, or Wish spell ends this spell." + AtHigherLevels + "If I use a level 7 or 8 spell slot, the duration is 365 days. If I use a level 9 spell slot, the spell lasts until it is ended by one of the spells mentioned above."
+	descriptionFull : "You give a verbal command to a creature that you can see within range, ordering it to carry out some service or refrain from an action or a course of activity as you decide. The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The target automatically succeeds if it can't understand your command." + "\n   " + "While Charmed, the creature takes 5d10 Psychic damage if it acts in a manner directly counter to your command. It takes this damage no more than once each day." + "\n   " + "You can issue any command you choose, short of an activity that would result in certain death. Should you issue a suicidal command, the spell ends." + "\n   " + "A Remove Curse, Greater Restoration, or Wish spell ends this spell." + AtHigherLevels + "If you use a level 7 or 8 spell slot, the duration is 365 days. If you use a level 9 spell slot, the spell lasts until it is ended by one of the spells mentioned above."
 });
 legacySpellRefactor("gentle repose", {
 	name : "Gentle Repose",
@@ -16335,10 +16378,11 @@ legacySpellRefactor("gentle repose", {
 	compMaterial : "2 copper pieces, which the spell consumes",
 	duration : "10 days",
 	description : "1 corpse protected from decay and becoming undead; add duration to time limit for raising dead",
-	descriptionFull : "I touch a corpse or other remains. For the duration, the target is protected from decay and can't become Undead." + "\n   " + "The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as Raise Dead."
+	descriptionFull : "You touch a corpse or other remains. For the duration, the target is protected from decay and can't become Undead." + "\n   " + "The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as Raise Dead."
 });
 legacySpellRefactor("giant insect", {
 	name : "Giant Insect",
+	nameShort : "Giant Insect*",
 	classes : ["druid"],
 	source : [["PHB2024", 279]],
 	level : 4,
@@ -16348,7 +16392,7 @@ legacySpellRefactor("giant insect", {
 	components : "V,S",
 	duration : "Conc, 10 min",
 	description : "Summon Giant Insect (centipede, spider, or wasp); obeys my verbal commands; acts after me; see B",
-	descriptionFull : "I summon a giant centipede, spider, or wasp (chosen when I cast the spell). It manifests in an unoccupied space I can see within range and uses the Giant Insect stat block. The form I choose determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to I and my allies. In combat, the creature shares my Initiative count, but it takes its turn immediately after yours. It obeys my verbal commands (no action required by I). If I don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
+	descriptionFull : "You summon a giant centipede, spider, or wasp (chosen when you cast the spell). It manifests in an unoccupied space you can see within range and uses the Giant Insect stat block. The form you choose determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
 });
 legacySpellRefactor("glibness", {
 	name : "Glibness",
@@ -16361,7 +16405,7 @@ legacySpellRefactor("glibness", {
 	components : "V",
 	duration : "1 h",
 	description : "I can choose to replace roll with 15 on any Charisma check; magic cannot detect if I am lying",
-	descriptionFull : "Until the spell ends, when I make a Charisma check, I can replace the number I roll with a 15. Additionally, no matter what I say, magic that would determine if I are telling the truth indicates that I are being truthful."
+	descriptionFull : "Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15. Additionally, no matter what you say, magic that would determine if you are telling the truth indicates that you are being truthful."
 });
 legacySpellRefactor("globe of invulnerability", {
 	name : "Globe of Invulnerability",
@@ -16375,7 +16419,7 @@ legacySpellRefactor("globe of invulnerability", {
 	compMaterial : "A glass bead",
 	duration : "Conc, 1 min",
 	description : "Immobile barrier surrounds me for duration. SL<(6+1/SL) cast outside area can't affect inside area",
-	descriptionFull : "An immobile, faintly shimmering barrier springs into existence in a 10-foot radius around I and remains for the duration." + "\n   " + "Any spell of level 5 or lower cast from outside the barrier can't affect anything within it. Such a spell can target creatures and objects within the barrier, but the spell has no effect on them. Similarly, the area within the barrier is excluded from areas of effect created by such spells." + AtHigherLevels + "The barrier blocks spells of 1 level higher for each spell slot level above 6."
+	descriptionFull : "An immobile, faintly shimmering barrier springs into existence in a 10-foot radius around you and remains for the duration." + "\n   " + "Any spell of level 5 or lower cast from outside the barrier can't affect anything within it. Such a spell can target creatures and objects within the barrier, but the spell has no effect on them. Similarly, the area within the barrier is excluded from areas of effect created by such spells." + AtHigherLevels + "The barrier blocks spells of 1 level higher for each spell slot level above 6."
 });
 legacySpellRefactor("glyph of warding", {
 	name : "Glyph of Warding",
@@ -16389,7 +16433,7 @@ legacySpellRefactor("glyph of warding", {
 	compMaterial : "Powdered diamond worth 200+ gp, which the spell consumes",
 	duration : "Till triggered",
 	description : "Create glyph that triggers on set condition; Wis(Perception) vs spell DC to notice; see B (200gp cons.)",
-	descriptionFull : "I inscribe a glyph that later unleashes a magical effect. I inscribe it either on a surface (such as a table or a section of floor) or within an object that can be closed (such as a book or chest) to conceal the glyph. The glyph can cover an area no larger than 10 feet in diameter. If the surface or object is moved more than 10 feet from where I cast this spell, the glyph is broken, and the spell ends without being triggered." + "\n   " + "The glyph is nearly imperceptible and requires a successful Wisdom (Perception) check against my spell save DC to notice." + "\n   " + "When I inscribe the glyph, I set its trigger and choose whether it's an explosive rune or a spell glyph, as explained below." + "\n   " + "Set the Trigger. I decide what triggers the glyph when I cast the spell. For glyphs inscribed on a surface, common triggers include touching or stepping on the glyph, removing another object covering it, or approaching within a certain distance of it. For glyphs inscribed within an object, common triggers include opening that object or seeing the glyph. Once a glyph is triggered, this spell ends." + "\n   " + "I can refine the trigger so that only creatures of certain types activate it (for example, the glyph could be set to affect Aberrations). I can also set conditions for creatures that don't trigger the glyph, such as those who say a certain password." + "\n   " + toUni("Explosive Rune") + ": When triggered, the glyph erupts with magical energy in a 20-foot-radius Sphere centered on the glyph. Each creature in the area makes a Dexterity saving throw. A creature takes 5d8 Acid, Cold, Fire, Lightning, or Thunder damage (my choice when I create the glyph) on a failed save or half as much damage on a successful one." + "\n   " + toUni("Spell Glyph") + ": I can store a prepared spell of level 3 or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way." + "\n   " + "When the glyph is triggered, the stored spell takes effect. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons Hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires Concentration, it lasts until the end of its full duration." + AtHigherLevels + "The damage of an explosive rune increases by 1d8 for each spell slot level above 3. If I create a spell glyph, I can store any spell of up to the same level as the spell slot I use for the Glyph of Warding."
+	descriptionFull : "You inscribe a glyph that later unleashes a magical effect. You inscribe it either on a surface (such as a table or a section of floor) or within an object that can be closed (such as a book or chest) to conceal the glyph. The glyph can cover an area no larger than 10 feet in diameter. If the surface or object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered." + "\n   " + "The glyph is nearly imperceptible and requires a successful Wisdom (Perception) check against your spell save DC to notice." + "\n   " + "When you inscribe the glyph, you set its trigger and choose whether it's an explosive rune or a spell glyph, as explained below." + "\n   " + "Set the Trigger. You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, common triggers include touching or stepping on the glyph, removing another object covering it, or approaching within a certain distance of it. For glyphs inscribed within an object, common triggers include opening that object or seeing the glyph. Once a glyph is triggered, this spell ends." + "\n   " + "You can refine the trigger so that only creatures of certain types activate it (for example, the glyph could be set to affect Aberrations). You can also set conditions for creatures that don't trigger the glyph, such as those who say a certain password." + "\n   " + toUni("Explosive Rune") + ": When triggered, the glyph erupts with magical energy in a 20-foot-radius Sphere centered on the glyph. Each creature in the area makes a Dexterity saving throw. A creature takes 5d8 Acid, Cold, Fire, Lightning, or Thunder damage (your choice when you create the glyph) on a failed save or half as much damage on a successful one." + "\n   " + toUni("Spell Glyph") + ": You can store a prepared spell of level 3 or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way." + "\n   " + "When the glyph is triggered, the stored spell takes effect. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons Hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires Concentration, it lasts until the end of its full duration." + AtHigherLevels + "The damage of an explosive rune increases by 1d8 for each spell slot level above 3. If you create a spell glyph, you can store any spell of up to the same level as the spell slot you use for the Glyph of Warding."
 });
 legacySpellRefactor("goodberry", {
 	name : "Goodberry",
@@ -16404,10 +16448,11 @@ legacySpellRefactor("goodberry", {
 	duration : "24 h",
 	description : "Create 10 berries; bns to eat 1 berry: heal 1 HP, nourishment for 1 day; berries disappear after 24h",
 	descriptionShorter : "Make 10 berries; bns to eat 1 berry: heal 1 HP, nourishment for 1 day; disappear after 24h",
-	descriptionFull : "Ten berries appear in my hand and are infused with magic for the duration. A creature can take a Bonus Action to eat one berry. Eating a berry restores 1 Hit Point, and the berry provides enough nourishment to sustain a creature for one day." + "\n   " + "Uneaten berries disappear when the spell ends."
+	descriptionFull : "Ten berries appear in your hand and are infused with magic for the duration. A creature can take a Bonus Action to eat one berry. Eating a berry restores 1 Hit Point, and the berry provides enough nourishment to sustain a creature for one day." + "\n   " + "Uneaten berries disappear when the spell ends."
 });
 legacySpellRefactor("grasping vine", {
 	name : "Grasping Vine",
+	nameShort : "Grasping Vine*",
 	classes : ["druid", "ranger"],
 	source : [["PHB2024", 280]],
 	level : 4,
@@ -16416,8 +16461,8 @@ legacySpellRefactor("grasping vine", {
 	range : "60 ft",
 	components : "V,S",
 	duration : "Conc, 1 min",
-	description : "Conjure vine: melee spell atk in 30ft; 4d8 Blud.; pulled up to 30ft; Grappled (1+1/SL max); bns to repeat",
-	descriptionFull : "I conjure a vine that sprouts from a surface in an unoccupied space that I can see within range. The vine lasts for the duration." + "\n   " + "Make a melee spell attack against a creature within 30 feet of the vine. On a hit, the target takes 4d8 Bludgeoning damage and is pulled up to 30 feet toward the vine; if the target is Huge or smaller, it has the Grappled condition (escape DC equal to my spell save DC). The vine can grapple only one creature at a time, and I can cause the vine to release a Grappled creature (no action required)." + "\n   " + "As a Bonus Action on my later turns, yo can repeat the attack against a creature with 30 feet of the vine." + AtHigherLevels + "The number of creatures the vine can grapple increases by one for each spell slot level above 4."
+	description : "Make vine: melee spell atk any 1 in 30ft; 4d8 Blud. \u0026 pull \u226430ft; \u2264Huge Grappled (1+1/SL); bns new atk",
+	descriptionFull : "You conjure a vine that sprouts from a surface in an unoccupied space that you can see within range. The vine lasts for the duration." + "\n   " + "Make a melee spell attack against a creature within 30 feet of the vine. On a hit, the target takes 4d8 Bludgeoning damage and is pulled up to 30 feet toward the vine; if the target is Huge or smaller, it has the Grappled condition (escape DC equal to your spell save DC). The vine can grapple only one creature at a time, and you can cause the vine to release a Grappled creature (no action required)." + "\n   " + "As a Bonus Action on your later turns, yo can repeat the attack against a creature with 30 feet of the vine." + AtHigherLevels + "The number of creatures the vine can grapple increases by one for each spell slot level above 4."
 });
 legacySpellRefactor("grease", {
 	name : "Grease",
@@ -16445,7 +16490,7 @@ legacySpellRefactor("greater invisibility", {
 	components : "V,S",
 	duration : "Conc, 1 min",
 	description : "1 creature becomes Invisible until the spell ends",
-	descriptionFull : "A creature I touch has the Invisible condition until the spell ends."
+	descriptionFull : "A creature you touch has the Invisible condition until the spell ends."
 });
 legacySpellRefactor("greater restoration", {
 	name : "Greater Restoration",
@@ -16459,10 +16504,11 @@ legacySpellRefactor("greater restoration", {
 	compMaterial : "Diamond dust worth 100+ gp, which the spell consumes",
 	duration : "Instantaneous",
 	description : "Remove 1 lvl Exhaustion, Charmed, Petrified, curse, stat or max HP reduction (100gp cons.)",
-	descriptionFull : "I touch a creature and magically remove one of the following effects from it:" + "\n " + "\u2022 1 Exhaustion level" + "\n " + "\u2022 The Charmed or Petrified condition" + "\n " + "\u2022 A curse, including the target's Attunement to a cursed magic item" + "\n " + "\u2022 Any reduction to one of the target's ability scores" + "\n " + "\u2022 Any reduction to the target's Hit Point maximum"
+	descriptionFull : "You touch a creature and magically remove one of the following effects from it:" + "\n " + "\u2022 1 Exhaustion level" + "\n " + "\u2022 The Charmed or Petrified condition" + "\n " + "\u2022 A curse, including the target's Attunement to a cursed magic item" + "\n " + "\u2022 Any reduction to one of the target's ability scores" + "\n " + "\u2022 Any reduction to the target's Hit Point maximum"
 });
 legacySpellRefactor("guardian of faith", {
 	name : "Guardian of Faith",
+	nameShort : "Guardian of Faith*",
 	classes : ["cleric"],
 	source : [["PHB2024", 281]],
 	level : 4,
@@ -16472,9 +16518,9 @@ legacySpellRefactor("guardian of faith", {
 	components : "V",
 	duration : "8 h",
 	save : "Dex",
-	description : "Place spectre; enemies that enter/start in 10ft take 20 Radiant; save 1/2; vanishes after dealing 60 dmg",
-	descriptionShorter : "Place spectre; enemies moving/SoT in 10ft 20 Radiant; save half; vanishes after doing 60 dmg",
-	descriptionFull : "A Large spectral guardian appears and hovers for the duration in an unoccupied space that I can see within range. The guardian occupies that space and is invulnerable, and it appears in a form appropriate for my deity or pantheon." + "\n   " + "Any enemy that moves to a space within 10 feet of the guardian for the first time on a turn or starts its turn there makes a Dexterity saving throw, taking 20 Radiant damage on a failed save or half as much damage on a successful one. The guardian vanishes when it has dealt a total of 60 damage."
+	description : "Place Lg spectre; all enemies that enter/start in 10ft take 20 Radiant; save 1/2; vanishes after 60 dmg",
+	descriptionShorter : "Place Lg spectre; enemies that enter/start in 10ft 20 Radiant; save 1/2; vanishes after 60 dmg",
+	descriptionFull : "A Large spectral guardian appears and hovers for the duration in an unoccupied space that you can see within range. The guardian occupies that space and is invulnerable, and it appears in a form appropriate for your deity or pantheon." + "\n   " + "Any enemy that moves to a space within 10 feet of the guardian for the first time on a turn or starts its turn there makes a Dexterity saving throw, taking 20 Radiant damage on a failed save or half as much damage on a successful one. The guardian vanishes when it has dealt a total of 60 damage."
 });
 legacySpellRefactor("guards and wards", {
 	name : "Guards and Wards",
@@ -16487,8 +16533,8 @@ legacySpellRefactor("guards and wards", {
 	components : "V,S,M\u0192",
 	compMaterial : "A silver rod worth 10+ gp",
 	duration : "24 h",
-	description : "Protect an area with multiple effects including fog, web, illusions and locks; see book (10gp)",
-	descriptionFull : "I create a ward that protects up to 2,500 square feet of floor space. The warded area can be up to 20 feet tall, and I shape it as one 50-foot square, one hundred 5-foot squares that are contiguous, or twenty-five 10-foot squares that are contiguous." + "\n   " + "When I cast this spell, I can specify individuals that are unaffected by the spell's effects. I can also specify a password that, when spoken aloud within 5 feet of the warded area, makes the speaker immune to its effects." + "\n   " + "The spell creates the effects below within the warded area. Dispel Magic has no effect on Guards and Wards itself, but each of the following effects can be dispelled. If all four are dispelled, Guards and Wards ends. If I cast the spell every day for 365 days on the same area, the spell thereafter lasts until all its effects are dispelled." + "\n   " + toUni("Corridors") + ": Fog fills all the warded corridors, making them Heavily Obscured. In addition, at each intersection or branching passage offering a choice of direction, there is a 50 percent chance that a creature other than I believes it is going in the opposite direction from the one it chooses." + "\n   " + toUni("Doors") + ": All doors in the warded area are magically locked, as if sealed by the Arcane Lock spell. In addition, I can cover up to ten doors with an illusion to make them appear as plain sections of wall." + "\n   " + toUni("Stairs") + ": Webs fill all stairs in the warded area from top to bottom, as in the Web spell. These strands regrow in 10 minutes if they are destroyed while Guards and Wards lasts." + "\n   " + toUni("Other Spell Effect") + ": Place one of the following magical effects within the warded area:" + "\n " + "\u2022 Dancing Lights in four corridors, with a simple program that the lights repeat as long as Guards and Wards lasts" + "\n " + "\u2022 Magic Mouth in two locations" + "\n " + "\u2022 Stinking Cloud in two locations (the vapors return within 10 minutes if dispersed while Guards and Wards lasts)" + "\n " + "\u2022 Gust of Wind in one corridor or room (the wind blows continuously while the spell lasts)" + "\n " + "\u2022 Suggestion in one 5-foot square; any creature that enters that square receives the suggestion mentally"
+	description : "Protect an area with multiple effects including fog, webs, illusions and locks; see book (10gp)",
+	descriptionFull : "You create a ward that protects up to 2,500 square feet of floor space. The warded area can be up to 20 feet tall, and you shape it as one 50-foot square, one hundred 5-foot squares that are contiguous, or twenty-five 10-foot squares that are contiguous." + "\n   " + "When you cast this spell, you can specify individuals that are unaffected by the spell's effects. You can also specify a password that, when spoken aloud within 5 feet of the warded area, makes the speaker immune to its effects." + "\n   " + "The spell creates the effects below within the warded area. Dispel Magic has no effect on Guards and Wards itself, but each of the following effects can be dispelled. If all four are dispelled, Guards and Wards ends. If you cast the spell every day for 365 days on the same area, the spell thereafter lasts until all its effects are dispelled." + "\n   " + toUni("Corridors") + ": Fog fills all the warded corridors, making them Heavily Obscured. In addition, at each intersection or branching passage offering a choice of direction, there is a 50 percent chance that a creature other than you believes it is going in the opposite direction from the one it chooses." + "\n   " + toUni("Doors") + ": All doors in the warded area are magically locked, as if sealed by the Arcane Lock spell. In addition, you can cover up to ten doors with an illusion to make them appear as plain sections of wall." + "\n   " + toUni("Stairs") + ": Webs fill all stairs in the warded area from top to bottom, as in the Web spell. These strands regrow in 10 minutes if they are destroyed while Guards and Wards lasts." + "\n   " + toUni("Other Spell Effect") + ": Place one of the following magical effects within the warded area:" + "\n " + "\u2022 Dancing Lights in four corridors, with a simple program that the lights repeat as long as Guards and Wards lasts" + "\n " + "\u2022 Magic Mouth in two locations" + "\n " + "\u2022 Stinking Cloud in two locations (the vapors return within 10 minutes if dispersed while Guards and Wards lasts)" + "\n " + "\u2022 Gust of Wind in one corridor or room (the wind blows continuously while the spell lasts)" + "\n " + "\u2022 Suggestion in one 5-foot square; any creature that enters that square receives the suggestion mentally"
 });
 legacySpellRefactor("guidance", {
 	name : "Guidance",
@@ -16501,7 +16547,7 @@ legacySpellRefactor("guidance", {
 	components : "V,S",
 	duration : "Conc, 1 min",
 	description : "Touch willing creature and choose skill; target adds 1d4 to ability chks with chosen skill for duration",
-	descriptionFull : "I touch a willing creature and choose a skill. Until the spell ends, the creature adds 1d4 to any ability check using the chosen skill."
+	descriptionFull : "You touch a willing creature and choose a skill. Until the spell ends, the creature adds 1d4 to any ability check using the chosen skill."
 });
 legacySpellRefactor("guiding bolt", {
 	name : "Guiding Bolt",
@@ -16514,7 +16560,7 @@ legacySpellRefactor("guiding bolt", {
 	components : "V,S",
 	duration : "1 round",
 	description : "Spell attack for 4d6+1d6/SL Radiant dmg and next attack against target has advantage",
-	descriptionFull : "I hurl a bolt of light toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 4d6 Radiant damage, and the next attack roll made against it before the end of my next turn has Advantage." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 1."
+	descriptionFull : "You hurl a bolt of light toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 4d6 Radiant damage, and the next attack roll made against it before the end of your next turn has Advantage." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 1."
 });
 legacySpellRefactor("gust of wind", {
 	name : "Gust of Wind",
@@ -16528,8 +16574,8 @@ legacySpellRefactor("gust of wind", {
 	compMaterial : "A legume seed",
 	duration : "Conc, 1 min",
 	save : "Str",
-	description : "60ft\xD710ft (l\xD7w) wind; on cast/end crea in wind save or pushed 15 ft; bns change direction; see book",
-	descriptionFull : "A Line of strong wind 60 feet long and 10 feet wide blasts from I in a direction I choose for the duration. Each creature in the Line must succeed on a Strength saving throw or be pushed 15 feet away from I in a direction following the Line. A creature that ends its turn in the Line must make the same save." + "\n   " + "Any creature in the line must spend 2 feet of movement for every 1 foot it moves when moving closer to I." + "\n   " + "The gust disperses gas or vapor, and it extinguishes candles and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a 50 percent chance to extinguish them." + "\n   " + "As a Bonus Action on my later turns, I can change the direction in which the Line blasts from I."
+	description : "60ft\xD710ft (l\xD7w) wind; all in wind now/end save or pushed 15 ft; bns change direction; see book",
+	descriptionFull : "A Line of strong wind 60 feet long and 10 feet wide blasts from you in a direction you choose for the duration. Each creature in the Line must succeed on a Strength saving throw or be pushed 15 feet away from you in a direction following the Line. A creature that ends its turn in the Line must make the same save." + "\n   " + "Any creature in the line must spend 2 feet of movement for every 1 foot it moves when moving closer to you." + "\n   " + "The gust disperses gas or vapor, and it extinguishes candles and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a 50 percent chance to extinguish them." + "\n   " + "As a Bonus Action on your later turns, you can change the direction in which the Line blasts from you."
 });
 legacySpellRefactor("hail of thorns", {
 	name : "Hail of Thorns",
@@ -16538,13 +16584,13 @@ legacySpellRefactor("hail of thorns", {
 	level : 1,
 	school : "Conj",
 	time : "1 bns*",
-	timeFull : "Bonus Action, which I take immediately after hitting a creature with a Ranged weapon",
+	timeFull : "Bonus Action, which you take immediately after hitting a creature with a Ranged weapon",
 	range : "Self",
 	components : "V",
 	duration : "Instantaneous",
 	save : "Dex",
-	description : "On ranged weapon hit, target and all within 5 ft take 1d10+1d10/SL Piercing dmg; save halves",
-	descriptionFull : "As I hit the creature, this spell creates a rain of thorns that sprouts from my Ranged weapon or ammunition. The target of the attack and each creature within 5 feet of it make a Dexterity saving throw, taking 1d10 Piercing damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage increases by 1d10 for each spell slot level above 1.",
+	description : "On ranged weapon hit, target and all in 5 ft take 1d10+1d10/SL Piercing dmg; save halves",
+	descriptionFull : "As you hit the creature, this spell creates a rain of thorns that sprouts from your Ranged weapon or ammunition. The target of the attack and each creature within 5 feet of it make a Dexterity saving throw, taking 1d10 Piercing damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage increases by 1d10 for each spell slot level above 1.",
 	dynamicDamageBonus : { multipleDmgMoments : false }
 });
 legacySpellRefactor("hallow", {
@@ -16559,7 +16605,7 @@ legacySpellRefactor("hallow", {
 	compMaterial : "Incense worth 1000+ gp, which the spell consumes",
 	duration : "Till dispelled",
 	description : "Up to 60-ft rad; chosen creature types can't enter/possess/charm/frighten in area; 1 extra effect; see B",
-	descriptionFull : "I touch a point and infuse an area around it with holy or unholy power. The area can have a radius up to 60 feet, and the spell fails if the radius includes an area already under the effect of Hallow. The affected area has the following effects." + "\n   " + "Hallowed Ward. Choose any of these creature types: Aberration, Celestial, Elemental, Fey, Fiend, or Undead. Creatures of the chosen types can't willingly enter the area, and any creature that is possessed by or that has the Charmed or Frightened condition from such creatures isn't possessed, Charmed, or Frightened by them while in the area." + "\n   " + "Extra Effect. I bind an extra effect to the area from the list below:" + "\n   " + toUni("Courage") + ": Creatures of any types I choose can't gain the Frightened condition while in the area." + "\n   " + toUni("Darkness") + ": Darkness fills the area. Normal light, as well as magical light created by spells of a level lower than this spell, can't illuminate the area." + "\n   " + toUni("Daylight") + ": Bright light fills the area. Magical Darkness created by spells of a level lower than this spell can't extinguish the light." + "\n   " + toUni("Peaceful Rest") + ": Dead bodies interred in the area can't be turned into undead." + "\n   " + toUni("Extradimensional Interference") + ": Creatures of any types I choose can't enter or exit the area using teleportation or interplanar travel." + "\n   " + toUni("Fear") + ": Creatures of any types I choose have the Frightened condition while in the area." + "\n   " + toUni("Resistance") + ": Creatures of any types I choose have Resistance to one damage type of my choice while in the area." + "\n   " + toUni("Silence") + ": No sound can emanate from within the area, and no sound can reach into it." + "\n   " + toUni("Tongues") + ": Creatures of any types I choose can communicate with any other creature in the area even if they don't share a common language." + "\n   " + toUni("Vulnerability") + ": Creatures of any types I choose have Vulnerability to one damage type of my choice while in the area."
+	descriptionFull : "You touch a point and infuse an area around it with holy or unholy power. The area can have a radius up to 60 feet, and the spell fails if the radius includes an area already under the effect of Hallow. The affected area has the following effects." + "\n   " + "Hallowed Ward. Choose any of these creature types: Aberration, Celestial, Elemental, Fey, Fiend, or Undead. Creatures of the chosen types can't willingly enter the area, and any creature that is possessed by or that has the Charmed or Frightened condition from such creatures isn't possessed, Charmed, or Frightened by them while in the area." + "\n   " + "Extra Effect. You bind an extra effect to the area from the list below:" + "\n   " + toUni("Courage") + ": Creatures of any types you choose can't gain the Frightened condition while in the area." + "\n   " + toUni("Darkness") + ": Darkness fills the area. Normal light, as well as magical light created by spells of a level lower than this spell, can't illuminate the area." + "\n   " + toUni("Daylight") + ": Bright light fills the area. Magical Darkness created by spells of a level lower than this spell can't extinguish the light." + "\n   " + toUni("Peaceful Rest") + ": Dead bodies interred in the area can't be turned into undead." + "\n   " + toUni("Extradimensional Interference") + ": Creatures of any types you choose can't enter or exit the area using teleportation or interplanar travel." + "\n   " + toUni("Fear") + ": Creatures of any types you choose have the Frightened condition while in the area." + "\n   " + toUni("Resistance") + ": Creatures of any types you choose have Resistance to one damage type of your choice while in the area." + "\n   " + toUni("Silence") + ": No sound can emanate from within the area, and no sound can reach into it." + "\n   " + toUni("Tongues") + ": Creatures of any types you choose can communicate with any other creature in the area even if they don't share a common language." + "\n   " + toUni("Vulnerability") + ": Creatures of any types you choose have Vulnerability to one damage type of your choice while in the area."
 });
 legacySpellRefactor("hallucinatory terrain", {
 	name : "Hallucinatory Terrain",
@@ -16573,10 +16619,11 @@ legacySpellRefactor("hallucinatory terrain", {
 	compMaterial : "A mushroom",
 	duration : "24 h",
 	description : "150-ft cube of terrain resembles another sort of terrain; Int (Investigation) vs spell DC; see book",
-	descriptionFull : "I make natural terrain in a 150-foot Cube in range look, sound, and smell like another sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren't changed." + "\n   " + "The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to notice the illusion. If the difference isn't obvious by touch, a creature examining the illusion can take the Study action to make an Intelligence (Investigation) check against my spell save DC to disbelieve it. If a creature discerns that the terrain is illusory, the creature sees a vague image superimposed on the real terrain."
+	descriptionFull : "You make natural terrain in a 150-foot Cube in range look, sound, and smell like another sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren't changed." + "\n   " + "The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to notice the illusion. If the difference isn't obvious by touch, a creature examining the illusion can take the Study action to make an Intelligence (Investigation) check against your spell save DC to disbelieve it. If a creature discerns that the terrain is illusory, the creature sees a vague image superimposed on the real terrain."
 });
 legacySpellRefactor("harm", {
 	name : "Harm",
+	nameShort : "Harm*",
 	classes : ["cleric"],
 	source : [["PHB2024", 283]],
 	level : 6,
@@ -16586,11 +16633,12 @@ legacySpellRefactor("harm", {
 	components : "V,S",
 	duration : "Instantaneous",
 	save : "Con",
-	description : "1 visible crea 14d6 Necrotic, reduce max HP by same; not <1 max HP; save half and not reduced",
-	descriptionFull : "I unleash virulent magic on a creature I can see within range. The target makes a Constitution saving throw. On a failed save, it takes 14d6 Necrotic damage, and its Hit Point maximum is reduced by an amount equal to the Necrotic damage it took. On a successful save, it takes half as much damage only. This spell can't reduce a target's Hit Point maximum below 1."
+	description : "1 creature 14d6 Necrotic, reduce max HP by same; not <1 max HP; save half and not reduced",
+	descriptionFull : "You unleash virulent magic on a creature you can see within range. The target makes a Constitution saving throw. On a failed save, it takes 14d6 Necrotic damage, and its Hit Point maximum is reduced by an amount equal to the Necrotic damage it took. On a successful save, it takes half as much damage only. This spell can't reduce a target's Hit Point maximum below 1."
 });
 legacySpellRefactor("haste", {
 	name : "Haste",
+	nameShort : "Haste*",
 	classes : ["artificer","sorcerer", "wizard"],
 	source : [["PHB2024", 284]],
 	level : 3,
@@ -16601,10 +16649,11 @@ legacySpellRefactor("haste", {
 	compMaterial : "A shaving of licorice root",
 	duration : "Conc, 1 min",
 	description : "1 crea +2 AC, speed \xD72, adv. on Dex saves, extra action: Atk (1 only), Dash, Diseng., Hide, or Utilize",
-	descriptionFull : "Choose a willing creature that I can see within range. Until the spell ends, the target's speed is doubled, it gains a +2 bonus to Armor Class, it has advantage on Dexterity saving throws, and it gains an additional action on each of its turns. That action can be used to take only the Attack (one attack only), Dash, Disengage, Hide, or Utilize action." + "\n   " + "When the spell ends, the target is Incapacitated and has a Speed of 0 until the end of its next turn, as a wave of lethargy washes over it."
+	descriptionFull : "Choose a willing creature that you can see within range. Until the spell ends, the target's speed is doubled, it gains a +2 bonus to Armor Class, it has advantage on Dexterity saving throws, and it gains an additional action on each of its turns. That action can be used to take only the Attack (one attack only), Dash, Disengage, Hide, or Utilize action." + "\n   " + "When the spell ends, the target is Incapacitated and has a Speed of 0 until the end of its next turn, as a wave of lethargy washes over it."
 });
 legacySpellRefactor("heal", {
 	name : "Heal",
+	nameShort : "Heal*",
 	classes : ["cleric", "druid"],
 	source : [["PHB2024", 284]],
 	level : 6,
@@ -16615,10 +16664,11 @@ legacySpellRefactor("heal", {
 	duration : "Instantaneous",
 	description : "1 creature heals 70+10/SL HP and is cured of all Blinded, Deafened and Poisoned conditions",
 	descriptionShorter : "1 creature heals 70+10/SL HP and is cured of blinded, deafened, poisoned",
-	descriptionFull : "Choose a creature that I can see within range. Positive energy washes through the target, restoring 70 Hit Points. This spell also ends the Blinded, Deafened, and Poisoned conditions on the target." + AtHigherLevels + "The healing increases by 10 for each spell slot level above 6."
+	descriptionFull : "Choose a creature that you can see within range. Positive energy washes through the target, restoring 70 Hit Points. This spell also ends the Blinded, Deafened, and Poisoned conditions on the target." + AtHigherLevels + "The healing increases by 10 for each spell slot level above 6."
 });
 legacySpellRefactor("healing word", {
 	name : "Healing Word",
+	nameShort : "Healing Word*",
 	classes : ["bard", "cleric", "druid"],
 	source : [["PHB2024", 284]],
 	level : 1,
@@ -16628,10 +16678,11 @@ legacySpellRefactor("healing word", {
 	components : "V",
 	duration : "Instantaneous",
 	description : "1 creature heals 2d4+2d4/SL+spellcasting ability modifier HP",
-	descriptionFull : "A creature of my choice that I can see within range regains Hit Points equal to 2d4 plus my spellcasting ability modifier." + AtHigherLevels + "The healing increases by 2d4 for each spell slot level above 1."
+	descriptionFull : "A creature of your choice that you can see within range regains Hit Points equal to 2d4 plus your spellcasting ability modifier." + AtHigherLevels + "The healing increases by 2d4 for each spell slot level above 1."
 });
 legacySpellRefactor("heat metal", {
 	name : "Heat Metal",
+	nameShort : "Heat Metal*",
 	classes : ["artificer","bard", "druid"],
 	source : [["PHB2024", 284]],
 	level : 2,
@@ -16644,22 +16695,23 @@ legacySpellRefactor("heat metal", {
 	save : "Con",
 	description : "1 metal object on touch 2d8+1d8/SL Fire dmg; save or drop obj; if held: dis. atk/chk; bns reheat obj",
 	descriptionShorter : "1 metal obj, touch it 2d8+1d8/SL Fire; save or drop; if held: dis. atk/chk; bns redo",
-	descriptionFull : "Choose a manufactured metal object, such as a metal weapon or a suit of Heavy or Medium metal armor, that I can see within range. I cause the object to glow red-hot. Any creature in physical contact with the object takes 2d8 Fire damage when I cast the spell. Until the spell ends, I can take a Bonus Action on each of my later turns to deal this damage again if the object is within range." + "\n   " + "If a creature is holding or wearing the object and takes the damage from it, the creature must succeed on a Constitution saving throw or drop the object if it can. If it doesn't drop the object, it has Disadvantage on attack rolls and ability checks until the start of my next turn." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 2."
+	descriptionFull : "Choose a manufactured metal object, such as a metal weapon or a suit of Heavy or Medium metal armor, that you can see within range. You cause the object to glow red-hot. Any creature in physical contact with the object takes 2d8 Fire damage when you cast the spell. Until the spell ends, you can take a Bonus Action on each of your later turns to deal this damage again if the object is within range." + "\n   " + "If a creature is holding or wearing the object and takes the damage from it, the creature must succeed on a Constitution saving throw or drop the object if it can. If it doesn't drop the object, it has Disadvantage on attack rolls and ability checks until the start of your next turn." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 2."
 });
 legacySpellRefactor("hellish rebuke", {
 	name : "Hellish Rebuke",
+	nameShort : "Hellish Rebuke*",
 	classes : ["warlock"],
 	source : [["PHB2024", 284]],
 	level : 1,
 	school : "Evoc",
 	time : "1 rea",
-	timeFull : "Reaction, which I take in response to taking damage from a creature that I can see within 60 feet of yourself",
+	timeFull : "Reaction, which you take in response to taking damage from a creature that you can see within 60 feet of yourself",
 	range : "60 ft",
 	components : "V,S",
 	duration : "Instantaneous",
 	save : "Dex",
-	description : "Cast when taking dmg; visible crea that dealt dmg takes 2d10+1d10/SL Fire; save halves",
-	descriptionFull : "The creature that damaged I is momentarily surrounded by green flames. It makes a Dexterity saving throw, taking 2d10 Fire damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage increases by 1d10 for each spell slot level above 1."
+	description : "Cast on taking damage; creature that dealt damage takes 2d10+1d10/SL Fire; save halves",
+	descriptionFull : "The creature that damaged you is momentarily surrounded by green flames. It makes a Dexterity saving throw, taking 2d10 Fire damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage increases by 1d10 for each spell slot level above 1."
 });
 legacySpellRefactor("heroes' feast", {
 	name : "Heroes' Feast",
@@ -16672,8 +16724,8 @@ legacySpellRefactor("heroes' feast", {
 	components : "V,S,M\u2020",
 	compMaterial : "A gem-encrusted bowl worth 1,000+ gp, which the spell consumes",
 	duration : "Instantaneous",
-	description : "12 crea; 1h to eat; 24h: resist Poison, immune Fright. \u0026 Poisoned, +2d10 max/current HP (1000gp cons.)",
-	descriptionFull : "I conjure a feast that appears on a surface in an unoccupied 10-foot Cube next to I. The feast takes 1 hour to consume and disappears at the end of that time, and the beneficial effects don't set in until this hour is over. Up to twelve creatures can partake of the feast." + "\n   " + "A creature that partakes gains several benefits, which last for 24 hours. The creature has Resistance to Poison damage, and it has Immunity to the Frightened and Poisoned conditions. Its Hit Point maximum also increases by 2d10, and it gains the same number of Hit Points."
+	description : "12 crea eat in 1h; 24h: resist Poison, immune Fright. \u0026 Poisoned, +2d10 max+current HP (1000gp cons.)",
+	descriptionFull : "You conjure a feast that appears on a surface in an unoccupied 10-foot Cube next to you. The feast takes 1 hour to consume and disappears at the end of that time, and the beneficial effects don't set in until this hour is over. Up to twelve creatures can partake of the feast." + "\n   " + "A creature that partakes gains several benefits, which last for 24 hours. The creature has Resistance to Poison damage, and it has Immunity to the Frightened and Poisoned conditions. Its Hit Point maximum also increases by 2d10, and it gains the same number of Hit Points."
 });
 legacySpellRefactor("heroism", {
 	name : "Heroism",
@@ -16686,10 +16738,11 @@ legacySpellRefactor("heroism", {
 	components : "V,S",
 	duration : "Conc, 1 min",
 	description : "1+1/SL willing crea immune to Frightened, gain spellcasting ability modifier temp. HP start of each turn",
-	descriptionFull : "A willing creature I touch is imbued with bravery. Until the spell ends, the creature is immune to the Frightened condition and gains Temporary Hit Points equal to my spellcasting ability modifier at the start of each of its turns." + AtHigherLevels + "I can target one additional creature for each spell slot level above 1."
+	descriptionFull : "A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to the Frightened condition and gains Temporary Hit Points equal to your spellcasting ability modifier at the start of each of its turns." + AtHigherLevels + "You can target one additional creature for each spell slot level above 1."
 });
 legacySpellRefactor("hex", {
 	name : "Hex",
+	nameShort : "Hex*",
 	classes : ["warlock"],
 	source : [["PHB2024", 285]],
 	level : 1,
@@ -16699,12 +16752,13 @@ legacySpellRefactor("hex", {
 	components : "V,S,M",
 	compMaterial : "The petrified eye of a newt",
 	duration : "Conc, 1 h",
-	description : "1 crea +1d6 Necrotic from my atks; dis. on checks (1 stat); bns move; SL2: 4h, SL3/4: 8h; SL5+: 24h",
+	description : "1 crea +1d6 Necrotic my atks; dis. 1 stat chks; if 0HP bns move next rnd; SL2: 4h, SL3/4: 8h; SL5+: 24h",
 	descriptionShorter : "1 crea +1d6 Necrotic from my atks; dis. 1 stat chks; SL2: 4h, SL3/4: 8h; SL5+: 24h",
-	descriptionFull : "I place a curse on a creature that I can see within range. Until the spell ends, I deal an extra 1d6 Necrotic damage to the target whenever I hit it with an attack roll. Also, choose one ability when I cast the spell. The target has Disadvantage on ability checks made with the chosen ability." + "\n   " + "If the target drops to 0 hit points before this spell ends, I can take a Bonus Action on a later turn to curse a new creature." + AtHigherLevels + "my Concentration can last longer with a spell slot of level 2 (up to 4 hours), 3–4 (up to 8 hours), or 5+ (24 hours)."
+	descriptionFull : "You place a curse on a creature that you can see within range. Until the spell ends, you deal an extra 1d6 Necrotic damage to the target whenever you hit it with an attack roll. Also, choose one ability when you cast the spell. The target has Disadvantage on ability checks made with the chosen ability." + "\n   " + "If the target drops to 0 hit points before this spell ends, you can take a Bonus Action on a later turn to curse a new creature." + AtHigherLevels + "Your Concentration can last longer with a spell slot of level 2 (up to 4 hours), 3–4 (up to 8 hours), or 5+ (24 hours)."
 });
 legacySpellRefactor("hold monster", {
 	name : "Hold Monster",
+	nameShort : "Hold Monster*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 285]],
 	level : 5,
@@ -16716,10 +16770,11 @@ legacySpellRefactor("hold monster", {
 	duration : "Conc, 1 min",
 	save : "Wis",
 	description : "1+1/SL visible creature, save or Paralyzed; extra save at end of each turn",
-	descriptionFull : "Choose a creature that I can see within range. The target must succeed on a Wisdom saving throw or have the Paralyzed condition for the duration. At the end of each of its turns, the target repeats the save, ending the spell on itself on a success." + AtHigherLevels + "I can target one additional creature for each spell slot level above 5."
+	descriptionFull : "Choose a creature that you can see within range. The target must succeed on a Wisdom saving throw or have the Paralyzed condition for the duration. At the end of each of its turns, the target repeats the save, ending the spell on itself on a success." + AtHigherLevels + "You can target one additional creature for each spell slot level above 5."
 });
 legacySpellRefactor("hold person", {
 	name : "Hold Person",
+	nameShort : "Hold Person*",
 	classes : ["bard", "cleric", "druid", "sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 286]],
 	level : 2,
@@ -16731,7 +16786,7 @@ legacySpellRefactor("hold person", {
 	duration : "Conc, 1 min",
 	save : "Wis",
 	description : "1+1/SL visible humanoids save or Paralyzed; extra save at end of each turn",
-	descriptionFull : "Choose a Humanoid that I can see within range. The target must succeed on a Wisdom saving throw or have the Paralyzed condition for the duration. At the end of each of its turns, the target repeats the save, ending the spell on itself on a success." + AtHigherLevels + "I can target one additional Humanoid for each spell slot level above 2."
+	descriptionFull : "Choose a Humanoid that you can see within range. The target must succeed on a Wisdom saving throw or have the Paralyzed condition for the duration. At the end of each of its turns, the target repeats the save, ending the spell on itself on a success." + AtHigherLevels + "You can target one additional Humanoid for each spell slot level above 2."
 });
 legacySpellRefactor("holy aura", {
 	name : "Holy Aura",
@@ -16745,8 +16800,8 @@ legacySpellRefactor("holy aura", {
 	compMaterial : "A reliquary worth 1000+ gp",
 	duration : "Conc, 1 min",
 	save : "Con",
-	description : "Any crea adv. saves; dis. atks vs. them; fiend/undead hit melee atk, save or Blind to next EoT (1000gp)",
-	descriptionFull : "For the duration, I emit an aura in a 30-foot Emanation. While in the aura, creatures of my choice have Advantage on all saving throws, and other creatures have Disadvantage on attack rolls against them. In addition, when a Fiend or an Undead hits an affected creature with a melee attack roll, the attacker must succeed on a Constitution saving throw or have the Blinded condition until the end of its next turn."
+	description : "Any crea adv. saves; dis. atks vs them; if fiend/undead hit melee atk, save or Blind to next EoT (1000gp)",
+	descriptionFull : "For the duration, you emit an aura in a 30-foot Emanation. While in the aura, creatures of your choice have Advantage on all saving throws, and other creatures have Disadvantage on attack rolls against them. In addition, when a Fiend or an Undead hits an affected creature with a melee attack roll, the attacker must succeed on a Constitution saving throw or have the Blinded condition until the end of its next turn."
 });
 legacySpellRefactor("hunger of hadar", {
 	name : "Hunger of Hadar",
@@ -16761,10 +16816,11 @@ legacySpellRefactor("hunger of hadar", {
 	duration : "Conc, 1 min",
 	save : "Dex",
 	description : "20-ft rad all in area: Blinded, start turn 2d6 Cold, end turn save or 2d6 Acid; 1 dmg type +1d6/SL",
-	descriptionFull : "I open a gateway to the Far Realm, a region infested with unspeakable horrors. A 20-foot-radius Sphere of Darkness appears, centered on a point with range and lasting for the duration. The Sphere is Difficult Terrain, and it is filled with strange whispers and slurping noises, which can be heard up to 30 feet away. No light, magical or otherwise, can illuminate the area, and creatures fully within it have the Blinded condition." + "\n   " + "Any creature that starts its turn in the area takes 2d6 Cold damage. Any creature that ends its turn there must succeed on a Dexterity saving throw or take 2d6 Acid damage from otherworldly tentacles." + AtHigherLevels + "The Cold or Acid damage (my choice) increases by 1d6 for each spell slot level above 3."
+	descriptionFull : "You open a gateway to the Far Realm, a region infested with unspeakable horrors. A 20-foot-radius Sphere of Darkness appears, centered on a point with range and lasting for the duration. The Sphere is Difficult Terrain, and it is filled with strange whispers and slurping noises, which can be heard up to 30 feet away. No light, magical or otherwise, can illuminate the area, and creatures fully within it have the Blinded condition." + "\n   " + "Any creature that starts its turn in the area takes 2d6 Cold damage. Any creature that ends its turn there must succeed on a Dexterity saving throw or take 2d6 Acid damage from otherworldly tentacles." + AtHigherLevels + "The Cold or Acid damage (your choice) increases by 1d6 for each spell slot level above 3."
 });
 legacySpellRefactor("hunter's mark", {
 	name : "Hunter's Mark",
+	nameShort : "Hunter's Mark*",
 	classes : ["ranger"],
 	source : [["PHB2024", 287]],
 	level : 1,
@@ -16773,8 +16829,8 @@ legacySpellRefactor("hunter's mark", {
 	range : "90 ft",
 	components : "V",
 	duration : "Conc, 1 h",
-	description : "1 crea +1d6 Force from my atks; adv. Wis (Percep./Survival) vs crea; bns move; SL3/4: 8h; SL5+: 24h",
-	descriptionFull : "I magically mark one creature I can see within range as my quarry. Until the spell ends, I deal an extra 1d6 Force damage to the target whenever I hit it with an attack roll. I also have Advantage on any Wisdom (Perception or Survival) check I make to find it." + "\n   " + "If the target drops to 0 Hit Points before this spell ends, I can take a Bonus Action to move the mark to a new creature I can see within range." + AtHigherLevels + "my Concentration can last longer with a spell slot of level 3–4 (up to 8 hours) or 5+ (up to 24 hours)."
+	description : "1 crea +1d6 Force my atks; adv. Wis (Percep./Survival) vs crea; bns move if 0HP; SL3/4: 8h; SL5+: 24h",
+	descriptionFull : "You magically mark one creature you can see within range as your quarry. Until the spell ends, you deal an extra 1d6 Force damage to the target whenever you hit it with an attack roll. You also have Advantage on any Wisdom (Perception or Survival) check you make to find it." + "\n   " + "If the target drops to 0 Hit Points before this spell ends, you can take a Bonus Action to move the mark to a new creature you can see within range." + AtHigherLevels + "Your Concentration can last longer with a spell slot of level 3–4 (up to 8 hours) or 5+ (up to 24 hours)."
 });
 legacySpellRefactor("hypnotic pattern", {
 	name : "Hypnotic Pattern",
@@ -16788,8 +16844,8 @@ legacySpellRefactor("hypnotic pattern", {
 	compMaterial : "A pinch of confetti",
 	duration : "Conc, 1 min",
 	save : "Wis",
-	description : "30-ft cube all crea save or Charmed. For duration, Incapacitated, speed 0; 1 a or dmg to end for crea",
-	descriptionFull : "I create a twisting pattern of colors in a 30-foot Cube within range. The pattern appears for a moment and vanishes. Each creature in the area who can see the pattern must succeed on a Wisdom saving throw or have the Charmed condition for the duration. While Charmed, the creature has the Incapacitated condition and a Speed of 0." + "\n   " + "The spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor."
+	description : "30-ft cube all sighted crea save or Charmed; for dur. Incapacitated, speed 0; 1 a or dmg to end for crea",
+	descriptionFull : "You create a twisting pattern of colors in a 30-foot Cube within range. The pattern appears for a moment and vanishes. Each creature in the area who can see the pattern must succeed on a Wisdom saving throw or have the Charmed condition for the duration. While Charmed, the creature has the Incapacitated condition and a Speed of 0." + "\n   " + "The spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor."
 });
 legacySpellRefactor("ice knife", {
 	name : "Ice Knife",
@@ -16805,7 +16861,7 @@ legacySpellRefactor("ice knife", {
 	save : "Dex",
 	description : "Ranged atk for 1d10 Piercing dmg; hit/miss 5-ft rad on target all crea save or 2d6+1d6/SL Cold dmg",
 	descriptionShorter : "Ranged atk 1d10 Piercing dmg; on target 5-ft rad all crea save or 2d6+1d6/SL Cold dmg",
-	descriptionFull : "I create a shard of ice and fling it at one creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 Piercing damage. Hit or miss, the shard then explodes. The target and each creature within 5 feet of it must succeed on a Dexterity saving throw or take 2d6 Cold damage." + AtHigherLevels + "The Cold damage increases by 1d6 for each spell slot level above 1.",
+	descriptionFull : "You create a shard of ice and fling it at one creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 Piercing damage. Hit or miss, the shard then explodes. The target and each creature within 5 feet of it must succeed on a Dexterity saving throw or take 2d6 Cold damage." + AtHigherLevels + "The Cold damage increases by 1d6 for each spell slot level above 1.",
 	dynamicDamageBonus : {
 		skipDmgGroupIfNotMultiple : /(atk .*piercing dmg.*?)/i
 	}
@@ -16822,8 +16878,8 @@ legacySpellRefactor("ice storm", {
 	compMaterial : "A mitten",
 	duration : "Instantaneous",
 	save : "Dex",
-	description : "20ft rad 40ft high cylin. all crea 2d10+1d10/SL Bludg. \u0026 4d6 Cold; save half; dif. ter. to my next EoT",
-	descriptionFull : "Hail falls in a 20-foot-radius, 40-foot-high Cylinder centered on a point within range. Each creature in the Cylinder makes a Dexterity saving throw. A creature takes 2d10 Bludgeoning damage and 4d6 Cold damage on a failed save or half as much damage on a successful one." + "\n   " + "Hailstones turn ground in the Cylinder into Difficult Terrain until the end of my next turn." + AtHigherLevels + "The Bludgeoning damage increases by 1d10 for each spell slot level above 4.",
+	description : "20ft rad 40ft high cylin. all 2d10+1d10/SL Bludg. \u0026 4d6 Cold; save half; dif. ter. to my next EoT",
+	descriptionFull : "Hail falls in a 20-foot-radius, 40-foot-high Cylinder centered on a point within range. Each creature in the Cylinder makes a Dexterity saving throw. A creature takes 2d10 Bludgeoning damage and 4d6 Cold damage on a failed save or half as much damage on a successful one." + "\n   " + "Hailstones turn ground in the Cylinder into Difficult Terrain until the end of your next turn." + AtHigherLevels + "The Bludgeoning damage increases by 1d10 for each spell slot level above 4.",
 	dynamicDamageBonus : { allDmgTypesSingleMoment : true }
 });
 legacySpellRefactor("identify", {
@@ -16839,7 +16895,7 @@ legacySpellRefactor("identify", {
 	compMaterial : "A pearl worth 100+ gp",
 	duration : "Instantaneous",
 	description : "1 crea/obj; if magic or magic-imbued, learn properties, how to use, spells affecting it, see B (100gp)",
-	descriptionFull : "I touch an object throughout the spell's casting. If the object is a magic item or some other magical object, I learn its properties and how to use them, whether it requires Attunement, and how many charges it has, if any. I learn whether any ongoing spells are affecting the item and what they are. If the item was created by a spell, I learn that spell's name." + "\n   " + "If I instead touch a creature throughout the casting, I learn which ongoing spells, if any, are currently affecting it."
+	descriptionFull : "You touch an object throughout the spell's casting. If the object is a magic item or some other magical object, you learn its properties and how to use them, whether it requires Attunement, and how many charges it has, if any. You learn whether any ongoing spells are affecting the item and what they are. If the item was created by a spell, you learn that spell's name." + "\n   " + "If you instead touch a creature throughout the casting, you learn which ongoing spells, if any, are currently affecting it."
 });
 legacySpellRefactor("illusory script", {
 	name : "Illusory Script",
@@ -16854,10 +16910,11 @@ legacySpellRefactor("illusory script", {
 	compMaterial : "Ink worth 10+ gp, which the spell consumes",
 	duration : "10 days",
 	description : "Write a message that only I, designated crea, and any with Truesight can understand (10gp cons.)",
-	descriptionFull : "I write on parchment, paper, or another suitable material and imbue it with an illusion that lasts for the duration." + "\n   " + "To I and any creatures I designate when I cast the spell, the writing appears normal, seems to be written in my hand, and conveys whatever meaning I intended when I wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, the illusion can alter the meaning, handwriting, and language of the text, though the language must be one I know." + "\n   " + "If the spell is dispelled, the original script and the illusion both disappear." + "\n   " + "A creature that has Truesight can read the hidden message."
+	descriptionFull : "You write on parchment, paper, or another suitable material and imbue it with an illusion that lasts for the duration." + "\n   " + "To you and any creatures you designate when you cast the spell, the writing appears normal, seems to be written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, the illusion can alter the meaning, handwriting, and language of the text, though the language must be one you know." + "\n   " + "If the spell is dispelled, the original script and the illusion both disappear." + "\n   " + "A creature that has Truesight can read the hidden message."
 });
 legacySpellRefactor("imprisonment", {
 	name : "Imprisonment",
+	nameShort : "Imprisonment*",
 	classes : ["warlock", "wizard"],
 	source : [["PHB2024", 288]],
 	level : 9,
@@ -16869,7 +16926,7 @@ legacySpellRefactor("imprisonment", {
 	duration : "Till dispelled",
 	save : "Wis",
 	description : "1 crea save or trapped via chosen method; only specific trigger or lvl 9 Dispel to end; see B (5000gp)",
-	descriptionFull : "I create a magical restraint to hold a creature that I can see within range. The target must make a Wisdom saving throw. On a successful save, the target is unaffected, and it is immune to this spell for the next 24 hours. On a failed save, the target is imprisoned. While imprisoned, the target doesn't need to breathe, eat, or drink, and it doesn't age. Divination spells can't locate or perceive the imprisoned target, and the target can't teleport." + "\n   " + "Until the spell ends, the target is also affected by one of the following effects of my choice:" + "\n   " + toUni("Burial") + ": The target is entombed beneath the earth in a hollow globe of magical force that is just large enough to contain the target. Nothing can pass into or out of the globe." + "\n   " + toUni("Chaining") + ": Chains firmly rooted in the ground hold the target in place. The target has the Restrained condition and can't be moved by any means." + "\n   " + toUni("Hedged Prison") + ": The target is trapped in a demiplane that is warded against teleportation and planar travel. The demiplane is my choice of a labyrinth, a cage, a tower, or the like." + "\n   " + toUni("Minimus Containment") + ": The target becomes 1 inch tall and is trapped inside an indestructible gemstone or a similar object. Light can pass through the gemstone (allowing the target to see out and other creatures to see in), but nothing else can pass through by any means." + "\n   " + toUni("Slumber") + ": The target has the Unconscious condition and can't be awoken." + "\n   " + toUni("Ending the Spell") + ": When I cast the spell, specify a trigger that will end it. The trigger can be as simple or as elaborate as I choose, but the DM must agree that it has a high likelihood of happening within the next decade. The trigger must be an observable action, such as someone making a particular offering at the temple of my god, saving my true love, or defeating a specific monster." + "\n   " + "A Dispel Magic spell can end the spell only if it is cast with a level 9 spell slot, targeting either the prison or the component used to create it."
+	descriptionFull : "You create a magical restraint to hold a creature that you can see within range. The target must make a Wisdom saving throw. On a successful save, the target is unaffected, and it is immune to this spell for the next 24 hours. On a failed save, the target is imprisoned. While imprisoned, the target doesn't need to breathe, eat, or drink, and it doesn't age. Divination spells can't locate or perceive the imprisoned target, and the target can't teleport." + "\n   " + "Until the spell ends, the target is also affected by one of the following effects of your choice:" + "\n   " + toUni("Burial") + ": The target is entombed beneath the earth in a hollow globe of magical force that is just large enough to contain the target. Nothing can pass into or out of the globe." + "\n   " + toUni("Chaining") + ": Chains firmly rooted in the ground hold the target in place. The target has the Restrained condition and can't be moved by any means." + "\n   " + toUni("Hedged Prison") + ": The target is trapped in a demiplane that is warded against teleportation and planar travel. The demiplane is your choice of a labyrinth, a cage, a tower, or the like." + "\n   " + toUni("Minimus Containment") + ": The target becomes 1 inch tall and is trapped inside an indestructible gemstone or a similar object. Light can pass through the gemstone (allowing the target to see out and other creatures to see in), but nothing else can pass through by any means." + "\n   " + toUni("Slumber") + ": The target has the Unconscious condition and can't be awoken." + "\n   " + toUni("Ending the Spell") + ": When you cast the spell, specify a trigger that will end it. The trigger can be as simple or as elaborate as you choose, but the DM must agree that it has a high likelihood of happening within the next decade. The trigger must be an observable action, such as someone making a particular offering at the temple of your god, saving your true love, or defeating a specific monster." + "\n   " + "A Dispel Magic spell can end the spell only if it is cast with a level 9 spell slot, targeting either the prison or the component used to create it."
 });
 legacySpellRefactor("incendiary cloud", {
 	name : "Incendiary Cloud",
@@ -16882,9 +16939,9 @@ legacySpellRefactor("incendiary cloud", {
 	components : "V,S",
 	duration : "Conc, 1 min",
 	save : "Dex",
-	description : "20ft rad all cast/cover/enter/end 10d8 Fire; save 1/2; heavily obscures; move 10ft/rnd away chosen dir.",
+	description : "20ft rad all now/cover/enter/end 10d8 Fire; save 1/2; heavily obscures; move 10ft/rnd away chosen dir.",
 	descriptionShorter : "20ft rad all now/cover/enter/end 10d8 Fire; save half; heavy obsc.; moves 10 ft/rnd",
-	descriptionFull : "A swirling cloud of embers and smoke fills a 20-foot-radius Sphere centered on a point within range. The cloud's area is Heavily Obscured. It lasts for the duration or until a strong wind (like that created by Gust of Wind) disperses it." + "\n   " + "When the cloud appears, each creature in it makes a Dexterity saving throw, taking 10d8 Fire damage on a failed save or half as much damage on a successful one. A creature must also make this save when the Sphere moves into its space and when it enters the Sphere or ends its turn there. A creature makes this save only once per turn." + "\n   " + "The cloud moves 10 feet away from I in a direction I choose at the start of each of my turns."
+	descriptionFull : "A swirling cloud of embers and smoke fills a 20-foot-radius Sphere centered on a point within range. The cloud's area is Heavily Obscured. It lasts for the duration or until a strong wind (like that created by Gust of Wind) disperses it." + "\n   " + "When the cloud appears, each creature in it makes a Dexterity saving throw, taking 10d8 Fire damage on a failed save or half as much damage on a successful one. A creature must also make this save when the Sphere moves into its space and when it enters the Sphere or ends its turn there. A creature makes this save only once per turn." + "\n   " + "The cloud moves 10 feet away from you in a direction you choose at the start of each of your turns."
 });
 legacySpellRefactor("inflict wounds", {
 	name : "Inflict Wounds",
@@ -16898,7 +16955,7 @@ legacySpellRefactor("inflict wounds", {
 	save : "Con",
 	duration : "Instantaneous",
 	description : "1 creature 2d10+1d10/SL Necrotic damage; save halves",
-	descriptionFull : "A creature I touch makes a Constitution saving throw, taking 2d10 Necrotic damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage increases by 1d10 for each spell slot level above 1."
+	descriptionFull : "A creature you touch makes a Constitution saving throw, taking 2d10 Necrotic damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage increases by 1d10 for each spell slot level above 1."
 });
 legacySpellRefactor("insect plague", {
 	name : "Insect Plague",
@@ -16914,7 +16971,7 @@ legacySpellRefactor("insect plague", {
 	save : "Con",
 	description : "20-ft rad all now/enter/end 4d10+1d10/SL Piercing (1/turn/crea); save half; light obsc.; dif. ter.",
 	descriptionShorter : "20-ft rad all now/enter/end 4d10+1d10/SL Piercing (1/t/c); save half; light obscures; dif. ter",
-	descriptionFull : "Swarming locusts fill a 20-foot-radius Sphere centered on a point I choose within range. The Sphere remains for the duration, and its area is Lightly Obscured and Difficult Terrain." + "\n   " + "When the swarm appears, each creature in it makes a Constitution saving throw, taking 4d10 Piercing damage on a failed save or half as much damage on a successful one. A creature also makes this save when it enters the spell's area for the first time on a turn or ends its turn there. A creature makes this save only once per turn." + AtHigherLevels + "The damage increases by 1d10 for each spell slot level above 5."
+	descriptionFull : "Swarming locusts fill a 20-foot-radius Sphere centered on a point you choose within range. The Sphere remains for the duration, and its area is Lightly Obscured and Difficult Terrain." + "\n   " + "When the swarm appears, each creature in it makes a Constitution saving throw, taking 4d10 Piercing damage on a failed save or half as much damage on a successful one. A creature also makes this save when it enters the spell's area for the first time on a turn or ends its turn there. A creature makes this save only once per turn." + AtHigherLevels + "The damage increases by 1d10 for each spell slot level above 5."
 });
 legacySpellRefactor("invisibility", {
 	name : "Invisibility",
@@ -16928,11 +16985,11 @@ legacySpellRefactor("invisibility", {
 	compMaterial : "An eyelash in gum arabic",
 	duration : "Conc, 1 h",
 	description : "1+1/SL creatures become Invisible; attacking, casting, or dealing damage ends the spell",
-	descriptionFull : "A creature I touch has the Invisible condition until the spell ends. The spell ends early immediately after the target makes an attack roll, deals damage, or casts a spell." + AtHigherLevels + "I can target one additional creature for each spell slot level above 2."
+	descriptionFull : "A creature you touch has the Invisible condition until the spell ends. The spell ends early immediately after the target makes an attack roll, deals damage, or casts a spell." + AtHigherLevels + "You can target one additional creature for each spell slot level above 2."
 });
 legacySpellRefactor("jallarzi's storm of radiance", {
 	name : "Jallarzi's Storm of Radiance",
-	nameShort : "Jal.'s Storm of Radiance",
+	nameShort : "Jal.'s Storm of Radiance*",
 	classes : ["warlock", "wizard"],
 	source : [["PHB2024", 289]],
 	level : 5,
@@ -16943,8 +17000,8 @@ legacySpellRefactor("jallarzi's storm of radiance", {
 	compMaterial : "A pinch of phosphorus",
 	save : "Con",
 	duration : "Conc, 1 min",
-	description : "20\xD740ft cyl.; in area Blind/Deaf/no V spells; now/enter/end (1/t/c) 2d10+1d10/SL Rad. \u0026 Thdr; save 1/2",
-	descriptionFull : "I unleash a storm of flashing light and raging thunder in a 10-foot-radius, 40-foot-high Cylinder centered on a point I can see within range. While in this area, creatures have the Blinded and Deafened conditions, and they can't cast spells with a Verbal component." + "\n   " + "When the storm appears, each creature in it makes a Constitution saving throw, taking 2d10 Radiant damage and 2d10 Thunder damage on a failed save or half as much damage on a successful one. A creature also makes this save when it enters the spell's area for the first time on a turn or ends its turn there. A creature makes this save only once per turn." + AtHigherLevels + "The Radiant and Thunder damage increase by 1d10 for each spell slot level above 5."
+	description : "20\xD740ft cyl. crea Blind/Deaf/no V spells; all now/enter/end (1/t/c) 2d10+1d10/SL Rad. \u0026 Thdr; save 1/2",
+	descriptionFull : "You unleash a storm of flashing light and raging thunder in a 10-foot-radius, 40-foot-high Cylinder centered on a point you can see within range. While in this area, creatures have the Blinded and Deafened conditions, and they can't cast spells with a Verbal component." + "\n   " + "When the storm appears, each creature in it makes a Constitution saving throw, taking 2d10 Radiant damage and 2d10 Thunder damage on a failed save or half as much damage on a successful one. A creature also makes this save when it enters the spell's area for the first time on a turn or ends its turn there. A creature makes this save only once per turn." + AtHigherLevels + "The Radiant and Thunder damage increase by 1d10 for each spell slot level above 5."
 });
 legacySpellRefactor("jump", {
 	name : "Jump",
@@ -16958,10 +17015,11 @@ legacySpellRefactor("jump", {
 	compMaterial : "A grasshopper's hind leg",
 	duration : "1 min",
 	description : "1+1/SL creature can spend 10 ft movement to jump 30 ft once per turn",
-	descriptionFull : "I touch a willing creature. Once on each of its turns until the spell ends, that creature can jump up to 30 feet by spending 10 feet of movement." + AtHigherLevels + "I can target one additional creature for each spell slot level above 1."
+	descriptionFull : "You touch a willing creature. Once on each of its turns until the spell ends, that creature can jump up to 30 feet by spending 10 feet of movement." + AtHigherLevels + "You can target one additional creature for each spell slot level above 1."
 });
 legacySpellRefactor("knock", {
 	name : "Knock",
+	nameShort : "Knock*",
 	classes : ["bard", "sorcerer", "wizard"],
 	source : [["PHB2024", 290]],
 	level : 2,
@@ -16971,7 +17029,7 @@ legacySpellRefactor("knock", {
 	components : "V",
 	duration : "Instantaneous",
 	description : "1 object unlocked (1 lock), unstuck, unbarred, Arcane Lock suppressed for 10 min; audible 300 ft",
-	descriptionFull : "Choose an object that I can see within range. The object can be a door, a box, a chest, a set of manacles, a padlock, or another object that contains a mundane or magical means that prevents access." + "\n   " + "A target that is held shut by a mundane lock or that is stuck or barred becomes unlocked, unstuck, or unbarred. If the object has multiple locks, only one of them is unlocked." + "\n   " + "If the target is held shut by Arcane Lock, that spell is suppressed for 10 minutes, during which time the target can be opened and closed." + "\n   " + "When I cast the spell, a loud knock, audible up to 300 feet away, emanates from the target object."
+	descriptionFull : "Choose an object that you can see within range. The object can be a door, a box, a chest, a set of manacles, a padlock, or another object that contains a mundane or magical means that prevents access." + "\n   " + "A target that is held shut by a mundane lock or that is stuck or barred becomes unlocked, unstuck, or unbarred. If the object has multiple locks, only one of them is unlocked." + "\n   " + "If the target is held shut by Arcane Lock, that spell is suppressed for 10 minutes, during which time the target can be opened and closed." + "\n   " + "When you cast the spell, a loud knock, audible up to 300 feet away, emanates from the target object."
 });
 legacySpellRefactor("legend lore", {
 	name : "Legend Lore",
@@ -16985,7 +17043,7 @@ legacySpellRefactor("legend lore", {
 	compMaterial : "Incense worth 250+ gp, which the spell consumes, and four ivory strips worth 50+ gp each",
 	duration : "Instantaneous",
 	description : "Receive lore summary of famous person, place, or object; spell fails if not famous (200gp; 250gp cons.)",
-	descriptionFull : "Name or describe a famous person, place, or object. The spell brings to my mind a brief summary of the significant lore about that famous thing, as described by the DM." + "\n   " + "The lore might consist of important details, amusing revelations, or even secret lore that has never been widely known. The more information I already know about the thing, the more precise and detailed the information I receive is. That information is accurate but might be couched in figurative language or poetry, as determined by the DM." + "\n   " + "If the famous thing I chose isn't actually famous, I hear sad musical notes played on a trombone, and the spell fails."
+	descriptionFull : "Name or describe a famous person, place, or object. The spell brings to your mind a brief summary of the significant lore about that famous thing, as described by the DM." + "\n   " + "The lore might consist of important details, amusing revelations, or even secret lore that has never been widely known. The more information you already know about the thing, the more precise and detailed the information you receive is. That information is accurate but might be couched in figurative language or poetry, as determined by the DM." + "\n   " + "If the famous thing you chose isn't actually famous, you hear sad musical notes played on a trombone, and the spell fails."
 });
 legacySpellRefactor("leomund's secret chest", {
 	name : "Leomund's Secret Chest",
@@ -17000,7 +17058,7 @@ legacySpellRefactor("leomund's secret chest", {
 	compMaterial : "A chest, 3 feet by 2 feet by 2 feet, constructed from rare materials worth 5,000+ gp, and a Tiny replica of the chest made from the same materials worth 50+ gp",
 	duration : "Till dispelled",
 	description : "Hide chest with contents in Ethereal Plane for 60 days, after that chance of loss; 1 a to recall (5050gp)",
-	descriptionFull : "I hide a chest and all its contents on the Ethereal Plane. I must touch the chest and the miniature replica that serve as Material components for the spell. The chest can contain up to 12 cubic feet of nonliving material (3 feet by 2 feet by 2 feet)." + "\n   " + "While the chest remains on the Ethereal Plane, I can take a Magic action and touch the replica to recall the chest. It appears in an unoccupied space on the ground within 5 feet of I. I can send the chest back to the Ethereal Plane by taking a Magic action to touch the chest and the replica." + "\n   " + "After 60 days, there is a cumulative 5 percent chance at the end of each day that the spell ends. The spell also ends if I cast this spell again or if the Tiny replica chest is destroyed. If the spell ends and the larger chest is on the Ethereal Plane, the chest remains there for I or someone else to find."
+	descriptionFull : "You hide a chest and all its contents on the Ethereal Plane. You must touch the chest and the miniature replica that serve as Material components for the spell. The chest can contain up to 12 cubic feet of nonliving material (3 feet by 2 feet by 2 feet)." + "\n   " + "While the chest remains on the Ethereal Plane, you can take a Magic action and touch the replica to recall the chest. It appears in an unoccupied space on the ground within 5 feet of you. You can send the chest back to the Ethereal Plane by taking a Magic action to touch the chest and the replica." + "\n   " + "After 60 days, there is a cumulative 5 percent chance at the end of each day that the spell ends. The spell also ends if you cast this spell again or if the Tiny replica chest is destroyed. If the spell ends and the larger chest is on the Ethereal Plane, the chest remains there for you or someone else to find."
 });
 legacySpellRefactor("leomund's tiny hut", {
 	name : "Leomund's Tiny Hut",
@@ -17016,7 +17074,7 @@ legacySpellRefactor("leomund's tiny hut", {
 	compMaterial : "A crystal bead",
 	duration : "8 h",
 	description : "Immobile barrier; blocks magic \u0026 crea/obj not in area when cast; ends if I leave/recast; see B",
-	descriptionFull : "A 10-foot Emanation springs into existence around I and remains stationary for the duration. The spell fails when I cast it if the Emanation isn't big enough to fully encapsulate all creatures in its area." + "\n   " + "Creatures and objects within the Emanation when I cast the spell can move through it freely. All other creatures and objects are barred from passing through it. Spells of level 3 or lower can't be cast through it, and the effects of such spells can't extend into it." + "\n   " + "The atmosphere inside the Emanation is comfortable and dry, regardless of the weather outside. Until the spell ends, I can command the interior to have Dim Light or Darkness (no action required). The Emanation is opaque from the outside and of any color I choose, but it's transparent from the inside." + "\n   " + "The spell ends early if I leave the Emanation or if I cast it again."
+	descriptionFull : "A 10-foot Emanation springs into existence around you and remains stationary for the duration. The spell fails when you cast it if the Emanation isn't big enough to fully encapsulate all creatures in its area." + "\n   " + "Creatures and objects within the Emanation when you cast the spell can move through it freely. All other creatures and objects are barred from passing through it. Spells of level 3 or lower can't be cast through it, and the effects of such spells can't extend into it." + "\n   " + "The atmosphere inside the Emanation is comfortable and dry, regardless of the weather outside. Until the spell ends, you can command the interior to have Dim Light or Darkness (no action required). The Emanation is opaque from the outside and of any color you choose, but it's transparent from the inside." + "\n   " + "The spell ends early if you leave the Emanation or if you cast it again."
 });
 legacySpellRefactor("lesser restoration", {
 	name : "Lesser Restoration",
@@ -17029,10 +17087,11 @@ legacySpellRefactor("lesser restoration", {
 	components : "V,S",
 	duration : "Instantaneous",
 	description : "1 creature cured of Blinded, Deafened, Paralyzed, or Poisoned",
-	descriptionFull : "I touch a creature and end one condition on it: Blinded, Deafened, Paralyzed, or Poisoned."
+	descriptionFull : "You touch a creature and end one condition on it: Blinded, Deafened, Paralyzed, or Poisoned."
 });
 legacySpellRefactor("levitate", {
 	name : "Levitate",
+	nameShort : "Levitate*",
 	classes : ["artificer","sorcerer", "wizard"],
 	source : [["PHB2024", 291]],
 	level : 2,
@@ -17043,8 +17102,8 @@ legacySpellRefactor("levitate", {
 	compMaterial : "A metal spring",
 	duration : "Conc, 10 min",
 	save : "Con",
-	description : "1 crea/500 lb object save or rise vertically, up to 20 ft; 1 a move target up/down 20 ft (move a if me)",
-	descriptionFull : "One creature or loose object of my choice that I can see within range rises vertically up to 20 feet and remains suspended there for the duration. The spell can levitate an object that weighs up to 500 pounds. An unwilling creature that succeeds on a Constitution saving throw is unaffected." + "\n   " + "The target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move as if it were climbing. I can change the target's altitude by up to 20 feet in either direction on my turn. If I are the target, I can move up or down as part of my move. Otherwise, I can take a Magic action to move the target, which must remain within the spell's range." + "\n   " + "When the spell ends, the target floats gently to the ground if it is still aloft."
+	description : "1 crea/\u2264500 lb object save or rise vertically, up to 20 ft; 1 a move target up/down 20 ft (move a if me)",
+	descriptionFull : "One creature or loose object of your choice that you can see within range rises vertically up to 20 feet and remains suspended there for the duration. The spell can levitate an object that weighs up to 500 pounds. An unwilling creature that succeeds on a Constitution saving throw is unaffected." + "\n   " + "The target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move as if it were climbing. You can change the target's altitude by up to 20 feet in either direction on your turn. If you are the target, you can move up or down as part of your move. Otherwise, you can take a Magic action to move the target, which must remain within the spell's range." + "\n   " + "When the spell ends, the target floats gently to the ground if it is still aloft."
 });
 legacySpellRefactor("light", {
 	name : "Light",
@@ -17057,8 +17116,8 @@ legacySpellRefactor("light", {
 	components : "V,M",
 	compMaterial : "A firefly or phosphorescent moss",
 	duration : "1 h",
-	description : "1 unattended obj up to Large sheds 20-ft rad bright light and another 20-ft dim light; 1 instance only",
-	descriptionFull : "I touch one Large or smaller object that isn't being worn or carried by someone else. Until the spell ends, the object sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. The light can be colored as I like." + "\n   " + "Covering the object with something opaque blocks the light. The spell ends if I cast it again."
+	description : "1 unattended obj \u2264Large emits 20-ft rad bright light and 20-ft rad dim light; 1 instance only",
+	descriptionFull : "You touch one Large or smaller object that isn't being worn or carried by someone else. Until the spell ends, the object sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. The light can be colored as you like." + "\n   " + "Covering the object with something opaque blocks the light. The spell ends if you cast it again."
 });
 legacySpellRefactor("lightning arrow", {
 	name : "Lightning Arrow",
@@ -17067,14 +17126,14 @@ legacySpellRefactor("lightning arrow", {
 	level : 3,
 	school : "Trans",
 	time : "1 bns*",
-	timeFull : "Bonus Action, which I take immediately after hitting or missing a target with a ranged attack using a weapon",
+	timeFull : "Bonus Action, which you take immediately after hitting or missing a target with a ranged attack using a weapon",
 	range : "Self",
 	components : "V,S",
 	duration : "Instantaneous",
 	save : "Dex",
-	description : "Rngd wea atk hit 4d8+1d8/SL Lghtng, if missed half; all 10ft Dex save or 2d8+1d8/SL Lghtng, save half",
-	descriptionShorter : "Rngd wea atk 4d8+1d8/SL Lghtng, miss h" + (typePF ? "a" : "") + "lf; 10ft all 2d8+1d8/SL Lghtng, save half",
-	descriptionFull : "As my attack hits or misses the target, the weapon or ammunition I're using transforms into a lightning bolt. Instead of taking any damage or other effects from the attack, the target takes 4d8 Lightning damage on a hit or half as much damage on a miss. Each creature within 10 feet of the target then makes a Dexterity saving throw, taking 2d8 Lightning damage on a failed save or half as much damage on a successful one." + "\n   " + "The weapon or ammunition then returns to its normal form." + AtHigherLevels + "The damage for both effects of the spell increases by 1d8 for each spell slot level above 3.",
+	description : "After rngd wea atk: hit 4d8+1d8/SL Lightn., half on miss; all in 10ft save or 2d8+1d8/SL Lightn., save 1/2",
+	descriptionShorter : "Rngd wea atk 4d8+1d8/SL Lightn., miss h" + (typePF ? "a" : "") + "lf; 10ft all 2d8+1d8/SL Lightn., save half",
+	descriptionFull : "As your attack hits or misses the target, the weapon or ammunition you're using transforms into a lightning bolt. Instead of taking any damage or other effects from the attack, the target takes 4d8 Lightning damage on a hit or half as much damage on a miss. Each creature within 10 feet of the target then makes a Dexterity saving throw, taking 2d8 Lightning damage on a failed save or half as much damage on a successful one." + "\n   " + "The weapon or ammunition then returns to its normal form." + AtHigherLevels + "The damage for both effects of the spell increases by 1d8 for each spell slot level above 3.",
 	dynamicDamageBonus : {
 		multipleDmgMoments : false,
 		skipDmgGroupIfNotMultiple : /(atk .*?lightn\. dmg.*?)/i
@@ -17093,7 +17152,7 @@ legacySpellRefactor("lightning bolt", {
 	duration : "Instantaneous",
 	save : "Dex",
 	description : "100-ft long 5-ft wide line all creatures 8d6+1d6/SL Lightning damage; save halves",
-	descriptionFull : "A stroke of lightning forming a 100-foot-long, 5-foot-wide Line blasts out from I in a direction I choose. Each creature in the Line makes a Dexterity saving throw, taking 8d6 Lightning damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 3."
+	descriptionFull : "A stroke of lightning forming a 100-foot-long, 5-foot-wide Line blasts out from you in a direction you choose. Each creature in the Line makes a Dexterity saving throw, taking 8d6 Lightning damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 3."
 });
 legacySpellRefactor("locate animals or plants", {
 	name : "Locate Animals or Plants",
@@ -17109,7 +17168,7 @@ legacySpellRefactor("locate animals or plants", {
 	compMaterial : "Fur from a bloodhound",
 	duration : "Instantaneous",
 	description : "Learn direction and distance to closest named or described kind of beast or plant within 5 miles",
-	descriptionFull : "Describe or name a specific kind of Beast, Plant creature, or nonmagical plant. I learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present."
+	descriptionFull : "Describe or name a specific kind of Beast, Plant creature, or nonmagical plant. You learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present."
 });
 legacySpellRefactor("locate creature", {
 	name : "Locate Creature",
@@ -17123,7 +17182,7 @@ legacySpellRefactor("locate creature", {
 	compMaterial : "Fur from a bloodhound",
 	duration : "Conc, 1 h",
 	description : "Learn direction to closest named or described familiar creature (specific or kind) in 1000 ft; see book",
-	descriptionFull : "Describe or name a creature that is familiar to I. I sense the direction to the creature's location if that creature is within 1,000 feet of I. If the creature is moving, I know the direction of its movement." + "\n   " + "The spell can locate a specific creature known to I or the nearest creature of a specific kind (such as a human or a unicorn) if I have seen such a creature up close — within 30 feet — at least once. If the creature I described or named is in a different form, such as under the effects of a Flesh to Stone or Polymorph spell, this spell doesn't locate the creature." + "\n   " + "This spell can't locate a creature if any thickness of lead blocks a direct path between I and the creature."
+	descriptionFull : "Describe or name a creature that is familiar to you. You sense the direction to the creature's location if that creature is within 1,000 feet of you. If the creature is moving, you know the direction of its movement." + "\n   " + "The spell can locate a specific creature known to you or the nearest creature of a specific kind (such as a human or a unicorn) if you have seen such a creature up close — within 30 feet — at least once. If the creature you described or named is in a different form, such as under the effects of a Flesh to Stone or Polymorph spell, this spell doesn't locate the creature." + "\n   " + "This spell can't locate a creature if any thickness of lead blocks a direct path between you and the creature."
 });
 legacySpellRefactor("locate object", {
 	name : "Locate Object",
@@ -17137,7 +17196,7 @@ legacySpellRefactor("locate object", {
 	compMaterial : "A forked twig",
 	duration : "Conc, 10 min",
 	description : "Learn direction to closest named or described familiar object (specific or kind) in 1000 ft; see book",
-	descriptionFull : "Describe or name an object that is familiar to I. I sense the direction to the object's location if that object is within 1,000 feet of I. If the object is in motion, I know the direction of its movement." + "\n   " + "The spell can locate a specific object known to I if I have seen it up close — within 30 feet — at least once. Alternatively, the spell can locate the nearest object of a particular kind, such as a certain kind of apparel, jewelry, furniture, tool, or weapon." + "\n   " + "This spell can't locate an object if any thickness of lead blocks a direct path between I and the object."
+	descriptionFull : "Describe or name an object that is familiar to you. You sense the direction to the object's location if that object is within 1,000 feet of you. If the object is in motion, you know the direction of its movement." + "\n   " + "The spell can locate a specific object known to you if you have seen it up close — within 30 feet — at least once. Alternatively, the spell can locate the nearest object of a particular kind, such as a certain kind of apparel, jewelry, furniture, tool, or weapon." + "\n   " + "This spell can't locate an object if any thickness of lead blocks a direct path between you and the object."
 });
 legacySpellRefactor("longstrider", {
 	name : "Longstrider",
@@ -17150,8 +17209,8 @@ legacySpellRefactor("longstrider", {
 	components : "V,S,M",
 	compMaterial : "A pinch of dirt",
 	duration : "1 h",
-	description : "1+1/SL creature's Speed increases by 10 ft for the duration",
-	descriptionFull : "I touch a creature. The target's Speed increases by 10 feet until the spell ends." + AtHigherLevels + "I can target one additional creature for each spell slot level above 1."
+	description : "1+1/SL creature's speed increases by 10 ft for the duration",
+	descriptionFull : "You touch a creature. The target's Speed increases by 10 feet until the spell ends." + AtHigherLevels + "You can target one additional creature for each spell slot level above 1."
 });
 legacySpellRefactor("mage armor", {
 	name : "Mage Armor",
@@ -17165,7 +17224,7 @@ legacySpellRefactor("mage armor", {
 	compMaterial : "A piece of cured leather",
 	duration : "8 h",
 	description : "1 creature that isn't wearing armor has AC 13 + Dex modifier; spell ends if it dons armor",
-	descriptionFull : "I touch a willing creature who isn't wearing armor. Until the spell ends, the target's base AC becomes 13 plus its Dexterity modifier. The spell ends early if the target dons armor."
+	descriptionFull : "You touch a willing creature who isn't wearing armor. Until the spell ends, the target's base AC becomes 13 plus its Dexterity modifier. The spell ends early if the target dons armor."
 });
 legacySpellRefactor("mage hand", {
 	name : "Mage Hand",
@@ -17178,10 +17237,11 @@ legacySpellRefactor("mage hand", {
 	components : "V,S",
 	duration : "1 min",
 	description : "Spectral hand does simple task in 30ft; carries up to 10 lb; 1 a to control again; only 1 instance ",
-	descriptionFull : "A spectral, floating hand appears at a point I choose within range. The hand lasts for the duration. The hand vanishes if it is ever more than 30 feet away from I or if I cast this spell again." + "\n   " + "When I cast the spell, I can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial." + "\n   " + "As a Magic action on my later turns, I can control the hand thus again. As part of that action, I can move the hand up to 30 feet.." + "\n   " + "The hand can't attack, activate magic items, or carry more than 10 pounds."
+	descriptionFull : "A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell again." + "\n   " + "When you cast the spell, you can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial." + "\n   " + "As a Magic action on your later turns, you can control the hand thus again. As part of that action, you can move the hand up to 30 feet.." + "\n   " + "The hand can't attack, activate magic items, or carry more than 10 pounds."
 });
 legacySpellRefactor("magic circle", {
 	name : "Magic Circle",
+	nameShort : "Magic Circle*",
 	classes : ["cleric", "paladin", "warlock", "wizard"],
 	source : [["PHB2024", 293]],
 	level : 3,
@@ -17192,10 +17252,11 @@ legacySpellRefactor("magic circle", {
 	compMaterial : "Salt and powdered silver worth 100+ gp, which the spell consumes",
 	duration : "1 h",
 	description : "20\xD720ft cyl.; celes, elem, fey, fiends, undead can't go in/out; dis on atk; +1h/SL dur.; see B (100gp cons.)",
-	descriptionFull : "I create a 10-foot-radius, 20-foot-tall cylinder of magical energy centered on a point on the ground that I can see within range. Glowing runes appear wherever the cylinder intersects with the floor or other surface." + "\n   " + "Choose one or more of the following types of creatures: Celestials, Elementals, Fey, Fiends, or Undead. The circle affects a creature of the chosen type in the following ways:" + "\n " + "\u2022 The creature can't willingly enter the cylinder by nonmagical means. If the creature tries to use teleportation or interplanar travel to do so, it must first succeed on a Charisma saving throw." + "\n " + "\u2022 The creature has Disadvantage on attack rolls against targets within the Cylinder." + "\n " + "\u2022 Targets within the Cylinder can't be possessed by or gain the Charmed or Frightened condition from the creature." + "\n\n" + "Each time I cast this spell, I can cause its magic to operate in the reverse direction, preventing a creature of the specified type from leaving the Cylinder and protecting targets outside it." + AtHigherLevels + "The duration increases by 1 hour for each spell slot level above 3."
+	descriptionFull : "You create a 10-foot-radius, 20-foot-tall cylinder of magical energy centered on a point on the ground that you can see within range. Glowing runes appear wherever the cylinder intersects with the floor or other surface." + "\n   " + "Choose one or more of the following types of creatures: Celestials, Elementals, Fey, Fiends, or Undead. The circle affects a creature of the chosen type in the following ways:" + "\n " + "\u2022 The creature can't willingly enter the cylinder by nonmagical means. If the creature tries to use teleportation or interplanar travel to do so, it must first succeed on a Charisma saving throw." + "\n " + "\u2022 The creature has Disadvantage on attack rolls against targets within the Cylinder." + "\n " + "\u2022 Targets within the Cylinder can't be possessed by or gain the Charmed or Frightened condition from the creature." + "\n\n" + "Each time you cast this spell, you can cause its magic to operate in the reverse direction, preventing a creature of the specified type from leaving the Cylinder and protecting targets outside it." + AtHigherLevels + "The duration increases by 1 hour for each spell slot level above 3."
 });
 legacySpellRefactor("magic jar", {
 	name : "Magic Jar",
+	nameShort : "Magic Jar*",
 	classes : ["wizard"],
 	source : [["PHB2024", 294]],
 	level : 6,
@@ -17206,10 +17267,11 @@ legacySpellRefactor("magic jar", {
 	compMaterial : "A gem, crystal, reliquary worth 500+ gp",
 	duration : "Till dispelled",
 	description : "Transport my soul into container from which I can attempt to possess humanoids; see book (500gp)",
-	descriptionFull : "my body falls into a catatonic state as my soul leaves it and enters the container I used for the spell's Material component. While my soul inhabits the container, I are aware of my surroundings as if I were in the container's space. I can't move or take Reactions. The only action I can take is to project my soul up to 100 feet out of the container, either returning to my living body (and ending the spell) or attempting to possess a Humanoid's body." + "\n   " + "I can attempt to possess any Humanoid within 100 feet of I that I can see (creatures warded by a Protection from Evil and Good or Magic Circle spell can't be possessed). The target makes a Charisma saving throw. On a failed save, my soul enters the target's body, and the target's soul becomes trapped in the container. On a successful save, the target resists my efforts to possess it, and I can't attempt to possess it again for 24 hours." + "\n   " + "Once I possess a creature's body, I control it. my Hit Points, Hit Point Dice, Strength, Dexterity, Constitution, Speed, and senses are replaced by the creature's. I otherwise keep my game statistics." + "\n   " + "Meanwhile, the possessed creature's soul can perceive from the container using its own senses, but it can't move and it is Incapacitated." + "\n   " + "While possessing a body, I can take a Magic action to return from the host body to the container if it is within 100 feet of I, returning the host creature's soul to its body. If the host body dies while I're in it, the creature dies, and I make a Charisma saving throw against my own spellcasting DC. On a success, I return to the container if it is within 100 feet of I. Otherwise, I die." + "\n   " + "If the container is destroyed or the spell ends, my soul returns to my body. If my body is more than 100 feet away from I or if my body is dead, I die. If another creature's soul is in the container when it is destroyed, the creature's soul returns to its body if the body is alive and within 100 feet. Otherwise, that creature dies." + "\n   " + "When the spell ends, the container is destroyed."
+	descriptionFull : "Your body falls into a catatonic state as your soul leaves it and enters the container you used for the spell's Material component. While your soul inhabits the container, you are aware of your surroundings as if you were in the container's space. You can't move or take Reactions. The only action you can take is to project your soul up to 100 feet out of the container, either returning to your living body (and ending the spell) or attempting to possess a Humanoid's body." + "\n   " + "You can attempt to possess any Humanoid within 100 feet of you that you can see (creatures warded by a Protection from Evil and Good or Magic Circle spell can't be possessed). The target makes a Charisma saving throw. On a failed save, your soul enters the target's body, and the target's soul becomes trapped in the container. On a successful save, the target resists your efforts to possess it, and you can't attempt to possess it again for 24 hours." + "\n   " + "Once you possess a creature's body, you control it. Your Hit Points, Hit Point Dice, Strength, Dexterity, Constitution, Speed, and senses are replaced by the creature's. You otherwise keep your game statistics." + "\n   " + "Meanwhile, the possessed creature's soul can perceive from the container using its own senses, but it can't move and it is Incapacitated." + "\n   " + "While possessing a body, you can take a Magic action to return from the host body to the container if it is within 100 feet of you, returning the host creature's soul to its body. If the host body dies while you're in it, the creature dies, and you make a Charisma saving throw against your own spellcasting DC. On a success, you return to the container if it is within 100 feet of you. Otherwise, you die." + "\n   " + "If the container is destroyed or the spell ends, your soul returns to your body. If your body is more than 100 feet away from you or if your body is dead, you die. If another creature's soul is in the container when it is destroyed, the creature's soul returns to its body if the body is alive and within 100 feet. Otherwise, that creature dies." + "\n   " + "When the spell ends, the container is destroyed."
 });
 legacySpellRefactor("magic missile", {
 	name : "Magic Missile",
+	nameShort : "Magic Missile*",
 	classes : ["sorcerer", "wizard"],
 	source : [["PHB2024", 295]],
 	level : 1,
@@ -17218,12 +17280,13 @@ legacySpellRefactor("magic missile", {
 	range : "120 ft",
 	components : "V,S",
 	duration : "Instantaneous",
-	description : "3+1/SL darts hit creature(s) I can see for 1d4+1 Force dmg per dart",
-	descriptionFull : "I create three glowing darts of magical force. Each dart strikes a creature of my choice that I can see within range. A dart deals 1d4 + 1 Force damage to its target. The darts all strike simultaneously, and I can direct them to hit one creature or several." + AtHigherLevels + "The spell creates one more dart for each spell slot level above 1.",
+	description : "3+1/SL darts hit same or different creatures for 1d4+1 Force dmg per dart",
+	descriptionFull : "You create three glowing darts of magical force. Each dart strikes a creature of your choice that you can see within range. A dart deals 1d4 + 1 Force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several." + AtHigherLevels + "The spell creates one more dart for each spell slot level above 1.",
 	dynamicDamageBonus : { multipleDmgMoments : true }
 });
 legacySpellRefactor("magic mouth", {
 	name : "Magic Mouth",
+	nameShort : "Magic Mouth*",
 	classes : ["artificer","bard", "wizard"],
 	source : [["PHB2024", 295]],
 	ritual : true,
@@ -17235,7 +17298,7 @@ legacySpellRefactor("magic mouth", {
 	compMaterial : "Jade dust worth 10+ gp, which the spell consumes",
 	duration : "Till dispelled",
 	description : "Implant message into object (up to 25 words \u0026 10 min) that is uttered on chosen trigger (10gp cons.)",
-	descriptionFull : "I implant a message within an object in range — a message that is uttered when a trigger condition is met. Choose an object that I can see and that isn't being worn or carried by another creature. Then speak the message, which must be 25 words or fewer, though it can be delivered over as long as 10 minutes. Finally, determine the circumstance that will trigger the spell to deliver my message." + "\n   " + "When that trigger occurs, a magical mouth appears on the object and recites the message in my voice and at the same volume I spoke. If the object I chose has a mouth or something that looks like a mouth (for example, the mouth of a statue), the magical mouth appears there, so the words appear to come from the object's mouth. When I cast this spell, I can have the spell end after it delivers its message, or it can remain and repeat its message whenever the trigger occurs." + "\n   " + "The trigger can be as general or as detailed as I like, though it must be based on visual or audible conditions that occur within 30 feet of the object. For example, I could instruct the mouth to speak when any creature moves within 30 feet of the object or when a silver bell rings within 30 feet of it."
+	descriptionFull : "You implant a message within an object in range — a message that is uttered when a trigger condition is met. Choose an object that you can see and that isn't being worn or carried by another creature. Then speak the message, which must be 25 words or fewer, though it can be delivered over as long as 10 minutes. Finally, determine the circumstance that will trigger the spell to deliver your message." + "\n   " + "When that trigger occurs, a magical mouth appears on the object and recites the message in your voice and at the same volume you spoke. If the object you chose has a mouth or something that looks like a mouth (for example, the mouth of a statue), the magical mouth appears there, so the words appear to come from the object's mouth. When you cast this spell, you can have the spell end after it delivers its message, or it can remain and repeat its message whenever the trigger occurs." + "\n   " + "The trigger can be as general or as detailed as you like, though it must be based on visual or audible conditions that occur within 30 feet of the object. For example, you could instruct the mouth to speak when any creature moves within 30 feet of the object or when a silver bell rings within 30 feet of it."
 });
 legacySpellRefactor("magic weapon", {
 	name : "Magic Weapon",
@@ -17248,10 +17311,11 @@ legacySpellRefactor("magic weapon", {
 	components : "V,S",
 	duration : "1 h",
 	description : "1 nonmagical weapon becomes magical with +1 to atk \u0026 dmg; 1 instance only; SL3+: +2, SL6+: +3",
-	descriptionFull : "I touch a nonmagical weapon. Until the spell ends, that weapon becomes a magic weapon with a +1 bonus to attack rolls and damage rolls. The spell ends early if I cast it again." + AtHigherLevels + "The bonus increases to +2 with a level 3–5 spell slot. The bonus increases to +3 with a level 6+ spell slot."
+	descriptionFull : "You touch a nonmagical weapon. Until the spell ends, that weapon becomes a magic weapon with a +1 bonus to attack rolls and damage rolls. The spell ends early if you cast it again." + AtHigherLevels + "The bonus increases to +2 with a level 3–5 spell slot. The bonus increases to +3 with a level 6+ spell slot."
 });
 legacySpellRefactor("major image", {
 	name : "Major Image",
+	nameShort : "Major Image*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 295]],
 	level : 3,
@@ -17262,10 +17326,11 @@ legacySpellRefactor("major image", {
 	compMaterial : "A bit of fleece",
 	duration : "Conc, 10 min",
 	description : "20-ft cube illusion includes sight, sounds, smells, temperature; 1 a move; SL4+: no conc; see book",
-	descriptionFull : "I create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot Cube. The image appears at a spot that I can see within range and lasts for the duration. It seems real, including sounds, smells, and temperature appropriate to the thing depicted, but it can't deal damage or cause conditions." + "\n   " + "If I are within range of the illusion, I can take a Magic action to cause the image to move to any other spot within range. As the image changes location, I can alter its appearance so that its movements appear natural for the image. For example, if I create an image of a creature and move it, I can alter the image so that it appears to be walking. Similarly, I can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example." + "\n   " + "Physical interaction with the image reveals it to be an illusion, for things can pass through it. A creature that takes a Study action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against my spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature." + AtHigherLevels + "The spell lasts until dispelled, without requiring Concentration, if cast with a level 4+ spell slot."
+	descriptionFull : "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot Cube. The image appears at a spot that you can see within range and lasts for the duration. It seems real, including sounds, smells, and temperature appropriate to the thing depicted, but it can't deal damage or cause conditions." + "\n   " + "If you are within range of the illusion, you can take a Magic action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example." + "\n   " + "Physical interaction with the image reveals it to be an illusion, for things can pass through it. A creature that takes a Study action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature." + AtHigherLevels + "The spell lasts until dispelled, without requiring Concentration, if cast with a level 4+ spell slot."
 });
 legacySpellRefactor("mass cure wounds", {
 	name : "Mass Cure Wounds",
+	nameShort : "Mass Cure Wounds*",
 	classes : ["bard", "cleric", "druid"],
 	source : [["PHB2024", 296]],
 	level : 5,
@@ -17274,11 +17339,12 @@ legacySpellRefactor("mass cure wounds", {
 	range : "60 ft",
 	components : "V,S",
 	duration : "Instantaneous",
-	description : "6 creatures within 30-ft rad heal 5d8+1d8/SL+spellcasting ability modifier HP",
-	descriptionFull : "A wave of healing energy washes out from a point I can see within range. Choose up to six creatures in a 30-foot-radius Sphere centered on that point. Each target regains Hit Points equal to 5d8 plus my spellcasting ability modifier." + AtHigherLevels + "The healing increases by 1d8 for each spell slot level above 5."
+	description : "6 creatures within 30-ft rad of visible point heal 5d8+1d8/SL+spellcasting ability modifier HP",
+	descriptionFull : "A wave of healing energy washes out from a point you can see within range. Choose up to six creatures in a 30-foot-radius Sphere centered on that point. Each target regains Hit Points equal to 5d8 plus your spellcasting ability modifier." + AtHigherLevels + "The healing increases by 1d8 for each spell slot level above 5."
 });
 legacySpellRefactor("mass heal", {
 	name : "Mass Heal",
+	nameShort : "Mass Heal*",
 	classes : ["cleric"],
 	source : [["PHB2024", 296]],
 	level : 9,
@@ -17287,12 +17353,13 @@ legacySpellRefactor("mass heal", {
 	range : "60 ft",
 	components : "V,S",
 	duration : "Instantaneous",
-	description : "Heal 700 HP split among any visible crea; each healed also cured of Blinded, Deafened, and Poisoned",
+	description : "Heal 700 HP split among any creatures; each healed also cured of Blinded, Deafened, and Poisoned",
 	descriptionShorter : "Heal 700 HP split over any crea in range; each healed cured of blindness, deafness, poison",
-	descriptionFull : "A flood of healing energy flows from I into creatures around I. I restore up to 700 Hit Points, divided as I choose among any number of creatures that I can see within range. Creatures healed by this spell also have the Blinded, Deafened, and Poisoned conditions removed from them."
+	descriptionFull : "A flood of healing energy flows from you into creatures around you. You restore up to 700 Hit Points, divided as you choose among any number of creatures that you can see within range. Creatures healed by this spell also have the Blinded, Deafened, and Poisoned conditions removed from them."
 });
 legacySpellRefactor("mass healing word", {
 	name : "Mass Healing Word",
+	nameShort : "Mass Healing Word*",
 	classes : ["bard", "cleric"],
 	source : [["PHB2024", 296]],
 	level : 3,
@@ -17301,11 +17368,12 @@ legacySpellRefactor("mass healing word", {
 	range : "60 ft",
 	components : "V",
 	duration : "Instantaneous",
-	description : "6 visible creatures heal 2d4+1d4/SL+spellcasting ability modifier HP",
-	descriptionFull : "Up to six creatures of my choice that I can see within range regain Hit Points equal to 2d4 plus my spellcasting ability modifier." + AtHigherLevels + "The healing increases by 1d4 for each spell slot level above 3."
+	description : "6 creatures heal 2d4+1d4/SL+spellcasting ability modifier HP",
+	descriptionFull : "Up to six creatures of your choice that you can see within range regain Hit Points equal to 2d4 plus your spellcasting ability modifier." + AtHigherLevels + "The healing increases by 1d4 for each spell slot level above 3."
 });
 legacySpellRefactor("mass suggestion", {
 	name : "Mass Suggestion",
+	nameShort : "Mass Suggestion*",
 	classes : ["bard", "sorcerer", "wizard"],
 	source : [["PHB2024", 296]],
 	level : 6,
@@ -17317,10 +17385,11 @@ legacySpellRefactor("mass suggestion", {
 	duration : "24 h",
 	save : "Wis",
 	description : "12 crea save or Charmed; do action said in 25 wrds; SL7: 10 days; SL8: 30 days; SL9: 366 days; see B",
-	descriptionFull : "I suggest a course of activity — described in no more than 25 words — to twelve or fewer creatures I can see within range that can hear and understand I. The suggestion must sound achievable and not involve anything that would obviously deal damage to any of the targets or their allies. For example, I could say, \"Walk to the village down that road, and help the villagers there harvest crops until sunset.\" Or I could say, \"Now is not the time for violence. Drop my weapons, and dance! Stop in an hour.\"" + "\n   " + "Each target must succeed on a Wisdom saving throw or have the Charmed condition for the duration or until I or my allies deal damage to the target. Each Charmed target pursues the suggestion to the best of its ability. The suggested activity can continue for the entire duration, but if the suggested activity can be completed in a shorter time, the spell ends for a target upon completing it." + AtHigherLevels + "The duration is longer with a spell slot of level 7 (10 days), 8 (30 days), or 9 (366 days)."
+	descriptionFull : "You suggest a course of activity — described in no more than 25 words — to twelve or fewer creatures you can see within range that can hear and understand you. The suggestion must sound achievable and not involve anything that would obviously deal damage to any of the targets or their allies. For example, you could say, \"Walk to the village down that road, and help the villagers there harvest crops until sunset.\" Or you could say, \"Now is not the time for violence. Drop your weapons, and dance! Stop in an hour.\"" + "\n   " + "Each target must succeed on a Wisdom saving throw or have the Charmed condition for the duration or until you or your allies deal damage to the target. Each Charmed target pursues the suggestion to the best of its ability. The suggested activity can continue for the entire duration, but if the suggested activity can be completed in a shorter time, the spell ends for a target upon completing it." + AtHigherLevels + "The duration is longer with a spell slot of level 7 (10 days), 8 (30 days), or 9 (366 days)."
 });
 legacySpellRefactor("maze", {
 	name : "Maze",
+	nameShort : "Maze*",
 	classes : ["wizard"],
 	source : [["PHB2024", 296]],
 	level : 8,
@@ -17330,7 +17399,7 @@ legacySpellRefactor("maze", {
 	components : "V,S",
 	duration : "Conc, 10 min",
 	description : "1 creature banished to demiplane; DC 20 Int (Investigation) check to escape; appears in same spot",
-	descriptionFull : "I banish a creature that I can see within range into a labyrinthine demiplane. The target remains there for the duration or until it escapes the maze." + "\n   " + "The target can take a Study action to try to escape. When it does so, it makes a DC 20 Intelligence (Investigation) check. If it succeeds, it escapes, and the spell ends." + "\n   " + "When the spell ends, the target reappears in the space it left or, if that space is occupied, in the nearest unoccupied space."
+	descriptionFull : "You banish a creature that you can see within range into a labyrinthine demiplane. The target remains there for the duration or until it escapes the maze." + "\n   " + "The target can take a Study action to try to escape. When it does so, it makes a DC 20 Intelligence (Investigation) check. If it succeeds, it escapes, and the spell ends." + "\n   " + "When the spell ends, the target reappears in the space it left or, if that space is occupied, in the nearest unoccupied space."
 });
 legacySpellRefactor("meld into stone", {
 	name : "Meld into Stone",
@@ -17343,8 +17412,8 @@ legacySpellRefactor("meld into stone", {
 	range : "Touch",
 	components : "V,S",
 	duration : "8 h",
-	description : "I merge into a stone object large enough to contain me; can't see through the stone; see book",
-	descriptionFull : "I step into a stone object or surface large enough to fully contain my body, merging yourself and my equipment with the stone for the duration. I must touch the stone to do so. Nothing of my presence remains visible or otherwise detectable by nonmagical senses." + "\n   " + "While merged with the stone, I can't see what occurs outside it, and any Wisdom (Perception) checks I make to hear sounds outside it are made with Disadvantage. I remain aware of the passage of time and can cast spells on yourself while merged in the stone. I can use 5 feet of movement to leave the stone where I entered it, which ends the spell. I otherwise can't move." + "\n   " + "Minor physical damage to the stone doesn't harm I, but its partial destruction or a change in its shape (to the extent that I no longer fit within it) expels I and deals 6d6 Force damage to I. The stone's complete destruction (or transmutation into a different substance) expels I and deals 50 Force damage to I. If expelled, I move into an unoccupied space closest to where I first entered and have the Prone condition."
+	description : "I merge into stone object large enough to contain me; can't see through stone; 1 a leave; see book",
+	descriptionFull : "You step into a stone object or surface large enough to fully contain your body, merging yourself and your equipment with the stone for the duration. You must touch the stone to do so. Nothing of your presence remains visible or otherwise detectable by nonmagical senses." + "\n   " + "While merged with the stone, you can't see what occurs outside it, and any Wisdom (Perception) checks you make to hear sounds outside it are made with Disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the stone. You can use 5 feet of movement to leave the stone where you entered it, which ends the spell. You otherwise can't move." + "\n   " + "Minor physical damage to the stone doesn't harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals 6d6 Force damage to you. The stone's complete destruction (or transmutation into a different substance) expels you and deals 50 Force damage to you. If expelled, you move into an unoccupied space closest to where you first entered and have the Prone condition."
 });
 legacySpellRefactor("melf's acid arrow", {
 	name : "Melf's Acid Arrow",
@@ -17377,7 +17446,7 @@ legacySpellRefactor("mending", {
 	compMaterial : "Two lodestones",
 	duration : "Instantaneous",
 	description : "Repair a single broken object no larger than 1 cu ft; can't restore magic to broken magic item",
-	descriptionFull : "This spell repairs a single break or tear in an object I touch, such as a broken chain link, two halves of a broken key, a torn clack, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, I mend it, leaving no trace of the former damage." + "\n   " + "This spell can physically repair a magic item, but the spell can't restore magic to such an object."
+	descriptionFull : "This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn clack, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage." + "\n   " + "This spell can physically repair a magic item, but the spell can't restore magic to such an object."
 });
 legacySpellRefactor("message", {
 	name : "Message",
@@ -17390,11 +17459,12 @@ legacySpellRefactor("message", {
 	components : "S,M",
 	compMaterial : "A copper wire",
 	duration : "1 round",
-	description : "1 crea I point to hears whispered message and can reply with a whisper; nobody can overhear",
-	descriptionFull : "I point toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only I can hear." + "\n   " + "I can cast this spell through solid objects if I are familiar with the target and know it is beyond the barrier. Magical silence; 1 foot of stone, metal, or wood; or a thin sheet of lead blocks the spell."
+	description : "1 crea I point toward hears whispered message and can reply with a whisper; nobody can overhear",
+	descriptionFull : "You point toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear." + "\n   " + "You can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence; 1 foot of stone, metal, or wood; or a thin sheet of lead blocks the spell."
 });
 legacySpellRefactor("meteor swarm", {
 	name : "Meteor Swarm",
+	nameShort : "Meteor Swarm*",
 	classes : ["sorcerer", "wizard"],
 	source : [["PHB2024", 298]],
 	level : 9,
@@ -17405,7 +17475,7 @@ legacySpellRefactor("meteor swarm", {
 	duration : "Instantaneous",
 	save : "Dex",
 	description : "4x 40-ft rad all 20d6 Bludgeoning and 20d6 Fire; save 1/2; areas don't stack; unattended obj ignite",
-	descriptionFull : "Blazing orbs of fire plummet to the ground at four different points I can see within range. Each creature in a 40-foot-radius Sphere centered on each of those points makes a Dexterity saving throw. A creature takes 20d6 Fire damage and 20d6 Bludgeoning damage on a failed save or half as much damage on a successful one. A creature in the area of more than one fiery Sphere is affected only once." + "\n   " + "A nonmagical object that isn't being worn or carried also takes the damage if it's in the spell's area, and the object starts burning if it's flammable."
+	descriptionFull : "Blazing orbs of fire plummet to the ground at four different points you can see within range. Each creature in a 40-foot-radius Sphere centered on each of those points makes a Dexterity saving throw. A creature takes 20d6 Fire damage and 20d6 Bludgeoning damage on a failed save or half as much damage on a successful one. A creature in the area of more than one fiery Sphere is affected only once." + "\n   " + "A nonmagical object that isn't being worn or carried also takes the damage if it's in the spell's area, and the object starts burning if it's flammable."
 });
 legacySpellRefactor("mind blank", {
 	name : "Mind Blank",
@@ -17418,10 +17488,11 @@ legacySpellRefactor("mind blank", {
 	components : "V,S",
 	duration : "24 h",
 	description : "1 crea immune to Psychic, Charmed, mind reading, magical observation, mind control, divination",
-	descriptionFull : "Until the spell ends, one willing creature I touch has Immunity to Psychic damage and the Charmed condition. The target is also unaffected by anything that would sense its emotions or alignment, read its thoughts, or magically detect its location, and no spell—not even Wish—can gather information about the target, observe it remotely, or control its mind."
+	descriptionFull : "Until the spell ends, one willing creature you touch has Immunity to Psychic damage and the Charmed condition. The target is also unaffected by anything that would sense its emotions or alignment, read its thoughts, or magically detect its location, and no spell—not even Wish—can gather information about the target, observe it remotely, or control its mind."
 });
 legacySpellRefactor("mind sliver", {
 	name : "Mind Sliver",
+	nameShort : "Mind Sliver*",
 	classes : ["sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 298]],
 	level : 0,
@@ -17434,10 +17505,11 @@ legacySpellRefactor("mind sliver", {
 	description : "1 crea save or 1d6 Psychic, -1d4 on first save before my next turn ends; +1d6 at CL 5, 11, and 17",
 	descriptionShort : "1 crea save or 1d6 Psychic, -1d4 on 1st save before my next turn ends; +1d6 at CL 5/11/17",
 	descriptionCantripDie : "1 crea save or `CD`d6 Psychic and -1d4 from first saving throw before my next turn ends",
-	descriptionFull : "I try to temporarily sliver the mind of one creature I can see within range. The target must succeed on an Intelligence saving throw or take 1d6 Psychic damage and subtract 1d4 from the next saving throw it makes before the end of my next turn." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d6 when I reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
+	descriptionFull : "You try to temporarily sliver the mind of one creature you can see within range. The target must succeed on an Intelligence saving throw or take 1d6 Psychic damage and subtract 1d4 from the next saving throw it makes before the end of your next turn." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
 });
 legacySpellRefactor("mind spike", {
 	name : "Mind Spike",
+	nameShort : "Mind Spike*",
 	classes : ["sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 298]],
 	level : 2,
@@ -17447,9 +17519,9 @@ legacySpellRefactor("mind spike", {
 	components : "S",
 	duration : "Conc, 1 h",
 	save : "Wis",
-	description : "1 visible crea 3d8+1d8/SL Psychic, know location on plane, not Invis for me; save half dmg only",
+	description : "1 creature 3d8+1d8/SL Psychic, know location on plane, not Invisible for me; save half dmg only",
 	descriptionShorter : "1 crea 3d8+1d8/SL Psychic dmg, know its location, can't be invis for me; save half, not rest",
-	descriptionFull : "I drive a spike of psionic energy into the mind of one creature I can see within range. The target makes a Wisdom saving throw, taking 3d8 Psychic damage on a failed save or half as much damage on a successful one. On a failed save, I also always know the target's location until the spell ends, but only while the two of I are on the same plane of existence. While I have this knowledge, the target can't become hidden from I, and if it has the Invisible condition, it gains no benefit from that condition against I." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 2.",
+	descriptionFull : "You drive a spike of psionic energy into the mind of one creature you can see within range. The target makes a Wisdom saving throw, taking 3d8 Psychic damage on a failed save or half as much damage on a successful one. On a failed save, you also always know the target's location until the spell ends, but only while the two of you are on the same plane of existence. While you have this knowledge, the target can't become hidden from you, and if it has the Invisible condition, it gains no benefit from that condition against you." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 2.",
 	dynamicDamageBonus : { multipleDmgMoments : false }
 });
 legacySpellRefactor("minor illusion", {
@@ -17464,7 +17536,7 @@ legacySpellRefactor("minor illusion", {
 	compMaterial : "A bit of fleece",
 	duration : "1 min",
 	description : "5-ft cube illusion includes visual or sound; Int(Investigation) check vs spell DC; see book",
-	descriptionFull : "I create a sound or an image of an object within range that lasts for the duration. See the descriptions below for the effects of each. The illusion ends if I cast this spell again." + "\n   " + "If a creature takes a Study action to examine the sound or image, the creature can determine that it is an illusion with a successful Intelligence (Investigation) check against my spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature." + "\n   " + "Sound. If I create a sound, its volume can range from a whisper to a scream. It can be my voice, someone else's voice, a lion's roar, a beating of drums, or any other sound I choose. The sound continues unabated throughout the duration, or I can make discrete sounds at different times before the spell ends." + "\n   " + "Image. If I create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot Cube. The image can't create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, since things can pass through it."
+	descriptionFull : "You create a sound or an image of an object within range that lasts for the duration. See the descriptions below for the effects of each. The illusion ends if you cast this spell again." + "\n   " + "If a creature takes a Study action to examine the sound or image, the creature can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature." + "\n   " + "Sound. If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else's voice, a lion's roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends." + "\n   " + "Image. If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot Cube. The image can't create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, since things can pass through it."
 });
 legacySpellRefactor("mirage arcane", {
 	name : "Mirage Arcane",
@@ -17478,7 +17550,7 @@ legacySpellRefactor("mirage arcane", {
 	duration : "10 days",
 	description : "1 sq mile terrain illusion includes visual, audible, olfactory, tactile; add/remove difficult terrain.; see B",
 	descriptionMetric : "260 ha alter terrain illusion includes visible, audible, olfactory, tactile; can make difficult ter.; see B",
-	descriptionFull : "I make terrain in an area up to 1 mile square look, sound, smell, and even feel like some other sort of terrain. Open fields or a road could be made to resemble a swamp, hill, crevasse, or some other rough or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road." + "\n   " + "Similarly, I can alter the appearance of structures, or add them where none are present. The spell doesn't disguise, conceal or add creatures." + "\n   " + "The illusion includes audible, visual, tactile, and olfactory elements, so it can turn clear ground into difficult terrain (or vice versa) or otherwise impede movement through the area. Any piece of the illusory terrain (such as a rock or stick) that is removed from the spell's area disappears immediately." + "\n   " + "Creatures with Truesight can see through the illusion to the terrain's true form, however, all other elements of the illusion remain, so while the creature is aware of the illusion's presence, the creature can still physically interact with the illusion."
+	descriptionFull : "You make terrain in an area up to 1 mile square look, sound, smell, and even feel like some other sort of terrain. Open fields or a road could be made to resemble a swamp, hill, crevasse, or some other rough or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road." + "\n   " + "Similarly, you can alter the appearance of structures, or add them where none are present. The spell doesn't disguise, conceal or add creatures." + "\n   " + "The illusion includes audible, visual, tactile, and olfactory elements, so it can turn clear ground into difficult terrain (or vice versa) or otherwise impede movement through the area. Any piece of the illusory terrain (such as a rock or stick) that is removed from the spell's area disappears immediately." + "\n   " + "Creatures with Truesight can see through the illusion to the terrain's true form, however, all other elements of the illusion remain, so while the creature is aware of the illusion's presence, the creature can still physically interact with the illusion."
 });
 legacySpellRefactor("mirror image", {
 	name : "Mirror Image",
@@ -17491,7 +17563,7 @@ legacySpellRefactor("mirror image", {
 	components : "V,S",
 	duration : "1 min",
 	description : "3 illusory duplicates; if hit \u0026 atker not Blind/Blindsight/Truesight roll 1d6 per; >2 any d6, destroys dup",
-	descriptionFull : "Three illusory duplicates of yourself appear in my space. Until the spell ends, the duplicates move with I and mimic my actions, shifting position so it's impossible to track which image is real." + "\n   " + "Each time a creature hits I with an attack roll during the spell's duration, roll a d6 for each of my remaining duplicates. If any of the d6s rolls a 3 or higher, one of the duplicates is hit instead of I, and the duplicate is destroyed. The duplicates otherwise ignore all other damage and effects. The spell ends when all three duplicates are destroyed." + "\n   " + "A creature is unaffected by this spell if it has the Blinded condition, Blindsight, or Truesight."
+	descriptionFull : "Three illusory duplicates of yourself appear in your space. Until the spell ends, the duplicates move with you and mimic your actions, shifting position so it's impossible to track which image is real." + "\n   " + "Each time a creature hits you with an attack roll during the spell's duration, roll a d6 for each of your remaining duplicates. If any of the d6s rolls a 3 or higher, one of the duplicates is hit instead of you, and the duplicate is destroyed. The duplicates otherwise ignore all other damage and effects. The spell ends when all three duplicates are destroyed." + "\n   " + "A creature is unaffected by this spell if it has the Blinded condition, Blindsight, or Truesight."
 });
 legacySpellRefactor("mislead", {
 	name : "Mislead",
@@ -17503,11 +17575,12 @@ legacySpellRefactor("mislead", {
 	range : "Self",
 	components : "S",
 	duration : "Conc, 1 h",
-	description : "I go Invisible (til atk/dmg/cast) \u0026 create illusory duplicate; see/hear through it; 1 a manipulate",
-	descriptionFull : "I gain the Invisible condition at the same time that an illusory double of I appears where I are standing. The double lasts for the duration, but the invisibility ends immediately after I make an attack roll, deal damage, or cast a spell." + "\n   " + "As a Magic action, I can move the illusory double up to twice my Speed and make it gesture, speak, and behave in whatever way I choose. It is intangible and invulnerable." + "\n   " + "I can see through its eyes and hear through its ears as if I were located where it is."
+	description : "I go Invisible (till atk/dmg/cast) \u0026 create illusory duplicate; see/hear through it; 1 a manipulate",
+	descriptionFull : "You gain the Invisible condition at the same time that an illusory double of you appears where you are standing. The double lasts for the duration, but the invisibility ends immediately after you make an attack roll, deal damage, or cast a spell." + "\n   " + "As a Magic action, you can move the illusory double up to twice your Speed and make it gesture, speak, and behave in whatever way you choose. It is intangible and invulnerable." + "\n   " + "You can see through its eyes and hear through its ears as if you were located where it is."
 });
 legacySpellRefactor("misty step", {
 	name : "Misty Step",
+	nameShort : "Misty Step*",
 	classes : ["sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 299]],
 	level : 2,
@@ -17517,10 +17590,11 @@ legacySpellRefactor("misty step", {
 	components : "V",
 	duration : "Instantaneous",
 	description : "I teleport up to 30 feet to an unoccupied space I can see",
-	descriptionFull : "Briefly surrounded by silvery mist, I teleport up to 30 feet to an unoccupied space I can see."
+	descriptionFull : "Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space you can see."
 });
 legacySpellRefactor("modify memory", {
 	name : "Modify Memory",
+	nameShort : "Modify Memory*",
 	classes : ["bard", "wizard"],
 	source : [["PHB2024", 299]],
 	level : 5,
@@ -17530,8 +17604,8 @@ legacySpellRefactor("modify memory", {
 	components : "V,S",
 	duration : "Conc, 1 min",
 	save : "Wis",
-	description : "1 visible crea save or Charmed; alter 1 memory in last (SL6: 7, SL7: 30, SL8: 365, SL9: any) day; see B",
-	descriptionFull : "I attempt to reshape another creature's memories. One creature that I can see within range makes a Wisdom saving throw. If I are fighting the creature, it has Advantage on the save. On a failed save, the target has the Charmed condition for the duration. While Charmed in this way, the target also has the Incapacitated condition and is unaware of its surroundings, though it can hear I. If it takes any damage or is targeted by another spell, this spell ends, and no memories are modified." + "\n   " + "While this charm lasts, I can affect the target's memory of an event that it experienced within the last 24 hours and that lasted no more than 10 minutes. I can permanently eliminate all memory of the event, allow the target to recall the event with perfect clarity, change its memory of the event's details, or create a memory of some other event." + "\n   " + "I must speak to the target to describe how its memories are affected, and it must be able to understand my language for the modified memories to take root. Its mind fills in any gaps in the details of my description. If the spell ends before I finish describing the modified memories, the creature's memory isn't altered. Otherwise, the modified memories take hold when the spell ends." + "\n   " + "A modified memory doesn't necessarily affect how a creature behaves, particularly if the memory contradicts the creature's natural inclinations, alignment, or beliefs. An illogical modified memory, such as a false memory of how much the creature enjoyed swimming in acid, is dismissed as a bad dream. The DM might deem a modified memory too nonsensical to affect a creature." + "\n   " + "A Remove Curse or Greater Restoration spell cast on the target restores the creature's true memory." + AtHigherLevels + "I can alter the target's memories of an event that took place up to 7 days ago (level 6 spell slot), 30 days ago (level 7 spell slot), 365 days ago (level 8 spell slot), or any time in the creature's past (level 9 spell slot)."
+	description : "1 creature save or Charmed; alter 1 memory in last (SL6: 7, SL7: 30, SL8: 365, SL9: any) day; see B",
+	descriptionFull : "You attempt to reshape another creature's memories. One creature that you can see within range makes a Wisdom saving throw. If you are fighting the creature, it has Advantage on the save. On a failed save, the target has the Charmed condition for the duration. While Charmed in this way, the target also has the Incapacitated condition and is unaware of its surroundings, though it can hear you. If it takes any damage or is targeted by another spell, this spell ends, and no memories are modified." + "\n   " + "While this charm lasts, you can affect the target's memory of an event that it experienced within the last 24 hours and that lasted no more than 10 minutes. You can permanently eliminate all memory of the event, allow the target to recall the event with perfect clarity, change its memory of the event's details, or create a memory of some other event." + "\n   " + "You must speak to the target to describe how its memories are affected, and it must be able to understand your language for the modified memories to take root. Its mind fills in any gaps in the details of your description. If the spell ends before you finish describing the modified memories, the creature's memory isn't altered. Otherwise, the modified memories take hold when the spell ends." + "\n   " + "A modified memory doesn't necessarily affect how a creature behaves, particularly if the memory contradicts the creature's natural inclinations, alignment, or beliefs. An illogical modified memory, such as a false memory of how much the creature enjoyed swimming in acid, is dismissed as a bad dream. The DM might deem a modified memory too nonsensical to affect a creature." + "\n   " + "A Remove Curse or Greater Restoration spell cast on the target restores the creature's true memory." + AtHigherLevels + "You can alter the target's memories of an event that took place up to 7 days ago (level 6 spell slot), 30 days ago (level 7 spell slot), 365 days ago (level 8 spell slot), or any time in the creature's past (level 9 spell slot)."
 });
 legacySpellRefactor("moonbeam", {
 	name : "Moonbeam",
@@ -17547,11 +17621,11 @@ legacySpellRefactor("moonbeam", {
 	save : "Con",
 	description : "10\xD740ft cyl.; all now/cover/enter/end 2d10+1d10/SL Radiant (1/t/c); save 1/2; 1 a move 60ft; see B",
 	descriptionShorter : "10\xD740ft cyl. all now/cover/enter/end 2d10+1d10/SL Rad.; save 1/2; 1 a move 60ft; see B",
-	descriptionFull : "A silvery beam of pale light shines down in a 5-foot-radius, 40-foot-high Cylinder centered on a point within range. Until the spell ends, Dim Light fills the Cylinder, and I can take a Magic action on later turns to move the Cylinder up to 60 feet." + "\n   " + "When the Cylinder appears, each creature in it makes a Constitution saving throw. On a failed save, a creature takes 2d10 Radiant damage, and if the creature is shape-shifted (as a result of the Polymorph spell, for example), it reverts to its true form and can't shape-shift until it leaves the Cylinder. On a successful save, a creature takes half as much damage only. A creature also makes this save when the spell's area moves into its space and when it enters the spell's area or ends its turn there. A creature makes this save only once per turn." + AtHigherLevels + "The damage increases by 1d10 for each spell slot level above 2."
+	descriptionFull : "A silvery beam of pale light shines down in a 5-foot-radius, 40-foot-high Cylinder centered on a point within range. Until the spell ends, Dim Light fills the Cylinder, and you can take a Magic action on later turns to move the Cylinder up to 60 feet." + "\n   " + "When the Cylinder appears, each creature in it makes a Constitution saving throw. On a failed save, a creature takes 2d10 Radiant damage, and if the creature is shape-shifted (as a result of the Polymorph spell, for example), it reverts to its true form and can't shape-shift until it leaves the Cylinder. On a successful save, a creature takes half as much damage only. A creature also makes this save when the spell's area moves into its space and when it enters the spell's area or ends its turn there. A creature makes this save only once per turn." + AtHigherLevels + "The damage increases by 1d10 for each spell slot level above 2."
 });
 legacySpellRefactor("mordenkainen's faithful hound", {
 	name : "Mordenkainen's Faithful Hound",
-	nameShort : "Mor. Faithful Hound",
+	nameShort : "Mor. Faithful Hound*",
 	nameAlt : "Faithful Hound",
 	classes : ["artificer","wizard"],
 	source : [["PHB2024", 300]],
@@ -17565,7 +17639,7 @@ legacySpellRefactor("mordenkainen's faithful hound", {
 	save : "Dex",
 	description : "Invisible dog: Truesight, barks at crea in 30ft; my turn 1 crea in 5ft save or 4d8 Force; 1 a move 30ft",
 	descriptionShorter : "Invisible dog barks at crea in 30ft; 1/rnd save or 4d8 Force; Truesight; see B",
-	descriptionFull : "I conjure a phantom watchdog in an unoccupied space that I can see within range. The hound remains for the duration or until the two of I are more than 300 feet apart from each other." + "\n   " + "No one but I can see the hound, and it is intangible and invulnerable. When a Small or larger creature comes within 30 feet of it without first speaking the password that I specify when I cast this spell, the hound starts barking loudly. The hound has Truesight with a range of 30 feet." + "\n   " + "At the start of each of my turns, the hound attempts to bite one enemy within 5 feet of it. That enemy must succeed on a Dexterity saving throw or take 4d8 Force damage." + "\n   " + "On my later turns, I can take a Magic action to move the hound up to 30 feet."
+	descriptionFull : "You conjure a phantom watchdog in an unoccupied space that you can see within range. The hound remains for the duration or until the two of you are more than 300 feet apart from each other." + "\n   " + "No one but you can see the hound, and it is intangible and invulnerable. When a Small or larger creature comes within 30 feet of it without first speaking the password that you specify when you cast this spell, the hound starts barking loudly. The hound has Truesight with a range of 30 feet." + "\n   " + "At the start of each of your turns, the hound attempts to bite one enemy within 5 feet of it. That enemy must succeed on a Dexterity saving throw or take 4d8 Force damage." + "\n   " + "On your later turns, you can take a Magic action to move the hound up to 30 feet."
 });
 legacySpellRefactor("mordenkainen's magnificent mansion", {
 	name : "Mordenkainen's Magnificent Mansion",
@@ -17581,7 +17655,7 @@ legacySpellRefactor("mordenkainen's magnificent mansion", {
 	compMaterial : "A miniature door worth 15+ gp",
 	duration : "24 h",
 	description : "Create extradimensional mansion with rooms, food and servants to serve 100 people; see book (15gp)",
-	descriptionFull : "I conjure a shimmering door in range that lasts for the duration. The door leads to an extradimensional dwelling and is 5 feet wide and 10 feet tall. I and any creature I designate when I cast the spell can enter the extradimensional dwelling as long as the door remains open. I can open or close it (no action required) if I are within 30 feet of it. While closed, the door is imperceptible." + "\n   " + "Beyond the door is a magnificent foyer with numerous chambers beyond. The dwelling's atmosphere is clean, fresh, and warm." + "\n   " + "I can create any floor plan I like for the dwelling, but it can't exceed 50 contiguous 10-foot Cubes. The place is furnished and decorated as I choose. It contains sufficient food to serve a nine-course banquet for up to 100 people. Furnishings and other objects created by this spell dissipate into smoke if removed from it." + "\n   " + "A staff of 100 near-transparent servants attends all who enter. I determine the appearance of these servants and their attire. They are invulnerable and obey my commands. Each servant can perform tasks that a human could perform, but they can't attack or take any action that would directly harm another creature. Thus the servants can fetch things, clean, mend, fold clothes, light fires, serve food, pour wine, and so on. The servants can't leave the dwelling." + "\n   " + "When the spell ends, any creatures or objects left inside the extradimensional space are expelled into the unoccupied spaces nearest to the entrance."
+	descriptionFull : "You conjure a shimmering door in range that lasts for the duration. The door leads to an extradimensional dwelling and is 5 feet wide and 10 feet tall. You and any creature you designate when you cast the spell can enter the extradimensional dwelling as long as the door remains open. You can open or close it (no action required) if you are within 30 feet of it. While closed, the door is imperceptible." + "\n   " + "Beyond the door is a magnificent foyer with numerous chambers beyond. The dwelling's atmosphere is clean, fresh, and warm." + "\n   " + "You can create any floor plan you like for the dwelling, but it can't exceed 50 contiguous 10-foot Cubes. The place is furnished and decorated as you choose. It contains sufficient food to serve a nine-course banquet for up to 100 people. Furnishings and other objects created by this spell dissipate into smoke if removed from it." + "\n   " + "A staff of 100 near-transparent servants attends all who enter. You determine the appearance of these servants and their attire. They are invulnerable and obey your commands. Each servant can perform tasks that a human could perform, but they can't attack or take any action that would directly harm another creature. Thus the servants can fetch things, clean, mend, fold clothes, light fires, serve food, pour wine, and so on. The servants can't leave the dwelling." + "\n   " + "When the spell ends, any creatures or objects left inside the extradimensional space are expelled into the unoccupied spaces nearest to the entrance."
 });
 legacySpellRefactor("mordenkainen's private sanctum", {
 	name : "Mordenkainen's Private Sanctum",
@@ -17597,7 +17671,7 @@ legacySpellRefactor("mordenkainen's private sanctum", {
 	compMaterial : "A thin sheet of lead",
 	duration : "24 h",
 	description : "Up to 100+100/SL sq ft cube is magically secured in chosen way; see book",
-	descriptionFull : "I make an area within range magically secure. The area is a Cube that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the duration." + "\n   " + "When I cast the spell, I decide what sort of security the spell provides, choosing any of the following properties." + "\n " + "\u2022 Sound can't pass through the barrier at the edge of the warded area." + "\n " + "\u2022 The barrier of the warded area appears dark and foggy, preventing vision (including Darkvision) through it." + "\n " + "\u2022 Sensors created by Divination spells can't appear inside the protected area or pass through the barrier at its perimeter." + "\n " + "\u2022 Creatures in the area can't be targeted by Divination spells." + "\n " + "\u2022 Nothing can teleport into or out of the warded area." + "\n " + "\u2022 Planar travel is blocked within the warded area." + "\n\n" + "Casting this spell on the same spot every day for 365 days makes the spell last until dispelled." + AtHigherLevels + "I can increase the size of the Cube by 100 feet for each spell slot level above 4."
+	descriptionFull : "You make an area within range magically secure. The area is a Cube that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the duration." + "\n   " + "When you cast the spell, you decide what sort of security the spell provides, choosing any of the following properties." + "\n " + "\u2022 Sound can't pass through the barrier at the edge of the warded area." + "\n " + "\u2022 The barrier of the warded area appears dark and foggy, preventing vision (including Darkvision) through it." + "\n " + "\u2022 Sensors created by Divination spells can't appear inside the protected area or pass through the barrier at its perimeter." + "\n " + "\u2022 Creatures in the area can't be targeted by Divination spells." + "\n " + "\u2022 Nothing can teleport into or out of the warded area." + "\n " + "\u2022 Planar travel is blocked within the warded area." + "\n\n" + "Casting this spell on the same spot every day for 365 days makes the spell last until dispelled." + AtHigherLevels + "You can increase the size of the Cube by 100 feet for each spell slot level above 4."
 });
 legacySpellRefactor("mordenkainen's sword", {
 	name : "Mordenkainen's Sword",
@@ -17611,9 +17685,9 @@ legacySpellRefactor("mordenkainen's sword", {
 	components : "V,S,M\u0192",
 	compMaterial : "A miniature sword worth 250+ gp",
 	duration : "Conc, 1 min",
-	description : "Hovering sword makes melee spell attack for 4d12 Force; bns to move 30 ft and/or attack again",
-	descriptionShorter : "Hovering sword makes melee spell atk 4d12 Force; bns to move 30 ft and/or attack",
-	descriptionFull : "I create a spectral sword that hovers within range. It lasts for the duration." + "\n   " + "When the sword appears, I make a melee spell attack against a target within 5 feet of the sword. On a hit, the target takes Force damage equal to 4d12 plus my spellcasting ability modifier." + "\n   " + "On my later turns, I can take a Bonus Action to move the sword up to 30 feet to a spot I can see and repeat the attack against the same target or a different one."
+	description : "Hovering sword makes melee spell attack for 4d12 Force; bns to move 30 ft and attack again",
+	descriptionShorter : "Hovering sword makes melee spell atk 4d12 Force; bns to move 30 ft and attack",
+	descriptionFull : "You create a spectral sword that hovers within range. It lasts for the duration." + "\n   " + "When the sword appears, you make a melee spell attack against a target within 5 feet of the sword. On a hit, the target takes Force damage equal to 4d12 plus your spellcasting ability modifier." + "\n   " + "On your later turns, you can take a Bonus Action to move the sword up to 30 feet to a spot you can see and repeat the attack against the same target or a different one."
 });
 legacySpellRefactor("move earth", {
 	name : "Move Earth",
@@ -17627,7 +17701,7 @@ legacySpellRefactor("move earth", {
 	compMaterial : "A miniature shovel",
 	duration : "Conc, 2 h",
 	description : "Every 10 min of concentration, gradually reshape 40 cu ft of dirt, sand, or clay; see book",
-	descriptionFull : "Choose an area of terrain no larger than 40 feet on a side within range. I can reshape dirt, sand, or clay in the area in any manner I choose for the duration. I can raise or lower the area's elevation, create or fill in a trench, erect or flatten a wall, or form a pillar. The extent of any such changes can't exceed half the area's largest dimension. For example, if I affect a 40-foot square, I can create a pillar up to 20 feet high, raise or lower the square's elevation by up to 20 feet, dig a trench up to 20 feet deep, and so on. It takes 10 minutes for these changes to complete. Because the terrain's transformation occurs slowly, creatures in the area can't usually be trapped or injured by the ground's movement." + "\n   " + "At the end of every 10 minutes I spend concentrating on the spell, I can choose a new area of terrain to affect within range." + "\n   " + "This spell can't manipulate natural stone or stone construction. Rocks and structures shift to accommodate the new terrain. If the way I shape the terrain would make a structure unstable, it might collapse." + "\n   " + "Similarly, this spell doesn't directly affect plant growth. The moved earth carries any plants along with it."
+	descriptionFull : "Choose an area of terrain no larger than 40 feet on a side within range. You can reshape dirt, sand, or clay in the area in any manner you choose for the duration. You can raise or lower the area's elevation, create or fill in a trench, erect or flatten a wall, or form a pillar. The extent of any such changes can't exceed half the area's largest dimension. For example, if you affect a 40-foot square, you can create a pillar up to 20 feet high, raise or lower the square's elevation by up to 20 feet, dig a trench up to 20 feet deep, and so on. It takes 10 minutes for these changes to complete. Because the terrain's transformation occurs slowly, creatures in the area can't usually be trapped or injured by the ground's movement." + "\n   " + "At the end of every 10 minutes you spend concentrating on the spell, you can choose a new area of terrain to affect within range." + "\n   " + "This spell can't manipulate natural stone or stone construction. Rocks and structures shift to accommodate the new terrain. If the way you shape the terrain would make a structure unstable, it might collapse." + "\n   " + "Similarly, this spell doesn't directly affect plant growth. The moved earth carries any plants along with it."
 });
 legacySpellRefactor("nondetection", {
 	name : "Nondetection",
@@ -17641,7 +17715,7 @@ legacySpellRefactor("nondetection", {
 	compMaterial : "A pinch of diamond dust worth 25+ gp, which the spell consumes",
 	duration : "8 h",
 	description : "1 willing creature or object up to 10 cu ft hidden from all Divination spells (25gp cons.)",
-	descriptionFull : "For the duration, I hide a target that I touch from Divination spells. The target can be a willing creature, or it can be a place or an object no larger than 10 feet in any dimension. The target can't be targeted by any Divination spell or perceived through magical scrying sensors."
+	descriptionFull : "For the duration, you hide a target that you touch from Divination spells. The target can be a willing creature, or it can be a place or an object no larger than 10 feet in any dimension. The target can't be targeted by any Divination spell or perceived through magical scrying sensors."
 });
 legacySpellRefactor("nystul's magic aura", {
 	name : "Nystul's Magic Aura",
@@ -17655,8 +17729,8 @@ legacySpellRefactor("nystul's magic aura", {
 	components : "V,S,M",
 	compMaterial : "A small square of silk",
 	duration : "24 h",
-	description : "1 willing crea is dif. type for spells/magic effects or 1 obj. hides/adds/changes magic aura; see B",
-	descriptionFull : "With a touch, I place an illusion on a willing creature or an object that isn't being worn or carried. A creature gains the Mask effect below, and an object gains the False Aura effect below. The effect lasts for the duration. If I cast the spell on the same target every day for 30 days, the illusion lasts until dispelled." + "\n   " + toUni("False Aura (Object).") + ": I change the way the target appears to spells and magical effects that detect magical auras, such as Detect Magic. I can make a nonmagical object appear magical, make a magic item appear nonmagical, or change the object's aura so that it appears to belong to a school of magic I choose." + "\n   " + toUni("Mask (Creature).") + ": Choose a creature type other than the target's actual type. Spells and other magical effects treat the target as if it were a creature of the chosen type."
+	description : "1 willing crea is dif. type for spells/magic effects or 1 obj hides/adds/changes magic aura; see B",
+	descriptionFull : "With a touch, you place an illusion on a willing creature or an object that isn't being worn or carried. A creature gains the Mask effect below, and an object gains the False Aura effect below. The effect lasts for the duration. If you cast the spell on the same target every day for 30 days, the illusion lasts until dispelled." + "\n   " + toUni("False Aura (Object).") + ": You change the way the target appears to spells and magical effects that detect magical auras, such as Detect Magic. You can make a nonmagical object appear magical, make a magic item appear nonmagical, or change the object's aura so that it appears to belong to a school of magic you choose." + "\n   " + toUni("Mask (Creature).") + ": Choose a creature type other than the target's actual type. Spells and other magical effects treat the target as if it were a creature of the chosen type."
 });
 legacySpellRefactor("otiluke's freezing sphere", {
 	name : "Otiluke's Freezing Sphere",
@@ -17672,7 +17746,7 @@ legacySpellRefactor("otiluke's freezing sphere", {
 	duration : "Instantaneous",
 	save : "Con",
 	description : "60ft rad all 10d6+1d6/SL Cold; save 1/2; freeze 30ft sq water \u0026 restrain crea; save up to 1 min then use",
-	descriptionFull : "A frigid globe streaks from I to a point of my choice within range, where it explodes in a 60-foot-radius Sphere. Each creature in that area makes a Constitution saving throw, taking 10d6 Cold damage on failed save or half as much damage on a successful one." + "\n   " + "If the globe strikes a body of water, it freezes the water to a depth of 6 inches over an area 30 feet square. This ice lasts for 1 minute. Creatures that were swimming on the surface of frozen water are trapped in the ice and have the Restrained condition. A trapped creature can take an action to make a Strength (Athletics) check against my spell save DC to break free." + "\n   " + "I can refrain from firing the globe after completing the spell's casting. If I do so, a globe about the size of a sling bullet, cool to the touch, appears in my hand. At any time, I or a creature I give the globe to can throw the globe (to a range of 40 feet) or hurl it with a sling (to the sling's normal range). It shatters on impact, with the same effect as a normal casting of the spell. I can also set the globe down without shattering it. After 1 minute, if the globe hasn't already shattered, it explodes." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 6."
+	descriptionFull : "A frigid globe streaks from you to a point of your choice within range, where it explodes in a 60-foot-radius Sphere. Each creature in that area makes a Constitution saving throw, taking 10d6 Cold damage on failed save or half as much damage on a successful one." + "\n   " + "If the globe strikes a body of water, it freezes the water to a depth of 6 inches over an area 30 feet square. This ice lasts for 1 minute. Creatures that were swimming on the surface of frozen water are trapped in the ice and have the Restrained condition. A trapped creature can take an action to make a Strength (Athletics) check against your spell save DC to break free." + "\n   " + "You can refrain from firing the globe after completing the spell's casting. If you do so, a globe about the size of a sling bullet, cool to the touch, appears in your hand. At any time, you or a creature you give the globe to can throw the globe (to a range of 40 feet) or hurl it with a sling (to the sling's normal range). It shatters on impact, with the same effect as a normal casting of the spell. You can also set the globe down without shattering it. After 1 minute, if the globe hasn't already shattered, it explodes." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 6."
 });
 legacySpellRefactor("otiluke's resilient sphere", {
 	name : "Otiluke's Resilient Sphere",
@@ -17687,11 +17761,12 @@ legacySpellRefactor("otiluke's resilient sphere", {
 	compMaterial : "A glass sphere",
 	duration : "Conc, 1 min",
 	save : "Dex",
-	description : "1 crea/obj up to Lg save or enclosed in impenetrable sphere; can move as hamster ball at half speed",
+	description : "1 \u2264Large crea/obj save or enclosed in impenetrable sphere; can move as hamster ball at half speed",
 	descriptionFull : "A shimmering sphere encloses a Large or smaller creature or object within range. An unwilling creature must succeed on a Dexterity saving throw or be enclosed for the duration." + "\n   " + "Nothing—not physical objects, energy, or other spell effects—can pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can't be damaged by attacks or effects originating from outside, nor can a creature inside the sphere damage anything outside it." + "\n   " + "The sphere is weightless and just large enough to contain the creature or object inside. An enclosed creature can use its action to push against the sphere's walls and thus roll the sphere at up to half the creature's speed. Similarly, the globe can be picked up and moved by other creatures." + "\n   " + "A Disintegrate spell targeting the globe destroys it without harming anything inside."
 });
 legacySpellRefactor("otto's irresistible dance", {
 	name : "Otto's Irresistible Dance",
+	nameShort : "Otto's Irresistible Dance*",
 	nameAlt : "Irresistible Dance",
 	classes : ["bard", "wizard"],
 	source : [["PHB2024", 303]],
@@ -17702,10 +17777,11 @@ legacySpellRefactor("otto's irresistible dance", {
 	components : "V",
 	duration : "Conc, 1 min",
 	description : "1 crea pass: dance to next EoT; fail: Charmed, no move, dis. atk/Dex saves, adv. atk vs it; 1 a save to end",
-	descriptionFull : "One creature that I can see within range must make a Wisdom saving throw. On a successful save, The target dances comically until the end of its next turn, during which it must spend all its movement to dance in place." + "\n   " + "On a failed save, the target has the Charmed condition for the duration. While Charmed, the target dances comically, must use all its movement to dance in place, and has Disadvantage on Dexterity saving throws and attack rolls, and other creatures have Advantage on attack rolls against it. On each of its turns, the target can take an action to collect itself and repeat the save, ending the spell on itself on a success."
+	descriptionFull : "One creature that you can see within range must make a Wisdom saving throw. On a successful save, The target dances comically until the end of its next turn, during which it must spend all its movement to dance in place." + "\n   " + "On a failed save, the target has the Charmed condition for the duration. While Charmed, the target dances comically, must use all its movement to dance in place, and has Disadvantage on Dexterity saving throws and attack rolls, and other creatures have Advantage on attack rolls against it. On each of its turns, the target can take an action to collect itself and repeat the save, ending the spell on itself on a success."
 });
 legacySpellRefactor("passwall", {
 	name : "Passwall",
+	nameShort : "Passwall*",
 	classes : ["wizard"],
 	source : [["PHB2024", 303]],
 	level : 5,
@@ -17716,7 +17792,7 @@ legacySpellRefactor("passwall", {
 	compMaterial : "A pinch of sesame seeds",
 	duration : "1 h",
 	description : "Create a passage (max 5 ft wide, 8 ft tall, 20 ft deep) in a wooden, plaster or stone surface for 1 h",
-	descriptionFull : "A passage appears at a point that I can see on a wooden, plaster, or stone surface (such as a wall, ceiling, or floor) within range and lasts for the duration. I choose the opening's dimensions: up to 5 feet wide, 8 feet tall, and 20 feet deep. The passage creates no instability in a structure surrounding it." + "\n   " + "When the opening disappears, any creatures or objects still in the passage created by the spell are safely ejected to an unoccupied space nearest to the surface on which I cast the spell."
+	descriptionFull : "A passage appears at a point that you can see on a wooden, plaster, or stone surface (such as a wall, ceiling, or floor) within range and lasts for the duration. You choose the opening's dimensions: up to 5 feet wide, 8 feet tall, and 20 feet deep. The passage creates no instability in a structure surrounding it." + "\n   " + "When the opening disappears, any creatures or objects still in the passage created by the spell are safely ejected to an unoccupied space nearest to the surface on which you cast the spell."
 });
 legacySpellRefactor("pass without trace", {
 	name : "Pass Without Trace",
@@ -17729,11 +17805,12 @@ legacySpellRefactor("pass without trace", {
 	components : "V,S,M",
 	compMaterial : "Ashes from burned mistletoe",
 	duration : "Conc, 1 h",
-	description : "Any creatures of my choice in area have +10 Dexterity (Stealth) checks and leave no tracks",
-	descriptionFull : "I radiate a concealing aura in a 30-foot Emanation for the duration. While in the aura, I and each creature I choose have a +10 bonus to Dexterity (Stealth) checks and leave no tracks."
+	description : "For duration, me and any in area have +10 Dexterity (Stealth) checks and leave no tracks",
+	descriptionFull : "You radiate a concealing aura in a 30-foot Emanation for the duration. While in the aura, you and each creature you choose have a +10 bonus to Dexterity (Stealth) checks and leave no tracks."
 });
 legacySpellRefactor("phantasmal force", {
 	name : "Phantasmal Force",
+	nameShort : "Phantasmal Force*",
 	classes : ["bard", "sorcerer", "wizard"],
 	source : [["PHB2024", 304]],
 	level : 2,
@@ -17746,10 +17823,11 @@ legacySpellRefactor("phantasmal force", {
 	save : "Int",
 	description : "1 crea save or see 10ft cu illusion; if harmful \u0026 in 5ft 2d8 Psychic/rnd; Int(Invest.) vs spell DC ends",
 	descriptionShorter : "1 crea save or sees 10 ft cu illusion; 2d8 Psychic dmg/rnd; Investigation vs DC",
-	descriptionFull : "I attempt to craft an illusion in the mind of a creature I can see within range. The target makes an Intelligence saving throw. On a failed save, I create a phantasmal object, creature, or other phenomenon that is no larger than a 10-foot Cube and that is perceivable only to the target for the duration. The phantasm includes sound, temperature, and other stimuli." + "\n   " + "The target can take a Study action to examine the phantasm with an Intelligence (Investigation) check against my spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends." + "\n   " + "While affected by the spell, the target treats the phantasm as if it were real and rationalizes any illogical outcomes from interacting with it. For example, if the target steps through a phantasmal bridge and survives the fall, it believes the bridge exists and something else caused it to fall." + "\n   " + "An affected target can even take damage from the illusion if the phantasm represents a dangerous creature or hazard. On each of my turns, such a phantasm can deal 2d8 Psychic damage to the target if it is in the phantasm's area or within 5 feet of the phantasm. The target perceives the damage as a type appropriate to the illusion."
+	descriptionFull : "You attempt to craft an illusion in the mind of a creature you can see within range. The target makes an Intelligence saving throw. On a failed save, you create a phantasmal object, creature, or other phenomenon that is no larger than a 10-foot Cube and that is perceivable only to the target for the duration. The phantasm includes sound, temperature, and other stimuli." + "\n   " + "The target can take a Study action to examine the phantasm with an Intelligence (Investigation) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends." + "\n   " + "While affected by the spell, the target treats the phantasm as if it were real and rationalizes any illogical outcomes from interacting with it. For example, if the target steps through a phantasmal bridge and survives the fall, it believes the bridge exists and something else caused it to fall." + "\n   " + "An affected target can even take damage from the illusion if the phantasm represents a dangerous creature or hazard. On each of your turns, such a phantasm can deal 2d8 Psychic damage to the target if it is in the phantasm's area or within 5 feet of the phantasm. The target perceives the damage as a type appropriate to the illusion."
 });
 legacySpellRefactor("phantasmal killer", {
 	name : "Phantasmal Killer",
+	nameShort : "Phantasmal Killer*",
 	classes : ["bard", "wizard"],
 	source : [["PHB2024", 304]],
 	level : 4,
@@ -17760,7 +17838,7 @@ legacySpellRefactor("phantasmal killer", {
 	duration : "Conc, 1 min",
 	save : "Wis",
 	description : "1 crea 4d10+1d10/SL Psychic; dis. on chks \u0026 atks; save 1/2 dmg only; EoT save, same dmg or end",
-	descriptionFull : "I tap into the nightmares of a creature I can see within range and create an illusion of its deepest fears, visible only to that creature. The target makes a Wisdom saving throw. On a failed save, the target takes 4d10 Psychic damage and has Disadvantage on ability checks and attack rolls for the duration. On a successful save, the target takes half as much damage, and the spell ends." + "\n   " + "For the duration, the target makes a Wisdom saving throw at the end of each of its turns. On a failed save, it takes the Psychic damage again. On a successful save, the spell ends." + AtHigherLevels + "The damage increases by 1d10 for each spell slot level above 4."
+	descriptionFull : "You tap into the nightmares of a creature you can see within range and create an illusion of its deepest fears, visible only to that creature. The target makes a Wisdom saving throw. On a failed save, the target takes 4d10 Psychic damage and has Disadvantage on ability checks and attack rolls for the duration. On a successful save, the target takes half as much damage, and the spell ends." + "\n   " + "For the duration, the target makes a Wisdom saving throw at the end of each of its turns. On a failed save, it takes the Psychic damage again. On a successful save, the spell ends." + AtHigherLevels + "The damage increases by 1d10 for each spell slot level above 4."
 });
 legacySpellRefactor("phantom steed", {
 	name : "Phantom Steed",
@@ -17774,7 +17852,7 @@ legacySpellRefactor("phantom steed", {
 	components : "V,S",
 	duration : "1 h",
 	description : "Summon Large quasi-real steed with 100 ft speed (13 mph); I designate rider; spell ends if takes dmg",
-	descriptionFull : "A Large, quasi-real, horselike creature appears on the ground in an unoccupied space of my choice within range. I decide the creature's appearance, but it is equipped with a saddle, bit, and bridle. Any of the equipment created by the spell vanishes in a puff of smoke if it is carried more than 10 feet away from the steed." + "\n   " + "For the duration, I or a creature I choose can ride the steed. The steed uses the Riding Horse stat block (see appendix B), except it has a Speed of 100 feet and can travel 13 miles in an hour. When the spell ends, the steed gradually fades, giving the rider 1 minute to dismount. The spell ends early if the steed takes any damage."
+	descriptionFull : "A Large, quasi-real, horselike creature appears on the ground in an unoccupied space of your choice within range. You decide the creature's appearance, but it is equipped with a saddle, bit, and bridle. Any of the equipment created by the spell vanishes in a puff of smoke if it is carried more than 10 feet away from the steed." + "\n   " + "For the duration, you or a creature you choose can ride the steed. The steed uses the Riding Horse stat block (see appendix B), except it has a Speed of 100 feet and can travel 13 miles in an hour. When the spell ends, the steed gradually fades, giving the rider 1 minute to dismount. The spell ends early if the steed takes any damage."
 });
 legacySpellRefactor("planar ally", {
 	name : "Planar Ally",
@@ -17787,7 +17865,7 @@ legacySpellRefactor("planar ally", {
 	components : "V,S",
 	duration : "Instantaneous",
 	description : "Celestial, elemental or fiend appears in location near me; can negotiate for service; see book",
-	descriptionFull : "I beseech an otherworldly entity for aid. The being must be known to I: a god, a demon prince, or some other being of cosmic power. That entity sends a Celestial, an Elemental, or a Fiend loyal to it to aid I, making the creature appear in an unoccupied space within range. If I know a specific creature's name, I can speak that name when I cast this spell to request that creature, though I might get a different creature anyway (DM's choice)." + "\n   " + "When the creature appears, it is under no compulsion to behave a particular way. I can ask it to perform a service in exchange for payment, but it isn't obliged to do so. The requested task could range from simple (fly us across the chasm, or help us fight a battle) to complex (spy on our enemies, or protect us during our foray into the dungeon). I must be able to communicate with the creature to bargain for its services." + "\n   " + "Payment can take a variety of forms. A Celestial might require a sizable donation of gold or magic items to an allied temple, while a Fiend might demand a living sacrifice or a gift of treasure. Some creatures might exchange their service for a quest undertaken by I." + "\n   " + "A task that can be measured in minutes requires a payment worth 100 GP per minute. A task measured in hours requires 1,000 GP per hour. And a task measured in days (up to 10 days) requires 10,000 GP per day. The DM can adjust these payments based on the circumstances under which I cast the spell. If the task is aligned with the creature's ethos, the payment might be halved or even waived. Nonhazardous tasks typically require only half the suggested payment, while especially dangerous tasks might require a greater gift. Creatures rarely accept tasks that seem suicidal." + "\n   " + "After the creature completes the task, or when the agreed-upon duration of service expires, the creature returns to its home plane after reporting back to I if possible. If I are unable to agree on a price for the creature's service, the creature immediately returns to its home plane."
+	descriptionFull : "You beseech an otherworldly entity for aid. The being must be known to you: a god, a demon prince, or some other being of cosmic power. That entity sends a Celestial, an Elemental, or a Fiend loyal to it to aid you, making the creature appear in an unoccupied space within range. If you know a specific creature's name, you can speak that name when you cast this spell to request that creature, though you might get a different creature anyway (DM's choice)." + "\n   " + "When the creature appears, it is under no compulsion to behave a particular way. You can ask it to perform a service in exchange for payment, but it isn't obliged to do so. The requested task could range from simple (fly us across the chasm, or help us fight a battle) to complex (spy on our enemies, or protect us during our foray into the dungeon). You must be able to communicate with the creature to bargain for its services." + "\n   " + "Payment can take a variety of forms. A Celestial might require a sizable donation of gold or magic items to an allied temple, while a Fiend might demand a living sacrifice or a gift of treasure. Some creatures might exchange their service for a quest undertaken by you." + "\n   " + "A task that can be measured in minutes requires a payment worth 100 GP per minute. A task measured in hours requires 1,000 GP per hour. And a task measured in days (up to 10 days) requires 10,000 GP per day. The DM can adjust these payments based on the circumstances under which you cast the spell. If the task is aligned with the creature's ethos, the payment might be halved or even waived. Nonhazardous tasks typically require only half the suggested payment, while especially dangerous tasks might require a greater gift. Creatures rarely accept tasks that seem suicidal." + "\n   " + "After the creature completes the task, or when the agreed-upon duration of service expires, the creature returns to its home plane after reporting back to you if possible. If you are unable to agree on a price for the creature's service, the creature immediately returns to its home plane."
 });
 legacySpellRefactor("planar binding", {
 	name : "Planar Binding",
@@ -17802,7 +17880,7 @@ legacySpellRefactor("planar binding", {
 	duration : "24 h",
 	save : "Cha",
 	description : "1 celes./elem./fey/fiend save or bound; SL6: 10, SL7: 30, SL8: 180, SL9: 366 days (1000gp cons.); see B",
-	descriptionFull : "I attempt to bind a Celestial, an Elemental, a Fey, or a Fiend to my service. The creature must be within range for the entire casting of the spell. (Typically, the creature is first summoned into the center of the inverted version of the Magic Circle spell to trap it while this spell is cast.) At the completion of the casting, the target must succeed on a Charisma saving throw or be bound to serve I for the duration. If the creature was summoned or created by another spell, that spell's duration is extended to match the duration of this spell." + "\n   " + "A bound creature must follow my commands to the best of its ability. I might command the creature to accompany I on an adventure, to guard a location, or to deliver a message. If the creature is Hostile, it strives to twist my commands to achieve its own objectives. If the creature carries out my commands completely before the spell ends, it travels to I to report this fact if I are on the same plane of existence. If I are on a different plane, it returns to the place where I bound it and remains there until the spell ends." + AtHigherLevels + "The duration increases with a spell slot of level 6 (10 days), 7 (30 days), 8 (180 days), and 9 (366 days)."
+	descriptionFull : "You attempt to bind a Celestial, an Elemental, a Fey, or a Fiend to your service. The creature must be within range for the entire casting of the spell. (Typically, the creature is first summoned into the center of the inverted version of the Magic Circle spell to trap it while this spell is cast.) At the completion of the casting, the target must succeed on a Charisma saving throw or be bound to serve you for the duration. If the creature was summoned or created by another spell, that spell's duration is extended to match the duration of this spell." + "\n   " + "A bound creature must follow your commands to the best of its ability. You might command the creature to accompany you on an adventure, to guard a location, or to deliver a message. If the creature is Hostile, it strives to twist your commands to achieve its own objectives. If the creature carries out your commands completely before the spell ends, it travels to you to report this fact if you are on the same plane of existence. If you are on a different plane, it returns to the place where you bound it and remains there until the spell ends." + AtHigherLevels + "The duration increases with a spell slot of level 6 (10 days), 7 (30 days), 8 (180 days), and 9 (366 days)."
 });
 legacySpellRefactor("plane shift", {
 	name : "Plane Shift",
@@ -17816,7 +17894,7 @@ legacySpellRefactor("plane shift", {
 	compMaterial : "A forked, metal rod worth 250+ gp and attuned to a plane of existence",
 	duration : "Instantaneous",
 	description : "Me + 8 willing crea teleport to general location on different plane or teleportation circle I know",
-	descriptionFull : "I and up to eight willing creatures who link hands in a circle are transported to a different plane of existence. I can specify a target destination in general terms, such as the City of Brass on the Elemental Plane of Fire or the palace of Dispater on the second level of the Nine Hells, and I appear in or near that destination, as determined by the DM." + "\n   " + "Alternatively, if I know the sigil sequence of a teleportation circle on another plane of existence, this spell can take I to that circle. If the teleportation circle is too small to hold all the creatures I transported, they appear in the closest unoccupied spaces next to the circle."
+	descriptionFull : "You and up to eight willing creatures who link hands in a circle are transported to a different plane of existence. You can specify a target destination in general terms, such as the City of Brass on the Elemental Plane of Fire or the palace of Dispater on the second level of the Nine Hells, and you appear in or near that destination, as determined by the DM." + "\n   " + "Alternatively, if you know the sigil sequence of a teleportation circle on another plane of existence, this spell can take you to that circle. If the teleportation circle is too small to hold all the creatures you transported, they appear in the closest unoccupied spaces next to the circle."
 });
 legacySpellRefactor("plant growth", {
 	name : "Plant Growth",
@@ -17829,8 +17907,8 @@ legacySpellRefactor("plant growth", {
 	range : "150 ft",
 	components : "V,S",
 	duration : "Instantaneous",
-	description : "1 a: 100ft rad plants overgrow, cause 1/4 speed; 8h: 1 mile dia. plants yield double food at harvest",
-	descriptionFull : "This spell channels vitality into plants. The casting time I use determines whether the spell has the Overgrowth or the Enrichment effect below." + "\n   " + "Overgrowth. Choose a point within range. All normal plants in a 100-foot-radius Sphere centered on that point become thick and overgrown. A creature moving through that area must spend 4 feet of movement for every 1 foot it moves. I can exclude one or more areas of any size within the spell's area from being affected." + "\n   " + "Enrichment. All plants in a half-mile radius centered on a point within range become enriched for 365 days. The plants yield twice the normal amount of food when harvested. They can benefit from only one Plant Growth per year."
+	description : "1 a: 100ft rad plants overgrow, cause 1/4 move; 8h: 1 mile dia. plants yield double food at harvest",
+	descriptionFull : "This spell channels vitality into plants. The casting time you use determines whether the spell has the Overgrowth or the Enrichment effect below." + "\n   " + "Overgrowth. Choose a point within range. All normal plants in a 100-foot-radius Sphere centered on that point become thick and overgrown. A creature moving through that area must spend 4 feet of movement for every 1 foot it moves. You can exclude one or more areas of any size within the spell's area from being affected." + "\n   " + "Enrichment. All plants in a half-mile radius centered on a point within range become enriched for 365 days. The plants yield twice the normal amount of food when harvested. They can benefit from only one Plant Growth per year."
 });
 legacySpellRefactor("poison spray", {
 	name : "Poison Spray",
@@ -17844,10 +17922,11 @@ legacySpellRefactor("poison spray", {
 	duration : "Instantaneous",
 	description : "Ranged spell attack for 1d12 Poison damage; +1d12 at CL 5, 11, and 17",
 	descriptionCantripDie : "Ranged spell attack for `CD`d12 Poison damage",
-	descriptionFull : "I spray toxic mist at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d12 Poison damage." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d12 when I reach levels 5 (2d12), 11 (3d12), and 17 (4d12)."
+	descriptionFull : "You spray toxic mist at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d12 Poison damage." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d12 when you reach levels 5 (2d12), 11 (3d12), and 17 (4d12)."
 });
 legacySpellRefactor("polymorph", {
 	name : "Polymorph",
+	nameShort : "Polymorph*",
 	classes : ["bard", "druid", "sorcerer", "wizard"],
 	source : [["PHB2024", 306]],
 	level : 4,
@@ -17859,10 +17938,11 @@ legacySpellRefactor("polymorph", {
 	duration : "Conc, 1 h",
 	save : "Wis",
 	description : "1 crea save or turned into chosen beast of same CR (or lvl) or lower; gain beast HP as THP; see book",
-	descriptionFull : "I attempt to transform a creature that I can see within range into a Beast. The target must succeed on a Wisdom saving throw or shape-shift into Beast form for the duration. That form can be any Beast I choose that has a Challenge Rating equal to or less than the target's (or the target's level if it doesn't have a Challenge Rating). The target's game statistics are replaced by the stat block of the chosen Beast, but the target retains its alignment, personality, creature type, Hit Points, and Hit Point Dice." + "\n   " + "The target gains a number of Temporary Hit Points equal to the Hit Points of the Beast form. The spell ends early on the target if it has no Temporary Hit Points left." + "\n   " + "The target is limited in the actions it can perform by the anatomy of its new form, and it cant speak or cast spells." + "\n   " + "\n   " + "The target's gear melds into the new form. The creature can't use or otherwise benefit from any of that equipment."
+	descriptionFull : "You attempt to transform a creature that you can see within range into a Beast. The target must succeed on a Wisdom saving throw or shape-shift into Beast form for the duration. That form can be any Beast you choose that has a Challenge Rating equal to or less than the target's (or the target's level if it doesn't have a Challenge Rating). The target's game statistics are replaced by the stat block of the chosen Beast, but the target retains its alignment, personality, creature type, Hit Points, and Hit Point Dice." + "\n   " + "The target gains a number of Temporary Hit Points equal to the Hit Points of the Beast form. The spell ends early on the target if it has no Temporary Hit Points left." + "\n   " + "The target is limited in the actions it can perform by the anatomy of its new form, and it cant speak or cast spells." + "\n   " + "\n   " + "The target's gear melds into the new form. The creature can't use or otherwise benefit from any of that equipment."
 });
 legacySpellRefactor("power word fortify", {
 	name : "Power Word Fortify",
+	nameShort : "Power Word Fortify*",
 	classes : ["bard", "cleric"],
 	source : [["PHB2024", 306]],
 	level : 7,
@@ -17871,11 +17951,12 @@ legacySpellRefactor("power word fortify", {
 	range : "60 ft",
 	components : "V",
 	duration : "instantaneous",
-	description : "120 Temp HP divided equally among up to 6 visible creatures",
-	descriptionFull : "I fortify up to six creatures I can see within range. The spell bestows 120 Temporary Hit Points, which I divide among the spell's recipients."
+	description : "Divide 120 Temporary HP equally among up to 6 visible creatures in range",
+	descriptionFull : "You fortify up to six creatures you can see within range. The spell bestows 120 Temporary Hit Points, which you divide among the spell's recipients."
 });
 legacySpellRefactor("power word heal", {
 	name : "Power Word Heal",
+	nameShort : "Power Word Heal*",
 	classes : ["bard", "cleric"],
 	source : [["PHB2024", 306]],
 	level : 9,
@@ -17886,10 +17967,11 @@ legacySpellRefactor("power word heal", {
 	duration : "Instantaneous",
 	description : "1 crea heals all HP & cured of Charmed, Frightened, Paralyzed, Poisoned, Stunned; can use rea to stand",
 	descriptionShorter : "1 crea heals all HP, not charmed, frightened, paralyzed, poisoned, stunned; rea to stand up",
-	descriptionFull : "A wave of healing energy washes over one creature I can see within range. The target regains all its Hit Points. If the creature has the Charmed, Frightened, Paralyzed, Poisoned, or Stunned condition, the condition ends. If the creature has the Prone condition, it can use its Reaction to stand up."
+	descriptionFull : "A wave of healing energy washes over one creature you can see within range. The target regains all its Hit Points. If the creature has the Charmed, Frightened, Paralyzed, Poisoned, or Stunned condition, the condition ends. If the creature has the Prone condition, it can use its Reaction to stand up."
 });
 legacySpellRefactor("power word kill", {
 	name : "Power Word Kill",
+	nameShort : "Power Word Kill*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 306]],
 	level : 9,
@@ -17899,10 +17981,11 @@ legacySpellRefactor("power word kill", {
 	components : "V",
 	duration : "Instantaneous",
 	description : "1 creature dies if it has 100 or less current HP, else takes 12d12 Psychic damage",
-	descriptionFull : "I compel one creature I can see within range to die. If the target has 100 Hit Points or fewer, it dies. Otherwise, it takes 12d12 Psychic damage."
+	descriptionFull : "You compel one creature you can see within range to die. If the target has 100 Hit Points or fewer, it dies. Otherwise, it takes 12d12 Psychic damage."
 });
 legacySpellRefactor("power word stun", {
 	name : "Power Word Stun",
+	nameShort : "Power Word Stun*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 306]],
 	level : 8,
@@ -17913,7 +17996,7 @@ legacySpellRefactor("power word stun", {
 	duration : "Instantaneous",
 	save : "Con",
 	description : "1 crea Stunned if 150 or less current HP, else Speed is 0 until my next turn; repeat save at end of turn",
-	descriptionFull : "I overwhelm the mind of one creature I can see within range. If the target has 150 Hit Points or fewer, it has the Stunned condition. Otherwise, its Speed is 0 until the start of my next turn." + "\n   " + "The Stunned target makes a Constitution saving throw at the end of each of its turns, ending the condition on itself on a success."
+	descriptionFull : "You overwhelm the mind of one creature you can see within range. If the target has 150 Hit Points or fewer, it has the Stunned condition. Otherwise, its Speed is 0 until the start of your next turn." + "\n   " + "The Stunned target makes a Constitution saving throw at the end of each of its turns, ending the condition on itself on a success."
 });
 legacySpellRefactor("prayer of healing", {
 	name : "Prayer of Healing",
@@ -17925,8 +18008,8 @@ legacySpellRefactor("prayer of healing", {
 	range : "30 ft",
 	components : "V",
 	duration : "Instantaneous",
-	description : "5 creatures heal 2d8+1d8/SL+spellcasting ability mod HP and gain short rest benefits (once per LR)",
-	descriptionFull : "Up to five creatures of my choice who remain within range for the spell's entire casting gain the benefits of a Short Rest and also regain 2d8 Hit Points. A creature can't be affected by this spell again until that creature finishes a Long Rest." + AtHigherLevels + "The healing increases by 1d8 for each spell slot level above 2."
+	description : "5 crea in range while cast heal 2d8+1d8/SL+spell mod HP and gain short rest benefits (once per LR)",
+	descriptionFull : "Up to five creatures of your choice who remain within range for the spell's entire casting gain the benefits of a Short Rest and also regain 2d8 Hit Points. A creature can't be affected by this spell again until that creature finishes a Long Rest." + AtHigherLevels + "The healing increases by 1d8 for each spell slot level above 2."
 });
 legacySpellRefactor("prestidigitation", {
 	name : "Prestidigitation",
@@ -17939,7 +18022,7 @@ legacySpellRefactor("prestidigitation", {
 	components : "V,S",
 	duration : "1 h",
 	description : "Harmless sensory effect, snuff/light fire, clean/soil, chill/warm/flavor, small mark, illusion/trinket; up to 3",
-	descriptionFull : "I create a magical effect within range. Choose the effect from the options below. If I cast this spell multiple times, I can have up to three of its non-instantaneous effects active at a time." + "\n " + "\u2022 Sensory Effect. I create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor." + "\n " + "\u2022 Fire Play. I instantaneously light or snuff out a candle, a torch, or a small campfire." + "\n " + "\u2022 Clean or Soil. I instantaneously clean or soil an object no larger than 1 cubic foot." + "\n " + "\u2022 Minor Sensation. I chill, warm, or flavor up to 1 cubic foot of nonliving material for 1 hour." + "\n " + "\u2022 Magic Mark. I make a color, a small mark, or a symbol appear on an object or a surface for 1 hour." + "\n " + "\u2022 Minor Creation. I create a nonmagical trinket or an illusory image that can fit in my hand. It lasts until the end of my next turn. A trinket can deal no damage and has no monetary worth."
+	descriptionFull : "You create a magical effect within range. Choose the effect from the options below. If you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time." + "\n " + "\u2022 Sensory Effect. You create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor." + "\n " + "\u2022 Fire Play. You instantaneously light or snuff out a candle, a torch, or a small campfire." + "\n " + "\u2022 Clean or Soil. You instantaneously clean or soil an object no larger than 1 cubic foot." + "\n " + "\u2022 Minor Sensation. You chill, warm, or flavor up to 1 cubic foot of nonliving material for 1 hour." + "\n " + "\u2022 Magic Mark. You make a color, a small mark, or a symbol appear on an object or a surface for 1 hour." + "\n " + "\u2022 Minor Creation. You create a nonmagical trinket or an illusory image that can fit in your hand. It lasts until the end of your next turn. A trinket can deal no damage and has no monetary worth."
 });
 legacySpellRefactor("prismatic spray", {
 	name : "Prismatic Spray",
@@ -17953,14 +18036,14 @@ legacySpellRefactor("prismatic spray", {
 	duration : "Instantaneous",
 	save : "Dex",
 	description : "All creatures random effect each: 12d6 damage, Restrained, or Blinded; save halves/negates; see B",
-	descriptionFull : "Eight rays of light flash from I in a 60-foot Cone. Each creature in the Cone makes a Dexterity saving throw. For each target, roll 1d8 to determine which color ray affects it, consulting the Prismatic Rays table."+
+	descriptionFull : "Eight rays of light flash from you in a 60-foot Cone. Each creature in the Cone makes a Dexterity saving throw. For each target, roll 1d8 to determine which color ray affects it, consulting the Prismatic Rays table."+
 	"\n   " + toUni("1-Red") + ": Failed Save: 12d6 Fire damage. Successful Save: Half as much damage."+
 	"\n   " + toUni("2-Orange") + ": Failed Save: 12d6 Acid damage. Successful Save: Half as much damage."+
 	"\n   " + toUni("3-Yellow") + ": Failed Save: 12d6 Lightning damage. Successful Save: Half as much damage."+
 	"\n   " + toUni("4-Green") + ": Failed Save: 12d6 Poison damage. Successful Save: Half as much damage."+
 	"\n   " + toUni("5-Blue") + ": Failed Save: 12d6 Cold damage. Successful Save: Half as much damage."+
 	"\n   " + toUni("6-Indigo") + ": Failed Save: The target has the Restrained condition and makes a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the condition ends. If it fails three times, it has the Petrified condition until it is freed by an effect like the Greater Restoration spell. The successes and failures needn't be consecutive; keep track of both until the target collects three of a kind."+
-	"\n   " + toUni("7-Violet") + ": Violet. Failed Save: The target has the Blinded condition and makes a Wisdom saving throw at the start of my next turn. On a successful save, the condition ends. On a failed save, the condition ends, and the creature teleports to another plane of existence (DM's choice)."+
+	"\n   " + toUni("7-Violet") + ": Violet. Failed Save: The target has the Blinded condition and makes a Wisdom saving throw at the start of your next turn. On a successful save, the condition ends. On a failed save, the condition ends, and the creature teleports to another plane of existence (DM's choice)."+
 	"\n   " + toUni("8-Special") + ": The target is struck by two rays. Roll twice, rerolling any 8.",
 	dynamicDamageBonus : {
 		multipleDmgTypes : {
@@ -17981,8 +18064,8 @@ legacySpellRefactor("prismatic wall", {
 	duration : "10 min",
 	save : "Con",
 	description : "Up to 90 ft long 30 ft high 5 inch thick; all in 20 ft save or Blinded; 7 layers with dif. effects, see book",
-	descriptionFull : "A shimmering, multicolored plane of light forms a vertical opaque wall—up to 90 feet long, 30 feet high, and 1 inch thick—centered on a point within range. Alternatively, I shape the wall into a globe up to 30 feet in diameter centered on a point within range. The wall lasts for the duration. If I position the wall in a space occupied by a creature, the spell ends instantly without effect."+
-	"\n The wall sheds Bright Light within 100 feet and Dim Light for an additional 100 feet. I and creatures I designate when I cast the spell can pass through and be near the wall without harm. If another creature that can see the wall moves within 20 feet of it or starts its turn there, the creature must succeed on a Constitution saving throw or have the Blinded condition for 1 minute."+
+	descriptionFull : "A shimmering, multicolored plane of light forms a vertical opaque wall—up to 90 feet long, 30 feet high, and 1 inch thick—centered on a point within range. Alternatively, you shape the wall into a globe up to 30 feet in diameter centered on a point within range. The wall lasts for the duration. If you position the wall in a space occupied by a creature, the spell ends instantly without effect."+
+	"\n The wall sheds Bright Light within 100 feet and Dim Light for an additional 100 feet. You and creatures you designate when you cast the spell can pass through and be near the wall without harm. If another creature that can see the wall moves within 20 feet of it or starts its turn there, the creature must succeed on a Constitution saving throw or have the Blinded condition for 1 minute."+
 	"\n The wall consists of seven layers, each with a different color. When a creature reaches into or passes through the wall, it does so one layer at a time through all the layers. Each layer forces the creature to make a Dexterity saving throw or be affected by that layer's properties as described in the Prismatic Layers table."+
 	"\n The wall, which has AC 10, can be destroyed one layer at a time, in order from red to violet, by means specific to each layer. If a layer is destroyed, it is gone for the duration. Antimagic Field has no effect on the wall, and Dispel Magic can affect only the violet layer."+
 	"\n   " + toUni("Red") + ": Failed Save: 12d6 Fire damage. Successful Save: Half as much damage. Additional Effects: Nonmagical ranged attacks can't pass through this layer, which is destroyed if it takes at least 25 Cold damage."+
@@ -17991,7 +18074,7 @@ legacySpellRefactor("prismatic wall", {
 	"\n   " + toUni("Green") + ": Failed Save: 12d6 Poison damage. Successful Save: Half as much damage. Additional Effects: A Passwall spell, or another spell of equal or greater level that can open a portal on a solid surface, destroys this layer."+
 	"\n   " + toUni("Blue") + ": Failed Save: 12d6 Cold damage. Successful Save: Half as much damage. Additional Effects: The layer is destroyed if it takes at least 25 Fire damage."+
 	"\n   " + toUni("Indigo") + ": Failed Save: The target has the Restrained condition and makes a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the condition ends. If it fails three times, it has the Petrified condition until it is freed by an effect like the Greater Restoration spell. The successes and failures needn't be consecutive; keep track of both until the target collects three of a kind. Additional Effects: Spells can't be cast through this layer, which is destroyed by Bright Light shed by the Daylight spell."+
-	"\n   " + toUni("Violet") + ": Failed Save: The target has the Blinded condition and makes a Wisdom saving throw at the start of my next turn. On a successful save, the condition ends. On a failed save, the condition ends, and the creature teleports to another plane of existence (DM's choice). Additional Effects: This layer is destroyed by Dispel Magic."
+	"\n   " + toUni("Violet") + ": Failed Save: The target has the Blinded condition and makes a Wisdom saving throw at the start of your next turn. On a successful save, the condition ends. On a failed save, the condition ends, and the creature teleports to another plane of existence (DM's choice). Additional Effects: This layer is destroyed by Dispel Magic."
 });
 legacySpellRefactor("produce flame", {
 	name : "Produce Flame",
@@ -18005,7 +18088,7 @@ legacySpellRefactor("produce flame", {
 	duration : "10 min",
 	description : "Flame emits 20ft rad bright light/20ft dim; 1 a 60ft ranged spell atk for 1d8 Fire; +1d8 at CL 5, 11, \u0026 17",
 	descriptionCantripDie : "Flame emits 20ft rad bright light/20ft dim; 1 a 60ft ranged spell atk for `CD`d8 Fire dmg",
-	descriptionFull : "A flickering flame appears in my hand and remains there for the duration. While there, the flame emits no heat and ignites nothing, and it sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. The spell ends if I cast it again." + "\n   " + "Until the spell ends, I can take a Magic action to hurl fire at a creature or an object within 60 feet of I. Make a ranged spell attack. On a hit, the target takes 1d8 Fire damage." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d8 when I reach levels 5 (2d8), 11 (3d8), and 17 (4d8).",
+	descriptionFull : "A flickering flame appears in your hand and remains there for the duration. While there, the flame emits no heat and ignites nothing, and it sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. The spell ends if you cast it again." + "\n   " + "Until the spell ends, you can take a Magic action to hurl fire at a creature or an object within 60 feet of you. Make a ranged spell attack. On a hit, the target takes 1d8 Fire damage." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).",
 	dynamicDamageBonus : { multipleDmgMoments : false }
 });
 legacySpellRefactor("programmed illusion", {
@@ -18020,7 +18103,7 @@ legacySpellRefactor("programmed illusion", {
 	compMaterial : "Jade dust worth 25+ gp",
 	duration : "Till dispelled",
 	description : "30-ft cube illusion includes visual, audible; activates on set trigger; Int(Invest.) vs spell DC; see B (25gp)",
-	descriptionFull : "I create an illusion of an object, a creature, or some other visible phenomenon within range that activates when a specific trigger occurs. The illusion is imperceptible until then. It must be no larger than a 30-foot cube, and I decide when I cast the spell how the illusion behaves and what sounds it makes. This scripted performance can last up to 5 minutes." + "\n   " + "When the trigger I specify occurs, the illusion springs into existence and performs in the manner I described. Once the illusion finishes performing, it disappears and remains dormant for 10 minutes, after which the illusion can be activated again." + "\n   " + "The trigger can be as general or as detailed as I like, though it must be based on visual or audible phenomena that occur within 30 feet of the area. For example, I could create an illusion of yourself to appear and warn off others who attempt to open a trapped door." + "\n   " + "Physical interaction with the image reveals it to be illusory, since things can pass through it. A creature that takes the Study action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against my spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature."
+	descriptionFull : "You create an illusion of an object, a creature, or some other visible phenomenon within range that activates when a specific trigger occurs. The illusion is imperceptible until then. It must be no larger than a 30-foot cube, and you decide when you cast the spell how the illusion behaves and what sounds it makes. This scripted performance can last up to 5 minutes." + "\n   " + "When the trigger you specify occurs, the illusion springs into existence and performs in the manner you described. Once the illusion finishes performing, it disappears and remains dormant for 10 minutes, after which the illusion can be activated again." + "\n   " + "The trigger can be as general or as detailed as you like, though it must be based on visual or audible phenomena that occur within 30 feet of the area. For example, you could create an illusion of yourself to appear and warn off others who attempt to open a trapped door." + "\n   " + "Physical interaction with the image reveals it to be illusory, since things can pass through it. A creature that takes the Study action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature."
 });
 legacySpellRefactor("project image", {
 	name : "Project Image",
@@ -18034,7 +18117,7 @@ legacySpellRefactor("project image", {
 	compMaterial : "A statuette of yourself worth 5+ gp",
 	duration : "Conc, 1 day",
 	description : "Project image of me to familiar place; see/hear through it; 1 a manipulate; Int(Invest.) vs spell DC (5gp)",
-	descriptionFull : "I create an illusory copy of yourself that lasts for the duration. The copy can appear at any location within range that I have seen before, regardless of intervening obstacles. The illusion looks and sounds like I, but it is intangible. If the illusion takes any damage, it disappears, and the spell ends." + "\n   " + "I can see through the illusion's eyes and hear through its ears as if I were in its space. As a Magic action, I can move it up to 60 feet and make it gesture, speak, and behave in whatever way I choose. It mimics my mannerisms perfectly." + "\n   " + "Physical interaction with the image reveals it to be illusory, since things can pass through it. A creature that takes the Study action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against my spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature."
+	descriptionFull : "You create an illusory copy of yourself that lasts for the duration. The copy can appear at any location within range that you have seen before, regardless of intervening obstacles. The illusion looks and sounds like you, but it is intangible. If the illusion takes any damage, it disappears, and the spell ends." + "\n   " + "You can see through the illusion's eyes and hear through its ears as if you were in its space. As a Magic action, you can move it up to 60 feet and make it gesture, speak, and behave in whatever way you choose. It mimics your mannerisms perfectly." + "\n   " + "Physical interaction with the image reveals it to be illusory, since things can pass through it. A creature that takes the Study action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature."
 });
 legacySpellRefactor("protection from energy", {
 	name : "Protection from Energy",
@@ -18046,8 +18129,8 @@ legacySpellRefactor("protection from energy", {
 	range : "Touch",
 	components : "V,S",
 	duration : "Conc, 1 h",
-	description : "1 willing creature gains resistance to either Acid, Cold, Fire, Lightning, or Thunder damage",
-	descriptionFull : "For the duration, the willing creature I touch has Resistance to one damage type of my choice: Acid, Cold, Fire, Lightning, or Thunder."
+	description : "1 willing creature gains resistance to Acid, Cold, Fire, Lightning, or Thunder damage",
+	descriptionFull : "For the duration, the willing creature you touch has Resistance to one damage type of your choice: Acid, Cold, Fire, Lightning, or Thunder."
 });
 legacySpellRefactor("protection from evil and good", {
 	name : "Protection from Evil and Good",
@@ -18061,8 +18144,8 @@ legacySpellRefactor("protection from evil and good", {
 	components : "V,S,M\u2020",
 	compMaterial : "A flask of Holy Water worth 25+ gp, which the spell consumes",
 	duration : "Conc, 10 min",
-	description : "1 crea no fear/charm/possess by abber./celes./elem./fey/fiends/undead; they have dis vs it (25gp cons.)",
-	descriptionFull : "Until the spell ends, one willing creature I touch is protected against creatures that are Aberrations, Celestials, Elementals, Fey, Fiends, or Undead. The protection grants several benefits. Creatures of those types have Disadvantage on attack rolls against the target. The target also can't be possessed by or gain the Charmed or Frightened conditions from them. If the target is already possessed, Charmed, or Frightened by such a creature, the target has Advantage on any new saving throw against the relevant effect."
+	description : "1 crea no fear/charm/possess and atks dis. from  abber./celes./elem./fey/fiends/undead (25gp cons.)",
+	descriptionFull : "Until the spell ends, one willing creature you touch is protected against creatures that are Aberrations, Celestials, Elementals, Fey, Fiends, or Undead. The protection grants several benefits. Creatures of those types have Disadvantage on attack rolls against the target. The target also can't be possessed by or gain the Charmed or Frightened conditions from them. If the target is already possessed, Charmed, or Frightened by such a creature, the target has Advantage on any new saving throw against the relevant effect."
 });
 legacySpellRefactor("protection from poison", {
 	name : "Protection from Poison",
@@ -18075,7 +18158,7 @@ legacySpellRefactor("protection from poison", {
 	components : "V,S",
 	duration : "1 h",
 	description : "1 creature cured of Poisoned, gains resistance to Poison damage, and adv on saves vs Poisoned",
-	descriptionFull : "I touch a creature and end the Poisoned condition on it. For the duration, the target has Advantage on saving throws to avoid or end the Poisoned condition, and it has Resistance to Poison damage."
+	descriptionFull : "You touch a creature and end the Poisoned condition on it. For the duration, the target has Advantage on saving throws to avoid or end the Poisoned condition, and it has Resistance to Poison damage."
 });
 legacySpellRefactor("purify food and drink", {
 	name : "Purify Food and Drink",
@@ -18089,7 +18172,7 @@ legacySpellRefactor("purify food and drink", {
 	components : "V,S",
 	duration : "Instantaneous",
 	description : "5-ft radius of food and drink is rendered free from all poison and rot",
-	descriptionFull : "I remove poison and rot from nonmagical food and drink in a 5-foot-radius Sphere centered on a point within range."
+	descriptionFull : "You remove poison and rot from nonmagical food and drink in a 5-foot-radius Sphere centered on a point within range."
 });
 legacySpellRefactor("raise dead", {
 	name : "Raise Dead",
@@ -18103,7 +18186,7 @@ legacySpellRefactor("raise dead", {
 	compMaterial : "A diamond worth 500+ gp, which the spell consumes",
 	duration : "Instantaneous",
 	description : "Restores corpse that died within the last 10 days to life with 1 HP; see book (500gp cons.)",
-	descriptionFull : "With a touch, I revive a dead creature if it has been dead no longer than 10 days and it wasn't Undead when it died." + "\n   " + "The creature returns to life with 1 Hit Point. This spell also neutralizes any poisons that affected the creature at the time of death." + "\n   " + "This spell closes all mortal wounds, but it doesn't restore missing body parts. If the creature is lacking body parts or organs integral for its survival—its head, for instance—the spell automatically fails." + "\n   " + "Coming back from the dead is an ordeal. The target takes a -4 penalty to d20 Tests. Every time the target finishes a Long Rest, the penalty is reduced by 1 until it becomes 0."
+	descriptionFull : "With a touch, you revive a dead creature if it has been dead no longer than 10 days and it wasn't Undead when it died." + "\n   " + "The creature returns to life with 1 Hit Point. This spell also neutralizes any poisons that affected the creature at the time of death." + "\n   " + "This spell closes all mortal wounds, but it doesn't restore missing body parts. If the creature is lacking body parts or organs integral for its survival—its head, for instance—the spell automatically fails." + "\n   " + "Coming back from the dead is an ordeal. The target takes a -4 penalty to d20 Tests. Every time the target finishes a Long Rest, the penalty is reduced by 1 until it becomes 0."
 });
 legacySpellRefactor("rary's telepathic bond", {
 	name : "Rary's Telepathic Bond",
@@ -18120,7 +18203,7 @@ legacySpellRefactor("rary's telepathic bond", {
 	compMaterial : "two eggs",
 	duration : "1 h",
 	description : "8 willing crea gain a telepathic bond across any distance on same plane; must know a language",
-	descriptionFull : "I forge a telepathic link among up to eight willing creatures of my choice within range, psychically linking each creature to all the others for the duration. Creatures that can't communicate in any languages aren't affected by this spell." + "\n   " + "Until the spell ends, the targets can communicate telepathically through the bond whether or not they share a language. The communication is possible over any distance, though it can't extend to other planes of existence."
+	descriptionFull : "You forge a telepathic link among up to eight willing creatures of your choice within range, psychically linking each creature to all the others for the duration. Creatures that can't communicate in any languages aren't affected by this spell." + "\n   " + "Until the spell ends, the targets can communicate telepathically through the bond whether or not they share a language. The communication is possible over any distance, though it can't extend to other planes of existence."
 });
 legacySpellRefactor("ray of enfeeblement", {
 	name : "Ray of Enfeeblement",
@@ -18133,8 +18216,8 @@ legacySpellRefactor("ray of enfeeblement", {
 	components : "V,S",
 	duration : "Conc, 1 min",
 	save : "Con",
-	description : "1 crea save or dis. on Str d20 rolls \u0026 -1d8 from dmg; pass: dis. on 1st atk before my turn; redo save EoT",
-	descriptionFull : "A beam of enervating energy shoots from I toward a creature within range. The target must make a Constitution saving throw. On a successful save, the target has Disadvantage on the next attack roll it makes until the start of my next turn." + "\n   " + "On a failed save, the target has Disadvantage on Strength-based d20 Tests for the duration. During that time, it also subtracts 1d8 from all its damage rolls. The target repeats the save at the end of each of its turns, ending the spell on a success."
+	description : "1 crea save or dis. on Str d20 tests \u0026 -1d8 from dmg; pass: dis. on 1st atk before my turn; redo save EoT",
+	descriptionFull : "A beam of enervating energy shoots from you toward a creature within range. The target must make a Constitution saving throw. On a successful save, the target has Disadvantage on the next attack roll it makes until the start of your next turn." + "\n   " + "On a failed save, the target has Disadvantage on Strength-based d20 Tests for the duration. During that time, it also subtracts 1d8 from all its damage rolls. The target repeats the save at the end of each of its turns, ending the spell on a success."
 });
 legacySpellRefactor("ray of frost", {
 	name : "Ray of Frost",
@@ -18148,7 +18231,7 @@ legacySpellRefactor("ray of frost", {
 	duration : "Instantaneous",
 	description : "Ranged spell atk for 1d8 Cold dmg and -10 ft speed until start of my next turn; +1d8 at CL 5, 11, \u0026 17",
 	descriptionCantripDie : "Ranged spell attack for `CD`d8 Cold dmg and -10 ft speed until start of my next turn",
-	descriptionFull : "A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of my next turn." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d8 when I reach levels 5 (2d8), 11 (3d8), and 17 (4d8)."
+	descriptionFull : "A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8)."
 });
 legacySpellRefactor("ray of sickness", {
 	name : "Ray of Sickness",
@@ -18161,7 +18244,7 @@ legacySpellRefactor("ray of sickness", {
 	components : "V,S",
 	duration : "Instantaneous",
 	description : "Ranged spell attack for 2d8+1d8/SL Poison damage and Poisoned until my next turn ends",
-	descriptionFull : "I shoot a greenish ray at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 Poison damage and has the Poisoned condition until the end of my next turn." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 1."
+	descriptionFull : "You shoot a greenish ray at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 Poison damage and has the Poisoned condition until the end of your next turn." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 1."
 });
 legacySpellRefactor("regenerate", {
 	name : "Regenerate",
@@ -18176,7 +18259,7 @@ legacySpellRefactor("regenerate", {
 	duration : "1 h",
 	description : "1 crea heals 4d8+15 HP now and gains 1 HP each turn for duration; restores lost body parts in 2 min",
 	descriptionShorter : "1 crea heals 4d8+15 HP and 1 HP/rnd for duration; restores lost body parts in 2 min",
-	descriptionFull : "A creature I touch regains 4d8 + 15 Hit Points. For the duration, the target regains 1 Hit Point at the start of each of its turns, and any severed body parts regrow after 2 minutes.",
+	descriptionFull : "A creature you touch regains 4d8 + 15 Hit Points. For the duration, the target regains 1 Hit Point at the start of each of its turns, and any severed body parts regrow after 2 minutes.",
 	dynamicDamageBonus : {
 		multipleDmgMoments : false,
 		extraDmgGroupsSameType : /(and |\u0026 )((?:\+?\d+d?\d*)+)( HP\/rnd)/i
@@ -18193,8 +18276,8 @@ legacySpellRefactor("reincarnate", {
 	components : "V,S,M\u2020",
 	compMaterial : "Rare oils worth 1,000+ gp, which the spell consumes",
 	duration : "Instantaneous",
-	description : "Brings humanoid that died in last 10 days to life in a new random adult body, see book (1000gp cons.)",
-	descriptionFull : "I touch a dead Humanoid or a piece of one. If the creature has been dead no longer than 10 days, the spell forms a new body for it and calls the soul to enter that body. Roll 1d10 and consult the table below to determine the body's species, or the DM chooses another playable species." + "\n\n   " + toUni("d10") + "\t" + toUni("Race") + "\n   " + "1\tAasimar" + "\n   " + "2\tDragonborn" + "\n   " + "3\tDwarf" + "\n   " + "4\tElf" + "\n   " + "5\tGnome" + "\n   " + "6\tGoliath" + "\n   " + "7\tHalfling" + "\n   " + "8\tHuman" + "\n   " + "9\tOrc" + "\n   " + "10\tTiefling" + "\n\n" + "The reincarnated creature makes any choices that a species' description offers, and the creature recalls its former life. It retains the capabilities it had in its original form, except it loses the traits of its previous species and gains the traits of its new one."
+	description : "Bring humanoid that died in last 10 days to life in a new random adult body, see book (1000gp cons.)",
+	descriptionFull : "You touch a dead Humanoid or a piece of one. If the creature has been dead no longer than 10 days, the spell forms a new body for it and calls the soul to enter that body. Roll 1d10 and consult the table below to determine the body's species, or the DM chooses another playable species." + "\n\n   " + toUni("d10") + "\t" + toUni("Race") + "\n   " + "1\tAasimar" + "\n   " + "2\tDragonborn" + "\n   " + "3\tDwarf" + "\n   " + "4\tElf" + "\n   " + "5\tGnome" + "\n   " + "6\tGoliath" + "\n   " + "7\tHalfling" + "\n   " + "8\tHuman" + "\n   " + "9\tOrc" + "\n   " + "10\tTiefling" + "\n\n" + "The reincarnated creature makes any choices that a species' description offers, and the creature recalls its former life. It retains the capabilities it had in its original form, except it loses the traits of its previous species and gains the traits of its new one."
 });
 legacySpellRefactor("remove curse", {
 	name : "Remove Curse",
@@ -18207,7 +18290,7 @@ legacySpellRefactor("remove curse", {
 	components : "V,S",
 	duration : "Instantaneous",
 	description : "All curses end for 1 creature or object; magic items retain curses but break attunement",
-	descriptionFull : "At my touch, all curses affecting one creature or object end. If the object is a cursed magic item, its curse remains, but the spell breaks its owner's Attunement to the object so it can be removed or discarded."
+	descriptionFull : "At your touch, all curses affecting one creature or object end. If the object is a cursed magic item, its curse remains, but the spell breaks its owner's Attunement to the object so it can be removed or discarded."
 });
 legacySpellRefactor("resistance", {
 	name : "Resistance",
@@ -18220,7 +18303,7 @@ legacySpellRefactor("resistance", {
 	components : "V,S",
 	duration : "Conc, 1 min",
 	description : "Choose 1 dmg type (except Force or Psychic); 1 crea takes -1d4 dmg of that type for duration (1/turn)",
-	descriptionFull : "I touch a willing creature and choose a damage type: Acid, Bludgeoning, Cold, Fire, Lightning, Necrotic, Piercing, Poison, Radiant, Slashing, or Thunder. When the creature takes damage of the chosen type before the spell ends, the creature reduces the total damage taken by 1d4. A creature can benefit from this spell only once per turn."
+	descriptionFull : "You touch a willing creature and choose a damage type: Acid, Bludgeoning, Cold, Fire, Lightning, Necrotic, Piercing, Poison, Radiant, Slashing, or Thunder. When the creature takes damage of the chosen type before the spell ends, the creature reduces the total damage taken by 1d4. A creature can benefit from this spell only once per turn."
 });
 legacySpellRefactor("resurrection", {
 	name : "Resurrection",
@@ -18233,8 +18316,8 @@ legacySpellRefactor("resurrection", {
 	components : "V,S,M\u2020",
 	compMaterial : "A diamond worth 1,000+ gp, which the spell consumes",
 	duration : "Instantaneous",
-	description : "Resurrect a crea that died in the last century to life with whole body and full HP; see B (1000gp cons.)",
-	descriptionFull : "With a touch, I revive a dead creature that has been dead for no more than a century, didn't die of old age, and wasn't Undead when it died." + "\n   " + "The creature returns to life with all its Hit Points. This spell also neutralizes any poisons that affected the creature at the time of death. This spell closes all mortal wounds and restores any missing body parts." + "\n   " + "Coming back from the dead is an ordeal. The target takes a -4 penalty to d20 Tests. Every time the target finishes a Long Rest, the penalty is reduced by 1 until it becomes 0." + "\n   " + "Casting this spell to revive a creature that has been dead for 365 days or longer taxes I. Until I finish a Long Rest, I can't cast spells again, and I have Disadvantage on d20 Tests."
+	description : "Bring corpse that died in the last century to life with whole body and full HP; see B (1000gp cons.)",
+	descriptionFull : "With a touch, you revive a dead creature that has been dead for no more than a century, didn't die of old age, and wasn't Undead when it died." + "\n   " + "The creature returns to life with all its Hit Points. This spell also neutralizes any poisons that affected the creature at the time of death. This spell closes all mortal wounds and restores any missing body parts." + "\n   " + "Coming back from the dead is an ordeal. The target takes a -4 penalty to d20 Tests. Every time the target finishes a Long Rest, the penalty is reduced by 1 until it becomes 0." + "\n   " + "Casting this spell to revive a creature that has been dead for 365 days or longer taxes you. Until you finish a Long Rest, you can't cast spells again, and you have Disadvantage on d20 Tests."
 });
 legacySpellRefactor("reverse gravity", {
 	name : "Reverse Gravity",
@@ -18248,7 +18331,7 @@ legacySpellRefactor("reverse gravity", {
 	compMaterial : "A lodestone and iron filings",
 	duration : "Conc, 1 min",
 	save : "Dex",
-	description : "50-ft rad 100-ft high cyl. everything falls upward; save to grab nearby object; fall down when ends",
+	description : "50-ft rad 100-ft high cyl. everything falls upward; save to grab nearby object; fall when ends",
 	descriptionFull : "This spell reverses gravity in a 50-foot-radius, 100-foot high Cylinder centered on a point within range. All creatures and objects in that area that aren't anchored to the ground fall upward and reach the top of the Cylinder. A creature can make a Dexterity saving throw to grab a fixed object it can reach, thus avoiding the fall upward." + "\n   " + "If a ceiling or an anchored object is encountered in this upward fall, creatures and objects strike it just as they would during a downward fall. If an affected creature or object reaches the Cylinder's top without striking anything, it hovers there for the duration. When the spell ends, affected objects and creatures fall downward."
 });
 legacySpellRefactor("revivify", {
@@ -18262,8 +18345,8 @@ legacySpellRefactor("revivify", {
 	components : "V,S,M\u2020",
 	compMaterial : "A diamond worth 300+ gp, which the spell consumes",
 	duration : "Instantaneous",
-	description : "Restores a corpse that has died within the last min to life with 1 HP (300gp cons.)",
-	descriptionFull : "I touch a creature that has died within the last minute. That creature revives with 1 Hit Point. This spell can't revive a creature that has died of old age, nor does it restore any missing body parts."
+	description : "Restore a corpse that died within the last minute to life with 1 HP (300gp cons.)",
+	descriptionFull : "You touch a creature that has died within the last minute. That creature revives with 1 Hit Point. This spell can't revive a creature that has died of old age, nor does it restore any missing body parts."
 });
 legacySpellRefactor("rope trick", {
 	name : "Rope Trick",
@@ -18277,10 +18360,11 @@ legacySpellRefactor("rope trick", {
 	compMaterial : "A segment of rope",
 	duration : "1 h",
 	description : "Rope stands vertical; at top extradimens. space with invisible 3\xD75 ft entrance, holds 8 Medium crea",
-	descriptionFull : "I touch a rope. One end of it hovers upward until the rope hangs perpendicular to the ground or the rope reaches a ceiling. At the rope's upper end, an Invisible 3-foot-by-5-foot portal opens to an extradimensional space that lasts until the spell ends. That space can be reached by climbing the rope, which can be pulled into or dropped out of it." + "\n   " + "The space can hold up to eight Medium or smaller creatures. Attacks, spells, and other effects can't pass into or out of the space, but creatures inside it can see through the portal. Anything inside the space drops out when the spell ends."
+	descriptionFull : "You touch a rope. One end of it hovers upward until the rope hangs perpendicular to the ground or the rope reaches a ceiling. At the rope's upper end, an Invisible 3-foot-by-5-foot portal opens to an extradimensional space that lasts until the spell ends. That space can be reached by climbing the rope, which can be pulled into or dropped out of it." + "\n   " + "The space can hold up to eight Medium or smaller creatures. Attacks, spells, and other effects can't pass into or out of the space, but creatures inside it can see through the portal. Anything inside the space drops out when the spell ends."
 });
 legacySpellRefactor("sacred flame", {
 	name : "Sacred Flame",
+	nameShort : "Sacred Flame*",
 	classes : ["cleric"],
 	source : [["PHB2024", 313]],
 	level : 0,
@@ -18293,7 +18377,7 @@ legacySpellRefactor("sacred flame", {
 	description : "1 visible creature save or 1d8 Radiant; no save bonus for 1/2 or 3/4 cover; +1d8 at CL 5, 11, and 17",
 	descriptionShorter : "1 visible crea save or 1d8 Radiant dmg; no bonus for 1/2 or 3/4 covere; +1d8 at CL 5/11/17",
 	descriptionCantripDie : "1 visible creature save or `CD`d8 Radiant dmg; no bonus for 1/2 or 3/4 cover on save",
-	descriptionFull : "Flame-like radiance descends on a creature that I can see within range. The target must succeed on a Dexterity saving throw or take 1d8 Radiant damage. The target gains no benefit from Half Cover or Three-Quarters Cover for this save." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d8 when I reach levels 5 (2d8), 11 (3d8), and 17 (4d8)."
+	descriptionFull : "Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take 1d8 Radiant damage. The target gains no benefit from Half Cover or Three-Quarters Cover for this save." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8)."
 });
 legacySpellRefactor("sanctuary", {
 	name : "Sanctuary",
@@ -18308,7 +18392,7 @@ legacySpellRefactor("sanctuary", {
 	duration : "1 min",
 	save : "Wis",
 	description : "1 crea warded until atk/cast/do dmg; pass save to atk or target them; no protection vs area spells",
-	descriptionFull : "I ward a creature within range. Until the spell ends, any creature who targets the warded creature with an attack roll or a damaging spell must succeed on a Wisdom saving throw or either choose a new target or lose the attack or spell. This spell doesn't protect the warded creature from areas of effect." + "\n   " + "The spell ends if the warded creature makes an attack roll, casts a spell, or deals damage."
+	descriptionFull : "You ward a creature within range. Until the spell ends, any creature who targets the warded creature with an attack roll or a damaging spell must succeed on a Wisdom saving throw or either choose a new target or lose the attack or spell. This spell doesn't protect the warded creature from areas of effect." + "\n   " + "The spell ends if the warded creature makes an attack roll, casts a spell, or deals damage."
 });
 legacySpellRefactor("scorching ray", {
 	name : "Scorching Ray",
@@ -18321,7 +18405,7 @@ legacySpellRefactor("scorching ray", {
 	components : "V,S",
 	duration : "Instantaneous",
 	description : "3+1/SL rays target 1 or more creatures; each ray ranged spell attack for 2d6 Fire dmg",
-	descriptionFull : "I hurl three fiery rays. I can hurl them at one target within range or at several. Make a ranged spell attack for each ray. On a hit, the target takes 2d6 Fire damage." + AtHigherLevels + "I create one additional ray for each spell slot level above 2.",
+	descriptionFull : "You hurl three fiery rays. You can hurl them at one target within range or at several. Make a ranged spell attack for each ray. On a hit, the target takes 2d6 Fire damage." + AtHigherLevels + "You create one additional ray for each spell slot level above 2.",
 	dynamicDamageBonus : { multipleDmgMoments : true }
 });
 legacySpellRefactor("scrying", {
@@ -18337,7 +18421,7 @@ legacySpellRefactor("scrying", {
 	duration : "Conc, 10 min",
 	save : "Wis",
 	description : "1 creature save or followed by sensor; or create immobile sensor in familiar location; see B (1000gp)",
-	descriptionFull : "I can see and hear a creature I choose that is on the same plane of existence as I. The target makes a Wisdom saving throw, which is modified (see the tables below) by how well I know the target and the sort of physical connection I have to it. The target doesn't know what it is making the save against, only that it feels uneasy." + "\n\n" + toUni("Knowledge") + "\t\t\t   " + toUni("Save Modifier") + "\n" + "Secondhand (heard of the target)\t+5" + "\n" + "Firsthand (met the target)\t\t+0" + "\n" + "Familiar (know the target well)\t\t-5" + "\n\n" + toUni("Connection") + "\t\t\t   " + toUni("Save Modifier") + "\n" + "Picture or other likeness\t\t\t\t-2" + "\n" + "Garment or other possession\t\t\t-4" + "\n" + "Body part, lock of hair, or bit of nail\t-10" + "\n\n" + "On a successful save, the target isn't affected, and I can't use this spell on it again for 24 hours." + "\n   " + "On a failed save, the spell creates an Invisible, intangible sensor within 10 feet of the target. I can see and hear through the sensor as if I were there. The sensor moves with the target, remaining within 10 feet of it for the duration. If something can see the sensor, it appears as a luminous orb about the size of my fist." + "\n   " + "Instead of targeting a creature, I can target a location I have seen. When I do so, the sensor appears at that location and doesn't move."
+	descriptionFull : "You can see and hear a creature you choose that is on the same plane of existence as you. The target makes a Wisdom saving throw, which is modified (see the tables below) by how well you know the target and the sort of physical connection you have to it. The target doesn't know what it is making the save against, only that it feels uneasy." + "\n\n" + toUni("Knowledge") + "\t\t\t   " + toUni("Save Modifier") + "\n" + "Secondhand (heard of the target)\t+5" + "\n" + "Firsthand (met the target)\t\t+0" + "\n" + "Familiar (know the target well)\t\t-5" + "\n\n" + toUni("Connection") + "\t\t\t   " + toUni("Save Modifier") + "\n" + "Picture or other likeness\t\t\t\t-2" + "\n" + "Garment or other possession\t\t\t-4" + "\n" + "Body part, lock of hair, or bit of nail\t-10" + "\n\n" + "On a successful save, the target isn't affected, and you can't use this spell on it again for 24 hours." + "\n   " + "On a failed save, the spell creates an Invisible, intangible sensor within 10 feet of the target. You can see and hear through the sensor as if you were there. The sensor moves with the target, remaining within 10 feet of it for the duration. If something can see the sensor, it appears as a luminous orb about the size of your fist." + "\n   " + "Instead of targeting a creature, you can target a location you have seen. When you do so, the sensor appears at that location and doesn't move."
 });
 legacySpellRefactor("searing smite", {
 	name : "Searing Smite",
@@ -18346,14 +18430,14 @@ legacySpellRefactor("searing smite", {
 	level : 1,
 	school : "Evoc",
 	time : "1 bns*",
-	timeFull : "Bonus Action, which I take immediately after hitting a target with a Melee weapon or an Unarmed Strike",
+	timeFull : "Bonus Action, which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike",
 	range : "Self",
 	components : "V",
 	duration : "1 min",
 	save : "Con",
-	description : "Melee wea/unarmed hit +1d6+1d6/SL Fire \u0026 target ignites; each turn 1d6+1d6/SL Fire then save to end",
-	descriptionShorter : "on melee wea hit +1d6+1d6/SL Fire dmg \u0026 ignites: start of turn save to end or 1d6 dmg",
-	descriptionFull : "As I hit the target, it takes an extra 1d6 Fire damage from the attack. At the start of each of its turns until the spell ends, the target takes 1d6 Fire damage and then makes a Constitution saving throw. On a failed save, the spell continues. On a successful save, the spell ends." + AtHigherLevels + "All the damage increases by 1d6 for each spell slot level above 1.",
+	description : "Melee wea/unarmed hit +1d6+1d6/SL Fire \u0026 ignites; each turn 1d6+1d6/SL Fire then save to end",
+	descriptionShorter : "On melee wea hit +1d6+1d6/SL Fire dmg \u0026 ignites: start of turn save to end or 1d6 dmg",
+	descriptionFull : "As you hit the target, it takes an extra 1d6 Fire damage from the attack. At the start of each of its turns until the spell ends, the target takes 1d6 Fire damage and then makes a Constitution saving throw. On a failed save, the spell continues. On a successful save, the spell ends." + AtHigherLevels + "All the damage increases by 1d6 for each spell slot level above 1.",
 	dynamicDamageBonus : {
 		extraDmgGroupsSameType : /(end or )((?:\+?\d+d?\d*)+)/i
 	}
@@ -18370,10 +18454,11 @@ legacySpellRefactor("see invisibility", {
 	compMaterial : "A pinch of talc",
 	duration : "1 h",
 	description : "See Invisible/ethereal creatures and objects as if they were visible; ethereals appear ghostly",
-	descriptionFull : "For the duration, I see creatures and objects that have the Invisible condition as if they were visible, and I can see into the Ethereal Plane. Creatures and objects there appear ghostly."
+	descriptionFull : "For the duration, you see creatures and objects that have the Invisible condition as if they were visible, and you can see into the Ethereal Plane. Creatures and objects there appear ghostly."
 });
 legacySpellRefactor("seeming", {
 	name : "Seeming",
+	nameShort : "Seeming*",
 	classes : ["bard", "sorcerer", "wizard"],
 	source : [["PHB2024", 314]],
 	level : 5,
@@ -18384,7 +18469,7 @@ legacySpellRefactor("seeming", {
 	duration : "8 h",
 	save : "Cha",
 	description : "Any crea save or disguised by illusory appearance; Int(Investigation) check vs spell DC; see book",
-	descriptionFull : "I give an illusory appearance to each creature of my choice that I can see within range. An unwilling target can make a Charisma saving throw, and if it succeeds, it is unaffected by this spell." + "\n   " + "I can give the same appearance or different ones to the targets. The spell can change the appearance of the targets' bodies and equipment. I can make each creature seem 1 foot shorter or taller and appear heavier or lighter. A target's new appearance must have the same basic arrangement of limbs as the target, but the extent of the illusion is otherwise up to I. The spell lasts for the duration." + "\n   " + "The changes wrought by this spell fail to hold up to physical inspection. For example, if I use this spell to add a hat to a creature's outfit, objects pass through the hat." + "\n   " + "A creature that takes the Study action to examine a target can make an Intelligence (Investigation) check against my spell save DC. If it succeeds, it becomes aware that the target is disguised."
+	descriptionFull : "You give an illusory appearance to each creature of your choice that you can see within range. An unwilling target can make a Charisma saving throw, and if it succeeds, it is unaffected by this spell." + "\n   " + "You can give the same appearance or different ones to the targets. The spell can change the appearance of the targets' bodies and equipment. You can make each creature seem 1 foot shorter or taller and appear heavier or lighter. A target's new appearance must have the same basic arrangement of limbs as the target, but the extent of the illusion is otherwise up to you. The spell lasts for the duration." + "\n   " + "The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to a creature's outfit, objects pass through the hat." + "\n   " + "A creature that takes the Study action to examine a target can make an Intelligence (Investigation) check against your spell save DC. If it succeeds, it becomes aware that the target is disguised."
 });
 legacySpellRefactor("sending", {
 	name : "Sending",
@@ -18398,7 +18483,7 @@ legacySpellRefactor("sending", {
 	compMaterial : "A copper wire",
 	duration : "Instantaneous",
 	description : "Send 25 words to familiar crea; it recognizes me and can respond with 25 words and/or block for 8 hrs",
-	descriptionFull : "I send a short message of 25 words of fewer to a creature I have met or a creature described to I by someone who has bet it. The target hears the message in its mind, recognizes I as the sender if it knows I, and can answer in a like manner immediately. The spell enables targets to understand the meaning of my message." + "\n   " + "I can send the message across any distance and even to other planes of existence, but if the target is on a different plane than I, there is a 5 percent chance that the message doesn't arrive. I know if the delivery fails." + "\n   " + "Upon receiving my message, a creature can block my ability to reach it again with this spell for 8 hours. If I try to send another message during that time, I learn that I are blocked, and the spell fails."
+	descriptionFull : "You send a short message of 25 words of fewer to a creature you have met or a creature described to you by someone who has bet it. The target hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables targets to understand the meaning of your message." + "\n   " + "You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn't arrive. You know if the delivery fails." + "\n   " + "Upon receiving your message, a creature can block your ability to reach it again with this spell for 8 hours. If you try to send another message during that time, you learn that you are blocked, and the spell fails."
 });
 legacySpellRefactor("sequester", {
 	name : "Sequester",
@@ -18412,7 +18497,7 @@ legacySpellRefactor("sequester", {
 	compMaterial : "Gem dust worth 5000+ gp, which the spell consumes",
 	duration : "Till dispelled",
 	description : "1 willing crea/object in suspended animation, Invisible, hidden from Divination; see B (5000gp cons.)",
-	descriptionFull : "With a touch, I magically sequester an object or a willing creature. For the duration, the target has the Invisible condition and can't be targeted by Divination spells, detected by magic, or viewed remotely with magic." + "\n   " + "If the target is a creature, it enters a state of suspended animation; it has the Unconscious condition, doesn't age, and doesn't need food, water, or air." + "\n   " + "I can set a condition for the spell to end early. The condition can be anything I choose, but it must occur or be visible within 1 mile of the target. Examples include \"after 1,000 years\" or \"when the tarrasque awakens.\" This spell also ends if the target takes any damage."
+	descriptionFull : "With a touch, you magically sequester an object or a willing creature. For the duration, the target has the Invisible condition and can't be targeted by Divination spells, detected by magic, or viewed remotely with magic." + "\n   " + "If the target is a creature, it enters a state of suspended animation; it has the Unconscious condition, doesn't age, and doesn't need food, water, or air." + "\n   " + "You can set a condition for the spell to end early. The condition can be anything you choose, but it must occur or be visible within 1 mile of the target. Examples include \"after 1,000 years\" or \"when the tarrasque awakens.\" This spell also ends if the target takes any damage."
 });
 legacySpellRefactor("shapechange", {
 	name : "Shapechange",
@@ -18425,8 +18510,8 @@ legacySpellRefactor("shapechange", {
 	components : "V,S,M\u0192",
 	compMaterial : "A jade circlet worth 1,500+ gp",
 	duration : "Conc, 1 h",
-	description : "Turn into crea with CR of CL or lower; 1 a new form; crea HP as THP; ends at 0 THP; see book (1500gp)",
-	descriptionFull : "I shape-shift into another creature for the duration or until I take a Magic action to shape-shift into a different eligible form. The new form must be of a creature that has a Challenge Rating no higher than my level or Challenge Rating. I must have seen the sort of creature before, and it can't be a Construct or an Undead." + "\n   " + "When I shape-shift, I gain a number of Temporary Hit Points equal to the Hit Points of the form. The spell ends early if I have no Temporary Hit Points left." + "\n   " + "my game statistics are replaced by the stat block of the chosen form, but I retain my creature type; alignment; personality; Intelligence, Wisdom, and Charisma scores; Hit Points; Hit Point Dice; proficiencies; and ability to communicate. If I have the Spellcasting feature, I retain it too." + "\n   " + "Upon shape-shifting, I determine whether my equipment drops to the ground or changes in size and shape to fit the new form while I're in it."
+	description : "Turn into crea with CR of \u2264CL; 1 a new form; crea HP as THP; ends at 0 THP; see book (1500gp)",
+	descriptionFull : "You shape-shift into another creature for the duration or until you take a Magic action to shape-shift into a different eligible form. The new form must be of a creature that has a Challenge Rating no higher than your level or Challenge Rating. You must have seen the sort of creature before, and it can't be a Construct or an Undead." + "\n   " + "When you shape-shift, you gain a number of Temporary Hit Points equal to the Hit Points of the form. The spell ends early if you have no Temporary Hit Points left." + "\n   " + "Your game statistics are replaced by the stat block of the chosen form, but you retain your creature type; alignment; personality; Intelligence, Wisdom, and Charisma scores; Hit Points; Hit Point Dice; proficiencies; and ability to communicate. If you have the Spellcasting feature, you retain it too." + "\n   " + "Upon shape-shifting, you determine whether your equipment drops to the ground or changes in size and shape to fit the new form while you're in it."
 });
 legacySpellRefactor("shatter", {
 	name : "Shatter",
@@ -18440,8 +18525,8 @@ legacySpellRefactor("shatter", {
 	compMaterial : "A chip of mica",
 	duration : "Instantaneous",
 	save : "Con",
-	description : "10ft rad all 3d8+1d8/SL Thunder; save 1/2; constructs dis.; nonmagical unattended obj also take dmg",
-	descriptionFull : "A loud noise erupts from a point of my choice within range. Each creature in a 10-foot-radius Sphere centered there makes a Constitution saving throw, taking 3d8 Thunder damage on a failed save or half as much damage on a successful one. A Construct has Disadvantage on the save." + "\n   " + "A nonmagical object that isn't being worn or carried also takes the damage if it's in the spell's area." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 2."
+	description : "10ft rad all crea and nonmagical unattended obj 3d8+1d8/SL Thunder; save halves; constructs dis.",
+	descriptionFull : "A loud noise erupts from a point of your choice within range. Each creature in a 10-foot-radius Sphere centered there makes a Constitution saving throw, taking 3d8 Thunder damage on a failed save or half as much damage on a successful one. A Construct has Disadvantage on the save." + "\n   " + "A nonmagical object that isn't being worn or carried also takes the damage if it's in the spell's area." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 2."
 });
 legacySpellRefactor("shield", {
 	name : "Shield",
@@ -18450,12 +18535,12 @@ legacySpellRefactor("shield", {
 	level : 1,
 	school : "Abjur",
 	time : "1 rea",
-	timeFull : "Reaction, which I take when I are hit by an attack roll or targeted by the Magic Missile spell",
+	timeFull : "Reaction, which you take when you are hit by an attack roll or targeted by the Magic Missile spell",
 	range : "Self",
 	components : "V,S",
 	duration : "1 round",
 	description : "If hit by atk +5 AC until start of next turn, may cause to miss; or stop Magic Missile from damaging me",
-	descriptionFull : "An imperceptible barrier of magical force protects I. Until the start of my next turn, I have a +5 bonus to AC, including against the triggering attack, and I take no damage from Magic Missile."
+	descriptionFull : "An imperceptible barrier of magical force protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from Magic Missile."
 });
 legacySpellRefactor("shield of faith", {
 	name : "Shield of Faith",
@@ -18469,7 +18554,7 @@ legacySpellRefactor("shield of faith", {
 	compMaterial : "A prayer scroll",
 	duration : "Conc, 10 min",
 	description : "1 creature gains +2 AC for the duration",
-	descriptionFull : "A shimmering field surrounds a creature of my choice within range, granting it a +2 bonus to AC for the duration."
+	descriptionFull : "A shimmering field surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration."
 });
 legacySpellRefactor("shillelagh", {
 	name : "Shillelagh",
@@ -18482,9 +18567,9 @@ legacySpellRefactor("shillelagh", {
 	components : "V,S,M",
 	compMaterial : "Mistletoe",
 	duration : "1 min",
-	description : "Club/qtrstaff I hold does 1d8 (CL5:1d10, CL11:1d12, CL17:2d6) Force/wea dmg & uses my spell ablty",
+	description : "Club/qtrstaff I hold does 1d8 (CL5:1d10, CL11:1d12, CL17:2d6) Force/wea dmg & uses my spell ability",
 	descriptionShorter : "Club/staff I hold does 1d8 (CL5:1d10, CL11:1d12, CL17:2d6) Force or wea dmg & uses my spell ability",
-	descriptionFull : "A Club or Quarterstaff I are holding is imbued with nature's power. For the duration, I can use my spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a d8. If the attack deals damage, it can be Force damage or the weapon's normal damage type (my choice).." + "\n   " + "The spell ends if I cast it again or if I let go of the weapon." + "\n   " + toUni("Cantrip Upgrade") + ". The damage die changes when I reach levels 5 (d10), 11 (d12), and 17 (2d6)."
+	descriptionFull : "A Club or Quarterstaff you are holding is imbued with nature's power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a d8. If the attack deals damage, it can be Force damage or the weapon's normal damage type (your choice).." + "\n   " + "The spell ends if you cast it again or if you let go of the weapon." + "\n   " + toUni("Cantrip Upgrade") + ". The damage die changes when you reach levels 5 (d10), 11 (d12), and 17 (2d6)."
 });
 legacySpellRefactor("shining smite", {
 	name : "Shining Smite",
@@ -18494,7 +18579,7 @@ legacySpellRefactor("shining smite", {
 	level : 2,
 	school : "Trans",
 	time : "1 bns*",
-	timeFull : "Bonus Action, which I take immediately after hitting a creature with a Melee weapon or an Unarmed Strike",
+	timeFull : "Bonus Action, which you take immediately after hitting a creature with a Melee weapon or an Unarmed Strike",
 	range : "Self",
 	components : "V",
 	duration : "Conc, 1 min",
@@ -18513,7 +18598,7 @@ legacySpellRefactor("shocking grasp", {
 	duration : "Instantaneous",
 	description : "Melee spell attack for 1d8 Lightning; no opportunity atks until its next turn; +1d8 at CL 5, 11, and 17",
 	descriptionCantripDie : "Melee spell attack for  `CD`d8 Lightning, no opportunity atks until its next turn",
-	descriptionFull : "Lightning springs from I to a creature that I try to touch. Make a melee spell attack against the target. On a hit, the target takes 1d8 Lightning damage, and it can't make Opportunity Attacks until the start of its next turn." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d8 when I reach levels 5 (2d8), 11 (3d8), and 17 (4d8)."
+	descriptionFull : "Lightning springs from you to a creature that you try to touch. Make a melee spell attack against the target. On a hit, the target takes 1d8 Lightning damage, and it can't make Opportunity Attacks until the start of its next turn." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8)."
 });
 legacySpellRefactor("silence", {
 	name : "Silence",
@@ -18526,8 +18611,8 @@ legacySpellRefactor("silence", {
 	range : "120 ft",
 	components : "V,S",
 	duration : "Conc, 10 min",
-	description : "20-ft radius no sound; all within Deafened, immune to Thunder dmg, can't use verbal components",
-	descriptionFull : "For the duration, no sound can be created within or pass through a 20-foot-radius Sphere centered on a point I choose within range. Any creature or object entirely inside the Sphere has Immunity to Thunder damage, and creatures have the Deafened condition while entirely inside it. Casting a spell that includes a Verbal component is impossible there."
+	description : "20-ft radius no sound; all within Deafened, immune to Thunder dmg, can't use Verbal components",
+	descriptionFull : "For the duration, no sound can be created within or pass through a 20-foot-radius Sphere centered on a point you choose within range. Any creature or object entirely inside the Sphere has Immunity to Thunder damage, and creatures have the Deafened condition while entirely inside it. Casting a spell that includes a Verbal component is impossible there."
 });
 legacySpellRefactor("silent image", {
 	name : "Silent Image",
@@ -18541,7 +18626,7 @@ legacySpellRefactor("silent image", {
 	compMaterial : "A bit of fleece",
 	duration : "Conc, 10 min",
 	description : "15-ft cube visual illusion; 1 a to move, can appear natural; Int(Investigation) check vs spell DC; see book",
-	descriptionFull : "I create the image of an object, a creature, or some other visible phenomenon that is no larger than a 15-foot cube. The image appears at a spot within range and lasts for the duration. The image is purely visual, it isn't accompanied by sound, smell, or other sensory effects." + "\n   " + "As a Magic action, I can cause the image to move to any spot within range. As the image changes location, I can alter its appearance so that its movements appear natural for the image. For example, if I create an image of a creature and move it, I can alter the image so that it appears to be walking." + "\n   " + "Physical interaction with the image reveals it to be an illusion, since things can pass through it. A creature that takes a Study action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against my spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image."
+	descriptionFull : "You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 15-foot cube. The image appears at a spot within range and lasts for the duration. The image is purely visual, it isn't accompanied by sound, smell, or other sensory effects." + "\n   " + "As a Magic action, you can cause the image to move to any spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking." + "\n   " + "Physical interaction with the image reveals it to be an illusion, since things can pass through it. A creature that takes a Study action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image."
 });
 legacySpellRefactor("simulacrum", {
 	name : "Simulacrum",
@@ -18555,7 +18640,7 @@ legacySpellRefactor("simulacrum", {
 	compMaterial : "Powdered ruby worth 1500+ gp, which the spell consumes",
 	duration : "Till dispelled",
 	description : "Create snow/ice duplicate of humanoid/beast; follows commands \u0026 acts on turn; see B (1500gp cons.)",
-	descriptionFull : "I create a simulacrum of one Beast or Humanoid that is within 10 feet of I for the entire casting of the spell. I finish the casting by touching both the creature and a pile of ice or snow that is the same size as that creature, and the pile turns into the simulacrum, which is a creature. It uses the game statistics of the original creature at the time of casting, except it is a Construct, its Hit Point maximum is half as much, and it can't cast this spell." + "\n   " + "The simulacrum is Friendly to I and creatures I designate. It obeys my commands and acts on my turn in combat. The simulacrum can't gain levels, and it can't take Short or Long Rests." + "\n   " + "If the simulacrum takes damage, the only way to restore its Hit Points is to repair it as I take a Long Rest, during which I expend components worth 100 GP per Hit Point restored. The simulacrum must stay within 5 feet of I for the repair." + "\n   " + "The simulacrum lasts until it drops to 0 Hit Points, at which point it reverts to snow and melts away. If I cast this spell again, any simulacrum I created with this spell is instantly destroyed."
+	descriptionFull : "You create a simulacrum of one Beast or Humanoid that is within 10 feet of you for the entire casting of the spell. You finish the casting by touching both the creature and a pile of ice or snow that is the same size as that creature, and the pile turns into the simulacrum, which is a creature. It uses the game statistics of the original creature at the time of casting, except it is a Construct, its Hit Point maximum is half as much, and it can't cast this spell." + "\n   " + "The simulacrum is Friendly to you and creatures you designate. It obeys your commands and acts on your turn in combat. The simulacrum can't gain levels, and it can't take Short or Long Rests." + "\n   " + "If the simulacrum takes damage, the only way to restore its Hit Points is to repair it as you take a Long Rest, during which you expend components worth 100 GP per Hit Point restored. The simulacrum must stay within 5 feet of you for the repair." + "\n   " + "The simulacrum lasts until it drops to 0 Hit Points, at which point it reverts to snow and melts away. If you cast this spell again, any simulacrum you created with this spell is instantly destroyed."
 });
 legacySpellRefactor("sleep", {
 	name : "Sleep",
@@ -18570,7 +18655,7 @@ legacySpellRefactor("sleep", {
 	duration : "1 min",
 	save : "Wis",
 	description : "Any 5-ft radius save or Incapacitated; if fail, save or Unconscious at next EoT. 1 a or dmg to wake",
-	descriptionFull : "Each creature of my choice in a 5-foot-radius Sphere centered on a point within range must succeed on a Wisdom saving throw or have the Incapacitated condition until the end of its next turn, at which point it must repeat the save. If the target fails the second save, the target has the Unconscious condition for the duration. The spell ends on a target if it takes damage or someone within 5 feet of it takes an action to shake it out of the spell's effect." + "\n   " + "Creatures that don't sleep, such as elves, or that have Immunity to the Exhaustion condition automatically succeed on saves against this spell."
+	descriptionFull : "Each creature of your choice in a 5-foot-radius Sphere centered on a point within range must succeed on a Wisdom saving throw or have the Incapacitated condition until the end of its next turn, at which point it must repeat the save. If the target fails the second save, the target has the Unconscious condition for the duration. The spell ends on a target if it takes damage or someone within 5 feet of it takes an action to shake it out of the spell's effect." + "\n   " + "Creatures that don't sleep, such as elves, or that have Immunity to the Exhaustion condition automatically succeed on saves against this spell."
 });
 legacySpellRefactor("sleet storm", {
 	name : "Sleet Storm",
@@ -18584,8 +18669,8 @@ legacySpellRefactor("sleet storm", {
 	compMaterial : "A miniature umbrella",
 	duration : "Conc, 1 min",
 	save : "Dex",
-	description : "40ft \xD7 40ft cyl.; heavily obscured; douses flames; dif. ter.; enter/start turn save or Prone \u0026 lose conc.",
-	descriptionFull : "Until the spell ends, sleet falls in a 40-foot-tall, 20-foot-radius Cylinder centered on a point I choose within range. The area is Heavily Obscured, and exposed flames in the area are doused." + "\n   " + "Ground in the Cylinder is Difficult Terrain. When a creature enters the Cylinder for the first time on a turn or starts its turn there, it must succeed on a Dexterity saving throw or have the Prone condition and lose Concentration."
+	description : "40ft \xD7 40ft cyl.; heavily obsc.; douses flames; dif. ter.; enter/start turn save or Prone \u0026 lose conc.",
+	descriptionFull : "Until the spell ends, sleet falls in a 40-foot-tall, 20-foot-radius Cylinder centered on a point you choose within range. The area is Heavily Obscured, and exposed flames in the area are doused." + "\n   " + "Ground in the Cylinder is Difficult Terrain. When a creature enters the Cylinder for the first time on a turn or starts its turn there, it must succeed on a Dexterity saving throw or have the Prone condition and lose Concentration."
 });
 legacySpellRefactor("slow", {
 	name : "Slow",
@@ -18600,7 +18685,7 @@ legacySpellRefactor("slow", {
 	duration : "Conc, 1 min",
 	save : "Wis",
 	description : "40ft cu 6 crea save or 1/2 spd, -2 AC & Dex save, no rea, only a or bns, 1 atk; 25% S spell fails; EoT save",
-	descriptionFull : "I alter time around up to six creatures of my choice in a 40-foot cube within range. Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration." + "\n   " + "An affected target's Speed is halved, it takes a -2 penalty to AC and Dexterity saving throws, and it can't take Reactions. On its turns, it can take either an action or a Bonus Action, not both, and it can make only one attack if it takes the Attack action. If it casts a spell with a Somatic component, there is a 25 percent chance the spell fails as a result of the target making the spell's gestures too slowly." + "\n   " + "An affected target repeats the save at the end of each of its turns, ending the spell on itself on a success."
+	descriptionFull : "You alter time around up to six creatures of your choice in a 40-foot cube within range. Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration." + "\n   " + "An affected target's Speed is halved, it takes a -2 penalty to AC and Dexterity saving throws, and it can't take Reactions. On its turns, it can take either an action or a Bonus Action, not both, and it can make only one attack if it takes the Attack action. If it casts a spell with a Somatic component, there is a 25 percent chance the spell fails as a result of the target making the spell's gestures too slowly." + "\n   " + "An affected target repeats the save at the end of each of its turns, ending the spell on itself on a success."
 });
 legacySpellRefactor("sorcerous burst", {
 	name : "Sorcerous Burst",
@@ -18612,9 +18697,9 @@ legacySpellRefactor("sorcerous burst", {
 	range : "120 ft",
 	components : "V,S",
 	duration : "Instantaneous",
-	description : "Spell atk; 1d8 Acid/Cold/Fire/Lghtng/Poison/Psych/Thndr; +1d8 per 8 (max spell mod) +1d8 CL 5/11/17",
-	descriptionCantripDie : "Spell atk 1 crea `CD`d8 (Acid/Cold/Fire/Lghtng/Poison/Psych/Thndr); +1d8 per 8 (max spell mod)",
-	descriptionFull : "I cast sorcerous energy at one creature or object within range. Make a ranged attack roll against the target. On a hit, the target takes 1d8 damage of a type I choose: Acid, Cold, Fire, Lightning, Poison, Psychic, or Thunder." + "\n   " + "If I roll an 8 on a d8 for this spell, I can roll another d8, and add it to the damage. When I cast this spell, the maximum number of these d8s I can add to the spell's damage equals my spellcasting ability modifier." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d8 when I reach levels 5 (2d8), 11 (3d8), and 17 (4d8)."
+	description : "Spell atk 1d8 Acid/Cold/Fire/Lightn./Poison/Psych/Thndr; +1d8 per 8 (max spell mod) +1d8 CL 5/11/17",
+	descriptionCantripDie : "Spell atk 1 crea `CD`d8 (Acid/Cold/Fire/Lightn./Poison/Psych/Thndr); +1d8 per 8 (max spell mod)",
+	descriptionFull : "You cast sorcerous energy at one creature or object within range. Make a ranged attack roll against the target. On a hit, the target takes 1d8 damage of a type you choose: Acid, Cold, Fire, Lightning, Poison, Psychic, or Thunder." + "\n   " + "If you roll an 8 on a d8 for this spell, you can roll another d8, and add it to the damage. When you cast this spell, the maximum number of these d8s you can add to the spell's damage equals your spellcasting ability modifier." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8)."
 });
 legacySpellRefactor("spare the dying", {
 	name : "Spare the Dying",
@@ -18627,7 +18712,7 @@ legacySpellRefactor("spare the dying", {
 	components : "V,S",
 	duration : "Instantaneous",
 	description : "1 living creature with 0 current HP becomes stable; range doubles at CL 5, 11, and 17",
-	descriptionFull : "Choose a creature within range that has 0 Hit Points and isn't dead. The creature becomes Stable." + "\n   " + toUni("Cantrip Upgrade") + ". The range doubles when I reach levels 5 (30 feet), 11 (60 feet), and 17 (120 feet)."
+	descriptionFull : "Choose a creature within range that has 0 Hit Points and isn't dead. The creature becomes Stable." + "\n   " + toUni("Cantrip Upgrade") + ". The range doubles when you reach levels 5 (30 feet), 11 (60 feet), and 17 (120 feet)."
 });
 legacySpellRefactor("speak with animals", {
 	name : "Speak with Animals",
@@ -18641,7 +18726,7 @@ legacySpellRefactor("speak with animals", {
 	components : "V,S",
 	duration : "10 min",
 	description : "Speak with and understand beasts; gain info on nearby locations/monsters/recent sights; can Influence",
-	descriptionFull : "For the duration, I can comprehend and verbally communicate with Beasts, and I can use any of the Influence action's skill options with them." + "\n   " + "Most Beasts have little to say about topics that don't pertain to survival or companionship, but at minimum, a Beast can give I information about nearby locations and monsters, including whatever it has perceived within the past day."
+	descriptionFull : "For the duration, you can comprehend and verbally communicate with Beasts, and you can use any of the Influence action's skill options with them." + "\n   " + "Most Beasts have little to say about topics that don't pertain to survival or companionship, but at minimum, a Beast can give you information about nearby locations and monsters, including whatever it has perceived within the past day."
 });
 legacySpellRefactor("speak with dead", {
 	name : "Speak with Dead",
@@ -18655,7 +18740,7 @@ legacySpellRefactor("speak with dead", {
 	compMaterial : "Burning incense",
 	duration : "10 min",
 	description : "1 corpse with mouth answers 5 questions with what it knew in life; can cast on same every 10 days",
-	descriptionFull : "I grant the semblance of life to a corpse of my choice within range, allowing it to answer questions I pose. The corpse must have a mouth, and this spell fails if the deceased creature was Undead when it died. The spell also fails if the corpse was the target of this spell within the past 10 days." + "\n   " + "Until the spell ends, I can ask the corpse up to five questions. The corpse knows only what it knew in life, including the languages it knew. Answers are usually brief, cryptic, or repetitive, and the corpse is under no compulsion to offer a truthful answer if I are antagonistic toward it or it recognizes I as an enemy. This spell doesn't return the creature's soul to its body, only its animating spirit. Thus, the corpse can't learn new information, doesn't comprehend anything that has happened since it died, and can't speculate about future events."
+	descriptionFull : "You grant the semblance of life to a corpse of your choice within range, allowing it to answer questions you pose. The corpse must have a mouth, and this spell fails if the deceased creature was Undead when it died. The spell also fails if the corpse was the target of this spell within the past 10 days." + "\n   " + "Until the spell ends, you can ask the corpse up to five questions. The corpse knows only what it knew in life, including the languages it knew. Answers are usually brief, cryptic, or repetitive, and the corpse is under no compulsion to offer a truthful answer if you are antagonistic toward it or it recognizes you as an enemy. This spell doesn't return the creature's soul to its body, only its animating spirit. Thus, the corpse can't learn new information, doesn't comprehend anything that has happened since it died, and can't speculate about future events."
 });
 legacySpellRefactor("speak with plants", {
 	name : "Speak with Plants",
@@ -18668,7 +18753,7 @@ legacySpellRefactor("speak with plants", {
 	components : "V,S",
 	duration : "10 min",
 	description : "Speak with plants \u0026 plant crea in fixed 30ft rad about last 24h; dif. plant ter. to normal or vice versa",
-	descriptionFull : "I imbue plants in an immobile 30-foot Emanation with limited sentience and animation, giving them the ability to communicate with I and follow my simple commands. I can question plants about events in the spell's area within the past day, gaining information about creatures that have passed, weather, and other circumstances." + "\n   " + "I can also turn Difficult Terrain caused by plant growth (such as thickets and undergrowth) into ordinary terrain that lasts for the duration. Or I can turn ordinary terrain where plants are present into Difficult Terrain that lasts for the duration." + "\n   " + "The spell doesn't enable plants to uproot themselves and move about, but they can move their branches, tendrils, and stalks for I." + "\n   " + "If a Plant creature is in the area, I can communicate with it as if I shared a common language."
+	descriptionFull : "You imbue plants in an immobile 30-foot Emanation with limited sentience and animation, giving them the ability to communicate with you and follow your simple commands. You can question plants about events in the spell's area within the past day, gaining information about creatures that have passed, weather, and other circumstances." + "\n   " + "You can also turn Difficult Terrain caused by plant growth (such as thickets and undergrowth) into ordinary terrain that lasts for the duration. Or you can turn ordinary terrain where plants are present into Difficult Terrain that lasts for the duration." + "\n   " + "The spell doesn't enable plants to uproot themselves and move about, but they can move their branches, tendrils, and stalks for you." + "\n   " + "If a Plant creature is in the area, you can communicate with it as if you shared a common language."
 });
 legacySpellRefactor("spider climb", {
 	name : "Spider Climb",
@@ -18681,8 +18766,8 @@ legacySpellRefactor("spider climb", {
 	components : "V,S,M",
 	compMaterial : "A drop of bitumen and a spider",
 	duration : "Conc, 1 h",
-	description : "1+1/SL gains Climb speed equal to Speed; can move on walls and ceilings without using hands",
-	descriptionFull : "Until the spell ends, one willing creature I touch gains the ability to move up, down, and across vertical surfaces and along ceilings, while leaving its hands free. The target also gains a Climb Speed equal to its Speed." + AtHigherLevels + "I can target one additional creature for each spell slot above 2"
+	description : "1+1/SL crea gains climb speed equal to speed; can move on walls and ceilings without using hands",
+	descriptionFull : "Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and along ceilings, while leaving its hands free. The target also gains a Climb Speed equal to its Speed." + AtHigherLevels + "You can target one additional creature for each spell slot above 2"
 });
 legacySpellRefactor("spike growth", {
 	name : "Spike Growth",
@@ -18695,9 +18780,9 @@ legacySpellRefactor("spike growth", {
 	components : "V,S,M",
 	compMaterial : "Seven thorns",
 	duration : "Conc, 10 min",
-	description : "20ft rad difficult terrain; all 2d4 Piercing per 5ft moved; Wis(Percep. or Survival) vs spell DC to notice",
+	description : "20-ft rad difficult terrain; all 2d4 Piercing per 5ft moved; Wis(Percep. or Survival) vs spell DC to notice",
 	descriptionShorter : "20ft rad dif. ter.; all 2d4 Piercing per 5ft moved; Wis(Percep or Surv) vs spell DC to notice",
-	descriptionFull : "The ground in a 20-foot-radius Sphere centered on a point within range sprouts hard spikes and thorns. The area becomes Difficult Terrain for the duration. When a creature moves into or within the area, it takes 2d4 Piercing damage for every 5 feet it travels." + "\n   " + "The transformation of the ground is camouflaged to look natural. Any creature that can't see the area when the spell is cast must take a Search action and succeed on a Wisdom (Perception or Survival) check against my spell save DC to recognize the terrain as hazardous before entering it."
+	descriptionFull : "The ground in a 20-foot-radius Sphere centered on a point within range sprouts hard spikes and thorns. The area becomes Difficult Terrain for the duration. When a creature moves into or within the area, it takes 2d4 Piercing damage for every 5 feet it travels." + "\n   " + "The transformation of the ground is camouflaged to look natural. Any creature that can't see the area when the spell is cast must take a Search action and succeed on a Wisdom (Perception or Survival) check against your spell save DC to recognize the terrain as hazardous before entering it."
 });
 legacySpellRefactor("spirit guardians", {
 	name : "Spirit Guardians",
@@ -18713,7 +18798,7 @@ legacySpellRefactor("spirit guardians", {
 	save : "Wis",
 	description : "Undesignated crea half speed in area, cover/enter/end 3d8+1d8/SL Radiant/Necrotic (1/t/c); save half",
 	descriptionShorter : "Any crea 1/2 speed, cover/enter/end 3d8+1d8/SL Radiant/Necrotic; save half",
-	descriptionFull : "Protective spirits flit around I in a 15-foot Emanation for the duration. If I are good or neutral, their spectral form appears angelic or fey (my choice). If I are evil, they appear fiendish." + "\n   " + "When I cast this spell, I can designate creatures to be unaffected by it. Any other creature's Speed is halved in the Emanation, and whenever the Emanation enters a creature's space and whenever a creature enters the Emanation or ends its turn there, the creature must make a Wisdom saving throw. On a failed save, the creature takes 3d8 Radiant damage (if I are good or neutral) or 3d8 Necrotic damage (if I are evil). On a successful save, the creature takes half as much damage. A creature makes this save only once per turn." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 3.",
+	descriptionFull : "Protective spirits flit around you in a 15-foot Emanation for the duration. If you are good or neutral, their spectral form appears angelic or fey (your choice). If you are evil, they appear fiendish." + "\n   " + "When you cast this spell, you can designate creatures to be unaffected by it. Any other creature's Speed is halved in the Emanation, and whenever the Emanation enters a creature's space and whenever a creature enters the Emanation or ends its turn there, the creature must make a Wisdom saving throw. On a failed save, the creature takes 3d8 Radiant damage (if you are good or neutral) or 3d8 Necrotic damage (if you are evil). On a successful save, the creature takes half as much damage. A creature makes this save only once per turn." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 3.",
 	dynamicDamageBonus : {
 		multipleDmgTypes : {
 			dmgTypes : ["radiant", "necrotic"],
@@ -18731,9 +18816,9 @@ legacySpellRefactor("spiritual weapon", {
 	range : "60 ft",
 	components : "V,S",
 	duration : "Conc, 1 min",
-	description : "Create spectral weapon; melee spell atk 1d8+1d8/SL+spell mod Force; bns to move 20 ft and/or atk",
-	descriptionShorter : "Create wea; spell atk 1d8+1d8/SL+spell mod Force dmg; bns move 20 ft and/or atk",
-	descriptionFull : "I create a floating, spectral force that resembles a weapon of my choice and lasts for the duration. The force appears within range in a space of my choice, and I can immediately make one melee spell attack against one creature within 5 feet of the force. On a hit, the target takes Force damage equal to 1d8 plus my spellcasting ability modifier." + "\n   " + "As a Bonus Action on my later turns, I can move the force up to 20 feet and repeat the attack against a creature within 5 feet of it." + AtHigherLevels + "Using a Higher-Level Spell Slot. The damage increases by 1d8 for every slot level above 2."
+	description : "Create spectral weapon; melee spell atk 1d8+1d8/SL+spell mod Force; bns to move 20 ft and atk",
+	descriptionShorter : "Create wea; spell atk 1d8+1d8/SL+spell mod Force dmg; bns move 20 ft and atk",
+	descriptionFull : "You create a floating, spectral force that resembles a weapon of your choice and lasts for the duration. The force appears within range in a space of your choice, and you can immediately make one melee spell attack against one creature within 5 feet of the force. On a hit, the target takes Force damage equal to 1d8 plus your spellcasting ability modifier." + "\n   " + "As a Bonus Action on your later turns, you can move the force up to 20 feet and repeat the attack against a creature within 5 feet of it." + AtHigherLevels + "Using a Higher-Level Spell Slot. The damage increases by 1d8 for every slot level above 2."
 });
 legacySpellRefactor("staggering smite", {
 	name : "Staggering Smite",
@@ -18742,13 +18827,13 @@ legacySpellRefactor("staggering smite", {
 	level : 4,
 	school : "Ench",
 	time : "1 bns*",
-	timeFull : "Bonus Action, which I take immediately after hitting a creature with a Melee weapon or an Unarmed Strike.",
+	timeFull : "Bonus Action, which you take immediately after hitting a creature with a Melee weapon or an Unarmed Strike.",
 	range : "Self",
 	components : "V",
 	duration : "Instantaneous",
 	save : "Wis",
-	description : "Melee weapon/unarmed hit +4d6+1d6/SL Psychic; target save or Stunned until my next turn ends",
-	descriptionFull : "The target takes an extra 4d6 Psychic damage from the attack, and the target must succeed on a Wisdom saving throw or have the Stunned condition until the end of my next turn." + AtHigherLevels + "The extra damage increases by 1d6 for each spell slot level above 4."
+	description : "Melee wea/unarmed hit +4d6+1d6/SL Psychic; target save or Stunned until my next turn ends",
+	descriptionFull : "The target takes an extra 4d6 Psychic damage from the attack, and the target must succeed on a Wisdom saving throw or have the Stunned condition until the end of your next turn." + AtHigherLevels + "The extra damage increases by 1d6 for each spell slot level above 4."
 });
 legacySpellRefactor("starry wisp", {
 	name : "Starry Wisp",
@@ -18762,10 +18847,11 @@ legacySpellRefactor("starry wisp", {
 	duration : "Instantaneous",
 	description : "Spell atk crea/obj; 1d8 Radiant; emit 10ft rad dim light \u0026 no Invisible to my next EoT; +1d8 CL 5/11/17",
 	descriptionCantripDie : "Spell atk crea/obj, `CD`d8 Radiant; target emits 10ft rad dim light \u0026 not Invisible to my next EoT",
-	descriptionFull : "I launch a mote of light at one creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d8 Radiant damage, and until the end of my next turn, it emits Dim light in a 10-foot radius and can't benefit from the Invisible condition." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d8 when I reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
+	descriptionFull : "You launch a mote of light at one creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d8 Radiant damage, and until the end of your next turn, it emits Dim light in a 10-foot radius and can't benefit from the Invisible condition." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
 });
 legacySpellRefactor("steel wind strike", {
 	name : "Steel Wind Strike",
+	nameShort : "Steel Wind Strike*",
 	classes : ["ranger", "wizard"],
 	source : [["PHB2024", 320]],
 	level : 5,
@@ -18776,7 +18862,7 @@ legacySpellRefactor("steel wind strike", {
 	compMaterial : "A Melee weapon worth 1+ sp",
 	duration : "Instantaneous",
 	description : "Melee spell atk vs 5 visible creatures; 6d10 Force dmg on each hit; after, I teleport next to 1 target",
-	descriptionFull : "I flourish the weapon used in the casting and then vanish to strike like the wind. Choose up to five creatures I can see within range. Make a melee spell attack against each target. On a hit, a target takes 6d10 force damage." + "\n   " + "I then teleport to an unoccupied space I can see within 5 feet of one of the targets."
+	descriptionFull : "You flourish the weapon used in the casting and then vanish to strike like the wind. Choose up to five creatures you can see within range. Make a melee spell attack against each target. On a hit, a target takes 6d10 force damage." + "\n   " + "You then teleport to an unoccupied space you can see within 5 feet of one of the targets."
 });
 legacySpellRefactor("stinking cloud", {
 	name : "Stinking Cloud",
@@ -18791,7 +18877,7 @@ legacySpellRefactor("stinking cloud", {
 	duration : "Conc, 1 min",
 	save : "Con",
 	description : "20-ft radius; heavily obscures; all in area at start of turn save vs Poisoned or can't act that turn",
-	descriptionFull : "I create a 20-foot-radius Sphere of yellow, nauseating gas centered on a point within range. The cloud is Heavily Obscured. The cloud lingers in the air for the duration or until a strong wind (such as the one created by Gust of Wind) disperses it." + "\n   " + "Each creature that starts its turn in the Sphere must succeed on a Constitution saving throw or have the Poisoned condition until the end of the current turn. While Poisoned in this way, the creature can't take an action or a Bonus Action."
+	descriptionFull : "You create a 20-foot-radius Sphere of yellow, nauseating gas centered on a point within range. The cloud is Heavily Obscured. The cloud lingers in the air for the duration or until a strong wind (such as the one created by Gust of Wind) disperses it." + "\n   " + "Each creature that starts its turn in the Sphere must succeed on a Constitution saving throw or have the Poisoned condition until the end of the current turn. While Poisoned in this way, the creature can't take an action or a Bonus Action."
 });
 legacySpellRefactor("stone shape", {
 	name : "Stone Shape",
@@ -18805,7 +18891,7 @@ legacySpellRefactor("stone shape", {
 	compMaterial : "Soft clay",
 	duration : "Instantaneous",
 	description : "Form 5 cu ft of stone into any shape; can have up to two hinges and a latch, but no finer mechanisms",
-	descriptionFull : "I touch a stone object of Medium size or smaller or a section of stone no more than 5 feet in any dimension and form it into any shape I like. For example, I could shape a large rock into a weapon, statue, or coffer, or I could make a small passage through a wall that is 5 feet thick. I could also shape a stone door or its frame to seal the door shut. The object I create can have up to two hinges and a latch, but finer mechanical detail isn't possible."
+	descriptionFull : "You touch a stone object of Medium size or smaller or a section of stone no more than 5 feet in any dimension and form it into any shape you like. For example, you could shape a large rock into a weapon, statue, or coffer, or you could make a small passage through a wall that is 5 feet thick. You could also shape a stone door or its frame to seal the door shut. The object you create can have up to two hinges and a latch, but finer mechanical detail isn't possible."
 });
 legacySpellRefactor("stoneskin", {
 	name : "Stoneskin",
@@ -18818,8 +18904,8 @@ legacySpellRefactor("stoneskin", {
 	components : "V,S,M\u2020",
 	compMaterial : "Diamond dust worth 100+ gp, which the spell consumes",
 	duration : "Conc, 1 h",
-	description : "1 willing crea resistance to Bludgeoning, Piercing, and Slashing damage (100gp cons.)",
-	descriptionFull : "Until the spell ends, one willing creature I touch has Resistance to Bludgeoning, Piercing, and Slashing damage."
+	description : "1 willing crea has resistance to Bludgeoning, Piercing, and Slashing damage (100gp cons.)",
+	descriptionFull : "Until the spell ends, one willing creature you touch has Resistance to Bludgeoning, Piercing, and Slashing damage."
 });
 legacySpellRefactor("storm of vengeance", {
 	name : "Storm of Vengeance",
@@ -18833,11 +18919,12 @@ legacySpellRefactor("storm of vengeance", {
 	duration : "Conc, 1 min",
 	save : "Con",
 	description : "300-ft rad all save or 2d6 Thunder dmg and Deafened; new effect every round; see book",
-	descriptionFull : "A churning storm cloud forms for the duration, centered on a point within range and spreading to a radius of 300 feet. Each creature under the cloud when it appears must succeed on a Constitution saving throw or take 2d6 Thunder damage and have the Deafened condition for the duration." + "\n   " + "At the start of each of my later turns, the storm produces different effects, as detailed below." + "\n   " + toUni("Turn 2") + ": Acidic rain falls. Each creature and object under the cloud takes 4d6 Acid damage." + "\n   " + toUni("Turn 3") + ": I call six bolts of lightning from the cloud to strike six different creatures or objects beneath it. Each target makes a Dexterity saving throw, taking 10d6 Lightning damage on a failed save or half as much damage on a successful one." + "\n   " + toUni("Turn 4") + ": Hailstones rain down. Each creature under the cloud takes 2d6 Bludgeoning damage." + "\n   " + toUni("Turn 5-10") + ": Gusts and freezing rain assail the area under the cloud. Each creature there takes 1d6 Cold damage. Until the spell ends, the area is Difficult Terrain and Heavily Obscured, ranged attacks with weapons are impossible there, and strong wind blows through the area.",
+	descriptionFull : "A churning storm cloud forms for the duration, centered on a point within range and spreading to a radius of 300 feet. Each creature under the cloud when it appears must succeed on a Constitution saving throw or take 2d6 Thunder damage and have the Deafened condition for the duration." + "\n   " + "At the start of each of your later turns, the storm produces different effects, as detailed below." + "\n   " + toUni("Turn 2") + ": Acidic rain falls. Each creature and object under the cloud takes 4d6 Acid damage." + "\n   " + toUni("Turn 3") + ": You call six bolts of lightning from the cloud to strike six different creatures or objects beneath it. Each target makes a Dexterity saving throw, taking 10d6 Lightning damage on a failed save or half as much damage on a successful one." + "\n   " + toUni("Turn 4") + ": Hailstones rain down. Each creature under the cloud takes 2d6 Bludgeoning damage." + "\n   " + toUni("Turn 5-10") + ": Gusts and freezing rain assail the area under the cloud. Each creature there takes 1d6 Cold damage. Until the spell ends, the area is Difficult Terrain and Heavily Obscured, ranged attacks with weapons are impossible there, and strong wind blows through the area.",
 	dynamicDamageBonus : { multipleDmgMoments : false }
 });
 legacySpellRefactor("suggestion", {
 	name : "Suggestion",
+	nameShort : "Suggestion*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
 	source : [["PHB2024", 321]],
 	level : 2,
@@ -18848,11 +18935,12 @@ legacySpellRefactor("suggestion", {
 	compMaterial : "A drop of honey",
 	duration : "Conc, 8 h",
 	save : "Wis",
-	description : "1 visible crea save or Charmed; tries to do achievable action stated in 25 wrds; ends if I/allies dmg it",
-	descriptionFull : "I suggest a course of activity — described in no more than 25 words — to one creature I can see within range that can hear and understand I. The suggestion must sound achievable and not involve anything that would obviously deal damage to the target or its allies. For example, I could say, \"Fetch the key to the cult's treasure vault, and give the key to me.\" Or I could say, \"Stop fighting, leave this library peacefully, and don't return.\"" + "\n   " + "The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration or until I or my allies deal damage to the target. The Charmed target pursues the suggestion to the best of its ability. The suggested activity can continue for the entire duration, but if the suggested activity can be completed in a shorter time, the spell ends for the target upon completing it."
+	description : "1 crea save or Charmed; attempts achievable action stated in 25 words; ends if done or I/allies dmg it",
+	descriptionFull : "You suggest a course of activity — described in no more than 25 words — to one creature you can see within range that can hear and understand you. The suggestion must sound achievable and not involve anything that would obviously deal damage to the target or its allies. For example, you could say, \"Fetch the key to the cult's treasure vault, and give the key to me.\" Or you could say, \"Stop fighting, leave this library peacefully, and don't return.\"" + "\n   " + "The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration or until you or your allies deal damage to the target. The Charmed target pursues the suggestion to the best of its ability. The suggested activity can continue for the entire duration, but if the suggested activity can be completed in a shorter time, the spell ends for the target upon completing it."
 });
 legacySpellRefactor("summon aberration", {
 	name : "Summon Aberration",
+	nameShort : "Summon Aberration*",
 	classes : ["warlock", "wizard"],
 	source : [["PHB2024", 322]],
 	level : 4,
@@ -18863,10 +18951,11 @@ legacySpellRefactor("summon aberration", {
 	compMaterial : "A pickled tentacle and an eyeball in a platinum-inlaid vial worth 400+ gp",
 	duration : "Conc, 1 h",
 	description : "Summon choice of Abberant Spirit; obeys commands; takes turn after mine; vanishes at 0 hp (400gp)",
-	descriptionFull : "I call forth an aberrant spirit. It manifests in an unoccupied space that I can see within range and uses the Aberrant Spirit stat block. When I cast the spell, choose Beholderkin, Mind Flayer, or Slaad." + "\n   " + "The creature is an ally to I and my allies. In combat, it shares my Initiative count, but it takes its turn immediately after yours. It obeys my verbal commands (no action required by I). If I don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
+	descriptionFull : "You call forth an aberrant spirit. It manifests in an unoccupied space that you can see within range and uses the Aberrant Spirit stat block. When you cast the spell, choose Beholderkin, Mind Flayer, or Slaad." + "\n   " + "The creature is an ally to you and your allies. In combat, it shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
 });
 legacySpellRefactor("summon beast", {
 	name : "Summon Beast",
+	nameShort : "Summon Beast*",
 	classes : ["druid", "ranger"],
 	source : [["PHB2024", 322]],
 	level : 2,
@@ -18877,10 +18966,11 @@ legacySpellRefactor("summon beast", {
 	compMaterial : "A feather, tuft of fur, and fish tail inside a gilded acorn worth 200+ gp",
 	duration : "Conc, 1 h",
 	description : "Summon choice of Bestial Spirit; obeys commands; takes turn after mine; disappears at 0 hp (200gp)",
-	descriptionFull : "I call forth a bestial spirit. It manifests in an unoccupied space that I can see within range and uses the Bestial Spirit stat block. When I cast the spell, choose an environment: Air, Land, or Water. The creature resembles an animal of my choice that is native to the chosen environment, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to I and my allies. In combat, the creature shares my Initiative count, but it takes its turn immediately after yours. It obeys my verbal commands (no action required by I). If I don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
+	descriptionFull : "You call forth a bestial spirit. It manifests in an unoccupied space that you can see within range and uses the Bestial Spirit stat block. When you cast the spell, choose an environment: Air, Land, or Water. The creature resembles an animal of your choice that is native to the chosen environment, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
 });
 legacySpellRefactor("summon celestial", {
 	name : "Summon Celestial",
+	nameShort : "Summon Celestial*",
 	classes : ["cleric", "paladin"],
 	source : [["PHB2024", 323]],
 	level : 5,
@@ -18891,10 +18981,11 @@ legacySpellRefactor("summon celestial", {
 	compMaterial : "A golden reliquary worth 500+ gp",
 	duration : "Conc, 1 h",
 	description : "Summon choice of Celestial Spirit; obeys commands; takes turn after mine; disappears at 0 hp (500gp)",
-	descriptionFull : "I call forth a Celestial spirit. It manifests in an angelic form in an unoccupied space that I can see within range and uses the Celestial Spirit stat block. When I cast the spell, choose Avenger or Defender. my choice determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to I and my allies. In combat, the creature shares my Initiative count, but it takes its turn immediately after yours. It obeys my verbal commands (no action required by I). If I don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
+	descriptionFull : "You call forth a Celestial spirit. It manifests in an angelic form in an unoccupied space that you can see within range and uses the Celestial Spirit stat block. When you cast the spell, choose Avenger or Defender. Your choice determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
 });
 legacySpellRefactor("summon construct", {
 	name : "Summon Construct",
+	nameShort : "Summon Construct*",
 	classes : ["artificer","wizard"],
 	source : [["PHB2024", 324]],
 	level : 4,
@@ -18905,10 +18996,11 @@ legacySpellRefactor("summon construct", {
 	compMaterial : "A lockbox worth 400+ gp",
 	duration : "Conc, 1 h",
 	description : "Summon choice of Construct Spirit; obeys commands; takes turn after mine; vanishes at 0 hp (400gp)",
-	descriptionFull : "I call forth the spirit of a Construct. It manifests in an unoccupied space that I can see within range and uses the Construct Spirit stat block. When I cast the spell, choose a material: Clay, Metal, or Stone. The creature resembles an animate statue (I determine the appearance) made of the chosen material, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to I and my allies. In combat, the creature shares my Initiative count, but it takes its turn immediately after yours. It obeys my verbal commands (no action required by I). If I don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
+	descriptionFull : "You call forth the spirit of a Construct. It manifests in an unoccupied space that you can see within range and uses the Construct Spirit stat block. When you cast the spell, choose a material: Clay, Metal, or Stone. The creature resembles an animate statue (you determine the appearance) made of the chosen material, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
 });
 legacySpellRefactor("summon dragon", {
 	name : "Summon Dragon",
+	nameShort : "Summon Dragon*",
 	classes : ["wizard"],
 	source : [["PHB2024", 324]],
 	level : 5,
@@ -18919,10 +19011,11 @@ legacySpellRefactor("summon dragon", {
 	compMaterial : "an object with the image of a dragon engraved on it, worth 500+ gp",
 	duration : "Conc, 1 h",
 	description : "Summon Dragonic Spirit; obeys commands; share resist; takes turn after mine; vanishes at 0 hp (500gp)",
-	descriptionFull : "I call forth a Dragon spirit. It manifests in an unoccupied space that I can see within range and uses the Draconic Spirit stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to I and my allies. In combat, the creature shares my Initiative count, but it takes its turn immediately after yours. It obeys my verbal commands (no action required by I). If I don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block.",
+	descriptionFull : "You call forth a Dragon spirit. It manifests in an unoccupied space that you can see within range and uses the Draconic Spirit stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block.",
 });
 legacySpellRefactor("summon elemental", {
 	name : "Summon Elemental",
+	nameShort : "Summon Elemental*",
 	classes : ["druid", "ranger", "wizard"],
 	source : [["PHB2024", 325]],
 	level : 4,
@@ -18933,10 +19026,11 @@ legacySpellRefactor("summon elemental", {
 	compMaterial : "Air, a pebble, ash, and water inside a gold-inlaid vial worth 400+ gp",
 	duration : "Conc, 1 h",
 	description : "Summon choice of Elemental Spirit; obeys commands; takes turn after mine; vanishes at 0 hp (400gp)",
-	descriptionFull : "I call forth an Elemental spirit. It manifests in an unoccupied space that I can see within range and uses the Elemental Spirit stat block. When I cast the spell, choose an element: Air, Earth, Fire, or Water. The creature resembles a bipedal form wreathed in the chosen element, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to I and my allies. In combat, the creature shares my Initiative count, but it takes its turn immediately after yours. It obeys my verbal commands (no action required by I). If I don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
+	descriptionFull : "You call forth an Elemental spirit. It manifests in an unoccupied space that you can see within range and uses the Elemental Spirit stat block. When you cast the spell, choose an element: Air, Earth, Fire, or Water. The creature resembles a bipedal form wreathed in the chosen element, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
 });
 legacySpellRefactor("summon fey", {
 	name : "Summon Fey",
+	nameShort : "Summon Fey*",
 	classes : ["druid", "ranger", "warlock", "wizard"],
 	source : [["PHB2024", 326]],
 	level : 3,
@@ -18947,10 +19041,11 @@ legacySpellRefactor("summon fey", {
 	compMaterial : "A gilded flower worth 300+ gp",
 	duration : "Conc, 1 h",
 	description : "Summon choice of Fey Spirit; obeys commands; takes turn after mine; disappears at 0 hp (300gp)",
-	descriptionFull : "I call forth a Fey spirit. It manifests in an unoccupied space that I can see within range and uses the Fey Spirit stat block. When I cast the spell, choose a mood: Fuming, Mirthful, or Tricksy. The creature resembles a Fey creature of my choice marked by the chosen mood, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to I and my allies. In combat, the creature shares my Initiative count, but it takes its turn immediately after yours. It obeys my verbal commands (no action required by I). If I don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
+	descriptionFull : "You call forth a Fey spirit. It manifests in an unoccupied space that you can see within range and uses the Fey Spirit stat block. When you cast the spell, choose a mood: Fuming, Mirthful, or Tricksy. The creature resembles a Fey creature of your choice marked by the chosen mood, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
 });
 legacySpellRefactor("summon fiend", {
 	name : "Summon Fiend",
+	nameShort : "Summon Fiend*",
 	classes : ["warlock", "wizard"],
 	source : [["PHB2024", 326]],
 	level : 6,
@@ -18961,10 +19056,11 @@ legacySpellRefactor("summon fiend", {
 	compMaterial : "A bloody vial worth 600+ gp",
 	duration : "Conc, 1 h",
 	description : "Summon choice of Fiendish Spirit; obeys commands; takes turn after mine; disappears at 0 hp (600gp)",
-	descriptionFull : "I call forth a fiendish spirit. It manifests in an unoccupied space that I can see within range and uses the Fiendish Spirit stat block. When I cast the spell, choose Demon, Devil, or Yugoloth. The creature resembles a Fiend of the chosen type, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to I and my allies. In combat, the creature shares my Initiative count, but it takes its turn immediately after yours. It obeys my verbal commands (no action required by I). If I don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
+	descriptionFull : "You call forth a fiendish spirit. It manifests in an unoccupied space that you can see within range and uses the Fiendish Spirit stat block. When you cast the spell, choose Demon, Devil, or Yugoloth. The creature resembles a Fiend of the chosen type, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
 });
 legacySpellRefactor("summon undead", {
 	name : "Summon Undead",
+	nameShort : "Summon Undead*",
 	classes : ["warlock", "wizard"],
 	source : [["PHB2024", 328]],
 	level : 3,
@@ -18975,7 +19071,7 @@ legacySpellRefactor("summon undead", {
 	compMaterial : "A gilded skull worth 300+ gp",
 	duration : "Conc, 1 h",
 	description : "Summon choice of Undead Spirit; obeys commands; takes turn after mine; disappears at 0 hp (300gp)",
-	descriptionFull : "I call forth an Undead spirit. It manifests in an unoccupied space that I can see within range and uses the Undead Spirit stat block. When I cast the spell, choose the creature's form: Ghostly, Putrid, or Skeletal. The spirit resembles an Undead creature with the chosen form, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to I and my allies. In combat, the creature shares my Initiative count, but it takes its turn immediately after yours. It obeys my verbal commands (no action required by I). If I don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
+	descriptionFull : "You call forth an Undead spirit. It manifests in an unoccupied space that you can see within range and uses the Undead Spirit stat block. When you cast the spell, choose the creature's form: Ghostly, Putrid, or Skeletal. The spirit resembles an Undead creature with the chosen form, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends." + "\n   " + "The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger." + AtHigherLevels + "Use the spell slot's level for the spell's level in the stat block."
 });
 legacySpellRefactor("sunbeam", {
 	name : "Sunbeam",
@@ -18991,7 +19087,7 @@ legacySpellRefactor("sunbeam", {
 	save : "Con",
 	description : "60\xD75ft line all 6d8 Radiant, 1 rnd Blind; save 1/2 only; 1 a for new line; 30ft rad bright sunlight/30ft dim",
 	descriptionShorter : "60-ft long 5-ft wide all 6d8 Radiant, 1 rnd Blind; save half, not Blind; 1 a for new line",
-	descriptionFull : "I launch a sunbeam in a 5-foot-wide, 60-foot-long Line. Each creature in the Line makes a Constitution saving throw. On a failed save, a creature takes 6d8 Radiant damage and has the Blinded condition until the start of my next turn. On a successful save, it takes half as much damage only." + "\n   " + "Until the spell ends, I can take a Magic action to create a new Line of radiance." + "\n   " + "For the duration, a mote of brilliant radiance shines above I. It sheds Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. This light is sunlight.",
+	descriptionFull : "You launch a sunbeam in a 5-foot-wide, 60-foot-long Line. Each creature in the Line makes a Constitution saving throw. On a failed save, a creature takes 6d8 Radiant damage and has the Blinded condition until the start of your next turn. On a successful save, it takes half as much damage only." + "\n   " + "Until the spell ends, you can take a Magic action to create a new Line of radiance." + "\n   " + "For the duration, a mote of brilliant radiance shines above you. It sheds Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. This light is sunlight.",
 	dynamicDamageBonus : { multipleDmgMoments : false }
 });
 legacySpellRefactor("sunburst", {
@@ -19007,7 +19103,7 @@ legacySpellRefactor("sunburst", {
 	duration : "Instantaneous",
 	save : "Con",
 	description : "60-ft rad sunlight all 12d6 Radiant dmg, 1 min Blind; save halves and not Blinded; repeat save EoT",
-	descriptionFull : "Brilliant sunlight flashes in a 60-foot-radius Sphere centered on a point I choose within range. Each creature in the Sphere makes a Constitution saving throw. On a failed save, a creature takes 12d6 Radiant damage and has the Blinded condition for 1 minute. On a successful save, it takes half as much damage only." + "\n   " + "A creature Blinded by this spell makes another Constitution saving throw at the end of each of its turns, ending the effect on itself on a success." + "\n   " + "This spell dispels Darkness in its area that was created by any spell."
+	descriptionFull : "Brilliant sunlight flashes in a 60-foot-radius Sphere centered on a point you choose within range. Each creature in the Sphere makes a Constitution saving throw. On a failed save, a creature takes 12d6 Radiant damage and has the Blinded condition for 1 minute. On a successful save, it takes half as much damage only." + "\n   " + "A creature Blinded by this spell makes another Constitution saving throw at the end of each of its turns, ending the effect on itself on a success." + "\n   " + "This spell dispels Darkness in its area that was created by any spell."
 });
 legacySpellRefactor("swift quiver", {
 	name : "Swift Quiver",
@@ -19021,7 +19117,7 @@ legacySpellRefactor("swift quiver", {
 	compMaterial : "A quiver worth 1+ gp",
 	duration : "Conc, 1 min",
 	description : "Atk twice with weapon that uses arrows or bolts; spell makes nonmagical ammo; bns to repeat atks",
-	descriptionFull : "When I cast the spell and as a Bonus Action until it ends, I can make two attacks with a weapon that fires Arrows or Bolts, such as a Longbow or a Light Crossbow. The spell magically creates the ammunition needed for each attack. Each Arrow or Bolt created by the spell deals damage like a nonmagical piece of ammunition of its kind and disintegrates immediately after it hits or misses."
+	descriptionFull : "When you cast the spell and as a Bonus Action until it ends, you can make two attacks with a weapon that fires Arrows or Bolts, such as a Longbow or a Light Crossbow. The spell magically creates the ammunition needed for each attack. Each Arrow or Bolt created by the spell deals damage like a nonmagical piece of ammunition of its kind and disintegrates immediately after it hits or misses."
 });
 legacySpellRefactor("symbol", {
 	name : "Symbol",
@@ -19035,7 +19131,7 @@ legacySpellRefactor("symbol", {
 	compMaterial : "Powdered diamond worth 1,000+ gp, which the spell consumes",
 	duration : "Till triggered",
 	description : "Inscribe a glyph to activate for chosen effect on set trigger; see book (1000gp cons.)",
-	descriptionFull : "I inscribe a harmful glyph either on a surface (such as a section of floor or wall) or within an object that can be closed (such as a book or chest). The glyph can cover an area no larger than 10 feet in diameter. If I choose an object, it must remain in place; if it is moved more than 10 feet from where I cast this spell, the glyph is broken, and the spell ends without being triggered." + "\n   " + "The glyph is nearly imperceptible and requires a successful Wisdom (Perception) check against my spell save DC to notice." + "\n   " + "When I inscribe the glyph, I set its trigger and choose which effect the symbol bears: Death, Discord, Fear, Pain, Sleep, or Stunning. Each one is explained below." + "\n   " + toUni("Set the Trigger.") + " I decide what triggers the glyph when I cast the spell. For glyphs inscribed on a surface, common triggers include touching or stepping on the glyph, removing another object covering it, or approaching within a certain distance of it. For glyphs inscribed within an object, common triggers include opening that object or seeing the glyph." + "\n   " + "I can refine the trigger so that only creatures of certain types activate it (for example, the glyph could be set to affect Aberrations). I can also set conditions for creatures that don't trigger the glyph, such as those who say a certain password." + "\n   " + "Once triggered, the glyph glows, filling a 60-foot-radius Sphere with Dim Light for 10 minutes, after which time the spell ends. Each creature in the Sphere when the glyph activates is targeted by its effect, as is a creature that enters the Sphere for the first time on a turn or ends its turn there. A creature is targeted only once per turn." + "\n   " + toUni("Death") + ": Each target makes a Constitution saving throw, taking 10d10 Necrotic damage on a failed save or half as much damage on a successful save." + "\n   " + toUni("Discord") + ": Discord. Each target makes a Wisdom saving throw. On a failed save, a target argues with other creatures for 1 minute. During this time, it is incapable of meaningful communication and has Disadvantage on attack rolls and ability checks." + "\n   " + toUni("Fear") + ": Each target must succeed on a Wisdom saving throw or have the Frightened condition for 1 minute. While Frightened, the target must move at least 30 feet away from the glyph on each of its turns, if able." + "\n   " + toUni("Pain") + ": Each target must succeed on a Constitution saving throw or have the Incapacitated condition for 1 minute." + "\n   " + toUni("Sleep") + ": Each target must succeed on a Wisdom saving throw or have the Unconscious condition for 10 minutes. A creature awakens if it takes damage or if someone takes an action to shake it awake." + "\n   " + toUni("Stunning") + ": Each target must succeed on a Wisdom saving throw or have the Stunned condition for 1 minute."
+	descriptionFull : "You inscribe a harmful glyph either on a surface (such as a section of floor or wall) or within an object that can be closed (such as a book or chest). The glyph can cover an area no larger than 10 feet in diameter. If you choose an object, it must remain in place; if it is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered." + "\n   " + "The glyph is nearly imperceptible and requires a successful Wisdom (Perception) check against your spell save DC to notice." + "\n   " + "When you inscribe the glyph, you set its trigger and choose which effect the symbol bears: Death, Discord, Fear, Pain, Sleep, or Stunning. Each one is explained below." + "\n   " + toUni("Set the Trigger.") + " You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, common triggers include touching or stepping on the glyph, removing another object covering it, or approaching within a certain distance of it. For glyphs inscribed within an object, common triggers include opening that object or seeing the glyph." + "\n   " + "You can refine the trigger so that only creatures of certain types activate it (for example, the glyph could be set to affect Aberrations). You can also set conditions for creatures that don't trigger the glyph, such as those who say a certain password." + "\n   " + "Once triggered, the glyph glows, filling a 60-foot-radius Sphere with Dim Light for 10 minutes, after which time the spell ends. Each creature in the Sphere when the glyph activates is targeted by its effect, as is a creature that enters the Sphere for the first time on a turn or ends its turn there. A creature is targeted only once per turn." + "\n   " + toUni("Death") + ": Each target makes a Constitution saving throw, taking 10d10 Necrotic damage on a failed save or half as much damage on a successful save." + "\n   " + toUni("Discord") + ": Discord. Each target makes a Wisdom saving throw. On a failed save, a target argues with other creatures for 1 minute. During this time, it is incapable of meaningful communication and has Disadvantage on attack rolls and ability checks." + "\n   " + toUni("Fear") + ": Each target must succeed on a Wisdom saving throw or have the Frightened condition for 1 minute. While Frightened, the target must move at least 30 feet away from the glyph on each of its turns, if able." + "\n   " + toUni("Pain") + ": Each target must succeed on a Constitution saving throw or have the Incapacitated condition for 1 minute." + "\n   " + toUni("Sleep") + ": Each target must succeed on a Wisdom saving throw or have the Unconscious condition for 10 minutes. A creature awakens if it takes damage or if someone takes an action to shake it awake." + "\n   " + toUni("Stunning") + ": Each target must succeed on a Wisdom saving throw or have the Stunned condition for 1 minute."
 });
 legacySpellRefactor("synaptic static", {
 	name : "Synaptic Static",
@@ -19048,9 +19144,9 @@ legacySpellRefactor("synaptic static", {
 	components : "V,S",
 	duration : "Instantaneous",
 	save : "Int",
-	description : "20-ft rad all save or 8d6 Psychic, 1 min -1d6 on atk/chk/conc. save; save 1/2, no -1d6; repeat save EoT",
+	description : "20-ft rad all save or 8d6 Psychic, 1 min -1d6 on atk/chk/conc. save; save 1/2, no -1d6; redo save EoT",
 	descriptionShorter : "20ft rad all save or 8d6 Psychic, 1 min -1d6 on atks/check/conc. save; save 1/2, no -1d6; EoT save",
-	descriptionFull : "I cause psychic energy to erupt at a point within range. Each creature in a 20-foot-radius Sphere centered on that point makes an Intelligence saving throw, taking 8d6 Psychic damage on a failed save or half as much damage on a successful one." + "\n   " + "On a failed save, a target also has muddled thoughts for 1 minute. During that time, it subtracts 1d6 from all its attack rolls and ability checks, as well as any Constitution saving throws to maintain Concentration. The target makes an Intelligence saving throw at the end of each of its turns, ending the effect on itself on a success."
+	descriptionFull : "You cause psychic energy to erupt at a point within range. Each creature in a 20-foot-radius Sphere centered on that point makes an Intelligence saving throw, taking 8d6 Psychic damage on a failed save or half as much damage on a successful one." + "\n   " + "On a failed save, a target also has muddled thoughts for 1 minute. During that time, it subtracts 1d6 from all its attack rolls and ability checks, as well as any Constitution saving throws to maintain Concentration. The target makes an Intelligence saving throw at the end of each of its turns, ending the effect on itself on a success."
 });
 legacySpellRefactor("tasha's bubbling cauldron", {
 	name : "Tasha's Bubbling Cauldron",
@@ -19066,10 +19162,11 @@ legacySpellRefactor("tasha's bubbling cauldron", {
 	compMaterial : "A gilded ladle worth 500+ gp",
 	duration : "10 min",
 	description : "Immobile cauldron of Common/Uncom. potion; max spell mod, min 1; bns take 1; disappear on recast",
-	descriptionFull : "I conjure a claw-footed cauldron filled with bubbling liquid. The cauldron appears in an unoccupied space on the ground within 5 feet of I and lasts for the duration. The cauldron can't be moved and disappears when the spell ends, along with the bubbling liquid inside it." + "\n   " + "The liquid in the cauldron duplicates the properties of a Common or an Uncommon potion of my choice (such as a Potion of Healing). As a Bonus Action, I or an ally can reach into the cauldron and withdraw one potion of that kind. The potion is contained in a vial that disappears when the potion is consumed. The cauldron can produce a number of these potions equal to my spellcasting ability modifier (minimum 1). When the last of these potions is withdrawn from the cauldron, the cauldron disappears, and the spell ends." + "\n   " + "Potions obtained from the cauldron that aren't consumed disappear when I cast this spell again."
+	descriptionFull : "You conjure a claw-footed cauldron filled with bubbling liquid. The cauldron appears in an unoccupied space on the ground within 5 feet of you and lasts for the duration. The cauldron can't be moved and disappears when the spell ends, along with the bubbling liquid inside it." + "\n   " + "The liquid in the cauldron duplicates the properties of a Common or an Uncommon potion of your choice (such as a Potion of Healing). As a Bonus Action, you or an ally can reach into the cauldron and withdraw one potion of that kind. The potion is contained in a vial that disappears when the potion is consumed. The cauldron can produce a number of these potions equal to your spellcasting ability modifier (minimum 1). When the last of these potions is withdrawn from the cauldron, the cauldron disappears, and the spell ends." + "\n   " + "Potions obtained from the cauldron that aren't consumed disappear when you cast this spell again."
 });
 legacySpellRefactor("tasha's hideous laughter", {
 	name : "Tasha's Hideous Laughter",
+	nameShort : "T's Hideous Laughter*",
 	nameAlt : "Hideous Laughter",
 	classes : ["bard", "warlock", "wizard"],
 	source : [["PHB2024", 331]],
@@ -19081,11 +19178,12 @@ legacySpellRefactor("tasha's hideous laughter", {
 	compMaterial : "A tart and a feather",
 	duration : "Conc, 1 min",
 	save : "Wis",
-	description : "1+1/SL crea save or Prone, Incapacitated, can't stand; save EoT \u0026 when takes dmg; adv if dmg",
-	descriptionFull : "One creature of my choice that I can see within range makes a Wisdom saving throw. On a failed save, it has the Prone and Incapacitated conditions for the duration. During that time, it laughs uncontrollably if it's capable of laughter, and it can't end the Prone condition on itself." + "\n   " + "At the end of each of its turns and each time it takes damage, it makes another Wisdom saving throw. The target has Advantage on the save if the save is triggered by damage. On a successful save, the spell ends." + AtHigherLevels + "I can target one additional creature for each spell slot level above 1."
+	description : "1+1/SL crea save or Prone, Incapacitated, can't stand; save at EoT \u0026 on dmg; adv if dmg",
+	descriptionFull : "One creature of your choice that you can see within range makes a Wisdom saving throw. On a failed save, it has the Prone and Incapacitated conditions for the duration. During that time, it laughs uncontrollably if it's capable of laughter, and it can't end the Prone condition on itself." + "\n   " + "At the end of each of its turns and each time it takes damage, it makes another Wisdom saving throw. The target has Advantage on the save if the save is triggered by damage. On a successful save, the spell ends." + AtHigherLevels + "You can target one additional creature for each spell slot level above 1."
 });
 legacySpellRefactor("telekinesis", {
 	name : "Telekinesis",
+	nameShort : "Telekinesis*",
 	classes : ["sorcerer", "wizard"],
 	source : [["PHB2024", 331]],
 	level : 5,
@@ -19095,8 +19193,8 @@ legacySpellRefactor("telekinesis", {
 	components : "V,S",
 	duration : "Conc, 10 min",
 	save : "Str",
-	description : "1 Huge crea/held obj save or move 30ft \u0026 Restrain to my next EoT; unattended obj no save; 1 a repeat",
-	descriptionFull : "I gain the ability to move or manipulate creatures or objects by thought. When I cast the spell and as a Magic action on my later turns before the spell ends, I can exert my will on one creature or object that I can see within range, causing the appropriate effect below. I can affect the same target round after round or choose a new one at any time. If I switch targets, the prior target is no longer affected by the spell." + "\n   " + toUni("Creature") + ": I can try to move a Huge or smaller creature. The target must succeed on a Strength saving throw, or I move it up to 30 feet in any direction within the spell's range. Until the end of my next turn, the creature has the Restrained condition, and if I lift it into the air, it is suspended there. It falls at the end of my next turn unless I use this option on it again and it fails the save." + "\n   " + toUni("Object") + ": I can try to move a Huge or smaller object. If the object isn't being worn or carried, I automatically move it up to 30 feet in any direction within the spell's range." + "\n   " + "If the object is worn or carried by a creature, that creature must succeed on a Strength saving throw, or I pull the object away and move it up to 30 feet in any direction within the spell's range." + "\n   " + "I can exert fine control on objects with my telekinetic grip, such as manipulating a simple tool, opening a door or a container, stowing or retrieving an item from an open container, or pouring the contents from a vial."
+	description : "1 \u2264Huge crea/held obj save or move 30ft \u0026 Restrain to my next EoT; unattended obj no save; 1 a redo",
+	descriptionFull : "You gain the ability to move or manipulate creatures or objects by thought. When you cast the spell and as a Magic action on your later turns before the spell ends, you can exert your will on one creature or object that you can see within range, causing the appropriate effect below. You can affect the same target round after round or choose a new one at any time. If you switch targets, the prior target is no longer affected by the spell." + "\n   " + toUni("Creature") + ": You can try to move a Huge or smaller creature. The target must succeed on a Strength saving throw, or you move it up to 30 feet in any direction within the spell's range. Until the end of your next turn, the creature has the Restrained condition, and if you lift it into the air, it is suspended there. It falls at the end of your next turn unless you use this option on it again and it fails the save." + "\n   " + toUni("Object") + ": You can try to move a Huge or smaller object. If the object isn't being worn or carried, you automatically move it up to 30 feet in any direction within the spell's range." + "\n   " + "If the object is worn or carried by a creature, that creature must succeed on a Strength saving throw, or you pull the object away and move it up to 30 feet in any direction within the spell's range." + "\n   " + "You can exert fine control on objects with your telekinetic grip, such as manipulating a simple tool, opening a door or a container, stowing or retrieving an item from an open container, or pouring the contents from a vial."
 });
 legacySpellRefactor("telepathy", {
 	name : "Telepathy",
@@ -19110,10 +19208,11 @@ legacySpellRefactor("telepathy", {
 	compMaterial : "A pair of linked silver rings",
 	duration : "24 h",
 	description : "1 familiar willing crea \u0026 I telepathic link on same plane; share words, sensory info; understand meaning",
-	descriptionFull : "I create a telepathic link between yourself and a willing creature with which I are familiar. The creature can be anywhere on the same plane of existence as I. The spell ends if I or the target are no longer on the same plane." + "\n   " + "Until the spell ends, I and the target can instantly share words, images, sounds, and other sensory messages with each other through the link, and the target recognizes I as the creature it is communicating with. The spell enables a creature to understand the meaning of my words and any sensory messages I send to it."
+	descriptionFull : "You create a telepathic link between yourself and a willing creature with which you are familiar. The creature can be anywhere on the same plane of existence as you. The spell ends if you or the target are no longer on the same plane." + "\n   " + "Until the spell ends, you and the target can instantly share words, images, sounds, and other sensory messages with each other through the link, and the target recognizes you as the creature it is communicating with. The spell enables a creature to understand the meaning of your words and any sensory messages you send to it."
 });
 legacySpellRefactor("teleport", {
 	name : "Teleport",
+	nameShort : "Teleport*",
 	classes : ["bard", "sorcerer", "wizard"],
 	source : [["PHB2024", 331]],
 	level : 7,
@@ -19124,25 +19223,26 @@ legacySpellRefactor("teleport", {
 	duration : "Instantaneous",
 	description : "Me + 8 willing crea, or 1 unattended obj teleport to a place I know, have seen, or can describe; see B",
 	descriptionFull : [
-		"This spell instantly transports I and up to eight willing creatures that I can see within range, or a single object that I can see within range, to a destination I select. If I target an object, it must be Large or smaller, and it can't be held or carried by an unwilling creature." + "\n   " + "The destination I choose must be known to I, and it must be on the same plane of existence as I. my familiarity with the destination determines whether I arrive there successfully. The DM rolls 1d100 and consults the Teleportation Outcome table and the explanations after it.\n",
+		"This spell instantly transports you and up to eight willing creatures that you can see within range, or a single object that you can see within range, to a destination you select. If you target an object, it must be Large or smaller, and it can't be held or carried by an unwilling creature." + "\n   " + "The destination you choose must be known to you, and it must be on the same plane of existence as you. Your familiarity with the destination determines whether you arrive there successfully. The DM rolls 1d100 and consults the Teleportation Outcome table and the explanations after it.\n",
 		toUni("Familiarity\tMishap\tSimilar\t  Off\t   On"),
 		"\t\t\t  " + toUni("Area\tTarget\tTarget"),
 		"Permanent circle\t    -\t    -\t    -\t01-100",
 		"Linked object\t    -\t    -\t    -\t01-100",
 		"Very familiar\t01-05\t06-13\t14-24\t25-100",
 		"Seen casually\t01-33\t34-43\t44-53\t54-100",
-		"Viewed once/described\t01-43\t44-53\t54-73\t74-100",
+		"Seen 1/described\t01-43\t44-53\t54-73\t74-100",
 		"False destination\t01-50\t51-100\t    -\t    -\n"
 	].join("\n") + desc([
-		toUni("Familiarity") + ": \"Permanent circle\" means a permanent teleportation circle whose sigil sequence I know.",
-		"\"Linked object\" means I possess an object taken from the desired destination within the last six months, such as a book from a wizard's library.",
-		"\"Very familiar\" is a place I have been very often, a place I have carefully studied, or a place I can see when I cast the spell.",
-		"\"Seen casually\" is a place I have seen more than once but with which I aren't very familiar. \"Viewed once or described\" is a place whose location and appearance I know through someone else's description, perhaps from a map.",
-		"\"False destination\" is a place that doesn't exist. Perhaps I tried to scry an enemy's sanctum but instead viewed an illusion, or I are attempting to teleport to a location that no longer exists.",
-		toUni("On Target") + ": I and my group (or the target object) appear where I intended.",
-		toUni("Off Target") + ": I and my group (or the target object) appear 2d12 miles away from the destination in a random direction. Roll 1d8 for the direction: 1, east; 2, southeast; 3, south; 4, southwest; 5, west; 6, northwest; 7, north; or 8, northeast.",
-		toUni("Similar Area") + ": I and my group (or the target object) appear in a different area that's visually or thematically similar to the target area. I appear in the closest similar place. If I are heading for my home laboratory, for example, I might appear in another person's laboratory in the same city.",
-		toUni("Mishap") + ": The spell's unpredictable magic results in a difficult journey. Each teleporting creature (or the target object) takes 3d10 Force damage, and the DM rerolls on the table to see where I wind up (multiple mishaps can occur, dealing damage each time)."
+		toUni("Familiarity") + ": \"Permanent circle\" means a permanent teleportation circle whose sigil sequence you know.",
+		"\"Linked object\" means you possess an object taken from the desired destination within the last six months, such as a book from a wizard's library.",
+		"\"Very familiar\" is a place you have been very often, a place you have carefully studied, or a place you can see when you cast the spell.",
+		"\"Seen casually\" is a place you have seen more than once but with which you aren't very familiar.",
+		"\"Seen 1/described\" is a place whose location and appearance you know through someone else's description, perhaps from a map.",
+		"\"False destination\" is a place that doesn't exist. Perhaps you tried to scry an enemy's sanctum but instead viewed an illusion, or you are attempting to teleport to a location that no longer exists.",
+		toUni("On Target") + ": You and your group (or the target object) appear where you intended.",
+		toUni("Off Target") + ": You and your group (or the target object) appear 2d12 miles away from the destination in a random direction. Roll 1d8 for the direction: 1, east; 2, southeast; 3, south; 4, southwest; 5, west; 6, northwest; 7, north; or 8, northeast.",
+		toUni("Similar Area") + ": You and your group (or the target object) appear in a different area that's visually or thematically similar to the target area. You appear in the closest similar place. If you are heading for your home laboratory, for example, you might appear in another person's laboratory in the same city.",
+		toUni("Mishap") + ": The spell's unpredictable magic results in a difficult journey. Each teleporting creature (or the target object) takes 3d10 Force damage, and the DM rerolls on the table to see where you wind up (multiple mishaps can occur, dealing damage each time)."
 	])
 });
 legacySpellRefactor("teleportation circle", {
@@ -19157,10 +19257,11 @@ legacySpellRefactor("teleportation circle", {
 	compMaterial : "Rare inks worth 50+ gp, which the spell consumes",
 	duration : "1 round",
 	description : "Create a circle to teleport to another teleportation circle on same plane; see book (50gp cons.)",
-	descriptionFull : "As I cast the spell, I draw a 5-foot-radius circle on the ground inscribed with sigils that link my location to a permanent teleportation circle of my choice whose sigil sequence I know and that is on the same plane of existence as I. A shimmering portal opens within the circle I drew and remains open until the end of my next turn. Any creature that enters the portal instantly appears within 5 feet of the destination circle or in the nearest unoccupied space if that space is occupied." + "\n   " + "Many major temples, guildhalls, and other important places have permanent teleportation circles. Each circle includes a unique sigil sequence—a string of runes arranged in a particular pattern." + "\n   " + "When I first gain the ability to cast this spell, I learn the sigil sequences for two destinations on the Material Plane, determined by the DM. I might learn additional sigil sequences during my adventures. I can commit a new sigil sequence to memory after studying it for 1 minute." + "\n   " + "I can create a permanent teleportation circle by casting this spell in the same location every day for 365 days."
+	descriptionFull : "As you cast the spell, you draw a 5-foot-radius circle on the ground inscribed with sigils that link your location to a permanent teleportation circle of your choice whose sigil sequence you know and that is on the same plane of existence as you. A shimmering portal opens within the circle you drew and remains open until the end of your next turn. Any creature that enters the portal instantly appears within 5 feet of the destination circle or in the nearest unoccupied space if that space is occupied." + "\n   " + "Many major temples, guildhalls, and other important places have permanent teleportation circles. Each circle includes a unique sigil sequence—a string of runes arranged in a particular pattern." + "\n   " + "When you first gain the ability to cast this spell, you learn the sigil sequences for two destinations on the Material Plane, determined by the DM. You might learn additional sigil sequences during your adventures. You can commit a new sigil sequence to memory after studying it for 1 minute." + "\n   " + "You can create a permanent teleportation circle by casting this spell in the same location every day for 365 days."
 });
 legacySpellRefactor("tenser's floating disk", {
 	name : "Tenser's Floating Disk",
+	nameShort : "Tenser's Floating Disk*",
 	nameAlt : "Floating Disk",
 	classes : ["wizard"],
 	source : [["PHB2024", 332]],
@@ -19173,7 +19274,7 @@ legacySpellRefactor("tenser's floating disk", {
 	compMaterial : "A drop of mercury",
 	duration : "1 h",
 	description : "Create a 3 ft diameter disk that carries 500 lb and follows me if I move more than 20 ft away",
-	descriptionFull : "This spell creates a circular, horizontal plane of force, 3 feet in diameter and 1 inch thick, that floats 3 feet above the ground in an unoccupied space of my choice that I can see within range. The disk remains for the duration and can hold up to 500 pounds. If more weight is placed on it, the spell ends, and everything on the disk falls to the ground." + "\n   " + "The disk is immobile while I are within 20 feet of it. If I move more than 20 feet away from it, the disk follows I so that it remains within 20 feet of I. It can move across uneven terrain, up or down stairs, slopes and the like, but it can't cross an elevation change of 10 feet or more. For example, the disk can't move across a 10-foot-deep pit, nor could it leave such a pit if it was created at the bottom." + "\n   " + "If I move more than 100 feet from the disk (typically because it can't move around an obstacle to follow I), the spell ends."
+	descriptionFull : "This spell creates a circular, horizontal plane of force, 3 feet in diameter and 1 inch thick, that floats 3 feet above the ground in an unoccupied space of your choice that you can see within range. The disk remains for the duration and can hold up to 500 pounds. If more weight is placed on it, the spell ends, and everything on the disk falls to the ground." + "\n   " + "The disk is immobile while you are within 20 feet of it. If you move more than 20 feet away from it, the disk follows you so that it remains within 20 feet of you. It can move across uneven terrain, up or down stairs, slopes and the like, but it can't cross an elevation change of 10 feet or more. For example, the disk can't move across a 10-foot-deep pit, nor could it leave such a pit if it was created at the bottom." + "\n   " + "If you move more than 100 feet from the disk (typically because it can't move around an obstacle to follow you), the spell ends."
 });
 legacySpellRefactor("thaumaturgy", {
 	name : "Thaumaturgy",
@@ -19186,7 +19287,7 @@ legacySpellRefactor("thaumaturgy", {
 	components : "V",
 	duration : "1 min",
 	description : "Alter eyes, voice booms, flames flicker, door/window open/close; ominous sound, tremors; up to 3",
-	descriptionFull : "I manifest a minor wonder within range. I create one of the effects below within range. If I cast this spell multiple times, I can have up to three of its 1-minute effects active at a time." + "\n " + "\u2022 " + toUni("Altered Eyes.") + " I alter the appearance of my eyes for 1 minute." + "\n " + "\u2022 " + toUni("Booming Voice.") + " my voice booms up to three times as loud as normal for 1 minute." + "\n " + "\u2022 " + toUni("Fire Play.") + " I cause flames to flicker, brighten, dim, or change color for 1 minute." + "\n " + "\u2022 " + toUni("Invisible Hand.") + " I instantaneously cause an unlocked door or window to fly open or slam shut." + "\n " + "\u2022 " + toUni("Phantom Sound.") + " I create an instantaneous sound that originates from a point of my choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers." + "\n " + "\u2022 " + toUni("Tremors.") + " I cause harmless tremors in the ground for 1 minute."
+	descriptionFull : "You manifest a minor wonder within range. You create one of the effects below within range. If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time." + "\n " + "\u2022 " + toUni("Altered Eyes.") + " You alter the appearance of your eyes for 1 minute." + "\n " + "\u2022 " + toUni("Booming Voice.") + " Your voice booms up to three times as loud as normal for 1 minute." + "\n " + "\u2022 " + toUni("Fire Play.") + " You cause flames to flicker, brighten, dim, or change color for 1 minute." + "\n " + "\u2022 " + toUni("Invisible Hand.") + " You instantaneously cause an unlocked door or window to fly open or slam shut." + "\n " + "\u2022 " + toUni("Phantom Sound.") + " You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers." + "\n " + "\u2022 " + toUni("Tremors.") + " You cause harmless tremors in the ground for 1 minute."
 });
 legacySpellRefactor("thorn whip", {
 	name : "Thorn Whip",
@@ -19199,9 +19300,9 @@ legacySpellRefactor("thorn whip", {
 	components : "V,S,M",
 	compMaterial : "The stem of a thorny plant",
 	duration : "Instantaneous",
-	description : "Melee spell atk for 1d6 Piercing \u0026 can pull up to Large crea up to 10 ft closer; +1d6 at CL 5, 11, \u0026 17",
+	description : "Melee spell atk for 1d6 Piercing \u0026 can pull \u2264Large crea up to 10 ft closer; +1d6 at CL 5, 11, \u0026 17",
 	descriptionCantripDie : "Melee spell atk for `CD`d6 Piercing and can pull up to Large crea up to 10 ft closer",
-	descriptionFull : "I create a vine-like whip covered in thorns that lashes out at my command toward a creature in range. Make a melee spell attack against the target. On a hit, the target takes 1d6 Piercing damage, and if it is Large or smaller, I can pull it up to 10 feet closer to I." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d6 when I reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
+	descriptionFull : "You create a vine-like whip covered in thorns that lashes out at your command toward a creature in range. Make a melee spell attack against the target. On a hit, the target takes 1d6 Piercing damage, and if it is Large or smaller, you can pull it up to 10 feet closer to you." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
 });
 legacySpellRefactor("thunderclap", {
 	name : "Thunderclap",
@@ -19216,7 +19317,7 @@ legacySpellRefactor("thunderclap", {
 	save : "Con",
 	description : "100-ft rad audible; all creatures but me save or 1d6 Thunder; +1d6 at CL 5, 11, and 17",
 	descriptionCantripDie : "100-ft rad audible; all creatures but me save or `CD`d6 Thunder",
-	descriptionFull : "Each creature in a 5-foot Emanation originating from I must succeed on a Constitution saving throw or take 1d6 Thunder damage. The spell's thunderous sound can be heard up to 100 feet away." + "\n   " + toUni("Cantrip Upgrade") + ". The spell's damage increases by 1d6 when I reach 5th level (2d6), 11th level (3d6), and 17th level (4d6)."
+	descriptionFull : "Each creature in a 5-foot Emanation originating from you must succeed on a Constitution saving throw or take 1d6 Thunder damage. The spell's thunderous sound can be heard up to 100 feet away." + "\n   " + toUni("Cantrip Upgrade") + ". The spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6)."
 });
 legacySpellRefactor("thunderous smite", {
 	name : "Thunderous Smite",
@@ -19225,13 +19326,13 @@ legacySpellRefactor("thunderous smite", {
 	level : 1,
 	school : "Evoc",
 	time : "1 bns*",
-	timeFull : "Bonus Action, which I take immediately after hitting a target with a Melee weapon or an Unarmed Strike",
+	timeFull : "Bonus Action, which you take immediately after hitting a target with a Melee weapon or an Unarmed Strike",
 	range : "Self",
 	components : "V",
 	duration : "Instantaneous",
 	save : "Str",
 	description : "Melee wea/unarmed hit +2d6+1d6/SL Thunder; save or 10 ft push \u0026 Prone; audible in 300 ft",
-	descriptionFull : "my strike rings with thunder that is audible within 300 feet of I, and the target takes an extra 2d6 Thunder damage from the attack. Additionally, if the target is a creature, it must succeed on a Strength saving throw or be pushed 10 feet away from I and have the Prone condition." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 1."
+	descriptionFull : "Your strike rings with thunder that is audible within 300 feet of you, and the target takes an extra 2d6 Thunder damage from the attack. Additionally, if the target is a creature, it must succeed on a Strength saving throw or be pushed 10 feet away from you and have the Prone condition." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 1."
 });
 legacySpellRefactor("thunderwave", {
 	name : "Thunderwave",
@@ -19244,8 +19345,8 @@ legacySpellRefactor("thunderwave", {
 	components : "V,S",
 	duration : "Instantaneous",
 	save : "Con",
-	description : "All crea/unsecured obj. 2d8+1d8/SL Thunder, pushed 10 ft away; save 1/2 dmg only; audible 300ft",
-	descriptionFull : "I unleash a wave of thunderous energy. Each creature in a 15-foot Cube originating from I makes a Constitution saving throw. On a failed save, a creature takes 2d8 Thunder damage and is pushed 10 feet away from I. On a successful save, a creature takes half as much damage only." + "\n   " + "In addition, unsecured objects that are entirely within the Cube are pushed 10 feet away from I, and a thunderous boom is audible within 300 feet." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 1."
+	description : "All crea/unsecured obj 2d8+1d8/SL Thunder, pushed 10 ft away; save 1/2 dmg only; audible 300ft",
+	descriptionFull : "You unleash a wave of thunderous energy. Each creature in a 15-foot Cube originating from you makes a Constitution saving throw. On a failed save, a creature takes 2d8 Thunder damage and is pushed 10 feet away from you. On a successful save, a creature takes half as much damage only." + "\n   " + "In addition, unsecured objects that are entirely within the Cube are pushed 10 feet away from you, and a thunderous boom is audible within 300 feet." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 1."
 });
 legacySpellRefactor("time stop", {
 	name : "Time Stop",
@@ -19258,10 +19359,11 @@ legacySpellRefactor("time stop", {
 	components : "V",
 	duration : "Instantaneous",
 	description : "I instantly take 1d4+1 turns; spell ends if affect other crea or worn/carried obj, or move over 1000ft ",
-	descriptionFull : "I briefly stop the flow of time for everyone but yourself. No time passes for other creatures, while I take 1d4 + 1 turns in a row, during which I can use actions and move as normal." + "\n   " + "This spell ends if one of the actions I use during this period, or any effects that I create during it, affects a creature other than I or an object being worn or carried by someone other than I. In addition, the spell ends if I move to a place more than 1,000 feet from the location where I cast it."
+	descriptionFull : "You briefly stop the flow of time for everyone but yourself. No time passes for other creatures, while you take 1d4 + 1 turns in a row, during which you can use actions and move as normal." + "\n   " + "This spell ends if one of the actions you use during this period, or any effects that you create during it, affects a creature other than you or an object being worn or carried by someone other than you. In addition, the spell ends if you move to a place more than 1,000 feet from the location where you cast it."
 });
 legacySpellRefactor("toll the dead", {
 	name : "Toll the Dead",
+	nameShort : "Toll the Dead*",
 	classes : ["cleric", "warlock", "wizard"],
 	source : [["PHB2024", 334]],
 	level : 0,
@@ -19273,7 +19375,7 @@ legacySpellRefactor("toll the dead", {
 	save : "Wis",
 	description : "1 crea save or 1d12 Necrotic dmg (d8 if full HP); +1d12/1d8 at CL 5, 11, \u0026 17; bell audible in 10ft",
 	descriptionCantripDie : "1 crea save or `CD`d12 Necrotic damage (d8 if at full HP); bell audible in 10ft",
-	descriptionFull : "I point at one creature I can see within range, and the single chime of a dolorous bell is audible within 10 feet of the target. The target must succeed on a Wisdom saving throw or take 1d8 Necrotic damage. If the target is missing any of its Hit Points, it instead takes 1d12 Necrotic damage" + toUni("Cantrip Upgrade") + ". The damage increases by one die when I reach levels 5 (2d8 or 2d12), 11 (3d8 or 3d12), and 17 (4d8 or 4d12)."
+	descriptionFull : "You point at one creature you can see within range, and the single chime of a dolorous bell is audible within 10 feet of the target. The target must succeed on a Wisdom saving throw or take 1d8 Necrotic damage. If the target is missing any of its Hit Points, it instead takes 1d12 Necrotic damage" + toUni("Cantrip Upgrade") + ". The damage increases by one die when you reach levels 5 (2d8 or 2d12), 11 (3d8 or 3d12), and 17 (4d8 or 4d12)."
 });
 legacySpellRefactor("tongues", {
 	name : "Tongues",
@@ -19286,8 +19388,8 @@ legacySpellRefactor("tongues", {
 	components : "V,M",
 	compMaterial : "A miniature ziggurat",
 	duration : "1 h",
-	description : "1 crea understands all spoken and signed languages, all creatures with a language can understand it",
-	descriptionFull : "This spell grants the creature I touch the ability to understand any spoken or signed language that it hears or sees. Moreover, when the target communicates by speaking or signing, any creature that knows at least one language can understand it if that creature can hear the speech or see the signing."
+	description : "1 crea understands all spoken and signed languages, all creatures with a language understand it",
+	descriptionFull : "This spell grants the creature you touch the ability to understand any spoken or signed language that it hears or sees. Moreover, when the target communicates by speaking or signing, any creature that knows at least one language can understand it if that creature can hear the speech or see the signing."
 });
 legacySpellRefactor("transport via plants", {
 	name : "Transport via Plants",
@@ -19300,7 +19402,7 @@ legacySpellRefactor("transport via plants", {
 	components : "V,S",
 	duration : "1 min",
 	description : "For duration all can move from a Large plant to another plant on the same plane that I have touched",
-	descriptionFull : "This spell creates a magical link between a Large or larger inanimate plant within range and another plant, at any distance, on the same plane of existence. I must have seen or touched the destination plant at least once before. For the duration, any creature can step into the target plant and exit from the destination plant by using 5 feet of movement."
+	descriptionFull : "This spell creates a magical link between a Large or larger inanimate plant within range and another plant, at any distance, on the same plane of existence. You must have seen or touched the destination plant at least once before. For the duration, any creature can step into the target plant and exit from the destination plant by using 5 feet of movement."
 });
 legacySpellRefactor("tree stride", {
 	name : "Tree Stride",
@@ -19313,10 +19415,11 @@ legacySpellRefactor("tree stride", {
 	components : "V,S",
 	duration : "Conc, 1 min",
 	description : "1/turn can move through tree to other tree of same kind in 500ft; takes 5ft enter/5ft exit other tree",
-	descriptionFull : "I gain the ability to enter a tree and move from inside it to inside another tree of the same kind within 500 feet. Both trees must be living and at least the same size as I. I must use 5 feet of movement to enter a tree. I instantly know the location of all other trees of the same kind within 500 feet and, as part of the move used to enter the tree, can either pass into one of those trees or step out of the tree I're in. I appear in a spot of my choice within 5 feet of the destination tree, using another 5 feet of movement. If I have no movement left, I appear within 5 feet of the tree I entered." + "\n   " + "I can use this transportation ability only once on each of my turns. I must end each turn outside a tree."
+	descriptionFull : "You gain the ability to enter a tree and move from inside it to inside another tree of the same kind within 500 feet. Both trees must be living and at least the same size as you. You must use 5 feet of movement to enter a tree. You instantly know the location of all other trees of the same kind within 500 feet and, as part of the move used to enter the tree, can either pass into one of those trees or step out of the tree you're in. You appear in a spot of your choice within 5 feet of the destination tree, using another 5 feet of movement. If you have no movement left, you appear within 5 feet of the tree you entered." + "\n   " + "You can use this transportation ability only once on each of your turns. You must end each turn outside a tree."
 });
 legacySpellRefactor("true polymorph", {
 	name : "True Polymorph",
+	nameShort : "True Polymorph*",
 	classes : ["bard", "warlock", "wizard"],
 	source : [["PHB2024", 335]],
 	level : 9,
@@ -19327,8 +19430,8 @@ legacySpellRefactor("true polymorph", {
 	compMaterial : "A drop of mercury, a dollop of gum arabic, and a wisp of smoke",
 	duration : "Conc, 1 h",
 	save : "Wis",
-	description : "1 visible crea save or becomes other crea/obj of CR or lower; or obj turned into crea (CR<10); see B",
-	descriptionFull : "Choose one creature or nonmagical object that I can see within range. The creature shape-shifts into a different creature or a nonmagical object, or the object shape-shifts into a creature (the object must be neither worn nor carried). The transformation lasts for the duration or until the target dies or is destroyed, but if I maintain Concentration on this spell for the full duration, the spell lasts until dispelled." + "\n   " + "An unwilling creature can make a Wisdom saving throw, and if it succeeds, it isn't affected by this spell." + "\n   " + toUni("Creature into Creature") + ": If I turn a creature into another kind of creature, the new form can be any kind I choose that has a Challenge Rating equal to or less than the target's Challenge Rating or level. The target's game statistics are replaced by the stat block of the new form, but it retains its Hit Points, Hit Point Dice, alignment, and personality." + "\n   " + "The target gains a number of Temporary Hit Points equal to the Hit Points of the new form. The spell ends early on the target if it has no Temporary Hit Points left." + "\n   " + "The target is limited in the actions it can perform by the anatomy of its new form, and it can't speak or cast spells." + "\n   " + "The target's gear melds into the new form. The creature can't use or otherwise benefit from any of that equipment." + "\n   " + toUni("Object into Creature") + ": I can turn an object into any kind of creature, as long as the creature's size is no larger than the object's size and the creature has a Challenge Rating of 9 or lower. The creature is Friendly to I and my allies. In combat, it takes its turns immediately after yours, and it obeys my commands." + "\n   " + "If the spell lasts more than an hour, I no longer control the creature. It might remain Friendly to I, depending on how I have treated it." + "\n   " + toUni("Creature into Object") + ": If I turn a creature into an object, it transforms along with whatever it is wearing and carrying into that form, as long as the object's size is no larger than the creature's size. The creature's statistics become those of the object, and the creature has no memory of time spent in this form after the spell ends and it returns to normal."
+	description : "1 crea save or becomes other crea/obj of \u2264CR/CL; or obj turned into crea (CR\u22649); see B",
+	descriptionFull : "Choose one creature or nonmagical object that you can see within range. The creature shape-shifts into a different creature or a nonmagical object, or the object shape-shifts into a creature (the object must be neither worn nor carried). The transformation lasts for the duration or until the target dies or is destroyed, but if you maintain Concentration on this spell for the full duration, the spell lasts until dispelled." + "\n   " + "An unwilling creature can make a Wisdom saving throw, and if it succeeds, it isn't affected by this spell." + "\n   " + toUni("Creature into Creature") + ": If you turn a creature into another kind of creature, the new form can be any kind you choose that has a Challenge Rating equal to or less than the target's Challenge Rating or level. The target's game statistics are replaced by the stat block of the new form, but it retains its Hit Points, Hit Point Dice, alignment, and personality." + "\n   " + "The target gains a number of Temporary Hit Points equal to the Hit Points of the new form. The spell ends early on the target if it has no Temporary Hit Points left." + "\n   " + "The target is limited in the actions it can perform by the anatomy of its new form, and it can't speak or cast spells." + "\n   " + "The target's gear melds into the new form. The creature can't use or otherwise benefit from any of that equipment." + "\n   " + toUni("Object into Creature") + ": You can turn an object into any kind of creature, as long as the creature's size is no larger than the object's size and the creature has a Challenge Rating of 9 or lower. The creature is Friendly to you and your allies. In combat, it takes its turns immediately after yours, and it obeys your commands." + "\n   " + "If the spell lasts more than an hour, you no longer control the creature. It might remain Friendly to you, depending on how you have treated it." + "\n   " + toUni("Creature into Object") + ": If you turn a creature into an object, it transforms along with whatever it is wearing and carrying into that form, as long as the object's size is no larger than the creature's size. The creature's statistics become those of the object, and the creature has no memory of time spent in this form after the spell ends and it returns to normal."
 });
 legacySpellRefactor("true resurrection", {
 	name : "True Resurrection",
@@ -19341,8 +19444,8 @@ legacySpellRefactor("true resurrection", {
 	components : "V,S,M\u2020",
 	compMaterial : "diamonds worth 25,000+ gp, which the spell consumes",
 	duration : "Instantaneous",
-	description : "Resurrects a crea that died in the last 200 years to life with new body \u0026 full HP; see B (25k gp cons.)",
-	descriptionFull : "I touch a creature that has been dead for no longer than 200 years and that died for any reason except old age. The creature is revived with all its Hit Points." + "\n   " + "This spell closes all wounds, neutralizes any poison, cures all magical contagions, and lifts any curses affecting the creature when it died. The spell replaces damaged or missing organs and limbs. If the creature was Undead, it is restored to its non-Undead form." + "\n   " + "The spell can provide a new body if the original no longer exists, in which case I must speak the creature's name. The creature then appears in an unoccupied space I choose within 10 feet of I."
+	description : "Return crea that died in the last 200 years to life with new body \u0026 full HP; see B (25k gp cons.)",
+	descriptionFull : "You touch a creature that has been dead for no longer than 200 years and that died for any reason except old age. The creature is revived with all its Hit Points." + "\n   " + "This spell closes all wounds, neutralizes any poison, cures all magical contagions, and lifts any curses affecting the creature when it died. The spell replaces damaged or missing organs and limbs. If the creature was Undead, it is restored to its non-Undead form." + "\n   " + "The spell can provide a new body if the original no longer exists, in which case you must speak the creature's name. The creature then appears in an unoccupied space you choose within 10 feet of you."
 });
 legacySpellRefactor("true seeing", {
 	name : "True Seeing",
@@ -19356,7 +19459,7 @@ legacySpellRefactor("true seeing", {
 	compMaterial : "Mushroom powder worth 25+ gp, which the spell consumes",
 	duration : "1 h",
 	description : "1 crea gains Truesight 120 ft; pierces darkness, illusions, invisible, ethereal, magic trans. (25gp cons.)",
-	descriptionFull : "For the duration, the willing creature I touch has Truesight with a range of 120 feet." + "\n   " + "If I have Truesight, my vision is enhanced within a specified range. Within that range, my vision pierces through normal and magical Darkness, Invisibility, Visual Illusions (appear transparent and save automatically against them), Transformations (see true form of creature or object transformed by magic, and the Ethereal Plane."
+	descriptionFull : "For the duration, the willing creature you touch has Truesight with a range of 120 feet." + "\n   " + "If you have Truesight, your vision is enhanced within a specified range. Within that range, your vision pierces through normal and magical Darkness, Invisibility, Visual Illusions (appear transparent and save automatically against them), Transformations (see true form of creature or object transformed by magic, and the Ethereal Plane."
 });
 legacySpellRefactor("true strike", {
 	name : "True Strike",
@@ -19367,10 +19470,10 @@ legacySpellRefactor("true strike", {
 	time : "1 a",
 	range : "Self",
 	components : "S,M",
-	compMaterial : "A weapon with which I have proficiency and that is worth 1+ cp",
+	compMaterial : "A weapon with which you have proficiency and that is worth 1+ cp",
 	duration : "Instantaneous",
 	description : "Atk with prof. weapon using spell ability; deal weapon or Radiant dmg; +1d6 Radiant at CL 5, 11 \u0026 17",
-	descriptionFull : "Guided by a flash of magical insight, I make one attack with the weapon used in the spell's casting. The attack uses my spellcasting ability for the attack and damage rolls instead of using Strength or Dexterity. If the attack deals damage, it can be Radiant damage or the weapon's normal damage type (my choice)." + "\n   " + toUni("Cantrip Upgrade") + ". Whether I deal Radiant damage or the weapon's normal damage type, the attack deals extra Radiant damage when I reach levels 5 (1d6), 11 (2d6), and 17 (3d6)."
+	descriptionFull : "Guided by a flash of magical insight, you make one attack with the weapon used in the spell's casting. The attack uses your spellcasting ability for the attack and damage rolls instead of using Strength or Dexterity. If the attack deals damage, it can be Radiant damage or the weapon's normal damage type (your choice)." + "\n   " + toUni("Cantrip Upgrade") + ". Whether you deal Radiant damage or the weapon's normal damage type, the attack deals extra Radiant damage when you reach levels 5 (1d6), 11 (2d6), and 17 (3d6)."
 });
 legacySpellRefactor("tsunami", {
 	name : "Tsunami",
@@ -19387,7 +19490,7 @@ legacySpellRefactor("tsunami", {
 	descriptionShorter : "300\xD750\xD7300ft (l\xD7w\xD7h) wave moves away at 50ft/rnd; 6d10 Bludg. -1d10/rnd; save 1/2; see B",
 	descriptionMetric : "90\xD715\xD790m (l\xD7w\xD7h) wall of water moves away at 15 m/rnd; 6d10 Bludg. -1d10/rnd; save 1/2; see B",
 	descriptionShorterMetric : "90\xD715\xD790m (l\xD7w\xD7h) wave moves away at 15 m/rnd; 6d10 Bludg. -1d10/rnd; save 1/2; see B",
-	descriptionFull : "A wall of water springs into existence at a point I choose within range. I can make the wall up to 300 feet long, 300 feet high, and 50 feet thick. The wall lasts for the duration." + "\n   " + "When the wall appears, each creature in its area makes a Strength saving throw, taking 6d10 Bludgeoning damage on a failed save or half as much damage on a successful one." + "\n   " + "At the start of each of my turns after the wall appears, the wall, along with any creatures in it, moves 50 feet away from I. Any Huge or smaller creature inside the wall or whose space the wall enters when it moves must succeed on a Strength saving throw or take 5d10 Bludgeoning damage. A creature can take this damage only once per round. At the end of the turn, the wall's height is reduced by 50 feet, and the damage the wall deals on later rounds is reduced by 1d10. When the wall reaches 0 feet in height, the spell ends." + "\n   " + "A creature caught in the wall can move by swimming. Because of the wave's force, though, the creature must succeed on a Strength (Athletics) check against my spell save DC to move at all. If it fails the check, it can't move. A creature that moves out of the wall falls to the ground."
+	descriptionFull : "A wall of water springs into existence at a point you choose within range. You can make the wall up to 300 feet long, 300 feet high, and 50 feet thick. The wall lasts for the duration." + "\n   " + "When the wall appears, each creature in its area makes a Strength saving throw, taking 6d10 Bludgeoning damage on a failed save or half as much damage on a successful one." + "\n   " + "At the start of each of your turns after the wall appears, the wall, along with any creatures in it, moves 50 feet away from you. Any Huge or smaller creature inside the wall or whose space the wall enters when it moves must succeed on a Strength saving throw or take 5d10 Bludgeoning damage. A creature can take this damage only once per round. At the end of the turn, the wall's height is reduced by 50 feet, and the damage the wall deals on later rounds is reduced by 1d10. When the wall reaches 0 feet in height, the spell ends." + "\n   " + "A creature caught in the wall can move by swimming. Because of the wave's force, though, the creature must succeed on a Strength (Athletics) check against your spell save DC to move at all. If it fails the check, it can't move. A creature that moves out of the wall falls to the ground."
 });
 legacySpellRefactor("unseen servant", {
 	name : "Unseen Servant",
@@ -19402,7 +19505,7 @@ legacySpellRefactor("unseen servant", {
 	compMaterial : "A piece of string and a bit of wood",
 	duration : "1 h",
 	description : "Make Invisible, mindless, shapeless, Med. servant for simple tasks; AC 10, 1 HP; bns mentally command ",
-	descriptionFull : "This spell creates an Invisible, mindless, shapeless, Medium force that performs simple tasks at my command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 Hit Point, and a Strength of 2, and it can't attack. If it drops to 0 Hit Points, the spell ends." + "\n   " + "Once on each of my turns as a Bonus Action, I can mentally command the servant to move up to 15 feet and interact with an object. The servant can perform simple tasks that a human could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring drinks. Once I give the command, the servant performs the task to the best of its ability until it completes the task, then waits for my next command." + "\n   " + "If I command the servant to perform a task that would move it more than 60 feet away from I, the spell ends."
+	descriptionFull : "This spell creates an Invisible, mindless, shapeless, Medium force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 Hit Point, and a Strength of 2, and it can't attack. If it drops to 0 Hit Points, the spell ends." + "\n   " + "Once on each of your turns as a Bonus Action, you can mentally command the servant to move up to 15 feet and interact with an object. The servant can perform simple tasks that a human could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring drinks. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command." + "\n   " + "If you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends."
 });
 legacySpellRefactor("vampiric touch", {
 	name : "Vampiric Touch",
@@ -19414,8 +19517,8 @@ legacySpellRefactor("vampiric touch", {
 	range : "Self",
 	components : "V,S",
 	duration : "Conc, 1 min",
-	description : "Melee spell attack each turn as 1 a for 3d6+1d6/SL Necrotic dmg; I heal half the damage dealt",
-	descriptionFull : "The touch of my shadow-wreathed hand can siphon life force from others to heal my wounds. Make a melee spell attack against one creature within reach. On a hit, the target takes 3d6 Necrotic damage, and I regain Hit Points equal to half the amount of Necrotic damage dealt." + "\n   " + "Until the spell ends, I can make the attack again on each of my turns as a Magic action, targeting the same creature or a different one." + AtHigherLevels + "When I cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."
+	description : "Melee spell attack for 3d6+1d6/SL Necrotic dmg; I heal half the damage dealt; repeat as a",
+	descriptionFull : "The touch of your shadow-wreathed hand can siphon life force from others to heal your wounds. Make a melee spell attack against one creature within reach. On a hit, the target takes 3d6 Necrotic damage, and you regain Hit Points equal to half the amount of Necrotic damage dealt." + "\n   " + "Until the spell ends, you can make the attack again on each of your turns as a Magic action, targeting the same creature or a different one." + AtHigherLevels + "When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."
 });
 legacySpellRefactor("vicious mockery", {
 	name : "Vicious Mockery",
@@ -19430,7 +19533,7 @@ legacySpellRefactor("vicious mockery", {
 	save : "Wis",
 	description : "1 visible/audible crea save or 1d6 Psychic dmg and disadv. on next attack roll; +1d6 at CL 5, 11, and 17",
 	descriptionCantripDie : "1 visible/audible creature save or `CD`d6 Psychic dmg and disadv. on next attack roll",
-	descriptionFull : "I unleash a string of insults laced with subtle enchantments at one creature I can see or hear within range. The target must succeed on a Wisdom saving throw or take 1d6 Psychic damage and have Disadvantage on the next attack roll it makes before the end of its next turn." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d6 when I reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
+	descriptionFull : "You unleash a string of insults laced with subtle enchantments at one creature you can see or hear within range. The target must succeed on a Wisdom saving throw or take 1d6 Psychic damage and have Disadvantage on the next attack roll it makes before the end of its next turn." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
 });
 legacySpellRefactor("vitriolic sphere", {
 	name : "Vitriolic Sphere",
@@ -19444,9 +19547,9 @@ legacySpellRefactor("vitriolic sphere", {
 	compMaterial : "A drop of bile",
 	duration : "Instantaneous",
 	save : "Dex",
-	description : "20-ft rad all crea 10d4+2d4/SL Acid dmg, +5d4 dmg next turn end; save half \u0026 no dmg next turn",
+	description : "20-ft rad all crea 10d4+2d4/SL Acid dmg, 5d4 Acid next turn end; save half \u0026 no dmg next turn",
 	descriptionShorter : "20-ft rad all crea 10d4+2d4/SL Acid dmg, +5d4 dmg next turn; save half \u0026 no next turn",
-	descriptionFull : "I point at a location within range, and a glowing, 1-foot-diameter ball of acid streaks there and explodes in a 20-foot-radius Sphere. Each creature in that area makes a Dexterity saving throw. On a failed save, a creature takes 10d4 Acid damage and another 5d4 Acid damage at the end of its next turn. On a successful save, a creature takes half the initial damage only." + AtHigherLevels + "The initial damage increases by 2d4 for each spell slot level above 4.",
+	descriptionFull : "You point at a location within range, and a glowing, 1-foot-diameter ball of acid streaks there and explodes in a 20-foot-radius Sphere. Each creature in that area makes a Dexterity saving throw. On a failed save, a creature takes 10d4 Acid damage and another 5d4 Acid damage at the end of its next turn. On a successful save, a creature takes half the initial damage only." + AtHigherLevels + "The initial damage increases by 2d4 for each spell slot level above 4.",
 	dynamicDamageBonus : {
 		multipleDmgMoments : false,
 		extraDmgGroupsSameType : /((?:\+?\d+d?\d*)+)( dmg next turn)/i
@@ -19464,11 +19567,11 @@ legacySpellRefactor("wall of fire", {
 	compMaterial : "A piece of charcoal",
 	duration : "Conc, 1 min",
 	save : "Dex",
-	description : "60\xD71\xD720ft (l\xD7w\xD7h) or 10ft rad wall; all in 5d8+1d8/SL Fire; save 1/2; enter/end in 10ft 1 side same dmg",
-	descriptionMetric : "18\xD70,3\xD76m (l\xD7w\xD7h) or 3-m rad wall; all in 5d8+1d8/SL Fire; save 1/2; enter/end in 10ft 1 side same dmg",
+	description : "60|1|20ft (l|w|h) or 10-ft rad wall; all in 5d8+1d8/SL Fire; save 1/2; enter/end in 10ft hot side same dmg",
+	descriptionMetric : "18|0,3|6m (l|w|h) or 3-m rad wall; all in 5d8+1d8/SL Fire; save 1/2; enter/end in 10ft hot side same dmg",
 	descriptionShorter : "60|1|20ft (l|w|h) or 10-ft rad all + 10 ft on 1 side 5d8+1d8/SL Fire; save half on cast; see B",
 	descriptionShorterMetric : "18|0,3|6m (l|w|h) or 3-m rad all + 3 m on 1 side 5d8+1d8/SL Fire; save half on cast; see B",
-	descriptionFull : "I create a wall of fire on a solid surface within range. I can make the wall up to 60 feet long, 20 feet high, and 1 foot thick, or a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall is opaque and lasts for the duration." + "\n   " + "When the wall appears, each creature in its area makes a Dexterity saving throw, taking 5d8 Fire damage on a failed save or half as much damage on a successful one." + "\n   " + "One side of the wall, selected by I when I cast this spell, deals 5d8 Fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 4."
+	descriptionFull : "You create a wall of fire on a solid surface within range. You can make the wall up to 60 feet long, 20 feet high, and 1 foot thick, or a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall is opaque and lasts for the duration." + "\n   " + "When the wall appears, each creature in its area makes a Dexterity saving throw, taking 5d8 Fire damage on a failed save or half as much damage on a successful one." + "\n   " + "One side of the wall, selected by you when you cast this spell, deals 5d8 Fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 4."
 });
 legacySpellRefactor("wall of force", {
 	name : "Wall of Force",
@@ -19482,7 +19585,7 @@ legacySpellRefactor("wall of force", {
 	compMaterial : "A shard of glass",
 	duration : "Conc, 10 min",
 	description : "10 10\xD710-ft panels or 10-ft rad (hemi)sphere invisible, impenetrable wall; can float in air; see book",
-	descriptionFull : "An Invisible wall of force springs into existence at a point I choose within range. The wall appears in any orientation I choose, as a horizontal or vertical barrier or at an angle. It can be free floating or resting on a solid surface. I can form it into a hemispherical dome or a globe with a radius of up to 10 feet, or I can shape a flat surface made up of ten 10-foot-by-10-foot panels. Each panel must be contiguous with another panel. In any form, the wall is 1/4 inch thick and lasts for the duration. If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (I choose which side)." + "\n   " + "Nothing can physically pass through the wall. It is immune to all damage and can't be dispelled by Dispel Magic. A Disintegrate spell destroys the wall instantly, however. The wall also extends into the Ethereal Plane and blocks ethereal travel through the wall."
+	descriptionFull : "An Invisible wall of force springs into existence at a point you choose within range. The wall appears in any orientation you choose, as a horizontal or vertical barrier or at an angle. It can be free floating or resting on a solid surface. You can form it into a hemispherical dome or a globe with a radius of up to 10 feet, or you can shape a flat surface made up of ten 10-foot-by-10-foot panels. Each panel must be contiguous with another panel. In any form, the wall is 1/4 inch thick and lasts for the duration. If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (you choose which side)." + "\n   " + "Nothing can physically pass through the wall. It is immune to all damage and can't be dispelled by Dispel Magic. A Disintegrate spell destroys the wall instantly, however. The wall also extends into the Ethereal Plane and blocks ethereal travel through the wall."
 });
 legacySpellRefactor("wall of ice", {
 	name : "Wall of Ice",
@@ -19497,7 +19600,7 @@ legacySpellRefactor("wall of ice", {
 	duration : "Conc, 10 min",
 	save : "Dex",
 	description : "10 10\xD710ft panels 1ft thick wall; now 10d6+2/SL Cold; if cut 5d6+1d6/SL Cold in space; save 1/2; see B",
-	descriptionFull : "I create a wall of ice on a solid surface within range. I can form it into a hemispherical dome or a globe with a radius of up to 10 feet, or I can shape a flat surface made up of ten 10-foot-square panels. Each panel must be contiguous with another panel. In any form, the wall is 1 foot thick and lasts for the duration." + "\n   " + "If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (I choose which side) and makes a Dexterity saving throw, taking 10d6 Cold damage on a failed save or half as much damage on a successful one." + "\n   " + "The wall is an object that can be damaged and thus breached. It has AC 12 and 30 Hit Points per 10-foot section, and it has Immunity to Cold, Poison, and Psychic damage and Vulnerability to Fire damage. Reducing a 10-foot section of wall to 0 Hit Points destroys it and leaves behind a sheet of frigid air in the space the wall occupied." + "\n   " + "A creature moving through the sheet of frigid air for the first time on a turn makes a Constitution saving throw, taking 5d6 Cold damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage the wall deals when it appears increases by 2d6 and the damage from passing through the sheet of frigid air increases by 1d6 for each spell slot level above 6.",
+	descriptionFull : "You create a wall of ice on a solid surface within range. You can form it into a hemispherical dome or a globe with a radius of up to 10 feet, or you can shape a flat surface made up of ten 10-foot-square panels. Each panel must be contiguous with another panel. In any form, the wall is 1 foot thick and lasts for the duration." + "\n   " + "If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (you choose which side) and makes a Dexterity saving throw, taking 10d6 Cold damage on a failed save or half as much damage on a successful one." + "\n   " + "The wall is an object that can be damaged and thus breached. It has AC 12 and 30 Hit Points per 10-foot section, and it has Immunity to Cold, Poison, and Psychic damage and Vulnerability to Fire damage. Reducing a 10-foot section of wall to 0 Hit Points destroys it and leaves behind a sheet of frigid air in the space the wall occupied." + "\n   " + "A creature moving through the sheet of frigid air for the first time on a turn makes a Constitution saving throw, taking 5d6 Cold damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage the wall deals when it appears increases by 2d6 and the damage from passing through the sheet of frigid air increases by 1d6 for each spell slot level above 6.",
 	dynamicDamageBonus : { multipleDmgMoments : false }
 });
 legacySpellRefactor("wall of stone", {
@@ -19513,7 +19616,7 @@ legacySpellRefactor("wall of stone", {
 	duration : "Conc, 10 min",
 	description : "10 10\xD710-ft panels 6\" thick wall connected with existing stone; half thickness, double surface; see B",
 	descriptionMetric : "10 10\xD73m panels 15cm thick wall connected with existing stone; half thickness, double surface; see B",
-	descriptionFull : "A nonmagical wall of solid stone springs into existence at a point I choose within range. The wall is 6 inches thick and is composed of ten 10-foot-by-10-foot panels. Each panel must be contiguous with another panel. Alternatively, I can create 10-foot-by-20-foot panels that are only 3 inches thick." + "\n   " + "If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (I choose which side). If a creature would be surrounded on all sides by the wall (or the wall and another solid surface), that creature can make a Dexterity saving throw. On a success, it can use its Reaction to move up to its Speed so that it is no longer enclosed by the wall." + "\n   " + "The wall can have any shape I desire, though it can't occupy the same space as a creature or object. The wall doesn't need to be vertical or rest on a firm foundation. It must, however, merge with and be solidly supported by existing stone. Thus, I can use this spell to bridge a chasm or create a ramp." + "\n   " + "If I create a span greater than 20 feet in length, I must halve the size of each panel to create supports. I can crudely shape the wall to create battlements and the like." + "\n   " + "The wall is an object made of stone that can be damaged and thus breached. Each panel has AC 15 and 30 Hit Points per inch of thickness, and it has Immunity to Poison and Psychic damage. Reducing a panel to 0 Hit Points destroys it and might cause connected panels to collapse at the DM's discretion." + "\n   " + "If I maintain my Concentration on this spell for its full duration, the wall becomes permanent and can't be dispelled. Otherwise, the wall disappears when the spell ends."
+	descriptionFull : "A nonmagical wall of solid stone springs into existence at a point you choose within range. The wall is 6 inches thick and is composed of ten 10-foot-by-10-foot panels. Each panel must be contiguous with another panel. Alternatively, you can create 10-foot-by-20-foot panels that are only 3 inches thick." + "\n   " + "If the wall cuts through a creature's space when it appears, the creature is pushed to one side of the wall (you choose which side). If a creature would be surrounded on all sides by the wall (or the wall and another solid surface), that creature can make a Dexterity saving throw. On a success, it can use its Reaction to move up to its Speed so that it is no longer enclosed by the wall." + "\n   " + "The wall can have any shape you desire, though it can't occupy the same space as a creature or object. The wall doesn't need to be vertical or rest on a firm foundation. It must, however, merge with and be solidly supported by existing stone. Thus, you can use this spell to bridge a chasm or create a ramp." + "\n   " + "If you create a span greater than 20 feet in length, you must halve the size of each panel to create supports. You can crudely shape the wall to create battlements and the like." + "\n   " + "The wall is an object made of stone that can be damaged and thus breached. Each panel has AC 15 and 30 Hit Points per inch of thickness, and it has Immunity to Poison and Psychic damage. Reducing a panel to 0 Hit Points destroys it and might cause connected panels to collapse at the DM's discretion." + "\n   " + "If you maintain your Concentration on this spell for its full duration, the wall becomes permanent and can't be dispelled. Otherwise, the wall disappears when the spell ends."
 });
 legacySpellRefactor("wall of thorns", {
 	name : "Wall of Thorns",
@@ -19527,9 +19630,10 @@ legacySpellRefactor("wall of thorns", {
 	compMaterial : "A handful of thorns",
 	duration : "Conc, 10 min",
 	save : "Dex",
-	description : "60\xD75\xD720ft (l\xD7w\xD7h) or 10ft rad; all in wall now/enter/end 7d8+1d8/SL Pierc. (1/t/c); save 1/2; 1/4 move",
+	description : "60|5|20ft (l|w|h) or 10-ft rad; all in wall now/enter/end 7d8+1d8/SL Piercing (1/t/c); save 1/2; 1/4 move",
 	descriptionMetric : "18\xD71,5\xD76m (l\xD7w\xD7h) or 3-m rad all in wall now/enter/end 7d8+1d8/SL Piercing (1/t/c); save 1/2; 1/4 move",
-	descriptionFull : "I create a wall of tangled brush bristling with needle-sharp thorns. The wall appears within range on a solid surface and lasts for the duration. I choose to make the wall up to 60 feet long, 10 feet high, and 5 feet thick or a circle that has a 20-foot diameter and is up to 20 feet high and 5 feet thick. The wall blocks line of sight." + "\n   " + "When the wall appears, each creature in its area makes a Dexterity saving throw, taking 7d8 Piercing damage on a failed save or half as much damage on a successful one." + "\n   " + "A creature can move through the wall, albeit slowly and painfully. For every 1 foot a creature moves through the wall, it must spend 4 feet of movement. Furthermore, the first time a creature enters a space in the wall on a turn or ends its turn there, the creature makes a Dexterity saving throw, taking 7d8 Slashing damage on a failed save or half as much damage on a successful one. A creature makes this save only once per turn." + AtHigherLevels + "Both types of damage increase by 1d8 for each spell slot level above 6."
+	descriptionShorter : "60|5|20ft (l|w|h) or 10-ft rad; all in now/enter/end 7d8+1d8/SL Pierc. (1/t/c); save 1/2; 1/4 move",
+	descriptionFull : "You create a wall of tangled brush bristling with needle-sharp thorns. The wall appears within range on a solid surface and lasts for the duration. You choose to make the wall up to 60 feet long, 10 feet high, and 5 feet thick or a circle that has a 20-foot diameter and is up to 20 feet high and 5 feet thick. The wall blocks line of sight." + "\n   " + "When the wall appears, each creature in its area makes a Dexterity saving throw, taking 7d8 Piercing damage on a failed save or half as much damage on a successful one." + "\n   " + "A creature can move through the wall, albeit slowly and painfully. For every 1 foot a creature moves through the wall, it must spend 4 feet of movement. Furthermore, the first time a creature enters a space in the wall on a turn or ends its turn there, the creature makes a Dexterity saving throw, taking 7d8 Slashing damage on a failed save or half as much damage on a successful one. A creature makes this save only once per turn." + AtHigherLevels + "Both types of damage increase by 1d8 for each spell slot level above 6."
 });
 legacySpellRefactor("warding bond", {
 	name : "Warding Bond",
@@ -19540,10 +19644,10 @@ legacySpellRefactor("warding bond", {
 	time : "1 a",
 	range : "Touch",
 	components : "V,S,M\u0192",
-	compMaterial : "A pair of platinum rings worth 50+ gp each, which I and the target must wear for the duration",
+	compMaterial : "A pair of platinum rings worth 50+ gp each, which you and the target must wear for the duration",
 	duration : "1 h",
 	description : "1 crea +1 AC, +1 saves, resist all dmg; if takes dmg I take same; ends if >60 ft away/recast (100gp)",
-	descriptionFull : "I touch another creature that is willing and create a mystic connection between I and the target until the spell ends. While the target is within 60 feet of I, it gains a +1 bonus to AC and saving throws, and it has Resistance to all damage. Also, each time it takes damage, I take the same amount of damage." + "\n   " + "The spell ends if I drop to 0 Hit Points or if I and the target become separated by more than 60 feet. It also ends if the spell is cast again on either of the connected creatures."
+	descriptionFull : "You touch another creature that is willing and create a mystic connection between you and the target until the spell ends. While the target is within 60 feet of you, it gains a +1 bonus to AC and saving throws, and it has Resistance to all damage. Also, each time it takes damage, you take the same amount of damage." + "\n   " + "The spell ends if you drop to 0 Hit Points or if you and the target become separated by more than 60 feet. It also ends if the spell is cast again on either of the connected creatures."
 });
 legacySpellRefactor("water breathing", {
 	name : "Water Breathing",
@@ -19558,7 +19662,7 @@ legacySpellRefactor("water breathing", {
 	compMaterial : "A short reed",
 	duration : "24 h",
 	description : "10 willing creatures can breathe underwater for the duration",
-	descriptionFull : "This spell grants up to ten willing creatures of my choice within range the ability to breathe underwater until the spell ends. Affected creatures also retain their normal mode of respiration."
+	descriptionFull : "This spell grants up to ten willing creatures of your choice within range the ability to breathe underwater until the spell ends. Affected creatures also retain their normal mode of respiration."
 });
 legacySpellRefactor("water walk", {
 	name : "Water Walk",
@@ -19573,7 +19677,7 @@ legacySpellRefactor("water walk", {
 	compMaterial : "A piece of cork",
 	duration : "1 h",
 	description : "10 crea can move across any liquid for duration; bns move between liquid/surface; if fall enter liquid",
-	descriptionFull : "This spell grants the ability to move across any liquid surface—such as water, acid, mud, snow, quicksand, or lava—as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat). Up to ten willing creatures of my choice within range gain this ability for the duration." + "\n   " + "An affected target must take a Bonus Action to pass from the liquid's surface into the liquid itself and vice versa, but if the target falls into the liquid, the target passes through the surface into the liquid below."
+	descriptionFull : "This spell grants the ability to move across any liquid surface—such as water, acid, mud, snow, quicksand, or lava—as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat). Up to ten willing creatures of your choice within range gain this ability for the duration." + "\n   " + "An affected target must take a Bonus Action to pass from the liquid's surface into the liquid itself and vice versa, but if the target falls into the liquid, the target passes through the surface into the liquid below."
 });
 legacySpellRefactor("web", {
 	name : "Web",
@@ -19587,8 +19691,8 @@ legacySpellRefactor("web", {
 	compMaterial : "A bit of spiderweb",
 	duration : "Conc, 1 h",
 	save : "Dex",
-	description : "20ft cu flammable web; enter/start save or Restr.; dif. ter.; lightly obsc,; Str(Ath.) chk vs spell DC to free",
-	descriptionFull : "I conjure a mass of sticky webbing at a point within range. The webs fill a 20-foot Cube there for the duration. The webs are Difficult Terrain, and the area within them is Lightly Obscured." + "\n   " + "If the webs aren't anchored between two solid masses (such as walls or trees) or layered across a floor, wall, or ceiling, the web collapses on itself, and the spell ends at the start of my next turn. Webs layered over a flat surface have a depth of 5 feet." + "\n   " + "The first time a creature enters the webs on a turn or starts its turn there, it must succeed on a Dexterity saving throw or have the Restrained condition while in the webs or until it breaks free." + "\n   " + "A creature Restrained by the webs can take an action to make a Strength (Athletics) check against my spell save DC. If it succeeds, it is no longer Restrained." + "\n   " + "The webs are flammable. Any 5-foot Cube of webs exposed to fire burns away in 1 round, dealing 2d4 Fire damage to any creature that starts its turn in the fire."
+	description : "20ft cu flammable web; enter/start save or Restr.; dif. ter.; lightly obsc.; Str(Ath.) chk vs DC to free",
+	descriptionFull : "You conjure a mass of sticky webbing at a point within range. The webs fill a 20-foot Cube there for the duration. The webs are Difficult Terrain, and the area within them is Lightly Obscured." + "\n   " + "If the webs aren't anchored between two solid masses (such as walls or trees) or layered across a floor, wall, or ceiling, the web collapses on itself, and the spell ends at the start of your next turn. Webs layered over a flat surface have a depth of 5 feet." + "\n   " + "The first time a creature enters the webs on a turn or starts its turn there, it must succeed on a Dexterity saving throw or have the Restrained condition while in the webs or until it breaks free." + "\n   " + "A creature Restrained by the webs can take an action to make a Strength (Athletics) check against your spell save DC. If it succeeds, it is no longer Restrained." + "\n   " + "The webs are flammable. Any 5-foot Cube of webs exposed to fire burns away in 1 round, dealing 2d4 Fire damage to any creature that starts its turn in the fire."
 });
 legacySpellRefactor("weird", {
 	name : "Weird",
@@ -19603,7 +19707,7 @@ legacySpellRefactor("weird", {
 	save : "Wis",
 	description : "30-ft rad all crea 10d10 Psychic \u0026 Frightened; save half no fear; if fail, EoT save or 5d10 Psychic til pass", 
 	descriptionShorter : "30-ft rad all 10d10 Psychic \u0026 Frightened; save 1/2 no fear; if fail, EoT save or 5d10 Psychic",
-	descriptionFull : "I try to create illusory terrors in others' minds. Each creature of my choice in a 30-foot-radius Sphere centered on a point within range makes a Wisdom saving throw. On a failed save, a target takes 10d10 Psychic damage and has the Frightened condition for the duration. On a successful save, a target takes half as much damage only." + "\n   " + "A Frightened target makes a Wisdom saving throw at the end of each of its turns. On a failed save, it takes 5d10 Psychic damage. On a successful save, the spell ends on that target."
+	descriptionFull : "You try to create illusory terrors in others' minds. Each creature of your choice in a 30-foot-radius Sphere centered on a point within range makes a Wisdom saving throw. On a failed save, a target takes 10d10 Psychic damage and has the Frightened condition for the duration. On a successful save, a target takes half as much damage only." + "\n   " + "A Frightened target makes a Wisdom saving throw at the end of each of its turns. On a failed save, it takes 5d10 Psychic damage. On a successful save, the spell ends on that target."
 });
 legacySpellRefactor("wind walk", {
 	name : "Wind Walk",
@@ -19617,7 +19721,7 @@ legacySpellRefactor("wind walk", {
 	compMaterial : "a candle",
 	duration : "8 h",
 	description : "Me + 10 willing creatures assume gaseous form with 300 ft fly, hover, resist. physical dmg; see book",
-	descriptionFull : "I and up to ten willing creatures of my choice within range assume gaseous forms for the duration, appearing as wisps of cloud. While in this cloud form, a target has a Fly Speed of 300 feet and can hover; it has Immunity to the Prone condition; and it has Resistance to Bludgeoning, Piercing, and Slashing damage. The only actions a target can take in this form are the Dash action or a Magic action to begin reverting to its normal form. Reverting takes 1 minute, during which the target has the Stunned condition. Until the spell ends, the target can revert to cloud form, which also requires a Magic action followed by a 1-minute transformation." + "\n   " + "If a target is in cloud form and flying when the effect ends, the target descends 60 feet per round for 1 minute until it lands, which it does safely. If it can't land after 1 minute, it falls the remaining distance."
+	descriptionFull : "You and up to ten willing creatures of your choice within range assume gaseous forms for the duration, appearing as wisps of cloud. While in this cloud form, a target has a Fly Speed of 300 feet and can hover; it has Immunity to the Prone condition; and it has Resistance to Bludgeoning, Piercing, and Slashing damage. The only actions a target can take in this form are the Dash action or a Magic action to begin reverting to its normal form. Reverting takes 1 minute, during which the target has the Stunned condition. Until the spell ends, the target can revert to cloud form, which also requires a Magic action followed by a 1-minute transformation." + "\n   " + "If a target is in cloud form and flying when the effect ends, the target descends 60 feet per round for 1 minute until it lands, which it does safely. If it can't land after 1 minute, it falls the remaining distance."
 });
 legacySpellRefactor("wind wall", {
 	name : "Wind Wall",
@@ -19631,10 +19735,10 @@ legacySpellRefactor("wind wall", {
 	compMaterial : "A fan and a feather",
 	duration : "Conc, 1 min",
 	save : "Str",
-	description : "50\xD71\xD715ft (l\xD7w\xD7h) wall, any line-shape, at cast all in 3d8 Bludg.; save halves; blocks small projectiles",
+	description : "50\xD71\xD715ft (l\xD7w\xD7h) wall, any line-shape, at cast all in wall 3d8 Bludg.; save 1/2; blocks small projectiles",
 	descriptionMetric : "15\xD70,3\xD74,5m (l\xD7w\xD7h) wall, any line-shape, at cast all in 3d8 Bludg.; save halves; blocks small projectiles",
 	descriptionShorterMetric : "15|0,3|4,5m (l|w|h) wall, any line-shape, at cast all in 3d8 Bludg.; save halves; blocks projectiles",
-	descriptionFull : "A wall of strong wind rises from the ground at a point I choose within range. I can make the wall up to 50 feet long, 15 feet high, and 1 foot thick. I can shape the wall in any way I choose so long as it makes one continuous path along the ground. The wall lasts for the duration." + "\n   " + "When the wall appears, each creature in its area makes a Strength saving throw, taking 4d8 Bludgeoning damage on a failed save or half as much damage on a successful one." + "\n   " + "The strong wind keeps fog, smoke, and other gases at bay. Small or smaller flying creatures or objects can't pass through the wall. Loose, lightweight materials brought into the wall fly upward. Arrows, bolts, and other ordinary projectiles launched at targets behind the wall are deflected upward and miss automatically. Boulders hurled by Giants or siege engines, and similar projectiles, are unaffected. Creatures in gaseous form can't pass through it.",
+	descriptionFull : "A wall of strong wind rises from the ground at a point you choose within range. You can make the wall up to 50 feet long, 15 feet high, and 1 foot thick. You can shape the wall in any way you choose so long as it makes one continuous path along the ground. The wall lasts for the duration." + "\n   " + "When the wall appears, each creature in its area makes a Strength saving throw, taking 4d8 Bludgeoning damage on a failed save or half as much damage on a successful one." + "\n   " + "The strong wind keeps fog, smoke, and other gases at bay. Small or smaller flying creatures or objects can't pass through the wall. Loose, lightweight materials brought into the wall fly upward. Arrows, bolts, and other ordinary projectiles launched at targets behind the wall are deflected upward and miss automatically. Boulders hurled by Giants or siege engines, and similar projectiles, are unaffected. Creatures in gaseous form can't pass through it.",
 	dynamicDamageBonus : { multipleDmgMoments : false }
 });
 legacySpellRefactor("wish", {
@@ -19647,8 +19751,8 @@ legacySpellRefactor("wish", {
 	range : "Self",
 	components : "V",
 	duration : "Instantaneous",
-	description : "Duplicate any 8th lvl or lower spell as 1 a; create objects, heal, grant resist., alter time, etc.; see book",
-	descriptionFull : "Wish is the mightiest spell a mortal can cast. By simply speaking aloud, I can alter reality itself." + "\n   " + "The basic use of this spell is to duplicate any other spell of level 8 or lower. If I use it this way, I don't need to meet any requirements to cast that spell, including costly components. The spell simply takes effect." + "\n   " + "Alternatively, I can create one of the following effects of my choice:" + "\n " + "\u2022 " + toUni("Object creation") + ". I create one object of up to 25,000 GP in value that isn't a magic item. The object can be no more than 300 feet in any dimension, and it appears in an unoccupied space that I can see on the ground." + "\n " + "\u2022 " + toUni("Instant Health") + ". I allow yourself and up to twenty creatures that I can see to regain all Hit Points, and I end all effects on them listed in the Greater Restoration spell." + "\n " + "\u2022 " + toUni("Resistance") + ". I grant up to ten creatures that I see Resistance to one damage type that I choose. This Resistance is permanent." + "\n " + "\u2022 " + toUni("Spell Immunity") + ". I grant up to ten creatures I can see immunity to a single spell or other magical effect for 8 hours." + "\n " + "\u2022 " + toUni("Sudden Learning") + ". I replace one of my feats with another feat for which I are eligible. I lose all the benefits of the old feat and gain the benefits of the new one. I can't replace a feat that is a prerequisite for any of my other feats or features." + "\n " + "\u2022 " + toUni("Roll Redo") + ". I undo a single recent event by forcing a reroll of any die roll made within the last round (including my last turn). Reality reshapes itself to accommodate the new result. For example, a Wish spell could undo an ally's failed saving throw or a foe's Critical Hit. I can force the reroll to be made with Advantage or Disadvantage, and I choose whether to use the reroll or the original roll." + "\n " + "\u2022 " + toUni("Reshape Reality") + ". I may wish for something not included in any of the other effects. To do so, state my wish to the DM as precisely as possible. The DM has great latitude in ruling what occurs in such an instance; the greater the wish, the greater the likelihood that something goes wrong. This spell might simply fail, the effect I desire might be achieved only in part, or I might suffer an unforeseen consequence as a result of how I worded the wish. For example, wishing that a villain were dead might propel I forward in time to a period when that villain is no longer alive, effectively removing I from the game. Similarly, wishing for a Legendary magic item or an Artifact might instantly transport I to the presence of the item's current owner. If my wish is granted and its effects have consequences for a whole community, region, or world, I are likely to attract powerful foes. If my wish would affect a god, the god's divine servants might instantly intervene to prevent it or to encourage I to craft the wish in a particular way. If my wish would undo the multiverse itself, threaten the City of Sigil, or affect the Lady of Pain in any way, I see an image of her in my mind for a moment; she shakes her head, and my wish fails." + "The stress of casting Wish to produce any effect other than duplicating another spell weakens I. After enduring that stress, each time I cast a spell until I finish a Long Rest, I take 1d10 Necrotic damage per level of that spell. This damage can't be reduced or prevented in any way. In addition, my Strength score becomes 3 for 2d4 days. For each of those days that I spend resting and doing nothing more than light activity, my remaining recovery time decreases by 2 days. Finally there is a 33 percent chance that I are unable to cast Wish ever again if I suffer this stress."
+	description : "Duplicate any 8th lvl or lower spell as 1 a, create objects, heal, grant resist., alter time, etc.; see book",
+	descriptionFull : "Wish is the mightiest spell a mortal can cast. By simply speaking aloud, you can alter reality itself." + "\n   " + "The basic use of this spell is to duplicate any other spell of level 8 or lower. If you use it this way, you don't need to meet any requirements to cast that spell, including costly components. The spell simply takes effect." + "\n   " + "Alternatively, you can create one of the following effects of your choice:" + "\n " + "\u2022 " + toUni("Object creation") + ". You create one object of up to 25,000 GP in value that isn't a magic item. The object can be no more than 300 feet in any dimension, and it appears in an unoccupied space that you can see on the ground." + "\n " + "\u2022 " + toUni("Instant Health") + ". You allow yourself and up to twenty creatures that you can see to regain all Hit Points, and you end all effects on them listed in the Greater Restoration spell." + "\n " + "\u2022 " + toUni("Resistance") + ". You grant up to ten creatures that you see Resistance to one damage type that you choose. This Resistance is permanent." + "\n " + "\u2022 " + toUni("Spell Immunity") + ". You grant up to ten creatures you can see immunity to a single spell or other magical effect for 8 hours." + "\n " + "\u2022 " + toUni("Sudden Learning") + ". You replace one of your feats with another feat for which you are eligible. You lose all the benefits of the old feat and gain the benefits of the new one. You can't replace a feat that is a prerequisite for any of your other feats or features." + "\n " + "\u2022 " + toUni("Roll Redo") + ". You undo a single recent event by forcing a reroll of any die roll made within the last round (including your last turn). Reality reshapes itself to accommodate the new result. For example, a Wish spell could undo an ally's failed saving throw or a foe's Critical Hit. You can force the reroll to be made with Advantage or Disadvantage, and you choose whether to use the reroll or the original roll." + "\n " + "\u2022 " + toUni("Reshape Reality") + ". You may wish for something not included in any of the other effects. To do so, state your wish to the DM as precisely as possible. The DM has great latitude in ruling what occurs in such an instance; the greater the wish, the greater the likelihood that something goes wrong. This spell might simply fail, the effect you desire might be achieved only in part, or you might suffer an unforeseen consequence as a result of how you worded the wish. For example, wishing that a villain were dead might propel you forward in time to a period when that villain is no longer alive, effectively removing you from the game. Similarly, wishing for a Legendary magic item or an Artifact might instantly transport you to the presence of the item's current owner. If your wish is granted and its effects have consequences for a whole community, region, or world, you are likely to attract powerful foes. If your wish would affect a god, the god's divine servants might instantly intervene to prevent it or to encourage you to craft the wish in a particular way. If your wish would undo the multiverse itself, threaten the City of Sigil, or affect the Lady of Pain in any way, you see an image of her in your mind for a moment; she shakes her head, and your wish fails." + "The stress of casting Wish to produce any effect other than duplicating another spell weakens you. After enduring that stress, each time you cast a spell until you finish a Long Rest, you take 1d10 Necrotic damage per level of that spell. This damage can't be reduced or prevented in any way. In addition, your Strength score becomes 3 for 2d4 days. For each of those days that you spend resting and doing nothing more than light activity, your remaining recovery time decreases by 2 days. Finally there is a 33 percent chance that you are unable to cast Wish ever again if you suffer this stress."
 });
 legacySpellRefactor("witch bolt", {
 	name : "Witch Bolt",
@@ -19661,9 +19765,9 @@ legacySpellRefactor("witch bolt", {
 	components : "V,S,M",
 	compMaterial : "A twig struck by lightning",
 	duration : "Conc, 1 min",
-	description : "Rngd spell atk 2d12+1d12/SL Lightning; bns 1d12 Lightning; ends if leaves range or has total cover",
-	descriptionShorter : "Rngd atk 2d12+1d12/SL Lghtng; 1 bns 1d12 Lghtng; end: out of range/total cover",
-	descriptionFull : "A beam of crackling energy lances toward a creature within range, forming a sustained arc of lightning between I and the target. Make a ranged spell attack against it. On a hit, the target takes 2d12 Lightning damage." + "\n   " + "On each of my subsequent turns, I can take a Bonus Action to deal 1d12 Lightning damage to the target automatically, even if the first attack missed." + "\n   " + "The spell ends if the target is ever outside the spell's range or if it has Total Cover from I." + AtHigherLevels + "The initial damage increases by 1d12 for each spell slot level above 1.",
+	description : "Rngd spell atk 2d12+1d12/SL Lightn.; miss/hit bns 1d12 Lightn. per rnd; ends if out of range/total cover",
+	descriptionShorter : "Rngd atk 2d12+1d12/SL Lightn.; 1 bns 1d12 Lightn.; end: out of range/total cover",
+	descriptionFull : "A beam of crackling energy lances toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against it. On a hit, the target takes 2d12 Lightning damage." + "\n   " + "On each of your subsequent turns, you can take a Bonus Action to deal 1d12 Lightning damage to the target automatically, even if the first attack missed." + "\n   " + "The spell ends if the target is ever outside the spell's range or if it has Total Cover from you." + AtHigherLevels + "The initial damage increases by 1d12 for each spell slot level above 1.",
 	dynamicDamageBonus : {
 		multipleDmgMoments : false,
 		extraDmgGroupsSameType : /(1 a )(.*?)( Lightn. dmg)/i
@@ -19671,6 +19775,7 @@ legacySpellRefactor("witch bolt", {
 });
 legacySpellRefactor("word of radiance", {
 	name : "Word of Radiance",
+	nameShort : "Word of Radiance*",
 	classes : ["cleric"],
 	source : [["PHB2024", 343]],
 	level : 0,
@@ -19683,7 +19788,7 @@ legacySpellRefactor("word of radiance", {
 	save : "Con",
 	description : "Any creature save or 1d6 Radiant damage; +1d6 at CL 5, 11, and 17",
 	descriptionCantripDie : "Any creature save or `CD`d6 Radiant damage",
-	descriptionFull : "Burning radiance erupts from I in a 5-foot Emanation. Each creature of my choice that I can see in it must succeed on a Constitution saving throw or take 1d6 Radiant damage." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d6 when I reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
+	descriptionFull : "Burning radiance erupts from you in a 5-foot Emanation. Each creature of your choice that you can see in it must succeed on a Constitution saving throw or take 1d6 Radiant damage." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
 });
 legacySpellRefactor("word of recall", {
 	name : "Word of Recall",
@@ -19696,7 +19801,7 @@ legacySpellRefactor("word of recall", {
 	components : "V",
 	duration : "Instantaneous",
 	description : "Me \u0026 5 willing creatures in 5ft teleport to prepared sanctuary, designated by casting this spell there ",
-	descriptionFull : "I and up to five willing creatures within 5 feet of I instantly teleport to a previously designated sanctuary. I and any creatures that teleport with I appear in the nearest unoccupied space to the spot I designated when I prepared my sanctuary (see below). If I cast this spell without first preparing a sanctuary, the spell has no effect." + "\n   " + "I must designate a location, such as a temple, as a sanctuary by casting this spell there."
+	descriptionFull : "You and up to five willing creatures within 5 feet of you instantly teleport to a previously designated sanctuary. You and any creatures that teleport with you appear in the nearest unoccupied space to the spot you designated when you prepared your sanctuary (see below). If you cast this spell without first preparing a sanctuary, the spell has no effect." + "\n   " + "You must designate a location, such as a temple, as a sanctuary by casting this spell there."
 });
 legacySpellRefactor("wrathful smite", {
 	name : "Wrathful Smite",
@@ -19705,7 +19810,7 @@ legacySpellRefactor("wrathful smite", {
 	level : 1,
 	school : "Necro",
 	time : "1 bns*",
-	timeFull : "Bonus Action, which I take immediately after hitting a creature with a Melee weapon or Unarmed strike",
+	timeFull : "Bonus Action, which you take immediately after hitting a creature with a Melee weapon or Unarmed strike",
 	range : "Self",
 	components : "V",
 	duration : "Conc, 1 min",
@@ -19715,6 +19820,7 @@ legacySpellRefactor("wrathful smite", {
 });
 legacySpellRefactor("yolande's regal presence", {
 	name : "Yolande's Regal Presence",
+	nameShort : "Yolande's Regal Presence*",
 	classes : ["bard", "wizard"],
 	source : [["PHB2024", 343]],
 	level : 5,
@@ -19724,8 +19830,8 @@ legacySpellRefactor("yolande's regal presence", {
 	components : "V,S,M",
 	duration : "Conc, 1 min",
 	save : "Wis",
-	description : "Visible crea covered/enters/end (1/turn/crea) 4d6 Psychic \u0026 Prone, can push to 10ft; save 1/2 dmg only",
-	descriptionFull : "I surround yourself with unearthly majesty in a 10-foot Emanation. Whenever the Emanation enters the space of a creature I can see and whenever a creature I can see enters the Emanation or ends its turn there, I can force that creature to make a Wisdom saving throw. On a failed save, the target takes 4d6 Psychic damage and has the Prone condition, and I can push it up to 10 feet away. On a successful save, the target takes half as much damage only. A creature makes this save only once per turn."
+	description : "Any crea covers/enter/end (1/turn/crea) 4d6 Psychic \u0026 Prone, can push to 10ft; save 1/2 dmg only",
+	descriptionFull : "You surround yourself with unearthly majesty in a 10-foot Emanation. Whenever the Emanation enters the space of a creature you can see and whenever a creature you can see enters the Emanation or ends its turn there, you can force that creature to make a Wisdom saving throw. On a failed save, the target takes 4d6 Psychic damage and has the Prone condition, and you can push it up to 10 feet away. On a successful save, the target takes half as much damage only. A creature makes this save only once per turn."
 });
 legacySpellRefactor("zone of truth", {
 	name : "Zone of Truth",
@@ -19738,8 +19844,8 @@ legacySpellRefactor("zone of truth", {
 	components : "V,S",
 	duration : "10 min",
 	save : "Cha",
-	description : "15-ft rad all crea enter/start in area save or unable to lie; I'm aware if saved; crea aware it cannot lie",
-	descriptionFull : "I create a magical zone that guards against deception in a 15-foot-radius Sphere centered on a point within range. Until the spell ends, a creature that enters the spell's area for the first time on a turn or starts its turn there makes a Charisma saving throw. On a failed save, a creature can't speak a deliberate lie while in the radius. I know whether a creature succeeds or fails on this save." + "\n   " + "An affected creature is aware of the spell and can avoid answering questions to which it would normally respond with a lie. Such a creature can be evasive yet must be truthful."
+	description : "15-ft rad all crea enter/start in area save or can't lie; I'm aware if saved; crea knows it can't lie",
+	descriptionFull : "You create a magical zone that guards against deception in a 15-foot-radius Sphere centered on a point within range. Until the spell ends, a creature that enters the spell's area for the first time on a turn or starts its turn there makes a Charisma saving throw. On a failed save, a creature can't speak a deliberate lie while in the radius. You know whether a creature succeeds or fails on this save." + "\n   " + "An affected creature is aware of the spell and can avoid answering questions to which it would normally respond with a lie. Such a creature can be evasive yet must be truthful."
 });
 //Creatures
 CompanionList["familiar"] = {
