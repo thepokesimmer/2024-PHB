@@ -5554,6 +5554,15 @@ legacyClassRefactor("rogue", {
         "Choose a Rogue subclass and put it in the 'Class' field.",
       ]),
     },
+	"steady aim": {
+	  name: "Steady Aim",
+	  source: [["PHB2024", 130]],
+	  minlevel: 3,
+	  action: ["bonus action", ""],
+	  description: desc([
+		"If I haven't moved on my turn I can use my Bonus Action and give up my Movement for Advantage on my next attack roll this turn.",
+	  ]),
+	},
     "cunning strike": {
       name: "Cunning Strike",
       source: [["PHB2024", 130]],
