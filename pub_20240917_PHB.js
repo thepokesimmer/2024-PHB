@@ -1373,15 +1373,15 @@ legacyClassRefactor("cleric", {
       name: "Divine Order",
       source: [["PHB2024", 70]],
       minlevel: 1,
-      choices: ["Protector", "Thaumaturge (Arcana)", "Thaumaturge (Religion)"],
+      choices: ["Protector", "Thaumaturge"],
       "protector": {
         name: "Protector",
         armorProfs: [false, false, true, false],
         weaponProfs: [false, true],
         description: "I gain proficiency with Martial weapons & Heavy armor training."
       },
-      "thaumaturge (arcana)": {
-        name: "Thaumaturge (Arcana)",
+      "thaumaturge": {
+        name: "Thaumaturge",
         spellcastingBonus: [{
           name: "Thaumaturge",
           "class": ["cleric"],
@@ -1390,21 +1390,9 @@ legacyClassRefactor("cleric", {
         }],
         addMod: [
           {type: "skill", field: "Arcana", mod: "Wis", text: "I can add my Wisdom modifier to Arcana rolls."},
+		  {type: "skill", field: "Religion", mod: "Wis", text: "I can add my Wisdom modifier to Religion rolls."},
         ],
         description: "I know one extra cantrip from the Cleric spell list and can add my Wis mod (min 1) to my Int (Arcana) checks.",
-      },
-      "thaumaturge (religion)": {
-        name: "Thaumaturge (Religion)",
-        spellcastingBonus: [{
-          name: "Thaumaturge",
-          "class": ["cleric"],
-          level: [0, 0],
-          times: 1,
-        }],
-        addMod: [
-          {type: "skill", field: "Religion", mod: "Wis", text: "I can add my Wisdom modifier to Religion rolls."},
-        ],
-        description: "I know one extra cantrip from the Cleric spell list and can add my Wis mod (min 1) to my Int (Religion) checks.",
       },
       description: desc([
         "I have dedicated myself to a sacred role. Use 'Choose Feature' above to select one.",
@@ -1419,7 +1407,7 @@ legacyClassRefactor("cleric", {
 	  additional : ["", "Channel Divinity: Divine Spark 1d8", "Channel Divinity: Divine Spark 1d8", "Channel Divinity: Divine Spark 1d8", "Channel Divinity: Divine Spark 1d8", "Channel Divinity: Divine Spark 1d8", "Channel Divinity: Divine Spark 2d8", "Channel Divinity: Divine Spark 2d8", "Channel Divinity: Divine Spark 2d8", "Channel Divinity: Divine Spark 2d8", "Channel Divinity: Divine Spark 2d8", "Channel Divinity: Divine Spark 2d8", "Channel Divinity: Divine Spark 3d8", "Channel Divinity: Divine Spark 3d8", "Channel Divinity: Divine Spark 3d8", "Channel Divinity: Divine Spark 3d8", "Channel Divinity: Divine Spark 3d8", "Channel Divinity: Divine Spark 4d8", "Channel Divinity: Divine Spark 4d8", "Channel Divinity: Divine Spark 4d8"], 
       description: desc([
         "I regain one use on a Short Rest; All return on a Long Rest. If a Channel Divinity effect has a saving throw the DC is my Wis spell save DC.",
-        "Channel Divinity: Divine Spark: As a Magic action I choose a creature I can see w/in 30 ft and roll a number of d8 + my Wis mod. I either restore that amount of HP to the creature or force the creature to make a Con save; On a fail it takes that amount of Necro or Radiant damage; half damage  on a success.",
+        "Channel Divinity: Divine Spark: As a Magic action I choose a creature I can see w/in 30 ft and roll a number of d8 + my Wis mod. I either heal the creature for that amount or force it make a Con save; On a fail it takes that amount of Necrotic or Radiant dmg; half on a save.",
         "Channel Divinity: Turn Undead: As a Magic action each Undead I choose w/in 30 ft must make a Wis save; On a fail it is Frightened & Incapacitated for 1 min; It also tries to move as far from me as it can on its turns. This ends early if it takes any damage, I'm Incapacitated, or I die.",
       ]),
     },
@@ -1805,9 +1793,9 @@ legacyClassRefactor("druid", {
       name: "Primal Order",
       source: [["PHB2024", 80]],
       minlevel: 1,
-      choices: ["Magician (Arcana)", "Magician (Nature)", "Warden"],
-      "magician (arcana)": {
-        name: "Magician (Arcana)",
+      choices: ["Magician", "Warden"],
+      "magician": {
+        name: "Magician",
         spellcastingBonus: [{
           name: "Magician",
           "class": ["druid"],
@@ -1816,21 +1804,9 @@ legacyClassRefactor("druid", {
         }],
         addMod: [
           {type: "skill", field: "Arcana", mod: "Wis", text: "I can add my Wisdom modifier to Arcana rolls."},
+		  {type: "skill", field: "Nature", mod: "Wis", text: "I can add my Wisdom modifier to Nature rolls."},
         ],
         description: "I know one extra cantrip from the Druid spell list. I add my wisdom modifier to my Intelligence (Arcana) checks.",
-      },
-      "magician (nature)": {
-        name: "Magician (Nature)",
-        spellcastingBonus: [{
-          name: "Magician",
-          "class": ["druid"],
-          level: [0, 0],
-          times: 1,
-        }],
-        addMod: [
-          {type: "skill", field: "Nature", mod: "Wis", text: "I can add my Wisdom modifier to Nature rolls."},
-        ],
-        description: "I know one extra cantrip from the Druid spell list. I add my wisdom modifier to my Intelligence (Nature) checks.",
       },
       "warden": {
         name: "Warden",
@@ -9407,9 +9383,7 @@ FeatsList["alert [origin]"] = {
   regExpSearch: /^(?=.*alert).*$/i,
   skillstxt: ["I gain Proficiency in three skills or tools of my choice"],
   addMod: [{type: "skill", field: "Init", mod: "prof", text: "I can add my Proficiency Bonus to initiative rolls."}],
-  description: desc([
-    "I add my Prof Bonus to Initiative rolls. I may swap Initiative with one willing creature as long as that creature does not have the Incapacitated condition.",
-  ]),
+  description: "I add my Prof Bonus to Initiative rolls. I may swap Initiative with one willing creature as long as that creature does not have the Incapacitated condition.",
   descriptionFull: desc([
     "I gain the following benefits",
     "When I roll Initiative, I can add my Proficiency Bonus to the roll.",
@@ -9421,9 +9395,7 @@ FeatsList["crafter [origin]"] = {
   source: [["PHB2024", 200]],
   regExpSearch: /^(?=.*crafter).*$/i,
   toolProfs: [["Artisan's tools", 3]],
-  description: desc([
-    "I gain proficiency in three Fast Craft Artisan Tools of choice and can use them to Fast Craft during a long rest, (see Notes Page for details), the fast crafted item lasts until my next long rest. I received a 20% discount on non-magical objects.",
-  ]),
+  description: "I gain proficiency in three Fast Craft Artisan Tools of choice and can use them to Fast Craft during a long rest, (see Notes Page for details), the fast crafted item lasts until my next long rest. I received a 20% discount on non-magical objects.",
   descriptionFull: desc([
     "I gain the following benefits.",
     "I gain proficiency with three different Artisan's Tools of my choice from the Fast Crafting table. (See Notes Page for details)",
@@ -9450,9 +9422,7 @@ FeatsList["healer [origin]"] = {
   source: [["PHB2024", 201]],
   regExpSearch: /^(?=.*healer).*$/i,
   action: [["action", "Battle Medic"]],
-  description: desc([
-    "I can use a Healer's Kit as an action to allow 1 creature within 5ft of I to roll a Hit Die and regain HP equal to the roll plus my Prof Bonus, and when I roll a 1 on the die to heal using a spell or this feat I can reroll, but must use the new roll.",
-  ]),
+  description: "I can use a Healer's Kit as an action to allow 1 creature within 5ft of me to roll a Hit Die and regain HP equal to the roll plus my Prof Bonus, and when I roll a 1 on the die to heal using a spell or this feat I can reroll, but must use the new roll.",
   descriptionFull: desc([
     "I gain the following benefits.",
     "Battle Medic : If I have a Healer's Kit, I can expend one use of it and tend to a creature within 5 feet of yourself as a Utilize action. That creature can expend one of its Hit Point Dice, and I then roll that die. The creature regains a number of Hit Points equal to the roll plus my Proficiency Bonus",
@@ -9467,9 +9437,7 @@ FeatsList["lucky [origin]"] = {
   usages: "Proficiency bonus per ",
   usagescalc: "event.value = How('Proficiency Bonus');",
   recovery: "long rest",
-  description: desc([
-    "I gain a number of Luck Points equal to my Prof Bonus and can use them to give yourself Advantage on a D20 Test, or to give a creature who rolls a d20 for an attack roll against Disadvantage on that roll.",
-  ]),
+  description: "I gain a number of Luck Points equal to my Prof Bonus and can use them to give yourself Advantage on a D20 Test, or to give a creature who rolls a d20 for an attack roll against Disadvantage on that roll.",
   descriptionFull: desc([
     "I gain the following benefits.",
     "Luck Point : I have a number of Luck Points equal to my Proficiency Bonus and can spend the points on the benefits below. I regain my expended Luck Points when I finish a Long Rest.",
@@ -9495,9 +9463,7 @@ FeatsList["magic initiate (cleric) [origin]"] = {
     times: 1,
     firstCol: "oncelr",
   }],
-  description: desc([
-    "I gain 2 Cantrips and 1 1st-level spell of choice from the Cleric spell list, I may swap any one of these spells with another from the Cleric spell list when I gain a level, I may cast the 1st-level spell once without using a spell slot before a long rest, otherwise I may cast it using any spell slots I have.",
-  ]),
+  description: "I gain 2 Cantrips and 1 1st-level spell of choice from the Cleric spell list, I may swap any one of these spells with another from the Cleric spell list when I gain a level, I may cast the 1st-level spell once without using a spell slot before a long rest, otherwise I may cast it using any spell slots I have.",
   descriptionFull: desc([
     "I gain the following benefits.",
     "Two Cantrips of my choice from the Cleric spell list. Intelligence, Wisdom, or Charisma is my spellcasting ability for this feat's spells (choose when I select this feat.)",
@@ -9524,9 +9490,7 @@ FeatsList["magic initiate (druid) [origin]"] = {
     times: 1,
     firstCol: "oncelr",
   }],
-  description: desc([
-    "I gain 2 Cantrips and 1 1st-level spell of choice from the Druid spell list, I may swap any one of these spells with another from the Druid spell list when I gain a level, I may cast the 1st-level spell once without using a spell slot before a long rest, otherwise I may cast it using any spell slots I have.",
-  ]),
+  description: "I gain 2 Cantrips and 1 1st-level spell of choice from the Druid spell list, I may swap any one of these spells with another from the Druid spell list when I gain a level, I may cast the 1st-level spell once without using a spell slot before a long rest, otherwise I may cast it using any spell slots I have.",
   descriptionFull: desc([
     "I gain the following benefits.",
     "Two Cantrips of my choice from the Druid spell list. Intelligence, Wisdom, or Charisma is my spellcasting ability for this feat's spells (choose when I select this feat.)",
@@ -9553,9 +9517,7 @@ FeatsList["magic initiate (wizard) [origin]"] = {
     times: 1,
     firstCol: "oncelr",
   }],
-  description: desc([
-    "I gain 2 Cantrips and 1 1st-level spell of choice from the Wizard spell list, I may swap any one of these spells with another from the Wizard spell list when I gain a level, I may cast the 1st-level spell once without using a spell slot before a long rest, otherwise I may cast it using any spell slots I have.",
-  ]),
+  description: "I gain 2 Cantrips and 1 1st-level spell of choice from the Wizard spell list, I may swap any one of these spells with another from the Wizard spell list when I gain a level, I may cast the 1st-level spell once without using a spell slot before a long rest, otherwise I may cast it using any spell slots I have.",
   descriptionFull: desc([
     "I gain the following benefits.",
     "Two Cantrips of my choice from the Wizard spell list. Intelligence, Wisdom, or Charisma is my spellcasting ability for this feat's spells (choose when I select this feat.)",
@@ -9569,9 +9531,7 @@ FeatsList["musician [origin]"] = {
   source: [["PHB2024", 201]],
   regExpSearch: /^(?=.*musician).*$/i,
   toolProfs: [["Musical Instrument", 3]],
-  description: desc([
-    "I gain proficiency in 3 Musical Instruments and at the end of a Short or Long Rest I can play a song to give a number of allies up to my Prof Bonus Heroic Inspiration.",
-  ]),
+  description: "I gain proficiency in 3 Musical Instruments and at the end of a Short or Long Rest I can play a song to give a number of allies up to my Prof Bonus Heroic Inspiration.",
   descriptionFull: desc([
     "I gain the following benefits",
     "I gain proficiency with three Musical Instruments of my choice.",
@@ -9582,9 +9542,7 @@ FeatsList["savage attacker [origin]"] = {
   name: "Savage Attacker [Origin]",
   source: [["PHB2024", 201]],
   regExpSearch: /^(?=.*savage)(?=.*attacker).*$/i,
-  description: desc([
-    "I've trained to deal particularly damaging strikes. Once per turn when I hit a target with a weapon, I can roll the weapon's damage dice twice and use either roll against the target.",
-  ]),
+  description: "I've trained to deal particularly damaging strikes. Once per turn when I hit a target with a weapon, I can roll the weapon's damage dice twice and use either roll against the target.",
   descriptionFull: desc([
     "I've trained to deal particularly damaging strikes. Once per turn when I hit a target with a weapon, I can roll the weapon's damage dice twice and use either roll against the target.",
   ]),
@@ -9594,9 +9552,7 @@ FeatsList["skilled [origin]"] = {
   source: [["PHB2024", 201]],
   regExpSearch: /^(?=.*skilled).*$/i,
   skillstxt: ["I gain Proficiency in three skills or tools of my choice"],
-  description: desc([
-    "I gain Proficiency in three skills or tools of my choice",
-  ]),
+  description: "I gain Proficiency in three skills or tools of my choice",
   descriptionFull: desc([
     "I gain proficiency in any combination of three skills or tools of my choice",
     "I can take this feat more than once.",
@@ -9621,9 +9577,7 @@ FeatsList["tavern brawler [origin]"] = {
       "My unarmed strikes deal 1d4 damage instead of 1.\n \u2022 As part of the Attack action on my turn, I can deal damage and push the target 5ft away from me."
     ]
   },
-  description: desc([
-    "my Unarmed Strikes deal 1d4 instead of normal damage and as part of the attack action, I can push a target 5 feet as well as deal damage. When I roll a 1 on the damage die I can reroll, but must use the new roll.",
-  ]),
+  description: "my Unarmed Strikes deal 1d4 instead of normal damage and as part of the attack action, I can push a target 5 feet as well as deal damage. When I roll a 1 on the damage die I can reroll, but must use the new roll.",
   descriptionFull: desc([
     "I gain the following benefits.",
     "Enhanced Unarmed Strike : When I hit with my Unarmed Strike and deal damage, I can deal Bludgeoning damage equal to 1d4 plus my Strength modifier instead of the normal damage of an Unarmed Strike.",
@@ -9641,9 +9595,7 @@ FeatsList["tough [origin]"] = {
       return [totalHD * 2, '\n + ' + totalHD + ' \xD7 2 from the Tough feat (' + (totalHD * 2) + ')', true];
     }
   },
-  description: desc([
-    "My Hit Point maximum increases by an amount equal to twice my character level when I gain this feat. Whenever I gain a character level thereafter, my Hit Point maximum increases by an additional 2 Hit Points.",
-  ]),
+  description: "My Hit Point maximum increases by an amount equal to twice my character level when I gain this feat. Whenever I gain a character level thereafter, my Hit Point maximum increases by an additional 2 Hit Points.",
   descriptionFull: desc([
     "My Hit Point maximum increases by an amount equal to twice my character level when I gain this feat. Whenever I gain a character level thereafter, my Hit Point maximum increases by an additional 2 Hit Points.",
   ]),
@@ -9654,9 +9606,7 @@ FeatsList["actor"] = {
   source: [["PHB2024", 202]],
   regExpSearch: /^(?=.*actor).*$/i,
   scores: [0, 0, 0, 0, 0, 1],
-  description: desc([
-    "+1 Cha, Adv Cha (Deception or Performance) checks to impersonate a person real or fiction. able to mimic the sounds of others DC 8 + Cha + PB Insight check to determine mimicry",
-  ]),
+  description: "+1 Cha, Adv Cha (Deception or Performance) checks to impersonate a person real or fiction. able to mimic the sounds of others DC 8 + Cha + PB Insight check to determine mimicry",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Charisma score by 1 to a maximum of 20.",
@@ -9673,9 +9623,7 @@ FeatsList["athlete"] = {
   source: [["PHB2024", 202]],
   regExpSearch: /^(?=.*athlete).*$/i,
   speed: {climb: {spd: "walk", enc: "walk"}},
-  description: desc([
-    "+1 Str or Dex, gain a climb speed equal to speed, can right self from prone using only 5 ft. of movement, can make running long or high jump after only 5 feet of movement.",
-  ]),
+  description: "+1 Str or Dex, gain a climb speed equal to speed, can right self from prone using only 5 ft. of movement, can make running long or high jump after only 5 feet of movement.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
@@ -9702,9 +9650,7 @@ FeatsList["charger"] = {
   source: [["PHB2024", 202]],
   regExpSearch: /^(?=.*charger).*$/i,
   scorestxt: "My Strength or Dexterity score increases by 1, to a maximum of 20.",
-  description: desc([
-    "+1 Str or Dex, when I take the Dash action my base speed increases by 10 ft. for that action, and if I move at least 10 ft. in a straight line towards an enemy and attack as part of the Attack action I may either deal an additional 1d8 damage or push the target 10 feet away.",
-  ]),
+  description: "+1 Str or Dex, when I take the Dash action my base speed increases by 10 ft. for that action, and if I move at least 10 ft. in a straight line towards an enemy and attack as part of the Attack action I may either deal an additional 1d8 damage or push the target 10 feet away.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
@@ -9731,9 +9677,7 @@ FeatsList["chef"] = {
   regExpSearch: /^(?=.*chef).*$/i,
   scorestxt: "My Constitution or Wisdom score increases by 1, to a maximum of 20.",
   toolProfs: [["Cook's Utensils"]],
-  description: desc([
-    "+1 Con or Wis, gain proficiency in Cook's Utensils, as part of a short rest, I can cook special food for 4+PB creatures if they eat it and spend at least 1 Hit Die, they regain an additional 1d8 hit points. After an hour or during a long rest, I can make PB special treats that if eaten as a bonus action can grant a number of temp HP equal to my PB.",
-  ]),
+  description: "+1 Con or Wis, gain proficiency in Cook's Utensils, as part of a short rest, I can cook special food for 4+PB creatures if they eat it and spend at least 1 Hit Die, they regain an additional 1d8 hit points. After an hour or during a long rest, I can make PB special treats that if eaten as a bonus action can grant a number of temp HP equal to my PB.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Constitution or Wisdom score by 1 to a maximum of 20.",
@@ -9760,9 +9704,7 @@ FeatsList["crossbow expert"] = {
   source: [["PHB2024", 203]],
   regExpSearch: /^(?=.*crossbow)(?=.*expert).*$/i,
   scores: [0, 1, 0, 0, 0, 0],
-  description: desc([
-    "+1 Dex, I ignore the Loading property of crossbows, firing at an enemy within 5 feet does not impose disadvantage, and I can make an off-hand attack with a crossbow that has the light property and add my Dex modifier to the damage of the attack.",
-  ]),
+  description: "+1 Dex, I ignore the Loading property of crossbows, firing at an enemy within 5 feet does not impose disadvantage, and I can make an off-hand attack with a crossbow that has the light property and add my Dex modifier to the damage of the attack.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Dexterity score by 1 to a maximum of 20.",
@@ -9779,9 +9721,7 @@ FeatsList["crusher"] = {
   name: "Crusher",
   source: [["PHB2024", 203]],
   regExpSearch: /^(?=.*crusher).*$/i,
-  description: desc([
-    "+1 Str or Con, 1/turn when I hit a crea. with Blud. dmg, I can push 5ft to unoccupied space if crea. is 1 size larger than I or smaller, when I land a critical hit with Blud. dmg atks against that crea. have Adv. until the start of my next turn.",
-  ]),
+  description: "+1 Str or Con, 1/turn when I hit a crea. with Blud. dmg, I can push 5ft to unoccupied space if crea. is 1 size larger than I or smaller, when I land a critical hit with Blud. dmg atks against that crea. have Adv. until the start of my next turn.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Constitution score by 1 to a maximum of 20.",
@@ -9808,9 +9748,7 @@ FeatsList["defensive duelist"] = {
   regExpSearch: /^(?=.*defensive)(?=.*duelist).*$/i,
   scores: [0, 1, 0, 0, 0, 0],
   action: ["reaction", "Parry"],
-  description: desc([
-    "+1 Dex, If I'm holding a Finesse weapon and another creature hits me with a melee attack, I can take a Reaction to add my Proficiency Bonus to my Armor Class, potentially causing the attack to miss I. I gain this bonus to my AC against melee attacks until the start of my next turn.",
-  ]),
+  description: "+1 Dex, If I'm holding a Finesse weapon and another creature hits me with a melee attack, I can take a Reaction to add my Proficiency Bonus to my Armor Class, potentially causing the attack to miss I. I gain this bonus to my AC against melee attacks until the start of my next turn.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Dexterity score by 1 to a maximum of 20.",
@@ -9827,9 +9765,7 @@ FeatsList["dual wielder"] = {
   regExpSearch: /^(?=.*dual)(?=.*wielder).*$/i,
   scorestxt: "My Strength or Dexterity score increases by 1, to a maximum of 20.",
   speed: {climb: {spd: "walk", enc: "walk"}},
-  description: desc([
-    "+1 Str or Dex, If I take the attack action with a weapon that has the light property, I can make an off-hand attack with another weapon that doesn't have the Two-Handed property, I do not add the modifier to this atk unless it is negative, I can also draw and stow 2 non-Two-Handed weapons at a time.",
-  ]),
+  description: "+1 Str or Dex, If I take the attack action with a weapon that has the light property, I can make an off-hand attack with another weapon that doesn't have the Two-Handed property, I do not add the modifier to this atk unless it is negative, I can also draw and stow 2 non-Two-Handed weapons at a time.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
@@ -9857,9 +9793,7 @@ FeatsList["durable"] = {
   scores: [0, 0, 1, 0, 0, 0],
   savetxt: {adv_vs: ["Death Saving Throws"]},
   action: [["bonus action", "Speedy Recovery"]],
-  description: desc([
-    "+1 Con, Adv vs Death Saves, Bonus Action to expend 1 Hit Die to regain HP equal to the roll.",
-  ]),
+  description: "+1 Con, Adv vs Death Saves, Bonus Action to expend 1 Hit Die to regain HP equal to the roll.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Constitution score by 1 to a maximum of 20.",
@@ -9876,9 +9810,7 @@ FeatsList["elemental adept"] = {
   source: [["PHB2024", 203]],
   regExpSearch: /^(?=.*elemental)(?=.*adept).*$/i,
   scorestxt: "My Intelligence, Wisdom, or Charisma score increases by 1, to a maximum of 20.",
-  description: desc([
-    "+1 Int, Wis, or Cha, Choose one of the damage types: acid, cold, fire, lightning, or thunder. Spells I cast ignore resistance to damage from this damage type. For any spell I cast that deals this damage type, I can treat any 1 on a damage die as a 2.",
-  ]),
+  description: "+1 Int, Wis, or Cha, Choose one of the damage types: acid, cold, fire, lightning, or thunder. Spells I cast ignore resistance to damage from this damage type. For any spell I cast that deals this damage type, I can treat any 1 on a damage die as a 2.",  
   descriptionFull: desc([
     "I gain the following benefits.",
     "Ability Score Increase : Increase my Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
@@ -9941,9 +9873,7 @@ FeatsList["fey touched"] = {
     spellcastingAbility: 6,
     scores: [0, 0, 0, 0, 0, 1]
   },
-  description: desc([
-    "+1 Int, Wis, or Cha, I learn the Misty Step and one other 1st-level spell from the Divination or Enchantment school.",
-  ]),
+  description: "+1 Int, Wis, or Cha, I learn the Misty Step and one other 1st-level spell from the Divination or Enchantment school.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
@@ -9958,9 +9888,7 @@ FeatsList["grappler"] = {
   name: "Grappler",
   source: [["PHB2024", 202]],
   regExpSearch: /^(?=.*grappler).*$/i,
-  description: desc([
-    "+1 Str or Dex, When I make an Unarmed Strike, I may deal damage and grapple the target, I have advantage on attack rolls made to grapple a target and can move my normal speed with a grappled target as long as they are my size or smaller.",
-  ]),
+  description: "+1 Str or Dex, When I make an Unarmed Strike, I may deal damage and grapple the target, I have advantage on attack rolls made to grapple a target and can move my normal speed with a grappled target as long as they are my size or smaller.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
@@ -9987,9 +9915,7 @@ FeatsList["great weapon master"] = {
   source: [["PHB2024", 203]],
   regExpSearch: /^(?=.*great)(?=.*weapon)(?=.*master).*$/i,
   scores: [1, 0, 0, 0, 0, 0],
-  description: desc([
-    "+1 Str, When I hit with a weapon that has the Heavy property, I can deal extra damage equal to my Prof Bonus, and if I score a Crit. and reduce a creature to 0 HP I may make another attack with the same weapon as a Bonus Action.",
-  ]),
+  description: "+1 Str, When I hit with a weapon that has the Heavy property, I can deal extra damage equal to my Prof Bonus, and if I score a Crit. and reduce a creature to 0 HP I may make another attack with the same weapon as a Bonus Action.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength score by 1 to a maximum of 20.",
@@ -10024,9 +9950,7 @@ FeatsList["heavily armored"] = {
     description: "I gain training with Heavy armor. [+1 Constitution]",
     scores: [0, 0, 1, 0, 0, 0],
   },
-  description: desc([
-    "+1 Dex/Con, I gain training with Heavy armor.",
-  ]),
+  description: "+1 Dex/Con, I gain training with Heavy armor.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Constitution score by 1 to a maximum of 20.",
@@ -10050,9 +9974,7 @@ FeatsList["heavy armor master"] = {
     description: "I take my Prof Bonus less damage when hit with any Blud./Slash./Pierc. dmg while wearing Heavy armor. [+1 Constitution]",
     scores: [0, 0, 1, 0, 0, 0],
   },
-  description: desc([
-    "+1 Dex/Con, I take my Prof Bonus less damage when hit with any Blud./Slash./Pierc. dmg while wearing Heavy armor.",
-  ]),
+  description: "+1 Dex/Con, I take my Prof Bonus less damage when hit with any Blud./Slash./Pierc. dmg while wearing Heavy armor.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Constitution score by 1 to a maximum of 20.",
@@ -10067,9 +9989,7 @@ FeatsList["inspiring leader"] = {
   name: "Inspiring Leader",
   source: [["PHB2024", 204]],
   regExpSearch: /^(?=.*inspiring)(?=.*leader).*$/i,
-  description: desc([
-    "+1 Wis or Cha, After a rest I can give a performance that grants up to 6 allies (can include yourself) Temp HP = my Character level + Wis/Cha.",
-  ]),
+  description: "+1 Wis or Cha, After a rest I can give a performance that grants up to 6 allies (can include yourself) Temp HP = my Character level + Wis/Cha.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Wisdom or Charisma score by 1 to a maximum of 20.",
@@ -10096,9 +10016,7 @@ FeatsList["keen mind"] = {
   scores: [0, 0, 0, 1, 0, 0],
   action: ["bonus action", "Study"],
   skillstxt: "Choose 1 : Arcana, History, Investigation, Nature or Religion. I gain Proficiency in the chosen skill if I am already proficient I gain Expertise.",
-  description: desc([
-    "+1 Int, I gain proficiency or expertise (if I already have proficiency) in one of the Intelligence skills, and can take the Study action as a Bonus Action.",
-  ]),
+  description: "+1 Int, I gain proficiency or expertise (if I already have proficiency) in one of the Intelligence skills, and can take the Study action as a Bonus Action.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Intelligence score by 1 to a maximum of 20.",
@@ -10115,9 +10033,7 @@ FeatsList["lightly armored"] = {
   source: [["PHB2024", 205]],
   regExpSearch: /^(?=.*lightly)(?=.*armored).*$/i,
   armorProfs: [true, false, false, true],
-  description: desc([
-    "+1 Str/Dex, I gain training with Light armor and Shields.",
-  ]),
+  description: "+1 Str/Dex, I gain training with Light armor and Shields.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
@@ -10145,9 +10061,7 @@ FeatsList["mage slayer"] = {
   limfeaname: "Guarded Mind",
   usages: 1,
   recovery: "short rest",
-  description: desc([
-    "+1 Str/Dex, I gain training with Light armor and Shields.",
-  ]),
+  description: "+1 Str/Dex, I gain training with Light armor and Shields.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
@@ -10172,9 +10086,7 @@ FeatsList["martial weapon training"] = {
   name: "Martial Weapon Training",
   source: [["PHB2024", 205]],
   regExpSearch: /^(?=.*martial)(?=.*weapon)(?=.*training).*$/i,
-  description: desc([
-    "+1 Str/Dex, I gain proficiency with Martial weapons.",
-  ]),
+  description: "+1 Str/Dex, I gain proficiency with Martial weapons.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
@@ -10209,9 +10121,7 @@ FeatsList["medium armor master"] = {
     description: "I can add 3 while wearing medium armor if I have a Dex of 16+, instead of 2. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
   },
-  description: desc([
-    "+1 Dex/Con, I can add 3 while wearing medium armor if I have a Dex of 16+, instead of 2.",
-  ]),
+  description: "+1 Dex/Con, I can add 3 while wearing medium armor if I have a Dex of 16+, instead of 2.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Constitution score by 1 to a maximum of 20.",
@@ -10237,9 +10147,7 @@ FeatsList["moderately armored"] = {
     scores: [0, 1, 0, 0, 0, 0],
     armorProfs: [false, true, false, false],
   },
-  description: desc([
-    "+1 Str/Dex, I gain training with Medium armor.",
-  ]),
+  description: "+1 Str/Dex, I gain training with Medium armor.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Constitution score by 1 to a maximum of 20.",
@@ -10267,9 +10175,7 @@ FeatsList["mounted combatant"] = {
     description: "I have adv on atk rolls while mounted against non-mounted combatants within 5 feet that are smaller than my mount, Mounts who succeed dex saves take no damage instead of half, when an attack hits my mount I can have the attack hit I instead if I don't have the Incap condition. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
   },
-  description: desc([
-    "+1 Str/Dex/Wis, I have adv on atk rolls while mounted against non-mounted combatants within 5 feet that are smaller than my mount, Mounts who succeed dex saves take no damage instead of half, when an attack hits my mount I can have the attack hit I instead if I don't have the Incap condition.",
-  ]),
+  description: "+1 Str/Dex/Wis, I have adv on atk rolls while mounted against non-mounted combatants within 5 feet that are smaller than my mount, Mounts who succeed dex saves take no damage instead of half, when an attack hits my mount I can have the attack hit I instead if I don't have the Incap condition.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength, Dexterity, or Wisdom score by 1 to a maximum of 20.",
@@ -10297,9 +10203,7 @@ FeatsList["observant"] = {
     description: "I gain proficiency or expertise (if I already have proficiency) in one of the following skills Insight, Investigation, or Perception, and can take the Search action as a Bonus Action. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
   },
-  description: desc([
-    "+1 Int/Wis, I gain proficiency or expertise (if I already have proficiency) in one of the following skills Insight, Investigation, or Perception, and can take the Search action as a Bonus Action.",
-  ]),
+  description: "+1 Int/Wis, I gain proficiency or expertise (if I already have proficiency) in one of the following skills Insight, Investigation, or Perception, and can take the Search action as a Bonus Action.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Intelligence or Wisdom score by 1 to a maximum of 20.",
@@ -10315,9 +10219,7 @@ FeatsList["piercer"] = {
   name: "Piercer",
   source: [["PHB2024", 206]],
   regExpSearch: /^(?=.*piercer).*$/i,
-  description: desc([
-    "+1 Str/Dex, When I hit a creature with an atk roll with a pierc. dmg weapon I can reroll one of the atk dmg dice, on a Crit I deal one additional dmg die.",
-  ]),
+  description: "+1 Str/Dex, When I hit a creature with an atk roll with a pierc. dmg weapon I can reroll one of the atk dmg dice, on a Crit I deal one additional dmg die.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
@@ -10345,9 +10247,7 @@ FeatsList["poisoner"] = {
   source: [["PHB2024", 206]],
   regExpSearch: /^(?=.*poisoner).*$/i,
   toolProfs: [["Poisoner's Kit"]],
-  description: desc([
-    "+1 Dex/Int, my poison ignores Poison Resistance, I gain Prof with the Poisoner's Kit and can apply poison to a weapon or piece of ammo as a Bonus Action when I hit with an atk, the target makes a Con save or takes 2d8 Poison dmg and be Poisoned. DC=8+Dex-or-Int+Prof",
-  ]),
+  description: "+1 Dex/Int, my poison ignores Poison Resistance, I gain Prof with the Poisoner's Kit and can apply poison to a weapon or piece of ammo as a Bonus Action when I hit with an atk, the target makes a Con save or takes 2d8 Poison dmg and be Poisoned. DC=8+Dex-or-Int+Prof",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Dexterity or Intelligence score by 1 to a maximum of 20.",
@@ -10395,9 +10295,7 @@ FeatsList["polearm master"] = {
     description: "As a Bns Action when I take the Atk Action, with a Quarterstaff, Spear, or weapon with the Heavy and Reach properties, I can strike with the opposite end of the weapon dealing 1d4 blud. dmg. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
   },
-  description: desc([
-    "+1 Str/+1 Dex, As a Bns Action when I take the Atk Action, with a Quarterstaff, Spear, or weapon with the Heavy and Reach properties, I can strike with the opposite end of the weapon dealing 1d4 blud. dmg.",
-  ]),
+  description: "+1 Str/+1 Dex, As a Bns Action when I take the Atk Action, with a Quarterstaff, Spear, or weapon with the Heavy and Reach properties, I can strike with the opposite end of the weapon dealing 1d4 blud. dmg.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
@@ -10488,9 +10386,7 @@ FeatsList["sentinel"] = {
     description: "Reac. when crea w/i 5ft takes Disengage action or hits another target other than I, I can make an Opportunity Attack. When I make an Opportunity Attack against a crea. Its Speed becomes 0 for the rest of the current turn. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
   },
-  description: desc([
-    "+1 Str/+1 Dex, Reac. when crea w/i 5ft takes Disengage action or hits another target other than I, I can make an Opportunity Attack. When I make an Opportunity Attack against a crea. 's Speed becomes 0 for the rest of the current turn.",
-  ]),
+  description: "+1 Str/+1 Dex, Reac. when crea w/i 5ft takes Disengage action or hits another target other than I, I can make an Opportunity Attack. When I make an Opportunity Attack against a crea. 's Speed becomes 0 for the rest of the current turn.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
@@ -10537,9 +10433,7 @@ FeatsList["shadow touched"] = {
     spellcastingAbility: 6,
     scores: [0, 0, 0, 0, 0, 1]
   },
-  description: desc([
-    "+1 Int, Wis, or Cha, I learn the Invisibility and one other 1st-level spell from the Illusion or Necromancy school.",
-  ]),
+  description: "+1 Int, Wis, or Cha, I learn the Invisibility and one other 1st-level spell from the Illusion or Necromancy school.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
@@ -10671,7 +10565,7 @@ FeatsList["spell sniper"] = {
   source: [["PHB2024", 208]],
   regExpSearch: /^(?=.*spell)(?=.*sniper).*$/i,
   descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Increase. Increase my Intelligence, Wisdom, or Charisma by 1, to a maximum of 20.\n \u2022 Bypass Cover. My attack rolls for spells ignore Half Cover and Three-quarter Cover.\n \u2022 Casting in Melee. Being within 5 feet of an enemy doesn't impose Disadvantage on my attack rolls with spells.\n \u2022 Increased Range. When I cast a spell that has a range of at least 10 feet and requires me to make an attack roll, I can increase the spell's range by 60 feet.",
-  description: "+1 Int/Wis/Cha my spells ignore half and three-quarter cover; casting in melee doesn't impose disadvantage; my ranged spells with a range of 10ft or more have their range increased by 60 ft..",
+  description: "+1 Int/Wis/Cha my spells ignore half and three-quarter cover; casting in melee doesn't impose disadvantage; my ranged spells with a range of 10ft or more have their range increased by 60 ft.",
   prerequisite: "Level 4 and has Spellcasting or Pact Magic Feature",
   prereqeval: function (v) {
     return v.characterLevel >= 4 && v.isSpellcaster;
@@ -10818,10 +10712,7 @@ FeatsList["weapon master"] = {
   choices: ["Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light Hammer", "Mace", "Quarterstaff", "Sickle", "Spear", "Dart", "Light Crossbow", "Shortbow", "Sling", "Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "Warhammer", "War Pick", "Whip", "Blowgun", "Hand Crossbow", "Heavy Crossbow", "Longbow", "Musket", "Pistol"],
   "club": {
     name: "Club",
-    description: desc([
-      "I gain access to the Club's 'Slow' Mastery feature",
-      "Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",
-    ]),
+    description: "I gain access to the Club's 'Slow' Mastery feature. Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",    
     prerequisite: "Club Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("club") !== -1;
@@ -10829,10 +10720,7 @@ FeatsList["weapon master"] = {
   },
   "dagger": {
     name: "Dagger",
-    description: desc([
-      "I gain access to the Dagger's 'Nick' Mastery feature",
-      "Nick : When I make the extra attack of the Light property, I can make it as part of the Attack action instead of as a Bonus Action. I can make this extra attack only once per turn.",
-    ]),
+    description: "I gain access to the Dagger's 'Nick' Mastery feature. Nick : When I make the extra attack of the Light property, I can make it as part of the Attack action instead of as a Bonus Action. I can make this extra attack only once per turn.",    
     prerequisite: "Dagger Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("dagger") !== -1;
@@ -10840,10 +10728,7 @@ FeatsList["weapon master"] = {
   },
   "greatclub": {
     name: "Greatclub",
-    description: desc([
-      "I gain access to the Greatclub's 'Push' Mastery feature",
-      "Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
-    ]),
+    description: "I gain access to the Greatclub's 'Push' Mastery feature. Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",    
     prerequisite: "Greatclub Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("greatclub") !== -1;
@@ -10851,10 +10736,7 @@ FeatsList["weapon master"] = {
   },
   "handaxe": {
     name: "Handaxe",
-    description: desc([
-      "I gain access to the Handaxe's 'Vex' Mastery feature",
-      "Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",
-    ]),
+    description: "I gain access to the Handaxe's 'Vex' Mastery feature. Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",    
     prerequisite: "Handaxe Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("handaxe") !== -1;
@@ -10862,10 +10744,7 @@ FeatsList["weapon master"] = {
   },
   "javelin": {
     name: "Javelin",
-    description: desc([
-      "I gain access to the Javelin's 'Slow' Mastery feature",
-      "Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",
-    ]),
+    description: "I gain access to the Javelin's 'Slow' Mastery feature. Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",    
     prerequisite: "Javelin Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("javelin") !== -1;
@@ -10873,10 +10752,7 @@ FeatsList["weapon master"] = {
   },
   "light hammer": {
     name: "Light Hammer",
-    description: desc([
-      "I gain access to the Light Hammer's 'Nick' Mastery feature",
-      "Nick : When I make the extra attack of the Light property, I can make it as part of the Attack action instead of as a Bonus Action. I can make this extra attack only once per turn.",
-    ]),
+    description: "I gain access to the Light Hammer's 'Nick' Mastery feature. Nick : When I make the extra attack of the Light property, I can make it as part of the Attack action instead of as a Bonus Action. I can make this extra attack only once per turn.",    
     prerequisite: "Light Hammer Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("light hammer") !== -1;
@@ -10884,10 +10760,7 @@ FeatsList["weapon master"] = {
   },
   "mace": {
     name: "Mace",
-    description: desc([
-      "I gain access to the Mace's 'Sap' Mastery feature",
-      "Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",
-    ]),
+    description: "I gain access to the Mace's 'Sap' Mastery feature. Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",    
     prerequisite: "Mace Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("mace") !== -1;
@@ -10895,10 +10768,7 @@ FeatsList["weapon master"] = {
   },
   "quarterstaff": {
     name: "Quarterstaff",
-    description: desc([
-      "I gain access to the Quarterstaff's 'Topple' Mastery feature",
-      "Topple : If I hit a creature with this weapon, I can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and my Proficiency Bonus). On a failed save, the creature has the Prone condition.",
-    ]),
+    description: "I gain access to the Quarterstaff's 'Topple' Mastery feature. Topple : If I hit a creature with this weapon, I can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and my Proficiency Bonus). On a failed save, the creature has the Prone condition.",    
     prerequisite: "Quarterstaff Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("quarterstaff") !== -1;
@@ -10906,10 +10776,7 @@ FeatsList["weapon master"] = {
   },
   "sickle": {
     name: "Sickle",
-    description: desc([
-      "I gain access to the Sickle's 'Nick' Mastery feature",
-      "Nick : When I make the extra attack of the Light property, I can make it as part of the Attack action instead of as a Bonus Action. I can make this extra attack only once per turn.",
-    ]),
+    description: "I gain access to the Sickle's 'Nick' Mastery feature. Nick : When I make the extra attack of the Light property, I can make it as part of the Attack action instead of as a Bonus Action. I can make this extra attack only once per turn.",    
     prerequisite: "Sickle Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("sickle") !== -1;
@@ -10917,10 +10784,7 @@ FeatsList["weapon master"] = {
   },
   "spear": {
     name: "Spear",
-    description: desc([
-      "I gain access to the Spear's 'Sap' Mastery feature",
-      "Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",
-    ]),
+    description: "I gain access to the Spear's 'Sap' Mastery feature. Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",    
     prerequisite: "Spear Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("spear") !== -1;
@@ -10928,10 +10792,7 @@ FeatsList["weapon master"] = {
   },
   "dart": {
     name: "Dart",
-    description: desc([
-      "I gain access to the Dart's 'Vex' Mastery feature",
-      "Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",
-    ]),
+    description: "I gain access to the Dart's 'Vex' Mastery feature. Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",    
     prerequisite: "Dart Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("dart") !== -1;
@@ -10939,10 +10800,7 @@ FeatsList["weapon master"] = {
   },
   "light crossbow": {
     name: "Light Crossbow",
-    description: desc([
-      "I gain access to the Light Crossbow's 'Slow' Mastery feature",
-      "Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",
-    ]),
+    description: "I gain access to the Light Crossbow's 'Slow' Mastery feature. Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",    
     prerequisite: "Light Crossbow Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("light crossbow") !== -1;
@@ -10950,10 +10808,7 @@ FeatsList["weapon master"] = {
   },
   "shortbow": {
     name: "Shortbow",
-    description: desc([
-      "I gain access to the Shortbow's 'Vex' Mastery feature",
-      "Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",
-    ]),
+    description: "I gain access to the Shortbow's 'Vex' Mastery feature. Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",    
     prerequisite: "Shortbow Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("shortbow") !== -1;
@@ -10961,10 +10816,7 @@ FeatsList["weapon master"] = {
   },
   "sling": {
     name: "Sling",
-    description: desc([
-      "I gain access to the Sling's 'Slow' Mastery feature",
-      "Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",
-    ]),
+    description: "I gain access to the Sling's 'Slow' Mastery feature. Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",    
     prerequisite: "Sling Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("sling") !== -1;
@@ -10972,10 +10824,7 @@ FeatsList["weapon master"] = {
   },
   "battleaxe": {
     name: "Battleaxe",
-    description: desc([
-      "I gain access to the Battleaxe's 'Topple' Mastery feature",
-      "Topple : If I hit a creature with this weapon, I can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and my Proficiency Bonus). On a failed save, the creature has the Prone condition.",
-    ]),
+    description: "I gain access to the Battleaxe's 'Topple' Mastery feature. Topple : If I hit a creature with this weapon, I can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and my Proficiency Bonus). On a failed save, the creature has the Prone condition.",    
     prerequisite: "Battleaxe Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("battleaxe") !== -1;
@@ -10983,10 +10832,7 @@ FeatsList["weapon master"] = {
   },
   "flail": {
     name: "Flail",
-    description: desc([
-      "I gain access to the Flail's 'Sap' Mastery feature",
-      "Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",
-    ]),
+    description: "I gain access to the Flail's 'Sap' Mastery feature. Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",    
     prerequisite: "Flail Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("flail") !== -1;
@@ -10994,10 +10840,7 @@ FeatsList["weapon master"] = {
   },
   "glaive": {
     name: "Glaive",
-    description: desc([
-      "I gain access to the Glaive's 'Graze' Mastery feature",
-      "Graze : If my attack roll with this weapon misses a creature, I can deal damage to that creature equal to the ability modifier I used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.",
-    ]),
+    description: "I gain access to the Glaive's 'Graze' Mastery feature. Graze : If my attack roll with this weapon misses a creature, I can deal damage to that creature equal to the ability modifier I used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.",    
     prerequisite: "Glaive Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("glaive") !== -1;
@@ -11005,10 +10848,7 @@ FeatsList["weapon master"] = {
   },
   "greataxe": {
     name: "Greataxe",
-    description: desc([
-      "I gain access to the Greataxe's 'Cleave' Mastery feature",
-      "Cleave : If I hit a creature with a melee attack roll using this weapon, I can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within my reach. On a hit, the second creature takes the weapon's damage, but don't add my ability modifier to that damage unless the modifier is negative. I can make this extra attack only once per turn.",
-    ]),
+    description: "I gain access to the Greataxe's 'Cleave' Mastery feature. Cleave : If I hit a creature with a melee attack roll using this weapon, I can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within my reach. On a hit, the second creature takes the weapon's damage, but don't add my ability modifier to that damage unless the modifier is negative. I can make this extra attack only once per turn.",    
     prerequisite: "Greataxe Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("greataxe") !== -1;
@@ -11016,10 +10856,7 @@ FeatsList["weapon master"] = {
   },
   "greatsword": {
     name: "Greatsword",
-    description: desc([
-      "I gain access to the Greatsword's 'Graze' Mastery feature",
-      "Graze : If my attack roll with this weapon misses a creature, I can deal damage to that creature equal to the ability modifier I used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.",
-    ]),
+    description: "I gain access to the Greatsword's 'Graze' Mastery feature. Graze : If my attack roll with this weapon misses a creature, I can deal damage to that creature equal to the ability modifier I used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.",    
     prerequisite: "Greatsword Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("greatsword") !== -1;
@@ -11027,10 +10864,7 @@ FeatsList["weapon master"] = {
   },
   "halberd": {
     name: "Halberd",
-    description: desc([
-      "I gain access to the Halberd's 'Cleave' Mastery feature",
-      "Cleave : If I hit a creature with a melee attack roll using this weapon, I can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within my reach. On a hit, the second creature takes the weapon's damage, but don't add my ability modifier to that damage unless the modifier is negative. I can make this extra attack only once per turn.",
-    ]),
+    description: "I gain access to the Halberd's 'Cleave' Mastery feature. Cleave : If I hit a creature with a melee attack roll using this weapon, I can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within my reach. On a hit, the second creature takes the weapon's damage, but don't add my ability modifier to that damage unless the modifier is negative. I can make this extra attack only once per turn.",    
     prerequisite: "Halberd Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("halberd") !== -1;
@@ -11038,10 +10872,7 @@ FeatsList["weapon master"] = {
   },
   "lance": {
     name: "Lance",
-    description: desc([
-      "I gain access to the Lance's 'Topple' Mastery feature",
-      "Topple : If I hit a creature with this weapon, I can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and my Proficiency Bonus). On a failed save, the creature has the Prone condition.",
-    ]),
+    description: "I gain access to the Lance's 'Topple' Mastery feature. Topple : If I hit a creature with this weapon, I can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and my Proficiency Bonus). On a failed save, the creature has the Prone condition.",    
     prerequisite: "Lance Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("lance") !== -1;
@@ -11049,10 +10880,7 @@ FeatsList["weapon master"] = {
   },
   "longsword": {
     name: "Longsword",
-    description: desc([
-      "I gain access to the Longsword's 'Sap' Mastery feature",
-      "Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",
-    ]),
+    description: "I gain access to the Longsword's 'Sap' Mastery feature. Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",    
     prerequisite: "Longsword Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("longsword") !== -1;
@@ -11060,10 +10888,7 @@ FeatsList["weapon master"] = {
   },
   "maul": {
     name: "Maul",
-    description: desc([
-      "I gain access to the Maul's 'Topple' Mastery feature",
-      "Topple : If I hit a creature with this weapon, I can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and my Proficiency Bonus). On a failed save, the creature has the Prone condition.",
-    ]),
+    description: "I gain access to the Maul's 'Topple' Mastery feature. Topple : If I hit a creature with this weapon, I can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and my Proficiency Bonus). On a failed save, the creature has the Prone condition.",    
     prerequisite: "Maul Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("maul") !== -1;
@@ -11071,10 +10896,7 @@ FeatsList["weapon master"] = {
   },
   "morningstar": {
     name: "Morningstar",
-    description: desc([
-      "I gain access to the Morningstar's 'Sap' Mastery feature",
-      "Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",
-    ]),
+    description: "I gain access to the Morningstar's 'Sap' Mastery feature. Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",    
     prerequisite: "Morningstar Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("morningstar") !== -1;
@@ -11082,10 +10904,7 @@ FeatsList["weapon master"] = {
   },
   "pike": {
     name: "Pike",
-    description: desc([
-      "I gain access to the Pike's 'Push' Mastery feature",
-      "Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
-    ]),
+    description: "I gain access to the Pike's 'Push' Mastery feature. Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",    
     prerequisite: "Pike Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("pike") !== -1;
@@ -11093,10 +10912,7 @@ FeatsList["weapon master"] = {
   },
   "rapier": {
     name: "Rapier",
-    description: desc([
-      "I gain access to the Rapier's 'Vex' Mastery feature",
-      "Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",
-    ]),
+    description: "I gain access to the Rapier's 'Vex' Mastery feature. Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",    
     prerequisite: "Rapier Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("rapier") !== -1;
@@ -11104,10 +10920,7 @@ FeatsList["weapon master"] = {
   },
   "scimitar": {
     name: "Scimitar",
-    description: desc([
-      "I gain access to the Scimitar's 'Nick' Mastery feature",
-      "Nick : When I make the extra attack of the Light property, I can make it as part of the Attack action instead of as a Bonus Action. I can make this extra attack only once per turn.",
-    ]),
+    description: "I gain access to the Scimitar's 'Nick' Mastery feature. Nick : When I make the extra attack of the Light property, I can make it as part of the Attack action instead of as a Bonus Action. I can make this extra attack only once per turn.",    
     prerequisite: "Scimitar Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("scimitar") !== -1;
@@ -11115,10 +10928,7 @@ FeatsList["weapon master"] = {
   },
   "shortsword": {
     name: "Shortsword",
-    description: desc([
-      "I gain access to the Shortsword's 'Vex' Mastery feature",
-      "Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",
-    ]),
+    description: "I gain access to the Shortsword's 'Vex' Mastery feature. Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",    
     prerequisite: "Shortsword Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("shortsword") !== -1;
@@ -11126,10 +10936,7 @@ FeatsList["weapon master"] = {
   },
   "trident": {
     name: "Trident",
-    description: desc([
-      "I gain access to the Trident's 'Topple' Mastery feature",
-      "Topple : If I hit a creature with this weapon, I can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and my Proficiency Bonus). On a failed save, the creature has the Prone condition.",
-    ]),
+    description: "I gain access to the Trident's 'Topple' Mastery feature. Topple : If I hit a creature with this weapon, I can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and my Proficiency Bonus). On a failed save, the creature has the Prone condition.",    
     prerequisite: "Trident Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("trident") !== -1;
@@ -11137,10 +10944,7 @@ FeatsList["weapon master"] = {
   },
   "warhammer": {
     name: "Warhammer",
-    description: desc([
-      "I gain access to the Warhammer's 'Push' Mastery feature",
-      "Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
-    ]),
+    description: "I gain access to the Warhammer's 'Push' Mastery feature. Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",    
     prerequisite: "Warhammer Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("warhammer") !== -1;
@@ -11148,10 +10952,8 @@ FeatsList["weapon master"] = {
   },
   "war pick": {
     name: "War Pick",
-    description: desc([
-      "I gain access to the War Pick's 'Sap' Mastery feature",
-      "Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",
-    ]),
+    description: "I gain access to the War Pick's 'Sap' Mastery feature. Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",
+    
     prerequisite: "War Pick Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("war pick") !== -1;
@@ -11159,10 +10961,8 @@ FeatsList["weapon master"] = {
   },
   "whip": {
     name: "Whip",
-    description: desc([
-      "I gain access to the Whip's 'Slow' Mastery feature",
-      "Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",
-    ]),
+    description: "I gain access to the Whip's 'Slow' Mastery feature. Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",
+    
     prerequisite: "Whip Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("whip") !== -1;
@@ -11170,10 +10970,7 @@ FeatsList["weapon master"] = {
   },
   "blowgun": {
     name: "Blowgun",
-    description: desc([
-      "I gain access to the Blowgun's 'Vex' Mastery feature",
-      "Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",
-    ]),
+    description: "I gain access to the Blowgun's 'Vex' Mastery feature. Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",    
     prerequisite: "Blowgun Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("blowgun") !== -1;
@@ -11181,10 +10978,7 @@ FeatsList["weapon master"] = {
   },
   "hand crossbow": {
     name: "Hand Crossbow",
-    description: desc([
-      "I gain access to the Hand Crossbow's 'Vex' Mastery feature",
-      "Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",
-    ]),
+    description: "I gain access to the Hand Crossbow's 'Vex' Mastery feature. Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",    
     prerequisite: "Hand Crossbow Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("hand crossbow") !== -1;
@@ -11192,10 +10986,7 @@ FeatsList["weapon master"] = {
   },
   "heavy crossbow": {
     name: "Heavy Crossbow",
-    description: desc([
-      "I gain access to the Heavy Crossbow's 'Push' Mastery feature",
-      "Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
-    ]),
+    description: "I gain access to the Heavy Crossbow's 'Push' Mastery feature. Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",    
     prerequisite: "Heavy Crossbow Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("heavy crossbow") !== -1;
@@ -11203,10 +10994,7 @@ FeatsList["weapon master"] = {
   },
   "longbow": {
     name: "Longbow",
-    description: desc([
-      "I gain access to the Longbow's 'Slow' Mastery feature",
-      "Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",
-    ]),
+    description: "I gain access to the Longbow's 'Slow' Mastery feature. Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",    
     prerequisite: "Longbow Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("longbow") !== -1;
@@ -11214,10 +11002,7 @@ FeatsList["weapon master"] = {
   },
   "musket": {
     name: "Musket",
-    description: desc([
-      "I gain access to the Musket's 'Slow' Mastery feature",
-      "Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",
-    ]),
+    description: "I gain access to the Musket's 'Slow' Mastery feature. Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",    
     prerequisite: "Musket Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("musket") !== -1;
@@ -11225,10 +11010,7 @@ FeatsList["weapon master"] = {
   },
   "pistol": {
     name: "Pistol",
-    description: desc([
-      "I gain access to the Pistol's 'Slow' Mastery feature",
-      "Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",
-    ]),
+    description: "I gain access to the Pistol's 'Vex' Mastery feature. Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",    
     prerequisite: "Pistol Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("pistol") !== -1;
@@ -11248,9 +11030,7 @@ FeatsList["fighting style"] = {
   choices: ["Archery", "Blind Fighting", "Defense", "Dueling", "Great Weapon Fighting", "Interception", "Protection", "Thrown Weapon Fighting", "Two-Weapon Fighting", "Unarmed Fighting"],
   "archery": {
     name: "Archery",
-    description: desc([
-      "I gain a +2 bonus to attack rolls I make with Ranged weapons.",
-    ]),
+    description: "I gain a +2 bonus to attack rolls I make with Ranged weapons.",    
     calcChanges: {
       atkCalc: [
         function (fields, v, output) {
@@ -11262,16 +11042,12 @@ FeatsList["fighting style"] = {
   },
   "blind fighting": {
     name: "Blind Fighting",
-    description: desc([
-      "I have Blindsight with a range of 10 feet.",
-    ]),
+    description: "I have Blindsight with a range of 10 feet.",    
     vision: [["Blindsight", 10]],
   },
   "defense": {
     name: "Defense",
-    description: desc([
-      "While I'm wearing Light, Medium, or Heavy armor, I gain a +1 bonus to Armor Class.",
-    ]),
+    description: "While I'm wearing Light, Medium, or Heavy armor, I gain a +1 bonus to Armor Class.",    
     extraAC: {
       name: "Defense Fighting Style", // necessary for features referring to fighting style properties directly
       mod: 1,
@@ -11283,9 +11059,7 @@ FeatsList["fighting style"] = {
   },
   "dueling": {
     name: "Dueling",
-    description: desc([
-      "When I'm holding a Melee weapon in one hand and no other weapons, I gain a +2 bonus to damage rolls with that weapon.",
-    ]),
+    description: "When I'm holding a Melee weapon in one hand and no other weapons, I gain a +2 bonus to damage rolls with that weapon.",    
     calcChanges: {
       atkCalc: [
         function (fields, v, output) {
@@ -11300,9 +11074,7 @@ FeatsList["fighting style"] = {
   },
   "great weapon fighting": {
     name: "Great Weapon Fighting",
-    description: desc([
-      "When I roll damage for an attack I make with a Melee weapon that I am holding with two hands, I can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile properties to gain this benefit.",
-    ]),
+    description: "When I roll damage for an attack I make with a Melee weapon that I am holding with two hands, I can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile properties to gain this benefit.",    
     calcChanges: {
       atkAdd: [
         function (fields, v) {
@@ -11316,23 +11088,17 @@ FeatsList["fighting style"] = {
   },
   "interception": {
     name: "Interception",
-    description: desc([
-      "When a creature I can see hits another creature within 5 feet of me with an attack roll, I can take a Reaction to reduce the damage dealt to the target by 1d10 plus my Proficiency Bonus. I must be holding a Shield or a Simple or Martial weapon to use this Reaction.",
-    ]),
+    description: "When a creature I can see hits another creature within 5 feet of me with an attack roll, I can take a Reaction to reduce the damage dealt to the target by 1d10 plus my Proficiency Bonus. I must be holding a Shield or a Simple or Martial weapon to use this Reaction.",    
     action: "reaction",
   },
   "protection": {
     name: "Protection",
-    description: desc([
-      "When a creature I can see attacks a target other than I that is within 5 feet of I, I can take a Reaction to interpose my Shield if I'm holding one. I impose Disadvantage on the triggering attack roll and all other attack rolls against the target until the start of my next turn if I remain within 5 feet of the target.",
-    ]),
+    description: "When a creature I can see attacks a target other than I that is within 5 feet of I, I can take a Reaction to interpose my Shield if I'm holding one. I impose Disadvantage on the triggering attack roll and all other attack rolls against the target until the start of my next turn if I remain within 5 feet of the target.",    
     action: "reaction",
   },
   "thrown weapon fighting": {
     name: "Thrown Weapon Fighting",
-    description: desc([
-      "When I hit with a ranged attack roll using a weapon that has the Thrown property, I gain a +2 bonus to the damage roll.",
-    ]),
+    description: "When I hit with a ranged attack roll using a weapon that has the Thrown property, I gain a +2 bonus to the damage roll.",    
     calcChanges: {
       atkAdd: [
         function (fields, v) {
@@ -11354,9 +11120,7 @@ FeatsList["fighting style"] = {
   },
   "two-weapon fighting": {
     name: "Two-Weapon Fighting",
-    description: desc([
-      "When I make an extra attack as a result of using a weapon that has the Light property, I can add my ability modifier to the damage to that attack if I am not already adding it to the damage.",
-    ]),
+    description: "When I make an extra attack as a result of using a weapon that has the Light property, I can add my ability modifier to the damage to that attack if I am not already adding it to the damage.",    
     calcChanges: {
       atkCalc: [
         function (fields, v, output) {
@@ -11368,9 +11132,7 @@ FeatsList["fighting style"] = {
   },
   "unarmed fighting": {
     name: "Unarmed Fighting",
-    description: desc([
-      "When I hit with my Unarmed Strike and deal damage, I can deal Bludgeoning damage equal to 1d6 plus my Strength modifier instead of the normal damage of an Unarmed Strike. If I am not holding any weapons or a Shield when I make the attack roll, the d6 becomes a d8.\n At the start of each of my turns, I can deal 1d4 Bludgeoning damage to one creature Grappled by I.",
-    ]),
+    description: "When I hit with my Unarmed Strike and deal damage, I can deal Bludgeoning damage equal to 1d6 plus my Strength modifier instead of the normal damage of an Unarmed Strike. If I am not holding any weapons or a Shield when I make the attack roll, the d6 becomes a d8.\n At the start of each of my turns, I can deal 1d4 Bludgeoning damage to one creature Grappled by me.",    
     calcChanges: {
       atkAdd: [
         function (fields, v) {
@@ -12062,7 +11824,7 @@ WeaponsList["handaxe"] = {
   description: "Light, Thrown; Vex",
   list: "melee",
   weight: 2,
-  ammo: "axe",
+  ammo: "handaxe",
   monkweapon: true,
 };
 WeaponsList["javelin"] = {
@@ -12094,7 +11856,7 @@ WeaponsList["light hammer"] = {
   description: "Light, Thrown; Nick",
   list: "melee",
   weight: 2,
-  ammo: "hammer",
+  ammo: "light hammer",
   monkweapon: true,
 };
 WeaponsList["mace"] = {
@@ -12187,7 +11949,7 @@ WeaponsList["light crossbow"] = {
   description: "Ammunition (Range 80/320; Bolt), Loading, Two-Handed; Slow",
   list: "ranged",
   weight: 5,
-  ammo: "bolt",
+  ammo: "bolts",
   monkweapon: false,
 };
 WeaponsList["shortbow"] = {
@@ -12203,7 +11965,7 @@ WeaponsList["shortbow"] = {
   description: "Ammunition (Range 80/320; Arrow), Two-Handed; Vex",
   list: "ranged",
   weight: 2,
-  ammo: "arrow",
+  ammo: "arrows",
   monkweapon: false,
 };
 WeaponsList["sling"] = {
@@ -12218,7 +11980,7 @@ WeaponsList["sling"] = {
   range: "30/120",
   description: "Ammunition (Range 30/120; Bullet); Topple",
   list: "ranged",
-  ammo: "bullet",
+  ammo: "bullets, sling",
   monkweapon: false,
 };
 WeaponsList["battleaxe"] = {
@@ -12505,7 +12267,7 @@ WeaponsList["blowgun"] = {
   description: "Ammunition (Range 25/100; Needle), Loading; Vex",
   list: "ranged",
   weight: 1,
-  ammo: "needle",
+  ammo: "needles",
   monkweapon: false,
 };
 WeaponsList["hand crossbow"] = {
@@ -12521,7 +12283,7 @@ WeaponsList["hand crossbow"] = {
   description: "Ammunition (Range 30/120; Bolt), Light, Loading; Vex",
   list: "ranged",
   weight: 3,
-  ammo: "bolt",
+  ammo: "bolts",
   monkweapon: false,
 };
 WeaponsList["heavy crossbow"] = {
@@ -12537,7 +12299,7 @@ WeaponsList["heavy crossbow"] = {
   description: "Ammunition (Range 100/400; Bolt), Heavy, Loading, Two-Handed; Push",
   list: "ranged",
   weight: 18,
-  ammo: "bolt",
+  ammo: "bolts",
   monkweapon: false,
 };
 WeaponsList["longbow"] = {
@@ -12553,7 +12315,7 @@ WeaponsList["longbow"] = {
   description: "Ammunition (Range 150/600; Arrow), Light; Slow",
   list: "ranged",
   weight: 2,
-  ammo: "arrow",
+  ammo: "arrows",
   monkweapon: false,
 };
 WeaponsList["musket"] = {
@@ -12569,7 +12331,7 @@ WeaponsList["musket"] = {
   description: "Ammunition (Range 40/120; Bullet), Loading, Two-Handed; Slow",
   list: "ranged",
   weight: 10,
-  ammo: "bullet",
+  ammo: "bullets, firearm",
   monkweapon: false,
 };
 WeaponsList["pistol"] = {
@@ -12585,7 +12347,7 @@ WeaponsList["pistol"] = {
   description: "Ammunition (Range 30/90; Bullet), Loading; Vex",
   list: "ranged",
   weight: 3,
-  ammo: "bullet",
+  ammo: "bullets, firearm",
   monkweapon: false,
 };
 WeaponsList["vial of acid"] = {
