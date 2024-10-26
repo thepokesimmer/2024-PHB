@@ -8306,7 +8306,7 @@ BackgroundList["wayfarer"] = {
     "I grew up on the streets surrounded by similarly ill-fated castoffs, a few of them friends and a few of them rivals. I slept where I could and did odd jobs for food. At times, when the hunger became unbearable, I resorted to theft. Still, I never lost my pride and never abandoned hope. Fate is not finished with me."
   ],
 };
-BackgroundFeatureList["magic initiate (cleric) [origin]"] = {
+BackgroundFeatureList["magic initiate (cleric)"] = {
   description: desc([
     "",
   ]),
@@ -8318,7 +8318,7 @@ BackgroundFeatureList["magic initiate (cleric) [origin]"] = {
     RemoveFeat("Magic Initiate (Cleric) [Origin]");
   }
 };
-BackgroundFeatureList["crafter [origin]"] = {
+BackgroundFeatureList["crafter"] = {
   description: desc([
     "",
   ]),
@@ -8330,7 +8330,7 @@ BackgroundFeatureList["crafter [origin]"] = {
     RemoveFeat("Crafter [Origin]");
   }
 };
-BackgroundFeatureList["skilled [origin]"] = {
+BackgroundFeatureList["skilled"] = {
   description: desc([
     "",
   ]),
@@ -8342,7 +8342,7 @@ BackgroundFeatureList["skilled [origin]"] = {
     RemoveFeat("Skilled [Origin]");
   }
 };
-BackgroundFeatureList["alert [origin]"] = {
+BackgroundFeatureList["alert"] = {
   description: desc([
     "",
   ]),
@@ -8354,7 +8354,7 @@ BackgroundFeatureList["alert [origin]"] = {
     RemoveFeat("Alert [Origin]");
   }
 };
-BackgroundFeatureList["musician [origin]"] = {
+BackgroundFeatureList["musician"] = {
   description: desc([
     "",
   ]),
@@ -8366,7 +8366,7 @@ BackgroundFeatureList["musician [origin]"] = {
     RemoveFeat("Musician [Origin]");
   }
 };
-BackgroundFeatureList["tough [origin]"] = {
+BackgroundFeatureList["tough"] = {
   description: desc([
     "",
   ]),
@@ -8378,7 +8378,7 @@ BackgroundFeatureList["tough [origin]"] = {
     RemoveFeat("Tough [Origin]");
   }
 };
-BackgroundFeatureList["magic initiate (druid) [origin]"] = {
+BackgroundFeatureList["magic initiate (druid)"] = {
   description: desc([
     "",
   ]),
@@ -8390,7 +8390,7 @@ BackgroundFeatureList["magic initiate (druid) [origin]"] = {
     RemoveFeat("Magic Initiate (Druid) [Origin]");
   }
 };
-BackgroundFeatureList["healer [origin]"] = {
+BackgroundFeatureList["healer"] = {
   description: desc([
     "",
   ]),
@@ -8402,7 +8402,7 @@ BackgroundFeatureList["healer [origin]"] = {
     RemoveFeat("Healer [Origin]");
   }
 };
-BackgroundFeatureList["lucky [origin["] = {
+BackgroundFeatureList["lucky"] = {
   description: desc([
     "",
   ]),
@@ -8414,7 +8414,7 @@ BackgroundFeatureList["lucky [origin["] = {
     RemoveFeat("Lucky [Origin]");
   }
 };
-BackgroundFeatureList["magic initiate (wizard) [origin]"] = {
+BackgroundFeatureList["magic initiate (wizard)"] = {
   description: desc([
     "",
   ]),
@@ -8426,7 +8426,7 @@ BackgroundFeatureList["magic initiate (wizard) [origin]"] = {
     RemoveFeat("Magic Initiate (Wizard) [Origin]");
   }
 };
-BackgroundFeatureList["tavern brawler [origin]"] = {
+BackgroundFeatureList["tavern brawler"] = {
   description: desc([
     "",
   ]),
@@ -8438,7 +8438,7 @@ BackgroundFeatureList["tavern brawler [origin]"] = {
     RemoveFeat("Tavern Brawler [Origin]");
   }
 };
-BackgroundFeatureList["savage attacker [origin]"] = {
+BackgroundFeatureList["savage attacker"] = {
   description: desc([
     "",
   ]),
@@ -9377,7 +9377,7 @@ RaceSubList["tiefling-infernal"] = {
   },
 };
 //Origin Feats
-FeatsList["alert [origin]"] = {
+FeatsList["alert"] = {
   name: "Alert [Origin]",
   source: [["PHB2024", 200]],
   regExpSearch: /^(?=.*alert).*$/i,
@@ -9390,7 +9390,7 @@ FeatsList["alert [origin]"] = {
     "Immediately after I roll Initiative, I can swap my Initiative with the Initiative of one willing ally in the same combat. I can't make this swap if I or the ally has the Incapacitated condition.",
   ]),
 };
-FeatsList["crafter [origin]"] = {
+FeatsList["crafter"] = {
   name: "Crafter [Origin]",
   source: [["PHB2024", 200]],
   regExpSearch: /^(?=.*crafter).*$/i,
@@ -9417,7 +9417,7 @@ FeatsList["crafter [origin]"] = {
     ],
   }],
 };
-FeatsList["healer [origin]"] = {
+FeatsList["healer"] = {
   name: "Healer [Origin]",
   source: [["PHB2024", 201]],
   regExpSearch: /^(?=.*healer).*$/i,
@@ -9429,7 +9429,7 @@ FeatsList["healer [origin]"] = {
     "Healing Rerolls : Whenever I roll a die to determine the number of Hit Points I restore with a spell or with this feat's Battle Medic benefit, I can reroll the die if it rolls a 1, and I must use the new roll.",
   ]),
 };
-FeatsList["lucky [origin]"] = {
+FeatsList["lucky"] = {
   name: "Lucky [Origin]",
   source: [["PHB2024", 201]],
   regExpSearch: /^(?=.*lucky).*$/i,
@@ -9445,7 +9445,7 @@ FeatsList["lucky [origin]"] = {
     "Disadvantage : When a creature rolls a d20 for an attack roll against I, I can spend 1 Luck Point to impose Disadvantage on that roll.",
   ]),
 };
-FeatsList["magic initiate (cleric) [origin]"] = {
+FeatsList["magic initiate (cleric)"] = {
   name: "Magic Initiate (Cleric) [Origin]",
   source: [["PHB2024", 201]],
   regExpSearch: /^(?=.*magic)(?=.*initiate)(?=.*cleric).*$/i,
@@ -9472,7 +9472,7 @@ FeatsList["magic initiate (cleric) [origin]"] = {
     "I can take this feat more than once, but must choose either the Druid spell list or Wizard spell list.",
   ]),
 };
-FeatsList["magic initiate (druid) [origin]"] = {
+FeatsList["magic initiate (druid)"] = {
   name: "Magic Initiate (Druid) [Origin]",
   source: [["PHB2024", 201]],
   regExpSearch: /^(?=.*magic)(?=.*initiate)(?=.*druid).*$/i,
@@ -9499,7 +9499,7 @@ FeatsList["magic initiate (druid) [origin]"] = {
     "I can take this feat more than once, but must choose either the Cleric spell list or Wizard spell list.",
   ]),
 };
-FeatsList["magic initiate (wizard) [origin]"] = {
+FeatsList["magic initiate (wizard)"] = {
   name: "Magic Initiate (Wizard) [Origin]",
   source: [["PHB2024", 201]],
   regExpSearch: /^(?=.*magic)(?=.*initiate)(?=.*wizard).*$/i,
@@ -9526,7 +9526,7 @@ FeatsList["magic initiate (wizard) [origin]"] = {
     "I can take this feat more than once, but must choose either the Cleric spell list or Druid spell list.",
   ]),
 };
-FeatsList["musician [origin]"] = {
+FeatsList["musician"] = {
   name: "Musician [Origin]",
   source: [["PHB2024", 201]],
   regExpSearch: /^(?=.*musician).*$/i,
@@ -9538,7 +9538,7 @@ FeatsList["musician [origin]"] = {
     "As I finish a Short or Long Rest, I can play a song on a Musical Instrument with which I have proficiency and give Heroic Inspiration to allies who hear the song. The number of allies I can affect in this way equals my Proficiency Bonus.",
   ]),
 };
-FeatsList["savage attacker [origin]"] = {
+FeatsList["savage attacker"] = {
   name: "Savage Attacker [Origin]",
   source: [["PHB2024", 201]],
   regExpSearch: /^(?=.*savage)(?=.*attacker).*$/i,
@@ -9547,7 +9547,7 @@ FeatsList["savage attacker [origin]"] = {
     "I've trained to deal particularly damaging strikes. Once per turn when I hit a target with a weapon, I can roll the weapon's damage dice twice and use either roll against the target.",
   ]),
 };
-FeatsList["skilled [origin]"] = {
+FeatsList["skilled"] = {
   name: "Skilled [Origin]",
   source: [["PHB2024", 201]],
   regExpSearch: /^(?=.*skilled).*$/i,
@@ -9558,7 +9558,7 @@ FeatsList["skilled [origin]"] = {
     "I can take this feat more than once.",
   ]),
 };
-FeatsList["tavern brawler [origin]"] = {
+FeatsList["tavern brawler"] = {
   name: "Tavern Brawler [Origin]",
   source: [["PHB2024", 202]],
   regExpSearch: /^(?=.*tavern)(?=.*brawler).*$/i,
@@ -9586,7 +9586,7 @@ FeatsList["tavern brawler [origin]"] = {
     "Push : When I hit a creature with an Unarmed Strike as part of the Attack action on my turn, I can deal damage to the target and also push it 5 feet away from me. I can use this benefit only once per turn.",
   ]),
 };
-FeatsList["tough [origin]"] = {
+FeatsList["tough"] = {
   name: "Tough [Origin]",
   source: [["PHB2024", 202]],
   regExpSearch: /^(?=.*tough).*$/i,
