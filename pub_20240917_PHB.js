@@ -106,24 +106,24 @@ function archiveSubClass(classKey, subClass, newClassName) {
   }
 }
 function legacySubClassRefactor(classKey, subClassKey, nSC) {
-  var newSubClassName = classKey + "-" + subClassKey
-  var prv = null
+  var newSubClassName = classKey + "-" + subClassKey;
+  var prv = null;
   if (newSubClassName in ClassSubList) {
-    prv = ClassSubList[newSubClassName]
-    AddSubClass(classKey, subClassKey + "_2014", prv)
-    ClassSubList[newSubClassName] = nSC
+    prv = ClassSubList[newSubClassName];
+    AddSubClass(classKey, subClassKey + "_2014", prv);
+    ClassSubList[newSubClassName] = nSC;
   } else {
     if ('replaces' in nSC && classKey + '-' + nSC.replaces in ClassSubList) {
-        prv = ClassSubList[classKey + '-' + nSC.replaces]
+        prv = ClassSubList[classKey + '-' + nSC.replaces];
       }
-    AddSubClass(classKey, subClassKey, nSC)
+    AddSubClass(classKey, subClassKey, nSC);
   }
   if (prv != null) {
-    var newRegex = nSC.regExpSearch
-    var bc = ClassList[classKey]
-    var newClassName = nSC.fullname ? nSC.fullname : bc.name + " (" + nSC.subname + ")"
-    archiveSubClass(classKey, prv, newClassName)
-    nSC.regExpSearch = newRegex
+    var newRegex = nSC.regExpSearch;
+    var bc = ClassList[classKey];
+    var newClassName = nSC.fullname ? nSC.fullname : bc.name + " (" + nSC.subname + ")";
+    archiveSubClass(classKey, prv, newClassName);
+    nSC.regExpSearch = newRegex;
   }
 }
 //Classes
@@ -1779,7 +1779,7 @@ legacyClassRefactor("druid", {
           function (spellKey, spellObj, spName) {
             // only change the spell if it's from druid CurrentSpells object.
             if(spellKey === "speak with animals" && spName === "druid") {
-              spellObj.firstCol = "markedbox" // Always prepared
+              spellObj.firstCol = "markedbox"; // Always prepared
 
             }
           }
@@ -1859,7 +1859,7 @@ legacyClassRefactor("druid", {
           function (spellKey, spellObj, spName) {
             // only change the spell if it's from druid CurrentSpells object.
             if(spellKey === "find familiar" && spName === "druid") {
-              spellObj.firstCol = "markedbox" // Always prepared
+              spellObj.firstCol = "markedbox"; // Always prepared
             }
           }
         ]
@@ -2288,9 +2288,6 @@ legacySubClassRefactor("druid", "stars", {
       name: "Twinkling Constellations",
       source: [["PHB2024", 89]],
       minlevel: 10,
-      description: desc([
-        "My starry form improves, see notes page for improvements. I can also change constellations at the start of each turn.",
-      ]),
       description : desc([
         "While in my starry form, I can change the constellation at the start of each of my turns",
         "The benefit of my constellations improve, see the 3rd page's \"Notes\" section"
@@ -2300,7 +2297,7 @@ legacySubClassRefactor("druid", "stars", {
           function (fields, v) {
             if (v.theWea.luminousarrow && fields.Damage_Die.indexOf('1d8') !== -1) {
               fields.Damage_Die = fields.Damage_Die.replace('1d8', '2d8');
-            };
+            }
           },
           '',
           1
@@ -3262,7 +3259,7 @@ legacyClassRefactor("monk", {
         ]
       },
       description: desc([
-        "Monk weapons: Simple, Martial weapons with the Light property, Unarmed Strike",
+        "Monk weapons: Simple Melee weapons, Martial Melee weapons with the Light property, Unarmed Strike",
         "While wielding Monk weapons and unarmored I can make one unarmed strike as a bonus action",
         "With monk weapons, I can use Dex instead of Str and use the Martial Arts damage die",
       ]),
@@ -4530,7 +4527,7 @@ legacyClassRefactor("ranger", {
 					function (spellKey, spellObj, spName) {
 					// only change the spell if it's from druid CurrentSpells object.
 						if(spellKey === "hunter's mark" && spName === "ranger") {
-							spellObj.firstCol = "markedbox" // Always prepared
+							spellObj.firstCol = "markedbox"; // Always prepared
 
 						}
 					}
@@ -5066,7 +5063,7 @@ legacySubClassRefactor("ranger", "fey wanderer", {
 						if (v.isWeapon && (classes.known.ranger || classes.known.rangerua)) {
 							var rngrLvl = classes.known.ranger ? classes.known.ranger.level : classes.known.rangerua.level;
 							fields.Description += (fields.Description ? '; ' : '') + 'Once per turn per target +1d' + (rngrLvl < 11 ? 4 : 6) + ' psychic damage';
-						};
+						}
 					},
 					"When I hit a creature with a weapon, I can deal an extra 1d4 psychic damage to the target, which can take this extra damage only once per turn. From 11th-level, this damage increases to 1d6.",
 				]
@@ -9211,7 +9208,7 @@ RaceList["tiefling"] = {
   languageProfs: ["Common", 2],
   vision: [["Darkvision", 60]],
   age: " reach maturity in late teens and live about 80 years",
-  height: " are about 6-7 feet tall",
+  height: " are about 3-4 feet tall if small or 4-7 feet tall if medium",
   spellcastingAbility: [4, 5, 6],
   spellcastingBonus: [{
     name: "Otherworldly Presence",
@@ -9381,9 +9378,8 @@ FeatsList["alert"] = {
   name: "Alert [Origin]",
   source: [["PHB2024", 200]],
   regExpSearch: /^(?=.*alert).*$/i,
-  skillstxt: ["I gain Proficiency in three skills or tools of my choice"],
   addMod: [{type: "skill", field: "Init", mod: "prof", text: "I can add my Proficiency Bonus to initiative rolls."}],
-  description: "I add my Prof Bonus to Initiative rolls. I may swap Initiative with one willing creature as long as that creature does not have the Incapacitated condition.",
+  description: "I add my Prof Bonus to Initiative rolls. I may swap Initiative with one willing ally as long as neither of us has the Incapacitated condition.",
   descriptionFull: desc([
     "I gain the following benefits",
     "When I roll Initiative, I can add my Proficiency Bonus to the roll.",
@@ -9437,12 +9433,12 @@ FeatsList["lucky"] = {
   usages: "Proficiency bonus per ",
   usagescalc: "event.value = How('Proficiency Bonus');",
   recovery: "long rest",
-  description: "I gain a number of Luck Points equal to my Prof Bonus and can use them to give yourself Advantage on a D20 Test, or to give a creature who rolls a d20 for an attack roll against Disadvantage on that roll.",
+  description: "I gain a number of Luck Points equal to my Prof Bonus and can use them to give myself Advantage on a D20 Test, or to give a creature who rolls a d20 for an attack roll against me Disadvantage on that roll.",
   descriptionFull: desc([
     "I gain the following benefits.",
     "Luck Point : I have a number of Luck Points equal to my Proficiency Bonus and can spend the points on the benefits below. I regain my expended Luck Points when I finish a Long Rest.",
-    "Advantage : When I roll a d20 for a D20 Test, I can spend 1 Luck Point to give yourself Advantage on the roll.",
-    "Disadvantage : When a creature rolls a d20 for an attack roll against I, I can spend 1 Luck Point to impose Disadvantage on that roll.",
+    "Advantage : When I roll a d20 for a D20 Test, I can spend 1 Luck Point to give myself Advantage on the roll.",
+    "Disadvantage : When a creature rolls a d20 for an attack roll against me, I can spend 1 Luck Point to impose Disadvantage on that roll.",
   ]),
 };
 FeatsList["magic initiate (cleric)"] = {
@@ -9577,7 +9573,7 @@ FeatsList["tavern brawler"] = {
       "My unarmed strikes deal 1d4 damage instead of 1.\n \u2022 As part of the Attack action on my turn, I can deal damage and push the target 5ft away from me."
     ]
   },
-  description: "my Unarmed Strikes deal 1d4 instead of normal damage and as part of the attack action, I can push a target 5 feet as well as deal damage. When I roll a 1 on the damage die I can reroll, but must use the new roll.",
+  description: "My Unarmed Strikes deal 1d4 instead of normal damage and as part of the attack action, I can push a target 5 feet as well as deal damage. When I roll a 1 on the damage die I can reroll, but must use the new roll.",
   descriptionFull: desc([
     "I gain the following benefits.",
     "Enhanced Unarmed Strike : When I hit with my Unarmed Strike and deal damage, I can deal Bludgeoning damage equal to 1d4 plus my Strength modifier instead of the normal damage of an Unarmed Strike.",
