@@ -8500,7 +8500,7 @@ RaceList["aasimar"] = {
     selection: ["light"],
     times: 1,
   }],
-  trait: "Aasimar (Small or Medium Humanoid)\n\nCelestial Resistance : I have Resistance to Necrotic and Radiant damage.\n\nDarkvision : I have Darkvision within a range of 60 feet.\n\nHealing Hands : As a Magic action, I touch a creature and roll a number of d4s equal to my Proficiency Bonus. The creature regains a number of Hit Points equal to the total rolled. Once I use this trait, I can't use it again until I finish a Long Rest.\n\nLight Bearer : I know the Light cantrip. Charisma is my spellcasting ability for it.\n\nCelestial Revelation : When I reach character level 3, I can transform as a Bonus Action using one of the options below (See Notes Page) (choose the option each time I transform). That transformation lasts for 1 minute or until I end it (no action required). Once I transform, I can't do so again until I finish a Long Rest. Once on each of my turns before the transformation ends, I can deal extra damage to one target when I deal damage to it with an attack or a spell. The extra damage equals my Proficiency Bonus, and the extra damage's type is either Necrotic for Necrotic Shroud or Radiant for Heavenly Wings and Inner Radiance.",
+  trait: "Aasimar\nHealing Hands: Once per Long Rest as a Magic action I can touch a creature & restore my Prof Bonus d4s HP.\nLight Bearer: I know the Light cantrip. Charisma is my spellcasting ability for it.\nCelestial Revelation: Once per Long Rest as a Bonus Action I can transform for 1 min or until I end it. (no action) (choose an option each time) (See Notes Page)",
 };
 RaceList["dragonborn"] = {
   regExpSearch: /dragonborn/i,
@@ -8529,7 +8529,7 @@ RaceList["dragonborn"] = {
   age: " reach maturity in late teens and live about 80 years",
   height: " are about 5 - 7 feet tall",
   heightMetric: " are about 1,5 - 2,1 meters tall",
-  trait: "Dragonborn (Medium Humanoid)\n\nDraconic Ancestry: my lineage stems from a dragon progenitor. Choose the kind of dragon from the Draconic Ancestors table. My choice affects my Breath Weapon and Damage Resistance trait as well as my appearance.\n\n",
+  trait: "Dragonborn\nDraconic Ancestry: Use 'Racial Options' above to choose a dragon progenitor, affecting my Breath Weapon, Damage Resistance trait, & appearance.",
   features: {
     "draconic ancestry": {
       name: "Draconic Ancestry",
@@ -8575,70 +8575,70 @@ RaceList["dragonborn"] = {
 RaceSubList["dragonborn-black"] = {
   regExpSearch: /black/i,
   name: "Black Dragonborn",
-  trait: "Black Dragonborn (Medium Humanoid)\n\nAcid Breath Weapon : When I take the Attack action on my turn, I can replace one of my attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus my Constitution modifier and Proficiency Bonus. It does 1d10 Acid damage, half as much damage on a successful save. The damage increases to 2d10 at level 5, 3d10 at level 11, and 4d10 at level 17. I can use this Breath Weapon a number of times equal to my Proficiency Bonus, and I regain all expended uses when I finish a Long Rest.\n\nDamage Resistance : I have Resistance to Acid Damage\n\nDarkvision : I have Darkvision with a range of 60 feet.\n\nDraconic Flight : When I reach character level 5, I can channel draconic magic to give myself temporary flight. As a Bonus Action, I sprout spectral wings on my back that last for 10 minutes or until I retract the wings (no action required) or have the incapacitated condition. During that time I have a Fly Speed equal to my Speed. My wings appear to be made of Acid. Once I use this trait, I can't use it again until I finish a Long Rest.",
+  trait: "Black Dragonborn\nAcid Breath Weapon: When I Attack on my turn, I can make one of my attacks an exhalation of magical energy (a 15-foot Cone, or a 30-foot Line 5 feet wide) (choose each time) in which each creature must make a Dex save (DC 8 + Con modifier + Prof Bonus) or take 1d10 (2d10 at level 5, 3d10 at level 11, 4d10 at level 17) Acid damage or half on a pass. I can use this Breath Weapon my Prof Bonus times per Long Rest.\nDraconic Flight: When I reach character level 5, once per Long Rest as a Bonus Action I can sprout spectral Acid wings on my back that last for 10 min, until I retract them (no action), or I become Incapacitated, during which I have a Fly Speed equal to my Speed.",
   dmgres: ["Acid"],
 };
 RaceSubList["dragonborn-blue"] = {
   regExpSearch: /^(?=.*dragonborn)(?=.*blue).*$/i,
   name: "Blue Dragonborn",
   sortname: "Dragonborn, Blue",
-  trait: "Blue Dragonborn (Medium Humanoid)\n\nLightning Breath Weapon : When I take the Attack action on my turn, I can replace one of my attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus my Constitution modifier and Proficiency Bonus. It does 1d10 Lightning damage, half as much damage on a successful save. The damage increases to 2d10 at level 5, 3d10 at level 11, and 4d10 at level 17. I can use this Breath Weapon a number of times equal to my Proficiency Bonus, and I regain all expended uses when I finish a Long Rest.\n\nDamage Resistance : I have Resistance to Lightning Damage\n\nDarkvision : I have Darkvision with a range of 60 feet.\n\nDraconic Flight : When I reach character level 5, I can channel draconic magic to give myself temporary flight. As a Bonus Action, I sprout spectral wings on my back that last for 10 minutes or until I retract the wings (no action required) or have the incapacitated condition. During that time I have a Fly Speed equal to my Speed. My wings appear to be made of Lightning. Once I use this trait, I can't use it again until I finish a Long Rest.",
+  trait: "Blue Dragonborn\nLightning Breath Weapon: When I Attack on my turn, I can make one of my attacks an exhalation of magical energy (a 15-foot Cone, or a 30-foot Line 5 feet wide) (choose each time) in which each creature must make a Dex save (DC 8 + Con modifier + Prof Bonus) or take 1d10 (2d10 at level 5, 3d10 at level 11, 4d10 at level 17) Lightning damage or half on a pass. I can use this Breath Weapon my Prof Bonus times per Long Rest.\nDraconic Flight: When I reach character level 5, once per Long Rest as a Bonus Action I can sprout spectral Lightning wings on my back that last for 10 min, until I retract them (no action), or I become Incapacitated, during which I have a Fly Speed equal to my Speed.",
   dmgres: ["Lightning"]
 };
 RaceSubList["dragonborn-brass"] = {
   regExpSearch: /^(?=.*dragonborn)(?=.*brass).*$/i,
   name: "Brass Dragonborn",
   sortname: "Dragonborn, Brass",
-  trait: "Brass Dragonborn (Medium Humanoid)\n\nFire Breath Weapon : When I take the Attack action on my turn, I can replace one of my attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus my Constitution modifier and Proficiency Bonus. It does 1d10 Fire damage, half as much damage on a successful save. The damage increases to 2d10 at level 5, 3d10 at level 11, and 4d10 at level 17. I can use this Breath Weapon a number of times equal to my Proficiency Bonus, and I regain all expended uses when I finish a Long Rest.\n\nDamage Resistance : I have Resistance to Fire Damage\n\nDarkvision : I have Darkvision with a range of 60 feet.\n\nDraconic Flight : When I reach character level 5, I can channel draconic magic to give myself temporary flight. As a Bonus Action, I sprout spectral wings on my back that last for 10 minutes or until I retract the wings (no action required) or have the incapacitated condition. During that time I have a Fly Speed equal to my Speed. My wings appear to be made of Fire. Once I use this trait, I can't use it again until I finish a Long Rest.",
+  trait: "Brass Dragonborn\nFire Breath Weapon: When I Attack on my turn, I can make one of my attacks an exhalation of magical energy (a 15-foot Cone, or a 30-foot Line 5 feet wide) (choose each time) in which each creature must make a Dex save (DC 8 + Con modifier + Prof Bonus) or take 1d10 (2d10 at level 5, 3d10 at level 11, 4d10 at level 17) Fire damage or half on a pass. I can use this Breath Weapon my Prof Bonus times per Long Rest.\nDraconic Flight: When I reach character level 5, once per Long Rest as a Bonus Action I can sprout spectral Fire wings on my back that last for 10 min, until I retract them (no action), or I become Incapacitated, during which I have a Fly Speed equal to my Speed.",
   dmgres: ["Fire"]
 };
 RaceSubList["dragonborn-bronze"] = {
   regExpSearch: /^(?=.*dragonborn)(?=.*bronze).*$/i,
   name: "Bronze Dragonborn",
   sortname: "Dragonborn, Bronze",
-  trait: "Bronze Dragonborn (Medium Humanoid)\n\nLightning Breath Weapon : When I take the Attack action on my turn, I can replace one of my attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus my Constitution modifier and Proficiency Bonus. It does 1d10 Lightning damage, half as much damage on a successful save. The damage increases to 2d10 at level 5, 3d10 at level 11, and 4d10 at level 17. I can use this Breath Weapon a number of times equal to my Proficiency Bonus, and I regain all expended uses when I finish a Long Rest.\n\nDamage Resistance : I have Resistance to Lightning Damage\n\nDarkvision : I have Darkvision with a range of 60 feet.\n\nDraconic Flight : When I reach character level 5, I can channel draconic magic to give myself temporary flight. As a Bonus Action, I sprout spectral wings on my back that last for 10 minutes or until I retract the wings (no action required) or have the incapacitated condition. During that time I have a Fly Speed equal to my Speed. My wings appear to be made of Lightning. Once I use this trait, I can't use it again until I finish a Long Rest.",
+  trait: "Bronze Dragonborn\nLightning Breath Weapon: When I Attack on my turn, I can make one of my attacks an exhalation of magical energy (a 15-foot Cone, or a 30-foot Line 5 feet wide) (choose each time) in which each creature must make a Dex save (DC 8 + Con modifier + Prof Bonus) or take 1d10 (2d10 at level 5, 3d10 at level 11, 4d10 at level 17) Lightning damage or half on a pass. I can use this Breath Weapon my Prof Bonus times per Long Rest.\nDraconic Flight: When I reach character level 5, once per Long Rest as a Bonus Action I can sprout spectral Lightning wings on my back that last for 10 min, until I retract them (no action), or I become Incapacitated, during which I have a Fly Speed equal to my Speed.",
   dmgres: ["Lightning"]
 };
 RaceSubList["dragonborn-copper"] = {
   regExpSearch: /^(?=.*dragonborn)(?=.*copper).*$/i,
   name: "Copper Dragonborn",
   sortname: "Dragonborn, Copper",
-  trait: "Copper Dragonborn (Medium Humanoid)\n\nAcid Breath Weapon : When I take the Attack action on my turn, I can replace one of my attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus my Constitution modifier and Proficiency Bonus. It does 1d10 Acid damage, half as much damage on a successful save. The damage increases to 2d10 at level 5, 3d10 at level 11, and 4d10 at level 17. I can use this Breath Weapon a number of times equal to my Proficiency Bonus, and I regain all expended uses when I finish a Long Rest.\n\nDamage Resistance : I have Resistance to Acid Damage\n\nDarkvision : I have Darkvision with a range of 60 feet.\n\nDraconic Flight : When I reach character level 5, I can channel draconic magic to give myself temporary flight. As a Bonus Action, I sprout spectral wings on my back that last for 10 minutes or until I retract the wings (no action required) or have the incapacitated condition. During that time I have a Fly Speed equal to my Speed. My wings appear to be made of Acid. Once I use this trait, I can't use it again until I finish a Long Rest.",
+  trait: "Copper Dragonborn\nAcid Breath Weapon: When I Attack on my turn, I can make one of my attacks an exhalation of magical energy (a 15-foot Cone, or a 30-foot Line 5 feet wide) (choose each time) in which each creature must make a Dex save (DC 8 + Con modifier + Prof Bonus) or take 1d10 (2d10 at level 5, 3d10 at level 11, 4d10 at level 17) Acid damage or half on a pass. I can use this Breath Weapon my Prof Bonus times per Long Rest.\nDraconic Flight: When I reach character level 5, once per Long Rest as a Bonus Action I can sprout spectral Acid wings on my back that last for 10 min, until I retract them (no action), or I become Incapacitated, during which I have a Fly Speed equal to my Speed.",
   dmgres: ["Acid"]
 };
 RaceSubList["dragonborn-gold"] = {
   regExpSearch: /^(?=.*dragonborn)(?=.*gold).*$/i,
   name: "Gold Dragonborn",
   sortname: "Dragonborn, Gold",
-  trait: "Gold Dragonborn (Medium Humanoid)\n\nFire Breath Weapon : When I take the Attack action on my turn, I can replace one of my attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus my Constitution modifier and Proficiency Bonus. It does 1d10 Fire damage, half as much damage on a successful save. The damage increases to 2d10 at level 5, 3d10 at level 11, and 4d10 at level 17. I can use this Breath Weapon a number of times equal to my Proficiency Bonus, and I regain all expended uses when I finish a Long Rest.\n\nDamage Resistance : I have Resistance to Fire Damage\n\nDarkvision : I have Darkvision with a range of 60 feet.\n\nDraconic Flight : When I reach character level 5, I can channel draconic magic to give myself temporary flight. As a Bonus Action, I sprout spectral wings on my back that last for 10 minutes or until I retract the wings (no action required) or have the incapacitated condition. During that time I have a Fly Speed equal to my Speed. My wings appear to be made of Fire. Once I use this trait, I can't use it again until I finish a Long Rest.",
+  trait: "Gold Dragonborn\nFire Breath Weapon: When I Attack on my turn, I can make one of my attacks an exhalation of magical energy (a 15-foot Cone, or a 30-foot Line 5 feet wide) (choose each time) in which each creature must make a Dex save (DC 8 + Con modifier + Prof Bonus) or take 1d10 (2d10 at level 5, 3d10 at level 11, 4d10 at level 17) Fire damage or half on a pass. I can use this Breath Weapon my Prof Bonus times per Long Rest.\nDraconic Flight: When I reach character level 5, once per Long Rest as a Bonus Action I can sprout spectral Fire wings on my back that last for 10 min, until I retract them (no action), or I become Incapacitated, during which I have a Fly Speed equal to my Speed.",
   dmgres: ["Fire"]
 };
 RaceSubList["dragonborn-green"] = {
   regExpSearch: /^(?=.*dragonborn)(?=.*green).*$/i,
   name: "Green Dragonborn",
   sortname: "Dragonborn, Green",
-  trait: "Green Dragonborn (Medium Humanoid)\n\nPoison Breath Weapon : When I take the Attack action on my turn, I can replace one of my attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus my Constitution modifier and Proficiency Bonus. It does 1d10 Poison damage, half as much damage on a successful save. The damage increases to 2d10 at level 5, 3d10 at level 11, and 4d10 at level 17. I can use this Breath Weapon a number of times equal to my Proficiency Bonus, and I regain all expended uses when I finish a Long Rest.\n\nDamage Resistance : I have Resistance to Poison Damage\n\nDarkvision : I have Darkvision with a range of 60 feet.\n\nDraconic Flight : When I reach character level 5, I can channel draconic magic to give myself temporary flight. As a Bonus Action, I sprout spectral wings on my back that last for 10 minutes or until I retract the wings (no action required) or have the incapacitated condition. During that time I have a Fly Speed equal to my Speed. My wings appear to be made of Poison. Once I use this trait, I can't use it again until I finish a Long Rest.",
+  trait: "Green Dragonborn\nPoison Breath Weapon: When I Attack on my turn, I can make one of my attacks an exhalation of magical energy (a 15-foot Cone, or a 30-foot Line 5 feet wide) (choose each time) in which each creature must make a Dex save (DC 8 + Con modifier + Prof Bonus) or take 1d10 (2d10 at level 5, 3d10 at level 11, 4d10 at level 17) Poison damage or half on a pass. I can use this Breath Weapon my Prof Bonus times per Long Rest.\nDraconic Flight: When I reach character level 5, once per Long Rest as a Bonus Action I can sprout spectral Poison wings on my back that last for 10 min, until I retract them (no action), or I become Incapacitated, during which I have a Fly Speed equal to my Speed.",
   dmgres: ["Poison"]
 };
 RaceSubList["dragonborn-red"] = {
   regExpSearch: /^(?=.*dragonborn)(?=.*red).*$/i,
   name: "Red Dragonborn",
   sortname: "Dragonborn, Red",
-  trait: "Red Dragonborn (Medium Humanoid)\n\nFire Breath Weapon : When I take the Attack action on my turn, I can replace one of my attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus my Constitution modifier and Proficiency Bonus. It does 1d10 Fire damage, half as much damage on a successful save. The damage increases to 2d10 at level 5, 3d10 at level 11, and 4d10 at level 17. I can use this Breath Weapon a number of times equal to my Proficiency Bonus, and I regain all expended uses when I finish a Long Rest.\n\nDamage Resistance : I have Resistance to Fire Damage\n\nDarkvision : I have Darkvision with a range of 60 feet.\n\nDraconic Flight : When I reach character level 5, I can channel draconic magic to give myself temporary flight. As a Bonus Action, I sprout spectral wings on my back that last for 10 minutes or until I retract the wings (no action required) or have the incapacitated condition. During that time I have a Fly Speed equal to my Speed. My wings appear to be made of Fire. Once I use this trait, I can't use it again until I finish a Long Rest.",
+  trait: "Red Dragonborn\nFire Breath Weapon: When I Attack on my turn, I can make one of my attacks an exhalation of magical energy (a 15-foot Cone, or a 30-foot Line 5 feet wide) (choose each time) in which each creature must make a Dex save (DC 8 + Con modifier + Prof Bonus) or take 1d10 (2d10 at level 5, 3d10 at level 11, 4d10 at level 17) Fire damage or half on a pass. I can use this Breath Weapon my Prof Bonus times per Long Rest.\nDraconic Flight: When I reach character level 5, once per Long Rest as a Bonus Action I can sprout spectral Fire wings on my back that last for 10 min, until I retract them (no action), or I become Incapacitated, during which I have a Fly Speed equal to my Speed.",
   dmgres: ["Fire"]
 };
 RaceSubList["dragonborn-silver"] = {
   regExpSearch: /^(?=.*dragonborn)(?=.*silver).*$/i,
   name: "Silver Dragonborn",
   sortname: "Dragonborn, Silver",
-  trait: "Silver Dragonborn (Medium Humanoid)\n\nCold Breath Weapon : When I take the Attack action on my turn, I can replace one of my attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus my Constitution modifier and Proficiency Bonus. It does 1d10 Cold damage, half as much damage on a successful save. The damage increases to 2d10 at level 5, 3d10 at level 11, and 4d10 at level 17. I can use this Breath Weapon a number of times equal to my Proficiency Bonus, and I regain all expended uses when I finish a Long Rest.\n\nDamage Resistance : I have Resistance to Cold Damage\n\nDarkvision : I have Darkvision with a range of 60 feet.\n\nDraconic Flight : When I reach character level 5, I can channel draconic magic to give myself temporary flight. As a Bonus Action, I sprout spectral wings on my back that last for 10 minutes or until I retract the wings (no action required) or have the incapacitated condition. During that time I have a Fly Speed equal to my Speed. My wings appear to be made of Ice. Once I use this trait, I can't use it again until I finish a Long Rest.",
+  trait: "Silver Dragonborn\nCold Breath Weapon: When I Attack on my turn, I can make one of my attacks an exhalation of magical energy (a 15-foot Cone, or a 30-foot Line 5 feet wide) (choose each time) in which each creature must make a Dex save (DC 8 + Con modifier + Prof Bonus) or take 1d10 (2d10 at level 5, 3d10 at level 11, 4d10 at level 17) Cold damage or half on a pass. I can use this Breath Weapon my Prof Bonus times per Long Rest.\nDraconic Flight: When I reach character level 5, once per Long Rest as a Bonus Action I can sprout spectral Cold wings on my back that last for 10 min, until I retract them (no action), or I become Incapacitated, during which I have a Fly Speed equal to my Speed.",
   dmgres: ["Cold"]
 };
 RaceSubList["dragonborn-white"] = {
   regExpSearch: /^(?=.*dragonborn)(?=.*white).*$/i,
   name: "White Dragonborn",
   sortname: "Dragonborn, White",
-  trait: "White Dragonborn (Medium Humanoid)\n\nCold Breath Weapon : When I take the Attack action on my turn, I can replace one of my attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus my Constitution modifier and Proficiency Bonus. It does 1d10 Cold damage, half as much damage on a successful save. The damage increases to 2d10 at level 5, 3d10 at level 11, and 4d10 at level 17. I can use this Breath Weapon a number of times equal to my Proficiency Bonus, and I regain all expended uses when I finish a Long Rest.\n\nDamage Resistance : I have Resistance to Cold Damage\n\nDarkvision : I have Darkvision with a range of 60 feet.\n\nDraconic Flight : When I reach character level 5, I can channel draconic magic to give myself temporary flight. As a Bonus Action, I sprout spectral wings on my back that last for 10 minutes or until I retract the wings (no action required) or have the incapacitated condition. During that time I have a Fly Speed equal to my Speed. My wings appear to be made of Ice. Once I use this trait, I can't use it again until I finish a Long Rest.",
+  trait: "White Dragonborn\nCold Breath Weapon: When I Attack on my turn, I can make one of my attacks an exhalation of magical energy (a 15-foot Cone, or a 30-foot Line 5 feet wide) (choose each time) in which each creature must make a Dex save (DC 8 + Con modifier + Prof Bonus) or take 1d10 (2d10 at level 5, 3d10 at level 11, 4d10 at level 17) Cold damage or half on a pass. I can use this Breath Weapon my Prof Bonus times per Long Rest.\nDraconic Flight: When I reach character level 5, once per Long Rest as a Bonus Action I can sprout spectral Cold wings on my back that last for 10 min, until I retract them (no action), or I become Incapacitated, during which I have a Fly Speed equal to my Speed.",
   dmgres: ["Cold"]
 };
 RaceList["dwarf"] = {
@@ -8674,7 +8674,7 @@ RaceList["dwarf"] = {
       ]),
     },
   },
-  trait: "Dwarf (Medium Humanoid)\n\nDarkvision : I have Darkvision with a range of 120 feet.\n\nDwarven Resilience : I have Resistance to Poison damage. I also have Advantage on saving throws I make to avoid or end the Poisoned condition.\n\nDwarven Toughness : my Hit Point maximum increases by 1, and it increases by 1 again whenever I gain a level.\n\nStonecunning : As a Bonus Action, I gain Tremorsense with a range of 60 feet for 10 minutes. I must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked. I can use this Bonus Action a number of times equal to my Proficiency Bonus, and I regain all expended uses when I finish a Long Rest.",
+  trait: "Dwarf\nDwarven Toughness: I add 1 to my max HP every level, including 1.\nStonecunning: As a Bonus Action I gain Tremorsense with a range of 60 feet for 10 min when on or touching natural or worked stone. I can use this my Prof Bonus times per Long Rest.",
 };
 RaceList["elf"] = {
   regExpSearch: /^(?=.*elf).*$/i,
@@ -8690,7 +8690,7 @@ RaceList["elf"] = {
   skillstxt: "Choose one between Insight, Perception, or Survival",
   age: " reach maturity in early 20s and live about 750 years",
   height: " are about 5-6 feet tall",
-  trait: "Elf (Medium Humanoid)\n\nDarkvision : I have Darkvision with a range of 60 feet.\n\nElven Lineage : I am part of a lineage that grants me supernatural abilities. Choose a lineage from the Elven Lineages table. I gain the level 1 benefit of that lineage. When I reach character levels 3 and 5, I learn a higher-level spell, as shown on the table. I always have that spell prepared. I can cast it once without a spell slot, and I regain the ability to cast it in that way when I finish a Long Rest. I can also cast the spell using any spell slots I have of the appropriate level. Intelligence, Wisdom, or Charisma is my spellcasting ability for the spells I cast with this trait. (Choose the ability when I select the lineage).\n\nFey Ancestry : I have Advantage on saving throws I make to avoid or end the Charmed condition.\n\nKeen Senses : I have proficiency in the Insight, Perception, or Survival skill.\n\nTrance : I don't need to sleep, and magic can't put me to sleep. I can finish a Long Rest in 4 hours if I spend those hours in a trance like meditation, during which I retain consciousness.",
+  trait: "Elf\nElven Lineage: Use 'Racial Options' above to choose a lineage that grants me supernatural abilities. Int, Wis, or Cha is my spellcasting ability for spells I cast with this trait. (Choose the ability with the lineage)\nTrance: I don't need to sleep, and magic can't put me to sleep. I can finish a Long Rest in 4 hours if I spend those hours in a trance-like meditation, during which I retain consciousness",
   variants: ["dark", "high", "wood"]
 };
 RaceSubList["elf-dark"] = {
@@ -8706,7 +8706,7 @@ RaceSubList["elf-dark"] = {
     times: 1,
     firstCol: "atwill",
   }],
-  trait: "Drow (Medium Humanoid)\n\nDarkvision : I have Darkvision with a range of 120 feet.\n\nDrow Lineage : I am part of a lineage that grants me supernatural abilities. I gain the Dancing Lights cantrip. When I reach character level 3 I learn the Faerie Fire spell, and when I reach character level 5 I learn the Darkness spell. I always have that spell prepared. I can cast it once without a spell slot, and I regain the ability to cast it in that way when I finish a Long Rest. I can also cast the spell using any spell slots I have of the appropriate level. Intelligence,Wisdom, or Charisma is my spellcasting ability for the spells I cast with this trait. (Choose the ability when I select the lineage).\n\nFey Ancestry : I have Advantage on saving throws I make to avoid or end the Charmed condition.\n\nKeen Senses : I have proficiency in the Insight, Perception, or Survival skill.\n\nTrance : I don't need to sleep, and magic can't put me to sleep. I can finish a Long Rest in 4 hours if I spend those hours in a trance like meditation, during which I retain consciousness.",
+  trait: "Drow\nDrow Lineage: I gain the Dancing Lights cantrip. I learn Faerie Fire at level 3 & Darkness at level 5; These spells are always Prepared & I can cast them without a spell slot once each per Long Rest or use Spell Slots; Int, Wis, or Cha is my spellcasting ability. (Choose the ability with the lineage).\nTrance: I don't need to sleep & magic can't put me to sleep. I can finish a Long Rest in 4 hours if I spend that time in a trance like meditation, during which I retain consciousness.",
   features: {
     "drow lineage3": {
       name: "Faerie Fire",
@@ -8756,7 +8756,7 @@ RaceSubList["elf-high"] = {
     times: 1,
     firstCol: "atwill",
   }],
-  trait: "High Elf (Medium Humanoid)\n\nDarkvision : I have Darkvision with a range of 60 feet.\n\nHigh Elf Lineage : I am part of a lineage that grants me supernatural abilities. I gain the Prestidigitation cantrip. Whenever I finish a Long Rest, I can replace that cantrip with a different cantrip from the Wizard spell list. When I reach character level 3 I learn the Detect Magic spell, and when I reach character level 5 I learn the Misty Step spell. I always have that spell prepared. I can cast it once without a spell slot, and I regain the ability to cast it in that way when I finish a Long Rest. I can also cast the spell using any spell slots I have of the appropriate level. Intelligence,Wisdom, or Charisma is my spellcasting ability for the spells I cast with this trait. (Choose the ability when I select the lineage).\n\nFey Ancestry : I have Advantage on saving throws I make to avoid or end the Charmed condition.\n\nKeen Senses : I have proficiency in the Insight, Perception, or Survival skill.\n\nTrance : I don't need to sleep, and magic can't put me to sleep. I can finish a Long Rest in 4 hours if I spend those hours in a trance like meditation, during which I retain consciousness.",
+  trait: "High Elf\nHigh Elf Lineage: I gain the Prestidigitation cantrip & can replace it with another from the Wizard spell list at the end of a Long Rest. I learn Detect Magic at level 3 & Misty Step at level 5; These spells are always Prepared & I can cast them without a spell slot once each per Long Rest or use Spell Slots; Int, Wis, or Cha is my spellcasting ability. (Choose the ability with the lineage).\nTrance: I don't need to sleep & magic can't put me to sleep. I can finish a Long Rest in 4 hours if I spend that time in a trance like meditation, during which I retain consciousness.",
   features: {
     "high elf lineage3": {
       name: "Detect Magic",
@@ -8805,7 +8805,7 @@ RaceSubList["elf-wood"] = {
     times: 1,
     firstCol: "atwill",
   }],
-  trait: "Wood Elf (Medium Humanoid)\n\nDarkvision : I have Darkvision with a range of 60 feet.\n\nWood Elf Lineage : I am part of a lineage that grants me supernatural abilities. I gain the Druidcraft cantrip. When I reach character level 3 I learn the Longstrider spell, and when I reach character level 5 I learn the Pass without Trace spell. I always have that spell prepared. I can cast it once without a spell slot, and I regain the ability to cast it in that way when I finish a Long Rest. I can also cast the spell using any spell slots I have of the appropriate level. Intelligence,Wisdom, or Charisma is my spellcasting ability for the spells I cast with this trait. (Choose the ability when I select the lineage).\n\nFey Ancestry : I have Advantage on saving throws I make to avoid or end the Charmed condition.\n\nKeen Senses : I have proficiency in the Insight, Perception, or Survival skill.\n\nTrance : I don't need to sleep, and magic can't put me to sleep. I can finish a Long Rest in 4 hours if I spend those hours in a trance like meditation, during which I retain consciousness.",
+  trait: "Wood Elf\nWood Elf Lineage: I gain the Druidcraft cantrip. I learn Longstrider at level 3 & Pass without Trace at level 5; These spells are always Prepared & I can cast them without a spell slot once each per Long Rest or use Spell Slots; Int, Wis, or Cha is my spellcasting ability. (Choose the ability when I select the lineage)\nTrance: I don't need to sleep & magic can't put me to sleep. I can finish a Long Rest in 4 hours if I spend that time in a trance like meditation, during which I retain consciousness.",
   features: {
     "wood elf lineage3": {
       name: "Longstrider",
@@ -8850,10 +8850,11 @@ RaceList["gnome"] = {
   size: 4,
   speed: {walk: {spd: 30, enc: 20}},
   languageProfs: ["Common", 2],
+  savetxt: {text: ["Adv. on Int, Wis, and Cha Saves; "]},
   vision: [["Darkvision", 60]],
   age: " reach maturity in early 20s and live about 425 years",
   height: " are about 3-4 feet tall",
-  trait: "Forest Gnome (Small Humanoid)\n\nDarkvision : I have Darkvision with a range of 60 feet.\n\nGnomish Lineage : I am part of a lineage that grants me supernatural abilities. Choose one of the following options, whichever one I choose Intelligence, Wisdom, or Charisma is my spellcasting ability for the spells I cast with this trait (choose the ability when I select the lineage).\n\nGnomish Cunning : I have Advantage on Intelligence, Wisdom, and Charisma saving throws.",
+  trait: "Gnome\nGnomish Lineage: Use 'Racial Options' above to choose a lineage. I can choose Int, Wis, or Cha as my spellcasting ability for spells I cast with this trait (choose the ability with the lineage).\n\nGnomish Cunning: I have Advantage on Intelligence, Wisdom, and Charisma saving throws.",
   variants: ["forest", "rock"]
 };
 RaceSubList["gnome-forest"] = {
@@ -8869,7 +8870,7 @@ RaceSubList["gnome-forest"] = {
     times: 1,
     firstCol: "atwill",
   }],
-  trait: "Gnome (Small Humanoid)\n\nDarkvision : I have Darkvision with a range of 60 feet.\n\nForest Gnome Lineage : I know the Minor Illusion cantrip. I also always have the Speak with Animals spell prepared. I can cast it without a spell slot a number of times equal to my Proficiency Bonus and I regain all expended uses when I finish a Long Rest. I can also use any spell slots I have to cast the spell.\n\nGnomish Cunning : I have Advantage on Intelligence, Wisdom, and Charisma saving throws.",
+  trait: "Forest Gnome\nForest Gnome Lineage: I know the Minor Illusion cantrip. I always have Speak with Animals Prepared & can cast it without a spell slot my Prof Bonus times per Long Rest or use Spell slots.\n\nGnomish Cunning: I have Advantage on Intelligence, Wisdom, and Charisma saving throws.",
   features: {
     "forest gnome lineage": {
       name: "Forest Gnome Lineage",
@@ -8903,7 +8904,7 @@ RaceSubList["gnome-rock"] = {
     times: 2,
     firstCol: "atwill",
   }],
-  trait: "Rock Gnome (Small Humanoid)\n\nDarkvision : I have Darkvision with a range of 60 feet.\n\nRock Gnome Lineage : I know the Mending and Prestidigitation cantrips. In addition, I can spend 10 minutes casting Prestidigitation to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When I create the device, I determine its function by choosing one effect from Prestidigitation; the device produces that effect whenever I or another creature takes a Bonus Action to activate it with a touch. If the chosen effect has options for the device when I create it. For example, if I choose the spell's ignite extinguish effect, I determine whether the device ignites or extinguishes fire; the device doesn't do both. I can have three such devices in existence at a time, and each falls apart 8 hours after its creation or when I dismantle it with a touch as a Utilize action.\n\nGnomish Cunning : I have Advantage on Intelligence, Wisdom, and Charisma saving throws.",
+  trait: "Rock Gnome\nRock Gnome Lineage: I know the Mending & Prestidigitation cantrips. I can create a Tiny clockwork device (AC 5, 1 HP) if I spend 10 min casting Prestidigitation; I choose (one option of) one effect, which the device produces when a creature uses a Bonus Action to activate it via touch. I can have three such devices in existence at a time, and each falls apart after 8 hours or when I dismantle it via touch as a Utilize action.\n\nGnomish Cunning: I have Advantage on Intelligence, Wisdom, and Charisma saving throws.",
   features: {
     "rock gnome lineage": {
       name: "Clockwork Devices",
@@ -8926,10 +8927,10 @@ RaceList["goliath"] = {
   size: 3,
   speed: {walk: {spd: 35, enc: 25}},
   languageProfs: ["Common", 2],
-  savetxt: {adv_vs: ["ending the Grappled condition"]},
+  savetxt: {text: ["Adv. on Ability Checks vs. ending the Grappled condition; "]},
   age: " reach maturity in late teens and live about 80 years",
   height: " are about 7-8 feet tall",
-  trait: "Goliath (Medium Humanoid)\n\nLarge Form : Starting at 5th level, I can change my size to Large as Bonus Action if I'm in a big enough space. This transformation lasts for 10 minutes or until I end it (no action required). For that duration, I have Advantage on Strength checks, and my Speed increases by 10 feet. Once I use this trait, I can't use it again until I finish a Long Rest.\n\nPowerful Build : I have Advantage on any saving throw I make to end the Grappled condition. I also count as one size larger when determining my carrying capacity.",
+  trait: "Goliath\nLarge Form: Starting at 5th level, once per Long Rest I can change my size to Large as a Bonus Action if I'm in a big enough space for 10 min or until I end it (no action). While Large I have Adv on Str checks and my Speed increases by 10 ft.\nPowerful Build: I count as one size larger when determining my carrying capacity.",
   carryingCapacity: 2,
   variants: ["cloud", "fire", "frost", "hill", "stone", "storm"]
 };
@@ -8937,7 +8938,7 @@ RaceSubList["goliath-cloud"] = {
   regExpSearch: /^(?=.*goliath)(?=.*cloud).*$/i,
   name: "Cloud Goliath",
   sortname: "Goliath, Cloud",
-  trait: "Cloud Goliath (Medium Humanoid)\n\nGiant Ancestry (Cloud's Jaunt (Cloud Giant)) : As a Bonus Action I magically teleport up to 30 feet to an unoccupied space I can see.\n\nLarge Form : Starting at 5th level, I can change my size to Large as Bonus Action if I'm in a big enough space. This transformation lasts for 10 minutes or until I end it (no action required). For that duration, I have Advantage on Strength checks, and my Speed increases by 10 feet. Once I use this trait, I can't use it again until I finish a Long Rest.\n\nPowerful Build : I have Advantage on any saving throw I make to end the Grappled condition. I also count as one size larger when determining my carrying capacity.",
+  trait: "Cloud Goliath\nGiant Ancestry (Cloud's Jaunt (Cloud Giant)): As a Bonus Action I magically teleport up to 30 ft to an unoccupied space I can see.\nLarge Form: Starting at 5th level, once per Long Rest I can change my size to Large as a Bonus Action if I'm in a big enough space for 10 min or until I end it (no action). While Large I have Adv on Str checks and my Speed increases by 10 ft.\nPowerful Build: I count as one size larger when determining my carrying capacity.",
   carryingCapacity: 2,
   features: {
     "cloud's jaunt": {
@@ -8969,7 +8970,7 @@ RaceSubList["goliath-fire"] = {
   regExpSearch: /^(?=.*goliath)(?=.*fire).*$/i,
   name: "Fire Goliath",
   sortname: "Goliath, Fire",
-  trait: "Fire Goliath (Medium Humanoid)\n\nGiant Ancestry (Fire's Burn (Fire Giant)) : When I hit a target with an attack roll and deal damage to it, I can also deal 1d10 Fire damage to that target.\n\nLarge Form : Starting at 5th level, I can change my size to Large as Bonus Action if I'm in a big enough space. This transformation lasts for 10 minutes or until I end it (no action required). For that duration, I have Advantage on Strength checks, and my Speed increases by 10 feet. Once I use this trait, I can't use it again until I finish a Long Rest.\n\nPowerful Build : I have Advantage on any saving throw I make to end the Grappled condition. I also count as one size larger when determining my carrying capacity.",
+  trait: "Fire Goliath\nGiant Ancestry (Fire's Burn (Fire Giant)): When I hit a target with an attack roll and deal damage to it I can also deal 1d10 Fire damage to that target.\nLarge Form: Starting at 5th level, once per Long Rest I can change my size to Large as a Bonus Action if I'm in a big enough space for 10 min or until I end it (no action). While Large I have Adv on Str checks and my Speed increases by 10 ft.\nPowerful Build: I count as one size larger when determining my carrying capacity.",
   carryingCapacity: 2,
   features: {
     "fire's burn": {
@@ -9001,7 +9002,7 @@ RaceSubList["goliath-frost"] = {
   regExpSearch: /^(?=.*goliath)(?=.*frost).*$/i,
   name: "Frost Goliath",
   sortname: "Goliath, Frost",
-  trait: "Frost Goliath (Medium Humanoid)\n\nGiant Ancestry (Frost's Chill (Frost Giant)) : When I hit a target with an attack roll and deal damage to it, I can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of my next turn.\n\nLarge Form : Starting at 5th level, I can change my size to Large as Bonus Action if I'm in a big enough space. This transformation lasts for 10 minutes or until I end it (no action required). For that duration, I have Advantage on Strength checks, and my Speed increases by 10 feet. Once I use this trait, I can't use it again until I finish a Long Rest.\n\nPowerful Build : I have Advantage on any saving throw I make to end the Grappled condition. I also count as one size larger when determining my carrying capacity.",
+  trait: "Frost Goliath\nGiant Ancestry (Frost's Chill (Frost Giant)): When I hit a target with an attack roll and deal damage I can also deal 1d6 Cold damage & reduce its Speed by 10 ft until the start of my next turn.\nLarge Form: Starting at 5th level, once per Long Rest I can change my size to Large as a Bonus Action if I'm in a big enough space for 10 min or until I end it (no action). While Large I have Adv on Str checks and my Speed increases by 10 ft.\nPowerful Build: I count as one size larger when determining my carrying capacity.",
   carryingCapacity: 2,
   features: {
     "frost's chill": {
@@ -9033,7 +9034,7 @@ RaceSubList["goliath-hill"] = {
   regExpSearch: /^(?=.*goliath)(?=.*hill).*$/i,
   name: "Hill Goliath",
   sortname: "Goliath, Hill",
-  trait: "Hill Goliath (Medium Humanoid)\n\nGiant Ancestry (Hill's Tumble (Hill Giant)) : When I hit a Large or smaller creature with an Attack Roll and deal damage to it, I can give that target the Prone condition.\n\nLarge Form : Starting at 5th level, I can change my size to Large as Bonus Action if I'm in a big enough space. This transformation lasts for 10 minutes or until I end it (no action required). For that duration, I have Advantage on Strength checks, and my Speed increases by 10 feet. Once I use this trait, I can't use it again until I finish a Long Rest.\n\nPowerful Build : I have Advantage on any saving throw I make to end the Grappled condition. I also count as one size larger when determining my carrying capacity.",
+  trait: "Hill Goliath\nGiant Ancestry (Hill's Tumble (Hill Giant)): When I hit a Large or smaller creature with an Attack Roll and deal damage I can also inflict Prone.\nLarge Form: Starting at 5th level, once per Long Rest I can change my size to Large as a Bonus Action if I'm in a big enough space for 10 min or until I end it (no action). While Large I have Adv on Str checks and my Speed increases by 10 ft.\nPowerful Build: I count as one size larger when determining my carrying capacity.",
   carryingCapacity: 2,
   features: {
     "hill's tumble": {
@@ -9065,7 +9066,7 @@ RaceSubList["goliath-stone"] = {
   regExpSearch: /^(?=.*goliath)(?=.*stone).*$/i,
   name: "Stone Goliath",
   sortname: "Goliath, Stone",
-  trait: "Stone Goliath (Medium Humanoid)\n\nGiant Ancestry (Stone's Endurance (Stone Giant)) : When I take damage, I can take a Reaction to roll 1d12. Add my Constitution modifier to the number rolled and reduce the damage by that total.\n\nLarge Form : Starting at 5th level, I can change my size to Large as Bonus Action if I'm in a big enough space. This transformation lasts for 10 minutes or until I end it (no action required). For that duration, I have Advantage on Strength checks, and my Speed increases by 10 feet. Once I use this trait, I can't use it again until I finish a Long Rest.\n\nPowerful Build : I have Advantage on any saving throw I make to end the Grappled condition. I also count as one size larger when determining my carrying capacity.",
+  trait: "Stone Goliath\nGiant Ancestry (Stone's Endurance (Stone Giant)): As a Reaction when I take damage I can reduce it by 1d12 + Con mod.\nLarge Form: Starting at 5th level, once per Long Rest I can change my size to Large as a Bonus Action if I'm in a big enough space for 10 min or until I end it (no action). While Large I have Adv on Str checks and my Speed increases by 10 ft.\nPowerful Build: I count as one size larger when determining my carrying capacity.",
   carryingCapacity: 2,
   features: {
     "stone's endurance": {
@@ -9097,7 +9098,7 @@ RaceSubList["goliath-storm"] = {
   regExpSearch: /^(?=.*goliath)(?=.*storm).*$/i,
   name: "Storm Goliath",
   sortname: "Goliath, Storm",
-  trait: "Storm Goliath (Medium Humanoid)\n\nGiant Ancestry (Storm's Thunder (Storm Giant)) : When I take damage from a creature within 60 feet of I, I can take a Reaction to deal 1d8 Thunder damage to that creature.\n\nLarge Form : Starting at 5th level, I can change my size to Large as Bonus Action if I'm in a big enough space. This transformation lasts for 10 minutes or until I end it (no action required). For that duration, I have Advantage on Strength checks, and my Speed increases by 10 feet. Once I use this trait, I can't use it again until I finish a Long Rest.\n\nPowerful Build : I have Advantage on any saving throw I make to end the Grappled condition. I also count as one size larger when determining my carrying capacity.",
+  trait: "Storm Goliath\nGiant Ancestry (Storm's Thunder (Storm Giant)): When I take damage from a creature within 60 ft of me, I can take a Reaction to deal 1d8 Thunder damage to it.\nLarge Form: Starting at 5th level, once per Long Rest I can change my size to Large as a Bonus Action if I'm in a big enough space for 10 min or until I end it (no action). While Large I have Adv on Str checks and my Speed increases by 10 ft.\nPowerful Build: I count as one size larger when determining my carrying capacity.",
   carryingCapacity: 2,
   features: {
     "storm's thunder": {
@@ -9137,7 +9138,7 @@ RaceList["halfling"] = {
   savetxt: {adv_vs: ["avoiding or ending the Frightened condition"]},
   age: " reach maturity in late teens and live about 150 years",
   height: " are about 2-3 feet tall",
-  trait: "Halfling (Small Humanoid)\n\nBrave : I have Advantage on saving throws I make to avoid or end the Frightened condition.\n\nHalfling Nimbleness : I can move through the space of any creature that is a size larger than I, but I can't stop in the same space.\n\nLuck : When I roll a 1 on the d20 of a D20 Test, I can reroll the die, and I must use the new roll.\n\nNaturally Stealthy : I can take the Hide action even when I am obscured only by a creature that is at least one size larger than I.",
+  trait: "Halfling\nHalfling Nimbleness: I can move through the space of any creature larger than me but can't stop in the same space.\nLuck: When I roll a 1 on a D20 Test, I can reroll & must use the new roll.\nNaturally Stealthy: I can take the Hide action even when I am obscured only by a creature that is at least one size larger than me.",
 };
 RaceList["human"] = {
   regExpSearch: /^(?=.*human).*$/i,
@@ -9151,7 +9152,7 @@ RaceList["human"] = {
   skillstxt: "Choose any one skill",
   age: " reach maturity in late teens and live about 80 years",
   height: " are about 2-4 or 4-7 feet tall",
-  trait: "Human (Small or Medium Humanoid)\n\nResourceful : I gain Heroic Inspiration whenever I finish a Long Rest.\n\nSkillful : I gain proficiency in one skill of my choice.\n\nVersatile : I gain an Origin feat of my choice (see chapter 5). Skilled is recommended.",
+  trait: "Human\nResourceful: I gain Heroic Inspiration when I finish a Long Rest.\nVersatile : I gain an Origin feat of my choice.",
   eval: function () {
     AddString('Feat Note 1', 'Human bonus feat', '; ');
   },
@@ -9171,7 +9172,7 @@ RaceList["orc"] = {
   vision: [["Darkvision", 120]],
   age: " reach maturity in late teens and live about 80 years",
   height: " are about 6-7 feet tall",
-  trait: "Orc (Medium Humanoid)\n\nAdrenaline Rush : I can take the Dash action as a Bonus Action. When I do so, I gain a number of Temporary Hit Points equal to my Proficiency Bonus. I can use this trait a number of times equal to my Proficiency Bonus, and I regain all expended uses when I finish a Short or Long Rest.\n\nDarkvision : I have Darkvision within a range of 120 feet.\n\nRelentless Endurance : When I am reduced to 0 Hit Points but not killed outright, I can drop to 1 Hit Point instead. Once I use this trait, I can't do so again until I finish a Long Rest.",
+  trait: "Orc\nAdrenaline Rush: I can Dash as a Bonus Action and I gain my Prof Bonus Temp HP when I do. I can use this my Prof Bonus times per Rest.\nRelentless Endurance: Once per Long Rest when I am reduced to 0 Hit Points but not killed outright, I can drop to 1 Hit Point instead.",
   features: {
     "adrenaline rush": {
       name: "Adrenaline Rush",
@@ -9217,7 +9218,7 @@ RaceList["tiefling"] = {
     times: 1,
     firstCol: "atwill",
   }],
-  trait: "Tiefling (Small or Medium Humanoid)\n\nDarkvision : I have Darkvision within a range of 60 feet.\n\nFiendish Legacy : I am the recipient of a legacy that grants me supernatural abilities. Choose a legacy from the Fiendish Legacies table. I gain the level 1 benefit of the chosen legacy. When I reach character levels 3 and 5, I learn a higher-level spell, as shown on the table. I always have that spell prepared. I can cast it once without a spell slot, and I regain the ability to cast it in that way when I finish a Long Rest. I can also cast the spell using any spell slots I have of the appropriate level. Intelligence, Wisdom, or Charisma is my spellcasting ability for the spells I cast with this trait (choose the ability when I select the legacy).\n\nOtherworldly Presence : I know the Thaumaturgy cantrip. When I cast it with this trait, the spell uses the same spellcasting ability I use for my Fiendish Legacy trait.",
+  trait: "Tiefling\nFiendish Legacy: Use 'Racial Options' above to choose a legacy & spellcasting ability. I can choose Int, Wis, or Cha as my spellcasting ability for spells I cast with this trait (choose the ability with the legacy).\nOtherworldly Presence: I know the Thaumaturgy cantrip; It uses the same spellcasting ability as Fiendish Legacy.",
   variants: ["abyssal", "chthonic", "infernal"]
 };
 RaceSubList["tiefling-abyssal"] = {
@@ -9235,7 +9236,7 @@ RaceSubList["tiefling-abyssal"] = {
     times: 2,
     firstCol: "atwill",
   }],
-  trait: "Abyssal Tiefling (Small or Medium Humanoid)\n\nDarkvision : I have Darkvision within a range of 60 feet.\n\nFiendish Legacy : I am part of a lineage that grants me supernatural abilities. I gain the Poison Spray cantrip. When I reach character level 3 I learn the Ray of Sickness spell, and when I reach character level 5 I learn the Hold Person spell. I always have that spell prepared. I can cast it once without a spell slot, and I regain the ability to cast it in that way when I finish a Long Rest. I can also cast the spell using any spell slots I have of the appropriate level. Intelligence,Wisdom, or Charisma is my spellcasting ability for the spells I cast with this trait. (Choose the ability when I select the lineage).\n\nOtherworldly Presence : I know the Thaumaturgy cantrip. When I cast it with this trait, the spell uses the same spellcasting ability I use for my Fiendish Legacy trait.",
+  trait: "Abyssal Tiefling\nFiendish Legacy: I gain the Poison Spray cantrip. I learn Ray of Sickness at level 3 & Hold Person at level 5; These spells are always Prepared & I can cast them once each without a spell slot per Long Rest, or use Spell Slots; Int, Wis, or Cha is my spellcasting ability (choose the ability with the legacy).\nOtherworldly Presence: I know the Thaumaturgy cantrip; It uses the same spellcasting ability as Fiendish Legacy.",
   features: {
     "abyssal lineage3": {
       name: "Ray of Sickness",
@@ -9286,7 +9287,7 @@ RaceSubList["tiefling-chthonic"] = {
     times: 2,
     firstCol: "atwill",
   }],
-  trait: "Chthonic Tiefling (Small or Medium Humanoid)\n\nDarkvision : I have Darkvision within a range of 60 feet.\n\nFiendish Legacy : I am part of a lineage that grants me supernatural abilities. I gain the Chill Touch cantrip. When I reach character level 3 I learn the False Life spell, and when I reach character level 5 I learn the Ray of Enfeeblement spell. I always have that spell prepared. I can cast it once without a spell slot, and I regain the ability to cast it in that way when I finish a Long Rest. I can also cast the spell using any spell slots I have of the appropriate level. Intelligence,Wisdom, or Charisma is my spellcasting ability for the spells I cast with this trait. (Choose the ability when I select the lineage).\n\nOtherworldly Presence : I know the Thaumaturgy cantrip. When I cast it with this trait, the spell uses the same spellcasting ability I use for my Fiendish Legacy trait.",
+  trait: "Chthonic Tiefling\nFiendish Legacy: I gain the Chill Touch cantrip. I learn False Life at level 3 & Ray of Enfeeblement at level 5; These spells are always Prepared & I can cast them once each without a spell slot per Long Rest, or use Spell Slots; Int, Wis, or Cha is my spellcasting ability (choose the ability with the legacy).\nOtherworldly Presence: I know the Thaumaturgy cantrip; It uses the same spellcasting ability as Fiendish Legacy.",
   features: {
     "chthonic lineage3": {
       name: "False Life",
@@ -9337,7 +9338,7 @@ RaceSubList["tiefling-infernal"] = {
     times: 2,
     firstCol: "atwill",
   }],
-  trait: "Infernal Tiefling (Small or Medium Humanoid)\n\nDarkvision : I have Darkvision within a range of 60 feet.\n\nFiendish Legacy : I am part of a lineage that grants me supernatural abilities. I gain the Fire Bolt cantrip. When I reach character level 3 I learn the Hellish Rebuke spell, and when I reach character level 5 I learn the Darkness spell. I always have that spell prepared. I can cast it once without a spell slot, and I regain the ability to cast it in that way when I finish a Long Rest. I can also cast the spell using any spell slots I have of the appropriate level. Intelligence,Wisdom, or Charisma is my spellcasting ability for the spells I cast with this trait. (Choose the ability when I select the lineage).\n\nOtherworldly Presence : I know the Thaumaturgy cantrip. When I cast it with this trait, the spell uses the same spellcasting ability I use for my Fiendish Legacy trait.",
+  trait: "Infernal Tiefling\nFiendish Legacy: I gain the Fire Bolt cantrip. I learn Hellish Rebuke at level 3, & Darkness at level 5; These spells are always Prepared & I can cast them once each without a spell slot per Long Rest or use Spell Slots; Int, Wis, or Cha is my spellcasting ability (choose the ability with the legacy).\nOtherworldly Presence: I know the Thaumaturgy cantrip; It uses the same spellcasting ability as Fiendish Legacy.",
   features: {
     "infernal lineage3": {
       name: "Hellish Rebuke",
@@ -12608,6 +12609,22 @@ WeaponsList["word of radiance"] = {
   description: "Con save, success - no damage; Only chosen creatures I can see are affected",
   abilitytodamage: false,
   dc: true
+};
+WeaponsList["net"] = {
+	regExpSearch : /\bnet(ting)?s?\b/i,
+	name : "Net",
+	source : [["PHB2024", 227]],
+	list : "ranged",
+	ability : 2,
+	type : "Martial",
+	damage : ["\u2015", "", "Restrained"],
+	range : "5/15 ft",
+	weight : 3,
+	description : "Thrown, only 1 attack, up to large creature hit is restrained",
+	tooltip : "Special: A Large or smaller creature hit by a net is restrained until it is freed. A net has no effect on creatures that are formless, or creatures that are Huge or larger. A creature can use its action to make a DC 10 Strength(Athletics) check, freeing itself or another creature within its reach on a success. Dealing 5 slashing damage to the net (AC 10) also frees the creature without harming it, ending the effect and destroying the net. When I use an action, bonus action, or reaction to attack with a net, I can make only one attack regardless of the number of attacks I can normally make.",
+	special : true,
+	abilitytodamage : false,
+	dc : true,
 };
 //Ammo
 AmmoList["arrows"] = {
