@@ -19260,7 +19260,7 @@ legacySpellRefactor("true strike", {
 	compMaterial : "A weapon with which you have proficiency and that is worth 1+ cp",
 	duration : "Instantaneous",
 	description : "Atk with prof. weapon using spell ability; deal weapon or Radiant dmg; +1d6 Radiant at CL 5, 11 \u0026 17",
-	descriptionFull : "Guided by a flash of magical insight, you make one attack with the weapon used in the spell's casting. The attack uses your spellcasting ability for the attack and damage rolls instead of using Strength or Dexterity. If the attack deals damage, it can be Radiant damage or the weapon's normal damage type (your choice)." + "\n   " + toUni("Cantrip Upgrade") + ". Whether you deal Radiant damage or the weapon's normal damage type, the attack deals extra Radiant damage when you reach levels 5 (1d6), 11 (2d6), and 17 (3d6)."
+	descriptionFull : "Guided by a flash of magical insight, you make one attack with the weapon used in the spell's casting. The attack uses your spellcasting ability for the attack and damage rolls instead of using Strength or Dexterity. If the attack deals damage, it can be Radiant damage or the weapon's normal damage type (your choice)." + "\n   " + toUni("Cantrip Upgrade") + ". Whether you deal Radiant damage or the weapon's normal damage type, the attack deals extra Radiant damage when you reach levels 5 (1d6), 11 (2d6), and 17 (3d6).",
 	descriptionCantripDie : "Atk with prof. weapon using spell ability; deal weapon or Radiant dmg, +`CD-1d6` Radiant",
 });
 legacySpellRefactor("tsunami", {
