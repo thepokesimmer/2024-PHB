@@ -1451,6 +1451,7 @@ MagicItemsList["cube of force"] = { // contains contributions by Larry Hoy
 	}]
 };
 MagicItemsList["cube of summoning"] = {
+};
 MagicItemsList["cubic gate"] = { // contains contributions by Larry Hoy
 	name : "Cubic Gate",
 	source : [["DMG2024", "-"]],
@@ -2326,9 +2327,13 @@ MagicItemsList["enduring spellbook"] = {
 	weight : 5
 };
 MagicItemsList["energy bow"] = {
+};
 MagicItemsList["enspelled armor"] = {
+};
 MagicItemsList["enspelled staff"] = {
+};
 MagicItemsList["enspelled weapon"] = {
+},
 MagicItemsList["ersatz eye"] = {
 	name : "Ersatz Eye",
 	source : [["DMG2024", "-"]],
@@ -2351,6 +2356,7 @@ MagicItemsList["eversmoking bottle"] = {
 	action : [["action", " (open/close)"]]
 };
 MagicItemsList["executioner's axe"] = {
+};
 MagicItemsList["eyes of charming"] = {
 	name : "Eyes of Charming",
 	source : [["DMG2024", "-"]],
@@ -2751,6 +2757,7 @@ MagicItemsList["goggles of night"] = { // contributed by AelarTheElfRogue
 	vision : [["Darkvision", "fixed 60"], ["Darkvision", "+60"]]
 };
 MagicItemsList["hag eye"] = {
+};
 MagicItemsList["hammer of thunderbolts"] = {
 	name : "Hammer of Thunderbolts",
 	source : [["DMG2024", "-"]],
@@ -2819,6 +2826,7 @@ MagicItemsList["hat of disguise"] = { // contributed by Larry Hoy
    spellcastingAbility : "class" // https://www.sageadvice.eu/2015/11/27/hat-of-disguise-dc/
 };
 MagicItemsList["hat of many spells"] = {
+},
 MagicItemsList["hat of vermin"] = {
 	name : "Hat of Vermin",
 	source : [["DMG2024", "-"]],
@@ -3686,6 +3694,7 @@ MagicItemsList["luck blade"] = {
 	}
 };
 MagicItemsList["lute of thunderous thumping"] = {
+},
 MagicItemsList["mace of disruption"] = {
 	name : "Mace of Disruption",
 	source : [["DMG2024", "-"]],
@@ -3965,6 +3974,7 @@ MagicItemsList["mithral armor"] = {
 	}
 };
 MagicItemsList["moonblade"] = {
+},
 MagicItemsList["moon-touched sword"] = {
 	name : "Moon-Touched Sword",
 	nameTest : "Moon-Touched",
@@ -4005,6 +4015,7 @@ MagicItemsList["mystery key"] = {
 	descriptionFull : "A question mark is worked into the head of this key. The key has a 5% chance of unlocking any lock into which it's inserted. Once it unlocks something, the key disappears."
 };
 MagicItemsList["nature's mantle"] = {
+},
 MagicItemsList["necklace of adaptation"] = {
 	name : "Necklace of Adaptation",
 	source : [["DMG2024", "-"]],
@@ -4429,6 +4440,7 @@ MagicItemsList["potion of climbing"] = {
 	extraTooltip : "AL: can always be bought for 75 gp"
 };
 MagicItemsList["potion of comprehension"] = {
+},
 MagicItemsList["potion of diminution"] = {
 	name : "Potion of Diminution",
 	source : [["DMG2024", "-"]],
@@ -4530,6 +4542,7 @@ MagicItemsList["potion of giant strength"] = {
 	}
 };
 MagicItemsList["potion of greater invisibility"] = {
+},
 MagicItemsList["potion of growth"] = {
 	name : "Potion of Growth",
 	source : [["DMG2024", "-"]],
@@ -4650,6 +4663,7 @@ MagicItemsList["potion of poison"] = {
 	weight : 0.5
 };
 MagicItemsList["potion of pugilism"] = {
+},
 MagicItemsList["potion of resistance"] = {
 	name : "Potion of Resistance",
 	source : [["DMG2024", "-"]],
@@ -4800,6 +4814,7 @@ MagicItemsList["quaal's feather token"] = {
 	}
 };
 MagicItemsList["quarterstaff of the acrobat"] = {
+},
 MagicItemsList["quiver of ehlonna"] = {
 	name : "Quiver of Ehlonna",
 	nameAlt : "Efficient Quiver",
@@ -5481,6 +5496,7 @@ MagicItemsList["ring of x-ray vision"] = {
 	additional : "more uses: DC 15 Con save"
 };
 MagicItemsList["rival coin"] = {
+};
 MagicItemsList["robe of eyes"] = { // contains contributions by SoilentBrad
 	name : "Robe of Eyes",
 	source : [["DMG2024", "-"]],
@@ -5991,6 +6007,7 @@ MagicItemsList["scroll of protection"] = {
 	}
 };
 MagicItemsList["scroll of titan summoning"] = {
+};
 MagicItemsList["sending stones"] = {
 	name : "Sending Stones",
 	source : [["DMG2024", "-"]],
@@ -6090,7 +6107,9 @@ MagicItemsList["shield of missile attraction"] = {
 	dmgres : ["Ranged Weapons"]
 };
 MagicItemsList["shield of the cavalier"] = {
+};
 MagicItemsList["silvered weapon"] = {
+};
 MagicItemsList["slippers of spider climbing"] = {
 	name : "Slippers of Spider Climbing",
 	source : [["DMG2024", "-"]],
@@ -6380,6 +6399,7 @@ MagicItemsList["sphere of annihilation"] = {
 	}]
 };
 MagicItemsList["spirit board"] = {
+};
 MagicItemsList["staff of adornment"] = {
 	name : "Staff of Adornment",
 	source : [["DMG2024", "-"]],
@@ -7286,6 +7306,7 @@ MagicItemsList["sword of wounding"] = {
 	}
 };
 MagicItemsList["sylvan talon"] = {
+};
 MagicItemsList["talisman of pure good"] = {
 	name : "Talisman of Pure Good",
 	source : [["DMG2024", "-"]],
@@ -7395,7 +7416,8 @@ MagicItemsList["tentacle rod"] = {
 		selectNow : true
 	}]
 };
-MagicItemsList["thunderous greatclub"] ={
+MagicItemsList["thunderous greatclub"] = {
+};
 MagicItemsList["tome of clear thought"] = {
 	name : "Tome of Clear Thought",
 	source : [["DMG2024", "-"]],
