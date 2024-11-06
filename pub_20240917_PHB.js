@@ -26,6 +26,15 @@ SourceList.LEGACYCLASS = {
   date: "2014/01/01",
   defaultExcluded : true,
 };
+SourceList.LEGACYRACE = {
+  name: "Races Deprecated by 2024 Player's Handbook",
+  abbreviation: "LEGACY",
+  abbreviationSpellsheet: "L",
+  group: "Core Sources",
+  url: "https://marketplace.dndbeyond.com/core-rules/3709000?pid=DB3709000",
+  date: "2014/01/01",
+  defaultExcluded : true,
+};
 // Coded By: ThePokésimmer with contributions from morepurplemorebetter (Joost), MasterJedi2014, Shroo, Reading Toskr, TrackAtNite, evanelric, TappyTap, Mente, Rocky, ShadowzAll
 //Functions
 function escapeRegExp(string) {
@@ -126,6 +135,23 @@ function legacySubClassRefactor(classKey, subClassKey, nSC) {
     nSC.regExpSearch = newRegex;
   }
 }
+
+function legacyRaceRefactor(raceKey, newRace){
+  if(newRace.replaces){
+    for (var replaced of newRace.replaces){
+      if (replaced in RaceList){
+        var oldRace = RaceList[replaced]
+        RaceList[replaced + " (L)"] = oldRace
+        delete RaceList[replaced]
+        oldRace.source = [["LEGACYRACE", 1]]
+        oldRace.name = oldRace.name + " (L)"
+        oldRace.shortname = oldRace.shortname + " (L)"        
+      }
+    }
+  }
+  RaceList[raceKey] = newRace
+}
+
 //Classes
 legacyClassRefactor("barbarian", {
 	regExpSearch: /barbarian/i,
@@ -8426,7 +8452,7 @@ BackgroundFeatureList["savage attacker"] = {
   }
 };
 //Species
-RaceList["aasimar"] = {
+legacyRaceRefactor("aasimar", {
   regExpSearch: /^(?=.*aasimar).*$/i,
   name: "Aasimar",
   sortname: "Aasimar",
@@ -8479,8 +8505,8 @@ RaceList["aasimar"] = {
     times: 1,
   }],
   trait: "Aasimar\nHealing Hands: Once per Long Rest as a Magic action I can touch a creature & restore my Prof Bonus d4s HP.\nLight Bearer: I know the Light cantrip. Charisma is my spellcasting ability for it.\nCelestial Revelation: Once per Long Rest as a Bonus Action I can transform for 1 min or until I end it. (no action) (choose an option each time) (See Notes Page)",
-};
-RaceList["dragonborn"] = {
+});
+legacyRaceRefactor("dragonborn", {
   regExpSearch: /dragonborn/i,
   name: "Dragonborn",
   source: [["PHB2024", 187]],
@@ -8549,7 +8575,7 @@ RaceList["dragonborn"] = {
     },
   },
   variants: ["black", "blue", "brass", "bronze", "copper", "gold", "green", "red", "silver", "white"]
-};
+});
 RaceSubList["dragonborn-black"] = {
   regExpSearch: /black/i,
   name: "Black Dragonborn",
@@ -8619,7 +8645,7 @@ RaceSubList["dragonborn-white"] = {
   trait: "White Dragonborn\nCold Breath Weapon: When I Attack on my turn, I can make one of my attacks an exhalation of magical energy (a 15-foot Cone, or a 30-foot Line 5 feet wide) (choose each time) in which each creature must make a Dex save (DC 8 + Con modifier + Prof Bonus) or take 1d10 (2d10 at level 5, 3d10 at level 11, 4d10 at level 17) Cold damage or half on a pass. I can use this Breath Weapon my Prof Bonus times per Long Rest.\nDraconic Flight: When I reach character level 5, once per Long Rest as a Bonus Action I can sprout spectral Cold wings on my back that last for 10 min, until I retract them (no action), or I become Incapacitated, during which I have a Fly Speed equal to my Speed.",
   dmgres: ["Cold"]
 };
-RaceList["dwarf"] = {
+legacyRaceRefactor("dwarf", {
   regExpSearch: /^(?=.*dwarf).*$/i,
   name: "Dwarf",
   sortname: "Dwarf",
@@ -8653,8 +8679,9 @@ RaceList["dwarf"] = {
     },
   },
   trait: "Dwarf\nDwarven Toughness: I add 1 to my max HP every level, including 1.\nStonecunning: As a Bonus Action I gain Tremorsense with a range of 60 feet for 10 min when on or touching natural or worked stone. I can use this my Prof Bonus times per Long Rest.",
-};
-RaceList["elf"] = {
+  replaces: ["hill dwarf", "mountain dwarf"]
+});
+legacyRaceRefactor("elf", {
   regExpSearch: /^(?=.*elf).*$/i,
   name: "Elf",
   sortname: "Elf",
@@ -8669,8 +8696,9 @@ RaceList["elf"] = {
   age: " reach maturity in early 20s and live about 750 years",
   height: " are about 5-6 feet tall",
   trait: "Elf\nElven Lineage: Use 'Racial Options' above to choose a lineage that grants me supernatural abilities. Int, Wis, or Cha is my spellcasting ability for spells I cast with this trait. (Choose the ability with the lineage)\nTrance: I don't need to sleep, and magic can't put me to sleep. I can finish a Long Rest in 4 hours if I spend those hours in a trance-like meditation, during which I retain consciousness",
-  variants: ["dark", "high", "wood"]
-};
+  variants: ["dark", "high", "wood"],
+  replaces: ["dark elf", "high elf", "wood elf", "half-elf"]
+});
 RaceSubList["elf-dark"] = {
   regExpSearch: /^(?=.*elf)(?=.*dark).*$/i,
   name: "Dark Elf",
@@ -8819,7 +8847,7 @@ RaceSubList["elf-wood"] = {
     },
   },
 };
-RaceList["gnome"] = {
+legacyRaceRefactor("gnome", {
   regExpSearch: /^(?=.*gnome).*$/i,
   name: "Gnome",
   sortname: "Gnome",
@@ -8833,8 +8861,9 @@ RaceList["gnome"] = {
   age: " reach maturity in early 20s and live about 425 years",
   height: " are about 3-4 feet tall",
   trait: "Gnome\nGnomish Lineage: Use 'Racial Options' above to choose a lineage. I can choose Int, Wis, or Cha as my spellcasting ability for spells I cast with this trait (choose the ability with the lineage).\n\nGnomish Cunning: I have Advantage on Intelligence, Wisdom, and Charisma saving throws.",
-  variants: ["forest", "rock"]
-};
+  variants: ["forest", "rock"],
+  replaces: ["forest gnome", "rock gnome"]
+});
 RaceSubList["gnome-forest"] = {
   regExpSearch: /^(?=.*gnome)(?=.*forest).*$/i,
   name: "Forest Gnome",
@@ -8896,7 +8925,7 @@ RaceSubList["gnome-rock"] = {
     },
   },
 };
-RaceList["goliath"] = {
+legacyRaceRefactor("goliath", {
   regExpSearch: /^(?=.*goliath).*$/i,
   name: "Goliath",
   sortname: "Goliath",
@@ -8910,8 +8939,9 @@ RaceList["goliath"] = {
   height: " are about 7-8 feet tall",
   trait: "Goliath\nLarge Form: Starting at 5th level, once per Long Rest I can change my size to Large as a Bonus Action if I'm in a big enough space for 10 min or until I end it (no action). While Large I have Adv on Str checks and my Speed increases by 10 ft.\nPowerful Build: I count as one size larger when determining my carrying capacity.",
   carryingCapacity: 2,
-  variants: ["cloud", "fire", "frost", "hill", "stone", "storm"]
-};
+  variants: ["cloud", "fire", "frost", "hill", "stone", "storm"],
+  replaces: ["goliath", "multiverse goliath"]
+});
 RaceSubList["goliath-cloud"] = {
   regExpSearch: /^(?=.*goliath)(?=.*cloud).*$/i,
   name: "Cloud Goliath",
@@ -9104,7 +9134,7 @@ RaceSubList["goliath-storm"] = {
     },
   },
 };
-RaceList["halfling"] = {
+legacyRaceRefactor("halfling", {
   regExpSearch: /^(?=.*halfling).*$/i,
   name: "Halfling",
   sortname: "Halfling",
@@ -9117,8 +9147,9 @@ RaceList["halfling"] = {
   age: " reach maturity in late teens and live about 150 years",
   height: " are about 2-3 feet tall",
   trait: "Halfling\nHalfling Nimbleness: I can move through the space of any creature larger than me but can't stop in the same space.\nLuck: When I roll a 1 on a D20 Test, I can reroll & must use the new roll.\nNaturally Stealthy: I can take the Hide action even when I am obscured only by a creature that is at least one size larger than me.",
-};
-RaceList["human"] = {
+  replaces: ["lightfoot halfling", "stout halfling"]
+});
+legacyRaceRefactor("human", {
   regExpSearch: /^(?=.*human).*$/i,
   name: "Human",
   sortname: "Human",
@@ -9137,8 +9168,9 @@ RaceList["human"] = {
   removeeval: function () {
     RemoveString('Feat Note 1', 'Human bonus feat');
   },
-};
-RaceList["orc"] = {
+  replaces: ["human"]
+});
+legacyRaceRefactor("orc", {
   regExpSearch: /^(?=.*orc).*$/i,
   name: "Orc",
   sortname: "Orc",
@@ -9175,8 +9207,9 @@ RaceList["orc"] = {
       ]),
     },
   },
-};
-RaceList["tiefling"] = {
+  replaces: ["half-orc", "multiverse orc", "orc"]
+});
+legacyRaceRefactor("tiefling", {
   regExpSearch: /^(?=.*tiefling).*$/i,
   name: "Tiefling",
   sortname: "Tiefling",
@@ -9197,8 +9230,9 @@ RaceList["tiefling"] = {
     firstCol: "atwill",
   }],
   trait: "Tiefling\nFiendish Legacy: Use 'Racial Options' above to choose a legacy & spellcasting ability. I can choose Int, Wis, or Cha as my spellcasting ability for spells I cast with this trait (choose the ability with the legacy).\nOtherworldly Presence: I know the Thaumaturgy cantrip; It uses the same spellcasting ability as Fiendish Legacy.",
-  variants: ["abyssal", "chthonic", "infernal"]
-};
+  variants: ["abyssal", "chthonic", "infernal"],
+  replaces: ["tiefling", ]
+});
 RaceSubList["tiefling-abyssal"] = {
   regExpSearch: /^(?=.*tiefling)(?=.*abyssal).*$/i,
   name: "Abyssal Tiefling",
