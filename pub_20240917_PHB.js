@@ -3254,7 +3254,7 @@ legacyClassRefactor("monk", {
         return "1d" + (n < 5 ? 6 : n < 11 ? 8 : n < 17 ? 10 : 12);
       }),
       eval: function () {
-        AddString('Extra.Notes', 'Monk features:\n\u25C6 If I wear armor/shield, I lose Martial Arts, Unarmored Defense, Unarmored Movement, and Acrobatic Movement');
+        AddString('Extra.Notes', 'Monk features:\n\u25C6 If I wear armor/shield, I lose Martial Arts, Unarmored Defense, Unarmored Movement, and \n   Acrobatic Movement');
         show3rdPageNotes();
       },
       removeeval: function () {
@@ -3317,33 +3317,65 @@ legacyClassRefactor("monk", {
       }),
       recovery: "short rest",
       description: desc([
-        "I can spend Focus Points to fuel special actions (see third page), at 10th level these features improve.",
+        "I can spend Focus Points to fuel special actions (see third page).",
       ]),
       "flurry of blows": {
         name: "Flurry of Blows",
         extraname: "Focus Feature",
         action: ["bonus action", " (1 FP)"],
-        description: desc([
-          "I can expend 1 Focus Point to make two Unarmed Strikes as a Bonus Action.",
-        ]),
+        description: levels.map(function(n) {
+			if(n < 2) return "";
+			var description = desc([
+				"I can expend 1 Focus Point to make two Unarmed Strikes as a Bonus Action.",
+			]);
+			if(n >= 10) {
+				description += desc([
+					"At 10th level, I can expend 1 Focus Point to use Flurry of Blows and make three Unarmed",
+					"Strikes insteas of two."
+				]);
+			}
+			return description;
+		}),	
       },
       "patient defense": {
         name: "Patient Defense",
         extraname: "Focus Feature",
         action: [["bonus action", "Disengage"], ["bonus action", " (1 FP)"]],
-        description: desc([
-          "As a bonus action, I can disengage.",
-          "1 Focus Point, as a bonus action, I can disengage and dodge.",
-        ]),
+		description: levels.map(function(n) {
+			if(n < 2) return "";
+			var description = desc([
+				"As a bonus action, I can disengage.",
+				"1 Focus Point, as a bonus action, I can disengage and dodge.",
+			]);
+			if(n >= 10) {
+				description += desc([
+					"At 10th level, when I expend a Focus Point to use Patient Defense, I gain a number of",
+					"Temorary Hit Points equal to two rolls of my Martial Arts die."
+				]);
+			}
+			return description;
+		}),
       },
       "step of the wind": {
         name: "Step of the Wind",
         extraname: "Focus Feature",
 		action: [["bonus action", " (1 FP)"], ["bonus action", "Dash"]],
-        description: desc([
-          "As a bonus action, I can take the Dash action.",
-          "1 Focus Point, as a bonus action I can Dash and Disengage, and my jump distance is doubled for that turn.",
-        ]),
+		description: levels.map(function(n) {
+			if(n < 2) return "";
+			var description = desc([
+				"As a bonus action, I can take the Dash action.",
+				"1 Focus Point, as a bonus action I can Dash and Disengage, and my jump distance is doubled",
+				"for that turn.",
+			]);
+			if(n >= 10) {
+				description += desc([
+					"At 10th level, when I expend a Focus Point to use Step of the Wind, I can choose a willing", 
+					"creature within 5 feet of myself that is Large or smaller. I move the creature with me until the", 
+					"end of my turn. The creature's movment doesn't provoke Opportunity Attacks."
+				]);
+			}
+			return description;
+		}),
       },
       autoSelectExtrachoices: [{
         extrachoice: "flurry of blows"
@@ -3450,6 +3482,14 @@ legacyClassRefactor("monk", {
       minlevel: 9,
       description: desc([
         "I can move on vertical surfaces and across liquids without falling during my turn",
+      ]),
+    },
+	"heightened focus": {
+		name: "Heightened Focus",
+      source: [["PHB2024", 103]],
+      minlevel: 10,
+      description: desc([
+        "My Monk's Focus Features have Improved, (see third page).",
       ]),
     },
     "self-restoration": {
