@@ -140,16 +140,16 @@ function legacyRaceRefactor(raceKey, newRace){
   if(newRace.replaces){
     for (var replaced of newRace.replaces){
       if (replaced in RaceList){
-        var oldRace = RaceList[replaced]
-        RaceList[replaced + " (L)"] = oldRace
-        delete RaceList[replaced]
-        oldRace.source = [["LEGACYRACE", 1]]
-        oldRace.name = oldRace.name + " (L)"
-        oldRace.shortname = oldRace.shortname + " (L)"        
+        var oldRace = RaceList[replaced];
+        RaceList[replaced + " (L)"] = oldRace;
+        delete RaceList[replaced];
+        oldRace.source = [["LEGACYRACE", 1]];
+        oldRace.name = oldRace.name + " (L)";
+        oldRace.shortname = oldRace.shortname + " (L)";        
       }
     }
   }
-  RaceList[raceKey] = newRace
+  RaceList[raceKey] = newRace;
 }
 
 //Classes
@@ -936,8 +936,8 @@ legacyClassRefactor("bard", {
   spellcastingFactor: 1,
   spellcastingKnown: {
     cantrips: [2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
-    spells: "list",
-    prepared: true,
+    spells: [4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22],
+    prepared: false,
   },
   features: {
     "bardic inspiration": {
@@ -960,17 +960,11 @@ legacyClassRefactor("bard", {
       name: "Spellcasting",
       source: [["PHB2024", 59]],
       minlevel: 1,
-      calcChanges: {
-        spellCalc: [
-          function (type, spellcasters, ability) {
-            if (type === "prepare" && spellcasters.indexOf("bard") !== -1) {
-              var lvl = classes.known.bard.level;
-              var sArr = [0, 4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22];
-              return sArr[lvl] - lvl - Number(What("Cha Mod"));
-            }
-          }
-        ]
-      },
+	  additional: levels.map(function (n, idx) {
+        var cantr = [2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4][idx];
+        var splls = [4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22][idx];
+        return cantr + " cantrips \u0026 " + splls + " spells prepared";
+      }),
       description: desc([
         "I can cast Cantrips & Prepared level 1+ Bard spells using Cha as my spellcasting ability.",
         "Prepared spells from other Bard features count as Bard spells & don't count against my prepared spells. When I gain a Bard level I can replace one cantrip/spell with another of the same type from the Bard spell list.",
@@ -3055,8 +3049,8 @@ legacySubClassRefactor("fighter", "eldritch knight", {
   },
   spellcastingKnown: {
     cantrips: [0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
-    spells: "list",
-	prepared: true,
+    spells: [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13],
+	prepared: false,
   },
   features: {
     "subclassfeature3": {
@@ -3068,17 +3062,6 @@ legacySubClassRefactor("fighter", "eldritch knight", {
         var splls = [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13][idx];
         return cantr + " cantrips \u0026 " + splls + " spells prepared";
       }),
-      calcChanges: {
-        spellCalc: [
-          function (type, spellcasters, ability) {
-            if (type === "prepare" && spellcasters.indexOf("fighter") !== -1) {
-              var lvl = classes.known.fighter.level;
-              var sArr = [0, 0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13];
-              return sArr[lvl] - Math.floor(lvl / 3) - Number(What("Int Mod"));
-            }
-          }
-        ]
-      },
       description: desc([
         "I can cast known wizard cantrips/spells, using Intelligence as my spellcasting ability",
         "When I gain a Fighter level, I can replace one spell. I can use an Arcane Focus",
@@ -5709,8 +5692,8 @@ legacySubClassRefactor("rogue", "arcane trickster", {
   },
   spellcastingKnown: {
     cantrips: [0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
-    spells: "list",
-	prepared: true,
+    spells: [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 11, 12, 13],
+	prepared: false,
   },
   features: {
     "subclassfeature3": {
@@ -5722,17 +5705,6 @@ legacySubClassRefactor("rogue", "arcane trickster", {
         var splls = [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13][idx];
         return "Mage Hand \u0026 " + cantr + " cantrips \u0026 " + splls + " spells prepared";
       }),
-      calcChanges: {
-        spellCalc: [
-          function (type, spellcasters, ability) {
-            if (type === "prepare" && spellcasters.indexOf("rogue") !== -1) {
-              var lvl = classes.known.rogue.level;
-              var sArr = [0, 0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13];
-              return sArr[lvl] - Math.floor(lvl / 3) - Number(What("Int Mod"));
-            }
-          }
-        ]
-      },
       description: desc([
         "I can cast prepared level 1+ Wizard spells using Int as my spellcasting ability.",
         "I can use an Arcane Focus as a spellcasting focus for my spells.",
@@ -5999,8 +5971,8 @@ legacyClassRefactor("sorcerer", {
   spellcastingFactor: 1,
   spellcastingKnown: {
     cantrips: [4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6],
-    spells: "list",
-    prepared: true,
+    spells: [2, 4, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22],
+    prepared: false,
   },
   features: {
     "spellcasting": {
@@ -6012,17 +5984,6 @@ legacyClassRefactor("sorcerer", {
         var splls = [2, 4, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22][idx];
         return cantr + " cantrips \u0026 " + splls + " spells prepared";
       }),
-      calcChanges: {
-        spellCalc: [
-          function (type, spellcasters, ability) {
-            if (type === "prepare" && spellcasters.indexOf("sorcerer") !== -1) {
-              var lvl = classes.known.sorcerer.level;
-              var sArr = [0, 2, 4, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22];
-              return sArr[lvl] - lvl - Number(What("Cha Mod"));
-            }
-          }
-        ]
-      },
       description: desc([
         "I can cast Cantrips and Prepared level 1+ Sorcerer spells with Cha as my Spellcasting Ability and an Arcane Focus as my Spellcasting Focus.",
 		"I can replace a cantrip and a Level 1+ spell each time I gain a Sorcerer level.",
@@ -6530,8 +6491,8 @@ legacyClassRefactor("warlock", {
   spellcastingFactor: "warlock1",
   spellcastingKnown: {
     cantrips: [2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
-    spells: "list",
-    prepared: true,
+    spells: [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15],
+    prepared: false,
   },
   features: {
     "eldritch invocations": {
@@ -7220,17 +7181,6 @@ legacyClassRefactor("warlock", {
         var splls = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15][idx];
         return cantr + " cantrips \u0026 " + splls + " spells prepared";
       }),
-      calcChanges: {
-        spellCalc: [
-          function (type, spellcasters, ability) {
-            if (type === "prepare" && spellcasters.indexOf("warlock") !== -1) {
-              var lvl = classes.known.warlock.level;
-              var sArr = [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15];
-              return sArr[lvl] - lvl - Number(What("Cha Mod"));
-            }
-          }
-        ]
-      },
       description: desc([
         "I can cast cantrips and Prepared Level 1+ Warlock spells using Cha as my spellcasting ability and an Arcane Focus as my Spellcasting Focus. When I gain a Warlock level, I can replace one of these cantrips with another.",
         "Prepared Spells for other Warlock features count as Warlock spells & don't count against me. I regain all expended Pact Magic spell slots when I finish a Short or Long Rest. I can change one Prepared Spell each time I gain a Warlock level.",
@@ -7737,13 +7687,63 @@ legacySubClassRefactor("wizard", "abjurer", {
       name: "Abjuration Savant",
       source: [["PHB2024", 172]],
       minlevel: 3,
-      spellcastingBonus: [{
-        name: "Abjuration Savant",
-        "class": "wizard",
-        school: "Abjur",
-        level: [1, 2],
-        times: 2,
-      }],
+	  spellcastingBonus : [{
+		name: "Abjuration Savant (3)",
+		"class": "wizard",
+		school: ["Abjur"],
+		// They get 2 spells from levels 1-2,
+		times : levels.map( function(n) { return n == 3 || n == 4 ? 2 : 0; } ),
+		level : [1,2], // From levels 1-2,
+	  }, {
+		name: "Abjuration Savant (5)",
+		"class": "wizard",
+		school: ["Abjur"],
+		// They get 2 spells from levels 1-3
+		times : levels.map( function(n) { return n == 5 || n == 6 ? 3 : 2; } ),
+		level : [1,3] // From levels 1-3
+	  }, {
+		name: "Abjuration Savant (7)",
+		"class": "wizard",
+		school: ["Abjur"],
+		// They get 4 spells from levels 1-4
+    times : levels.map( function(n) { return n == 7 || n == 8 ? 4 : 3; } ),
+		level : [1,4] // From levels 1-4
+	  }, {
+		name: "Abjuration Savant (9)",
+		"class": "wizard",
+		school: ["Abjur"],
+		// They get 5 spells from levels 1-5
+		times : levels.map( function(n) { return n == 9 || n == 10 ? 5 : 4; } ),
+		level : [1,5] // From levels 1-5
+	  }, {
+		name: "Abjuration Savant (11)",
+		"class": "wizard",
+		school: ["Abjur"],
+		// They get 5 spells from levels 1-6
+		times : levels.map( function(n) { return n == 11 || n == 12 ? 6 : 5; } ),
+		level : [1,6] // From levels 1-6
+	  }, {
+		name: "Abjuration Savant (13)",
+		"class": "wizard",
+		school: ["Abjur"],
+		// They get 5 spells from levels 1-7
+		times : levels.map( function(n) { return n == 13 || n == 14 ? 7 : 6; } ),
+		level : [1,7] // From levels 1-7
+	  }, {
+		name: "Abjuration Savant (15)",
+		"class": "wizard",
+		school: ["Abjur"],
+		// They get 5 spells from levels 1-8
+		times : levels.map( function(n) { return n == 16 || n == 16 ? 8 : 7; } ),
+		level : [1,8] // From levels 1-8
+	  }, {   
+		name: "Abjuration Savant (17)",
+		"class": "wizard",
+		school: ["Abjur"],
+		// They get 5 spells from levels 1-9
+		times : levels.map( function(n) { return n == 17 || n == 18 || n == 19 || n == 20 ? 9 : 8; } ),
+		level : [1,9] // From levels 1-9
+	  }],
       description: desc([
         "I gain two Wizard spells from the Abjuration school, level 2 or lower, for free. I gain a spell in this way each time I gain access to a new level of spell slots in this class.",
       ]),
@@ -7803,13 +7803,63 @@ legacySubClassRefactor("wizard", "diviner", {
       name: "Divination Savant",
       source: [["PHB2024", 173]],
       minlevel: 3,
-      spellcastingBonus: [{
-        name: "Divination Savant",
-        "class": "wizard",
-        school: "Div",
-        level: [1, 2],
-        times: 2,
-      }],
+      spellcastingBonus : [{
+		name: "Divination Savant (3)",
+		"class": "wizard",
+		school: ["Div"],
+		// They get 2 spells from levels 1-2
+		times : levels.map( function(n) { return n == 3 || n == 4 ? 2 : 0; } ),
+		level : [1,2] // From levels 1-2
+	  }, {
+		name: "Divination Savant (5)",
+		"class": "wizard",
+		school: ["Div"],
+		// They get 2 spells from levels 1-3
+		times : levels.map( function(n) { return n == 5 || n == 6 ? 3 : 2; } ),
+		level : [1,3] // From levels 1-3
+	  }, {
+		name: "Divination Savant (7)",
+		"class": "wizard",
+		school: ["Div"],
+		// They get 4 spells from levels 1-4
+		times : levels.map( function(n) { return n == 7 || n == 8 ? 4 : 3; } ),
+		level : [1,4] // From levels 1-4
+	  }, {
+		name: "Divination Savant (9)",
+		"class": "wizard",
+		school: ["Div"],
+		// They get 5 spells from levels 1-5
+		times : levels.map( function(n) { return n == 9 || n == 10 ? 5 : 4; } ),
+		level : [1,5] // From levels 1-5
+	  }, {
+		name: "Divination Savant (11)",
+		"class": "wizard",
+		school: ["Div"],
+		// They get 5 spells from levels 1-6
+		times : levels.map( function(n) { return n == 11 || n == 12 ? 6 : 5; } ),
+		level : [1,6] // From levels 1-6
+	  }, {
+		name: "Divination Savant (13)",
+		"class": "wizard",
+		school: ["Div"],
+		// They get 5 spells from levels 1-7
+		times : levels.map( function(n) { return n == 13 || n == 14 ? 7 : 6; } ),
+		level : [1,7] // From levels 1-7
+	  }, {
+		name: "Divination Savant (15)",
+		"class": "wizard",
+		school: ["Div"],
+		// They get 5 spells from levels 1-8
+		times : levels.map( function(n) { return n == 16 || n == 16 ? 8 : 7; } ),
+		level : [1,8] // From levels 1-8
+	  }, {   
+		name: "Divination Savant (17)",
+		"class": "wizard",
+		school: ["div"],
+		// They get 5 spells from levels 1-9
+		times : levels.map( function(n) { return n == 17 || n == 18 || n == 19 || n == 20 ? 9 : 8; } ),
+		level : [1,9] // From levels 1-9
+	  }],
       description: desc([
         "I gain two Wizard spells from the Divination school, level 2 or lower, for free. I gain a spell in this way each time I gain access to a new level of spell slots in this class.",
       ]),
@@ -7867,13 +7917,63 @@ legacySubClassRefactor("wizard", "evoker", {
       name: "Evocation Savant",
       source: [["PHB2024", 174]],
       minlevel: 3,
-      spellcastingBonus: [{
-        name: "Evocation Savant",
-        "class": "wizard",
-        school: "Evoc",
-        level: [1, 2],
-        times: 2,
-      }],
+      spellcastingBonus : [{
+		name: "Evocation Savant (3)",
+		"class": "wizard",
+		school: ["Evoc"],
+		// They get 2 spells from levels 1-2
+		times : levels.map( function(n) { return n == 3 || n == 4 ? 2 : 0; } ),
+		level : [1,2] // From levels 1-2
+	  }, {
+		name: "Evocation Savant (5)",
+		"class": "wizard",
+		school: ["Evoc"],
+		// They get 2 spells from levels 1-3
+		times : levels.map( function(n) { return n == 5 || n == 6 ? 3 : 2; } ),
+		level : [1,3] // From levels 1-3
+	  }, {
+		name: "Evocation Savant (7)",
+		"class": "wizard",
+		school: ["Evoc"],
+		// They get 4 spells from levels 1-4
+		times : levels.map( function(n) { return n == 7 || n == 8 ? 4 : 3; } ),
+		level : [1,4] // From levels 1-4
+	  }, {
+		name: "Evocation Savant (9)",
+		"class": "wizard",
+		school: ["Evoc"],
+		// They get 5 spells from levels 1-5
+		times : levels.map( function(n) { return n == 9 || n == 10 ? 5 : 4; } ),
+		level : [1,5] // From levels 1-5
+	  }, {
+		name: "Evocation Savant (11)",
+		"class": "wizard",
+		school: ["Evoc"],
+		// They get 5 spells from levels 1-6
+		times : levels.map( function(n) { return n == 11 || n == 12 ? 6 : 5; } ),
+		level : [1,6] // From levels 1-6
+	  }, {
+		name: "Evocation Savant (13)",
+		"class": "wizard",
+		school: ["Evoc"],
+		// They get 5 spells from levels 1-7
+		times : levels.map( function(n) { return n == 13 || n == 14 ? 7 : 6; } ),
+		level : [1,7] // From levels 1-7
+	  }, {
+		name: "Evocation Savant (15)",
+		"class": "wizard",
+		school: ["Evoc"],
+		// They get 5 spells from levels 1-8
+		times : levels.map( function(n) { return n == 16 || n == 16 ? 8 : 7; } ),
+		level : [1,8] // From levels 1-8
+	  }, {   
+		name: "Evocation Savant (17)",
+		"class": "wizard",
+		school: ["Evoc"],
+		// They get 5 spells from levels 1-9
+		times : levels.map( function(n) { return n == 17 || n == 18 || n == 19 || n == 20 ? 9 : 8; } ),
+		level : [1,9] // From levels 1-9
+	  }],
       description: desc([
         "I gain two Wizard spells from the Evocation school, level 2 or lower, for free. I gain a spell in this way each time I gain access to a new level of spell slots in this class.",
       ]),
@@ -7923,13 +8023,63 @@ legacySubClassRefactor("wizard", "illusionist", {
       name: "Illusion Savant",
       source: [["PHB2024", 175]],
       minlevel: 3,
-      spellcastingBonus: [{
-        name: "Illusion Savant",
-        "class": "wizard",
-        school: "Illus",
-        level: [1, 2],
-        times: 2,
-      }],
+      spellcastingBonus : [{
+		name: "Illusion Savant (3)",
+		"class": "wizard",
+		school: ["Illus"],
+		// They get 2 spells from levels 1-2
+		times : levels.map( function(n) { return n == 3 || n == 4 ? 2 : 0; } ),
+		level : [1,2] // From levels 1-2
+	  }, {
+		name: "Illusion Savant (5)",
+		"class": "wizard",
+		school: ["Illus"],
+		// They get 2 spells from levels 1-3
+		times : levels.map( function(n) { return n == 5 || n == 6 ? 3 : 2; } ),
+		level : [1,3] // From levels 1-3
+	  }, {
+		name: "Illusion Savant (7)",
+		"class": "wizard",
+		school: ["Illus"],
+		// They get 4 spells from levels 1-4
+		times : levels.map( function(n) { return n == 7 || n == 8 ? 4 : 3; } ),
+		level : [1,4] // From levels 1-4
+	  }, {
+		name: "Illusion Savant (9)",
+		"class": "wizard",
+		school: ["Illus"],
+		// They get 5 spells from levels 1-5
+		times : levels.map( function(n) { return n == 9 || n == 10 ? 5 : 4; } ),
+		level : [1,5] // From levels 1-5
+	  }, {
+		name: "Illusion Savant (11)",
+		"class": "wizard",
+		school: ["Illus"],
+		// They get 5 spells from levels 1-6
+		times : levels.map( function(n) { return n == 11 || n == 12 ? 6 : 5; } ),
+		level : [1,6] // From levels 1-6
+	  }, {
+		name: "Illusion Savant (13)",
+		"class": "wizard",
+		school: ["Illus"],
+		// They get 5 spells from levels 1-7
+		times : levels.map( function(n) { return n == 13 || n == 14 ? 7 : 6; } ),
+		level : [1,7] // From levels 1-7
+	  }, {
+		name: "Illusion Savant (15)",
+		"class": "wizard",
+		school: ["Illus"],
+		// They get 5 spells from levels 1-8
+		times : levels.map( function(n) { return n == 16 || n == 16 ? 8 : 7; } ),
+		level : [1,8] // From levels 1-8
+	  }, {   
+		name: "Illusion Savant (17)",
+		"class": "wizard",
+		school: ["Illus"],
+		// They get 5 spells from levels 1-9
+		times : levels.map( function(n) { return n == 17 || n == 18 || n == 19 || n == 20 ? 9 : 8; } ),
+		level : [1,9] // From levels 1-9
+	  }],
       description: desc([
         "I gain two Wizard spells from the Illusion school, level 2 or lower, for free. I gain a spell in this way each time I gain access to a new level of spell slots in this class.",
       ]),
