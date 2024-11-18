@@ -7687,62 +7687,70 @@ legacySubClassRefactor("wizard", "abjurer", {
       name: "Abjuration Savant",
       source: [["PHB2024", 172]],
       minlevel: 3,
-	  spellcastingBonus : [{
+	  spellcastingBonus: [{
 		name: "Abjuration Savant (3)",
 		"class": "wizard",
-		school: ["Abjur"],
-		// They get 2 spells from levels 1-2,
-		times : levels.map( function(n) { return n == 3 || n == 4 ? 2 : 0; } ),
-		level : [1,2], // From levels 1-2,
+		school: "Abjur",
+		times : levels.map( function(n) {
+			return n < 3 ? 0 : 2;
+		}),
+		level: [1, 2],
 	  }, {
 		name: "Abjuration Savant (5)",
 		"class": "wizard",
-		school: ["Abjur"],
-		// They get 2 spells from levels 1-3
-		times : levels.map( function(n) { return n == 5 || n == 6 ? 3 : 2; } ),
-		level : [1,3] // From levels 1-3
+		school: "Abjur",
+		times : levels.map( function(n) {
+			return n < 5 ? 0 : 1;
+		}),
+		level: [1, 3],
 	  }, {
 		name: "Abjuration Savant (7)",
 		"class": "wizard",
-		school: ["Abjur"],
-		// They get 4 spells from levels 1-4
-    times : levels.map( function(n) { return n == 7 || n == 8 ? 4 : 3; } ),
-		level : [1,4] // From levels 1-4
+		school: "Abjur",
+		times : levels.map( function(n) {
+			return n < 7 ? 0 : 1;
+		}),
+		level: [1, 4],
 	  }, {
 		name: "Abjuration Savant (9)",
 		"class": "wizard",
-		school: ["Abjur"],
-		// They get 5 spells from levels 1-5
-		times : levels.map( function(n) { return n == 9 || n == 10 ? 5 : 4; } ),
-		level : [1,5] // From levels 1-5
+		school: "Abjur",
+		times : levels.map( function(n) {
+			return n < 9 ? 0 : 1;
+		}),
+		level: [1, 5],
 	  }, {
 		name: "Abjuration Savant (11)",
 		"class": "wizard",
-		school: ["Abjur"],
-		// They get 5 spells from levels 1-6
-		times : levels.map( function(n) { return n == 11 || n == 12 ? 6 : 5; } ),
-		level : [1,6] // From levels 1-6
+		school: "Abjur",
+		times : levels.map( function(n) {
+			return n < 11 ? 0 : 1;
+		}),
+		level: [1, 6],
 	  }, {
 		name: "Abjuration Savant (13)",
 		"class": "wizard",
-		school: ["Abjur"],
-		// They get 5 spells from levels 1-7
-		times : levels.map( function(n) { return n == 13 || n == 14 ? 7 : 6; } ),
-		level : [1,7] // From levels 1-7
+		school: "Abjur",
+		times : levels.map( function(n) {
+			return n < 13 ? 0 : 1;
+		}),
+		level: [1, 7],
 	  }, {
 		name: "Abjuration Savant (15)",
 		"class": "wizard",
-		school: ["Abjur"],
-		// They get 5 spells from levels 1-8
-		times : levels.map( function(n) { return n == 16 || n == 16 ? 8 : 7; } ),
-		level : [1,8] // From levels 1-8
-	  }, {   
+		school: "Abjur",
+		times : levels.map( function(n) {
+			return n < 15 ? 0 : 1;
+		}),
+		level: [1, 8],
+	  }, {
 		name: "Abjuration Savant (17)",
 		"class": "wizard",
-		school: ["Abjur"],
-		// They get 5 spells from levels 1-9
-		times : levels.map( function(n) { return n == 17 || n == 18 || n == 19 || n == 20 ? 9 : 8; } ),
-		level : [1,9] // From levels 1-9
+		school: "Abjur",
+		times : levels.map( function(n) {
+			return n < 17 ? 0 : 1;
+		}),
+		level: [1, 9],
 	  }],
       description: desc([
         "I gain two Wizard spells from the Abjuration school, level 2 or lower, for free. I gain a spell in this way each time I gain access to a new level of spell slots in this class.",
@@ -7803,62 +7811,70 @@ legacySubClassRefactor("wizard", "diviner", {
       name: "Divination Savant",
       source: [["PHB2024", 173]],
       minlevel: 3,
-      spellcastingBonus : [{
+	  spellcastingBonus: [{
 		name: "Divination Savant (3)",
 		"class": "wizard",
-		school: ["Div"],
-		// They get 2 spells from levels 1-2
-		times : levels.map( function(n) { return n == 3 || n == 4 ? 2 : 0; } ),
-		level : [1,2] // From levels 1-2
+		school: "Div",
+		times : levels.map( function(n) {
+			return n < 3 ? 0 : 2;
+		}),
+		level: [1, 2],
 	  }, {
 		name: "Divination Savant (5)",
 		"class": "wizard",
-		school: ["Div"],
-		// They get 2 spells from levels 1-3
-		times : levels.map( function(n) { return n == 5 || n == 6 ? 3 : 2; } ),
-		level : [1,3] // From levels 1-3
+		school: "Div",
+		times : levels.map( function(n) {
+			return n < 5 ? 0 : 1;
+		}),
+		level: [1, 3],
 	  }, {
 		name: "Divination Savant (7)",
 		"class": "wizard",
-		school: ["Div"],
-		// They get 4 spells from levels 1-4
-		times : levels.map( function(n) { return n == 7 || n == 8 ? 4 : 3; } ),
-		level : [1,4] // From levels 1-4
+		school: "Div",
+		times : levels.map( function(n) {
+			return n < 7 ? 0 : 1;
+		}),
+		level: [1, 4],
 	  }, {
 		name: "Divination Savant (9)",
 		"class": "wizard",
-		school: ["Div"],
-		// They get 5 spells from levels 1-5
-		times : levels.map( function(n) { return n == 9 || n == 10 ? 5 : 4; } ),
-		level : [1,5] // From levels 1-5
+		school: "Div",
+		times : levels.map( function(n) {
+			return n < 9 ? 0 : 1;
+		}),
+		level: [1, 5],
 	  }, {
 		name: "Divination Savant (11)",
 		"class": "wizard",
-		school: ["Div"],
-		// They get 5 spells from levels 1-6
-		times : levels.map( function(n) { return n == 11 || n == 12 ? 6 : 5; } ),
-		level : [1,6] // From levels 1-6
+		school: "Div",
+		times : levels.map( function(n) {
+			return n < 11 ? 0 : 1;
+		}),
+		level: [1, 6],
 	  }, {
 		name: "Divination Savant (13)",
 		"class": "wizard",
-		school: ["Div"],
-		// They get 5 spells from levels 1-7
-		times : levels.map( function(n) { return n == 13 || n == 14 ? 7 : 6; } ),
-		level : [1,7] // From levels 1-7
+		school: "Div",
+		times : levels.map( function(n) {
+			return n < 13 ? 0 : 1;
+		}),
+		level: [1, 7],
 	  }, {
 		name: "Divination Savant (15)",
 		"class": "wizard",
-		school: ["Div"],
-		// They get 5 spells from levels 1-8
-		times : levels.map( function(n) { return n == 16 || n == 16 ? 8 : 7; } ),
-		level : [1,8] // From levels 1-8
-	  }, {   
+		school: "Div",
+		times : levels.map( function(n) {
+			return n < 15 ? 0 : 1;
+		}),
+		level: [1, 8],
+	  }, {
 		name: "Divination Savant (17)",
 		"class": "wizard",
-		school: ["div"],
-		// They get 5 spells from levels 1-9
-		times : levels.map( function(n) { return n == 17 || n == 18 || n == 19 || n == 20 ? 9 : 8; } ),
-		level : [1,9] // From levels 1-9
+		school: "Div",
+		times : levels.map( function(n) {
+			return n < 17 ? 0 : 1;
+		}),
+		level: [1, 9],
 	  }],
       description: desc([
         "I gain two Wizard spells from the Divination school, level 2 or lower, for free. I gain a spell in this way each time I gain access to a new level of spell slots in this class.",
@@ -7917,62 +7933,70 @@ legacySubClassRefactor("wizard", "evoker", {
       name: "Evocation Savant",
       source: [["PHB2024", 174]],
       minlevel: 3,
-      spellcastingBonus : [{
+	  spellcastingBonus: [{
 		name: "Evocation Savant (3)",
 		"class": "wizard",
-		school: ["Evoc"],
-		// They get 2 spells from levels 1-2
-		times : levels.map( function(n) { return n == 3 || n == 4 ? 2 : 0; } ),
-		level : [1,2] // From levels 1-2
+		school: "Evoc",
+		times : levels.map( function(n) {
+			return n < 3 ? 0 : 2;
+		}),
+		level: [1, 2],
 	  }, {
 		name: "Evocation Savant (5)",
 		"class": "wizard",
-		school: ["Evoc"],
-		// They get 2 spells from levels 1-3
-		times : levels.map( function(n) { return n == 5 || n == 6 ? 3 : 2; } ),
-		level : [1,3] // From levels 1-3
+		school: "Evoc",
+		times : levels.map( function(n) {
+			return n < 5 ? 0 : 1;
+		}),
+		level: [1, 3],
 	  }, {
 		name: "Evocation Savant (7)",
 		"class": "wizard",
-		school: ["Evoc"],
-		// They get 4 spells from levels 1-4
-		times : levels.map( function(n) { return n == 7 || n == 8 ? 4 : 3; } ),
-		level : [1,4] // From levels 1-4
+		school: "Evoc",
+		times : levels.map( function(n) {
+			return n < 7 ? 0 : 1;
+		}),
+		level: [1, 4],
 	  }, {
 		name: "Evocation Savant (9)",
 		"class": "wizard",
-		school: ["Evoc"],
-		// They get 5 spells from levels 1-5
-		times : levels.map( function(n) { return n == 9 || n == 10 ? 5 : 4; } ),
-		level : [1,5] // From levels 1-5
+		school: "Evoc",
+		times : levels.map( function(n) {
+			return n < 9 ? 0 : 1;
+		}),
+		level: [1, 5],
 	  }, {
 		name: "Evocation Savant (11)",
 		"class": "wizard",
-		school: ["Evoc"],
-		// They get 5 spells from levels 1-6
-		times : levels.map( function(n) { return n == 11 || n == 12 ? 6 : 5; } ),
-		level : [1,6] // From levels 1-6
+		school: "Evoc",
+		times : levels.map( function(n) {
+			return n < 11 ? 0 : 1;
+		}),
+		level: [1, 6],
 	  }, {
 		name: "Evocation Savant (13)",
 		"class": "wizard",
-		school: ["Evoc"],
-		// They get 5 spells from levels 1-7
-		times : levels.map( function(n) { return n == 13 || n == 14 ? 7 : 6; } ),
-		level : [1,7] // From levels 1-7
+		school: "Evoc",
+		times : levels.map( function(n) {
+			return n < 13 ? 0 : 1;
+		}),
+		level: [1, 7],
 	  }, {
 		name: "Evocation Savant (15)",
 		"class": "wizard",
-		school: ["Evoc"],
-		// They get 5 spells from levels 1-8
-		times : levels.map( function(n) { return n == 16 || n == 16 ? 8 : 7; } ),
-		level : [1,8] // From levels 1-8
-	  }, {   
+		school: "Evoc",
+		times : levels.map( function(n) {
+			return n < 15 ? 0 : 1;
+		}),
+		level: [1, 8],
+	  }, {
 		name: "Evocation Savant (17)",
 		"class": "wizard",
-		school: ["Evoc"],
-		// They get 5 spells from levels 1-9
-		times : levels.map( function(n) { return n == 17 || n == 18 || n == 19 || n == 20 ? 9 : 8; } ),
-		level : [1,9] // From levels 1-9
+		school: "Evoc",
+		times : levels.map( function(n) {
+			return n < 17 ? 0 : 1;
+		}),
+		level: [1, 9],
 	  }],
       description: desc([
         "I gain two Wizard spells from the Evocation school, level 2 or lower, for free. I gain a spell in this way each time I gain access to a new level of spell slots in this class.",
@@ -8023,62 +8047,70 @@ legacySubClassRefactor("wizard", "illusionist", {
       name: "Illusion Savant",
       source: [["PHB2024", 175]],
       minlevel: 3,
-      spellcastingBonus : [{
+	  spellcastingBonus: [{
 		name: "Illusion Savant (3)",
 		"class": "wizard",
-		school: ["Illus"],
-		// They get 2 spells from levels 1-2
-		times : levels.map( function(n) { return n == 3 || n == 4 ? 2 : 0; } ),
-		level : [1,2] // From levels 1-2
+		school: "Illus",
+		times : levels.map( function(n) {
+			return n < 3 ? 0 : 2;
+		}),
+		level: [1, 2],
 	  }, {
 		name: "Illusion Savant (5)",
 		"class": "wizard",
-		school: ["Illus"],
-		// They get 2 spells from levels 1-3
-		times : levels.map( function(n) { return n == 5 || n == 6 ? 3 : 2; } ),
-		level : [1,3] // From levels 1-3
+		school: "Illus",
+		times : levels.map( function(n) {
+			return n < 5 ? 0 : 1;
+		}),
+		level: [1, 3],
 	  }, {
 		name: "Illusion Savant (7)",
 		"class": "wizard",
-		school: ["Illus"],
-		// They get 4 spells from levels 1-4
-		times : levels.map( function(n) { return n == 7 || n == 8 ? 4 : 3; } ),
-		level : [1,4] // From levels 1-4
+		school: "Illus",
+		times : levels.map( function(n) {
+			return n < 7 ? 0 : 1;
+		}),
+		level: [1, 4],
 	  }, {
 		name: "Illusion Savant (9)",
 		"class": "wizard",
-		school: ["Illus"],
-		// They get 5 spells from levels 1-5
-		times : levels.map( function(n) { return n == 9 || n == 10 ? 5 : 4; } ),
-		level : [1,5] // From levels 1-5
+		school: "Illus",
+		times : levels.map( function(n) {
+			return n < 9 ? 0 : 1;
+		}),
+		level: [1, 5],
 	  }, {
 		name: "Illusion Savant (11)",
 		"class": "wizard",
-		school: ["Illus"],
-		// They get 5 spells from levels 1-6
-		times : levels.map( function(n) { return n == 11 || n == 12 ? 6 : 5; } ),
-		level : [1,6] // From levels 1-6
+		school: "Illus",
+		times : levels.map( function(n) {
+			return n < 11 ? 0 : 1;
+		}),
+		level: [1, 6],
 	  }, {
 		name: "Illusion Savant (13)",
 		"class": "wizard",
-		school: ["Illus"],
-		// They get 5 spells from levels 1-7
-		times : levels.map( function(n) { return n == 13 || n == 14 ? 7 : 6; } ),
-		level : [1,7] // From levels 1-7
+		school: "Illus",
+		times : levels.map( function(n) {
+			return n < 13 ? 0 : 1;
+		}),
+		level: [1, 7],
 	  }, {
 		name: "Illusion Savant (15)",
 		"class": "wizard",
-		school: ["Illus"],
-		// They get 5 spells from levels 1-8
-		times : levels.map( function(n) { return n == 16 || n == 16 ? 8 : 7; } ),
-		level : [1,8] // From levels 1-8
-	  }, {   
+		school: "Illus",
+		times : levels.map( function(n) {
+			return n < 15 ? 0 : 1;
+		}),
+		level: [1, 8],
+	  }, {
 		name: "Illusion Savant (17)",
 		"class": "wizard",
-		school: ["Illus"],
-		// They get 5 spells from levels 1-9
-		times : levels.map( function(n) { return n == 17 || n == 18 || n == 19 || n == 20 ? 9 : 8; } ),
-		level : [1,9] // From levels 1-9
+		school: "Illus",
+		times : levels.map( function(n) {
+			return n < 17 ? 0 : 1;
+		}),
+		level: [1, 9],
 	  }],
       description: desc([
         "I gain two Wizard spells from the Illusion school, level 2 or lower, for free. I gain a spell in this way each time I gain access to a new level of spell slots in this class.",
