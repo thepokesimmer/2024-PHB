@@ -6143,13 +6143,41 @@ legacySubClassRefactor("sorcerer", "aberrant", {
   subname: "Aberrant Sorcery",
   source: [["PHB2024", 145]],
   replaces: "aberrant mind",
-  spellcastingExtra: ["arms of hadar", "calm emotions", "detect thoughts", "dissonant whispers", "mind sliver", "hunger of hadar", "sending", "evard's black tentacles", "summon aberration", "rary's telepathic bond", "telekinesis"],
   features: {
     "subclassfeature3": {
       name: "Telepathic Speech",
       source: [["PHB2024", 145]],
       minlevel: 3,
       action: "bonus action",
+	  spellcastingBonus: [{
+		name: "Aberrant Sorcery Spells (3)",
+		spells : ["arms of hadar", "calm emotions", "detect thoughts", "dissonant whispers", "mind sliver"],
+		selection : ["arms of hadar", "calm emotions", "detect thoughts", "dissonant whispers", "mind sliver"],
+		times : levels.map( function(n) {
+			return n < 3 ? 0 : 5;
+		}),
+	  }, {
+		name: "Aberrant Sorcery Spells (5)",
+		spells : ["hunger of hadar", "sending"],
+		selection : ["hunger of hadar", "sending"],
+		times : levels.map( function(n) {
+			return n < 5 ? 0 : 2;
+		}),
+	  }, {
+		name: "Aberrant Sorcery Spells (7)",
+		spells : ["evard's black tentacles", "summon aberration"],
+		selection : ["evard's black tentacles", "summon aberration"],
+		times : levels.map( function(n) {
+			return n < 7 ? 0 : 2;
+		}),
+	  }, {
+		name: "Aberrant Sorcery Spells (9)",
+		spells : ["rary's telepathic bond", "telekinesis"],
+		selection : ["rary's telepathic bond", "telekinesis"],
+		times : levels.map( function(n) {
+			return n < 9 ? 0 : 2;
+		}),
+	  }],
       description: desc([
         "As a Bonus Action, one creature I can see within 30 ft of myself & I can speak telepathically with each other while within my Cha mod miles (min 1) for my Sorcerer level minutes as long as we share a language. It lasts until I use it with another creature.",
       ]),
@@ -6237,12 +6265,40 @@ legacySubClassRefactor("sorcerer", "clockwork", {
   subname: "Clockwork Sorcery",
   source: [["PHB2024", 146]],
   replaces: "clockwork soul",
-  spellcastingExtra: ["aid", "alarm", "lesser restoration", "protection from evil and good", "dispel magic", "protection from energy", "freedom of movement", "summon construct", "greater restoration", "wall of force"],
   features: {
     "subclassfeature3": {
       name: "Clockwork Spells",
       source: [["PHB2024", 146]],
       minlevel: 3,
+	  spellcastingBonus: [{
+		name: "Clockwork Sorcery Spells (3)",
+		spells : ["aid", "alarm", "lesser restoration", "protection from evil and good"],
+		selection : ["aid", "alarm", "lesser restoration", "protection from evil and good"],
+		times : levels.map( function(n) {
+			return n < 3 ? 0 : 4;
+		}),
+	  }, {
+		name: "Clockwork Sorcery Spells (5)",
+		spells : ["dispel magic", "protection from energy"],
+		selection : ["dispel magic", "protection from energy"],
+		times : levels.map( function(n) {
+			return n < 5 ? 0 : 2;
+		}),
+	  }, {
+		name: "Clockwork Sorcery Spells (7)",
+		spells : ["freedom of movement", "summon construct"],
+		selection : ["freedom of movement", "summon construct"],
+		times : levels.map( function(n) {
+			return n < 7 ? 0 : 2;
+		}),
+	  }, {
+		name: "Clockwork Sorcery Spells (9)",
+		spells : ["greater restoration", "wall of force"],
+		selection : ["greater restoration", "wall of force"],
+		times : levels.map( function(n) {
+			return n < 9 ? 0 : 2;
+		}),
+	  }],
       description: desc([
         "Choose a Manifestation of Order from Page 3; it appears when I cast a Sorcerer spell.",
       ]),
@@ -6313,7 +6369,6 @@ legacySubClassRefactor("sorcerer", "draconic", {
   subname: "Draconic Sorcery",
   source: [["PHB2024", 148]],
   replaces: "draconic bloodline",
-  spellcastingExtra: ["alter self", "chromatic orb", "command", "dragon's breath", "fear", "fly", "arcane eye", "charm monster", "legend lore", "summon dragon"],
   features: {
     "subclassfeature3": {
       name: "Draconic Resilience",
@@ -6334,7 +6389,36 @@ legacySubClassRefactor("sorcerer", "draconic", {
           }
         },
       },
-      description: desc([
+	  spellcastingBonus: [{
+		name: "Draconic Sorcery Spells (3)",
+		spells : ["alter self", "chromatic orb", "command", "dragon's breath"],
+		selection : ["alter self", "chromatic orb", "command", "dragon's breath"],
+		times : levels.map( function(n) {
+			return n < 3 ? 0 : 4;
+		}),
+	  }, {
+		name: "Draconic Sorcery Spells (5)",
+		spells : ["fear", "fly"],
+		selection : ["fear", "fly"],
+		times : levels.map( function(n) {
+			return n < 5 ? 0 : 2;
+		}),
+	  }, {
+		name: "Draconic Sorcery Spells (7)",
+		spells : ["arcane eye", "charm monster"],
+		selection : ["arcane eye", "charm monster"],
+		times : levels.map( function(n) {
+			return n < 7 ? 0 : 2;
+		}),
+	  }, {
+		name: "Draconic Sorcery Spells (9)",
+		spells : ["legend lore", "summon dragon"],
+		selection : ["legend lore", "summon dragon"],
+		times : levels.map( function(n) {
+			return n < 9 ? 0 : 2;
+		}),
+	  }],      
+	  description: desc([
         "My hit point maximum increases by an amount equal to my sorcerer level.",
         "While not wearing armor my base AC is 10 + Dex mod + Cha mod.",
       ]),
@@ -7277,7 +7361,6 @@ legacySubClassRefactor("warlock", "the archfey", {
   regExpSearch: /^(?=.*(warlock))(?=.*(archfey)).*$/i,
   subname: "Archfey Patron",
   source: [["PHB2024", 159]],
-  spellcastingExtra: ["calm emotions", "faerie fire", "misty step", "phantasmal force", "sleep", "blink", "plant growth", "dominate beast", "greater invisibility", "dominate person", "seeming"],
   features: {
     "subclassfeature3": {
       name: "Steps of the Fey",
@@ -7286,6 +7369,35 @@ legacySubClassRefactor("warlock", "the archfey", {
       usages: "Charisma modifier per ",
       usagescalc: "event.value = Math.max(1, What('Cha Mod'));",
       recovery: "long rest",
+	  spellcastingBonus: [{
+		name: "Archfey Patron Spells (3)",
+		spells : ["calm emotions", "faerie fire", "misty step", "phantasmal force", "sleep"],
+		selection : ["calm emotions", "faerie fire", "misty step", "phantasmal force", "sleep"],
+		times : levels.map( function(n) {
+			return n < 3 ? 0 : 5;
+		}),
+	  }, {
+		name: "Archfey Patron Spells (5)",
+		spells : ["blink", "plant growth"],
+		selection : ["blink", "plant growth"],
+		times : levels.map( function(n) {
+			return n < 5 ? 0 : 2;
+		}),
+	  }, {
+		name: "Archfey Patron Spells (7)",
+		spells : ["dominate beast", "greater invisibility"],
+		selection : ["dominate beast", "greater invisibility"],
+		times : levels.map( function(n) {
+			return n < 7 ? 0 : 2;
+		}),
+	  }, {
+		name: "Archfey Patron Spells (9)",
+		spells : ["dominate person", "seeming"],
+		selection : ["dominate person", "seeming"],
+		times : levels.map( function(n) {
+			return n < 9 ? 0 : 2;
+		}),
+	  }], 	  
       description: desc([
         "I can cast Misty Step w/out a spell slot (min once) per Long Rest and can imbue it with one option from the Steps of the Fey feature, (see notes page).",
       ]),
@@ -7359,7 +7471,6 @@ legacySubClassRefactor("warlock", "the celestial", {
   regExpSearch: /^(?=.*(warlock))(?=.*(celestial)).*$/i,
   subname: "Celestial Patron",
   source: [["PHB2024", 160]],
-  spellcastingExtra: ["aid", "cure wounds", "guiding bolt", "lesser restoration", "light", "sacred flame", "daylight", "revivify", "guardian of faith", "wall of fire", "greater restoration", "summon celestial"],
   features: {
     "subclassfeature3": {
       name: "Healing Light",
@@ -7369,6 +7480,35 @@ legacySubClassRefactor("warlock", "the celestial", {
       usages: [0, 0, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
       recovery: "long rest",
       additional: "Max dice per use = Charisma Modifier",
+	  spellcastingBonus: [{
+		name: "Celestial Patron Spells (3)",
+		spells : ["aid", "cure wounds", "guiding bolt", "lesser restoration", "light", "sacred flame"],
+		selection : ["aid", "cure wounds", "guiding bolt", "lesser restoration", "light", "sacred flame"],
+		times : levels.map( function(n) {
+			return n < 3 ? 0 : 6;
+		}),
+	  }, {
+		name: "Celestial Patron Spells (5)",
+		spells : ["daylight", "revivify"],
+		selection : ["daylight", "revivify"],
+		times : levels.map( function(n) {
+			return n < 5 ? 0 : 2;
+		}),
+	  }, {
+		name: "Celestial Patron Spells (7)",
+		spells : ["guardian of faith", "wall of fire"],
+		selection : ["guardian of faith", "wall of fire"],
+		times : levels.map( function(n) {
+			return n < 7 ? 0 : 2;
+		}),
+	  }, {
+		name: "Celestial Patron Spells (9)",
+		spells : ["greater restoration", "summon celestial"],
+		selection : ["greater restoration", "summon celestial"],
+		times : levels.map( function(n) {
+			return n < 9 ? 0 : 2;
+		}),
+	  }], 	  
       description: desc([
         "As a bonus action, I can heal a creature I can see within 60 ft or myself by spending dice from my pool (min 1), healing HP equal to the roll.",
       ]),
@@ -7405,12 +7545,40 @@ legacySubClassRefactor("warlock", "the fiend", {
   regExpSearch: /^(?=.*(warlock))(?=.*(fiend)).*$/i,
   subname: "Fiend Patron",
   source: [["PHB2024", 161]],
-  spellcastingExtra: ["burning hands", "command", "scorching ray", "suggestion", "fireball", "stinking cloud", "fire shield", "wall of fire", "geas", "insect plague"],
   features: {
     "subclassfeature3": {
       name: "Dark One's Blessing",
       source: [["PHB2024", 161]],
       minlevel: 3,
+	  spellcastingBonus: [{
+		name: "Fiend Patron Spells (3)",
+		spells : ["burning hands", "command", "scorching ray", "suggestion"],
+		selection : ["burning hands", "command", "scorching ray", "suggestion"],
+		times : levels.map( function(n) {
+			return n < 3 ? 0 : 4;
+		}),
+	  }, {
+		name: "Fiend Patron Spells (5)",
+		spells : ["fireball", "stinking cloud"],
+		selection : ["fireball", "stinking cloud"],
+		times : levels.map( function(n) {
+			return n < 5 ? 0 : 2;
+		}),
+	  }, {
+		name: "Fiend Patron Spells (7)",
+		spells : ["fire shield", "wall of fire"],
+		selection : ["fire shield", "wall of fire"],
+		times : levels.map( function(n) {
+			return n < 7 ? 0 : 2;
+		}),
+	  }, {
+		name: "Fiend Patron Spells (9)",
+		spells : ["geas", "insect plague"],
+		selection : ["geas", "insect plague"],
+		times : levels.map( function(n) {
+			return n < 9 ? 0 : 2;
+		}),
+	  }], 	  
       description: desc([
         "When I reduce a hostile to 0 HP, I gain Cha mod + Warlock level temp HP (min 1). I also gain this temp HP if an enemy within 10 ft of me is reduced to 0 Hit Points.",
       ]),
@@ -7451,13 +7619,41 @@ legacySubClassRefactor("warlock", "the great old one", {
   regExpSearch: /^(?=.*(warlock))(?=.*(great old one)).*$/i,
   subname: "Great Old One Patron",
   source: [["PHB2024", 162]],
-  spellcastingExtra: ["detect thoughts", "dissonant whispers", "phantasmal force", "tasha's hideous laughter", "clairvoyance", "hunger of hadar", "confusion", "summon aberration", "modify memory", "telekinesis"],
   features: {
     "subclassfeature3": {
       name: "Awakened Mind",
       source: [["PHB2024", 162]],
       minlevel: 3,
 	  action: "bonus action",
+	  spellcastingBonus: [{
+		name: "Great Old One Patron Spells (3)",
+		spells : ["detect thoughts", "dissonant whispers", "phantasmal force", "tasha's hideous laughter"],
+		selection : ["detect thoughts", "dissonant whispers", "phantasmal force", "tasha's hideous laughter"],
+		times : levels.map( function(n) {
+			return n < 3 ? 0 : 4;
+		}),
+	  }, {
+		name: "Great Old One Patron Spells (5)",
+		spells : ["clairvoyance", "hunger of hadar"],
+		selection : ["clairvoyance", "hunger of hadar"],
+		times : levels.map( function(n) {
+			return n < 5 ? 0 : 2;
+		}),
+	  }, {
+		name: "Great Old One Patron Spells (7)",
+		spells : ["confusion", "summon aberration"],
+		selection : ["confusion", "summon aberration"],
+		times : levels.map( function(n) {
+			return n < 7 ? 0 : 2;
+		}),
+	  }, {
+		name: "Great Old One Patron Spells (9)",
+		spells : ["modify memory", "telekinesis"],
+		selection : ["modify memory", "telekinesis"],
+		times : levels.map( function(n) {
+			return n < 9 ? 0 : 2;
+		}),
+	  }], 	  
       description: desc([
         "As a Bonus Action, one creature I can see within 30 ft & I can speak telepathically with each other while within my Cha mod miles (min 1) for my Warlock level minutes as long as we share a language. It lasts until I use it with another creature.",
       ]),
