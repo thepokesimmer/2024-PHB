@@ -11583,37 +11583,37 @@ FeatsList["boon of combat prowess"] = {
   description: "+1 to Any, Once per turn, when I miss with an attack, I can instead hit.",
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
-    name: "Strength",
+	  name: "Boon of Combat Prowess - STR",
     description: "Once per turn, when I miss with an attack, I can instead hit. [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
     scoresMaximum: [30, 0, 0, 0, 0, 0],
   },
   "dexterity": {
-    name: "Dexterity",
+	  name: "Boon of Combat Prowess - DEX",
     description: "Once per turn, when I miss with an attack, I can instead hit. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
     scoresMaximum: [0, 30, 0, 0, 0, 0],
   },
   "constitution": {
-    name: "Constitution",
+	  name: "Boon of Combat Prowess - CON",
     description: "Once per turn, when I miss with an attack, I can instead hit. [+1 constitution]",
     scores: [0, 0, 1, 0, 0, 0],
     scoresMaximum: [0, 0, 30, 0, 0, 0],
   },
   "intelligence": {
-    name: "Intelligence",
+	  name: "Boon of Combat Prowess - INT",
     description: "Once per turn, when I miss with an attack, I can instead hit. [+1 Intelligence]",
     scores: [0, 0, 0, 1, 0, 0],
     scoresMaximum: [0, 0, 0, 30, 0, 0],
   },
   "wisdom": {
-    name: "Wisdom",
+	  name: "Boon of Combat Prowess - WIS",
     description: "Once per turn, when I miss with an attack, I can instead hit. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
     scoresMaximum: [0, 0, 0, 0, 30, 0],
   },
   "charisma": {
-    name: "Charisma",
+	  name: "Boon of Combat Prowess - CHA",
     description: "Once per turn, when I miss with an attack, I can instead hit. [+1 Charisma]",
     scores: [0, 0, 0, 0, 0, 1],
     scoresMaximum: [0, 0, 0, 0, 0, 30],
@@ -11629,37 +11629,37 @@ FeatsList["boon of dimensional travel"] = {
   description: "+1 to Any, Once per turn, when I miss with an attack, I can instead hit.",
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
-    name: "Strength",
+	  name: "Boon of Dimensional Travel - STR",
     description: "Immediately after I take the Attack action or the Magic action, I can teleport up to 30 feet to an unoccupied space I can see. [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
     scoresMaximum: [30, 0, 0, 0, 0, 0],
   },
   "dexterity": {
-    name: "Dexterity",
+	  name: "Boon of Dimensional Travel - DEX",
     description: "Immediately after I take the Attack action or the Magic action, I can teleport up to 30 feet to an unoccupied space I can see. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
     scoresMaximum: [0, 30, 0, 0, 0, 0],
   },
   "constitution": {
-    name: "Constitution",
+	  name: "Boon of Dimensional Travel - CON",
     description: "Immediately after I take the Attack action or the Magic action, I can teleport up to 30 feet to an unoccupied space I can see. [+1 constitution]",
     scores: [0, 0, 1, 0, 0, 0],
     scoresMaximum: [0, 0, 30, 0, 0, 0],
   },
   "intelligence": {
-    name: "Intelligence",
+	  name: "Boon of Dimensional Travel - INT",
     description: "Immediately after I take the Attack action or the Magic action, I can teleport up to 30 feet to an unoccupied space I can see. [+1 Intelligence]",
     scores: [0, 0, 0, 1, 0, 0],
     scoresMaximum: [0, 0, 0, 30, 0, 0],
   },
   "wisdom": {
-    name: "Wisdom",
+	  name: "Boon of Dimensional Travel - WIS",
     description: "Immediately after I take the Attack action or the Magic action, I can teleport up to 30 feet to an unoccupied space I can see. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
     scoresMaximum: [0, 0, 0, 0, 30, 0],
   },
   "charisma": {
-    name: "Charisma",
+	  name: "Boon of Dimensional Travel - CHA",
     description: "Immediately after I take the Attack action or the Magic action, I can teleport up to 30 feet to an unoccupied space I can see. [+1 Charisma]",
     scores: [0, 0, 0, 0, 0, 1],
     scoresMaximum: [0, 0, 0, 0, 0, 30],
@@ -11674,90 +11674,187 @@ FeatsList["boon of energy resistance"] = {
   action: ["reaction", "Energy Redirection"],
   descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Energy Resistances. I gain Resistance to two of the following damage types of my choice: Acid, Cold, Fire, Lightning, Necrotic, Poison, Psychic, Radiant, or Thunder. Whenever I finish a Long Rest, I can change my choices.\n \u2022 Energy Redirection. When I take damage of one of the types chosen for the Energy Resistances benefit, I can take a Reaction to direct damage of the same type toward another creature I can see within 60 feet of yourself that isn't behind Total Cover. If I do so, that creature must succeed on a Dexterity saving throw (DC 8 plus my Constitution modifier and Proficiency Bonus) or take damage equal to 2d12 plus my Constitution modifier.",
   description: "+1 to Any, +2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover.",
-  extraname: "Boon of Energy Resistance",
-  extrachoices: ["Acid", "Cold", "Fire", "Lightning", "Necrotic", "Poison", "Psychic", "Radiant", "Thunder"],
-  extraTimes: 2,
-  "acid": {
-    name: "Acid",
-    description: "Boon of Energy Resistance, I gain Resistance to Acid damage",
-    dmgres: "Acid",
+  scorestxt: ["An ability score of my choice increases by 1, to a Maximum of 30"],
+   choices: ["Acid & Cold", "Acid & Fire", "Acid & Lightning", "Acid & Necrotic", "Acid & Poison", "Acid & Psychic", "Acid & Radiant", "Acid & Thunder", "Cold & Fire", "Cold & Lightning", "Cold & Necrotic", "Cold & Poison", "Cold & Psychic", "Cold & Radiant", "Cold & Thunder", "Fire & Lightning", "Fire & Necrotic", "Fire & Poison", "Fire & Psychic", "Fire & Radiant", "Fire & Thunder", "Lightning & Necrotic", "Lightning & Poison", "Lightning & Psychic", "Lightning & Radiant", "Lightning & Thunder", "Necrotic & Poison", "Necrotic & Psychic", "Necrotic & Radiant", "Necrotic & Thunder", "Poison & Psychic", "Poison & Radiant", "Poison & Thunder", "Psychic & Radiant", "Psychic & Thunder", "Radiant & Thunder"],
+  "acid & cold": {
+	name: "Boon of Energy Res - [Acid+Cold]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Acid", "Cold"],
   },
-  "cold": {
-    name: "Cold",
-    description: "Boon of Energy Resistance, I gain Resistance to Cold damage",
-    dmgres: "Cold",
+  "acid & fire": {
+	name: "Boon of Energy Res - [Acid+Fire]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Acid", "Fire"],
   },
-  "fire": {
-    name: "Fire",
-    description: "Boon of Energy Resistance, I gain Resistance to Fire damage",
-    dmgres: "Fire",
+  "acid & lightning": {
+	name: "Boon of Energy Res - [Acid+Lightning]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Acid", "Lightning"],
   },
-  "lightning": {
-    name: "Lightning",
-    description: "Boon of Energy Resistance, I gain Resistance to Lightning damage",
-    dmgres: "Lightning",
+  "acid & necrotic": {
+	name: "Boon of Energy Res - [Acid+Necrotic]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Acid", "Necrotic"],
   },
-  "necrotic": {
-    name: "Necrotic",
-    description: "Boon of Energy Resistance, I gain Resistance to Necrotic damage",
-    dmgres: "Necrotic",
+  "acid & poison": {
+	name: "Boon of Energy Res - [Acid+Poison]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Acid", "Poison"],
   },
-  "poison": {
-    name: "Poison",
-    description: "Boon of Energy Resistance, I gain Resistance to Poison damage",
-    dmgres: "Poison",
+  "acid & psychic": {
+	name: "Boon of Energy Res - [Acid+Psychic]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Acid", "Psychic"],
   },
-  "psychic": {
-    name: "Psychic",
-    description: "Boon of Energy Resistance, I gain Resistance to Psychic damage",
-    dmgres: "Psychic",
+  "acid & radiant": {
+	name: "Boon of Energy Res - [Acid+Radiant]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Acid", "Radiant"],
   },
-  "radiant": {
-    name: "Radiant",
-    description: "Boon of Energy Resistance, I gain Resistance to Radiant damage",
-    dmgres: "Radiant",
+  "acid & thunder": {
+	name: "Boon of Energy Res - [Acid+Thunder]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Acid", "Thunder"],
   },
-  "thunder": {
-    name: "Thunder",
-    description: "Boon of Energy Resistance, I gain Resistance to Thunder damage",
-    dmgres: "Thunder",
+  "cold & fire": {
+	name: "Boon of Energy Res - [Cold+Fire]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Cold", "Fire"],
   },
-  choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
-  "strength": {
-    name: "Strength",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Strength]",
-    scores: [1, 0, 0, 0, 0, 0],
-    scoresMaximum: [30, 0, 0, 0, 0, 0],
+  "cold & lightning": {
+	name: "Boon of Energy Res - [Cold+Lightning]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Cold", "Lightning"],
   },
-  "dexterity": {
-    name: "Dexterity",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Dexterity]",
-    scores: [0, 1, 0, 0, 0, 0],
-    scoresMaximum: [0, 30, 0, 0, 0, 0],
+  "cold & necrotic": {
+	name: "Boon of Energy Res - [Cold+Necrotic]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Cold", "Necrotic"],
   },
-  "constitution": {
-    name: "Constitution",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 constitution]",
-    scores: [0, 0, 1, 0, 0, 0],
-    scoresMaximum: [0, 0, 30, 0, 0, 0],
+  "cold & poison": {
+	name: "Boon of Energy Res - [Cold+Poison]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Cold", "Poison"],
   },
-  "intelligence": {
-    name: "Intelligence",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Intelligence]",
-    scores: [0, 0, 0, 1, 0, 0],
-    scoresMaximum: [0, 0, 0, 30, 0, 0],
+  "cold & psychic": {
+	name: "Boon of Energy Res - [Cold+Psychic]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Cold", "Psychic"],
   },
-  "wisdom": {
-    name: "Wisdom",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Wisdom]",
-    scores: [0, 0, 0, 0, 1, 0],
-    scoresMaximum: [0, 0, 0, 0, 30, 0],
+  "cold & radiant": {
+	name: "Boon of Energy Res - [Cold+Radiant]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Cold", "Radiant"],
   },
-  "charisma": {
-    name: "Charisma",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Charisma]",
-    scores: [0, 0, 0, 0, 0, 1],
-    scoresMaximum: [0, 0, 0, 0, 0, 30],
+  "cold & thunder": {
+	name: "Boon of Energy Res - [Cold+Thunder]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Cold", "Thunder"],
+  },
+  "fire & lightning": {
+	name: "Boon of Energy Res - [Fire+Lightning]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Fire", "Lightning"],
+  },
+  "fire & necrotic": {
+	name: "Boon of Energy Res - [Fire+Necrotic]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Fire", "Necrotic"],
+  },
+  "fire & poison": {
+	name: "Boon of Energy Res - [Fire+Poison]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Fire", "Poison"],
+  },
+  "fire & psychic": {
+	name: "Boon of Energy Res - [Fire+Psychic]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Fire", "Psychic"],
+  },
+  "fire & radiant": {
+	name: "Boon of Energy Res - [Fire+Radiant]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Fire", "Radiant"],
+  },
+  "fire & thunder": {
+	name: "Boon of Energy Res - [Fire+Thunder]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Fire", "Thunder"],
+  },
+  "lightning & necrotic": {
+	name: "Boon of Energy Res - [Lightning+Necrotic]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Lightning", "Necrotic"],
+  },
+  "lightning & poison": {
+	name: "Boon of Energy Res - [Lightning+Poison]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Lightning", "Poison"],
+  },
+  "lightning & psychic": {
+	name: "Boon of Energy Res - [Lightning+Psychic]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Lightning", "Psychic"],
+  },
+  "lightning & radiant": {
+	name: "Boon of Energy Res - [Lightning+Radiant]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Lightning", "Radiant"],
+  },
+  "lightning & thunder": {
+	name: "Boon of Energy Res - [Lightning+Thunder]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Lightning", "Thunder"],
+  },
+  "necrotic & poison": {
+	name: "Boon of Energy Res - [Necrotic+Poison]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Necrotic", "Poison"],
+  },
+  "necrotic & psychic": {
+	name: "Boon of Energy Res - [Necrotic+Psychic]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Necrotic", "Psychic"],
+  },
+  "necrotic & radiant": {
+	name: "Boon of Energy Res - [Necrotic+Radiant]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Necrotic", "Radiant"],
+  },
+  "necrotic & thunder": {
+	name: "Boon of Energy Res - [Necrotic+Thunder]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Necrotic", "Thunder"],
+  },
+  "poison & psychic": {
+	name: "Boon of Energy Res - [Poison+Psychic]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Poison", "Psychic"],
+  },
+  "poison & radiant": {
+	name: "Boon of Energy Res - [Poison+Radiant]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Poison", "Radiant"],
+  },
+  "poison & thunder": {
+	name: "Boon of Energy Res - [Poison+Thunder]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Poison", "Thunder"],
+  },
+  "psychic & radiant": {
+	name: "Boon of Energy Res - [Psychic+Radiant]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Psychic", "Radiant"],
+  },
+  "psychic & thunder": {
+	name: "Boon of Energy Res - [Psychic+Thunder]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Psychic", "Thunder"],
+  },
+  "radiant & thunder": {
+	name: "Boon of Energy Res - [Radiant+Thunder]",
+    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    dmgres: ["Radiant", "Thuder"],
   },
   prereqeval: function (v) {
     return v.characterLevel >= 19;
@@ -11770,37 +11867,37 @@ FeatsList["boon of fate"] = {
   description: "+1 to Any, Once per Initiative/Rest I can roll 2d4 and apply them as a bonus or penalty to a single D20 Test rolled by yourself or another creature within 60 feet of I.",
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
-    name: "Strength",
+	  name: "Boon of Fate - STR",
     description: "Once per Initiative/Rest I can roll 2d4 and apply them as a bonus or penalty to a single D20 Test rolled by yourself or another creature within 60 feet of I. [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
     scoresMaximum: [30, 0, 0, 0, 0, 0],
   },
   "dexterity": {
-    name: "Dexterity",
+	  name: "Boon of Fate - DEX",
     description: "Once per Initiative/Rest I can roll 2d4 and apply them as a bonus or penalty to a single D20 Test rolled by yourself or another creature within 60 feet of I. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
     scoresMaximum: [0, 30, 0, 0, 0, 0],
   },
   "constitution": {
-    name: "Constitution",
+	  name: "Boon of Fate - CON",
     description: "Once per Initiative/Rest I can roll 2d4 and apply them as a bonus or penalty to a single D20 Test rolled by yourself or another creature within 60 feet of I. [+1 constitution]",
     scores: [0, 0, 1, 0, 0, 0],
     scoresMaximum: [0, 0, 30, 0, 0, 0],
   },
   "intelligence": {
-    name: "Intelligence",
+	  name: "Boon of Fate - INT",
     description: "Once per Initiative/Rest I can roll 2d4 and apply them as a bonus or penalty to a single D20 Test rolled by yourself or another creature within 60 feet of I. [+1 Intelligence]",
     scores: [0, 0, 0, 1, 0, 0],
     scoresMaximum: [0, 0, 0, 30, 0, 0],
   },
   "wisdom": {
-    name: "Wisdom",
+	  name: "Boon of Fate - WIS",
     description: "Once per Initiative/Rest I can roll 2d4 and apply them as a bonus or penalty to a single D20 Test rolled by yourself or another creature within 60 feet of I. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
     scoresMaximum: [0, 0, 0, 0, 30, 0],
   },
   "charisma": {
-    name: "Charisma",
+	  name: "Boon of Fate - CHA",
     description: "Once per Initiative/Rest I can roll 2d4 and apply them as a bonus or penalty to a single D20 Test rolled by yourself or another creature within 60 feet of I. [+1 Charisma]",
     scores: [0, 0, 0, 0, 0, 1],
     scoresMaximum: [0, 0, 0, 0, 0, 30],
@@ -11821,37 +11918,37 @@ FeatsList["boon of fortitude"] = {
   description: "+1 to Any, +40 to HP max; Once per turn when I regain HP I can add my Con mod to the HP regained.",
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
-    name: "Strength",
+    name: "Boon of Fortitude - STR",
     description: "+40 to HP max; Once per turn when I regain HP I can add my Con mod to the HP regained. [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
     scoresMaximum: [30, 0, 0, 0, 0, 0],
   },
   "dexterity": {
-    name: "Dexterity",
+	  name: "Boon of Fortitude - DEX",
     description: "+40 to HP max; Once per turn when I regain HP I can add my Con mod to the HP regained. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
     scoresMaximum: [0, 30, 0, 0, 0, 0],
   },
   "constitution": {
-    name: "Constitution",
+	  name: "Boon of Fortitude - CON",
     description: "+40 to HP max; Once per turn when I regain HP I can add my Con mod to the HP regained. [+1 constitution]",
     scores: [0, 0, 1, 0, 0, 0],
     scoresMaximum: [0, 0, 30, 0, 0, 0],
   },
   "intelligence": {
-    name: "Intelligence",
+	  name: "Boon of Fortitude - INT",
     description: "+40 to HP max; Once per turn when I regain HP I can add my Con mod to the HP regained. [+1 Intelligence]",
     scores: [0, 0, 0, 1, 0, 0],
     scoresMaximum: [0, 0, 0, 30, 0, 0],
   },
   "wisdom": {
-    name: "Wisdom",
+	  name: "Boon of Fortitude - WIS",
     description: "+40 to HP max; Once per turn when I regain HP I can add my Con mod to the HP regained. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
     scoresMaximum: [0, 0, 0, 0, 30, 0],
   },
   "charisma": {
-    name: "Charisma",
+	  name: "Boon of Fortitude - CHA",
     description: "+40 to HP max; Once per turn when I regain HP I can add my Con mod to the HP regained. [+1 Charisma]",
     scores: [0, 0, 0, 0, 0, 1],
     scoresMaximum: [0, 0, 0, 0, 0, 30],
@@ -11867,37 +11964,37 @@ FeatsList["boon of irresistible offense"] = {
   description: "+1 to Any, Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to the ability modifier of the score I increased by this feat.",
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
-    name: "Strength",
+	  name: "Boon of Irresistible Offense - STR",
     description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Strength modifier. [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
     scoresMaximum: [30, 0, 0, 0, 0, 0],
   },
   "dexterity": {
-    name: "Dexterity",
+	  name: "Boon of Irresistible Offense - DEX",
     description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Dexterity modifier. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
     scoresMaximum: [0, 30, 0, 0, 0, 0],
   },
   "constitution": {
-    name: "Constitution",
+	  name: "Boon of Irresistible Offense - CON",
     description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Constitution modifier. [+1 constitution]",
     scores: [0, 0, 1, 0, 0, 0],
     scoresMaximum: [0, 0, 30, 0, 0, 0],
   },
   "intelligence": {
-    name: "Intelligence",
+	  name: "Boon of Irresistible Offense - INT",
     description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Intelligence modifier. [+1 Intelligence]",
     scores: [0, 0, 0, 1, 0, 0],
     scoresMaximum: [0, 0, 0, 30, 0, 0],
   },
   "wisdom": {
-    name: "Wisdom",
+	  name: "Boon of Irresistible Offense - WIS",
     description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Wisdom modifier. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
     scoresMaximum: [0, 0, 0, 0, 30, 0],
   },
   "charisma": {
-    name: "Charisma",
+	  name: "Boon of Irresistible Offense - CHA",
     description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Charisma modifier. [+1 Charisma]",
     scores: [0, 0, 0, 0, 0, 1],
     scoresMaximum: [0, 0, 0, 0, 0, 30],
@@ -11917,7 +12014,7 @@ FeatsList["boon of recovery"] = {
   description: "+1 to Any, Once per Long Rest when I would be reduced to 0 HP drop to 1 instead and regain HP equal to 1/2 my max HP; I gain 10 d10s that I can roll as a bns. a. which recover over a Long Rest.",
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
-    name: "Strength",
+    name: "Boon of Recovery - STR",
     description: "Once per Long Rest when I would be reduced to 0 HP drop to 1 instead and regain HP equal to 1/2 my max HP; I gain 10 d10s that I can roll as a bns. a. which recover over a Long Rest. [+1 Strength]",
     limfeaname: "Recovery Dice",
     usages: 10,
@@ -11926,7 +12023,7 @@ FeatsList["boon of recovery"] = {
     scoresMaximum: [30, 0, 0, 0, 0, 0],
   },
   "dexterity": {
-    name: "Dexterity",
+	  name: "Boon of Recovery - DEX",
     description: "Once per Long Rest when I would be reduced to 0 HP drop to 1 instead and regain HP equal to 1/2 my max HP; I gain 10 d10s that I can roll as a bns. a. which recover over a Long Rest. [+1 Dexterity]",
     limfeaname: "Recovery Dice",
     usages: 10,
@@ -11935,7 +12032,7 @@ FeatsList["boon of recovery"] = {
     scoresMaximum: [0, 30, 0, 0, 0, 0],
   },
   "constitution": {
-    name: "Constitution",
+	  name: "Boon of Recovery - CON",
     description: "Once per Long Rest when I would be reduced to 0 HP drop to 1 instead and regain HP equal to 1/2 my max HP; I gain 10 d10s that I can roll as a bns. a. which recover over a Long Rest. [+1 constitution]",
     limfeaname: "Recovery Dice",
     usages: 10,
@@ -11944,7 +12041,7 @@ FeatsList["boon of recovery"] = {
     scoresMaximum: [0, 0, 30, 0, 0, 0],
   },
   "intelligence": {
-    name: "Intelligence",
+	  name: "Boon of Recovery - INT",
     description: "Once per Long Rest when I would be reduced to 0 HP drop to 1 instead and regain HP equal to 1/2 my max HP; I gain 10 d10s that I can roll as a bns. a. which recover over a Long Rest. [+1 Intelligence]",
     limfeaname: "Recovery Dice",
     usages: 10,
@@ -11953,7 +12050,7 @@ FeatsList["boon of recovery"] = {
     scoresMaximum: [0, 0, 0, 30, 0, 0],
   },
   "wisdom": {
-    name: "Wisdom",
+	  name: "Boon of Recovery - WIS",
     description: "Once per Long Rest when I would be reduced to 0 HP drop to 1 instead and regain HP equal to 1/2 my max HP; I gain 10 d10s that I can roll as a bns. a. which recover over a Long Rest. [+1 Wisdom]",
     limfeaname: "Recovery Dice",
     usages: 10,
@@ -11962,7 +12059,7 @@ FeatsList["boon of recovery"] = {
     scoresMaximum: [0, 0, 0, 0, 30, 0],
   },
   "charisma": {
-    name: "Charisma",
+	  name: "Boon of Recovery - CHA",
     description: "Once per Long Rest when I would be reduced to 0 HP drop to 1 instead and regain HP equal to 1/2 my max HP; I gain 10 d10s that I can roll as a bns. a. which recover over a Long Rest. [+1 Charisma]",
     limfeaname: "Recovery Dice",
     usages: 10,
@@ -11983,37 +12080,37 @@ FeatsList["boon of skill"] = {
   description: "+1 to Any, I gain Proficiency in all skills, and Expertise in one skill of choice.",
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
-    name: "Strength",
+    name: "Boon of Skill - STR",
     description: "I gain Proficiency in all skills, and Expertise in one skill of choice. [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
     scoresMaximum: [30, 0, 0, 0, 0, 0],
   },
   "dexterity": {
-    name: "Dexterity",
+	  name: "Boon of Skill - DEX",
     description: "I gain Proficiency in all skills, and Expertise in one skill of choice. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
     scoresMaximum: [0, 30, 0, 0, 0, 0],
   },
   "constitution": {
-    name: "Constitution",
+	  name: "Boon of Skill - CON",
     description: "I gain Proficiency in all skills, and Expertise in one skill of choice. [+1 constitution]",
     scores: [0, 0, 1, 0, 0, 0],
     scoresMaximum: [0, 0, 30, 0, 0, 0],
   },
   "intelligence": {
-    name: "Intelligence",
+	  name: "Boon of Skill - INT",
     description: "I gain Proficiency in all skills, and Expertise in one skill of choice. [+1 Intelligence]",
     scores: [0, 0, 0, 1, 0, 0],
     scoresMaximum: [0, 0, 0, 30, 0, 0],
   },
   "wisdom": {
-    name: "Wisdom",
+	  name: "Boon of Skill - WIS",
     description: "I gain Proficiency in all skills, and Expertise in one skill of choice. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
     scoresMaximum: [0, 0, 0, 0, 30, 0],
   },
   "charisma": {
-    name: "Charisma",
+	  name: "Boon of Skill - CHA",
     description: "I gain Proficiency in all skills, and Expertise in one skill of choice. [+1 Charisma]",
     scores: [0, 0, 0, 0, 0, 1],
     scoresMaximum: [0, 0, 0, 0, 0, 30],
@@ -12030,37 +12127,37 @@ FeatsList["boon of speed"] = {
   speed: {walk: "+30"},
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
-    name: "Strength",
+    name: "Boon of Speed - STR",
     description: "Speed +30 ft., Bonus Action to Disengage, which also ends the Grappled condition. [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
     scoresMaximum: [30, 0, 0, 0, 0, 0],
   },
   "dexterity": {
-    name: "Dexterity",
+    name: "Boon of Speed - DEX",
     description: "Speed +30 ft., Bonus Action to Disengage, which also ends the Grappled condition. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
     scoresMaximum: [0, 30, 0, 0, 0, 0],
   },
   "constitution": {
-    name: "Constitution",
+	  name: "Boon of Speed - CON",
     description: "Speed +30 ft., Bonus Action to Disengage, which also ends the Grappled condition. [+1 constitution]",
     scores: [0, 0, 1, 0, 0, 0],
     scoresMaximum: [0, 0, 30, 0, 0, 0],
   },
   "intelligence": {
-    name: "Intelligence",
+	  name: "Boon of Speed - INT",
     description: "Speed +30 ft., Bonus Action to Disengage, which also ends the Grappled condition. [+1 Intelligence]",
     scores: [0, 0, 0, 1, 0, 0],
     scoresMaximum: [0, 0, 0, 30, 0, 0],
   },
   "wisdom": {
-    name: "Wisdom",
+	  name: "Boon of Speed - WIS",
     description: "Speed +30 ft., Bonus Action to Disengage, which also ends the Grappled condition. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
     scoresMaximum: [0, 0, 0, 0, 30, 0],
   },
   "charisma": {
-    name: "Charisma",
+	  name: "Boon of Speed - CHA",
     description: "Speed +30 ft., Bonus Action to Disengage, which also ends the Grappled condition. [+1 Charisma]",
     scores: [0, 0, 0, 0, 0, 1],
     scoresMaximum: [0, 0, 0, 0, 0, 30],
@@ -12076,19 +12173,19 @@ FeatsList["boon of spell recall"] = {
   description: "+1 Int/Wis/Cha, When I cast a spell level 1-4, roll 1d4 if the number rolled matches the slot's level the spell slot isn't expended.",
   choices: ["Intelligence", "Wisdom", "Charisma"],
   "intelligence": {
-    name: "Intelligence",
+	  name: "Boon of Spell Recall - INT",
     description: "When I cast a spell level 1-4, roll 1d4 if the number rolled matches the slot's level the spell slot isn't expended. [+1 Intelligence]",
     scores: [0, 0, 0, 1, 0, 0],
     scoresMaximum: [0, 0, 0, 30, 0, 0],
   },
   "wisdom": {
-    name: "Wisdom",
+    name: "Boon of Spell Recall - WIS",
     description: "When I cast a spell level 1-4, roll 1d4 if the number rolled matches the slot's level the spell slot isn't expended. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
     scoresMaximum: [0, 0, 0, 0, 30, 0],
   },
   "charisma": {
-    name: "Charisma",
+	  name: "Boon of Spell Recall - CHA",
     description: "When I cast a spell level 1-4, roll 1d4 if the number rolled matches the slot's level the spell slot isn't expended. [+1 Charisma]",
     scores: [0, 0, 0, 0, 0, 1],
     scoresMaximum: [0, 0, 0, 0, 0, 30],
@@ -12105,37 +12202,37 @@ FeatsList["boon of the night spirit"] = {
   description: "+1 to Any, While in Dim Light or Darkness, I have Resistance to all damage except Psychic or Radiant, and as a bns/rea I can turn invisible while in Dim Light or Darkness.",
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
-    name: "Strength",
+	  name: "Boon of the Night Spirit - STR",
     description: "While in Dim Light or Darkness, I have Resistance to all damage except Psychic or Radiant, and as a bns/rea I can turn invisible while in Dim Light or Darkness. [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
     scoresMaximum: [30, 0, 0, 0, 0, 0],
   },
   "dexterity": {
-    name: "Dexterity",
+	  name: "Boon of the Night Spirit - DEX",
     description: "While in Dim Light or Darkness, I have Resistance to all damage except Psychic or Radiant, and as a bns/rea I can turn invisible while in Dim Light or Darkness. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
     scoresMaximum: [0, 30, 0, 0, 0, 0],
   },
   "constitution": {
-    name: "Constitution",
+	  name: "Boon of the Night Spirit - CON",
     description: "While in Dim Light or Darkness, I have Resistance to all damage except Psychic or Radiant, and as a bns/rea I can turn invisible while in Dim Light or Darkness. [+1 constitution]",
     scores: [0, 0, 1, 0, 0, 0],
     scoresMaximum: [0, 0, 30, 0, 0, 0],
   },
   "intelligence": {
-    name: "Intelligence",
+	  name: "Boon of the Night Spirit - INT",
     description: "While in Dim Light or Darkness, I have Resistance to all damage except Psychic or Radiant, and as a bns/rea I can turn invisible while in Dim Light or Darkness. [+1 Intelligence]",
     scores: [0, 0, 0, 1, 0, 0],
     scoresMaximum: [0, 0, 0, 30, 0, 0],
   },
   "wisdom": {
-    name: "Wisdom",
+	  name: "Boon of the Night Spirit - WIS",
     description: "While in Dim Light or Darkness, I have Resistance to all damage except Psychic or Radiant, and as a bns/rea I can turn invisible while in Dim Light or Darkness. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
     scoresMaximum: [0, 0, 0, 0, 30, 0],
   },
   "charisma": {
-    name: "Charisma",
+	  name: "Boon of the Night Spirit - CHA",
     description: "While in Dim Light or Darkness, I have Resistance to all damage except Psychic or Radiant, and as a bns/rea I can turn invisible while in Dim Light or Darkness. [+1 Charisma]",
     scores: [0, 0, 0, 0, 0, 1],
     scoresMaximum: [0, 0, 0, 0, 0, 30],
@@ -12152,37 +12249,37 @@ FeatsList["boon of truesight"] = {
   description: "+1 to Any, I have Truesight with a range of 60 feet..",
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
-    name: "Strength",
+	name: "Boon of Truesight",
     description: "I have Truesight with a range of 60 feet. [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
     scoresMaximum: [30, 0, 0, 0, 0, 0],
   },
   "dexterity": {
-    name: "Dexterity",
+	name: "Boon of Truesight",
     description: "I have Truesight with a range of 60 feet. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
     scoresMaximum: [0, 30, 0, 0, 0, 0],
   },
   "constitution": {
-    name: "Constitution",
+	name: "Boon of Truesight",
     description: "I have Truesight with a range of 60 feet. [+1 constitution]",
     scores: [0, 0, 1, 0, 0, 0],
     scoresMaximum: [0, 0, 30, 0, 0, 0],
   },
   "intelligence": {
-    name: "Intelligence",
+	name: "Boon of Truesight",
     description: "I have Truesight with a range of 60 feet. [+1 Intelligence]",
     scores: [0, 0, 0, 1, 0, 0],
     scoresMaximum: [0, 0, 0, 30, 0, 0],
   },
   "wisdom": {
-    name: "Wisdom",
+	name: "Boon of Truesight",
     description: "I have Truesight with a range of 60 feet. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
     scoresMaximum: [0, 0, 0, 0, 30, 0],
   },
   "charisma": {
-    name: "Charisma",
+	name: "Boon of Truesight",
     description: "I have Truesight with a range of 60 feet. [+1 Charisma]",
     scores: [0, 0, 0, 0, 0, 1],
     scoresMaximum: [0, 0, 0, 0, 0, 30],
@@ -22968,7 +23065,7 @@ CreatureList["aberrant spirit (4)"] = {
 		damage : [1, 8, "Psychic"],
 		range : "150 ft.",
 		modifiers : ["", 4],
-		description : "The target can't regain Hit Points until the start of the spirit's next turn.",
+		description : "",
 		useSpellMod : ["warlock", "wizard"]
 	}, {
 		name : "Psychic Slam (Mind Flayer Only)",
@@ -22976,7 +23073,7 @@ CreatureList["aberrant spirit (4)"] = {
 		damage : [1, 8, "Psychic"],
 		range : "Melee (5 ft.)",
 		modifiers : ["", 4],
-		description : "The target can't regain Hit Points until the start of the spirit's next turn.",
+		description : "",
 		useSpellMod : ["warlock", "wizard"]
 	}],
 };
@@ -23026,7 +23123,7 @@ CreatureList["aberrant spirit (5)"] = {
 		damage : [1, 8, "Psychic"],
 		range : "150 ft.",
 		modifiers : ["", 5],
-		description : "The target can't regain Hit Points until the start of the spirit's next turn.",
+		description : "",
 		useSpellMod : ["warlock", "wizard"]
 	}, {
 		name : "Psychic Slam (Mind Flayer Only)",
@@ -23034,7 +23131,7 @@ CreatureList["aberrant spirit (5)"] = {
 		damage : [1, 8, "Psychic"],
 		range : "Melee (5 ft.)",
 		modifiers : ["", 5],
-		description : "The target can't regain Hit Points until the start of the spirit's next turn.",
+		description : "",
 		useSpellMod : ["warlock", "wizard"]
 	}],
 };
@@ -23084,7 +23181,7 @@ CreatureList["aberrant spirit (6)"] = {
 		damage : [1, 8, "Psychic"],
 		range : "150 ft.",
 		modifiers : ["", 6],
-		description : "The target can't regain Hit Points until the start of the spirit's next turn.",
+		description : "",
 		useSpellMod : ["warlock", "wizard"]
 	}, {
 		name : "Psychic Slam (Mind Flayer Only)",
@@ -23092,7 +23189,7 @@ CreatureList["aberrant spirit (6)"] = {
 		damage : [1, 8, "Psychic"],
 		range : "Melee (5 ft.)",
 		modifiers : ["", 6],
-		description : "The target can't regain Hit Points until the start of the spirit's next turn.",
+		description : "",
 		useSpellMod : ["warlock", "wizard"]
 	}],
 };
@@ -23142,7 +23239,7 @@ CreatureList["aberrant spirit (7)"] = {
 		damage : [1, 8, "Psychic"],
 		range : "150 ft.",
 		modifiers : ["", 7],
-		description : "The target can't regain Hit Points until the start of the spirit's next turn.",
+		description : "",
 		useSpellMod : ["warlock", "wizard"]
 	}, {
 		name : "Psychic Slam (Mind Flayer Only)",
@@ -23150,7 +23247,7 @@ CreatureList["aberrant spirit (7)"] = {
 		damage : [1, 8, "Psychic"],
 		range : "Melee (5 ft.)",
 		modifiers : ["", 7],
-		description : "The target can't regain Hit Points until the start of the spirit's next turn.",
+		description : "",
 		useSpellMod : ["warlock", "wizard"]
 	}],
 };
@@ -23200,7 +23297,7 @@ CreatureList["aberrant spirit (8)"] = {
 		damage : [1, 8, "Psychic"],
 		range : "150 ft.",
 		modifiers : ["", 8],
-		description : "The target can't regain Hit Points until the start of the spirit's next turn.",
+		description : "",
 		useSpellMod : ["warlock", "wizard"]
 	}, {
 		name : "Psychic Slam (Mind Flayer Only)",
@@ -23208,7 +23305,7 @@ CreatureList["aberrant spirit (8)"] = {
 		damage : [1, 8, "Psychic"],
 		range : "Melee (5 ft.)",
 		modifiers : ["", 8],
-		description : "The target can't regain Hit Points until the start of the spirit's next turn.",
+		description : "",
 		useSpellMod : ["warlock", "wizard"]
 	}],
 };
@@ -23258,7 +23355,7 @@ CreatureList["aberrant spirit (9)"] = {
 		damage : [1, 8, "Psychic"],
 		range : "150 ft.",
 		modifiers : ["", 9],
-		description : "The target can't regain Hit Points until the start of the spirit's next turn.",
+		description : "",
 		useSpellMod : ["warlock", "wizard"]
 	}, {
 		name : "Psychic Slam (Mind Flayer Only)",
@@ -23266,7 +23363,7 @@ CreatureList["aberrant spirit (9)"] = {
 		damage : [1, 8, "Psychic"],
 		range : "Melee (5 ft.)",
 		modifiers : ["", 9],
-		description : "The target can't regain Hit Points until the start of the spirit's next turn.",
+		description : "",
 		useSpellMod : ["warlock", "wizard"]
 	}],
 };
