@@ -83,8 +83,8 @@ MagicItemsList["alchemy jug"] = {
 	type : "wondrous item",
 	rarity : "uncommon",
 	magicItemTable : "?",
-	description : "As a magic action, command the jug to produce liquid; or a utilize action to uncorked it and pour 2 gal/min. After producing, it only makes the same up to its max, until next dawn. Acid (8 fl oz), basic poison (4 fl oz), beer (4 gal), honey/wine (1 gal), fresh water (8 gal), mayonnaise/vinegar (2 gal), oil (1 qt),  salt water (12 gal).",
-	descriptionLong : "A heavy ceramic jug. As a magic action, the jug can be commanded to hold a chosen liquid. With a utilize action, I can uncork the jug and pour the liquid out at 2 gallons per minute. Once commanded to produce a liquid, it can't produce a different one or more than the maximum of one, until the next dawn.\rLiquids (with maximum): acid (8 fl. oz.), basic poison (4 fl. oz.), beer (4 gallons), honey (1 gallon), mayonnaise (2 gallons), oil (1 quart), vinegar (2 gallons), fresh water (8 gallons), salt water (12 gallons), wine (1 gallon).",
+	description : "As a Magic action, command the jug to produce liquid; Utilize action to uncork it and pour 2 gal/min. After producing, it only makes the same up to its max, until next dawn. Acid (8 fl oz), basic poison (4 fl oz), beer (4 gal), honey/wine (1 gal), fresh water (8 gal), mayonnaise/vinegar (2 gal), oil (1 qt), salt water (12 gal).",
+	descriptionLong : "A heavy ceramic jug. As a Magic action, the jug can be commanded to hold a chosen liquid. With a Utilize action, I can uncork the jug and pour the liquid out at 2 gallons per minute. Once commanded to produce a liquid, it can't produce a different one or more than the maximum of one, until the next dawn.\rLiquids (with maximum): acid (8 fl. oz.), basic poison (4 fl. oz.), beer (4 gallons), honey (1 gallon), mayonnaise (2 gallons), oil (1 quart), vinegar (2 gallons), fresh water (8 gallons), salt water (12 gallons), wine (1 gallon).",
 	descriptionFull : "This ceramic jug appears to be able to hold a gallon of liquid and weighs 12 pounds whether full or empty. The jug sloshes when it is shaken, even if the jug is empty."+
 	"\n   You can take a Magic action and name one liquid from the Alchemy Jug Liquids table to cause the jug to produce the chosen liquid. Afterward, you can uncork the jug as a Utilize action and pour that liquid out, up to 2 gallons per minute. The maximum amount of liquid the jug can produce depends on the liquid you named."+
 	"\n   Once the jug starts producing a liquid, it can’t produce a different one, or more of one that has reached its maximum, until the next dawn.\n\n"+
@@ -448,8 +448,8 @@ MagicItemsList["baba yaga's dancing broom"] = {
 	rarity : "uncommon",
 	magicItemTable : "?",
 	action : [["action", "Animate Broom"]],
-	description : "As a Magic action, I can animate this broom turning it into an Animated Broom which follows directly after me in initiative and follows my commands (no action required) While animated if the broom is reduced to 0 HP it is destroyed. As a Bonus Action I can cause the broom to become Inanimate.",
-	descriptionLong : "While holding the broom, you can take a Magic action to transform it into an Animated Broom under your control. The broom then moves into an unoccupied space as close to you as possible. The broom acts immediately after you in initiative and remains active until you use a Bns Action to render it inanimate. While not Incapacitated you may mentally command the broom (no action required). You decide what action the broom takes and where it moves during its next turn, or you can issue it a general command, such as to attack your enemies or guard a location. While animated if the broom is reduced to 0 HP it is destroyed.",
+	description : "As a Magic action, I can animate this broom. It becomes an Animated Broom that acts directly after me in initiative and obeys my commands (no action required). If the broom is reduced to 0 HP while animated, it's destroyed. As a Bonus Action, I can cause the broom to become inanimate.",
+    descriptionLong : "While holding the broom, I can take a Magic action to transform it into an Animated Broom under my control. The broom then moves into an unoccupied space as close to me as possible. The broom acts immediately after me in initiative and remains active until I use a Bonus Action to render it inanimate. While not Incapacitated, I can mentally command the broom (no action required). I decide what action the broom takes and where it moves during its next turn, or I can issue it a general command, such as attack my enemies or guard a location. If the broom is reduced to 0 HP while animated, it's destroyed.",
 	descriptionFull : "The archfey Baba Yaga crafted many of these magic brooms. No two appear exactly alike. While holding the broom, you can take a Magic action to transform it into an Animated Broom under your control. The broom then moves into an unoccupied space as close to you as possible. The broom acts immediately after you on your Initiative count and remains animate until you take a Bonus Action and use a command word to render it inanimate.\n   On your turn, you can mentally command the animated broom if it is within 30 feet of you and you don’t have the Incapacitated condition (no action required). You decide what action the broom takes and where it moves during its next turn, or you can issue it a general command, such as to attack your enemies or guard a location.\n   If the broom is reduced to 0 Hit Points, it shatters and is destroyed. If the broom reverts to its inanimate form before losing all its Hit Points, it regains all of them.",
 	attunement : true,
 	weight : 1,
@@ -460,7 +460,7 @@ MagicItemsList["bag of beans"] = { // contributed by Larry Hoy
 	type : "wondrous item",
 	rarity : "rare",
 	magicItemTable : "?",
-	description : "This heavy cloth bag contains 3d4 dry beans. I can dump all on the ground, causing a 10-ft explosion that deals 5d4 fire damage to all in the area, DC 15 Dex save to half, and ignites unattended flammable objects. I can plant and water a bean to get an effect 1 minute later, chosen by the DM, see notes page.",
+	description : "This heavy cloth bag contains 3d4 dry beans. I can dump all on the ground, causing a 10-ft explosion that deals 5d4 force damage to all in the area, DC 15 Dex save to half, and ignites unattended flammable objects. I can plant and water a bean to get an effect 1 minute later, chosen by the DM, see notes page.",
 	descriptionFull : "This heavy cloth bag contains 3d4 dry beans when found. The bag weighs half a pound regardless of how many beans it contains and becomes a nonmagical item when it no longer contains any beans.\n   If you dump one or more beans out of the bag, they explode in a 10-foot-radius Sphere centered on them. All the dumped beans are destroyed in the explosion, and each creature in the Sphere, including you, makes a DC 15 Dexterity saving throw, taking 5d4 Force damage on a failed save or half as much damage on a successful one.\n   If you remove a bean from the bag, plant it in dirt or sand, and then water it, the bean disappears as it produces an effect 1 minute later from the ground where it was planted. The DM can choose an effect from the following table or determine it randomly.\n\n"+
 	toUni("1d100\tEffect") + "\n01\t5d4 toadstools sprout. If a creature eats a toadstool, roll any die. On an odd roll, the eater must \n\tsucceed on a DC 15 Constitution saving throw or take 5d6 Poison damage and have the \n\tPoisoned condition for 1 hour. On an even roll, the eater gains 5d6 Temporary Hit Points for 1 \n\thour.\n02-10\tA geyser erupts and spouts water, beer, mayonnaise, tea, vinegar, wine, or oil (DM’s choice) 30 \n\tfeet into the air for 1d4 minutes.\n11-20\tA Treant sprouts. Roll any die. On an odd roll, the treant is Chaotic Evil. On an even roll, the \n\ttreant is Chaotic Good.\n21-30\tAn animate but immobile stone statue in your likeness rises and makes verbal threats against \n\tyou. If you leave it and others come near, it describes you as the most heinous of villains and \n\tdirects the newcomers to find and attack you. If you are on the same plane of existence as the \n\tstatue, it knows where you are. The statue becomes inanimate after 24 hours.\n31-40\tA campfire with green flames springs forth and burns for 24 hours or until it is extinguished.\n41-50\tThree Shrieker Fungi sprout.\n51-60\t1d4 + 4 bright-pink toads crawl forth. Whenever a toad is touched, it transforms into a Large \n\tor smaller monster of the DM’s choice that acts in accordance with its alignment and nature. \n\tThe monster remains for 1 minute, then disappears in a puff of bright-pink smoke.\n61-70\tA hungry Bulette burrows up and attacks.\n71-80\tA fruit tree grows. It has 1d10 + 20 fruit, 1d8 of which act as randomly determined potions. \n\tThe tree vanishes after 1 hour. Picked fruit remains, retaining any magic for 30 days.\n81-90\tA nest of 1d4 + 3 rainbow-colored eggs springs up. Any creature that eats an egg makes a DC \n\t20 Constitution saving throw. On a successful save, a creature permanently increases its lowest \n\tability score by 1, randomly choosing among equally low scores. On a failed save, the creature \n\ttakes 10d6 Force damage from an internal explosion.\n91-95\tA pyramid with a 60-foot-square base bursts upward. Inside is a burial chamber containing a \n\tMummy, a Mummy Lord, or some other Undead of the DM’s choice. Its sarcophagus contains \n\ttreasure of the DM’s choice.\n96-00\tA giant beanstalk sprouts, growing to a height of the DM’s choice. The top leads where the DM \n\tchooses, such as to a great view, a cloud giant’s castle, or another plane of existence.",
 	weight : 0.5,
@@ -2323,14 +2323,14 @@ MagicItemsList["enduring spellbook"] = {
 	descriptionFull : "This spellbook, along with anything written on its pages, can’t be damaged by fire or water. In addition, the spellbook doesn’t deteriorate with age.",
 	weight : 5
 };
-MagicItemsList["*energy bow*"] = {
+MagicItemsList["energy bow"] = {
 	name : "Energy Bow",
 	source : [["DMG2024", 257]],
 	type : "weapon (longbow or shortbow)",
 	rarity : "very rare",
 	magicItemTable : "?",
-	description : "",
-	descriptionLong : "This magic bow has no string. When I pull my arm back to fire, a golden arrow appears, emitting 20-ft Bright Light and 20-ft Dim. On a hit, the target takes Force dmg or makes a DC 15 STR save vs Restrained for 1 min (DC 20 STR Athletics to escape). Magic actions: 1 willing creature (up to Med) or unattended obj (5-ft cube) in 60ft teleported to visible space in 10 ft; arrows create magical 60ft ladder for 1 min on wall in 60ft.",
+	description : "When I pull back my arm to fire this +1 magic bow, a golden arrow appears, emitting 20-ft Bright Light and 20-ft Dim. On a hit, the target takes Force dmg or makes a DC 15 STR save vs Restrained for 1 min (DC 20 STR Athletics to escape). Magic actions: 1 visible willing creature (up to Med) or unattended obj (5ft cube) in 60ft teleported to visible space in 10ft; arrows create magical 60ft ladder for 1 min on wall in 60ft.",
+	descriptionLong : "This +1 magic bow has no string. When I pull back my arm, a golden arrow appears nocked and ready to fire, emitting a 20-ft radius of Bright Light and 20-ft Dim Light. It disappears on a hit or miss and deals Force damage. The bow also has additional properties. Arrow of Restraint: instead of damage, the target makes a DC 15 STR save or is Restrained for 1 minute (DC 20 STR Athletics to escape). Arrow of Transport: as a Magic action, 1 visible willing creature (up to Medium) or unattended object (up to 5-ft cube) in 60 ft is teleported to a visible space in 10 ft. Energy Ladder: as a Magic action, fire arrows at a wall within 60 ft. The arrows create a 60 ft magical ladder that lasts for 1 minute.",
 	descriptionFull : 'You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon, which has no string. Each time you pull your arm back in a firing motion, a magical arrow made of golden energy appears nocked and ready to fire. An arrow produced by this weapon deals Force damage instead of Piercing damage on a hit, and it disappears after it hits or misses its target. Until it disappears, the arrow emits Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.\n   This weapon has the following additional properties.\n   Arrow of Restraint. Whenever you use this weapon to make a ranged attack against a creature, you can try to restrain the target instead of dealing damage to it. If the arrow hits, the target must succeed on a DC 15 Strength saving throw or have the Restrained condition for 1 minute. As an action, a creature Restrained by an arrow can make a DC 20 Strength (Athletics) check to try to break the restraint, ending the effect on itself on a successful check.\n   Arrow of Transport. As a Magic action, you can fire one energy arrow from this weapon at a target you can see within 60 feet of yourself. The target can be either a willing Medium or smaller creature or an object that isn’t being worn or carried, provided the object is small enough to fit inside a 5-foot Cube. The arrow teleports the target to an unoccupied space you can see within 10 feet of you.\n   Energy Ladder. As a Magic action, you can loose a flurry of energy arrows from this weapon at a wall up to 60 feet away from yourself. The arrows become glowing rungs that stick out of the wall, forming a magical ladder up to 60 feet long on the wall. This ladder lasts for 1 minute before disappearing.',
 	attunement : true,
 	chooseGear : {
@@ -3400,13 +3400,30 @@ MagicItemsList["*hat of many spells*"] = {
 	type : "wondrous item",
 	rarity : "uncommon",
 	magicItemTable : "?",
-	description : "",
+	description : "While held, this pointed hat acts as a Focus for my Wizard spells. They gain a Somatic component as I “pull” them from the hat. I can also try to cast a level 1+ Wizard spell that I don't know using my spell DC \u0026 atk bonus. It must be a level I can cast \u0026 have Material components up to 1,000 GP. I spend the appropriate slot \u0026 make an INT (Arcana) chk (DC 10 + spell lvl). On a success, I cast the spell \u0026 can't reuse this property until I finish a rest. On a fail, a random effect occurs from the table (see Notes).",
 	descriptionFull : "This pointed hat has the following properties.\n\tSpellcasting Focus. While holding the hat, you can use it as a Spellcasting Focus for your Wizard spells. Any spell you cast using the hat gains a special Somatic component: you must reach into the hat and “pull” the spell out of it.\n\tUnknown Spell. While holding the hat, you can try to cast a level 1+ spell you don’t know. The spell must be on the Wizard spell list, it must be of a level you can cast, and it can’t have Material components costing more than 1,000 GP. Once you decide on the spell, you must expend a spell slot of the spell’s level. Then, to determine whether you cast the spell, make an Intelligence (Arcana) check (DC 10 plus the spell’s level). On a successful check, you cast the spell using its normal casting time, and you can’t use this property again until you finish a Short or Long Rest. On a failed check, you fail to cast the spell and a random effect occurs instead, determined by rolling on the following table.\n\tAny spell you cast from the hat uses your spell save DC and spell attack bonus." + 
 	toUni("1d100\tEffect") + "\n01-50\tYou cast a random spell determined by rolling 1d10: on a 1, Enlarge/Reduce (enlarge effect); on a 2, Enlarge/Reduce (reduce effect); on a 3, Faerie Fire; on a 4, Fireball; on a 5, Gust of Wind; on a 6, Invisibility (cast on yourself); on a 7, Lightning Bolt; on an 8, Phantasmal Force; on a 9, Polymorph; on a 10, Stinking Cloud.\n51-55\tYou have the Stunned condition until the end of your next turn, believing something awesome just happened.\n     56-60\tA harmless swarm of butterflies fills a 10-foot Cube within 30 feet of yourself. The swarm disperses after 1 minute.\n61-65\tYou pull a nonmagical object out of the hat. Roll 1d4 to determine the object: on a 1, a vial of Acid; on a 2, a flask of Alchemist’s Fire; on a 3, a Crowbar; on a 4, a lit Torch.\n66-70\tYou suffer a bout of “magic sickness” and have the Poisoned condition for 1 hour.\n71-75\tYou have the Petrified condition until the end of your next turn.\n76-80\tYou pull a nonmagical object out of the hat. Roll 1d4 to determine the object: on a 1, a Dagger; on a 2, a Rope with a Grappling Hook tied to one end; on a 3, a bag of Caltrops; on a 4, a gem worth 50 GP.\n81-85\tA creature appears in an unoccupied space as close to you as possible. The creature isn’t under your control and acts as it normally would, and it disappears after 1 hour or when it drops to 0 Hit Points. Roll 1d4 to determine the creature: on a 1, a Camel; on a 2, a Constrictor Snake; on a 3, an Elephant; on a 4, a Mule.\n86-90\tA Hostile Swarm of Bats flies out of the hat, occupies your space, and attacks you.\n91-95\tA vertical, 10-foot-diameter, two-way portal to another plane of existence opens in an unoccupied space within 30 feet of you and remains open until the end of your next turn. The DM determines where it leads.\n96-00\tYou pull a magic item out of the hat. Roll 1d6 to determine the item’s rarity: on a 1–3, Common; on a 4–5, Uncommon; on a 6, Rare. The DM chooses the item, which disappears after 1 hour if it’s not consumed or destroyed before then.",
+	toNotesPage : [{
+		name : "Hat of Many Spells",
+		note : [
+			"1d10\tEffect",
+			"01-50\tYou cast a random spell determined by rolling 1d10: on a 1, Enlarge/Reduce (enlarge effect); on a 2, Enlarge/Reduce (reduce effect); on a 3, Faerie Fire; on a 4, Fireball; on a 5, Gust of Wind; on a 6, Invisibility (cast on yourself); on a 7, Lightning Bolt; on an 8, Phantasmal Force; on a 9, Polymorph; on a 10, Stinking Cloud.",
+			"51-55\tYou have the Stunned condition until the end of your next turn, believing something awesome just happened.",
+			"56-60\tA harmless swarm of butterflies fills a 10-foot Cube within 30 feet of yourself. The swarm disperses after 1 minute.",
+			"61-65\tYou pull a nonmagical object out of the hat. Roll 1d4 to determine the object: on a 1, a vial of Acid; on a 2, a flask of Alchemist’s Fire; on a 3, a Crowbar; on a 4, a lit Torch.",
+			"66-70\tYou suffer a bout of “magic sickness” and have the Poisoned condition for 1 hour.",
+			"71-75\tYou have the Petrified condition until the end of your next turn.",
+			"76-80\tYou pull a nonmagical object out of the hat. Roll 1d4 to determine the object: on a 1, a Dagger; on a 2, a Rope with a Grappling Hook tied to one end; on a 3, a bag of Caltrops; on a 4, a gem worth 50 GP.",
+			"81-85\tA creature appears in an unoccupied space as close to you as possible. The creature isn’t under your control and acts as it normally would, and it disappears after 1 hour or when it drops to 0 Hit Points. Roll 1d4 to determine the creature: on a 1, a Camel; on a 2, a Constrictor Snake; on a 3, an Elephant; on a 4, a Mule.",
+			"86-90\tA Hostile Swarm of Bats flies out of the hat, occupies your space, and attacks you.",
+			"91-95\tA vertical, 10-foot-diameter, two-way portal to another plane of existence opens in an unoccupied space within 30 feet of you and remains open until the end of your next turn. The DM determines where it leads.",
+			"96-00\tYou pull a magic item out of the hat. Roll 1d6 to determine the item’s rarity: on a 1–3, Common; on a 4–5, Uncommon; on a 6, Rare. The DM chooses the item, which disappears after 1 hour if it’s not consumed or destroyed before then.",
+		],
+	}],		
 	attunement : true,
 	prerequisite : "Requires attunement by a wizard",
 	prereqeval : function (v) { return classes.known.wizard ? true : false; },
-   spellcastingAbility : "class"
+    spellcastingAbility : "class"
 };
 MagicItemsList["hat of vermin"] = {
 	name : "Hat of Vermin",
@@ -3819,4 +3836,335 @@ MagicItemsList["immovable rod"] = {
 	descriptionFull : "This iron rod has a button on one end. You can take a Utilize action to press the button, which causes the rod to become magically fixed in place. Until you or another creature takes a Utilize action to push the button again, the rod doesn’t move, even if it defies gravity. The rod can hold up to 8,000 pounds of weight. More weight causes the rod to deactivate and fall. A creature can take a Utilize action to make a DC 30 Strength (Athletics) check, moving the fixed rod up to 10 feet on a successful check.",
 	weight : 2,
 	action : [["action", " (activate/deactivate)"]]
+};
+
+MagicItemsList["instrument of illusions"] = { // contains contributions by AelarTheElFRogue
+	name : "Instrument of Illusions",
+	source : [["DMG2024", "-"]],
+	magicItemTable : "?",
+	type : "wondrous item (instrument)",
+	rarity : "common",
+	description : "While I am playing this musical instrument, I can create harmless, illusory visual effects within a 5-ft-emanation (15-ft for bards) sphere centered on the instrument. The magical effects have neither substance nor sound, and they are obviously illusory. The effects end when I stop playing.",
+	descriptionFull : "While you are playing this musical instrument, you can take a Magic action to create harmless, illusory visual effects within a 5-foot Emanation originating from the instrument. If you are a Bard, the size of the Emanation increases to 15 feet. Sample visual effects include luminous musical notes, a spectral dancer, butterflies, and gently falling snow. The magical effects have neither substance nor sound, and they are obviously illusory. The effects end when you stop playing.",
+	weight : 3, // same as instrument of the bards
+	choices : ["Bard (15-ft emanation)", "Not a Bard (5-ft emanation)"],
+	selfChoosing : function () {
+		return classes.known.bard ? "bard (15-ft radius)" : "not a bard (5-ft radius)";
+	},
+	"bard (15-ft emanation)" : {
+		name : "Instrument\u200A of Illusions",
+		description : "While I am playing this musical instrument, I can create harmless, illusory visual effects within a 15-ft-emanation sphere centered on the instrument. The magical effects have neither substance nor sound, and they are obviously illusory. The effects end when I stop playing."
+	},
+	"not a bard (5-ft emanation)" : {
+		name : "Instrument\u200A\u200A of Illusions",
+		description : "While I am playing this musical instrument, I can create harmless, illusory visual effects within a 5-ft-emanation sphere centered on the instrument. The magical effects have neither substance nor sound, and they are obviously illusory. The effects end when I stop playing."
+	}
+};
+MagicItemsList["instrument of scribing"] = {
+	name : "Instrument of Scribing",
+	source : [["DMG2024", "-"]],
+	magicItemTable : "?",
+	type : "wondrous item (instrument)",
+	rarity : "common",
+	description : "As a Magic action while I'm playing this musical instrument, I can write a magical message on a nonmagical surface that I can see within 30 ft. The message can be up to 6 (or 13) words in a language I know and fades away after 24 hours or when Dispel Magic is cast on it. The instrument can be used like this 3 times per dawn.",
+	descriptionFull : "This musical instrument has 3 charges and regains all expended charges daily at dawn. While you are playing it, you can take a Magic action to expend 1 charge and write a magical message on a nonmagical object or surface that you can see within 30 feet of yourself. The message can be up to six words long and is written in a language you know. If you are a Bard, you can scribe an additional seven words and make the message glow faintly, allowing it to be seen in nonmagical Darkness. Casting the Dispel Magic spell on the message erases it. Otherwise, the message fades away after 24 hours.",
+	usages : 3,
+	recovery : "dawn",
+	weight : 3, // same as instrument of the bards
+	choices : ["Bard", "Not a Bard"],
+	selfChoosing : function () {
+		return classes.known.bard ? "bard" : "not a bard";
+	},
+	"bard" : {
+		name : "Instrument\u200A of Scribing",
+		description : "As a Magic action while I'm playing this musical instrument, I can write a magical message on a nonmagical surface that I can see within 30 ft. The message can be up to 13 words in a language I know and I can have it glow faintly. Dispel Magic erases it, otherwise it fades away after 24 hours. This can be used 3 times per dawn."
+	},
+	"not a bard" : {
+		name : "Instrument\u200A\u200A of Scribing",
+		description : "As an action while I'm playing this musical instrument, I can write a magical message on a nonmagical surface that I can see within 30 ft. The message can be up to 6 words in a language I know and fades away after 24 hours or when Dispel Magic is cast on it. The instrument can be used like this 3 times per dawn."
+	}
+};
+MagicItemsList["*instrument of the bards*"] = {
+	name : "Instrument of the Bards",
+	source : [["DMG2024", "-"]],
+	type : "wondrous item (instrument)",
+	description : "",
+	descriptionFull : "An Instrument of the Bards is superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a bard college. The Instruments of the Bards table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 Psychic damage.\n   You can play the instrument to cast one of its spells. Once the instrument has been used to cast a spell, it can’t be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC.",
+	attunement : true,
+	weight : 3, // Magic of Faerûn (2001) page 161
+	prerequisite : "Requires attunement by a bard",
+	prereqeval : function(v) { return classes.known.bard ? true : false; },
+	choices : ["Anstruth Harp (very rare)", "Canaith Mandolin (rare)", "Cli Lyre (rare)", "Doss Lute (uncommon)", "Fochlucan Bandore (uncommon)", "Mac-Fuirmidh Cittern (uncommon)", "Ollamh Harp (legendary)"],
+	"anstruth harp (very rare)" : {
+		name : "Anstruth Harp [Instrument of the Bards]",
+		sortname : "Instrument of the Bards, Anstruth Harp",
+		rarity : "very rare",
+		magicItemTable : "?",
+		descriptionFull : "An Instrument of the Bards is superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a bard college. The Instruments of the Bards table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 Psychic damage.\n   You can play the instrument to cast one of its spells. Once the instrument has been used to cast a spell, it can’t be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC.\n   All instruments of the bards can be used to cast the following spells: Fly, Invisibility, Levitate, and Protection from Evil and Good.\n   In addition, the Anstruth harp can be used to cast Cure Wounds (5th level), Ice Storm, and Wall of Thorns.",
+		spellcastingBonus : [{
+			name : "Once per long rest",
+			spells : ["fly", "invisibility", "levitate", "protection from evil and good", "cure wounds", "ice storm", "wall of thorns"],
+			selection : ["fly", "invisibility", "levitate", "protection from evil and good", "cure wounds", "ice storm", "wall of thorns"],
+			firstCol : "oncelr",
+			times : 7,
+			spellcastingAbility : "class"
+		}],
+		spellChanges : {
+			"cure wounds" : {
+				description : "1 living creature heals 10d8+spellcasting ability modifier HP",
+				changes : "When using the Anstruth Harp to cast Cure Wounds, it is cast at 5th-level."
+			},
+		}
+	},
+	"canaith mandolin (rare)" : {
+		name : "Canaith Mandolin [Instrument of the Bards]",
+		sortname : "Instrument of the Bards, Canaith Mandolin",
+		rarity : "rare",
+		magicItemTable : "?",
+		descriptionFull : "An Instrument of the Bards is superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a bard college. The Instruments of the Bards table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 Psychic damage.\n   You can play the instrument to cast one of its spells. Once the instrument has been used to cast a spell, it can’t be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC.\n   All instruments of the bards can be used to cast the following spells: Fly, Invisibility, Levitate, and Protection from Evil and Good.\n   In addition, the Canaith mandolin can be used to cast Cure Wounds (3rd level), Dispel Magic, and Protection from Energy (lightning only).",
+		spellcastingBonus : [{
+			name : "Once per long rest",
+			spells : ["fly", "invisibility", "levitate", "protection from evil and good", "cure wounds", "dispel magic", "protection from energy"],
+			selection : ["fly", "invisibility", "levitate", "protection from evil and good", "cure wounds", "dispel magic", "protection from energy"],
+			firstCol : "oncelr",
+			times : 7,
+			spellcastingAbility : "class"
+		}],
+		spellChanges : {
+			"cure wounds" : {
+				description : "1 living creature heals 6d8+spellcasting ability modifier HP",
+				changes : "When using the Canaith Mandolin to cast Cure Wounds, it is cast at 3rd-level."
+			},
+			"protection from energy" : {
+				description : "1 creature gains resistance to Lightning damage for the duration",
+				changes : "When using the Canaith Mandolin to cast Protection from Energy, it can only grant resistance to lightning damage."
+			}
+		}
+	},
+	"cli lyre (rare)" : {
+		name : "Cli Lyre [Instrument of the Bards]",
+		sortname : "Instrument of the Bards, Cli Lyre",
+		rarity : "rare",
+		magicItemTable : "?",
+		descriptionFull : "An Instrument of the Bards is superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a bard college. The Instruments of the Bards table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 Psychic damage.\n   You can play the instrument to cast one of its spells. Once the instrument has been used to cast a spell, it can’t be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC.\n   All instruments of the bards can be used to cast the following spells: Fly, Invisibility, Levitate, and Protection from Evil and Good.\n   In addition, the Cli lyre can be used to cast Stone Shape, Wall of Fire, and Wind Wall.",
+		spellcastingBonus : [{
+			name : "Once per long rest",
+			spells : ["fly", "invisibility", "levitate", "protection from evil and good", "stone shape", "wall of fire", "wind wall"],
+			selection : ["fly", "invisibility", "levitate", "protection from evil and good", "stone shape", "wall of fire", "wind wall"],
+			firstCol : "oncelr",
+			times : 7,
+			spellcastingAbility : "class"
+		}]
+	},
+	"doss lute (uncommon)" : {
+		name : "Doss Lute [Instrument of the Bards]",
+		sortname : "Instrument of the Bards, Doss Lute",
+		rarity : "uncommon",
+		magicItemTable : "?",
+		descriptionFull : "An Instrument of the Bards is superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a bard college. The Instruments of the Bards table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 Psychic damage.\n   You can play the instrument to cast one of its spells. Once the instrument has been used to cast a spell, it can’t be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC.\n   All instruments of the bards can be used to cast the following spells: Fly, Invisibility, Levitate, and Protection from Evil and Good.\n   In addition, the Doss lute can be used to cast Animal Friendship, Protection from Energy (fire only), and Protection from Poison.",
+		spellcastingBonus : [{
+			name : "Once per long rest",
+			spells : ["fly", "invisibility", "levitate", "protection from evil and good", "animal friendship", "protection from energy", "protection from poison"],
+			selection : ["fly", "invisibility", "levitate", "protection from evil and good", "animal friendship", "protection from energy", "protection from poison"],
+			firstCol : "oncelr",
+			times : 7,
+			spellcastingAbility : "class"
+		}],
+		spellChanges : {
+			"protection from energy" : {
+				description : "1 creature gains resistance to Fire damage for the duration",
+				changes : "When using the Doss Lute to cast Protection from Energy, it can only grant resistance to fire damage."
+			}
+		}
+	},
+	"fochlucan bandore (uncommon)" : {
+		name : "Fochlucan Bandore [Instrument of the Bards]",
+		sortname : "Instrument of the Bards, Fochlucan Bandore",
+		rarity : "uncommon",
+		magicItemTable : "?",
+		descriptionFull : "An Instrument of the Bards is superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a bard college. The Instruments of the Bards table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 Psychic damage.\n   You can play the instrument to cast one of its spells. Once the instrument has been used to cast a spell, it can’t be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC.\n   All instruments of the bards can be used to cast the following spells: Fly, Invisibility, Levitate, and Protection from Evil and Good.\n   In addition, the Fochlucan bandore can be used to cast Entangle, Faerie Fire, Shillelagh, and Speak with Animals.",
+		spellcastingBonus : [{
+			name : "Once per long rest",
+			spells : ["fly", "invisibility", "levitate", "protection from evil and good", "entangle", "faerie fire", "shillelagh", "speak with animals"],
+			selection : ["fly", "invisibility", "levitate", "protection from evil and good", "entangle", "faerie fire", "shillelagh", "speak with animals"],
+			firstCol : "oncelr",
+			times : 8,
+			spellcastingAbility : "class"
+		}]
+	},
+	"mac-fuirmidh cittern (uncommon)" : {
+		name : "Mac-Fuirmidh Cittern [Instrument of the Bards]",
+		sortname : "Instrument of the Bards, Mac-Fuirmidh Cittern",
+		rarity : "uncommon",
+		magicItemTable : "?",
+		descriptionFull : "An Instrument of the Bards is superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a bard college. The Instruments of the Bards table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 Psychic damage.\n   You can play the instrument to cast one of its spells. Once the instrument has been used to cast a spell, it can’t be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC.\n   All instruments of the bards can be used to cast the following spells: Fly, Invisibility, Levitate, and Protection from Evil and Good.\n   In addition, the Mac-Fuirmidh cittern can be used to cast Barkskin, Cure Wounds, and Fog Cloud.",
+		spellcastingBonus : [{
+			name : "Once per long rest",
+			spells : ["fly", "invisibility", "levitate", "protection from evil and good", "barkskin", "cure wounds", "fog cloud"],
+			selection : ["fly", "invisibility", "levitate", "protection from evil and good", "barkskin", "cure wounds", "fog cloud"],
+			firstCol : "oncelr",
+			times : 7,
+			spellcastingAbility : "class"
+		}]
+	},
+	"ollamh harp (legendary)" : {
+		name : "Ollamh Harp [Instrument of the Bards]",
+		sortname : "Instrument of the Bards, Ollamh Harp",
+		rarity : "legendary",
+		magicItemTable : "?",
+		descriptionFull : "An Instrument of the Bards is superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a bard college. The Instruments of the Bards table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 Psychic damage.\n   You can play the instrument to cast one of its spells. Once the instrument has been used to cast a spell, it can’t be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC.\n   All instruments of the bards can be used to cast the following spells: Fly, Invisibility, Levitate, and Protection from Evil and Good.\n   In addition, the Ollamh harp can be used to cast Confusion, Control Weather, and Fire Storm.",
+		spellcastingBonus : [{
+			name : "Once per long rest",
+			spells : ["fly", "invisibility", "levitate", "protection from evil and good", "confusion", "control weather", "fire storm"],
+			selection : ["fly", "invisibility", "levitate", "protection from evil and good", "confusion", "control weather", "fire storm"],
+			firstCol : "oncelr",
+			times : 7,
+			spellcastingAbility : "class"
+		}],
+		spellChanges : {
+			"control weather" : {
+				time : "1 a",
+				changes : "Casting time is only an action."
+			}
+		}
+	}
+};
+MagicItemsList["ioun stone"] = {
+	name : "Ioun Stone",
+	source : [["DMG2024", "-"]],
+	type : "wondrous item",
+	attunement : true,
+	description : "As an action, I can make an ioun stone orbit my head at 1d3 ft or retrieve it. Others can catch it as an action with an attack or Acrobatics check (AC/DC 24). It has 10 HP and resistance to all damage. Different stones grant different benefits.",
+	descriptionFull : "Roughly marble sized, Ioun Stones are named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun Stones exist, each type a distinct combination of shape and color.\n   When you take a Magic action to toss an Ioun Stone into the air, the stone orbits your head at a distance of 1d3 feet, conferring its benefit to you while doing so. You can have up to three Ioun Stones orbiting your head at the same time.\n   Each Ioun Stone orbiting your head is considered to be an object you are wearing. The orbiting stone avoids contact with other creatures and objects, adjusting its orbit to avoid collisions and thwarting all attempts by other creatures to attack or snatch it.\n   As a Utilize action, you can seize and stow any number of Ioun Stones orbiting your head. If your Attunement to an Ioun Stone ends while it’s orbiting your head, the stone falls as though you had dropped it.",
+	allowDuplicates : true,
+	action : [["action", " (orbit/retrieve)"]],
+	choices : ["Absorption", "Agility", "Awareness", "Fortitude", "Greater Absorption", "Insight", "Intellect", "Leadership", "Mastery", "Protection", "Regeneration", "Reserve", "Strength", "Sustenance"],
+	"absorption" : {
+		rarity : "very rare",
+		magicItemTable : "?",
+		description : "As a Magic action, I can make this pale lavender ellipsoid orbit my head at 1d3 ft or retrieve it. While it orbits my head, I can use my reaction to cancel a spell of 4th level or lower targeting only me, if I can see the caster and the stone has enough charges left. It can cancel 20 levels of spells before it loses its magic.",
+		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   While this pale lavender ellipsoid orbits your head, you can take a Reaction to cancel a spell of level 4 or lower cast by a creature you can see. A canceled spell has no effect, and any resources used to cast it are wasted. Once the stone has canceled 20 levels of spells, it burns out, turns dull gray, and loses its magic.",
+		limfeaname : "Ioun Stone of Absorption",
+		usages : 20,
+		recovery : "Never",
+		action : [["reaction", ""]]
+	},
+	"agility" : {
+		rarity : "very rare",
+		magicItemTable : "?",
+		description : "As a Magic action, I can make this deep red sphere orbit my head at 1d3 ft or retrieve it. While it orbits my head, my Dexterity score increases by 2, to a maximum of 20.",
+		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   Your Dexterity increases by 2, to a maximum of 20, while this deep-red sphere orbits your head.",
+		scores : [0, 2, 0, 0, 0, 0]
+	},
+	"awareness" : {
+		rarity : "rare",
+		magicItemTable : "?",
+		description : "As a Magic action, I can make this dark blue rhomboid orbit my head at 1d3 ft or retrieve it. While it orbits my head, I can't be surprised.",
+		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   While this dark-blue rhomboid orbits your head, you have Advantage on Initiative rolls and Wisdom (Perception) checks.",
+	},
+	"fortitude" : {
+		rarity : "very rare",
+		magicItemTable : "?",
+		description : "As a Magic action, I can make this pink rhomboid orbit my head at 1d3 ft or retrieve it. While it orbits my head, my Constitution score increases by 2, to a maximum of 20.",
+		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   Your Constitution increases by 2, to a maximum of 20, while this pink rhomboid orbits your head.",
+		scores : [0, 0, 2, 0, 0, 0]
+	},
+	"greater absorption" : {
+		rarity : "legendary",
+		magicItemTable : "?",
+		description : "As a Magic action, I can make this marbled lavender and green ellipsoid orbit my head at 1d3 ft or retrieve it. While it orbits my head, I can use a reaction to cancel a spell of 8th level or lower targeting only me, if I can see the caster and enough charges are left. It can cancel 20 levels of spells before it loses its magic.",
+		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   While this marbled lavender and green ellipsoid orbits your head, you can take a Reaction to cancel a spell of level 8 or lower cast by a creature you can see. A canceled spell has no effect, and any resources used to cast it are wasted. Once the stone has canceled 20 levels of spells, it burns out, turns dull gray, and loses its magic.",
+		limfeaname : "Ioun Stone of Greater Absorption",
+		usages : 20,
+		recovery : "Never",
+		action : [["reaction", ""]]
+	},
+	"insight" : {
+		rarity : "very rare",
+		magicItemTable : "?",
+		description : "As a Magic action, I can make this incandescent blue sphere orbit my head at 1d3 ft or retrieve it. While it orbits my head, my Wisdom score increases by 2, to a maximum of 20.",
+		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   Your Wisdom increases by 2, to a maximum of 20, while this incandescent blue sphere orbits your head.",
+		scores : [0, 0, 0, 0, 2, 0]
+	},
+	"intellect" : {
+		rarity : "very rare",
+		magicItemTable : "?",
+		description : "As a Magic action, I can make this marbled scarlet and blue sphere orbit my head at 1d3 ft or retrieve it. While it orbits my head, my Intelligence score increases by 2, to a maximum of 20.",
+		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   Your Intelligence increases by 2, to a maximum of 20, while this marbled scarlet and blue sphere orbits your head.",
+		scores : [0, 0, 0, 2, 0, 0]
+	},
+	"leadership" : {
+		rarity : "very rare",
+		magicItemTable : "?",
+		description : "As a Magic action, I can make this marbled pink and green sphere orbit my head at 1d3 ft or retrieve it. While it orbits my head, my Charisma score increases by 2, to a maximum of 20.",
+		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   Your Charisma increases by 2, to a maximum of 20, while this marbled pink and green sphere orbits your head.",
+		scores : [0, 0, 0, 0, 0, 2]
+	},
+	"mastery" : {
+		rarity : "legendary",
+		magicItemTable : "?",
+		description : "As a Magic action, I can make this pale green prism orbit my head at 1d3 ft or retrieve it. While it orbits my head, my proficiency bonus increases by 1.",
+		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   Your Proficiency Bonus increases by 1 while this pale green prism orbits your head.",
+		addMod : [{ type: "", field : "Proficiency Bonus Modifier", mod : 1, text : "My proficiency bonus increases by 1." }]
+	},
+	"protection" : {
+		rarity : "rare",
+		magicItemTable : "?",
+		description : "As a Magic action, I can make this dusty rose prism orbit my head at 1d3 ft or retrieve it. While it orbits my head, I have a +1 bonus to AC.",
+		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   You gain a +1 bonus to Armor Class while this dusty-rose prism orbits your head.",
+		extraAC : [{name : "Ioun Stone of Protection", mod : 1, magic : true, text : "I gain a +1 bonus to AC while attuned."}]
+	},
+	"regeneration" : {
+		rarity : "legendary",
+		magicItemTable : "?",
+		description : "As a Magic action, I can make this pearly white spindle orbit my head at 1d3 ft or retrieve it. It has 10 HP and resistance to all damage. While it orbits my head, I regain 15 HP at the end of each hour as long as I have at least 1 HP.",
+		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   You regain 15 Hit Points at the end of each hour this pearly white spindle orbits your head if you have at least 1 Hit Point."
+	},
+	"reserve" : {
+		rarity : "rare",
+		magicItemTable : "?",
+		description : "As a Magic action, I can make this vibrant purple prism orbit my head at 1d3 ft or retrieve it. It can store 4 (spell slot) levels worth of spells. By touching it, one can cast a 1-4 level spell into it. While it orbits my head, I can cast any spell stored in it as if casting it myself, but using the original casters spellcasting ability.",
+		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   This vibrant purple prism stores spells cast into it, holding them until you use them. The stone can store up to 4 levels of spells at a time. When found, it contains 1d4 levels of stored spells chosen by the DM.\n   Any creature can cast a spell of level 1 through 4 into the stone by touching it as the spell is cast. The spell has no effect, other than to be stored in the stone. If the stone can’t hold the spell, the spell is expended without effect. The level of the slot used to cast the spell determines how much space it uses.\n   While this stone orbits your head, you can cast any spell stored in it. The spell uses the slot level, spell save DC, spell attack bonus, and spellcasting ability of the original caster but is otherwise treated as if you cast the spell. The spell cast from the stone is no longer stored in it, freeing up space."
+	},
+	"strength" : {
+		rarity : "very rare",
+		magicItemTable : "?",
+		description : "As a Magic action, I can make this pale blue rhomboid orbit my head at 1d3 ft or retrieve it. While it orbits my head, my Strength score increases by 2, to a maximum of 20.",
+		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   Your Strength increases by 2, to a maximum of 20, while this pale blue rhomboid orbits your head.",
+		scores : [2, 0, 0, 0, 0, 0]
+	},
+	"sustenance" : {
+		rarity : "rare",
+		magicItemTable : "?",
+		description : "As a Magic action, I can make this clear spindle orbit my head at 1d3 ft or retrieve it. While it orbits my head, I don't need to eat or drink.",
+		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   You don’t need to eat or drink while this clear spindle orbits your head."
+	}
+};
+MagicItemsList["iron bands of bilarro"] = { // contains contributions by AelarTheElfRogue
+	name : "Iron Bands of Bilarro",
+	nameAlt : "Iron Bands of Binding",
+	source : [["DMG2024", "-"]],
+	type : "wondrous item",
+	rarity : "rare",
+	magicItemTable : "?",
+	description : "Once per dawn, as a Magic action, I can speak the command word and make a ranged attack (Dex + Prof). If hit, the target is restrained until I use a bonus action to speak the command word again. Once per 24 hours, the target can make a DC 20 Strength (Athletics) check as an action to free itself and destroy the bands.",
+	descriptionLong : "Once per dawn, as a Magic action, I can throw this rusty iron sphere and speak its command word. I make a ranged attack roll with an attack bonus equal to my Dexterity modifier plus Proficiency Bonus. On a hit, the target is restrained until I take a bonus action to speak the command word again to release it. Doing so, or missing with the attack, causes the bands to contract and become a sphere once more. The target can make a DC 20 Strength (Athletics) check as an action, freeing itself and destroying the bands on a success. If the check fails, any further attempts made by that creature automatically fail until 24 hours have elapsed.",
+	descriptionFull : "This rusty iron sphere measures 3 inches in diameter and weighs 1 pound. You can take a Magic action to throw the sphere at a Huge or smaller creature you can see within 60 feet of yourself. As the sphere moves through the air, it opens into a tangle of metal bands.\n   Make a ranged attack roll with an attack bonus equal to your Dexterity modifier plus your Proficiency Bonus. On a hit, the target has the Restrained condition until you take a Bonus Action to issue a command that releases it. Doing so or missing with the attack causes the bands to contract and become a sphere once more.\n   A creature that can touch the bands, including the one Restrained, can take an action to make a DC 20 Strength (Athletics) check to break the iron bands. On a successful check, the item is destroyed, and the Restrained creature is freed. On a failed check, any further attempts made by that creature automatically fail until 24 hours have elapsed.\n   Once the bands are used, they can’t be used again until the next dawn.",
+	weight : 1,
+	usages : 1,
+	recovery : "dawn",
+	action : [["action", " (throw)"], ["bonus action", " (release)"]],
+	weaponsAdd : ["Iron Bands of Bilarro"],
+	weaponOptions : {
+		regExpSearch : /^(?=.*iron)(?=.*band)(?=.*(bilarro|binding)).*$/i,
+		name : "Iron Bands of Bilarro",
+		source : [["DMG2024", "-"]],
+		ability : 2,
+		type : "Natural",
+		damage : ["\u2015", "", "Restrained"],
+		range : "60 ft",
+		description : "Restrains Huge or smaller creature; DC 20 Strength check to break out",
+		abilitytodamage : false,
+		weight : 1
+	}
 };
