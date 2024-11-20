@@ -6549,7 +6549,7 @@ legacyClassRefactor("warlock", {
   prereqs: "Charisma 13",
   improvements: [0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5],
   die: 8,
-  saves: ["Con", "Cha"],
+  saves: ["Wis", "Cha"],
   skillstxt: {
     primary: "Choose 2:Arcana, Deception, History, Intimidation, Investigation, Nature, or Religion",
   },
