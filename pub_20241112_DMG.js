@@ -35,7 +35,7 @@ MagicItemsList["adamantine ammunition"] = {
 	magicItemTable : "?",
 	type : "weapon (any ammunition)",
 	rarity : "uncommon",
-	description : "Whenever ammunition made or coated with adamantine hits an object, the hit is a critical hit.",
+	description : "Whenever ammunition made or coated with adamantine hits an object, the hit is a Critical Hit.",
 	descriptionFull : "This weapon or piece of ammunition is made of adamantine, one of the hardest substances in existence. Whenever this weapon or piece of ammunition hits an object, the hit is a Critical Hit.",
 	allowDuplicates : true,
 	chooseGear : {
@@ -54,7 +54,7 @@ MagicItemsList["adamantine weapon"] = {
 	magicItemTable : "?",
 	type : "weapon (any melee)",
 	rarity : "uncommon",
-	description : "Whenever a weapon made or coated with adamantine hits an object, the hit is a critical hit.",
+	description : "Whenever a weapon made or coated with adamantine hits an object, the hit is a Critical Hit.",
 	descriptionFull : "This weapon or piece of ammunition is made of adamantine, one of the hardest substances in existence. Whenever this weapon or piece of ammunition hits an object, the hit is a Critical Hit.",
 	allowDuplicates : true,
 	chooseGear : {
@@ -306,7 +306,7 @@ MagicItemsList["armor of invulnerability"] = { // contains contributions by Larr
 	type : "armor (plate)",
 	rarity : "legendary",
 	magicItemTable : "?",
-	description : "I have resistance to nonmagical damage while I wear this plate armor. As an action, I can make myself immune to nonmagical damage for 10 minutes or until I am no longer wearing the armor. Once this special action is used, it can't be used again until the next dawn.",
+	description : "I have Resistance to Bludgeoning, Piercing, and Slashing damage while I wear this plate armor. As a Magic action, I can make myself immune to Bludgeoning, Piercing, and Slashing damage for 10 minutes or until I am no longer wearing the armor. Once this Magic action is used, it can't be used again until the next dawn.",
 	descriptionFull : "You have Resistance to Bludgeoning, Piercing, and Slashing damage while you wear this armor. Metal Shell: You can take a Magic action to give yourself Immunity to Bludgeoning, Piercing, and Slashing damage for 10 minutes or until you are no longer wearing the armor. Once this property is used, it can’t be used again until the next dawn.",
 	attunement : true,
 	weight : 65,
@@ -331,8 +331,8 @@ MagicItemsList["armor of resistance"] = {
 	source : [["DMG2024", 231]],
 	type : "armor (light, medium, or heavy)",
 	rarity : "rare",
-	description : "Select the damage type that this armor gives resistance to using the square button in this line. While I'm wearing this armor and attuned to it, I gain resistance to one type of damage.",
-	descriptionFull : "You have resistance to one type of damage while you wear this armor. The DM chooses the type or determines it randomly from the options below:\n\n" + toUni("d10\tType\t\td10\tType") + "\n 1\tAcid\t\t 6\tNecrotic\n 2\tCold\t\t 7\tPoison\n 3\tFire\t\t 8\tPsychic\n 4\tForce\t\t 9\tRadiant\n 5\tLightning   \t 10\tThunder",
+	description : "Select the damage type that this armor gives Resistance to using the square button in this line. While I'm wearing this armor and attuned to it, I gain Resistance to one type of damage.",
+	descriptionFull : "You have Resistance to one type of damage while you wear this armor. The DM chooses the type or determines it randomly by rolling on the following table.\n\n" + toUni("d10\tType\t\td10\tType") + "\n 1\tAcid\t\t 6\tNecrotic\n 2\tCold\t\t 7\tPoison\n 3\tFire\t\t 8\tPsychic\n 4\tForce\t\t 9\tRadiant\n 5\tLightning   \t 10\tThunder",
 	attunement : true,
 	allowDuplicates : true,
 	chooseGear : {
@@ -343,52 +343,52 @@ MagicItemsList["armor of resistance"] = {
 	choicesNotInMenu : true,
 	"acid" : {
 		name : "Armor of Acid Resistance",
-		description : "While I'm wearing this armor and I'm attuned to it, I have resistance to acid damage.",
+		description : "While I'm wearing this armor and I'm attuned to it, I have Resistance to Acid damage.",
 		dmgres : ["Acid"]
 	},
 	"cold" : {
 		name : "Armor of Cold Resistance",
-		description : "While I'm wearing this armor and I'm attuned to it, I have resistance to cold damage.",
+		description : "While I'm wearing this armor and I'm attuned to it, I have Resistance to Cold damage.",
 		dmgres : ["Cold"]
 	},
 	"fire" : {
 		name : "Armor of Fire Resistance",
-		description : "While I'm wearing this armor and I'm attuned to it, I have resistance to fire damage.",
+		description : "While I'm wearing this armor and I'm attuned to it, I have Resistance to Fire damage.",
 		dmgres : ["Fire"]
 	},
 	"force" : {
 		name : "Armor of Force Resistance",
-		description : "While I'm wearing this armor and I'm attuned to it, I have resistance to force damage.",
+		description : "While I'm wearing this armor and I'm attuned to it, I have Resistance to Force damage.",
 		dmgres : ["Force"]
 	},
 	"lightning" : {
 		name : "Armor of Lightning Resistance",
-		description : "While I'm wearing this armor and I'm attuned to it, I have resistance to lightning damage.",
+		description : "While I'm wearing this armor and I'm attuned to it, I have Resistance to Lightning damage.",
 		dmgres : ["Lightning"]
 	},
 	"necrotic" : {
 		name : "Armor of Necrotic Resistance",
-		description : "While I'm wearing this armor and I'm attuned to it, I have resistance to necrotic damage.",
+		description : "While I'm wearing this armor and I'm attuned to it, I have Resistance to Necrotic damage.",
 		dmgres : ["Necrotic"]
 	},
 	"poison" : {
 		name : "Armor of Poison Resistance",
-		description : "While I'm wearing this armor and I'm attuned to it, I have resistance to poison damage.",
+		description : "While I'm wearing this armor and I'm attuned to it, I have Resistance to Poison damage.",
 		dmgres : ["Poison"]
 	},
 	"psychic" : {
 		name : "Armor of Psychic Resistance",
-		description : "While I'm wearing this armor and I'm attuned to it, I have resistance to psychic damage.",
+		description : "While I'm wearing this armor and I'm attuned to it, I have Resistance to Psychic damage.",
 		dmgres : ["Psychic"]
 	},
 	"radiant" : {
 		name : "Armor of Radiant Resistance",
-		description : "While I'm wearing this armor and I'm attuned to it, I have resistance to radiant damage.",
+		description : "While I'm wearing this armor and I'm attuned to it, I have Resistance to Radiant damage.",
 		dmgres : ["Radiant"]
 	},
 	"thunder" : {
 		name : "Armor of Thunder Resistance",
-		description : "While I'm wearing this armor and I'm attuned to it, I have resistance to thunder damage.",
+		description : "While I'm wearing this armor and I'm attuned to it, I have Resistance to Thunder damage.",
 		dmgres : ["Thunder"]
 	}
 };
@@ -398,7 +398,7 @@ MagicItemsList["armor of vulnerability"] = { // contains contributions by Larry 
 	type : "armor (light, medium, or heavy)",
 	rarity: "rare",
 	magicItemTable : "?",
-	description: "While wearing this armor, I have resistance to one of the following damage types: bludgeoning, piercing, or slashing; although, unfortunately, I have vulnerability to the other two until I am targeted by a Remove Curse spell.",
+	description: "While wearing this armor, I have Resistance to one of the following damage types: Bludgeoning, Piercing, or Slashing; unfortunately, I have Vulnerability to the other two until I am targeted by a Remove Curse spell.",
 	descriptionFull: "While wearing this armor, you have Resistance to one of the following damage types: Bludgeoning, Piercing, or Slashing. The DM chooses the type or determines it randomly.\n   " + toUni("Curse") + ". This armor is cursed, a fact that is revealed only when the Identify spell is cast on the armor or you attune to it. Attuning to the armor curses you until you are targeted by a Remove Curse spell or similar magic; removing the armor fails to end the curse. While cursed, you have Vulnerability to two of the three damage types associated with the armor (not the one to which it grants Resistance).",
 	attunement: true,
 	allowDuplicates : true,
@@ -410,22 +410,22 @@ MagicItemsList["armor of vulnerability"] = { // contains contributions by Larry 
 	choices : ["Bludgeoning", "Piercing", "Slashing"],
 	choicesNotInMenu : true,
 	"bludgeoning" : {
-		description: "While wearing this armor, I have resistance to bludgeoning damage. Additionally, I have vulnerability to piercing and slashing damage until I am targeted by a Remove Curse spell.",
+		description: "While wearing this armor, I have Resistance to Bludgeoning damage. Additionally, I have Vulnerability to Piercing and Slashing damage until I am targeted by a Remove Curse spell.",
 		dmgres : ["Bludgeoning"],
-		savetxt : { text : ["Vulnerable to piercing \u0026 slashing damage"] },
-		descriptionFull: "While wearing this armor, I have resistance to bludgeoning damage.\n   " + toUni("Curse") + ". This armor is cursed, a fact that is revealed only when an Identify spell is cast on the armor or I attune to it. Attuning to the armor curses me until I am targeted by the Remove Curse spell or similar magic; removing the armor fails to end the curse. While cursed, I have vulnerability to piercing and slashing damage."
+		savetxt : { text : ["Vulnerable to Piercing \u0026 Slashing damage"] },
+		descriptionFull: "While wearing this armor, I have Resistance to Bludgeoning damage.\n   " + toUni("Curse") + ". This armor is cursed, a fact that is revealed only when an Identify spell is cast on the armor or I attune to it. Attuning to the armor curses me until I am targeted by the Remove Curse spell or similar magic; removing the armor fails to end the curse. While cursed, I have Vulnerability to Piercing and Slashing damage."
 	},
 	"piercing" : {
-		description: "While wearing this armor, I have resistance to piercing damage. Additionally, I have vulnerability to bludgeoning and slashing damage until I am targeted by a Remove Curse spell.",
+		description: "While wearing this armor, I have Resistance to Piercing damage. Additionally, I have Vulnerability to Bludgeoning and Slashing damage until I am targeted by a Remove Curse spell.",
 		dmgres : ["Piercing"],
-		savetxt : { text : ["Vulnerable to bludgeoning \u0026 slashing damage"] },
-		descriptionFull: "While wearing this armor, I have resistance to piercing damage.\n   " + toUni("Curse") + ". This armor is cursed, a fact that is revealed only when an Identify spell is cast on the armor or I attune to it. Attuning to the armor curses me until I am targeted by the Remove Curse spell or similar magic; removing the armor fails to end the curse. While cursed, I have vulnerability to bludgeoning and slashing damage."
+		savetxt : { text : ["Vulnerable to Bludgeoning \u0026 Slashing damage"] },
+		descriptionFull: "While wearing this armor, I have Resistance to Piercing damage.\n   " + toUni("Curse") + ". This armor is cursed, a fact that is revealed only when an Identify spell is cast on the armor or I attune to it. Attuning to the armor curses me until I am targeted by the Remove Curse spell or similar magic; removing the armor fails to end the curse. While cursed, I have Vulnerability to Bludgeoning and Slashing damage."
 	},
 	"slashing" : {
-		description: "While wearing this armor, I have resistance to slashing damage. Additionally, I have vulnerability to bludgeoning and piercing damage until I am targeted by a Remove Curse spell.",
+		description: "While wearing this armor, I have Resistance to Slashing damage. Additionally, I have Vulnerability to Bludgeoning and Piercing damage until I am targeted by a Remove Curse spell.",
 		dmgres : ["Slashing"],
-		savetxt : { text : ["Vulnerable to bludgeoning \u0026 piercing damage"] },
-		descriptionFull: "While wearing this armor, I have resistance to slashing damage.\n   " + toUni("Curse") + ". This armor is cursed, a fact that is revealed only when an Identify spell is cast on the armor or I attune to it. Attuning to the armor curses me until I am targeted by the Remove Curse spell or similar magic; removing the armor fails to end the curse. While cursed, I have vulnerability to bludgeoning and piercing damage."
+		savetxt : { text : ["Vulnerable to Bludgeoning \u0026 Piercing damage"] },
+		descriptionFull: "While wearing this armor, I have Resistance to Slashing damage.\n   " + toUni("Curse") + ". This armor is cursed, a fact that is revealed only when an Identify spell is cast on the armor or I attune to it. Attuning to the armor curses me until I am targeted by the Remove Curse spell or similar magic; removing the armor fails to end the curse. While cursed, I have Vulnerability to Bludgeoning and Piercing damage."
 	}
 };
 MagicItemsList["arrow-catching shield"] = { // contains contributions by Larry Hoy
@@ -486,10 +486,10 @@ MagicItemsList["bag of holding"] = {
 	type : "wondrous item",
 	rarity : "uncommon",
 	magicItemTable : "?",
-	description : "This bag is 2 ft in diameter at the mouth, 4 ft deep, and 15 lb regardless of content. It can hold up to 500 lb, not exceeding a volume of 64 cu ft. Retrieving an item from it requires an action. If it's overloaded, pierced, or torn, it's destroyed with its contents in the Astral plane. If turned inside out, all its contents spill forth.",
-	descriptionLong : "This bag is 2 ft in diameter at the mouth, 4 ft deep, and 15 lb regardless of content. It can hold up to 500 lb, not exceeding a volume of 64 cu ft. Retrieving an item from it requires an action. If it is overloaded, pierced, or torn, it is destroyed, leaving its contents in the Astral plane. If it is turned inside out, all its contents spill forth unharmed. Breathing creatures inside the bag can breath for 10 minutes divided by the number of creatures in it (minimum 1 minute), after which they begin to suffocate. Placing the bag in an other extradimensional space instantly destroys both and opens a gate to the Astral Plane.",
-	descriptionFull : "This bag has an interior space considerably larger than its outside dimensions—roughly 2 feet square and 4 feet deep on the inside. The bag can hold up to 500 pounds, not exceeding a volume of 64 cubic feet. The bag weighs 5 pounds, regardless of its contents. Retrieving an item from the bag requires a Utilize action.\n   If the bag is overloaded, pierced, or torn, it is destroyed, and its contents are scattered in the Astral Plane. If the bag is turned inside out, its contents spill forth unharmed, but the bag must be put right before it can be used again. The bag holds enough air for 10 minutes of breathing, divided by the number of breathing creatures inside.\n   Placing a Bag of Holding inside an extradimensional space created by a Heward’s Handy Haversack, Portable Hole, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within a 10-foot-radius Sphere centered on the gate is sucked through it to a random location on the Astral Plane. The gate then closes. The gate is one-way and can’t be reopened.Placing a Bag of Holding inside an extradimensional space created by a Heward’s Handy Haversack, Portable Hole, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within a 10-foot-radius Sphere centered on the gate is sucked through it to a random location on the Astral Plane. The gate then closes. The gate is one-way and can’t be reopened.",
-	weight : 15,
+	description : "This bag is 2 ft in diameter at the mouth, 4 ft deep, and 5 lb regardless of content. It can hold up to 500 lb, not exceeding a volume of 64 cu ft. Retrieving an item from it requires an action. If it's overloaded, pierced, or torn, it's destroyed with its contents in the Astral plane. If turned inside out, all its contents spill forth.",
+	descriptionLong : "This bag is 2 ft in diameter at the mouth, 4 ft deep, and 5 lb regardless of content. It can hold up to 500 lb, not exceeding a volume of 64 cu ft. Retrieving an item from it requires an action. If it is overloaded, pierced, or torn, it is destroyed, leaving its contents in the Astral plane. If it is turned inside out, all its contents spill forth unharmed. Breathing creatures inside the bag can breath for 10 minutes divided by the number of creatures in it (minimum 1 minute), after which they begin to suffocate. Placing the bag in an other extradimensional space instantly destroys both and opens a gate to the Astral Plane.",
+	descriptionFull : "This bag has an interior space considerably larger than its outside dimensions—roughly 2 feet square and 4 feet deep on the inside. The bag can hold up to 500 pounds, not exceeding a volume of 64 cubic feet. The bag weighs 5 pounds, regardless of its contents. Retrieving an item from the bag requires a Utilize action.\n   If the bag is overloaded, pierced, or torn, it is destroyed, and its contents are scattered in the Astral Plane. If the bag is turned inside out, its contents spill forth unharmed, but the bag must be put right before it can be used again. The bag holds enough air for 10 minutes of breathing, divided by the number of breathing creatures inside.\n   Placing a Bag of Holding inside an extradimensional space created by a Heward’s Handy Haversack, Portable Hole, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within a 10-foot-radius Sphere centered on the gate is sucked through it to a random location on the Astral Plane. The gate then closes. The gate is one-way and can’t be reopened.",
+	weight : 5,
 	action : [["action", " (retrieve item)"]]
 };
 MagicItemsList["bag of tricks"] = { // contributed by Larry Hoy
@@ -500,7 +500,6 @@ MagicItemsList["bag of tricks"] = { // contributed by Larry Hoy
 	magicItemTable : "?",
 	description: "This ordinary bag, made from gray, rust, or tan cloth, appears empty. Reaching inside the bag, however, reveals the presence of a small, fuzzy object; which, as an action, I can throw 20 ft, where it transforms into a random creature.",
 	descriptionFull: "This bag made from gray, rust, or tan cloth appears empty. Reaching inside the bag, however, reveals the presence of a small, fuzzy object.\n   You can take a Magic action to pull the fuzzy object from the bag and throw it up to 20 feet. When the object lands, it transforms into a creature you determine by rolling on the table that corresponds to the bag’s color. See the Monster Manual for the creature’s stat block. The creature vanishes at the next dawn or when it is reduced to 0 Hit Points.\n   The creature is Friendly to you and your allies, and it acts immediately after you on your Initiative count. You can take a Bonus Action to command how the creature moves and what action it takes on its next turn, such as attacking an enemy. In the absence of such orders, the creature acts in a fashion appropriate to its nature.\n   Once three fuzzy objects have been pulled from the bag, the bag can’t be used again until the next dawn.",
-	weight: 0.5,
 	allowDuplicates : true,
 	action : [["action", " (pull)"], ["bonus action", " (command)"]],
 	usages : 3,
