@@ -737,17 +737,7 @@ MagicItemsList["boots of elvenkind"] = { // contains contributions by AelarTheEl
 	magicItemTable : "?",
 	description : "While I wear these boots, my steps make no sound, regardless of the surface I am moving across. I also have advantage on Dexterity (Stealth) checks that rely on moving silently.",
 	descriptionFull : "While you wear these boots, your steps make no sound, regardless of the surface you are moving across. You also have Advantage on Dexterity (Stealth) checks.",
-	eval : function () {
-		for (var i = 0; i < CurrentMagicItems.known.length; i++) {
-			if (CurrentMagicItems.known[i].indexOf("cloak of elvenkind") !== -1 && tDoc.getField("Extra.Magic Item Attuned " + (1 + i)).isBoxChecked(0)) {
-				SetProf("advantage", true, ["Stealth", true], "Cloak and Boots of Elvenkind (magic items)");
-				break;
-			}
-		}
-	},
-	removeeval : function () {
-		SetProf("advantage", false, ["Stealth", true], "Cloak and Boots of Elvenkind (magic items)");
-	}
+	advantages : [["Stealth", true]],
 };
 MagicItemsList["boots of false tracks"] = {
 	name : "Boots of False Tracks",
@@ -902,6 +892,7 @@ MagicItemsList["broom of flying"] = {
 	type : "wondrous item",
 	rarity : "uncommon",
 	magicItemTable : "?",
+	attunement : true,
 	description : "With the command word, this broom hovers and can either be ridden in the air or sent alone up to 1 mile by naming a familiar location. It has a flying speed of 50 ft, holds up to 400 lb, but only has 30 ft speed if over 200 lb. It stops hovering when I land. With another command word, it flies to me if within 1 mile.",
 	descriptionFull : "This wooden broom functions like a mundane broom until you stand astride it and take a Magic action to make it hover beneath you, at which time it can be ridden in the air. It has a Fly Speed of 50 feet. It can carry up to 400 pounds, but its Fly Speed becomes 30 feet while carrying over 200 pounds. The broom stops hovering when you land or when you’re no longer riding it.\n   As a Magic action, you can send the broom to travel alone to a destination within 1 mile of you if you name the location and are familiar with it. The broom comes back to you when you take a Magic action and use a command word if the broom is still within 1 mile of you.",
 	weight : 3
@@ -1019,7 +1010,7 @@ MagicItemsList["carpet of flying"] = {
 	type : "wondrous item",
 	rarity : "very rare",
 	magicItemTable : "?",
-	description : "I can speak the carpet's command word as an action to make the carpet hover and fly. It moves according to my spoken directions if I am within 30 feet of it. A carpet can carry up to twice the weight for its type, but it flies at half speed if it carries more than its normal capacity.",
+	description : "I can speak the carpet's command word as a Magic action to make the carpet hover and fly. It moves according to my spoken directions if I am within 30 feet of it. A carpet can carry up to twice the weight for its type, but it flies at half speed if it carries more than its normal capacity.",
 	descriptionFull : "You can make this carpet hover and fly by taking a Magic action and using the carpet’s command word. It moves according to your directions if you are within 30 feet of it.\n   Four sizes of Carpet of Flying exist. The DM chooses the size of a given carpet or determines it randomly by rolling on the following table. A carpet can carry up to twice the weight shown on the table, but its Fly Speed is halved if it carries more than its normal capacity.\n\n" + 
 	toUni("1d100\tSize\tCapacity\tFlying Speed") + "\n01-20\t3 \xD7 5 ft.\t  200 lb.\t  80 feet\n21-55\t4 \xD7 6 ft.\t  400 lb.\t  60 feet\n56-80\t5 \xD7 7 ft.\t  600 lb.\t  40 feet\n81-00\t6 \xD7 9 ft.\t  800 lb.\t  30 feet",
 	action : [["action", ""]],
@@ -1028,22 +1019,22 @@ MagicItemsList["carpet of flying"] = {
 	"3 \xD7 5 ft (fly 80 ft, 200 lb)" : {
 		name : "Carpet of Flying, 3 ft \xD7 5 ft",
 		nameTest : "Carpet of Flying, 1 m \xD7 1,5 m",
-		description : "I can speak the carpet's command word as an action to make the 3 ft \xD7 5 ft carpet hover and fly. It moves according to my spoken directions if I am within 30 ft of it. It has a flying speed of 80 ft and can carry up to 400 lb. If it carries more than 200 lb its flying speed is reduced to only 40 ft."
+		description : "I can speak the carpet's command word as a Magic action to make the 3 ft \xD7 5 ft carpet hover and fly. It moves according to my spoken directions if I am within 30 ft of it. It has a flying speed of 80 ft and can carry up to 400 lb. If it carries more than 200 lb its flying speed is reduced to only 40 ft."
 	},
 	"4 \xD7 6 ft (fly 60 ft, 400 lb)" : {
 		name : "Carpet of Flying, 4 ft \xD7 6 ft",
 		nameTest : "Carpet of Flying, 1,2 m \xD7 2 m",
-		description : "I can speak the carpet's command word as an action to make the 4 ft \xD7 6 ft carpet hover and fly. It moves according to my spoken directions if I am within 30 ft of it. It has a flying speed of 60 ft and can carry up to 800 lb. If it carries more than 400 lb its flying speed is reduced to only 30 ft."
+		description : "I can speak the carpet's command word as a Magic action to make the 4 ft \xD7 6 ft carpet hover and fly. It moves according to my spoken directions if I am within 30 ft of it. It has a flying speed of 60 ft and can carry up to 800 lb. If it carries more than 400 lb its flying speed is reduced to only 30 ft."
 	},
 	"5 \xD7 7 ft (fly 40 ft, 600 lb)" : {
 		name : "Carpet of Flying, 5 ft \xD7 7 ft",
 		nameTest : "Carpet of Flying, 1,5 m \xD7 2,1 m",
-		description : "I can speak the carpet's command word as an action to make the 5 ft \xD7 7 ft carpet hover and fly. It moves according to my spoken directions if I am within 30 ft of it. It has a flying speed of 40 ft and can carry up to 1200 lb. If it carries more than 600 lb its flying speed is reduced to only 20 ft."
+		description : "I can speak the carpet's command word as a Magic action to make the 5 ft \xD7 7 ft carpet hover and fly. It moves according to my spoken directions if I am within 30 ft of it. It has a flying speed of 40 ft and can carry up to 1200 lb. If it carries more than 600 lb its flying speed is reduced to only 20 ft."
 	},
 	"6 \xD7 9 ft (fly 30 ft, 800 lb)" : {
 		name : "Carpet of Flying, 6 ft \xD7 9 ft",
 		nameTest : "Carpet of Flying, 1,8 m \xD7 2,7 m",
-		description : "I can speak the carpet's command word as an action to make the 6 ft \xD7 9 ft carpet hover and fly. It moves according to my spoken directions if I am within 30 ft of it. It has a flying speed of 30 ft and can carry up to 1600 lb. If it carries more than 800 lb its flying speed is reduced to only 15 ft."
+		description : "I can speak the carpet's command word as a Magic action to make the 6 ft \xD7 9 ft carpet hover and fly. It moves according to my spoken directions if I am within 30 ft of it. It has a flying speed of 30 ft and can carry up to 1600 lb. If it carries more than 800 lb its flying speed is reduced to only 15 ft."
 	}
 };
 MagicItemsList["cast-off armor"] = {
@@ -1053,8 +1044,8 @@ MagicItemsList["cast-off armor"] = {
 	magicItemTable : "?",
 	type : "armor (light, medium, or heavy)",
 	rarity : "common",
-	description : "As a magic action, I can doff this armor.",
-	descriptionFull : "You can doff this armor as a magic action.",
+	description : "As a Magic action, I can doff this armor.",
+	descriptionFull : "You can doff this armor as a Magic action.",
 	chooseGear : {
 		type : "armor",
 		prefixOrSuffix : "suffix",
@@ -1109,8 +1100,16 @@ MagicItemsList["chime of opening"] = { // contributed by AelarTheElfRogue
 	type : "wondrous item",
 	rarity : "rare",
 	magicItemTable : "?",
-	description : "I can strike this as a magic action, pointing it at an object within 120 ft of me that can be opened (i.e. door, lid, lock). One lock or latch on it opens unless the sound can't reach it. If no locks or latches remain, the object itself opens. The chime can be used ten times. After the tenth time it cracks and becomes useless.",
+	description : "As a Magic action, I can strike the chime to cast Knock. The spell’s customary knocking sound is replaced by the clear, ringing tone of the chime, which is audible out to 300 feet.\n   The chime can be used 10 times. After the tenth time, it cracks and becomes useless.",
 	descriptionFull : "This hollow metal tube measures about 1 foot long and weighs 1 pound. As a Magic action, you can strike the chime to cast Knock. The spell’s customary knocking sound is replaced by the clear, ringing tone of the chime, which is audible out to 300 feet.\n   The chime can be used 10 times. After the tenth time, it cracks and becomes useless.",
+	spellFirstColTitle : "CH",
+	spellcastingBonus : [{
+		name : "Chime of Opening",
+		spells : ["knock"],
+		selection : ["knock"],
+		times : 1,
+		firstCol : 1,
+	}],
 	weight : 1,
 	action : [["action", ""]],
 	usages : 10,
@@ -1167,7 +1166,7 @@ MagicItemsList["cloak of billowing"] = {
 	magicItemTable : "?",
 	type : "wondrous item",
 	rarity : "common",
-	description : "As a bonus action while wearing this cloak, I can make it billow dramatically.",
+	description : "As a Bonus Action while wearing this cloak, I can make it billow dramatically.",
 	descriptionFull : "While wearing this cloak, you can take a Bonus Action to make it billow dramatically for 1 minute.",
 	action : [["bonus action", ""]]
 };
@@ -1190,14 +1189,7 @@ MagicItemsList["cloak of elvenkind"] = {
 	description : "While I wear this cloak, Wisdom (Perception) checks made to see me have disadvantage, and I have advantage on Dexterity (Stealth) checks made to hide, as the cloak's color shifts to camouflage me.",
 	descriptionFull : "While you wear this cloak, Wisdom (Perception) checks made to perceive you have Disadvantage, and you have Advantage on Dexterity (Stealth) checks.",
 	attunement : true,
-	eval : function () {
-		if (CurrentMagicItems.known.indexOf("boots of elvenkind") !== -1) {
-			SetProf("advantage", true, ["Stealth", true], "Cloak and Boots of Elvenkind (magic items)");
-		}
-	},
-	removeeval : function () {
-		SetProf("advantage", false, ["Stealth", true], "Cloak and Boots of Elvenkind (magic items)");
-	}
+	advantages : [["Stealth", true]],
 };
 MagicItemsList["cloak of invisibility"] = {
 	name : "Cloak of Invisibility",
@@ -1268,6 +1260,7 @@ MagicItemsList["cloak of the manta ray"] = {
 	type : "wondrous item",
 	rarity : "uncommon",
 	magicItemTable : "?",
+	attunement : true,
 	description : "While wearing this cloak, I can breathe underwater, and I have a Swim Speed of 60 feet.",
 	descriptionFull : "While wearing this cloak, you can breathe underwater, and you have a Swim Speed of 60 feet.",
 	speed : { swim : { spd : "fixed 60", enc : "fixed 50" } }
@@ -1289,7 +1282,7 @@ MagicItemsList["clothes of mending"] = {
 	magicItemTable : "?",
 	type : "wondrous item",
 	rarity : "common",
-	description : "This elegant outfit of traveler's clothes magically mends itself to counteract daily wear and tear. Pieces of the outfit that are destroyed can't be repaired in this way.",
+	description : "This elegant outfit magically mends itself to counteract daily wear and tear. Pieces of the outfit that are destroyed can't be repaired in this way.",
 	descriptionFull : "This elegant outfit magically mends itself to counteract daily wear and tear. Pieces of the outfit that are destroyed can’t be repaired in this way.",
 	weight : 4
 };
@@ -1395,14 +1388,13 @@ MagicItemsList["cube of force"] = { // contains contributions by Larry Hoy
 	type : "wondrous item",
 	rarity : "rare",
 	magicItemTable : "?",
-	description : "Each face of this 1-inch cube has a distinct marking on it. As a magic action, I can press one of these faces, expending a number of charges to cast a spell based on the chosen face, if enough charges remain. The chosen spell is cast. See Notes page for details.",
-	descriptionFull : "This cube is about an inch across. Each face has a distinct marking on it. The cube starts with 10 charges, and it regains 1d6 expended charges daily at dawn." + 
+	description : "Each face of this 1-inch cube has a distinct marking on it. I can press one of these faces, expending a number of charges to cast a spell based on the chosen face, if enough charges remain. The chosen spell is cast. See Notes page for details.",
+	descriptionFull : "This cube is about an inch across. Each face has a distinct marking on it. You can press one of those faces, expend the number of charges required for it, and thereby cast the spell associated with it (save DC 17), as shown in the Cube of Force Faces table.\n   The cube starts with 10 charges, and it regains 1d6 expended charges daily at dawn." + 
 	toUni("Spell\tCharge Cost") + "\nMage Armor\t1\nShield\t1\nLeomund's Tiny Hut\t3\nMordenkainen's Private Sanctum\t4\nOtiluke's Resilient Sphere\t4\nWall of Force\t5",
 	attunement : true,
 	usages : 10,
 	recovery : "dawn",
 	additional : "regains 1d6",
-	action : [["action", ""]],
 	spellFirstColTitle : "Ch",
 	spellcastingBonus : [{
 		name : "Cube of Force",
@@ -1543,13 +1535,14 @@ MagicItemsList["daern's instant fortress"] = { // contains contributions by Larr
 	type : "wondrous item",
 	rarity : "rare",
 	magicItemTable : "?",
+	attunement : true,
 	description: "As a magic action, I can place this 1-inch adamantine statuette on the ground and speak its command word, making it grow into a 20-ft by 20-ft by 30-ft high adamantine tower with a door facing me, arrow slits on all sides, battlement atop, two floors, and a ladder along one wall ending at a trapdoor to the roof. See Notes page for details.",
 	descriptionFull : "As a Magic action, you can place this 1-inch adamantine statuette on the ground and, using a command word, cause it to grow rapidly into a square adamantine tower. Repeating the command word causes the tower to revert to statuette form, which works only if the tower is empty. Each creature in the area where the tower appears is pushed to an unoccupied space outside but next to the tower. Objects in the area that aren’t being worn or carried are also pushed clear of the tower.\n   The tower is 20 feet on a side and 30 feet high, with arrow slits on all sides and a battlement atop it. Its interior is divided into two floors, with a ladder, staircase, or ramp (your choice) connecting them. This ladder, staircase, or ramp ends at a trapdoor leading to the roof. When created, the tower has a single door at ground level on the side facing you. The door opens only at your command, which you can issue as a Bonus Action. It is immune to the Knock spell and similar magic.\n   Magic prevents the tower from being tipped over. The roof, the door, and the walls each have AC 20; HP 100; Immunity to Bludgeoning, Piercing, and Slashing damage except that which is dealt by siege equipment; and Resistance to all other damage. Shrinking the tower back down to statuette form doesn’t repair damage to the tower. Only a Wish spell can repair the tower (this use of the spell counts as replicating a spell of level 8 or lower). Each casting of Wish causes the tower to regain all its Hit Points.",
 	action : [["action", ""], ["bonus action", " (Open Door)"]],
 	toNotesPage : [{
 		name : "Fortress Details",
 		note : [
-			"As an action I can place this 1-inch adamantine statuette on the ground and speak its command word. The statuette rapidly grows into a fortress that remains until I use an action to speak the command word that dismisses it, which works only if the fortress is empty.",
+			"As a Magic action I can place this 1-inch adamantine statuette on the ground and speak its command word. The statuette rapidly grows into a fortress that remains until I use a Magic action to speak the command word that dismisses it, which works only if the fortress is empty.",
 			"The fortress is a square tower, 20 feet on a side and 30 feet high, with arrow slits on all sides and a battlement atop it. Its interior is divided into two floors. with a ladder running along one wall to connect them. The ladder ends at a trapdoor leading to the roof.",
 			"When activated, the tower has a small door on the side facing me. The door opens only at my command, which I can speak as a bonus action. It is immune to the Knock spell and similar magic (e.g., a Chime of Opening).",
 			"Each creature in the area where the tower appears is pushed to an unoccupied space outside but next to the tower. Objects in the area that aren’t being worn or carried are also pushed clear of the tower.",
@@ -1586,8 +1579,8 @@ MagicItemsList["dancing sword"] = {
 	rarity : "very rare",
 	magicItemTable : "?",
 	attunement : true,
-	description : "As a bonus action, I can toss this sword into the air and use the command to make it hover, fly up to 30 ft and attack a target of my choice (as if I'm using it).\nI can command it to move/attack again as a bonus action while it hovers and is in 30 ft.\nAfter the 4th attack, it moves 30 ft to return to my hand.",
-	descriptionLong : "As a bonus action, I can toss this magic sword into the air and use the command word to make it hover, fly up to 30 ft and attack a target of my choice within 5 ft of it.\nThe attack uses my attack roll and ability score for damage as if I would be using the sword.\nI can command it to move and attack again as a bonus action while it hovers.\nAfter the 4th attack, it moves 30 ft to try and return to my hand.\nIf it can't reach me or my hands are full, it falls to the ground after moving.\nIt also ceases to hover if I grasp it or move more than 30 ft away from it.",
+	description : "As a Bonus Action, I can toss this sword into the air and use the command to make it hover, fly up to 30 ft and attack a target of my choice (as if I'm using it).\nI can command it to move/attack again as a bonus action while it hovers and is in 30 ft.\nAfter the 4th attack, it moves 30 ft to return to my hand.",
+	descriptionLong : "As a Bonus Action, I can toss this magic sword into the air and use the command word to make it hover, fly up to 30 ft and attack a target of my choice within 5 ft of it.\nThe attack uses my attack roll and ability score for damage as if I would be using the sword.\nI can command it to move and attack again as a bonus action while it hovers.\nAfter the 4th attack, it moves 30 ft to try and return to my hand.\nIf it can't reach me or my hands are full, it falls to the ground after moving.\nIt also ceases to hover if I grasp it or move more than 30 ft away from it.",
 	descriptionFull : "You can take a Bonus Action to toss this magic weapon into the air. When you do so, the weapon begins to hover, flies up to 30 feet, and attacks one creature of your choice within 5 feet of itself. The weapon uses your attack roll and adds your ability modifier to damage rolls.\n   While the weapon hovers, you can take a Bonus Action to cause it to fly up to 30 feet to another spot within 30 feet of you. As part of the same Bonus Action, you can cause the weapon to attack one creature within 5 feet of the weapon.\n   After the hovering weapon attacks for the fourth time, it flies back to you and tries to return to your hand. If you have no hand free, the weapon falls to the ground in your space. If the weapon has no unobstructed path to you, it moves as close to you as it can and then falls to the ground. It also ceases to hover if you grasp it or are more than 30 feet away from it.",
 	action : [["bonus action", ""]],
 	chooseGear : {
@@ -1685,8 +1678,8 @@ MagicItemsList["decanter of endless water"] = {
 	type : "wondrous item",
 	rarity : "uncommon",
 	magicItemTable : "?",
-	description : 'As an action, I open the flask \u0026 speak a command word, pouring fresh/salt water out until my next turn starts. "Splash" for 1 gal. "Fountain" for 5 gal. "Geyser" for 30 gal in 30 ft \xD7 1 ft geyser. As a bonus action, I can aim it at a target, which has to make a DC 13 Str save or take 1d4 bludgeoning damage and fall prone.',
-	descriptionLong : 'As an action, I can remove the stopper from this flask and speak one of three command words, pouring fresh or salt water (my choice) out until my next turn starts. "Splash" produces 1 gallon. "Fountain" produces 5 gallons. "Geyser" produces 30 gallons of water that gushes forth in a geyser 30 ft long by 1 ft wide. As a bonus action while holding it, I can aim the geyser at a creature I can see within 30 ft. The target must succeed on a DC 13 Strength save or take 1d4 bludgeoning damage and fall prone. I can instead target an unattended object weighing up to 200 lb, knocking it over or pushing it up to 15 ft away.',
+	description : 'As a Magic action, I open the flask \u0026 speak a command word, pouring fresh/salt water out until my next turn starts. "Splash" for 1 gal. "Fountain" for 5 gal. "Geyser" for 30 gal in 30 ft \xD7 1 ft geyser. As a bonus action, I can aim it at a target, which has to make a DC 13 Str save or take 1d4 bludgeoning damage and fall prone.',
+	descriptionLong : 'As a Magic action, I can remove the stopper from this flask and speak one of three command words, pouring fresh or salt water (my choice) out until my next turn starts. "Splash" produces 1 gallon. "Fountain" produces 5 gallons. "Geyser" produces 30 gallons of water that gushes forth in a geyser 30 ft long by 1 ft wide. As a bonus action while holding it, I can aim the geyser at a creature I can see within 30 ft. The target must succeed on a DC 13 Strength save or take 1d4 bludgeoning damage and fall prone. I can instead target an unattended object weighing up to 200 lb, knocking it over or pushing it up to 15 ft away.',
 	descriptionFull : "This stoppered flask sloshes when shaken, as if it contains water. The decanter weighs 2 pounds.\n   You can take a Magic action to remove the stopper and issue one of three command words, whereupon an amount of fresh water or salt water (your choice) pours out of the flask. The water stops pouring out at the start of your next turn. Choose from the following command words:\n \u2022 \"Splash\" The decanter produces 1 gallon of water.\n \u2022 \"Fountain\" The decanter produces 5 gallons of water.\n \u2022 \"Geyser\" The decanter produces 30 gallons of water that gushes forth in a Line 30 feet long and 1 foot wide. If you’re holding the decanter, you can aim the geyser in one direction (no action required). One creature of your choice in the Line must succeed on a DC 13 Strength saving throw or take 1d4 Bludgeoning damage and have the Prone condition. Instead of a creature, you can target one object in the Line that isn’t being worn or carried and that weighs no more than 200 pounds. The object is knocked over by the geyser.",
 	weight : 2
 };
@@ -1696,6 +1689,7 @@ MagicItemsList["deck of illusions"] = {
 	type : "wondrous item",
 	rarity : "uncommon",
 	magicItemTable : "?",
+	action : [["action", ""]],
 	description : "As a magic action, I can draw a card at random from this deck and throw it on the ground within 30 ft. An illusion, determined by the type of card, forms over the thrown card and remains until dispelled. While I'm within 120 ft of it, I can use an action to move it within 30 ft of the card. See Notes page for more details.",
 	descriptionFull : [
 		"This box contains a set of cards. A full deck has 34 cards: 32 depicting specific creatures and two with a mirrored surface. A deck found as treasure is usually missing 1d20 − 1 cards.",
@@ -1900,8 +1894,8 @@ MagicItemsList["defender"] = {
 		]
 	}
 };
-MagicItemsList["+1 demon armor"] = { // contains contributions by Larry Hoy
-	name : "+1 Demon Armor",
+MagicItemsList["demon armor +1"] = { // contains contributions by Larry Hoy
+	name : "Demon Armor +1",
 	source : [["DMG2024", 252]],
 	type : "armor (any)",
 	rarity : "very rare",
@@ -1916,11 +1910,6 @@ MagicItemsList["+1 demon armor"] = { // contains contributions by Larry Hoy
 		type : "armor",
 		prefixOrSuffix : "brackets",
 		descriptionChange : ["replace", "armor"],
-	},
-	calcChanges : {
-		extraAC : [{
-			mod : 1,
-		}],
 	},
 	weaponsAdd: ["Demon Armor Claws"],
 	weaponOptions: [{
@@ -1971,7 +1960,7 @@ MagicItemsList["dragon scale mail"] = {
 	choicesNotInMenu : true,
 	"black (acid)" : {
 		name : "Black Dragon Scale Mail",
-		description : "This scale mail gives +1 to AC, adv. on saves against the frightful presence and breath weapons of dragons, and resistance to acid damage. As an action, I can magically discern the distance and direction to the closest black dragon within 30 miles. Once I use this action, I can't use it again until the next dawn.",
+		description : "This scale mail gives +1 to AC, adv. on saves against the breath weapons of dragons, and resistance to acid damage. As an action, I can magically discern the distance and direction to the closest black dragon within 30 miles. Once I use this action, I can't use it again until the next dawn.",
 		armorAdd : "Black Dragon Scale Mail",
 		dmgres: ["Acid"],
 		limfeaname : "Detect Black Dragon",
@@ -1979,7 +1968,7 @@ MagicItemsList["dragon scale mail"] = {
 	},
 	"blue (lightning)" : {
 		name : "Blue Dragon Scale Mail",
-		description : "This scale mail gives +1 to AC, adv. on saves against the frightful presence and breath weapons of dragons, and resistance to lightning damage. As an action, I can magically discern the distance and direction to the closest blue dragon in 30 miles. Once I use this action, I can't use it again until the next dawn.",
+		description : "This scale mail gives +1 to AC, adv. on saves against the breath weapons of dragons, and resistance to lightning damage. As an action, I can magically discern the distance and direction to the closest blue dragon in 30 miles. Once I use this action, I can't use it again until the next dawn.",
 		armorAdd : "Blue Dragon Scale Mail",
 		dmgres: ["Lightning"],
 		limfeaname : "Detect Blue Dragon",
@@ -1987,7 +1976,7 @@ MagicItemsList["dragon scale mail"] = {
 	},
 	"brass (fire)" : {
 		name : "Brass Dragon Scale Mail",
-		description : "This scale mail gives +1 to AC, adv. on saves against the frightful presence and breath weapons of dragons, and resistance to fire damage. As an action, I can magically discern the distance and direction to the closest brass dragon within 30 miles. Once I use this action, I can't use it again until the next dawn.",
+		description : "This scale mail gives +1 to AC, adv. on saves against the breath weapons of dragons, and resistance to fire damage. As an action, I can magically discern the distance and direction to the closest brass dragon within 30 miles. Once I use this action, I can't use it again until the next dawn.",
 		armorAdd : "Brass Dragon Scale Mail",
 		dmgres: ["Fire"],
 		limfeaname : "Detect Brass Dragon",
@@ -1995,7 +1984,7 @@ MagicItemsList["dragon scale mail"] = {
 	},
 	"bronze (lightning)" : {
 		name : "Bronze Dragon Scale Mail",
-		description : "This scale mail gives +1 to AC, adv. on saves against the frightful presence and breath weapons of dragons, and resistance to lightning damage. As an action, I can magically discern the distance and direction to the closest bronze dragon in 30 miles. Once I use this action, I can't use it again until the next dawn.",
+		description : "This scale mail gives +1 to AC, adv. on saves against the breath weapons of dragons, and resistance to lightning damage. As an action, I can magically discern the distance and direction to the closest bronze dragon in 30 miles. Once I use this action, I can't use it again until the next dawn.",
 		armorAdd : "Bronze Dragon Scale Mail",
 		dmgres: ["Lightning"],
 		limfeaname : "Detect Bronze Dragon",
@@ -2003,7 +1992,7 @@ MagicItemsList["dragon scale mail"] = {
 	},
 	"copper (acid)" : {
 		name : "Copper Dragon Scale Mail",
-		description : "This scale mail gives +1 to AC, adv. on saves against the frightful presence and breath weapons of dragons, and resistance to acid damage. As an action, I can magically discern the distance and direction to the closest copper dragon within 30 miles. Once I use this action, I can't use it again until the next dawn.",
+		description : "This scale mail gives +1 to AC, adv. on saves against the breath weapons of dragons, and resistance to acid damage. As an action, I can magically discern the distance and direction to the closest copper dragon within 30 miles. Once I use this action, I can't use it again until the next dawn.",
 		armorAdd : "Copper Dragon Scale Mail",
 		dmgres: ["Acid"],
 		limfeaname : "Detect Copper Dragon",
@@ -2011,7 +2000,7 @@ MagicItemsList["dragon scale mail"] = {
 	},
 	"gold (fire)" : {
 		name : "Gold Dragon Scale Mail",
-		description : "This scale mail gives +1 to AC, adv. on saves against the frightful presence and breath weapons of dragons, and resistance to fire damage. As an action, I can magically discern the distance and direction to the closest gold dragon within 30 miles. Once I use this action, I can't use it again until the next dawn.",
+		description : "This scale mail gives +1 to AC, adv. on saves against the breath weapons of dragons, and resistance to fire damage. As an action, I can magically discern the distance and direction to the closest gold dragon within 30 miles. Once I use this action, I can't use it again until the next dawn.",
 		armorAdd : "Gold Dragon Scale Mail",
 		dmgres: ["Fire"],
 		limfeaname : "Detect Gold Dragon",
@@ -2019,7 +2008,7 @@ MagicItemsList["dragon scale mail"] = {
 	},
 	"green (poison)" : {
 		name : "Green Dragon Scale Mail",
-		description : "This scale mail gives +1 to AC, adv. on saves against the frightful presence and breath weapons of dragons, and resistance to poison damage. As an action, I can magically discern the distance and direction to the closest green dragon in 30 miles. Once I use this action, I can't use it again until the next dawn.",
+		description : "This scale mail gives +1 to AC, adv. on saves against the breath weapons of dragons, and resistance to poison damage. As an action, I can magically discern the distance and direction to the closest green dragon in 30 miles. Once I use this action, I can't use it again until the next dawn.",
 		armorAdd : "Green Dragon Scale Mail",
 		dmgres: ["Poison"],
 		limfeaname : "Detect Green Dragon",
@@ -2027,7 +2016,7 @@ MagicItemsList["dragon scale mail"] = {
 	},
 	"red (fire)" : {
 		name : "Red Dragon Scale Mail",
-		description : "This scale mail gives +1 to AC, adv. on saves against the frightful presence and breath weapons of dragons, and resistance to fire damage. As an action, I can magically discern the distance and direction to the closest red dragon within 30 miles. Once I use this action, I can't use it again until the next dawn.",
+		description : "This scale mail gives +1 to AC, adv. on saves against the breath weapons of dragons, and resistance to fire damage. As an action, I can magically discern the distance and direction to the closest red dragon within 30 miles. Once I use this action, I can't use it again until the next dawn.",
 		armorAdd : "Red Dragon Scale Mail",
 		dmgres: ["Fire"],
 		limfeaname : "Detect Red Dragon",
@@ -2035,7 +2024,7 @@ MagicItemsList["dragon scale mail"] = {
 	},
 	"silver (cold)" : {
 		name : "Silver Dragon Scale Mail",
-		description : "This scale mail gives +1 to AC, adv. on saves against the frightful presence and breath weapons of dragons, and resistance to cold damage. As an action, I can magically discern the distance and direction to the closest silver dragon within 30 miles. Once I use this action, I can't use it again until the next dawn.",
+		description : "This scale mail gives +1 to AC, adv. on saves against the breath weapons of dragons, and resistance to cold damage. As an action, I can magically discern the distance and direction to the closest silver dragon within 30 miles. Once I use this action, I can't use it again until the next dawn.",
 		armorAdd : "Silver Dragon Scale Mail",
 		dmgres: ["Cold"],
 		limfeaname : "Detect Silver Dragon",
@@ -2043,7 +2032,7 @@ MagicItemsList["dragon scale mail"] = {
 	},
 	"white (cold)" : {
 		name : "White Dragon Scale Mail",
-		description : "This scale mail gives +1 to AC, adv. on saves against the frightful presence and breath weapons of dragons, and resistance to cold damage. As an action, I can magically discern the distance and direction to the closest white dragon within 30 miles. Once I use this action, I can't use it again until the next dawn.",
+		description : "This scale mail gives +1 to AC, adv. on saves against the breath weapons of dragons, and resistance to cold damage. As an action, I can magically discern the distance and direction to the closest white dragon within 30 miles. Once I use this action, I can't use it again until the next dawn.",
 		armorAdd : "White Dragon Scale Mail",
 		dmgres: ["Cold"],
 		limfeaname : "Detect White Dragon",
@@ -2136,7 +2125,7 @@ MagicItemsList["dust of disappearance"] = {
 	type : "wondrous item",
 	rarity : "uncommon",
 	magicItemTable : "?",
-	description : "Once as a Utilize action, I can throw this dust into the air. By doing so, me and all creatures/objects within a 10-ft emanation of me become invisible for 2d4 minutes. The duration is the same for all subjects. If a creature affected by the dust attacks or casts a spell, the invisibility ends for that creature.",
+	description : "Once as a Utilize action, I can throw this dust into the air. By doing so, me and all creatures/objects within a 10-ft emanation become invisible for 2d4 minutes. The duration is the same for all subjects. If a creature affected by the dust makes an attack roll, deals damage, or casts a spell, the invisibility ends for that creature.",
 	descriptionFull : "This powder resembles fine sand. There is enough of it for one use. When you take a Utilize action to throw the dust into the air, you and each creature and object within a 10-foot Emanation originating from you have the Invisible condition for 2d4 minutes. The duration is the same for all subjects, and the dust is consumed when its magic takes effect. Immediately after an affected creature makes an attack roll, deals damage, or casts a spell, the Invisible condition ends for that creature."
 };
 MagicItemsList["dust of dryness"] = {
@@ -2159,8 +2148,8 @@ MagicItemsList["dust of sneezing and choking"] = {
 	description : "Once as a Utilize action, I can throw this dust into the air, causing me and all creatures within 30 ft that need to breathe to make a DC 15 Con save or start sneezing uncontrollably and be unable to breathe, thus becoming incapacitated and suffocating. Those affected can repeat their save at the end of each of their turns.",
 	descriptionFull : "Found in a small container, this powder resembles Dust of Disappearance, and Identify reveals it to be such. There is enough of it for one use.\n   As a Utilize action, you can throw the dust into the air, forcing yourself and every creature in a 30-foot Emanation originating from you to make a DC 15 Constitution saving throw. Constructs, Elementals, Oozes, Plants, and Undead succeed on the save automatically.\n   On a failed save, a creature begins sneezing uncontrollably; it has the Incapacitated condition and is suffocating. The creature repeats the save at the end of each of its turns, ending the effect on itself on a success. The effect also ends on any creature targeted by a Lesser Restoration spell."
 };
-MagicItemsList["+2 dwarven plate"] = {
-	name : "+2 Dwarven Plate",
+MagicItemsList["dwarven plate +2"] = {
+	name : "Dwarven Plate +2",
 	source : [["DMG2024", 255]],
 	type : "armor (half plate or plate armor)",
 	rarity : "very rare",
@@ -2232,8 +2221,8 @@ MagicItemsList["efreeti bottle"] = { // contributed by AelarTheElfRogue
 	weight : 1,
 	action : [["action", ""]]
 };
-MagicItemsList["+3 efreeti chain"] = {
-	name : "+3 Efreeti Chain",
+MagicItemsList["efreeti chain +3"] = {
+	name : "Efreeti Chain +3",
 	source : [["DMG2024", 257]],
 	type : "armor (Chain Mail or Chain Shirt)",
 	rarity : "legendary",
@@ -2294,8 +2283,8 @@ MagicItemsList["elixir of health"] = {
 	descriptionFull : "When you drink this potion, you are cured of all magical contagions. In addition, the following conditions end on you: Blinded, Deafened, Paralyzed, and Poisoned. The clear, red liquid has tiny bubbles of light in it.",
 	weight : 0.5
 };
-MagicItemsList["+1 elven chain"] = {
-	name : "+1 Elven Chain",
+MagicItemsList["elven chain +1"] = {
+	name : "Elven Chain +1",
 	source : [["DMG2024", 257]],
 	type : "armor (chain mail or chain shirt)",
 	rarity : "rare",
