@@ -5337,7 +5337,7 @@ legacyClassRefactor("rogue", {
   primaryAbility: "Dexterity",
   prereqs: "Dexterity 13",
   abilitySave: 2,
-  improvements: [0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5],
+  improvements: [0, 0, 0, 1, 1, 1, 1, 2, 2, 3, 3, 4, 4, 4, 4, 5, 5, 5, 6, 6],
   die: 8,
   saves: ["Dex", "Int"],
   skillstxt: {
@@ -5716,6 +5716,12 @@ legacySubClassRefactor("rogue", "arcane trickster", {
       source: [["PHB2024", 133]],
       minlevel: 3,
       action: [["bonus action", "Cast Mage Hand"], ["bonus action", "Control Mage Hand"]],
+	  spellcastingBonus : [{
+		name : "Mage Hand"
+		spells: ["mage hand"],
+		selection: ["mage hand"],
+		times : 1,
+	  }],
       description: desc([
         "I can cast Mage Hand as a Bonus Action, and make the spectral hand Invisible.",
         "I can control it as a Bonus Action, and through it can make Dex (Sleight of Hand) checks.",
