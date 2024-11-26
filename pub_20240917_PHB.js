@@ -35,7 +35,7 @@ SourceList.LEGACYRACE = {
   date: "2014/01/01",
   defaultExcluded : true,
 };
-// Coded By: ThePokésimmer with contributions from morepurplemorebetter (Joost), MasterJedi2014, Shroo, Reading Toskr, TrackAtNite, evanelric, TappyTap, Mente, Rocky, ShadowzAll
+// Coded By: ThePokésimmer with contributions from morepurplemorebetter (Joost), MasterJedi2014, Shroo, Reading Toskr, TrackAtNite, evanelric, TappyTap, Mente, Rocky, ShadowzAll, and Jeremy
 //Functions
 function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
@@ -10913,7 +10913,7 @@ FeatsList["shield master"] = {
   }],
   weaponProfs: [false, false, ["shield bash"]],
   descriptionFull: "I gain the following benefits:\n \u2022 Ability Score Increase. Increase my Strength score by 1, to a maximum of 20.\n \u2022 Shield Bash. If I attack a creature within 5 feet of me as part of the Attack action and hit with a Melee weapon, I can immediately bash the target with my Shield if it's equipped forcing the target to make a Strength saving throw (DC 8 plus my Strength modifier and Proficiency Bonus). On a failed save, I either push the target 5 feet from I or cause it to have the Prone condition (my choice). I can use this benefit only once on each of my turns.\n \u2022 Interpose Shield. If I're subjected to an effect that allows me to make a Dexterity saving throw to take only half damage, I can take a Reaction to take no damage if I succeed on the saving throw and are holding a Shield.",
-  description: "As a bonus action, when I use the Attack action, I can shove someone within 5 ft. with my shield. I add my shield's AC bonus to Dex saves vs. effects targeting only me. As a reaction, if I succeed on a Dex save for half damage, I can interpose my shield to avoid the damage.",
+  description: "Once per turn when I use the Attack action and Hit, I can cause the creature hit by my attack to make a STR save and if it fails either push the creature 5 feet or knock it Prone (DC 8 + STR + Prof). As a reaction, if I succeed on a Dex save for half damage, I can interpose my shield to avoid the damage. ",
   action: [['reaction', 'Interpose shield (Uncanny Dodge)']],
   prerequisite: "Level 4 and Shield Training",
   prereqeval: function (v) {
