@@ -5717,7 +5717,7 @@ legacySubClassRefactor("rogue", "arcane trickster", {
       minlevel: 3,
       action: [["bonus action", "Cast Mage Hand"], ["bonus action", "Control Mage Hand"]],
 	  spellcastingBonus : [{
-		name : "Mage Hand"
+		name : "Mage Hand",
 		spells: ["mage hand"],
 		selection: ["mage hand"],
 		times : 1,
