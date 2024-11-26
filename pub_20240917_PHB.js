@@ -5715,13 +5715,20 @@ legacySubClassRefactor("rogue", "arcane trickster", {
       name: "Mage Hand Legerdemain",
       source: [["PHB2024", 133]],
       minlevel: 3,
-      action: [["bonus action", "Cast Mage Hand"], ["bonus action", "Control Mage Hand"]],
+      action: [["bonus action", ""]],
 	  spellcastingBonus : [{
 		name : "Mage Hand",
 		spells: ["mage hand"],
 		selection: ["mage hand"],
 		times : 1,
 	  }],
+	  spellChanges : {
+		  "mage hand" : {
+			  time : "1 bns",
+			  description : "Invisible Spectral hand does simple task and can make Dex (Sleight of Hand) checks in 30ft; carries up to 10 lb; 1 bns to control again; only 1 instance ",
+			  changes : "My Mage Hand Legerdemain class feature expands my use of the Mage Hand cantrip and makes the spectral hand invisible."
+		  },
+	  },
       description: desc([
         "I can cast Mage Hand as a Bonus Action, and make the spectral hand Invisible.",
         "I can control it as a Bonus Action, and through it can make Dex (Sleight of Hand) checks.",
