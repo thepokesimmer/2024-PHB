@@ -3087,14 +3087,14 @@ MagicItemsList["folding boat"] = {
 	magicItemTable : "?",
 	description : "As a Magic action, I can speak a command word to have this wooden box become a Rowboat, a Keelboat, or to fold back up. The Rowboat holds 4 Medium creatures and has oars, anchor, mast, and a sail. The Keelboat holds 15 Medium creatures and has a deck, five sets of oars, rowing seats, a steering oar, anchor, deck cabin, mast, and a sail.",
 	descriptionLong : "A wooden box of 12 inch \xD7 6 inch \xD7 6 inch, that can be opened to put items in. As a Magic action, I can speak one of its three command words. The first causes it to unfold into a Rowboat 10 ft \xD7 4 ft \xD7 2 ft, with oars, an anchor, a mast, and a lateen sail, which can hold four Medium creatures comfortably. The second causes it to unfold into a Keelboat 24 ft \xD7 8 ft \xD7 6 ft, with a deck, rowing seats, five sets of oars, a steering oar, an anchor, a deck cabin, and a mast with a square sail, which can hold fifteen Medium creatures comfortably. Three causes it to fold up, leaving large objects placed in the boat/ship outside of the box.",
-	descriptionFull : "This object appears as a wooden box that measures 12 inches long, 6 inches wide, and 6 inches deep. It weighs 4 pounds and floats. It can be opened to store items inside. This item also has three command words, each requiring a Magic action to use:\n   First Command Word. The box unfolds into a Rowboat.\n   Second Command Word. The box unfolds into a Keelboat.\n   Third Command Word. The Folding Boat folds back into a box if no creatures are aboard. Any objects in the vessel that can’t fit inside the box remain outside the box as it folds. Any objects in the vessel that can fit inside the box do so.\n   When the box becomes a vessel, its weight becomes that of a normal vessel its size, and anything that was stored in the box remains in the boat.\n   Statistics for the Rowboat and Keelboat appear in the Player’s Handbook. If either vessel is reduced to 0 Hit Points, the Folding Boat is destroyed.",
+	descriptionFull : "This object appears as a wooden box that measures 12 inches long, 6 inches wide, and 6 inches deep. It weighs 4 pounds and floats. It can be opened to store items inside. This item also has three command words, each requiring a Magic action to use:\n   " + toUni("First Command Word") + ". The box unfolds into a Rowboat.\n   " + toUni("Second Command Word") + ". The box unfolds into a Keelboat.\n   " + toUni("Third Command Word") + ". The Folding Boat folds back into a box if no creatures are aboard. Any objects in the vessel that can’t fit inside the box remain outside the box as it folds. Any objects in the vessel that can fit inside the box do so.\n   When the box becomes a vessel, its weight becomes that of a normal vessel its size, and anything that was stored in the box remains in the boat.\n   Statistics for the Rowboat and Keelboat appear in the Player’s Handbook. If either vessel is reduced to 0 Hit Points, the Folding Boat is destroyed.",
 	weight : 4,
 	action : [["action", ""]]
 };
 MagicItemsList["frost brand"] = {
 	name : "Frost Brand",
 	source : [["DMG2024", 263]],
-	type : "weapon (any sword)",
+	type : "weapon (glaive, greatsword, longsword, rapier, scimitar, or shortsword)",
 	rarity : "very rare",
 	magicItemTable : "?",
 	attunement : true,
@@ -3144,8 +3144,8 @@ MagicItemsList["gem of brightness"] = { // contains contributions by Larry Hoy
 	rarity : "uncommon",
 	magicItemTable : "?",
 	description : "This gem has 50 charges. As a Magic action while holding it, I can speak a command word to cause it to: shed 30-ft bright and 30-ft dim light, fire a 60-ft beam of light at 1 creature (1 charge, DC 15 Con save or blinded 1 minute), or flare with blinding light in a 30-ft cone (5 charges, DC 15 Con save or blinded 1 minute).",
+	descriptionFull : "This prism has 50 charges. While you are holding it, you can take a Magic action and use one of three command words to cause one of the following effects:\n \u2022 " + toUni("First Command Word") + ". The gem sheds Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. This effect doesn’t expend a charge. It lasts until you take a Bonus Action to repeat the command word or until you use another function of the gem.\n \u2022 " + toUni("Second Command Word") + ". You expend 1 charge and cause the gem to fire a brilliant beam of light at one creature you can see within 60 feet of yourself. The creature must succeed on a DC 15 Constitution saving throw or have the Blinded condition for 1 minute. The creature repeats the save at the end of each of its turns, ending the effect on itself on a success.\n \u2022 " + toUni("Third Command Word") + ". You expend 5 charges and cause the gem to flare with intense light in a 30-foot Cone. Each creature in the Cone makes a saving throw as if struck by the beam created with the second command word.\n\nWhen all of the gem’s charges are expended, the gem becomes a nonmagical jewel worth 50 GP.",
 	descriptionLong : "This gem has 50 charges. As a Magic action while holding it, I can speak one of its three command words to cause it to: [1] shed bright light in a 30-ft radius and dim light in an additional 30 ft until another function of the gem is used or I use a bonus action to end it, [2] fire a 60-ft beam of light at 1 creature (1 charge, DC 15 Con save or blinded 1 minute), or [3] flare with blinding light in a 30-ft cone (5 charges, DC 15 Con save or blinded 1 minute). Blinded creatures can repeat the save at the end of each of their turns. When all of the gem's charges are expended, the gem becomes a nonmagical jewel worth 50 gp.",
-	descriptionFull : "This prism has 50 charges. While you are holding it, you can take a Magic action and use one of three command words to cause one of the following effects:\n \u2022 First Command Word. The gem sheds Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. This effect doesn’t expend a charge. It lasts until you take a Bonus Action to repeat the command word or until you use another function of the gem.\n \u2022 Second Command Word. You expend 1 charge and cause the gem to fire a brilliant beam of light at one creature you can see within 60 feet of yourself. The creature must succeed on a DC 15 Constitution saving throw or have the Blinded condition for 1 minute. The creature repeats the save at the end of each of its turns, ending the effect on itself on a success.\n \u2022 Third Command Word. You expend 5 charges and cause the gem to flare with intense light in a 30-foot Cone. Each creature in the Cone makes a saving throw as if struck by the beam created with the second command word.\n\nWhen all of the gem’s charges are expended, the gem becomes a nonmagical jewel worth 50 GP.",
 	weight : 1,
 	usages : 50,
 	recovery : "Never",
@@ -3157,7 +3157,7 @@ MagicItemsList["gem of seeing"] = { // contains contributions by Larry Hoy
 	type : "wondrous item",
 	rarity : "rare",
 	magicItemTable : "?",
-	description : "This gem has 3 charges. As a Magic action, I can speak its command word and expend 1 charge. For the next 10 minutes, I have truesight out to 120 ft when I peer through the gem. The gem regains 1d3 expended charges daily at dawn.",
+	description : "This gem has 3 charges. As a Magic action, I can expend 1 charge. For the next 10 minutes, I have truesight out to 120 ft when I peer through the gem. The gem regains 1d3 expended charges daily at dawn.",
 	descriptionFull : "This gem has 3 charges. As a Magic action, you can expend 1 charge. For the next 10 minutes, you have Truesight out to 120 feet when you peer through the gem.\n   The gem regains 1d3 expended charges daily at dawn.",
 	attunement : true,
 	weight : 1,
@@ -3204,7 +3204,7 @@ MagicItemsList["glamoured studded leather"] = {
 	type : "armor (studded leather)",
 	rarity : "rare",
 	magicItemTable : "?",
-	description : "Studded leather with +1 AC. As a bonus action, I can speak its command word and have it assume the appearance of a normal set of clothing or another armor. I decide what it looks like: style, color, and accessories, but the armor retains its bulk and weight. The illusion lasts until I use this again or remove the armor.",
+	description : "Studded leather with +1 AC. As a bonus action, I can have it assume the appearance of a normal set of clothing or another armor. I decide what it looks like: style, color, and accessories, but the armor retains its bulk and weight. The illusion lasts until I use this again or remove the armor.",
 	weight : 13,
 	descriptionFull : "While wearing this armor, you gain a +1 bonus to Armor Class. You can also take a Bonus Action to cause the armor to assume the appearance of a normal set of clothing or some other kind of armor. You decide what it looks like—including color, style, and accessories—but the armor retains its normal bulk and weight. The illusory appearance lasts until you use this property again or doff the armor.",
 	armorAdd : "Glamoured Studded Leather",
@@ -3236,7 +3236,7 @@ MagicItemsList["gloves of swimming and climbing"] = { // contributed by AelarThe
 	type : "wondrous item",
 	rarity : "uncommon",
 	magicItemTable : "?",
-	description : "While wearing these gloves, I have a Climb Speed and a Swim Speed equal to your Speed, and I gain a +5 bonus to Strength (Athletics) checks made to climb or swim.",
+	description : "While wearing these gloves, I have a Climb Speed and a Swim Speed equal to my Speed, and I gain a +5 bonus to Strength (Athletics) checks made to climb or swim.",
 	descriptionFull : "While wearing these gloves, you have a Climb Speed and a Swim Speed equal to your Speed, and you gain a +5 bonus to Strength (Athletics) checks made to climb or swim.",
 	speed: [{
 		climb: {spd: "walk", enc: "walk"},
@@ -3250,7 +3250,7 @@ MagicItemsList["gloves of thievery"] = {
 	type : "wondrous item",
 	rarity : "uncommon",
 	magicItemTable : "?",
-	description : "These gloves are imperceptible while worn. While wearing them, I gain a +5 bonus to Dexterity (Sleight of Hand) checks and Dexterity checks made to pick locks.",
+	description : "These gloves are imperceptible while worn. While wearing them, I gain a +5 bonus to Dexterity (Sleight of Hand) checks.",
 	descriptionFull : "These gloves are imperceptible while worn. While wearing them, you gain a +5 bonus to Dexterity (Sleight of Hand) checks.",
 	addMod : [{ type: "skill", field : "Sleight of Hand", mod : 5, text : "I gain a +5 bonus to Dexterity (Sleight of Hand) checks while wearing Gloves of Thievery." }]
 };
@@ -3380,7 +3380,7 @@ MagicItemsList["hat of disguise"] = { // contributed by Larry Hoy
    }],
    spellcastingAbility : "class" // https://www.sageadvice.eu/2015/11/27/hat-of-disguise-dc/
 };
-MagicItemsList["*hat of many spells*"] = {
+MagicItemsList["hat of many spells"] = {
 	name : "Hat of Disguise",
 	source : [["DMG2024", 266]],
 	type : "wondrous item",
@@ -3417,7 +3417,7 @@ MagicItemsList["hat of vermin"] = {
 	magicItemTable : "?",
 	type : "wondrous item",
 	rarity : "common",
-	description : "This hat has 3 charges, regaining all at dawn. As a Magic action while holding it, I can expend 1 charge and speak a command word to have one bat, frog, or rat appear in the hat. The creature acts as an ordinary member of its kind and disappears after 1 hour or when it has 0 HP. It is not under my control.",
+	description : "This hat has 3 charges, regaining all at dawn. As a Magic action while holding it, I can expend 1 charge to have one bat, frog, or rat appear in the hat. The creature acts as an ordinary member of its kind and disappears after 1 hour or when it has 0 HP. It is not under my control.",
 	descriptionFull : "This hat has 3 charges. While holding the hat, you can take a Magic action to expend 1 charge and summon your choice of a Bat, a Frog, or a Rat. The summoned creature magically appears in the hat and tries to get away from you as quickly as possible. The creature is Indifferent toward you and other creatures, and it isn’t under your control. It behaves as an ordinary creature of its kind and disappears after 1 hour or when it drops to 0 Hit Points. The hat regains all expended charges daily at dawn.",
 	action : [["action", ""]],
 	usages : 3,
@@ -3430,7 +3430,7 @@ MagicItemsList["hat of wizardry"] = {
 	type : "wondrous item",
 	rarity : "common",
 	description : "I can use this antiquated, cone-shaped hat adorned with gold crescent moons and stars as a spellcasting focus for my wizard spells. Once per long rest, I can use it to cast a wizard cantrip that I don't know. To do so, I must make a DC 10 Intelligence (Arcana) check, wasting the attempt as well as my action if I fail.",
-	descriptionFull : "This cone-shaped hat is adorned with moons and stars. While you are wearing it, you gain the following benefits.\n \u2022 Spellcasting Focus. You can use the hat as a Spellcasting Focus for your Wizard spells.\n \u2022 Unknown Spell. As a Magic action, you can try to cast a cantrip that you don’t know. The cantrip must be on the Wizard spell list and have a casting time of an action, and you make a DC 10 Intelligence (Arcana) check. On a successful check, you cast the spell. On a failed check, the spell fails, and the action used to cast the spell is wasted. In either case, you can’t use this property again until you finish a Long Rest.",
+	descriptionFull : "This cone-shaped hat is adorned with moons and stars. While you are wearing it, you gain the following benefits.\n \u2022 " + toUni("Spellcasting Focus") + ". You can use the hat as a Spellcasting Focus for your Wizard spells.\n \u2022 " + toUni("Unknown Spell") + ". As a Magic action, you can try to cast a cantrip that you don’t know. The cantrip must be on the Wizard spell list and have a casting time of an action, and you make a DC 10 Intelligence (Arcana) check. On a successful check, you cast the spell. On a failed check, the spell fails, and the action used to cast the spell is wasted. In either case, you can’t use this property again until you finish a Long Rest.",
 	attunement : true,
 	prerequisite : "Requires attunement by a wizard",
 	prereqeval : function (v) { return classes.known.wizard ? true : false; },
@@ -3612,7 +3612,7 @@ MagicItemsList["helm of telepathy"] = {
 	descriptionFull : "While wearing this helm, you have telepathy with a range of 30 feet, and you can cast Detect Thoughts or Suggestion (save DC 13) from the helm. Once either spell is cast from the helm, that spell can’t be cast from it again until the next dawn.",
 	attunement : true,
 	limfeaname : "Helm of Telepathy",
-	usages : 1,
+	usages : 2,
 	recovery : "dawn",
 	fixedDC : 13,
 	spellcastingBonus : [{
@@ -3633,7 +3633,7 @@ MagicItemsList["helm of teleportation"] = {
 	type : "wondrous item",
 	rarity : "rare",
 	magicItemTable : "?",
-	description : "This helm has 3 charges. While wearing it, I can use an action and expend 1 charge to cast Teleport from it. The helm regains 1d3 expended charges daily at dawn.",
+	description : "This helm has 3 charges. While wearing it, I can expend 1 charge to cast Teleport from it. The helm regains 1d3 expended charges daily at dawn.",
 	descriptionFull : "This helm has 3 charges. While wearing it, you can expend 1 charge to cast Teleport from it. The helm regains 1d3 expended charges daily at dawn.",
 	attunement : true,
 	usages : 3,
@@ -3658,7 +3658,7 @@ MagicItemsList["heward's handy haversack"] = {
 	descriptionLong : "This backpack weighs 5 lb, regardless of its contents. It has two side pouches that hold up to 200 lb (25 cu ft) each and a central pouch that holds up to 500 lb (64 cu ft). Retrieving an item from it requires a Utilize action or Bonus Action. When I reach in the bag for a specific item, the item is always magically on top. If it's overloaded, pierced, or torn, it and its contents are destroyed. If turned inside out, all its contents spill forth. A creature placed inside the bag can survive for 10 minutes before starting to suffocate. Placing the haversack in another extradimensional space instantly destroys both and opens a gate to the Astral Plane.",
 	descriptionFull : "This backpack has a central pouch and two side pouches, each of which is an extradimensional space. Each side pouch can hold up to 200 pounds of material, not exceeding a volume of 25 cubic feet. The central pouch can hold up to 500 pounds of material, not exceeding a volume of 64 cubic feet. The haversack always weighs 5 pounds, regardless of its contents.\n   Retrieving an item from the haversack requires a Utilize action or a Bonus Action (your choice). When you reach into the haversack for a specific item, the item is always magically on top.\n   If any of its pouches is overloaded, pierced, or torn, the haversack ruptures and is destroyed. If the haversack is destroyed, its contents are lost forever, although an Artifact always turns up again somewhere. If the haversack is turned inside out, its contents spill forth unharmed, and the haversack must be put right before it can be used again.\n   Each pouch of the haversack holds enough air for 10 minutes of breathing, divided by the number of breathing creatures inside.\n   Placing the haversack inside an extradimensional space created by a Bag of Holding, Portable Hole, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10 feet of the gate and not behind Total Cover is sucked through it and deposited in a random location on the Astral Plane. The gate then closes. The gate is one-way only and can’t be reopened.",
 	weight : 5,
-	action : [["action", " (retrieve item)"]]
+	action : [["action", " (retrieve item)"], ["bonus action", " (retrieve item)"]]
 };
 MagicItemsList["heward's handy spice pouch"] = {
 	name : "Heward's Handy Spice Pouch",
@@ -3680,7 +3680,7 @@ MagicItemsList["holy avenger"] = {
 	rarity : "legendary",
 	magicItemTable : "?",
 	attunement : true,
-	description : "I have a +3 bonus to attack and damage rolls made with this magic weapon. It does +2d10 radiant damage against fiends and undead. While holding the drawn weapon, I have a 10-ft radius emanation (30-ft if level 17 paladin) that grants me and my allies adv. on saves against spells and magical effects.",
+	description : "I have a +3 bonus to attack and damage rolls made with this magic weapon. It does +2d10 Radiant damage against Fiends and Undead. While holding the drawn weapon, I have a 10-ft radius emanation (30-ft if level 17 Paladin) that grants me and my allies adv. on saves against spells and magical effects.",
 	descriptionFull : "You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. When you hit a Fiend or an Undead with it, that creature takes an extra 2d10 Radiant damage.\n   While you hold the drawn weapon, it creates a 10-foot Emanation originating from you. You and all creatures Friendly to you in the Emanation have Advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the Paladin class, the size of the Emanation increases to 30 feet.",
 	prerequisite : "Requires attunement by a paladin",
 	prereqeval : function (v) { return classes.known.paladin ? true : false; },
@@ -3693,7 +3693,7 @@ MagicItemsList["holy avenger"] = {
 	calcChanges : {
 		atkAdd : [
 			function (fields, v) {
-				if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && (/^(?=.*holy)(?=.*avenger).*$/i).test(v.WeaponTextName)) {
+				if (!v.theWea.isMagicWeapon && v.isWeapon && (/^(?=.*holy)(?=.*avenger).*$/i).test(v.WeaponTextName)) {
 					v.theWea.isMagicWeapon = true;
 					fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
 					fields.Description += (fields.Description ? '; ' : '') + '+2d10 radiant damage vs. fiends and undead';
@@ -3703,7 +3703,7 @@ MagicItemsList["holy avenger"] = {
 		],
 		atkCalc : [
 			function (fields, v, output) {
-				if (v.isMeleeWeapon && (/^(?=.*holy)(?=.*avenger).*$/i).test(v.WeaponTextName)) {
+				if (v.isWeapon && (/^(?=.*holy)(?=.*avenger).*$/i).test(v.WeaponTextName)) {
 					output.magic = v.thisWeapon[1] + 3;
 				}
 			}, ''
@@ -3729,8 +3729,8 @@ MagicItemsList["horn of blasting"] = { // contains contributions by Larry Hoy
 	type : "wondrous item",
 	rarity : "rare",
 	magicItemTable : "?",
-	description : "As a Magic action, I can speak the horn's command word and blow it, creating a 30-ft cone. All in it take 5d8 thunder damage and are deafened for 1 min. Half damage with a DC 15 Con save and not deafened. Glass/crystal creatures/objects have disadv. and take 10d8 damage. There is a 20% chance each use that it explodes.",
-	descriptionLong: "As a Magic action, I can speak the horn's command word and blow it, emitting a thunderous blast in a 30-foot cone audible 600 feet away. Creatures in the cone must make a DC 15 Con save or take 5d8 thunder damage and be deafened for 1 min; otherwise, they just take half the damage. Creatures and objects made of glass or crystal have disadvantage on the save and take 10d8 thunder damage instead. Each use of its magic has a 20% chance of causing it to explode, dealing 10d6 force damage to the blower and destroying it.",
+	description : "As a Magic action, I can blow the horn, creating a 30-ft cone. All in it take 5d8 thunder damage and are deafened for 1 min. Half damage with a DC 15 Con save and not deafened. Glass/crystal objects not worn or carried take 10d8 damage. There is a 20% chance each use that it explodes.",
+	descriptionLong: "As a Magic action, I can blow the horn, emitting a thunderous blast in a 30-foot cone audible 600 feet away. Creatures in the cone must make a DC 15 Con save or take 5d8 thunder damage and be deafened for 1 min; otherwise, they just take half the damage. Objects made of glass or crystal that are not worn or carried take 10d8 thunder damage instead. Each use of its magic has a 20% chance of causing it to explode, dealing 10d6 force damage to the blower and destroying it.",
 	descriptionFull : "You can take a Magic action to blow the horn, which emits a thunderous blast in a 30-foot Cone that is audible out to 600 feet. Each creature in the Cone makes a DC 15 Constitution saving throw. On a failed save, a creature takes 5d8 Thunder damage and has the Deafened condition for 1 minute. On a successful save, a creature takes half as much damage only. Glass or crystal objects in the Cone that aren’t being worn or carried take 10d8 Thunder damage.\n   Each use of the horn’s magic has a 20 percent chance of causing the horn to explode. The explosion deals 10d6 Force damage to the user and destroys the horn.",
 	weight : 2,
 	action : [["action", ""]]
@@ -8061,30 +8061,27 @@ MagicItemsList["wand of fear"] = {
 	additional: "regains 1d6+1",
 	spellFirstColTitle: "Ch",
 	fixedDC: 15,
-	spellcastingBonus: {
+	spellcastingBonus: [{
 		name: "1 charge",
 		spells: ["command"],
 		selection: ["command"],
 		firstCol: 1
-	},
-	spellChanges: {
-		"command": {
-			description: '1 creature save or has to follow an one-word command on its next turn, either "flee" or "grovel"',
-			changes: 'When casting from the Wand of Fear, I can only use the "flee" or "grovel" command.'
-		}
-	},
-	spellcastingBonus: {
+	}, {
 		name: "3 charges",
 		spells: ["fear"],
 		selection: ["fear"],
 		firstCol: 1
-	},
-	spellchanges: {
+	}],
+	spellChanges: {
+		"command": {
+			description: '1 creature save or has to follow an one-word command on its next turn, either "flee" or "grovel"',
+			changes: 'When casting from the Wand of Fear, I can only use the "flee" or "grovel" command.'
+		},
 		"fear": {
 			description: 'All creatures within 60-foot cone save or drop what it is holding and become frightened',
 			changes: 'When casting from the Wand of Fear, the distance changes from 30-foot cone to 60-foot cone.'
 		}
-	}
+	},
 };
 MagicItemsList["wand of fireballs"] = {
 	name: "Wand of Fireballs",
