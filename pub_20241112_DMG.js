@@ -671,19 +671,19 @@ MagicItemsList["berserker axe"] = {
 	}
 };
 var DMG_blackrazorFullDescription = [
-	"Hidden in the dungeon of White Plume Mountain, Blackrazor shines like a piece of night sky filled with stars. Its black scabbard is decorated with pieces of cut obsidian.",
-	"You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. If you hit an Undead with this weapon, you take 1d10 Necrotic damage, and the target regains 1d10 Hit Points. If this Necrotic damage reduces you to 0 Hit Points, Blackrazor devours your soul (see “Devour Soul” below).",
+	"Hidden in the dungeon of White Plume Mountain, >>Blackrazor<< shines like a piece of night sky filled with stars. Its black scabbard is decorated with pieces of cut obsidian.",
+	"You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. If you hit an Undead with this weapon, you take 1d10 Necrotic damage, and the target regains 1d10 Hit Points. If this Necrotic damage reduces you to 0 Hit Points, >>Blackrazor<< devours your soul (see “Devour Soul” below).",
 	"While you hold this weapon, you have Immunity to the Charmed and Frightened conditions, and you have Blindsight with a range of 30 feet.",
-	">>Devour Soul<<. Whenever you use Blackrazor to reduce a creature to 0 Hit Points, the sword slays the creature and devours its soul unless it is a Construct or an Undead. A creature whose soul has been devoured by Blackrazor can be restored to life only by a Wish spell.",
-	"When Blackrazor devours a soul that isn’t yours, you gain Temporary Hit Points equal to the slain creature’s Hit Point maximum.",
-	">>Haste<<. Blackrazor can cast Haste on you, after which it can’t cast this spell again until the next dawn. Blackrazor decides when to cast the spell, which takes effect at the start of your turn. The spell lasts for 1 minute (no Concentration required) or until Blackrazor decides to end it, which it can do at the end of any of your turns.",
-	">>Sentience<<. Blackrazor is a sentient Chaotic Neutral weapon with an Intelligence of 17, a Wisdom of 10, and a Charisma of 19. It has hearing and Darkvision out to 120 feet.",
-	"The weapon speaks Common and can communicate with its wielder telepathically. Its voice is deep and echoing. While you are attuned to it, Blackrazor also understands every language you know.",
-	">>Personality<<. Blackrazor speaks with an imperious tone, as though accustomed to being obeyed.",
-	"The sword’s purpose is to consume souls. It doesn’t care whose souls it eats, including the wielder’s. The sword believes that all matter and energy sprang from a void of negative energy and will one day return to it. Blackrazor is meant to hurry that process along.",
-	"Despite its nihilism, Blackrazor feels a strange kinship to Wave and Whelm, two other weapons locked away under White Plume Mountain. It wants the three weapons to be reunited and wielded together in combat, even though it violently disagrees with Whelm and finds Wave tedious.",
-	"Blackrazor’s hunger for souls must be regularly fed. If the sword goes 3 days or more without consuming a soul, a conflict between it and its wielder occurs at the next sunset.",
-	">>Destroying Blackrazor<<. Destroying Blackrazor. Blackrazor can be destroyed by crushing it in the great gears of Mechanus. Primus, the creator of the modrons, also knows a series of musical tones that Blackrazor can’t stand to hear, causing the sword to shatter.",
+	toUni("Devour Soul") + ". Whenever you use >>Blackrazor<< to reduce a creature to 0 Hit Points, the sword slays the creature and devours its soul unless it is a Construct or an Undead. A creature whose soul has been devoured by >>Blackrazor<< can be restored to life only by a Wish spell.",
+	"When >>Blackrazor<< devours a soul that isn’t yours, you gain Temporary Hit Points equal to the slain creature’s Hit Point maximum.",
+	toUni("Haste") + ". >>Blackrazor<< can cast Haste on you, after which it can’t cast this spell again until the next dawn. >>Blackrazor<< decides when to cast the spell, which takes effect at the start of your turn. The spell lasts for 1 minute (no Concentration required) or until >>Blackrazor<< decides to end it, which it can do at the end of any of your turns.",
+	toUni("Sentience") + ". >>Blackrazor<< is a sentient Chaotic Neutral weapon with an Intelligence of 17, a Wisdom of 10, and a Charisma of 19. It has hearing and Darkvision out to 120 feet.",
+	"The weapon speaks Common and can communicate with its wielder telepathically. Its voice is deep and echoing. While you are attuned to it, >>Blackrazor<< also understands every language you know.",
+	toUni("Personality") + ". >>Blackrazor<< speaks with an imperious tone, as though accustomed to being obeyed.",
+	"The sword’s purpose is to consume souls. It doesn’t care whose souls it eats, including the wielder’s. The sword believes that all matter and energy sprang from a void of negative energy and will one day return to it. >>Blackrazor<< is meant to hurry that process along.",
+	"Despite its nihilism, >>Blackrazor<< feels a strange kinship to Wave and Whelm, two other weapons locked away under White Plume Mountain. It wants the three weapons to be reunited and wielded together in combat, even though it violently disagrees with Whelm and finds Wave tedious.",
+	">>Blackrazor<<’s hunger for souls must be regularly fed. If the sword goes 3 days or more without consuming a soul, a conflict between it and its wielder occurs at the next sunset.",
+	toUni("Destroying Blackrazor") + ". >>Blackrazor<< can be destroyed by crushing it in the great gears of Mechanus. Primus, the creator of the modrons, also knows a series of musical tones that >>Blackrazor<< can’t stand to hear, causing the sword to shatter.",
 ];
 MagicItemsList["blackrazor"] = {
 	name : "Blackrazor",
@@ -5840,8 +5840,16 @@ MagicItemsList["ring of protection"] = {
 	extraAC: [{ name: "Ring of Protection", mod: 1, magic: true, text: "I gain a +1 bonus to AC while attuned." }],
 	addMod: [{ type: "save", field: "all", mod: 1, text: "While I wear the Ring of Protection, I gain a +1 bonus to all my saving throws." }]
 };
-//MagicItemsList["ring of regeneration"] = {
-//};	
+MagicItemsList["ring of regeneration"] = {
+	name : "Ring of Regeneration",
+	source: [["DMG2024", 294]],
+	type : "ring",
+	rarity : "very rare",
+	magicItemTable : "?",
+	description : "While wearing this ring, I regain 1d6 Hit Points every 10 minutes if I have at least 1 Hit Point. If I lose a body part, the ring causes the missing part to regrow and return to full functionality after 1d6 + 1 days if I have at least 1 Hit Point the whole time.",
+	descriptionFull : "While wearing this ring, you regain 1d6 Hit Points every 10 minutes if you have at least 1 Hit Point. If you lose a body part, the ring causes the missing part to regrow and return to full functionality after 1d6 + 1 days if you have at least 1 Hit Point the whole time.",
+	attunement : true
+};	
 MagicItemsList["ring of resistance"] = {
 	name: "Ring of Resistance",
 	source: [["DMG2024", 294]],
@@ -6496,8 +6504,33 @@ MagicItemsList["rope of climbing"] = {
 	weight: 3,
 	action: [["action", " (animate)"], ["bonus action", " (move/fasten/knot/coil)"]]
 };
-//MagicItemsList["rope of entanglement"] = {
-//};	
+MagicItemsList["rope of entanglement"] = {
+	name : "Rope of Entanglement",
+	source: [["DMG2024", 301]],
+	type : "wondrous item",
+	rarity : "rare",
+	magicItemTable : "?",
+	description : "As a Magic action while I hold one end of this 30 ft rope and command the other end to cause a creature I can see within 20 ft to make a DC 15 Dex save or be Restrained by the rope. I can release it as a bonus action or by letting my end of the rope go. The creature can, as an action, escape with a DC 15 Dex(Acrobatics)/Str(Athletics) check. The rope has AC 20, 20 HP, heals 1 HP/5 min.",
+	descriptionFull : "This rope is 30 feet long. While holding one end of the rope, you can take a Magic action to command the other end to dart forward and entangle one creature you can see within 20 feet of yourself. The target must succeed on a DC 15 Dexterity saving throw or have the Restrained condition. You can release the target by letting go of your end of the rope (causing the rope to coil up in the target’s space) or by using a Bonus Action to repeat the command (causing the rope to coil up in your hand).\n   A target Restrained by the rope can take an action to make its choice of a DC 15 Strength (Athletics) or Dexterity (Acrobatics) check. On a successful check, the target is no longer Restrained by the rope. If you’re still holding onto the rope when a target escapes from it, you can take a Reaction to command the rope to coil up in your hand; otherwise, the rope coils up in the target’s space.\n   The rope has AC 20, HP 20, and Immunity to Poison and Psychic damage. It regains 1 Hit Point every 5 minutes as long as it has at least 1 Hit Point. If the rope drops to 0 Hit Points, it is destroyed.",
+	weight : 3,
+	action : [["action", " (entangle)"], ["bonus action", " (release)"]],
+	weaponOptions : [{
+		regExpSearch : /^(?=.*rope)(?=.*entanglement).*$/i,
+		name : "Rope of Entanglement",
+		source : [["DMG2024", 301]],
+		ability : 0,
+		type : "Magic Item",
+		damage : ["Dex save", "", "Restrained"],
+		range : "20 ft",
+		description : "Dexterity saving throw or restrained; DC 15 Strength or Dexterity check to escape",
+		abilitytodamage : false,
+		weight : 3,
+		modifiers : [7, 0],
+		dc : true,
+		isNotWeapon : true,
+		isAlwaysProf : false,
+	}]
+};	
 MagicItemsList["rope of mending"] = {
 	name: "Rope of Mending",
 	source: [["DMG2024", 302]],
@@ -7244,8 +7277,19 @@ MagicItemsList["staff of fire"] = {
 		firstCol: 4
 	}]
 };
-//MagicItemsList["staff of flowers"] = {
-//};	
+MagicItemsList["staff of flowers"] = {
+	name : "Staff of Flowers",
+	source : [["DMG2024", 308]],
+	type : "staff",
+	rarity : "common",
+	description : "This staff has 10 charges, regaining 1d6+4 at dawn, 5% chance it is destroyed when its last charge is used. As a Magic action, I can use 1 charge to cause a flower of my choice to sprout from a patch of earth or soil within 5 ft or from the staff itself. The flower is nonmagical and grows or withers as a normal flower would.",
+	descriptionFull : "This wooden staff has 10 charges. While holding it, you can take a Magic action to expend 1 charge from the staff and cause a flower to sprout from a patch of earth or soil within 5 feet of yourself, or from the staff itself. Unless you choose a specific kind of flower, the staff creates a mild-scented daisy. The flower is harmless and nonmagical, and it grows or withers as a normal flower would." + toUni("Regaining Charges") + "The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 1, the staff turns into flower petals and is lost forever.",
+	weight : 4,
+	usages : 10,
+	recovery : "dawn",
+	additional : "regains 1d6+4",
+	action : [["action", ""]]	
+};	
 MagicItemsList["staff of frost"] = {
 	name: "Staff of Frost",
 	source: [["DMG2024", 308]],
@@ -8112,8 +8156,25 @@ MagicItemsList["tentacle rod"] = {
 		selectNow: true
 	}]
 };
-//MagicItemsList["thunderous greatclub"] = {
-//};	
+MagicItemsList["*thunderous greatclub*"] = {
+	name: "Thunderous Greatclub",
+	source: [["DMG2024", 316]],
+	type: "weapon (Greatclub)",
+	rarity: "Very Rare",
+	magicItemTable: "?",
+	attunement: true,
+	description: "",
+	descriptionFull: "While you are attuned to this magic weapon, your Strength is 20 unless your Strength is already equal to or greater than that score. The weapon deals an extra 1d8 Thunder damage to any creature it hits and an extra 3d8 Thunder damage to objects it hits that aren’t being worn or carried.\n   The weapon has the following additional properties.\n   " + toUni("Clap of Thunder") + "As a Magic action, you can strike the weapon against a hard surface to create a loud clap of thunder audible out to 300 feet. You also create a 30-foot Cone of thunderous energy. Each creature in the Cone must succeed on a DC 15 Strength saving throw or have the Prone condition. Nonmagical objects in the Cone that aren’t being worn or carried take 3d8 Thunder damage.\n   " + toUni("Earthquake") + "As a Magic action, you can strike the weapon against the ground to create an intense seismic disturbance in a 50-foot-radius circle centered on the point of impact. Structures in contact with the ground in that area take 50 Bludgeoning damage, and each creature on the ground in that area must succeed on a DC 20 Dexterity saving throw or have the Prone condition. If that creature is also concentrating, it must succeed on a DC 20 Constitution saving throw or its Concentration is broken. In addition, you can cause a 30-foot-deep, 10-foot-wide fissure to open up on the ground anywhere in the area. Any creature on a spot where the fissure opens must succeed on a DC 20 Dexterity saving throw, falling into the fissure on a failed save or moving with the fissure’s edge on a successful one. Any structure on a spot where the fissure opens collapses into the fissure. Once you use this property, it can’t be used again until the next dawn.",
+	weaponOptions: [{
+		baseWeapon: "greatclub",
+		regExpSearch: /thunderous greatclub/i,
+		name: "Thunderous Greatclub",
+		source: [["DMG2024", 316]],
+		description: "+1d8 Thunder to Crea. Hit, +3d8 Thunder to Obj. Hit; Two-Handed; Push",
+		selectNow: true
+	}],
+	action : [["action", " (Clap of Thunder"], ["action", " (Earthquake)"]],
+};	
 MagicItemsList["tome of clear thought"] = {
 	name: "Tome of Clear Thought",
 	source: [["DMG2024", 317]],
@@ -8757,17 +8818,21 @@ MagicItemsList["wand of wonder"] = {
 	}
 };
 var DMG_waveFullDescription = [
-	"Held in the dungeon of White Plume Mountain, >>Wave<< is engraved with images, shells, and sea creatures.",
-	"You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. If you score a critical hit with it, the target takes an extra 21 necrotic damage.",
-	"While holding >>Wave<<, you gain Advantage on Initiative rolls, underwater breathing, can cast Dominate Beast on beasts that have a swim speed, and can cast Globe of Invulnerability once daily.",
-	">>Sentience<<. Wave is a sentient weapon of neutral alignment, with an Intelligence of 14, a Wisdom of 10, and a Charisma of 18. It has hearing and darkvision out to a range of 120 feet.",
-	"The weapon communicates telepathically with its wielder and can speak, read, and understand Aquan.",
-	">>Personality<<. Wave zealously encourages mortals to worship sea gods and has a habit of humming sea chanteys. Conflict arises if the wielder fails to further the weapon's objectives in the world.",
-	"Wave can be destroyed only on the island of Thunderforge, where it was forged. The weapon must be melted down by a storm giant or soemone imbued with a storm giant's strength. Destroying Wave angers a god of the sea who sends powerful agents to attack the island and punish the destroyers.",
+	"Held in the dungeon of White Plume Mountain, Wave is engraved with images of waves, shells, and sea creatures.",
+	"You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. When you roll a 20 on the d20 for an attack roll with this weapon, the target takes an extra 21 Necrotic damage.",
+	"While holding >>Wave<<, you gain the following benefits.",
+	toUni("Combat Ready") + ". You have Advantage on Initiative rolls.",
+	toUni("Underwater Adaptation") + ". A bubble of air forms around your head while you are underwater, allowing you to breathe normally in that environment.",
+	toUni("Aquatic Command") + ". >>Wave<< has 3 charges and regains 1d3 expended charges daily at dawn. While you carry it, you can expend 1 charge to cast Dominate Beast (save DC 20) from it on a Beast that has a Swim Speed.",
+	toUni("Globe of Invulnerability") + ". While holding >>Wave<<, you can cast the level 9 version of Globe of Invulnerability from it. Once used, this property can’t be used again until the next dawn.",
+	toUni("Sentience") + ". >>Wave<< is a sentient weapon of Neutral alignment, with an Intelligence of 14, a Wisdom of 10, and a Charisma of 18. It has hearing and Darkvision out to 120 feet.",
+	"The weapon communicates telepathically with its wielder and speaks Aquan.",
+	toUni("Personality") + ". >>Wave<< zealously encourages mortals to worship sea gods and has a habit of humming sea chanteys. Conflict arises if the wielder fails to further the weapon’s objectives in the world.",
+	toUni("Destroying Wave") + ". >>Wave<< can be destroyed only on the island of Thunderforge, where it was forged. The weapon must be melted down by a storm giant or someone imbued with a storm giant’s strength. Destroying >>Wave<< angers a god of the sea, who sends powerful agents to attack the island and punish the destroyers.",
 ];
 MagicItemsList["wave"] = {
 	name: "Wave",
-	source: [["DMG2024", "-"]],
+	source: [["DMG2024", 323]],
 	type: "weapon (trident)",
 	rarity: "artifact",
 	description: "This sentient trident adds +3 to hit and damage and if I score a critical hit with it, the target takes an extra 21 necrotic damage. While holding Wave, I gain several benefits. SEE NOTES PAGE.",
@@ -8779,7 +8844,7 @@ MagicItemsList["wave"] = {
 		regExpSearch: /wave/i,
 		name: "Wave",
 		source: [["DMG2024", 323]],
-		description: "Thrown, versatile (1d10); On crit: +21 Necrotic Damage",
+		description: "Thrown, versatile (1d10); On crit: +21 Necrotic Damage; Topple",
 		modifiers: [3, 3],
 		selectNow: true
 	}],
@@ -8803,15 +8868,15 @@ MagicItemsList["wave"] = {
 	fixedDC: 20,
 	spellFirstColTitle: "Ch",
 	spellcastingBonus: [{
-		name: "3 charges",
+		name: "1 charge",
 		spells: ["dominate beast"],
 		selection: ["dominate beast"],
-		firstCol: 3,
+		firstCol: 1,
 	}, {
 		name: "Globe of Invulnerability",
 		spells: ["globe of invulnerability"],
 		selection: ["globe of invulnerability"],
-		firstCol: 1,
+		firstCol: "oncelr",
 	}],
 	spellChanges: {
 		"dominate beast": {
@@ -8904,8 +8969,74 @@ MagicItemsList["well of many worlds"] = {
 	usages: 1,
 	recovery: "1d8 h"
 };
-//MagicItemsList["whelm"] = {
-//};	
+var DMG_whelmFullDescription = [
+	">>Whelm<< is a powerful weapon forged by dwarves and lost in the dungeon of White Plume Mountain.",
+	"You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon.",
+	toUni("Hurl") + ". >>Whelm<< has the Thrown property with a normal range of 60 feet and a long range of 180 feet. When you hit with a ranged attack roll using Whelm, the target takes an extra 1d8 Force damage, or an extra 4d8 Force damage if the target is a Construct, an Elemental, or a Giant. Immediately after hitting or missing, the weapon flies back to your hand.",
+	toUni("Shock Wave") + ". You can take a Magic action to strike the ground with >>Whelm<< and send a shock wave out from the point of impact. Each creature of your choice on the ground within 60 feet of that point must succeed on a DC 20 Constitution saving throw or have the Stunned condition for 1 minute. A creature repeats the save at the end of each of its turns, ending the effect on itself on a success. Once used, this property can’t be used again until the next dawn.",
+	toUni("Supernatural Awareness") + ". While you are holding the weapon, it alerts you to the location of any secret or concealed doors within 30 feet of you. In addition, you can cast Detect Evil and Good or Locate Object from the weapon. Once you cast either spell, you can’t cast it from the weapon again until the next dawn.",
+	toUni("Sentience") + ". >>Whelm<< is a sentient, Lawful Neutral weapon with an Intelligence of 15, a Wisdom of 12, and a Charisma of 15. It has hearing and Darkvision out to 120 feet.",
+	"The weapon communicates telepathically with its wielder and speaks Dwarvish, Giant, and Goblin.",
+	toUni("Personality") + ". >>Whelm<< has ties to the dwarf clan that created it, called the Dankil or the Mightyhammer clan. It longs to be returned to that clan. Whelm’s purpose is to protect dwarves. Conflict arises if the wielder doesn’t share this goal.",
+	toUni("Destroying Whelm") + ". >>Whelm<< can be dissolved in the acidic bile of a recently slain ancient black dragon. It can also be melted down in the forges of the Mightyhammer dwarf clan, but only by the rightful leader of that clan."
+];
+MagicItemsList["whelm"] = {
+	name : "Whelm",
+	source : [["DMG2024", 324]],
+	type : "weapon (warhammer)",
+	rarity : "legendary",
+	notLegalAL : true,
+	description : "This sentient warhammer adds +3 to hit and damage, has the thrown property, deals extra damage when thrown, and returns to my hand when thrown. I can use it to create a shock wave. See Notes page.",
+	descriptionFull : DMG_whelmFullDescription.join("\n   ").replace(/>>(.*?)<</g, function(a, match) { return toUni(match); }),
+	attunement : true,
+	prerequisite : "Requires Attunement by a Dwarf or a Creature Attuned to a Belt of Dwarvenkind",
+	prereqeval : function(v) {
+			if(CurrentRace.known.indexOf("dwarf") !== -1) return true;
+		for (var i = 0; i < CurrentMagicItems.known.length; i++) {
+			// if it's not null, attunement is checked, and if it's the belt of dwarven kind.
+			if (tDoc.getField(ReturnMagicItemFieldsArray(i+1)[4]) !== null && tDoc.getField(ReturnMagicItemFieldsArray(i+1)[4]).isBoxChecked(0) !== 0 && CurrentMagicItems.known[i].indexOf("belt of dwarvenkind") !== -1) {
+				return true;
+			}
+		}
+		return false;
+	},
+	weight : 2,
+	weaponOptions : [{
+		baseWeapon : "warhammer",
+		regExpSearch : /whelm/i,
+		name : "Whelm",
+		source : [["DMG2024", 324]],
+		range : "Melee, 60/180 ft",
+		description : "Versatile (1d10), thrown, returning; +1d8 Force damage when thrown (or +4d8 Force vs. constructs, elementals, or giants); Push",
+		modifiers : [3, 3],
+		selectNow : true
+	}],
+	toNotesPage : [{
+		name : "Features",
+		note : desc(DMG_whelmFullDescription).replace(/>>(.*?)<</g, function(a, match) { return match.toUpperCase(); }).replace(/your/g, "my").replace(/you are /ig, "I am ").replace(/(of|on|causes|alerts) you/ig, "$1 me").replace(/you /ig, "I ") + "\n\n" + sentientItemConflictTxt
+	}],
+	action : [["action", " (Shock Wave)"]],
+	extraLimitedFeatures : [{
+		name : "Whelm [Shock Wave]",
+		usages : 1,
+		recovery : "dawn"
+	}, {
+		name : "Whelm [Detect Evil and Good]",
+		usages : 1,
+		recovery : "dawn"
+	}, {
+		name : "Whelm [Locate Object]",
+		usages : 1,
+		recovery : "dawn"
+	}],
+	vision : [["Know location of secret doors", 30]],
+	spellcastingBonus : [{
+		name : "Once per dawn",
+		spells : ["detect evil and good", "locate object"],
+		selection : ["detect evil and good", "locate object"],
+		firstCol : "oncelr"
+	}]
+};
 MagicItemsList["wind fan"] = {
 	name: "Wind Fan",
 	source: [["DMG2024", 325]],
