@@ -3766,32 +3766,32 @@ MagicItemsList["horn of valhalla"] = { // contains contributions by Larry Hoy
 		sortname : "Horn of Valhalla, Silver",
 		rarity : "rare",
 		magicItemTable : "?",
-		description : "As a Magic action once per 7 days, I can blow this horn to summon 2 warrior spirits from Ysgard within 60 ft me. These have the statistics of a berserker and return after 1 hour or when they drop to 0 HP. They are friendly to me and my companions and follow my commands.",
-		descriptionFull : "You can use a Magic action to blow this horn. In response, warrior spirits from the plane of Ysgard appear within 60 feet of you. These spirits use the berserker statistics. They return to Ysgard after 1 hour or when they drop to 0 hit points. Once you use the horn, it can't be used again until 7 days have passed.\n   The silver horn summons 2 berserkers.\n   The berserkers are friendly to you and your companions and follow your commands."
+		description : "As a Magic action once per 7 days, I can blow this horn to summon 2 warrior spirits from Ysgard within 60 ft me. These have the statistics of a Berserker and return after 1 hour or when they drop to 0 HP. They are friendly to me and my companions and follow my commands.",
+		descriptionFull : "You can use a Magic action to blow this horn. In response, warrior spirits from the plane of Ysgard appear within 60 feet of you. These spirits use the Berserker statistics. They return to Ysgard after 1 hour or when they drop to 0 hit points. Once you use the horn, it can't be used again until 7 days have passed.\n   The silver horn summons 2 Berserkers.\n   The Berserkers are friendly to you and your companions and follow your commands."
 	},
 	"brass (rare; 3 berserkers; prereq: simple weapons prof.)" : {
 		name : "Brass Horn of Valhalla",
 		sortname : "Horn of Valhalla, Brass",
 		rarity : "rare",
 		magicItemTable : "?",
-		description : "As a Magic action once per 7 days, I can blow this horn to summon 3 warrior spirits from Ysgard within 60 ft. These berserkers return after 1 hour or when they drop to 0 HP. If I'm proficient with all simple weapons, they follow my commands and are friendly to me and my companions. Otherwise, they attack me.",
-		descriptionFull : "You can use a Magic action to blow this horn. In response, warrior spirits from the plane of Ysgard appear within 60 feet of you. These spirits use the berserker statistics. They return to Ysgard after 1 hour or when they drop to 0 hit points. Once you use the horn, it can't be used again until 7 days have passed.\n   A brass horn summons 3 berserkers. To use the brass horn, you must be proficient with all simple weapons.\n   If you blow the horn without meeting its requirement, the summoned berserkers attack you. If you meet the requirement, they are friendly to you and your companions and follow your commands."
+		description : "As a Magic action once per 7 days, I can blow this horn to summon 3 warrior spirits from Ysgard within 60 ft. These Berserkers return after 1 hour or when they drop to 0 HP. If I'm Proficient with all Simple Weapons, they follow my commands and are friendly to me and my companions. Otherwise, they attack me.",
+		descriptionFull : "You can use a Magic action to blow this horn. In response, warrior spirits from the plane of Ysgard appear within 60 feet of you. These spirits use the Berserker statistics. They return to Ysgard after 1 hour or when they drop to 0 hit points. Once you use the horn, it can't be used again until 7 days have passed.\n   A brass horn summons 3 Berserkers. To use the brass horn, you must be Proficient with all Simple Weapons.\n   If you blow the horn without meeting its requirement, the summoned Berserkers attack you. If you meet the requirement, they are friendly to you and your companions and follow your commands."
 	},
 	"bronze (very rare; 4 berserkers; prereq: medium armor prof.)" : {
 		name : "Bronze Horn of Valhalla",
 		sortname : "Horn of Valhalla, Bronze",
 		rarity : "very rare",
 		magicItemTable : "?",
-		description : "As a Magic action once per 7 days, I can blow this horn to summon 4 warrior spirits from Ysgard within 60 ft. These berserkers return after 1 hour or when they drop to 0 HP. If I'm proficient with medium armor, they follow my commands and are friendly to me and my companions. Otherwise, they attack me.",
-		descriptionFull : "You can use a Magic action to blow this horn. In response, warrior spirits from the plane of Ysgard appear within 60 feet of you. These spirits use the berserker statistics. They return to Ysgard after 1 hour or when they drop to 0 hit points. Once you use the horn, it can't be used again until 7 days have passed.\n   A bronze horn summons 4 berserkers. To use the bronze horn, you must be proficient with medium armor.\n   If you blow the horn without meeting its requirement, the summoned berserkers attack you. If you meet the requirement, they are friendly to you and your companions and follow your commands."
+		description : "As a Magic action once per 7 days, I can blow this horn to summon 4 warrior spirits from Ysgard within 60 ft. These Berserkers return after 1 hour or when they drop to 0 HP. If I'm Proficient with Medium Armor, they follow my commands and are friendly to me and my companions. Otherwise, they attack me.",
+		descriptionFull : "You can use a Magic action to blow this horn. In response, warrior spirits from the plane of Ysgard appear within 60 feet of you. These spirits use the Berserker statistics. They return to Ysgard after 1 hour or when they drop to 0 hit points. Once you use the horn, it can't be used again until 7 days have passed.\n   A bronze horn summons 4 Berserkers. To use the bronze horn, you must be Proficient with Medium Armor.\n   If you blow the horn without meeting its requirement, the summoned Berserkers attack you. If you meet the requirement, they are friendly to you and your companions and follow your commands."
 	},
 	"iron (very rare; 5 berserkers; prereq: martial weapons prof.)" : {
 		name : "Iron Horn of Valhalla",
 		sortname : "Horn of Valhalla, Iron",
 		rarity : "legendary",
 		magicItemTable : "?",
-		description : "As a Magic action once per 7 days, I can blow this horn to summon 5 warrior spirits from Ysgard within 60 ft. These berserkers return after 1 hour or when they drop to 0 HP. If I'm proficient with all martial weapons, they follow my commands and are friendly to me and my companions. Otherwise, they attack me.",
-		descriptionFull : "You can use a Magic action to blow this horn. In response, warrior spirits from the plane of Ysgard appear within 60 feet of you. These spirits use the berserker statistics. They return to Ysgard after 1 hour or when they drop to 0 hit points. Once you use the horn, it can't be used again until 7 days have passed.\n   The iron horn summons 5 berserkers. To use the iron horn, you must be proficient with all martial weapons.\n   If you blow the horn without meeting its requirement, the summoned berserkers attack you. If you meet the requirement, they are friendly to you and your companions and follow your commands."
+		description : "As a Magic action once per 7 days, I can blow this horn to summon 5 warrior spirits from Ysgard within 60 ft. These Berserkers return after 1 hour or when they drop to 0 HP. If I'm Proficient with all Martial Weapons, they follow my commands and are friendly to me and my companions. Otherwise, they attack me.",
+		descriptionFull : "You can use a Magic action to blow this horn. In response, warrior spirits from the plane of Ysgard appear within 60 feet of you. These spirits use the Berserker statistics. They return to Ysgard after 1 hour or when they drop to 0 hit points. Once you use the horn, it can't be used again until 7 days have passed.\n   The iron horn summons 5 berserkers. To use the iron horn, you must be Proficient with all Martial Weapons.\n   If you blow the horn without meeting its requirement, the summoned Berserkers attack you. If you meet the requirement, they are friendly to you and your companions and follow your commands."
 	}
 };
 MagicItemsList["horseshoes of a zephyr"] = {
@@ -3818,7 +3818,7 @@ MagicItemsList["immovable rod"] = {
 	type : "rod",
 	rarity : "uncommon",
 	magicItemTable : "?",
-	description : "This flat iron rod has a button on one end. I can use a Utilize action to press the button, magically fixing the rod in place or making it movable again. Once fixed, it holds up to 8000 lb. More weight causes it to deactivate and fall. A creature can use a Utilize action to try and move the rod up to 10 ft with a DC 30 Strength (Athletics) check.",
+	description : "This flat iron rod has a button on one end. I can use a Utilize action to push the button, magically fixing the rod in place or making it movable. Once fixed, it holds up to 8000 lbs. More weight makes it deactivate and fall. A creature can use a Utilize action to try to move the rod up to 10 ft with a DC 30 Str (Athletics) check.",
 	descriptionFull : "This iron rod has a button on one end. You can take a Utilize action to press the button, which causes the rod to become magically fixed in place. Until you or another creature takes a Utilize action to push the button again, the rod doesn’t move, even if it defies gravity. The rod can hold up to 8,000 pounds of weight. More weight causes the rod to deactivate and fall. A creature can take a Utilize action to make a DC 30 Strength (Athletics) check, moving the fixed rod up to 10 feet on a successful check.",
 	weight : 2,
 	action : [["action", " (activate/deactivate)"]]
@@ -3829,7 +3829,7 @@ MagicItemsList["instrument of illusions"] = { // contains contributions by Aelar
 	magicItemTable : "?",
 	type : "wondrous item (instrument)",
 	rarity : "common",
-	description : "While I am playing this musical instrument, I can create harmless, illusory visual effects within a 5-ft-emanation (15-ft for bards) sphere centered on the instrument. The magical effects have neither substance nor sound, and they are obviously illusory. The effects end when I stop playing.",
+	description : "While I am playing this musical instrument, I can create harmless, illusory visual effects within a 5-ft Emanation (15-ft for bards) sphere centered on the instrument. The magical effects have neither substance nor sound, and they are obviously illusory. The effects end when I stop playing.",
 	descriptionFull : "While you are playing this musical instrument, you can take a Magic action to create harmless, illusory visual effects within a 5-foot Emanation originating from the instrument. If you are a Bard, the size of the Emanation increases to 15 feet. Sample visual effects include luminous musical notes, a spectral dancer, butterflies, and gently falling snow. The magical effects have neither substance nor sound, and they are obviously illusory. The effects end when you stop playing.",
 	weight : 3, // same as instrument of the bards
 	choices : ["Bard (15-ft emanation)", "Not a Bard (5-ft emanation)"],
@@ -3869,11 +3869,11 @@ MagicItemsList["instrument of scribing"] = {
 		description : "As an action while I'm playing this musical instrument, I can write a magical message on a nonmagical surface that I can see within 30 ft. The message can be up to 6 words in a language I know and fades away after 24 hours or when Dispel Magic is cast on it. The instrument can be used like this 3 times per dawn."
 	}
 };
-MagicItemsList["*instrument of the bards*"] = {
+MagicItemsList["instrument of the bards"] = {
 	name : "Instrument of the Bards",
 	source : [["DMG2024", "-"]],
 	type : "wondrous item (instrument)",
-	description : "",
+	description : "When I play this exquisite magical instrument, I can use it to cast a set of spells, each once per dawn, using my spellcasting ability and spell save DC. If I play without attuning, I must pass a DC 15 Wis save or take 2d4 Psychic damage.",
 	descriptionFull : "An Instrument of the Bards is superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a bard college. The Instruments of the Bards table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 Psychic damage.\n   You can play the instrument to cast one of its spells. Once the instrument has been used to cast a spell, it can’t be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC.",
 	attunement : true,
 	weight : 3, // Magic of Faerûn (2001) page 161
@@ -3921,8 +3921,8 @@ MagicItemsList["*instrument of the bards*"] = {
 				changes : "When using the Canaith Mandolin to cast Cure Wounds, it is cast at 3rd-level."
 			},
 			"protection from energy" : {
-				description : "1 creature gains resistance to Lightning damage for the duration",
-				changes : "When using the Canaith Mandolin to cast Protection from Energy, it can only grant resistance to lightning damage."
+				description : "1 creature gains Resistance to Lightning damage for the duration",
+				changes : "When using the Canaith Mandolin to cast Protection from Energy, it can only grant Resistance to lightning damage."
 			}
 		}
 	},
@@ -4006,12 +4006,6 @@ MagicItemsList["*instrument of the bards*"] = {
 			times : 7,
 			spellcastingAbility : "class"
 		}],
-		spellChanges : {
-			"control weather" : {
-				time : "1 a",
-				changes : "Casting time is only an action."
-			}
-		}
 	}
 };
 MagicItemsList["ioun stone"] = {
@@ -4019,7 +4013,7 @@ MagicItemsList["ioun stone"] = {
 	source : [["DMG2024", "-"]],
 	type : "wondrous item",
 	attunement : true,
-	description : "As an action, I can make an ioun stone orbit my head at 1d3 ft or retrieve it. Others can catch it as an action with an attack or Acrobatics check (AC/DC 24). It has 10 HP and resistance to all damage. Different stones grant different benefits.",
+	description : "As a Magic action, I can make an ioun stone orbit my head at 1d3 ft or retrieve it. Others can catch it as a Utilize action with an attack or Acrobatics check (AC/DC 24). It has 10 HP and resistance to all damage. Different stones grant different benefits.",
 	descriptionFull : "Roughly marble sized, Ioun Stones are named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun Stones exist, each type a distinct combination of shape and color.\n   When you take a Magic action to toss an Ioun Stone into the air, the stone orbits your head at a distance of 1d3 feet, conferring its benefit to you while doing so. You can have up to three Ioun Stones orbiting your head at the same time.\n   Each Ioun Stone orbiting your head is considered to be an object you are wearing. The orbiting stone avoids contact with other creatures and objects, adjusting its orbit to avoid collisions and thwarting all attempts by other creatures to attack or snatch it.\n   As a Utilize action, you can seize and stow any number of Ioun Stones orbiting your head. If your Attunement to an Ioun Stone ends while it’s orbiting your head, the stone falls as though you had dropped it.",
 	allowDuplicates : true,
 	action : [["action", " (orbit/retrieve)"]],
@@ -4027,7 +4021,7 @@ MagicItemsList["ioun stone"] = {
 	"absorption" : {
 		rarity : "very rare",
 		magicItemTable : "?",
-		description : "As a Magic action, I can make this pale lavender ellipsoid orbit my head at 1d3 ft or retrieve it. While it orbits my head, I can use my reaction to cancel a spell of 4th level or lower targeting only me, if I can see the caster and the stone has enough charges left. It can cancel 20 levels of spells before it loses its magic.",
+		description : "As a Magic action, I can make this pale lavender ellipsoid orbit my head at 1d3 ft and a Utilize action to retrieve it. While it orbits my head, I can use my reaction to cancel a spell of 4th level or lower targeting only me, if I can see the caster and the stone has enough charges left. It can cancel 20 levels of spells before it loses its magic.",
 		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   While this pale lavender ellipsoid orbits your head, you can take a Reaction to cancel a spell of level 4 or lower cast by a creature you can see. A canceled spell has no effect, and any resources used to cast it are wasted. Once the stone has canceled 20 levels of spells, it burns out, turns dull gray, and loses its magic.",
 		limfeaname : "Ioun Stone of Absorption",
 		usages : 20,
@@ -4037,27 +4031,29 @@ MagicItemsList["ioun stone"] = {
 	"agility" : {
 		rarity : "very rare",
 		magicItemTable : "?",
-		description : "As a Magic action, I can make this deep red sphere orbit my head at 1d3 ft or retrieve it. While it orbits my head, my Dexterity score increases by 2, to a maximum of 20.",
+		description : "As a Magic action, I can make this deep red sphere orbit my head at 1d3 ft and a Utilize action to retrieve it. While it orbits my head, my Dexterity score increases by 2, to a maximum of 20.",
 		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   Your Dexterity increases by 2, to a maximum of 20, while this deep-red sphere orbits your head.",
 		scores : [0, 2, 0, 0, 0, 0]
 	},
 	"awareness" : {
 		rarity : "rare",
 		magicItemTable : "?",
-		description : "As a Magic action, I can make this dark blue rhomboid orbit my head at 1d3 ft or retrieve it. While it orbits my head, I can't be surprised.",
+		description : "As a Magic action, I can make this dark blue rhomboid orbit my head at 1d3 ft and a Utilize action to retrieve it. While it orbits my head, I can't be surprised.",
 		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   While this dark-blue rhomboid orbits your head, you have Advantage on Initiative rolls and Wisdom (Perception) checks.",
+		advantages : [["Initiative", true], ["Perception", true]],
+		vision : [["Adv. on Perception checks", 0]]
 	},
 	"fortitude" : {
 		rarity : "very rare",
 		magicItemTable : "?",
-		description : "As a Magic action, I can make this pink rhomboid orbit my head at 1d3 ft or retrieve it. While it orbits my head, my Constitution score increases by 2, to a maximum of 20.",
+		description : "As a Magic action, I can make this pink rhomboid orbit my head at 1d3 ft and a Utilize action to retrieve it. While it orbits my head, my Constitution score increases by 2, to a maximum of 20.",
 		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   Your Constitution increases by 2, to a maximum of 20, while this pink rhomboid orbits your head.",
 		scores : [0, 0, 2, 0, 0, 0]
 	},
 	"greater absorption" : {
 		rarity : "legendary",
 		magicItemTable : "?",
-		description : "As a Magic action, I can make this marbled lavender and green ellipsoid orbit my head at 1d3 ft or retrieve it. While it orbits my head, I can use a reaction to cancel a spell of 8th level or lower targeting only me, if I can see the caster and enough charges are left. It can cancel 20 levels of spells before it loses its magic.",
+		description : "As a Magic action, I can make this marbled lavender and green ellipsoid orbit my head at 1d3 ft and a Utilize action to retrieve it. While it orbits my head, I can use a reaction to cancel a spell of 8th level or lower targeting only me, if I can see the caster and enough charges are left. It can cancel 20 levels of spells before it loses its magic.",
 		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   While this marbled lavender and green ellipsoid orbits your head, you can take a Reaction to cancel a spell of level 8 or lower cast by a creature you can see. A canceled spell has no effect, and any resources used to cast it are wasted. Once the stone has canceled 20 levels of spells, it burns out, turns dull gray, and loses its magic.",
 		limfeaname : "Ioun Stone of Greater Absorption",
 		usages : 20,
@@ -4067,61 +4063,61 @@ MagicItemsList["ioun stone"] = {
 	"insight" : {
 		rarity : "very rare",
 		magicItemTable : "?",
-		description : "As a Magic action, I can make this incandescent blue sphere orbit my head at 1d3 ft or retrieve it. While it orbits my head, my Wisdom score increases by 2, to a maximum of 20.",
+		description : "As a Magic action, I can make this incandescent blue sphere orbit my head at 1d3 ft and a Utilize action to retrieve it. While it orbits my head, my Wisdom score increases by 2, to a maximum of 20.",
 		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   Your Wisdom increases by 2, to a maximum of 20, while this incandescent blue sphere orbits your head.",
 		scores : [0, 0, 0, 0, 2, 0]
 	},
 	"intellect" : {
 		rarity : "very rare",
 		magicItemTable : "?",
-		description : "As a Magic action, I can make this marbled scarlet and blue sphere orbit my head at 1d3 ft or retrieve it. While it orbits my head, my Intelligence score increases by 2, to a maximum of 20.",
+		description : "As a Magic action, I can make this marbled scarlet and blue sphere orbit my head at 1d3 ft and a Utilize action to retrieve it. While it orbits my head, my Intelligence score increases by 2, to a maximum of 20.",
 		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   Your Intelligence increases by 2, to a maximum of 20, while this marbled scarlet and blue sphere orbits your head.",
 		scores : [0, 0, 0, 2, 0, 0]
 	},
 	"leadership" : {
 		rarity : "very rare",
 		magicItemTable : "?",
-		description : "As a Magic action, I can make this marbled pink and green sphere orbit my head at 1d3 ft or retrieve it. While it orbits my head, my Charisma score increases by 2, to a maximum of 20.",
+		description : "As a Magic action, I can make this marbled pink and green sphere orbit my head at 1d3 ft and a Utilize action to retrieve it. While it orbits my head, my Charisma score increases by 2, to a maximum of 20.",
 		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   Your Charisma increases by 2, to a maximum of 20, while this marbled pink and green sphere orbits your head.",
 		scores : [0, 0, 0, 0, 0, 2]
 	},
 	"mastery" : {
 		rarity : "legendary",
 		magicItemTable : "?",
-		description : "As a Magic action, I can make this pale green prism orbit my head at 1d3 ft or retrieve it. While it orbits my head, my proficiency bonus increases by 1.",
+		description : "As a Magic action, I can make this pale green prism orbit my head at 1d3 ft and a Utilize action to retrieve it. While it orbits my head, my proficiency bonus increases by 1.",
 		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   Your Proficiency Bonus increases by 1 while this pale green prism orbits your head.",
 		addMod : [{ type: "", field : "Proficiency Bonus Modifier", mod : 1, text : "My proficiency bonus increases by 1." }]
 	},
 	"protection" : {
 		rarity : "rare",
 		magicItemTable : "?",
-		description : "As a Magic action, I can make this dusty rose prism orbit my head at 1d3 ft or retrieve it. While it orbits my head, I have a +1 bonus to AC.",
+		description : "As a Magic action, I can make this dusty rose prism orbit my head at 1d3 ft and a Utilize action to retrieve it. While it orbits my head, I have a +1 bonus to AC.",
 		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   You gain a +1 bonus to Armor Class while this dusty-rose prism orbits your head.",
 		extraAC : [{name : "Ioun Stone of Protection", mod : 1, magic : true, text : "I gain a +1 bonus to AC while attuned."}]
 	},
 	"regeneration" : {
 		rarity : "legendary",
 		magicItemTable : "?",
-		description : "As a Magic action, I can make this pearly white spindle orbit my head at 1d3 ft or retrieve it. It has 10 HP and resistance to all damage. While it orbits my head, I regain 15 HP at the end of each hour as long as I have at least 1 HP.",
+		description : "As a Magic action, I can make this pearly white spindle orbit my head at 1d3 ft and a Utilize action to retrieve it. It has 10 HP and resistance to all damage. While it orbits my head, I regain 15 HP at the end of each hour as long as I have at least 1 HP.",
 		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   You regain 15 Hit Points at the end of each hour this pearly white spindle orbits your head if you have at least 1 Hit Point."
 	},
 	"reserve" : {
 		rarity : "rare",
 		magicItemTable : "?",
-		description : "As a Magic action, I can make this vibrant purple prism orbit my head at 1d3 ft or retrieve it. It can store 4 (spell slot) levels worth of spells. By touching it, one can cast a 1-4 level spell into it. While it orbits my head, I can cast any spell stored in it as if casting it myself, but using the original casters spellcasting ability.",
+		description : "As a Magic action, I can make this vibrant purple prism orbit my head at 1d3 ft and a Utilize action to retrieve it. It can store 4 (spell slot) levels worth of spells. By touching it, one can cast a 1-4 level spell into it. While it orbits my head, I can cast any spell stored in it as if casting it myself, but using the original casters spellcasting ability.",
 		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   This vibrant purple prism stores spells cast into it, holding them until you use them. The stone can store up to 4 levels of spells at a time. When found, it contains 1d4 levels of stored spells chosen by the DM.\n   Any creature can cast a spell of level 1 through 4 into the stone by touching it as the spell is cast. The spell has no effect, other than to be stored in the stone. If the stone can’t hold the spell, the spell is expended without effect. The level of the slot used to cast the spell determines how much space it uses.\n   While this stone orbits your head, you can cast any spell stored in it. The spell uses the slot level, spell save DC, spell attack bonus, and spellcasting ability of the original caster but is otherwise treated as if you cast the spell. The spell cast from the stone is no longer stored in it, freeing up space."
 	},
 	"strength" : {
 		rarity : "very rare",
 		magicItemTable : "?",
-		description : "As a Magic action, I can make this pale blue rhomboid orbit my head at 1d3 ft or retrieve it. While it orbits my head, my Strength score increases by 2, to a maximum of 20.",
+		description : "As a Magic action, I can make this pale blue rhomboid orbit my head at 1d3 ft and a Utilize action to retrieve it. While it orbits my head, my Strength score increases by 2, to a maximum of 20.",
 		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   Your Strength increases by 2, to a maximum of 20, while this pale blue rhomboid orbits your head.",
 		scores : [2, 0, 0, 0, 0, 0]
 	},
 	"sustenance" : {
 		rarity : "rare",
 		magicItemTable : "?",
-		description : "As a Magic action, I can make this clear spindle orbit my head at 1d3 ft or retrieve it. While it orbits my head, I don't need to eat or drink.",
+		description : "As a Magic action, I can make this clear spindle orbit my head at 1d3 ft and a Utilize action to retrieve it. While it orbits my head, I don't need to eat or drink.",
 		descriptionFull : "An Ioun stone is named after Ioun, a god of knowledge and prophecy revered on some worlds. Many types of Ioun stone exist, each type a distinct combination of shape and color.\n   When you use a Magic action to toss one of these stones into the air, the stone orbits your head at a distance of 1d3 feet and confers a benefit to you. You can use a Utilize action to seize and stow the stone, ending its effect.\n   It is considered to be an object that is being worn while it orbits your head.\n   You don’t need to eat or drink while this clear spindle orbits your head."
 	}
 };
@@ -4132,9 +4128,9 @@ MagicItemsList["iron bands of bilarro"] = { // contains contributions by AelarTh
 	type: "wondrous item",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "Once per dawn, as an action, I can speak the command word and make a ranged attack (DexMod + Prof). If hit, the target is restrained until I use a bonus action to speak the command word again. Once per 24 hours, the target can make a DC 20 Strength (Athletics) check as an action to free itself and destroy the bands.",
-	descriptionLong: "Once per dawn, as an action, I can throw this rusty iron sphere and speak its command word. I make a ranged attack roll with an attack bonus equal to my Dexterity modifier plus Proficiency Bonus. On a hit, the target is restrained until I take a bonus action to speak the command word again to release it. Doing so, or missing with the attack, causes the bands to contract and become a sphere once more. The target can make a DC 20 Strength (Athletics) check as an action, freeing itself and destroying the bands on a success. If the check fails, any further attempts made by that creature automatically fail until 24 hours have elapsed.",
-	descriptionFull: "This rusty iron sphere measures 3 inches in diameter and weighs 1 pound. You can use an action to speak the command word and throw the sphere at a Huge or smaller creature you can see within 60 feet of you. As the sphere moves through the air, it opens into a tangle of metal bands.\n   Make a ranged attack roll with an attack bonus equal to your Dexterity modifier plus your proficiency bonus. On a hit, the target is restrained until you take a bonus action to speak the command word again to release it. Doing so, or missing with the attack, causes the bands to contract and become a sphere once more.\n   A creature, including the one restrained, can use an action to make a DC 20 Strength (Athletics) check to break the iron bands. On a success, the item is destroyed, and the restrained creature is freed. If the check fails, any further attempts made by that creature automatically fail until 24 hours have elapsed.\n   Once the bands are used, they can't be used again until the next dawn.",
+	description: "Once per dawn, as a Magic action, I can make a ranged attack (Dex Mod + Prof). If hit, the target is Restrained until I use a bonus action to speak a command word to release it. Once per 24 hours, the target can make a DC 20 Strength (Athletics) check as an action to free itself and destroy the bands.",
+	descriptionLong: "Once per dawn, as a Magic action, I can throw this rusty iron sphere. I make a ranged attack roll with an attack bonus equal to my Dexterity modifier plus Proficiency Bonus. On a hit, the target is restrained until I take a bonus action to speak a command word to release it. Doing so, or missing with the attack, causes the bands to contract and become a sphere once more. The target can make a DC 20 Strength (Athletics) check as an action, freeing itself and destroying the bands on a success. If the check fails, any further attempts made by that creature automatically fail until 24 hours have elapsed.",
+	descriptionFull: "This rusty iron sphere measures 3 inches in diameter and weighs 1 pound. You can take a Magic action to throw the sphere at a Huge or smaller creature you can see within 60 feet of yourself. As the sphere moves through the air, it opens into a tangle of metal bands.\n   Make a ranged attack roll with an attack bonus equal to your Dexterity modifier plus your Proficiency Bonus. On a hit, the target has the Restrained condition until you take a Bonus Action to issue a command that releases it. Doing so or missing with the attack causes the bands to contract and become a sphere once more.\n   A creature that can touch the bands, including the one Restrained, can take an action to make a DC 20 Strength (Athletics) check to break the iron bands. On a successful check, the item is destroyed, and the Restrained creature is freed. On a failed check, any further attempts made by that creature automatically fail until 24 hours have elapsed.\n   Once the bands are used, they can’t be used again until the next dawn.",
 	weight: 1,
 	usages: 1,
 	recovery: "dawn",
@@ -4153,16 +4149,49 @@ MagicItemsList["iron bands of bilarro"] = { // contains contributions by AelarTh
 		weight: 1
 	}
 };
-//MagicItemsList["iron flask"] = {
-//};
+MagicItemsList["iron flask"] = { // contains contributions by Larry Hoy
+	name: "Iron Flask",
+	source: [["DMG2024", "-"]],
+	type: "wondrous item",
+	rarity: "legendary",
+	magicItemTable: "?",
+	description: "While holding this flask, I can take a Magic action to target a creature from another plane that I can see within 60 ft. It must make a DC 17 Wis save (adv. if trapped before) or be trapped in the flask. It holds only 1 creature. As Magic action, I can open it to release the creature, which then obeys my commands for 1 hour.",
+	descriptionLong: "While holding this flask, I can take a Magic action to target a creature from another plane that I can see within 60 ft. It must make a DC 17 Wis save (adv. if trapped before) or be trapped in the flask. It holds only 1 creature. As Magic action, I can open it to release the creature, which then obeys my commands for 1 hour. See Notes.",
+	descriptionFull: "While holding this flask, I can take a Magic action to target a creature from another plane that I can see within 60 ft. It must make a DC 17 Wis save (adv. if trapped before) or be trapped in the flask. It holds only 1 creature. As Magic action, I can open it to release the creature, which then obeys my commands for 1 hour. See Notes.",
+	weight: 1,
+	toNotesPage: [{
+		name: "Iron Flask",
+		note: [
+			"This iron bottle has a brass stopper. You can take a Magic action to target a creature that you can see within 60 feet of you. If the target is native to a plane of existence other than the one you're on, the target must succeed on a DC 17 Wisdom saving throw or be trapped in the flask. If the target has been trapped by the flask before, it has advantage on the saving throw.\n\n" +
+			"Once trapped, a creature remains in the flask until released.The flask can hold only one creature at a time.A creature trapped in the flask doesn't need to breathe, eat, or drink and doesn't age.\n   You can take a Magic action to remove the stopper and release the creature. The creature is friendly to you and your companions for 1 hour and obeys your commands for that duration. If you give no commands or give it a command that is likely to result in its death, it defends itself but otherwise takes no actions. At the end of the duration, the creature acts in accordance with its normal disposition and alignment.\n\n" +
+			"An Identify spell reveals that a creature is inside the flask, opening the flask is the only way to determing the type. A newly discovered bottle might already contain a creature chosen by the DM or determined randomly.\n\n" +
+			toUni("d100\tContents"),
+			"00-50\tEmpty\t\t76-77\tInvisible Stalker",
+			"  51\tArcanaloth\t\t78-79\tMarid",
+			"52-54\tBone Devil\t\t  80\tMarilith",
+			"55-56\tCambion\t\t81-82\tMezzoloth",
+			"57-58\tDao\t\t83-84\tNalfeshnee",
+			"  59\tDeva\t\t85-86\tNight Hag",
+			"60-61\tDjinni\t\t87-88\tNycaloth",
+			"62-63\tEfreeti\t\t89\tPlanetar",
+			"64-65\tErinyes\t\t90-91\tRed Slaad",
+			"66-67\tFomorian\t\t92-93\tSalamander",
+			"  68\tGithyanki Knight\t94\tSolar",
+			"  69\tGitzerai Zerth\t95\tSuccubus",
+			"70-71\tGlabrezu\t\t96\tUltroloth",
+			"72-74\tHezrou\t\t97-99\tVrock",
+			"  75\tIncubys\t\t00\tXorn",
+		]
+	}],
+};
 MagicItemsList["javelin of lightning"] = { // contains contributions by Larry Hoy
 	name: "Javelin of Lightning",
 	source: [["DMG2024", 275]],
 	type: "weapon (javelin)",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "Once per dawn I can speak this javelin's command word and make a ranged weapon attack with it on a target within 120 ft. All between me and the target in a 5-ft wide line take 4d6 lightning damage, DC 13 Dex save halves. If the javelin hits the target, it takes 1d6 piercing and 4d6 lightning damage. Immediately after dealing damage, the weapon reappears in my hand.",
-	descriptionFull: "This javelin is a magic weapon. When you hurl it and speak its command word, it transforms into a bolt of lightning, forming a line 5 feet wide that extends out from you to a target within 120 feet. Each creature in the line excluding me and the target must make a DC 13 Dexterity saving throw, taking 4d6 lightning damage on a failed save, and half as much damage on a successful one. The lightning bolt turns back into a javelin when it reaches the target, and the weapon reappears in my hand immediately. Make a ranged weapon attack against the target. On a hit, the target takes damage from the javelin plus 4d6 lightning damage.\n   The javelin's property can't be used again until the next dawn. In the meantime, the javelin can still be used as a magic weapon.",
+	description: "Once per dawn I can throw this javelin at a target within 120 ft. and forgo the ranged weapon attack with it turning it into a bolt of lightning. All between me and the target in a 5-ft wide line take 4d6 lightning damage, DC 13 Dex save halves. Immediately after dealing damage, the weapon reappears in my hand.",
+	descriptionFull: "Each time you make an attack roll with this magic weapon and hit, you can have it deal Lightning damage instead of Piercing damage.\n   Lightning Bolt. When you throw this weapon at a target no farther than 120 feet from you, you can forgo making a ranged attack roll and instead turn the weapon into a bolt of lightning. This bolt forms a 5-foot-wide Line between you and the target. The target and each other creature in the Line (excluding you) makes a DC 13 Dexterity saving throw, taking 4d6 Lightning damage on a failed save or half as much damage on a successful one. Immediately after dealing this damage, the weapon reappears in your hand. This property can’t be used again until the next dawn.",
 	weight: 2,
 	usages: 1,
 	recovery: "dawn",
@@ -4171,8 +4200,8 @@ MagicItemsList["javelin of lightning"] = { // contains contributions by Larry Ho
 		baseWeapon: "javelin",
 		regExpSearch: /^(?=.*javelin)(?=.*lightning).*$/i,
 		name: "Javelin of Lightning",
-		source: [["DMG2024", "-"]],
-		description: "Thrown; Once per dawn special attack, see item description",
+		source: [["DMG2024", 275]],
+		description: "Thrown; Once per dawn special attack, see item description; Slow",
 	}
 };
 MagicItemsList["keoghtom's ointment"] = {
@@ -4182,8 +4211,8 @@ MagicItemsList["keoghtom's ointment"] = {
 	type: "wondrous item",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "This glass jar, 3 inches in diameter, contains 1d4+1 doses of a thick mixture that smells faintly of aloe. As an action, one dose of the ointment can be swallowed or applied to a creature within 5 ft of me. The creature that receives it regains 2d8+2 hit points, and ceases to be poisoned.",
-	descriptionFull: "This glass jar, 3 inches in diameter, contains 1d4+1 doses of a thick mixture that smells faintly of aloe. The jar and its contents weigh \xBD pound.\n   As an action, one dose of the ointment can be swallowed or applied to a creature within 5 ft of me. The creature that receives it regains 2d8+2 hit points, and ceases to be poisoned.",
+	description: "This glass jar, 3 inches in diameter, contains 1d4+1 doses of a thick mixture that smells faintly of aloe. As a Utilize action, one dose of the ointment can be swallowed or applied to a creature within 5 ft of me. The creature that receives it regains 2d8+2 hit points, and ceases to be poisoned.",
+	descriptionFull: "This glass jar, 3 inches in diameter, contains 1d4 + 1 doses of a thick mixture that smells faintly of aloe. The jar and its contents weigh 1/2 pound.\n   As a Utilize action, you can swallow one dose of the ointment or apply it to a creature within 5 feet of yourself. The creature that receives it regains 2d8 + 2 Hit Points and ceases to have the Poisoned condition.",
 	weight: 0.5,
 	usages: "1d4+1",
 	recovery: "Never"
@@ -4194,8 +4223,8 @@ MagicItemsList["lantern of revealing"] = {
 	type: "wondrous item",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "This lantern burns for 6 hours on 1 pint of oil. It shines bright light in a 30-ft radius and dim light for an additional 30 ft. Invisible objects and creatures are visible in the lantern's bright light. As an action, I can lower the hood, making it only dim light in a 5-ft radius.",
-	descriptionFull: "While lit, this hooded lantern burns for 6 hours on 1 pint of oil, shedding bright light in a 30-foot radius and dim light for an additional 30 feet. Invisible creatures and objects are visible as long as they are in the lantern's bright light. You can use an action to lower the hood, reducing the light to dim light in a 5-foot radius.",
+	description: "This lantern burns for 6 hours on 1 pint of oil. It shines bright light in a 30-ft radius and dim light for an additional 30 ft. Invisible objects and creatures are visible in the lantern's bright light. As a Utilize action, I can lower the hood, making it only dim light in a 5-ft radius.",
+	descriptionFull: "While lit, this hooded lantern burns for 6 hours on 1 pint of oil, shedding Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. Invisible creatures and objects are visible as long as they are in the lantern’s Bright Light. You can take a Utilize action to lower the hood, reducing the lantern’s light to Dim Light in a 5-foot radius.",
 	weight: 2,
 	action: [["action", " (hood up/down)"]]
 };
@@ -4205,8 +4234,8 @@ MagicItemsList["lock of trickery"] = {
 	magicItemTable: "?",
 	type: "wondrous item",
 	rarity: "common",
-	description: "This lock appears to be an ordinary lock and comes with a single key. The tumblers in this lock magically adjust to thwart burglars. Without the key, a creature proficient with thieves' tools can pick this lock with a successful DC 15 Dexterity check, but has disadvantage on that check.",
-	descriptionFull: "This lock appears to be an ordinary lock and comes with a single key. The tumblers in this lock magically adjust to thwart burglars. Dexterity checks made to pick the lock have disadvantage. Without the key, a creature proficient with thieves' tools can pick this lock with a successful DC 15 Dexterity check, but has disadvantage on that check.",
+	description: "This lock appears to be an ordinary Lock and comes with a single key. The tumblers in this lock magically adjust to thwart burglars. Dexterity checks made to pick the lock have Disadvantage.",
+	descriptionFull: "This lock appears to be an ordinary Lock (of the type described in chapter 6 of the Player’s Handbook) and comes with a single key. The tumblers in this lock magically adjust to thwart burglars. Dexterity checks made to pick the lock have Disadvantage.",
 	weight: 1
 };
 MagicItemsList["luck blade"] = {
@@ -4217,14 +4246,14 @@ MagicItemsList["luck blade"] = {
 	magicItemTable: "?",
 	attunement: true,
 	description: "This magic weapon has a +1 bonus to attack and damage rolls made with it, and grants me +1 to all saves. Once per dawn, I can use its luck to reroll one attack, ability check, or save, but I must use the second result. While holding it, I can expend one of its 1d3 charges to cast Wish from it, once per dawn. Charges can't be regained.",
-	descriptionFull: "You gain a +1 bonus to attack and damage rolls made with this magic weapon. While the sword is on your person, you also gain a +1 bonus to saving throws.\n   " + toUni("Luck") + ". If the sword is on your person, you can call on its luck (no action required) to reroll one attack roll, ability check, or saving throw you dislike. You must use the second roll. This property can't be used again until the next dawn.\n   " + toUni("Wish") + ". The sword has 1d3 charges. While holding it, I can expend 1 charge and cast the wish spell from it. This property can't be used again until the next dawn. The sword loses this property if it has no charges.",
+	descriptionFull: "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. While the weapon is on your person, you also gain a +1 bonus to saving throws.\n   " + toUni("Luck") + ". If the weapon is on your person, you can call on its luck (no action required) to reroll one failed D20 Test if you don’t have the Incapacitated condition. You must use the second roll. Once used, this property can’t be used again until the next dawn.\n   " + toUni("Wish") + ". The weapon has 1d3 charges. While holding it, you can expend 1 charge and cast Wish from it. Once used, this property can’t be used again until the next dawn. The weapon loses this property if it has no charges.",
 	extraLimitedFeatures: [{
 		name: "Luck Blade - luck reroll",
 		usages: 1,
 		recovery: "Dawn"
 	}, {
 		name: "Luck Blade - cast Wish",
-		usages: "1d4-1",
+		usages: "1d3",
 		recovery: "Never"
 	}],
 	chooseGear: {
@@ -4256,8 +4285,68 @@ MagicItemsList["luck blade"] = {
 		]
 	}
 };
-//MagicItemsList["lute of thunderous thumping"] = {
-//},
+MagicItemsList["lute of thunderous thumping"] = {
+	name: "Lute of Thunderous Thumping",
+	source: [["DMG2024", 275]],
+	type: "weapon (club)",
+	rarity: "very rare",
+	magicItemTable: "?",
+	description: "This reinforced lute can be wielded as a magic Club that deals an extra 2d8 Thunder damage on a hit.",
+	descriptionLong: "This reinforced lute can be wielded as a magic Club that deals an extra 2d8 Thunder damage on a hit.\n If you're a bard, you can use your CHA modifier instead of your Str Mod when making a melee attack roll provided that you sing or hum while making the attack.",
+	descriptionFull: "This reinforced lute can be wielded as a magic Club that deals an extra 2d8 Thunder damage on a hit.\n\n" + toUni("Sing and Swing") + "If you’re a Bard, you can use your Charisma modifier instead of your Strength modifier when making a melee attack roll with the lute, provided you sing or hum while making the attack.",
+	weight: 1,
+	weaponsAdd: "Lute of Thunderous Thumping",
+	weaponOptions: {
+		baseWeapon: "club",
+		regExpSearch: /lute of thunderous thumping/i,
+		name: "Lute of Thunderous Thumping",
+		source: [["PHB2024", "-"]],
+		description: "light, slow, +2d8 Thunder",
+	},
+	toNotesPage: [{
+		name: "Sing and Swing",
+		note: [
+			"You can use your CHA Modifier instead of your STR modifier when making a melee attack roll provided you sing or hum."
+		]
+	}],
+	selfChoosing: function () {
+		return classes.known.bard ? "lute of thunderous thumping (bard)" : "lute of thunderous thumping (not bard)";
+	},
+	"lute of thunderous thumping (bard)": {
+		name: "Lute of Thunderous Thumping",
+		description: "This reinforced lute can be wielded as a magic Club that deals an extra 2d8 Thunder damage on a hit.\n\n" + toUni("Sing and Swing") + "You can use your CHA Modifier instead of your STR modifier when making a melee attack roll provided you sing or hum.",
+		weaponsAdd: "Lute of Thunderous Thumping",
+		weaponOptions: {
+			baseWeapon: "club",
+			regExpSearch: /lute of thunderous thumping/i,
+			name: "Lute of Thunderous Thumping",
+			source: [["PHB2024", "-"]],
+			description: "light, slow, +2d8 Thunder",
+		},
+		calcChanges: {
+			atkAdd: [
+				function (fields, v) {
+					if (v.theWea.is('lute of thunderous thumping') && fields.Mod === 1 && What('Cha') > What('Str')) {
+						fields.Mod = 6;
+					}
+				},
+				"I can use my Charisma modifier instead of my Strength modifier for attack rolls made with the Lute of Thunderous Thumping."
+			]
+		},
+	},
+	"lute of thunderous thumping (not bard)": {
+		name: "Lute of Thunderous Thumping",
+		description: "This reinforced lute can be wielded as a magic Club that deals an extra 2d8 Thunder damage on a hit.",
+		weaponsAdd: "Lute of Thunderous Thumping",
+		weaponOptions: {
+			baseWeapon: "club",
+			regExpSearch: /lute of thunderous thumping/i,
+			name: "Lute of Thunderous Thumping",
+			source: [["PHB2024", "-"]],
+			description: "light, slow, +2d8 Thunder;2",
+		}
+	},
+};
 MagicItemsList["mace of disruption"] = {
 	name: "Mace of Disruption",
 	source: [["DMG2024", 276]],
@@ -4536,8 +4625,6 @@ MagicItemsList["mithral armor"] = {
 		descriptionChange: ["prefix", "armor"]
 	}
 };
-//MagicItemsList["moonblade"] = {
-//},
 MagicItemsList["moon-touched sword"] = {
 	name: "Moon-Touched Sword",
 	nameTest: "Moon-Touched",
@@ -5427,8 +5514,43 @@ MagicItemsList["quaal's feather token"] = {
 		action: [["action", " (create)"], ["bous action", " (direct)"]]
 	}
 };
-//MagicItemsList["quarterstaff of the acrobat"] = {
-//};
+MagicItemsList["quarterstaff of the acrobat"] = {
+	name: "Quarterstaff of the Acrobat",
+	source: [["DMG2024", 279]],
+	type: "weapon (quarterstaff)",
+	rarity: "very rare",
+	magicItemTable: "?",
+	description: "This magical warhammer adds a +3 bonus to attack and damage rolls made with it. While holding this weapon, I can emit a dim green light (10ft) as a Bonus Action or after initiative and can extinguish the light as a Bonus Action.",
+	descriptionLong: "This magical warhammer adds a +3 bonus to attack and damage rolls made with it. While holding this weapon, I can emit a dim green light (10ft) as a Bonus Action or after initiative and can extinguish the light as a Bonus Action.\n" +
+		"\n While holding this weapon, I can take a Bonus action to alter its form, turning into a 6-in rod or 10-ft pole or returning it to its original form.",
+	descriptionFull: "This magical warhammer adds a +3 bonus to attack and damage rolls made with it. While holding this weapon, I can emit a dim green light (10ft) as a Bonus Action or after initiative and can extinguish the light as a Bonus Action.\n" +
+		"\n While holding this weapon, I can take a Bonus action to alter its form, turning into a 6-in rod or 10-ft pole or returning it to its original form." +
+		"\n This weapon has 3 forms." + toUni("Acrobatic Assist - Quarterstaff or 10ft Pole") + "While holding this weapon, you have Advantage on Dex (Acrobatics) checks." + toUni("Attack Deflection - Quarterstaff") + "When you are hit by an attack while holding the weapon, you can take a Reaction to twirl the weapon around you, gaining +5 bonus to your AC against a triggering attack, potentially causing the attack to miss you. You can't use this propety again until you finish a Short or Long Rest." + toUni("Ranged Weapon - Quarterstaff") + "This weapon has the Thrown property with a normal range of 30 feet and a long range of 120 feet. Immediately after you make a ranged attack with the weapon, it flies back to your hand.",
+	attunement: true,
+	weight: 4,
+	modifers: [2, 2],
+	action: [["bonus action", "Dim Light/Extinguish Light"], ["bonus action", "Transform Staff"], ["reaction", "Attack Deflection (+5AC)"]],
+	savetxt: { adv_vs: ["Acrobatics"] },
+	weaponOptions: [{
+		baseWeapon: "quarterstaff",
+		regExpSearch: /^(?=.*acrobat)(?=.*quarterstaff).*$/i,
+		name: "Quarterstaff of the Acrobat",
+		source: [["DMG2024", 279]],
+		description: "Versatile (1d8); Thrown, Returning; Magical",
+		selectNow: true
+	}],
+	toNotesPage: [{
+		name: "Quartstaff of the Acrobat",
+		note: [
+			"You gain a +2 bonus to attack rolls and damage rolls with this magic weapon. While holding this weapon, you an cause it to emit green Dim Light out to 10 feet, either as a Bonus Action or after you roll initiative, or you can extinguish the light as a Bonus Action.",
+			"\n While holding this weapon, you can take a Bonus Action to alter its form, turning it into a 6-inch rod (for storage) or a 10-foot pole, or reverting it to a Quarterstaff; the weapon will elongate only as far as surrounding space allows.",
+			"\n In certain forms, the weapon has the following additional properties:",
+			"\u2022 Acrobatic Assist: Quarterstaff or 10-foot Pole Forms Only. While holding this weapon, you have advantage on Dex (Acrobatics) checks.",
+			"\u2022 Attack Deflection: Quarterstaff form only. When you are hit by an attack while holding the weapon, you can take a Reaction to twirl the weapon around you, gaining +5 AC against a triggering attack, potentially causing the attack to miss you. You can't use this property again until you finish a Short or Long rest.",
+			"\u2022 Ranged Weapon: Quarterstaff form only. This weapon has the >>Thrown<< property with a normal range of 30 feet and a long range of 120 feet. Immediately after you make a ranged attack, it flies back to your hand.",
+		]
+	}],
+};
 MagicItemsList["quiver of ehlonna"] = {
 	name: "Quiver of Ehlonna",
 	nameAlt: "Efficient Quiver",
@@ -5440,8 +5562,32 @@ MagicItemsList["quiver of ehlonna"] = {
 	descriptionFull: "Each of the quiver's three compartments connects to an extradimensional space that allows the quiver to hold numerous items while never weighing more than 2 pounds. The shortest compartment can hold up to sixty arrows, bolts, or similar objects. The midsize compartment holds up to eighteen javelins or similar objects. The longest compartment holds up to six long objects, such as bows, quarterstaffs, or spears.\n   You can draw any item the quiver contains as if doing so from a regular quiver or scabbard.",
 	weight: 2
 };
-//MagicItemsList["ring of animal influence"] = {
-//};	
+MagicItemsList["ring of animal influence"] = {
+	name: "Ring of Animal Influence",
+	source: [["DMG2024", 292]],
+	type: "ring",
+	rarity: "rare",
+	description: "This ring has 3 charges, and regains 1d3 expended charges daily at dawn. While wearing the ring, I can expend 1 charge to cast Animal Friendship, Fear (affect Beasts only), Speak with Animals using a DC13 spell save.",
+	descriptionFull: "This ring has 3 charges, and regains 1d3 expended charges daily at dawn. While wearing the ring, I can expend 1 charge to cast Animal Friendship, Fear (affect Beasts only), Speak with Animals using a DC13 spell save.",
+	usages: 3,
+	recovery: "dawn",
+	additional: "regains 1d3",
+	fixedDC: 13,
+	spellFirstColTitle: "Ch",
+	spellcastingBonus: {
+		name: "1 charge",
+		spells: ["animal friendship", "fear", "speak with animals"],
+		selection: ["animal friendship", "fear", "speak with animals"],
+		firstCol: 1,
+		times: 3
+	},
+	spellChanges: {
+		"fear": {
+			description: "All Beasts save or drop held items and Frightened; Dash away; extra save at EoT if no line of sight",
+			changes: "affects Beasts only",
+		},
+	},
+};	
 MagicItemsList["ring of djinni summoning"] = {
 	name: "Ring of Djinni Summoning",
 	source: [["DMG2024", 292]],
@@ -5454,8 +5600,151 @@ MagicItemsList["ring of djinni summoning"] = {
 	usages: 1,
 	recovery: "24 hours"
 };
-//MagicItemsList["ring of elemental command"] = {
-//};
+MagicItemsList["ring of elemental command"] = {
+	name: "Ring of Elemental Command",
+	source: [["DMG2024", "-"]],
+	type: "ring",
+	rarity: "legendary",
+	magicItemTable: "?",
+	description: "Select one of the four types of this ring, with each type being linked to one of the four Elemental Planes.",
+	descriptionFull: "This ring is linked to one of the four Elemental Planes. The GM chooses or randomly determines the linked plane.\n While wearing this ring, you have advantage on attack rolls against Elementals, and they have disadvantage on attack rolls against you. You can take a Magic action to try to compel an Elemental you see within 60-feet. The Elemental must make a DC18 WIS save or it has the Charmed condition until the start of your next turn. You determine its move and action on its next turn.\n In addition, you have access to properties based on the linked plane. The ring has 5 charges. It regains 1d4 + 1 expended charges daily at dawn. Spells cast from the ring have a save DC of 18.",
+	attunement: true,
+	allowDuplicates: true,
+	action: ["action", "Compel Elemental"],
+	usages: 5,
+	recovery: "dawn",
+	additional: "regains 1d4+1",
+	choices: ["air", "earth", "fire", "water"],
+	"air": {
+		name: "Ring of Elemental Command (Air)",
+		sortname: "Ring of Elemental Command, Air",
+		description: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants me adv. on attacks vs. elementals aand they have disadv. vs. me. I can cast Feather Fall, Wind Wall (1 Charge), Gust of Wind (2 Charges), and Chain Lighting (3 Charges). I have resistance to Lightning damage. My Fly Speed equals my walking Speed and I can hover. I also know Auran.",
+		descriptionFull: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants me adv. on attacks vs. elementals aand they have disadv. vs. me. I can cast Feather Fall, Wind Wall (1 Charge), Gust of Wind (2 Charges), and Chain Lighting (3 Charges). I have resistance to Lightning damage. My Fly Speed equals my walking Speed and I can hover. I also know Auran.",
+		languageProfs: ["auran"],
+		dmgres: ["lightning"],
+		speed: { fly: { spd: "walk", enc: "walk" } },
+		fixedDC: 18,
+		spellFirstColTitle: "Ch",
+		spellcastingBonus: [{
+			name: "0 charges",
+			spells: ["feather fall"],
+			selection: ["feather fall"],
+			firstCol: 0,
+		}, {
+			name: "1 charge",
+			spells: ["wind wall"],
+			selection: ["wind wall"],
+			firstCol: 1,
+		}, {
+			name: "2 charges",
+			spells: ["gust of wind"],
+			selection: ["gust of wind"],
+			firstCol: 2,
+		}, {
+			name: "3 charges",
+			spells: ["chain lightning"],
+			selection: ["chain lightning"],
+			firstCol: 3,
+		}],
+	},
+	"earth": {
+		name: "Ring of Elemental Command (Earth)",
+		sortname: "Ring of Elemental Command, Earth",
+		description: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants me adv. on attacks vs. elementals aand they have disadv. vs. me. I can cast Stone Shape (2 Charges), Stone Skin & Wall of Stone (3 Charges), Earthquake (5 Charges). I have resistance to Acid damage. I can move through solid earth, rock, rocks are not Difficult Terrain for me and without disturbing the areas I pass. I also know Terran.",
+		descriptionFull: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants me adv. on attacks vs. elementals aand they have disadv. vs. me. I can cast Stone Shape (2 Charges), Stone Skin & Wall of Stone (3 Charges), Earthquake (5 Charges). I have resistance to Acid damage. I can move through solid earth, rock, rocks are not Difficult Terrain for me and without disturbing the areas I pass. I also know Terran.",
+		languageProfs: ["terran"],
+		dmgres: ["acid"],
+		fixedDC: 18,
+		spellFirstColTitle: "Ch",
+		spellcastingBonus: [{
+			name: "2 charges",
+			spells: ["stone shape"],
+			selection: ["stone shape"],
+			firstCol: 2,
+		}, {
+			name: "3 charges",
+			spells: ["stoneskin", "wall of stone"],
+			selection: ["stoneskin", "wall of stone"],
+			times: 2,
+			firstCol: 3,
+		}, {
+			name: "5 charges",
+			spells: ["earthquake"],
+			selection: ["earthquake"],
+			firstCol: 5,
+		}],
+	},
+	"fire": {
+		name: "Ring of Elemental Command (Fire)",
+		sortname: "Ring of Elemental Command, Fire",
+		description: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants me adv. on attacks vs. elementals aand they have disadv. vs. me. I can cast Burning Hands (1 Charge), Fireball (2 Charges), Wall of Fire (3 Charges), and Fire Storm (4 Charges). I have immunity to Fire damage. I also know Ignan.",
+		descriptionFull: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants me adv. on attacks vs. elementals aand they have disadv. vs. me. I can cast Burning Hands (1 Charge), Fireball (2 Charges), Wall of Fire (3 Charges), and Fire Storm (4 Charges). I have immunity to Fire damage. I also know Ignan.",
+		languageProfs: ["ignan"],
+		savetxt: { immune: ["fire"] },
+		fixedDC: 18,
+		spellFirstColTitle: "Ch",
+		spellcastingBonus: [{
+			name: "1 charge",
+			spells: ["burning hands"],
+			selection: ["burning hands"],
+			firstCol: 1,
+		}, {
+			name: "2 charges",
+			spells: ["fireball"],
+			selection: ["fireball"],
+			firstCol: 2,
+		}, {
+			name: "3 charges",
+			spells: ["wall of fire"],
+			selection: ["wall of fire"],
+			firstCol: 3,
+		}, {
+			name: "4 charges",
+			spells: ["fire storm"],
+			selection: ["fire storm"],
+			firstCol: 4,
+		}],
+	},
+	"water": {
+		name: "Ring of Elemental Command (Water)",
+		sortname: "Ring of Elemental Command, Water",
+		description: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants me adv. on attacks vs. elementals aand they have disadv. vs. me. I can cast Create or Destroy Water (1 Charge), Ice Storm & Water Walk (2 Charges), Wall of Ice (3 Charges), and Tsunami (5 Charges). I gain a Swim Speed of 60 feet and can breathe underwater. I also know Aquan.",
+		descriptionFull: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants me adv. on attacks vs. elementals aand they have disadv. vs. me. I can cast Burning Hands (1 Charge), Fireball (2 Charges), Wall of Fire (3 Charges), and Fire Storm (4 Charges). I have immunity to Fire damage. I also know Ignan.",
+		languageProfs: ["aquan"],
+		savetxt: { text: 'I can breathe underwater' },
+		speed: { swim: 60 },
+		fixedDC: 18,
+		spellFirstColTitle: "Ch",
+		spellcastingBonus: [{
+			name: "1 charge",
+			spells: ["create or destroy water"],
+			selection: ["create or destroy water"],
+			firstCol: 1,
+		}, {
+			name: "2 charges",
+			spells: ["icestorm", "water walk"],
+			selection: ["icestorm", "water walk"],
+			times: 2,
+			firstCol: 2,
+		}, {
+			name: "3 charges",
+			spells: ["wall of ice"],
+			selection: ["wall of ice"],
+			firstCol: 3,
+		}, {
+			name: "5 charges",
+			spells: ["tsunami"],
+			selection: ["tsunami"],
+			firstCol: 5,
+		}],
+	},
+	toNotesPage: [{
+		name: "Compel Elemental",
+		note: [
+			"While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the Charmed condition until the start your next turn, and you determine what it does with its move and action on its next turn.",
+		]
+	}],
+};
 MagicItemsList["ring of evasion"] = {
 	name: "Ring of Evasion",
 	source: [["DMG2024", 293]],
@@ -6491,8 +6780,45 @@ MagicItemsList["shield of missile attraction"] = {
 	cursed: true,
 	dmgres: ["Ranged Weapons"]
 };
-//MagicItemsList["shield of the cavalier"] = {
-//};
+MagicItemsList["shield of the cavalier"] = {
+	name: "Shield of the Cavalier",
+	source: [["DMG2024", "-"]],
+	type: "shield",
+	rarity: "very rare",
+	magicItemTable: "?",
+	description: "While holding this shield, I have a +2 bonus to AC. This bonus is in addition to the shield's normal bonus to AC.",
+	descriptionFull: "While holding this shield, you have a +2 bonus to AC. This bonus is in addition to the shields normal bonus to AC. The Shield has additional properties that you can use while holding it." +
+		"\n   " + toUni("Forceful Bash") + ". When you take the Attack action on your turn, you can replace one of your attacks using the Shielf, targeting one creature you can see within 5 feet of yourself. On a hit, the Shield deals 2d6 + 2 + Strength Modifier Force damage, and if the target is a creature, you push it up to 10-ft directly away from yourself. If the creature is your size or smaller, you can knock it Prone." +
+		"\n   " + toUni("Protective Field") + ". As a Reaction, when you or an ally you can see within 5-ft of you is targeted by an attack or makes a saving throw against an area of effect, you can use the Shield to create an immobile 5-ft Emanation originating from you. Any creatures or objects not fully contained are pushed into the nearest unoccupied space outside it. The triggering attack or effect has no effect on creatures and objects inside the Emanation, which lasts as long as you maintain Concentration - up to 1 minute. Nothing can pass in or out of the Emanation. A creature or object inside the Emanation can't be damaged by attacks or effects originating from outside, nor can a creature inside the Emanation damage anthing outside of it. Once this property is used, it can't be used again until the next dawn.",
+	attunement: true,
+	weight: 6,
+	shieldAdd: "Shield of the Cavalier +2",
+	action: ["reaction", " Protective Field"],
+	usages: 1,
+	recovery: "dawn",
+	additional: "Protective Field",
+	weaponOptions: [{
+		regExpSearch: /^(?=.*cavalier)(?=.*shield).*$/i,
+		name: "Shield of the Cavalier Bash",
+		source: [["DMG2024", "-"]],
+		ability: 1,
+		type: 'AlwaysProf',
+		damage: ['2d6 + 2' + What('Str Mod'), '', 'force'],
+		range: "Melee",
+		description: "if target = crea push 10ft; if crea = your size or >, knock prone; substitute one attack roll on attack action.",
+		isNotWeapon: true,
+		modifiers: [What('Str Mod') + Number(How('Proficiency Bonus')),],
+		selectNow: true
+	}],
+	toNotesPage: [{
+		name: "Shield of the Cavelier",
+		note: [
+			"While holding this shield, you have a +2 bonus to AC. This bonus is in addition to the shields normal bonus to AC. The Shield has additional properties that you can use while holding it.\n" +
+			"\n \u2022 Forceful Bash: When you take the Attack action on your turn, you can replace one of your attacks using the Shielf, targeting one creature you can see within 5 feet of yourself. On a hit, the Shield deals 2d6 + 2 + Strength Modifier Force damage, and if the target is a creature, you push it up to 10-ft directly away from yourself. If the creature is your size or smaller, you can knock it Prone.\n" +
+			"\n \u2022 Protective Field: As a Reaction, when you or an ally you can see within 5-ft of you is targeted by an attack or makes a saving throw against an area of effect, you can use the Shield to create an immobile 5-ft Emanation originating from you. Any creatures or objects not fully contained are pushed into the nearest unoccupied space outside it. The triggering attack or effect has no effect on creatures and objects inside the Emanation, which lasts as long as you maintain Concentration - up to 1 minute. Nothing can pass in or out of the Emanation. A creature or object inside the Emanation can't be damaged by attacks or effects originating from outside, nor can a creature inside the Emanation damage anthing outside of it. Once this property is used, it can't be used again until the next dawn.",
+		]
+	}],
+};
 MagicItemsList["silvered weapon"] = {
 	name: "Silvered Weapon",
 	source: [["DMG2024", "-"]],
@@ -8430,8 +8756,75 @@ MagicItemsList["wand of wonder"] = {
 		"stinking cloud": { range: "120 ft", changes: "All Wand of Wonder spells have a range of 120 ft." }
 	}
 };
-//MagicItemsList["wave"] = {
-//};	
+var DMG_waveFullDescription = [
+	"Held in the dungeon of White Plume Mountain, >>Wave<< is engraved with images, shells, and sea creatures.",
+	"You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon. If you score a critical hit with it, the target takes an extra 21 necrotic damage.",
+	"While holding >>Wave<<, you gain Advantage on Initiative rolls, underwater breathing, can cast Dominate Beast on beasts that have a swim speed, and can cast Globe of Invulnerability once daily.",
+	">>Sentience<<. Wave is a sentient weapon of neutral alignment, with an Intelligence of 14, a Wisdom of 10, and a Charisma of 18. It has hearing and darkvision out to a range of 120 feet.",
+	"The weapon communicates telepathically with its wielder and can speak, read, and understand Aquan.",
+	">>Personality<<. Wave zealously encourages mortals to worship sea gods and has a habit of humming sea chanteys. Conflict arises if the wielder fails to further the weapon's objectives in the world.",
+	"Wave can be destroyed only on the island of Thunderforge, where it was forged. The weapon must be melted down by a storm giant or soemone imbued with a storm giant's strength. Destroying Wave angers a god of the sea who sends powerful agents to attack the island and punish the destroyers.",
+];
+MagicItemsList["wave"] = {
+	name: "Wave",
+	source: [["DMG2024", "-"]],
+	type: "weapon (trident)",
+	rarity: "artifact",
+	description: "This sentient trident adds +3 to hit and damage and if I score a critical hit with it, the target takes an extra 21 necrotic damage. While holding Wave, I gain several benefits. SEE NOTES PAGE.",
+	descriptionFull: DMG_waveFullDescription.join("\n   ").replace(/>>(.*?)<</g, function (a, match) { return toUni(match); }),
+	attunement: true,
+	weight: 4,
+	weaponOptions: [{
+		baseWeapon: "trident",
+		regExpSearch: /wave/i,
+		name: "Wave",
+		source: [["DMG2024", 323]],
+		description: "Thrown, versatile (1d10); On crit: +21 Necrotic Damage",
+		modifiers: [3, 3],
+		selectNow: true
+	}],
+	toNotesPage: [{
+		name: "Features",
+		note: desc(DMG_waveFullDescription).replace(/>>(.*?)<</g, function (a, match) { return match.toUpperCase(); }).replace(/you/ig, "I") + "\n\n" + sentientItemConflictTxt,
+	}],
+	//Combat Ready - Advantage on Initiative
+	advantages: [["Initiative", true]],
+	//Underwater Adaptation
+	savetxt: { text: 'I can breathe normally underwater' },
+	extraLimitedFeatures: [{
+		name: "Wave [Aquatic Command] (regains 1d3)",
+		usages: 3,
+		recovery: "dawn"
+	}, {
+		name: "Wave [Globe of Invulnerability]",
+		usages: 1,
+		recovery: "dawn"
+	},],
+	fixedDC: 20,
+	spellFirstColTitle: "Ch",
+	spellcastingBonus: [{
+		name: "3 charges",
+		spells: ["dominate beast"],
+		selection: ["dominate beast"],
+		firstCol: 3,
+	}, {
+		name: "Globe of Invulnerability",
+		spells: ["globe of invulnerability"],
+		selection: ["globe of invulnerability"],
+		firstCol: 1,
+	}],
+	spellChanges: {
+		"dominate beast": {
+			description: "1 beast with swim speed save or charmed, follows telepathic commands, 1 a for complete control",
+			changes: "Can only affect beasts with innate swim speed."
+		},
+		//Not sure how to change the level in the header to level 9; it shows level 6
+		"globe of invulnerability": {
+			description: "Any spell of level 9 or lower cast from outside the barrier can’t affect anything within it.",
+			changes: "Change from level 6 to level 9"
+		},
+	},
+};	
 MagicItemsList["weapon, +1, +2, or +3"] = {
 	name: "Weapon, +1, +2, or +3",
 	source: [["DMG2024", 324]],
