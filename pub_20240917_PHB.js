@@ -502,6 +502,7 @@ legacyClassRefactor("barbarian", {
 		  description: desc([
 			"My instincts are so honed that I have Advantage on Initiative rolls.",
 		  ]),
+		  advantages : [["Initiative", true]],
 		},
 		"instinctive pounce": {
 		  name: "Instinctive Pounce",
@@ -5777,6 +5778,7 @@ legacySubClassRefactor("rogue", "assassin", {
         "I have Advantage on attack rolls against any creature that hasn't taken a turn yet.",
         "If my Sneak Attack hits it does extra damage (my Rogue level) of the weapon's type.",
       ]),
+	  advantages : [["Initiative", true]],
     },
     "subclassfeature3.1": {
       name: "Assassin's Tools",
