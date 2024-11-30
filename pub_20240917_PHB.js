@@ -10503,7 +10503,7 @@ FeatsList["mage slayer"] = {
   limfeaname: "Guarded Mind",
   usages: 1,
   recovery: "short rest",
-  description: "+1 Str/Dex, I gain training with Light armor and Shields.",  
+  description: "+1 Str/Dex, When I deal damage to a creature concentrating on a spell, they have Disadvantage on the saving throw to maintain concentration. Once per rest, when I fail an Int, Wis, or Cha save, I can choose to succeed.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
@@ -10512,11 +10512,11 @@ FeatsList["mage slayer"] = {
   ]),
   choices: ["Strength", "Dexterity"],
   "strength": {
-    description: "I gain training with Light armor and Shields. [+1 Strength]",
+    description: "When I deal damage to a creature concentrating on a spell, they have Disadvantage on the saving throw to maintain concentration. Once per rest, when I fail an Int, Wis, or Cha save, I can choose to succeed. [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
   },
   "dexterity": {
-    description: "I gain training with Light armor and Shields. [+1 Dexterity]",
+    description: "When I deal damage to a creature concentrating on a spell, they have Disadvantage on the saving throw to maintain concentration. Once per rest, when I fail an Int, Wis, or Cha save, I can choose to succeed. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
   },
   prerequisite: "Level 4",
@@ -10592,7 +10592,7 @@ FeatsList["moderately armored"] = {
   description: "+1 Str/Dex, I gain training with Medium armor.",  
   descriptionFull: desc([
     "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength or Constitution score by 1 to a maximum of 20.",
+    "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
     "Armor Training : I gain training with Medium armor.",
   ]),
   prerequisite: "Level 4 and Medium Armor training",
