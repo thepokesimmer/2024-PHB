@@ -4392,7 +4392,7 @@ MagicItemsList["mace of terror"] = {
 	rarity: "rare",
 	magicItemTable: "?",
 	description: "While holding this weapon, as a Magic action, I can use 1 charge of this mace to have all chosen creatures within 30 ft make a DC 15 Wis save or be frightened of me for 1 min, repeating the save at the end of its turns. While frightened, it takes only the Dash action to move away (or action to free itself), no reactions, and can't move within 30 ft of me.",
-	description: "While holding this weapon, as a Magic action, I can expend 1 charge to release a wave of terror. Each creature of my choice within 30 ft must succeed on a DC 15 Wis save or be Frightened of me for 1 min, repeating the save at the end of its turns. While frightened, it takes only the Dash action to move away (or action to free itself), no reactions, and can't move within 30 ft of me.",
+	descriptionLong: "While holding this weapon, as a Magic action, I can expend 1 charge to release a wave of terror. Each creature of my choice within 30 ft must succeed on a DC 15 Wis save or be Frightened of me for 1 min, repeating the save at the end of its turns. While frightened, it takes only the Dash action to move away (or action to free itself), no reactions, and can't move within 30 ft of me.",
 	descriptionFull: "This magic weapon has 3 charges and regains 1d3 expended charges daily at dawn. While holding the weapon, you can take a Magic action and expend 1 charge to release a wave of terror from it. Each creature of your choice within 30 feet of you must succeed on a DC 15 Wisdom saving throw or have the Frightened condition for 1 minute. While Frightened in this way, a creature must spend its turns trying to move as far away from you as it can, and it can’t make Opportunity Attacks. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If it has nowhere it can move, the creature can take the Dodge action. At the end of each of its turns, a creature repeats the save, ending the effect on itself on a success",
 	attunement: true,
 	weight: 4,
@@ -4404,7 +4404,7 @@ MagicItemsList["mace of terror"] = {
 		baseWeapon: "mace",
 		regExpSearch: /^(?=.*mace)(?=.*terror).*$/i,
 		name: "Mace of Terror",
-		[["DMG2024", 276]],
+    source : [["DMG2024", 276]],
 		description : "Sap",
 	}
 };
@@ -9018,7 +9018,7 @@ MagicItemsList["whelm"] = {
 		selection : ["detect evil and good", "locate object"],
 		firstCol : "oncelr"
 	}]
-}	
+};	
 MagicItemsList["wind fan"] = {
 	name: "Wind Fan",
 	source: [["DMG2024", 325]],
