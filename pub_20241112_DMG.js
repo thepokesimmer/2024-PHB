@@ -1894,8 +1894,8 @@ MagicItemsList["defender"] = {
 		]
 	}
 };
-MagicItemsList["demon armor +1"] = { // contains contributions by Larry Hoy
-	name : "Demon Armor +1",
+MagicItemsList["demon armor"] = { // contains contributions by Larry Hoy
+	name : "Demon Armor",
 	source : [["DMG2024", 252]],
 	type : "armor (any)",
 	rarity : "very rare",
@@ -1906,10 +1906,177 @@ MagicItemsList["demon armor +1"] = { // contains contributions by Larry Hoy
 	cursed : true,
 	languageProfs : ["Abyssal"],
 	savetxt : { text : ["Disadv. on saves vs. demons"] },
-	chooseGear : {
-		type : "armor",
-		prefixOrSuffix : "brackets",
-		descriptionChange : ["replace", "armor"],
+	choices: ["Padded", "Leather", "Studded Leather", "Hide", "Chain Shirt", "Scale Mail", "Breastplate", "Half Plate", "Ring Mail", "Chain Mail", "Splint", "Plate"],
+	"padded": {
+		description : "While wearing this padded armor, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
+		descriptionFull : "While wearing this padded armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+		armorOptions : {
+			name: "Demon Padded Armor",
+			source: [["DMG2024", 252]],
+			regExpSearch: /^(?=.*demon)(?=.*padded)(?=.*armor).*$/i,
+			ac: 12,
+			type: "light",
+			stealthdis: true,
+			weight: 8,
+			selectNow: true,
+		},
+	},
+	"leather": {
+		description : "While wearing this leather armor, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
+		descriptionFull : "While wearing this leather armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+		armorOptions : {
+			name: "Demon Leather Armor",
+			source: [["DMG2024", 252]],
+			regExpSearch: /^(?=.*demon)(?=.*leather)(?=.*armor).*$/i,
+			ac: 12,
+			type: "light",
+			stealthdis: false,
+			weight: 10,
+			selectNow: true,
+		},
+	},
+	"studded leather": {
+		description : "While wearing this studded leather armor, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
+		descriptionFull : "While wearing this studded leather armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+		armorOptions : {
+			name: "Demon Studded Leather Armor",
+			source: [["DMG2024", 252]],
+			regExpSearch: /^(?=.*demon)(?=.*studded)(?=.*leather)(?=.*armor).*$/i,
+			ac: 13,
+			type: "light",
+			stealthdis: false,
+			weight: 13,
+			selectNow: true,
+		},
+	},
+	"hide": {
+		description : "While wearing this hide armor, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
+		descriptionFull : "While wearing this hide armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+		armorOptions : {
+			name: "Demon Hide Armor",
+			source: [["DMG2024", 252]],
+			regExpSearch: /^(?=.*demon)(?=.*hide)(?=.*armor).*$/i,
+			ac: 13,
+			type: "medium",
+			stealthdis: false,
+			weight: 12,
+			selectNow: true,
+		},
+	},
+	"chain shirt": {
+		description : "While wearing this chain shirt, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
+		descriptionFull : "While wearing this chain shirt, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+		armorOptions : {
+			name: "Demon Chain Shirt",
+			source: [["DMG2024", 252]],
+			regExpSearch: /^(?=.*demon)(?=.*chain)(?=.*shirt).*$/i,
+			ac: 14,
+			type: "medium",
+			stealthdis: false,
+			weight: 20,
+			selectNow: true,
+		},
+	},
+	"scale mail": {
+		description : "While wearing this scale mail armor, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
+		descriptionFull : "While wearing this scale mail armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+		armorOptions : {
+			name: "Demon Scale Mail",
+			source: [["DMG2024", 252]],
+			regExpSearch: /^(?=.*demon)(?=.*scale)(?=.*mail).*$/i,
+			ac: 15,
+			type: "medium",
+			stealthdis: true,
+			weight: 45,
+			selectNow: true,
+		},
+	},
+	"breastplate": {
+		description : "While wearing this breastplate, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
+		descriptionFull : "While wearing this breastplate, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+		armorOptions : {
+			name: "Demon Breastplate",
+			source: [["DMG2024", 252]],
+			regExpSearch: /^(?=.*demon)(?=.*breastplate).*$/i,
+			ac: 15,
+			type: "medium",
+			stealthdis: false,
+			weight: 20,
+			selectNow: true,
+		},
+	},
+	"half plate": {
+		description : "While wearing this half plate armor, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
+		descriptionFull : "While wearing this half plate armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+		armorOptions : {
+			name: "Demon Half Plate",
+			source: [["DMG2024", 252]],
+			regExpSearch: /^(?=.*demon)(?=.*half)(?=.*plate).*$/i,
+			ac: 16,
+			type: "medium",
+			stealthdis: true,
+			weight: 40,
+			selectNow: true,
+		},
+	},
+	"ring mail": {
+		description : "While wearing this ring mail, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
+		descriptionFull : "While wearing this ring mail, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+		armorOptions : {
+			name: "Demon Ring Mail",
+			source: [["DMG2024", 252]],
+			regExpSearch: /^(?=.*demon)(?=.*ring)(?=.*mail).*$/i,
+			ac: 15,
+			type: "heavy",
+			stealthdis: true,
+			weight: 40,
+			selectNow: true,
+		},
+	},
+	"chain mail": {
+		description : "While wearing this chain mail, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
+		descriptionFull : "While wearing this chain mail, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+		armorOptions : {
+			name: "Demon Chain Mail",
+			source: [["DMG2024", 252]],
+			regExpSearch: /^(?=.*demon)(?=.*chain)(?=.*mail).*$/i,
+			ac: 17,
+			type: "heavy",
+			stealthdis: true,
+			weight: 55,
+			strReq: 13,
+			selectNow: true,
+		},
+	},
+	"splint": {
+		description : "While wearing this splint armor, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
+		descriptionFull : "While wearing this splint armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+		armorOptions : {
+			name: "Demon Splint Armor",
+			source: [["DMG2024", 252]],
+			regExpSearch: /^(?=.*demon)(?=.*splint)(?=.*armor).*$/i,
+			ac: 18,
+			type: "heavy",
+			stealthdis: true,
+			weight: 60,
+			strReq: 15,
+			selectNow: true,
+		},
+	},
+	"plate": {
+		description : "While wearing this plate armor, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
+		descriptionFull : "While wearing this plate armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
+		armorOptions : {
+			name: "Demon Plate Armor",
+			source: [["DMG2024", 252]],
+			regExpSearch: /^(?=.*demon)(?=.*plate)(?=.*armor).*$/i,
+			ac: 19,
+			type: "heavy",
+			stealthdis: true,
+			weight: 65,
+			strReq: 15,
+			selectNow: true,
+		},
 	},
 	weaponsAdd: ["Demon Armor Claws"],
 	weaponOptions: [{
@@ -2148,8 +2315,8 @@ MagicItemsList["dust of sneezing and choking"] = {
 	description : "Once as a Utilize action, I can throw this dust into the air, causing me and all creatures within 30 ft that need to breathe to make a DC 15 Con save or start sneezing uncontrollably and be unable to breathe, thus becoming incapacitated and suffocating. Those affected can repeat their save at the end of each of their turns.",
 	descriptionFull : "Found in a small container, this powder resembles Dust of Disappearance, and Identify reveals it to be such. There is enough of it for one use.\n   As a Utilize action, you can throw the dust into the air, forcing yourself and every creature in a 30-foot Emanation originating from you to make a DC 15 Constitution saving throw. Constructs, Elementals, Oozes, Plants, and Undead succeed on the save automatically.\n   On a failed save, a creature begins sneezing uncontrollably; it has the Incapacitated condition and is suffocating. The creature repeats the save at the end of each of its turns, ending the effect on itself on a success. The effect also ends on any creature targeted by a Lesser Restoration spell."
 };
-MagicItemsList["dwarven plate +2"] = {
-	name : "Dwarven Plate +2",
+MagicItemsList["dwarven plate"] = {
+	name : "Dwarven Plate",
 	source : [["DMG2024", 255]],
 	type : "armor (half plate or plate armor)",
 	rarity : "very rare",
@@ -2157,14 +2324,36 @@ MagicItemsList["dwarven plate +2"] = {
 	description : "While wearing this armor, I gain a +2 bonus to AC. In addition, if an effect moves me against my will along the ground, I can use my reaction to reduce the distance I am moved by up to 10 ft.",
 	descriptionFull : "While wearing this armor, you gain a +2 bonus to Armor Class. In addition, if an effect moves you against your will along the ground, you can take a Reaction to reduce the distance you are moved by up to 10 feet.",
 	action : [["reaction", ""]],
-	chooseGear : {
-		type : "armor",
-		prefixOrSuffix : "brackets",
-		descriptionChange : ["replace", "armor"],
-		excludeCheck : function (inObjKey, inObj) {
-			return !(/\bplate\b/i).test(inObj.regExpSearch);
-		}
+	choices: ["Half Plate", "Plate"],
+	"half plate": {
+		description : "While wearing this half plate armor, I gain a +2 bonus to AC. In addition, if an effect moves me against my will along the ground, I can use my reaction to reduce the distance I am moved by up to 10 ft.",
+		descriptionFull : "While wearing this half plate armor, you gain a +2 bonus to Armor Class. In addition, if an effect moves you against your will along the ground, you can take a Reaction to reduce the distance you are moved by up to 10 feet.",
+		armorOptions : {
+			regExpSearch : /^(?=.*dwarven)(?=.*half)(?=.*plate).*$/i,
+			name : "Dwarven Half Plate",
+			source : [["DMG2024", 255]],
+			type : "medium",
+			ac : 17,
+			stealthdis : true,
+			weight : 40,
+			selectNow: true,
+		},
 	},
+	"plate": {
+		description : "While wearing this plate armor, I gain a +2 bonus to AC. In addition, if an effect moves me against my will along the ground, I can use my reaction to reduce the distance I am moved by up to 10 ft.",
+		descriptionFull : "While wearing this plate armor, you gain a +2 bonus to Armor Class. In addition, if an effect moves you against your will along the ground, you can take a Reaction to reduce the distance you are moved by up to 10 feet.",
+		armorOptions : {
+			regExpSearch : /^(?=.*dwarven)(?=.*plate)(?=.*armor).*$/i,
+			name : "Dwarven Plate Armor",
+			source : [["DMG2024", 255]],
+			ac: 20,
+			type: "heavy",
+			stealthdis: true,
+			weight: 65,
+			strReq: 15,
+			selectNow: true,
+		},
+	}
 };
 MagicItemsList["dwarven thrower"] = {
 	name : "Dwarven Thrower",
@@ -2221,8 +2410,8 @@ MagicItemsList["efreeti bottle"] = { // contributed by AelarTheElfRogue
 	weight : 1,
 	action : [["action", ""]]
 };
-MagicItemsList["efreeti chain +3"] = {
-	name : "Efreeti Chain +3",
+MagicItemsList["efreeti chain"] = {
+	name : "Efreeti Chain",
 	source : [["DMG2024", 257]],
 	type : "armor (Chain Mail or Chain Shirt)",
 	rarity : "legendary",
@@ -2233,14 +2422,36 @@ MagicItemsList["efreeti chain +3"] = {
 	weight : 55,
 	languageProfs : ["Primordial"],
 	savetxt : { immune : ["fire"] },
-	chooseGear : {
-		type : "armor",
-		prefixOrSuffix : "brackets",
-		descriptionChange : ["replace", "armor"],
-		excludeCheck : function (inObjKey, inObj) {
-			return !(/chain/i).test(inObj.regExpSearch);
-		}
+	choices: ["Chain Shirt", "Chain Mail"],
+	"chain shirt": {
+		description : "While wearing this chain shirt, I gain a +3 bonus to AC, I am immune to fire damage, and I can understand and speak Primordial. In addition, I can stand on and walk across molten rock as if it were solid ground.",
+		descriptionFull : "While wearing this chain shirt, you gain a +3 bonus to Armor Class, you have Immunity to Fire damage, and you know Primordial. In addition, you can stand on and move across molten rock as if it were solid ground.",
+		armorOptions : {
+			regExpSearch : /^(?=.*efreeti)(?=.*chain)(?=.*shirt).*$/i,
+			name : "Efreeti Chain Shirt",
+			source : [["DMG2024", 257]],
+			type : "medium",
+			ac : 16,
+			stealthdis : false,
+			weight : 20,
+			selectNow: true,
+		},
 	},
+	"chain mail": {
+		description : "While wearing this chain mail, I gain a +3 bonus to AC, I am immune to fire damage, and I can understand and speak Primordial. In addition, I can stand on and walk across molten rock as if it were solid ground.",
+		descriptionFull : "While wearing this chain mail, you gain a +3 bonus to Armor Class, you have Immunity to Fire damage, and you know Primordial. In addition, you can stand on and move across molten rock as if it were solid ground.",
+		armorOptions : {
+			regExpSearch : /^(?=.*efreeti)(?=.*chain)(?=.*mail).*$/i,
+			name : "Efreeti Chain Mail",
+			source : [["DMG2024", 257]],
+			ac: 19,
+			type: "heavy",
+			stealthdis: true,
+			weight: 55,
+			strReq: 13,
+			selectNow: true,
+		},
+	}
 };
 MagicItemsList["elemental gem"] = {
 	name : "Elemental Gem",
@@ -2283,23 +2494,44 @@ MagicItemsList["elixir of health"] = {
 	descriptionFull : "When you drink this potion, you are cured of all magical contagions. In addition, the following conditions end on you: Blinded, Deafened, Paralyzed, and Poisoned. The clear, red liquid has tiny bubbles of light in it.",
 	weight : 0.5
 };
-MagicItemsList["elven chain +1"] = {
-	name : "Elven Chain +1",
+MagicItemsList["elven chain"] = {
+	name : "Elven Chain",
 	source : [["DMG2024", 257]],
 	type : "armor (chain mail or chain shirt)",
 	rarity : "rare",
 	magicItemTable : "?",
 	description : "I gain a +1 bonus to AC while I wear this armor. I am considered proficient with this armor even if I lack proficiency with medium armor.",
 	descriptionFull : "You gain a +1 bonus to Armor Class while you wear this armor. You are considered trained with this armor even if you lack training with Medium or Heavy armor.",
-	weight : 20,
-	chooseGear : {
-		type : "armor",
-		prefixOrSuffix : "brackets",
-		descriptionChange : ["replace", "armor"],
-		excludeCheck : function (inObjKey, inObj) {
-			return !(/chain/i).test(inObj.regExpSearch);
-		}
+	choices: ["Chain Shirt", "Chain Mail"],
+	"chain shirt": {
+		description : "I gain a +1 bonus to AC while I wear this chain shirt. I am considered proficient with this armor even if I lack proficiency with medium armor.",
+		descriptionFull : "You gain a +1 bonus to Armor Class while you wear this chain shirt. You are considered trained with this armor even if you lack training with Medium or Heavy armor.",
+		armorOptions : {
+			regExpSearch : /^(?=.*elven)(?=.*chain)(?=.*shirt).*$/i,
+			name : "Elven Chain Shirt",
+			source : [["DMG2024", 257]],
+			type : "medium",
+			ac : 14,
+			stealthdis : false,
+			weight : 20,
+			selectNow: true,
+		},
 	},
+	"chain mail": {
+		description : "I gain a +1 bonus to AC while I wear this chain mail. I am considered proficient with this armor even if I lack proficiency with medium armor.",
+		descriptionFull : "You gain a +1 bonus to Armor Class while you wear this chain mail. You are considered trained with this armor even if you lack training with Medium or Heavy armor.",
+		armorOptions : {
+			regExpSearch : /^(?=.*elven)(?=.*chain)(?=.*mail).*$/i,
+			name : "Elven Chain Mail",
+			source : [["DMG2024", 257]],
+			ac: 17,
+			type: "heavy",
+			stealthdis: true,
+			weight: 55,
+			strReq: 13,
+			selectNow: true,
+		},
+	}
 };
 MagicItemsList["enduring spellbook"] = {
 	name : "Enduring Spellbook",
@@ -4404,7 +4636,7 @@ MagicItemsList["mace of terror"] = {
 		baseWeapon: "mace",
 		regExpSearch: /^(?=.*mace)(?=.*terror).*$/i,
 		name: "Mace of Terror",
-    source : [["DMG2024", 276]],
+    source: [["DMG2024", 276]],
 		description : "Sap",
 	}
 };
@@ -4813,7 +5045,7 @@ MagicItemsList["oathbow"] = {
 	rarity: "very rare",
 	magicItemTable: "?",
 	attunement: true,
-	choices: ["shortbow", "longbow"],
+	choices: ["Shortbow", "Longbow"],
 	"shortbow": {
 		description: "When I attack with this longbow and say its command phrase, I make the target my sworn enemy if I don't have one already for 7 days or until it dies. Attacks with this bow vs. it get adv, +3d6 damage, ignore cover (not full), and suffer no disadv. from long range. While it lives, I have disadv. when I use other weapons.",
 		descriptionFull: 'When you nock an arrow on this bow, it whispers in Elvish, "Swift defeat to my enemies." When you use this weapon to make a ranged attack, you can, as a command phrase, say, "Swift death to you who have wronged me." The target of your attack becomes your sworn enemy until it dies or until dawn seven days later. You can have only one such sworn enemy at a time. When your sworn enemy dies, you can choose a new one after the next dawn.\n   When you make a ranged attack roll with this weapon against your sworn enemy, you have Advantage on the roll. In addition, your target gains no benefit from Half Cover or Three-Quarters Cover, and you suffer no Disadvantage due to long range. If the attack hits, your sworn enemy takes an extra 3d6 piercing damage.\n   While your sworn enemy lives, you have Disadvantage on attack rolls with all other weapons.',
@@ -5005,28 +5237,46 @@ MagicItemsList["pipes of the sewers"] = { // contains contributions by Soilentbr
 };
 MagicItemsList["plate armor of etherealness"] = {
 	name: "Plate Armor of Etherealness",
-	source: [["DMG2024", 286]],
+	nameTest: "of Etherealness",
+	source: ["DMG2024", 286],
 	type: "armor (half plate or plate)",
 	rarity: "legendary",
-	magicItemTable: "?",
-	description: "As a Magic Action while I'm wearing this plate armor, I can speak its command word to cast Etherealness on myself. This effect lasts for 10 minutes or until I remove the armor or use an action to speak the command word again. This property of the armor can't be used again until the next dawn.",
-	descriptionFull: "While you're wearing this armor, you can speak its command word as an action to gain the effect of the Etherealness spell, which lasts for 10 minutes or until you remove the armor or use an action to speak the command word again. This property of the armor can't be used again until the next dawn.",
 	attunement: true,
-	weight: 65,
+	description: "While you’re wearing this armor, you can take a Magic action and use a command word to gain the effect of the Etherealness spell. The spell ends immediately if you remove the armor or take a Magic action to repeat the command word.",
+	descriptionFull: "While you’re wearing this armor, you can take a Magic action and use a command word to gain the effect of the Etherealness spell. The spell ends immediately if you remove the armor or take a Magic action to repeat the command word. This property of the armor can’t be used again until the next dawn.\n Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body.",
+	choices: ["Half Plate", "Plate"],
+	"half plate": {
+		description: "While you’re wearing this half plate armor, you can take a Magic action and use a command word to gain the effect of the Etherealness spell. The spell ends immediately if you remove the armor or take a Magic action to repeat the command word.",
+		descriptionFull: "While you’re wearing this half platearmor, you can take a Magic action and use a command word to gain the effect of the Etherealness spell. The spell ends immediately if you remove the armor or take a Magic action to repeat the command word. This property of the armor can’t be used again until the next dawn.\n Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body.",
+		armorOptions : {
+			regExpSearch : /^(?=.*half)(?=.*plate)(?=.*etherealness).*$/i,
+			name : "Half Plate Armor of Etherealness",
+			source : [["DMG2024", 286]],
+			type : "medium",
+			ac : 15,
+			stealthdis : true,
+			weight : 40,
+			selectNow: true,
+		},
+	},
+	"plate": {
+		description: "While you’re wearing this plate armor, you can take a Magic action and use a command word to gain the effect of the Etherealness spell. The spell ends immediately if you remove the armor or take a Magic action to repeat the command word.",
+		descriptionFull: "While you’re wearing this plate armor, you can take a Magic action and use a command word to gain the effect of the Etherealness spell. The spell ends immediately if you remove the armor or take a Magic action to repeat the command word. This property of the armor can’t be used again until the next dawn.\n Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body.",
+		armorOptions : {
+			regExpSearch : /^(?=.*plate)(?=.*armor)(?=.*etherealness).*$/i,
+			name : "Plate Armor of Etherealness",
+			source : [["DMG2024", 286]],
+			ac: 18,
+			type: "heavy",
+			stealthdis: true,
+			weight: 65,
+			strReq: 15,
+			selectNow: true,
+		},
+	},
 	usages: 1,
 	recovery: "dawn",
-	action: [["action", " (start/stop)"]],
-	armorAdd: "Plate Armor of Etherealness",
-	armorOptions: {
-		regExpSearch: /^(?=.*plate)(?=.*etherealness).*$/i,
-		name: "Plate Armor of Etherealness",
-		source: [["SRD", 233], ["D", 185]],
-		type: "heavy",
-		ac: 18,
-		stealthdis: true,
-		weight: 65,
-		strReq: 15,
-	},
+	action: [["action", "start/stop ethereal"]],
 	spellcastingBonus: {
 		name: "once per dawn",
 		spells: ["etherealness"],
@@ -5035,7 +5285,7 @@ MagicItemsList["plate armor of etherealness"] = {
 	},
 	spellChanges: {
 		"etherealness": {
-			components: "V,M\u0192",
+			components: "",//removed due to item casting
 			duration: "10 min",
 			description: "I travel to the Ethereal Plane; move there freely, but able to perceive 60 ft into the normal plane",
 			changes: "Using the Plate Armor of Etherealness, I can cast Etherealness, but only on myself and it lasts only 10 minutes.",
@@ -5048,9 +5298,10 @@ MagicItemsList["pole of angling"] = {
 	magicItemTable: "?",
 	type: "wondrous item",
 	rarity: "common",
-	description: "While holding this 10 ft pole, I can ue a Magic Action and transform it into a fishing pole with a hook, a line, and a reel. I can use another Magic Action to change the fishing pole back into a normal 10 ft pole.",
-	descriptionFull: "While holding this 10-foot pole, I can use a Magic Action and transform it into a fishing pole with a hook, a line, and a reel. Using another Magic Action changes the fishing pole back into a normal 10-foot pole.",
-	weight: 7
+	description: "This item functions as a Pole. While holding it, you can take a Magic action to cause it to transform into a fishing pole with a hook, a line, and a reel, or have the fishing pole revert to a Pole.",
+	descriptionFull: "This item functions as a Pole. While holding it, you can take a Magic action to cause it to transform into a fishing pole with a hook, a line, and a reel, or have the fishing pole revert to a Pole.",
+	weight: 7,
+	action: [["action", "transform"]],
 };
 MagicItemsList["pole of collapsing"] = {
 	name: "Pole of Collapsing",
@@ -5058,10 +5309,10 @@ MagicItemsList["pole of collapsing"] = {
 	magicItemTable: "?",
 	type: "wondrous item",
 	rarity: "common",
-	description: "As an action while holding this 10 ft pole, I can take a Magic Action to have it collapse into a 1-ft-long rod. The pole's weight doesn't change. As a Magic Action while holding the rod, I can take another Magic Action to have it elongate back to a pole, but only as long as the surrounding space allows.",
-	descriptionFull: "While holding this 10-foot pole, you can use a Magic Action to cause it to collapse into a 1-foot-long rod, for ease of storage. The pole's weight doesn't change. You can use a Magic Action and cause the rod to revert to a pole; however, the rod will elongate only as far as the surrounding space allows.",
+	description: "This item functions as a Pole.While holding it, you can take a Magic action to collapse it into a 1-foot - long rod for ease of storage(the pole’s weight doesn’t change) or cause the 1-foot - long rod to revert to a Pole.The rod elongates only as far as the surrounding space allows.",
+	descriptionFull: "This item functions as a Pole. While holding it, you can take a Magic action to collapse it into a 1-foot-long rod for ease of storage (the pole’s weight doesn’t change) or cause the 1-foot-long rod to revert to a Pole. The rod elongates only as far as the surrounding space allows.",
 	weight: 7,
-	action: [["action", ""]]
+	action: [["action", "transform"]],
 };
 MagicItemsList["portable hole"] = {
 	name: "Portable Hole",
@@ -5069,9 +5320,8 @@ MagicItemsList["portable hole"] = {
 	type: "wondrous item",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "As Magic Action, I can unfold this black cloth, 6 ft in diameter, and place it on a solid surface, whereupon it creates a 10-ft deep extradimensional hole. It can't be used to create passages. The space is always the same, so I can store things and creatures in there. Removing it and folding it back takes an action.",
-	descriptionLong: "As Magic Action, I can unfold this circular black cloth, 6 ft in diameter, and place it on a solid surface, whereupon it creates a 10-ft deep extradimensional hole. It can't be used to create passages. Removing it and folding it back takes an action. The space created is always the same, so I can store things and creatures in there. The hole always weighs next to nothing. Creatures inside the folded up hole can breathe for 10 min and can escape as an action with a DC 10 Strength (Ath) check, appearing next to me if they do. Placing the hole in another extradimensional space instantly destroys both and opens a gate to the Astral Plane.",
-	descriptionFull: "This fine black cloth, soft as silk, is folded up to the dimensions of a handkerchief. It unfolds into a circular sheet 6 feet in diameter.\n   You can use a Magic Action to unfold a portable hole and place it on or against a solid surface, whereupon the portable hole creates an extradimensional hole 10 feet deep. The cylindrical space within the hole exists on a different plane, so it can't be used to create open passages. Any creature inside an open portable hole can exit the hole by climbing out of it.\n   You can use a Magic Action to close a portable hole by taking hold of the edges of the cloth and folding it up. Folding the cloth closes the hole, and any creatures or objects within remain in the extradimensional space. No matter what's in it, the hole weighs next to nothing.\n   If the hole is folded up, a creature within the hole's extradimensional space can use an action to make a DC 10 Strength (Ath) check. On a successful check, the creature forces its way out and appears within 5 feet of the portable hole or the creature carrying it. A breathing creature within a closed portable hole can survive for up to 10 minutes, after which time it begins to suffocate.\n   Placing a portable hole inside an extradimensional space created by a bag of holding, Heward's handy haversack, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10 feet of the gate is sucked through it and deposited in a random location on the Astral Plane. The gate then closes. The gate is one-way only and can't be reopened.",
+	description: "As Magic action, I can unfold this black cloth, 6 ft in diameter, and place it on a solid surface, whereupon it creates a 10-ft deep extradimensional hole. It can't be used to create passages. The space is always the same, so I can store things and creatures in there. Removing it and folding it back takes a Magic action.",
+	descriptionFull: "This fine black cloth, soft as silk, is folded up to the dimensions of a handkerchief. It unfolds into a circular sheet 6 feet in diameter.\n You can take a Magic action to unfold a Portable Hole and place it on or against a solid surface, whereupon the Portable Hole creates an extradimensional hole 10 feet deep. The cylindrical space within the hole exists on a different plane of existence, so it can’t be used to create open passages. Any creature inside an open Portable Hole can exit the hole by climbing out of it.\n You can take a Magic action to close a Portable Hole by taking hold of the edges of the cloth and folding it up. Folding the cloth closes the hole, and any creatures or objects within remain in the extradimensional space. No matter what’s in it, the hole weighs next to nothing.\n If the hole is folded up, a creature within the hole’s extradimensional space can take an action to make a DC 10 Strength (Athletics) check. On a successful check, the creature forces its way out and appears within 5 feet of the Portable Hole. A closed Portable Hole holds enough air for 1 hour of breathing, divided by the number of breathing creatures inside.\n Placing a Portable Hole inside an extradimensional space created by a Bag of Holding, Heward’s Handy Haversack, or similar item instantly destroys both items and opens a gate to the Astral Plane. The gate originates where the one item was placed inside the other. Any creature within 10 feet of the gate and not behind Total Cover is sucked through it and deposited in a random location on the Astral Plane. The gate then closes. The gate is one-way only and can’t be reopened.",
 	action: [["action", " (place/fold)"]]
 };
 MagicItemsList["potion of animal friendship"] = {
@@ -5080,13 +5330,12 @@ MagicItemsList["potion of animal friendship"] = {
 	type: "potion",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "Once as an action, I can drink this potion or administer it to another to be able to cast the Animal Friendship spell at the 3rd Level for 1 hour at will, charming beasts for 1 hour if it fails a DC 13 Wis save. Agitating this muddy liquid brings little bits into view: a fish scale, a hummingbird tongue, a cat claw, or a squirrel hair.",
-	descriptionFull: "When you drink this potion, you can cast the Animal Friendship spell at the 3rd level (save DC 13) for 1 hour at will. Agitating this muddy liquid brings little bits into view: a fish scale, a hummingbird tongue, a cat claw, or a squirrel hair.",
+	description: "When you drink this potion, you can cast the level 3 version of the Animal Friendship spell (save DC 13).",
+	descriptionFull: "When you drink this potion, you can cast the level 3 version of the Animal Friendship spell (save DC 13). Agitating this potion’s muddy liquid brings little bits into view: a fish scale, a hummingbird feather, a cat claw, or a squirrel hair.",
 	weight: 0.5,
-	extraTooltip: "AL: can always be bought for 100 gp",
 	spellChanges: {
 		"Animal Friendship": {
-			description: "Target up to 3 beasts you can see within range. Target must suceed on a Wis save or be Charmed for duration or until damage received.",
+			description: "Target up to 3 beasts you can see within 30-ft. Target must succeed on a Wisdom saving throw or be Charmed for duration or until damage is taken.",
 			changes: "When using the Potion to cast Animal Friendship, it is cast at 3rd-level."
 		},
 	}
@@ -5097,10 +5346,9 @@ MagicItemsList["potion of clairvoyance"] = {
 	type: "potion",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "Once as an action, I can drink this potion or administer it to another to gain the effect of the Clairvoyance spell. This creates an invisible sensor within 1 mile, in a familiar or obvious location, that the consumer can see or hear through. An eyeball bobs in this yellowish liquid but vanishes when the potion is opened.",
-	descriptionFull: "When you drink this potion, you gain the effect of the Clairvoyance spell. An eyeball bobs in this yellowish liquid but vanishes when the potion is opened.",
+	description: "When you drink this potion, you gain the effect of the Clairvoyance spell (no Concentration required). An eyeball bobs in this potion’s yellowish liquid but vanishes when the potion is opened.",
+	descriptionFull: "When you drink this potion, you gain the effect of the Clairvoyance spell (no Concentration required). An eyeball bobs in this yellowish liquid but vanishes when the potion is opened.",
 	weight: 0.5,
-	extraTooltip: "AL: can always be bought for 75 gp"
 };
 MagicItemsList["potion of climbing"] = {
 	name: "Potion of Climbing",
@@ -5108,10 +5356,9 @@ MagicItemsList["potion of climbing"] = {
 	type: "potion",
 	rarity: "common",
 	magicItemTable: "?",
-	description: "Once as an action, I can drink this potion or administer it to another to gain the effect of the Comprehend Languages spell. The consumer understands the literal meaning of any spoken language heard or written text touched and read. This liquid is a clear concoction with bits of salt and soot swirling in it.",
-	descriptionFull: "When you drink this potion, you gain the effect of a comprehend languages spell for 1 hour. This liquid is a clear concoction with bits of salt and soot swirling in it.",
+	description: "When you drink this potion, you gain a Climb Speed equal to your Speed for 1 hour. During this time, you have Advantage on Strength (Athletics) checks to climb.",
+	descriptionFull: "When you drink this potion, you gain a Climb Speed equal to your Speed for 1 hour. During this time, you have Advantage on Strength (Athletics) checks to climb. This potion is separated into brown, silver, and gray layers resembling bands of stone. Shaking the bottle fails to mix the colors. ",
 	weight: 0.5,
-	extraTooltip: "AL: can always be bought for 75 gp"
 };
 MagicItemsList["potion of comprehension"] = {
 	name: "Potion of Comprehension",
@@ -5119,10 +5366,9 @@ MagicItemsList["potion of comprehension"] = {
 	type: "potion",
 	rarity: "common",
 	magicItemTable: "?",
-	description: "Once as an action, I can drink this potion or administer it to another to gain, for 1 hour, the effects of Comprehend Languages. This potion’s liquid is a clear concoction with bits of salt and soot swirling in it.",
-	descriptionFull: "When you drink this potion, you gain a climbing speed equal to your walking speed for 1 hour. During this time, you have advantage on Strength (Athletics) checks you make to climb. This potion’s liquid is a clear concoction with bits of salt and soot swirling in it.",
+	description: "When you drink this potion, you gain the effect of the Comprehend Languages spell for 1 hour.. This potion’s liquid is a clear concoction with bits of salt and soot swirling in it.",
+	descriptionFull: "When you drink this potion, you gain the effect of the Comprehend Languages spell for 1 hour. This potion’s liquid is a clear concoction with bits of salt and soot swirling in it.",
 	weight: 0.5,
-	extraTooltip: "AL: can always be bought for 75 gp"
 };
 MagicItemsList["potion of diminution"] = {
 	name: "Potion of Diminution",
@@ -5130,8 +5376,7 @@ MagicItemsList["potion of diminution"] = {
 	type: "potion",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "Once as an action, I can drink this potion or administer it to another to be reduced as per the Enlarge/Reduce spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it.",
-	descriptionLong: "Once as an action, I can drink this potion or administer it to another to be reduced as per the Enlarge/Reduce spell for 1d4 hours (no concentration required). This causes the consumer to decrease one size category as it halves in size in all dimensions and its weight is reduced to one-eight of normal. Its weapon attacks deal -1d4 damage (min 1) and it has disadvantage on Strength checks and saving throws. The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it. Shaking the bottle fails to interrupt this process.",
+	description: "When you drink this potion, you gain the \“reduce\” effect of the Enlarge/Reduce spell for 1d4 hours (no Concentration required).. The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it.",
 	descriptionFull: "When you drink this potion, you gain the \"reduce\" effect of the Enlarge/Reduce spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it. Shaking the bottle fails to interrupt this process.",
 	weight: 0.5
 };
@@ -5141,8 +5386,8 @@ MagicItemsList["potion of fire breath"] = {
 	type: "potion",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "Once as an action, I can drink this potion or administer it to another to, for 1 hour, use a bonus action to do 4d6 fire damage at a target within 30 ft, Dex save DC 13 halves. This can be done 3 times. This potion's orange liquid flickers, and smoke fills the top of the container and wafts out whenever it is opened.",
-	descriptionFull: "After drinking this potion, you can use a bonus action to exhale fire at a target within 30 feet of you. The target must make a DC 13 Dexterity saving throw, taking 4d6 fire damage on a failed save, or half as much damage on a successful one. The effect ends after you exhale the fire three times or when 1 hour has passed. This potion's orange liquid flickers, and smoke fills the top of the container and wafts out whenever it is opened.",
+	description: "After drinking this potion, you can take a Bonus Action to exhale fire at a target within 30 feet of yourself. The target makes a DC 13 Dexterity saving throw, taking 4d6 Fire damage on a failed save or half as much damage on a successful one. The effect ends after you exhale the fire three times or when 1 hour has passed.",
+	descriptionFull: "After drinking this potion, you can take a Bonus Action to exhale fire at a target within 30 feet of yourself. The target makes a DC 13 Dexterity saving throw, taking 4d6 Fire damage on a failed save or half as much damage on a successful one. The effect ends after you exhale the fire three times or when 1 hour has passed. This potion's orange liquid flickers, and smoke fills the top of the container and wafts out whenever it is opened.",
 	weight: 0.5
 };
 MagicItemsList["potion of flying"] = {
@@ -5151,8 +5396,8 @@ MagicItemsList["potion of flying"] = {
 	type: "potion",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "Once as an action, I can drink this potion or administer it to another to gain a flying speed equal to the consumer's walking speed for 1 hour and be able to hover. When the potion wears off, the consumer falls. This potion's clear liquid floats at the top of its container and has cloudy white impurities drifting in it.",
-	descriptionFull: "When you drink this potion, you gain a flying speed equal to your walking speed for 1 hour and can hover. If you're in the air when the potion wears off, you fall unless you have some other means of staying aloft. This potion's clear liquid floats at the top of its container and has cloudy white impurities drifting in it.",
+	description: "When you drink this potion, you gain a Fly Speed equal to your Speed for 1 hour and can hover. If you’re in the air when the potion wears off, you fall unless you have some other means of staying aloft. This potion's clear liquid floats at the top of its container and has cloudy white impurities drifting in it.",
+	descriptionFull: "When you drink this potion, you gain a Fly Speed equal to your Speed for 1 hour and can hover. If you’re in the air when the potion wears off, you fall unless you have some other means of staying aloft. This potion's clear liquid floats at the top of its container and has cloudy white impurities drifting in it.",
 	weight: 0.5
 };
 MagicItemsList["potion of gaseous form"] = {
@@ -5161,17 +5406,16 @@ MagicItemsList["potion of gaseous form"] = {
 	type: "potion",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "As an action, I can drink this potion or administer it to another to gain the effect of the Gaseous Form spell for 1 hour (no concentration required), until the consumer drops to 0 HP or takes a Magic Action to remove it, or I remove it as a bonus action. This potion's container seems to hold fog that moves and pours like water.",
-	descriptionLong: "As an action, I can drink this potion or administer it to another to gain the effect of the Gaseous Form spell for 1 hour (no concentration required), until the consumer drops to 0 HP or takes a Magic Action to remove it, or I remove it as a bonus action. The consumer, along with everything it's wearing and carrying, transforms into a misty cloud. In this form, it can only move by flying at 10 ft speed, can hover, can't fall, has resistance to nonmagical damage, adv. on Str, Dex, and Con saves, can pass through mere cracks, but can't talk, manipulate items, cast spells, or attack. This container seems to hold fog that moves and pours like water.",
-	descriptionFull: "When you drink this potion, you gain the effect of the Gaseous Form spell for 1 hour (no concentration required) or until you end the effect as a bonus action. This potion's container seems to hold fog that moves and pours like water.",
+	description: "When you drink this potion, you gain the effect of the Gaseous Form spell for 1 hour (no Concentration required) or until you end the effect as a Bonus Action.This potion's container seems to hold fog that moves and pours like water.",
+	descriptionFull: "When you drink this potion, you gain the effect of the Gaseous Form spell for 1 hour (no Concentration required) or until you end the effect as a Bonus Action.. This potion's container seems to hold fog that moves and pours like water.",
 	weight: 0.5
 };
 MagicItemsList["potion of giant strength"] = {
 	name: "Potion of Giant Strength",
 	source: [["DMG2024", 288]],
 	type: "potion",
-	description: "As an action, I can drink this potion or administer it to another to change the consumer's Strength score for 1 hour. The number of this score depends on the type of giant from which a sliver of fingernail is floating in this potions' transparent liquid.",
-	descriptionFull: "When you drink this potion, your Strength score changes for 1 hour. The type of giant determines the score (see the table below). The potion has no effect on you if your Strength is equal to or greater than that score.\n   This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type. The potion of frost giant strength and the potion of stone giant strength have the same effect.\n\n" + toUni("Type\t\tStr\tRarity") + "\nHill giant\t\t21\tUncommon\nStone/frost giant\t23\tRare\nFire giant   \t25\tRare\nCloud giant\t27\tVery rare\nStorm giant\t29\tLegendary",
+	description: "When you drink this potion, your Strength score changes for 1 hour. The type of giant determines the score (see the table below). The potion has no effect on you if your Strength is equal to or greater than that score.",
+	descriptionFull: "When you drink this potion, your Strength score changes for 1 hour. The type of giant determines the score (see the table below). The potion has no effect on you if your Strength is equal to or greater than that score.\n   This potion’s transparent liquid has floating in it a sliver of light resembling a giant’s fingernail. The potion of frost giant strength and the potion of stone giant strength have the same effect.\n\n" + toUni("Type\t\tStr\tRarity") + "\nHill giant\t\t21\tUncommon\nStone/frost giant\t23\tRare\nFire giant   \t25\tRare\nCloud giant\t27\tVery rare\nStorm giant\t29\tLegendary",
 	weight: 0.5,
 	allowDuplicates: true,
 	choices: ["Hill (Str 21, uncommon)", "Frost (Str 23, rare)", "Stone (Str 23, rare)", "Fire (Str 25, rare)", "Cloud (Str 27, very rare)", "Storm (Str 29, legendary)"],
@@ -5230,8 +5474,8 @@ MagicItemsList["potion of greater invisibility"] = {
 	type: "potion",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "Once as an action, I can drink this potion or administer it to another to become invisible for 1 hour. Anything the consumer wears or carries is invisible along with it. If invisible during Initiative Roll, I have Adv on the roll. Attack rolls against me have DisAdv and my attack rolls have Adv. This potion's container looks empty but feels as though it holds liquid.",
-	descriptionFull: "Once as an action, I can drink this potion or administer it to another to become invisible for 1 hour. Anything the consumer wears or carries is invisible along with it. If invisible during Initiative Roll, I have Adv on the roll. Attack rolls against me have DisAdv and my attack rolls have Adv. This potion's container looks empty but feels as though it holds liquid.",
+	description: "This potion’s container looks empty but feels as though it holds liquid. When you drink the potion, you have the Invisible condition for 1 hour. Anything the consumer wears or carries is invisible along with it. If invisible during Initiative Roll, I have Adv on the roll. Attack rolls against me have DisAdv and my attack rolls have Adv.",
+	descriptionFull: "This potion’s container looks empty but feels as though it holds liquid. When you drink the potion, you have the Invisible condition for 1 hour. Anything the consumer wears or carries is invisible along with it. If invisible during Initiative Roll, I have Adv on the roll. Attack rolls against me have DisAdv and my attack rolls have Adv.",
 	weight: 0.5,
 };
 MagicItemsList["potion of growth"] = {
@@ -5240,8 +5484,7 @@ MagicItemsList["potion of growth"] = {
 	type: "potion",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "As an action, I can drink this potion or administer it to another to be enlarged as per the Enlarge/Reduce spell for 10 minutes (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts.",
-	descriptionLong: "As an action, I can drink this potion or administer it to another to be enlarged as per the Enlarge/Reduce spell for 10 minutes (no concentration required). This causes the consumer to grow one size category as it doubles in size in all dimensions and its weight is multiplied by eight. This growth stops early if the encompassing space is fully filled. Its weapon attacks and unarmed strikes deal +1d4 damage and it has advantage on Strength checks and saving throws. The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
+	description: "When you drink this potion, you gain the \“enlarge\” effect of the Enlarge/Reduce spell for 10 minutes (no Concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts.",
 	descriptionFull: "When you drink this potion, you gain the \"enlarge\" effect of the Enlarge/Reduce spell for 10 minutes (no concentration required). The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.",
 	weight: 0.5
 };
@@ -5249,8 +5492,8 @@ MagicItemsList["potion of healing"] = {
 	name: "Potion of Healing",
 	source: [["DMG2024", 288]],
 	type: "potion",
-	description: "As an action, I can drink this potion or administer it to another to heal a number of hit points depending on the type of potion. This potion's red liquid glimmers when agitated.",
-	descriptionFull: "You regain hit points when you drink this potion. The number of hit points depends on the potion's rarity, as shown in the Potions of Healing table. Whatever its potency, the potion's red liquid glimmers when agitated.",
+	description: "You regain Hit Points when you drink this potion. The number of Hit Points depends on the potion’s rarity, as shown in the table below. This potion's red liquid glimmers when agitated.",
+	descriptionFull: "You regain Hit Points when you drink this potion. The number of Hit Points depends on the potion’s rarity, as shown in the table below. Whatever its potency, the potion's red liquid glimmers when agitated.",
 	weight: 0.5,
 	allowDuplicates: true,
 	choices: ["Healing (2d4+2, common)", "Greater Healing (4d4+4, uncommon)", "Superior Healing (8d4+8, rare)", "Supreme Healing (10d4+20, very rare)"],
@@ -5292,8 +5535,8 @@ MagicItemsList["potion of heroism"] = {
 	type: "potion",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "As an action, I can drink this potion or administer it to another to gain 10 temporary hit points for 1 hour. For the same duration, the consumer is under the effect of the Bless spell (no concentration required), which adds +1d4 on all attack rolls and saving throws. This blue potion bubbles and steams as if boiling.",
-	descriptionFull: "For 1 hour after drinking it, you gain 10 temporary hit points that last for 1 hour. For the same duration, you are under the effect of the Bless spell (no concentration required). This blue potion bubbles and steams as if boiling.",
+	description: "When you drink this potion, you gain 10 Temporary Hit Points that last for 1 hour. For the same duration, you are under the effect of the Bless spell (no Concentration required). For the same duration, the consumer is under the effect of the Bless spell (no concentration required), which adds +1d4 on all attack rolls and saving throws. This blue potion bubbles and steams as if boiling.",
+	descriptionFull: "When you drink this potion, you gain 10 Temporary Hit Points that last for 1 hour. For the same duration, you are under the effect of the Bless spell (no Concentration required). This blue potion bubbles and steams as if boiling.",
 	weight: 0.5
 };
 MagicItemsList["potion of invisibility"] = {
@@ -5302,8 +5545,18 @@ MagicItemsList["potion of invisibility"] = {
 	type: "potion",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "As an action, I can drink this potion or administer it to another to become invisible for 1 hour. Anything the consumer wears or carries is invisible along with it. If invisible when Initiative occurs, you have Adv. Attack rolls against you have DisAdv, and your attack rolls have Adv. This potion's container looks empty but feels as though it holds liquid.",
-	descriptionFull: "This potion's container looks empty but feels as though it holds liquid. When you drink it, you become invisible for 1 hour. Anything you wear or carry is invisible with you. The effect ends early if you attack or cast a spell.",
+	description: "This potion’s container looks empty but feels as though it holds liquid. When you drink the potion, you have the Invisible condition for 1 hour. The effect ends early if you make an attack roll, deal damage, or cast a spell.",
+	descriptionFull: "This potion’s container looks empty but feels as though it holds liquid. When you drink the potion, you have the Invisible condition for 1 hour. The effect ends early if you make an attack roll, deal damage, or cast a spell.",
+	weight: 0.5,
+};
+MagicItemsList["potion of invulnerability"] = {
+	name: "Potion of Invulnerability",
+	source: [["SRD24", 188]], //Listed on DDB as Free Rules 2024, 188
+	type: "potion",
+	rarity: "rare",
+	magicItemTable: "?",
+	description: "For 1 minute after you drink this potion, you have Resistance to all damage.",
+	descriptionFull: "For 1 minute after you drink this potion, you have Resistance to all damage. This potion’s syrupy liquid looks like liquefied iron.",
 	weight: 0.5,
 };
 MagicItemsList["potion of longevity"] = {
@@ -5312,9 +5565,8 @@ MagicItemsList["potion of longevity"] = {
 	type: "potion",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "As an action, I can drink this potion or administer it to another to reduce the consumer's physical age is by 1d6+6 years, to a minimum of 13 years. Subsequent consumptions of this type of potion have a 10% cumulative chance to instead age the consumer by 1d6+6 years.",
-	descriptionLong: "As an action, I can drink this potion or administer it to another to reduce the consumer's physical age is by 1d6+6 years, to a minimum of 13 years. Subsequent consumptions of this type of potion have a 10% cumulative chance to instead age the consumer by 1d6+6 years. Suspended in this amber liquid are a scorpion's tail, an adder's fang, a dead spider, and a tiny heart that, against all reason, is still beating. These ingredients vanish when the potion is opened.",
-	descriptionFull: "When you drink this potion, your physical age is reduced by 1d6+6 years, to a minimum of 13 years. Each time you subsequently drink a potion of longevity, there is 10 percent cumulative chance that you instead age by 1d6+6 years. Suspended in this amber liquid are a scorpion's tail, an adder's fang, a dead spider, and a tiny heart that, against all reason, is still beating. These ingredients vanish when the potion is opened.",
+	description: "When you drink this potion, your physical age is reduced by 1d6 + 6 years, to a minimum of 13 years. Each time you subsequently drink a Potion of Longevity, there is 10 percent cumulative chance that you instead age by 1d6 + 6 years.",
+	descriptionFull: "When you drink this potion, your physical age is reduced by 1d6 + 6 years, to a minimum of 13 years. Each time you subsequently drink a Potion of Longevity, there is 10 percent cumulative chance that you instead age by 1d6 + 6 years. Suspended in this amber liquid is a tiny heart that, against all reason, is still beating. These ingredients vanish when the potion is opened.",
 	weight: 0.5
 };
 MagicItemsList["potion of mind reading"] = {
@@ -5323,8 +5575,8 @@ MagicItemsList["potion of mind reading"] = {
 	type: "potion",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "As an action, I can drink this potion or administer it to another to gain the effect of the Detect Thoughts spell (save DC 13) for 10 minutes (no concentration required). The potion's dense, purple liquid has an ovoid cloud of pink floating in it.",
-	descriptionFull: "When you drink this potion, you gain the effect of the Detect Thoughts spell (save DC 13) for 10 minutes, without Concentration being required. The potion's dense, purple liquid has an ovoid cloud of pink floating in it.",
+	description: "When you drink this potion, you gain the effect of the Detect Thoughts spell (save DC 13) for 10 minutes (no Concentration required). The potion's dense, purple liquid has an ovoid cloud of pink floating in it.",
+	descriptionFull: "When you drink this potion, you gain the effect of the Detect Thoughts spell (save DC 13) for 10 minutes, (no Concentration required). The potion's dense, purple liquid has an ovoid cloud of pink floating in it.",
 	weight: 0.5
 };
 MagicItemsList["potion of poison"] = {
@@ -5333,9 +5585,8 @@ MagicItemsList["potion of poison"] = {
 	type: "potion",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "The consumer of this potion takes 4d6 poison damage and must make a DC 13 Con save or be poisoned for 1 hour. While poisoned, you have DisAdv on attack rolls and saving throws.",
-	descriptionLong: "This concoction looks, smells, and tastes like a potion of healing or other beneficial potion. However, whomever consumes it takes 4d6 poison damage and must make a DC 13 Con save or be poisoned. While poisoned, you have DisAdv on attack rolls and saving throws.",
-	descriptionFull: "This concoction looks, smells, and tastes like a potion of healing or other beneficial potion. However, it is actually poison masked by illusion magic. An Identify spell reveals its true nature.\n   If you drink it, you take 4d6 poison damage, and you must succeed on a DC 13 Constitution saving throw or be poisoned. While poisoned, you have DisAdv on attack rolls and saving throws.",
+	description: "If you drink this potion, you take 4d6 Poison damage and must succeed on a DC 13 Constitution saving throw or have the Poisoned condition for 1 hour.",
+	descriptionFull: "This concoction looks, smells, and tastes like a Potion of Healing or another beneficial potion. However, it is actually poison masked by illusion magic. Identify reveals its true nature.\n If you drink this potion, you take 4d6 Poison damage and must succeed on a DC 13 Constitution saving throw or have the Poisoned condition for 1 hour.",
 	weight: 0.5
 };
 MagicItemsList["potion of pugilism"] = {
@@ -5344,7 +5595,7 @@ MagicItemsList["potion of pugilism"] = {
 	type: "potion",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "As an action, I can drink this potion or administer it to another. Each \Unarmed Strike\ by the consumer deals an extra 1d6 Force damage on a hit. This effect lasts 10 minutes.",
+	description: "After you drink this potion, each Unarmed Strike you make deals an extra 1d6 Force damage on a hit. This effect lasts 10 minutes.",
 	descriptionFull: "After you drink this potion, each Unarmed Strike you make deals an extra 1d6 Force damage on a hit. This effect lasts 10 minutes. This potion is a thick green fluid that tastes like spinach.",
 	weight: 0.5
 };
@@ -5354,7 +5605,7 @@ MagicItemsList["potion of resistance"] = {
 	type: "potion",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "As an action, I can drink this potion or administer it to another to gain resistance to one damage type for 1 hour.",
+	description: "When you drink this potion, you have Resistance to one type of damage for 1 hour. The DM chooses the type or determines it randomly by rolling on the following table.",
 	descriptionFull: "When you drink this potion, you gain resistance to one type of damage for 1 hour. The DM chooses the type or determines it randomly from the options below.\n\n" + toUni("d10\tType\t\td10\tType") + "\n 1\tAcid\t\t 6\tNecrotic\n 2\tCold\t\t 7\tPoison\n 3\tFire\t\t 8\tPsychic\n 4\tForce\t\t 9\tRadiant\n 5\tLightning   \t 10\tThunder",
 	weight: 0.5,
 	allowDuplicates: true,
@@ -5362,43 +5613,43 @@ MagicItemsList["potion of resistance"] = {
 	choicesNotInMenu: true,
 	"acid": {
 		name: "Potion of Acid Resistance",
-		description: "As an action, I can drink this potion or administer it to another to gain resistance to acid damage for 1 hour."
+		description: "When you drink this potion, you gain resistance to acid damage for 1 hour."
 	},
 	"cold": {
 		name: "Potion of Cold Resistance",
-		description: "As an action, I can drink this potion or administer it to another to gain resistance to cold damage for 1 hour."
+		description: "When you drink this potion, you gain resistance to cold damage for 1 hour."
 	},
 	"fire": {
 		name: "Potion of Fire Resistance",
-		description: "As an action, I can drink this potion or administer it to another to gain resistance to fire damage for 1 hour."
+		description: "When you drink this potion, you gain resistance to fire damage for 1 hour."
 	},
 	"force": {
 		name: "Potion of Force Resistance",
-		description: "As an action, I can drink this potion or administer it to another to gain resistance to force damage for 1 hour."
+		description: "When you drink this potion, you gain resistance to force damage for 1 hour."
 	},
 	"lightning": {
 		name: "Potion of Lightning Resistance",
-		description: "As an action, I can drink this potion or administer it to another to gain resistance to lightning damage for 1 hour."
+		description: "When you drink this potion, you gain resistance to lightning damage for 1 hour."
 	},
 	"necrotic": {
 		name: "Potion of Necrotic Resistance",
-		description: "As an action, I can drink this potion or administer it to another to gain resistance to necrotic damage for 1 hour."
+		description: "When you drink this potion, you gain resistance tonecrotic damage for 1 hour."
 	},
 	"poison": {
 		name: "Potion of Poison Resistance",
-		description: "As an action, I can drink this potion or administer it to another to gain resistance to poison damage for 1 hour."
+		description: "When you drink this potion, you gain resistance topoison damage for 1 hour."
 	},
 	"psychic": {
 		name: "Potion of Psychic Resistance",
-		description: "As an action, I can drink this potion or administer it to another to gain resistance to psychic damage for 1 hour."
+		description: "When you drink this potion, you gain resistance topsychic damage for 1 hour."
 	},
 	"radiant": {
 		name: "Potion of Radiant Resistance",
-		description: "As an action, I can drink this potion or administer it to another to gain resistance to radiant damage for 1 hour."
+		description: "When you drink this potion, you gain resistance toradiant damage for 1 hour."
 	},
 	"thunder": {
 		name: "Potion of Thunder Resistance",
-		description: "As an action, I can drink this potion or administer it to another to gain resistance to thunder damage for 1 hour."
+		description: "When you drink this potion, you gain resistance tothunder damage for 1 hour."
 	}
 };
 MagicItemsList["potion of speed"] = {
@@ -5407,9 +5658,8 @@ MagicItemsList["potion of speed"] = {
 	type: "potion",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "As an action, I can drink this potion or administer it to another to gain the effects of Haste for 1 minute (no concentration required). The potion's yellow fluid is streaked with black and swirls on its own.",
-	descriptionLong: "As an action, I can drink this potion or administer it to another to gain the effects of Haste for 1 minute (no concentration required). The potion's yellow fluid is streaked with black and swirls on its own. Haste doubles its speed, gives a +2 bonus to AC, gives advantage on Dex saves, and gives an additional action on each turn. That action can be used only to take the Attack (one weapon attack only), Dash, Disengage, Hide, or Use an Object action. When the spell ends, the benefits of the Haste spell are lost.",
-	descriptionFull: "When you drink this potion, you gain the effect of the Haste spell for 1 minute (no concentration required). The potion's yellow fluid is streaked with black and swirls on its own.",
+	description: "When you drink this potion, you gain the effect of the Haste spell for 1 minute (no Concentration required) without suffering the wave of lethargy that typically occurs when the effect ends. The potion's yellow fluid is streaked with black and swirls on its own.",
+	descriptionFull: "When you drink this potion, you gain the effect of the Haste spell for 1 minute (no Concentration required) without suffering the wave of lethargy that typically occurs when the effect ends. The potion's yellow fluid is streaked with black and swirls on its own.",
 	weight: 0.5
 };
 MagicItemsList["potion of vitality"] = {
@@ -5418,8 +5668,8 @@ MagicItemsList["potion of vitality"] = {
 	type: "potion",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "As an action, I can drink this potion or administer it to another to remove any exhaustion, disease, and poison affecting the consumer. For the next 24 hours, the consumer regains the maximum number of HP for any HD used. The potion's crimson liquid regularly pulses with dull light, calling to mind a heartbeat.",
-	descriptionFull: "When you drink this potion, it removes any exhaustion you are suffering and cures any disease or poison affecting you. For the next 24 hours, you regain the maximum number of hit points for any Hit Die you spend. The potion's crimson liquid regularly pulses with dull light, calling to mind a heartbeat.",
+	description: "When you drink this potion, it removes any Exhaustion levels you have and ends the Poisoned condition on you. For the next 24 hours, you regain the maximum number of Hit Points for any Hit Point Die you spend. The potion's crimson liquid regularly pulses with dull light, calling to mind a heartbeat.",
+	descriptionFull: "When you drink this potion, it removes any Exhaustion levels you have and ends the Poisoned condition on you. For the next 24 hours, you regain the maximum number of Hit Points for any Hit Point Die you spend. The potion's crimson liquid regularly pulses with dull light, calling to mind a heartbeat.",
 	weight: 0.5
 };
 MagicItemsList["potion of water breathing"] = {
@@ -5428,8 +5678,8 @@ MagicItemsList["potion of water breathing"] = {
 	type: "potion",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "As an action, I can drink this potion or administer it to another to be able to breathe underwater for 24 hours. Its cloudy green fluid smells of the sea and has a jellyfish-like bubble floating in it.",
-	descriptionFull: "You can breathe underwater for 24 hours after drinking this potion. Its cloudy green fluid smells of the sea and has a jellyfish-like bubble floating in it.",
+	description: "You can breathe underwater for 24 hours after drinking this potion. This potion’s cloudy green fluid smells of the sea and has a jellyfish-like bubble floating in it.",
+	descriptionFull: "You can breathe underwater for 24 hours after drinking this potion. This potion’s cloudy green fluid smells of the sea and has a jellyfish-like bubble floating in it.",
 	weight: 0.5,
 };
 MagicItemsList["pot of awakening"] = {
@@ -5438,8 +5688,8 @@ MagicItemsList["pot of awakening"] = {
 	magicItemTable: "?",
 	type: "wondrous item",
 	rarity: "common",
-	description: "If I plant an ordinary shrub in this 10 lb clay pot and let it grow for 30 days, the shrub magically transforms into an awakened shrub at the end of that time. When the shrub awakens, its roots break the pot, destroying it. The awakened shrub is friendly toward me. Absent commands from me, it does nothing.",
-	descriptionFull: "If you plant an ordinary shrub in this 10-pound clay pot and let it grow for 30 days, the shrub magically transforms into an awakened shrub at the end of that time. When the shrub awakens, its roots break the pot, destroying it.\n   The awakened shrub is friendly toward you. Absent commands from you, it does nothing.",
+	description: "If you plant an ordinary shrub in this 10-pound clay pot and let it grow for 30 days, the shrub magically transforms into an Awakened Shrub at the end of that time. When the shrub awakens, its roots break the pot, destroying it. The awakened shrub is friendly toward me. Absent commands from me, it does nothing.",
+	descriptionFull: "If you plant an ordinary shrub in this 10-pound clay pot and let it grow for 30 days, the shrub magically transforms into an Awakened Shrub at the end of that time. When the shrub awakens, its roots break the pot, destroying it.\n   The awakened shrub is friendly toward you. Absent commands from you, it does nothing.",
 	weight: 10
 };
 MagicItemsList["prosthetic limb"] = {
@@ -5448,8 +5698,8 @@ MagicItemsList["prosthetic limb"] = {
 	magicItemTable: "?",
 	type: "wondrous item",
 	rarity: "common",
-	description: "This magic item replaces a lost limb, like a hand, an arm, a foot, a leg, or a similar body part. While the prosthetic is attached, it functions identically to the part it replaces. As a Magic Action, I can detach or reattach it. It can't be removed against my will.",
-	descriptionFull: "This item replaces a lost limb\u2014a hand, an arm, a foot, a leg, or a similar body part. While the prosthetic is attached, it functions identically to the part it replaces. You can detach or reattach it as a Magic Action, and it can't be removed against your will.",
+	description: "This magic item replaces a lost limb\u2014a hand, an arm, a foot, a leg, or a similar body part. While the prosthetic is attached, it functions identically to the part it replaces. You can detach or reattach it as a Magic action, and it can’t be removed against your will while you are alive.",
+	descriptionFull: "This item replaces a lost limb\u2014a hand, an arm, a foot, a leg, or a similar body part. While the prosthetic is attached, it functions identically to the part it replaces. You can detach or reattach it as a Magic action, and it can't be removed against your will.",
 	action: [["action", " (attach/detach)"]]
 };
 MagicItemsList["quaal's feather token"] = {
@@ -5457,44 +5707,43 @@ MagicItemsList["quaal's feather token"] = {
 	nameAlt: "Feather Token",
 	source: [["DMG2024", 290]],
 	type: "wondrous item",
-	rarity: "varies",
 	magicItemTable: "?",
-	descriptionFull: "This tiny object looks like a feather. Different types of feather tokens exist, each with a different single-use effect. The DM chooses the kind of token or determines it randomly.\n\n" + toUni("d100\tToken\td100\tToken") +
-		"\n01-20\tAnchor\t51-65\tSwan boat" +
-		"\n21-35\tBird   \t66-90\tTree" +
-		"\n36-50\tFan   \t91-00\tWhip",
+	descriptionFull: "This tiny object looks like a feather. Different types of feather tokens exist, each with a different single-use effect. The DM chooses the kind of token or determines it randomly.\n\n" + toUni("d100\tToken\tRarity\td100\tToken\Rarity") +
+		"\n01-20\tAnchor\tUncommon\t51-65\tSwan boat\tRare" +
+		"\n21-35\tBird\tRare   \t66-90\tTree\tUncommon" +
+		"\n36-50\tFan\tUncommon   \t91-00\tWhip\tRare",
 	allowDuplicates: true,
-	choices: ["Anchor", "Bird", "Fan", "Swan Boat", "Tree", "Whip"],
-	"anchor": {
-		description: "This tiny object looks like a feather. As Magic action, I can touch the token to a boat or ship. For the next 24 hours, the vessel can't be moved by any means. Touching the token to the vessel again ends the effect early. When the effect ends, the token disappears.",
-		descriptionFull: "This tiny object looks like a feather. You can use a Magic action to touch the token to a boat or ship. For the next 24 hours, the vessel can't be moved by any means. Touching the token to the vessel again ends the effect. When the effect ends, the token disappears.",
+	choices: ["Anchor (Uncommon)", "Bird (Rare)", "Fan (Uncommon)", "Swan Boat (Rare)", "Tree (Uncommon)", "Whip (Rare)"],
+	"anchor (uncommon)": {
+		description: "You can take a Magic action to touch the token to a boat or ship. For the next 24 hours, the vessel can’t be moved by any means. Touching the token to the vessel again ends the effect. When the effect ends, the token disappears.",
+		descriptionFull: "You can take a Magic action to touch the token to a boat or ship. For the next 24 hours, the vessel can’t be moved by any means. Touching the token to the vessel again ends the effect. When the effect ends, the token disappears.",
 		action: [["action", ""]]
 	},
-	"bird": {
-		description: "As a Magic action, I can toss this token into the air and it turns into a roc. It obeys my simple commands, can't attack, can carry 500 lb while flying (16 miles per hour or 144 miles per day, as it rests 1 hour per 3 of flying), or double that at half speed. It disappears after a day, if it drops to 0 HP, or if I use an action to make it.",
-		descriptionFull: "This tiny object looks like a feather. You can use a Magic action to toss the token 5 feet into the air. The token disappears and an enormous, multicolored bird takes its place. The bird has the statistics of a roc, but it obeys your simple commands and can't attack. It can carry up to 500 pounds while flying at its maximum speed (16 miles an hour for a maximum of 144 miles per day. with a one-hour rest for every 3 hours of flying), or 1,000 pounds at half that speed. The bird disappears after flying its maximum distance for a day or if it drops to 0 hit points. You can dismiss the bird as an action.",
+	"bird (rare)": {
+		description: "You can take a Magic action to toss the token 5 feet into the air.The token disappears and an enormous, multicolored bird takes its place.The bird has the statistics of a Roc, but it can’t attack.It obeys your simple commands and can carry up to 500 pounds while flying at its maximum speed(16 miles per hour for a maximum of 144 miles per day, with a 1-hour rest for every 3 hours of flying) or 1,000 pounds at half that speed.The bird disappears after flying its maximum distance for a day or if it drops to 0 Hit Points.You can dismiss the bird as a Magic action.",
+		descriptionFull: "You can take a Magic action to toss the token 5 feet into the air. The token disappears and an enormous, multicolored bird takes its place. The bird has the statistics of a Roc, but it can’t attack. It obeys your simple commands and can carry up to 500 pounds while flying at its maximum speed (16 miles per hour for a maximum of 144 miles per day, with a 1-hour rest for every 3 hours of flying) or 1,000 pounds at half that speed. The bird disappears after flying its maximum distance for a day or if it drops to 0 Hit Points. You can dismiss the bird as a Magic action.",
 		action: [["action", " (use/dismiss)"]]
 	},
-	"fan": {
+	"fan (uncommon)": {
 		description: "As a Magic action when I'm on a boat or ship, I can toss this token up to 10 ft in the air. The token disappears, and a giant flapping fan takes its place. The fan floats and creates a wind strong enough to fill the sails of one ship, increasing its speed by 5 miles per hour for 8 hours. I can dismiss the fan as an action.",
 		descriptionFull: "This tiny object looks like a feather. If you are on a boat or ship, you can use a Magic action to toss the token up to 10 feet in the air. The token disappears, and a giant flapping fan takes its place. The fan floats and creates a wind strong enough to fill the sails of one ship, increasing its speed by 5 miles per hour for 8 hours. You can dismiss the fan as an action.",
 		action: [["action", " (create/dismiss)"]]
 	},
-	"swan boat": {
-		description: "As a Magic action, I can touch the token to a body of water at least 60-ft in diameter, having it turn into a 50 ft by 20 ft boat shaped like a swan that remains for 24 hours. It moves itself at 6 miles per hour. As an action, I can command it to turn up to 90°. It can hold up to 32 Medium creatures (Large count as 4, Huge as 9).",
-		descriptionFull: "This tiny object looks like a feather. You can use a Magic action to touch the token to a body of water at least 60 feet in diameter. The token disappears, and a 50-foot-long, 20-foot-wide boat shaped like a swan takes its place. The boat is self-propelled and moves across water at a speed of 6 miles per hour. You can use an action while on the boat to command it to move or to turn up to 90 degrees. The boat can carry up to thirty-two Medium or smaller creatures. A Large creature counts as four Medium creatures, while a Huge creature counts as nine. The boat remains for 24 hours and then disappears. You can dismiss the boat as an action.",
+	"swan boat (rare)": {
+		description: "You can take a Magic action to touch the token to a body of water at least 60 feet in diameter. The token disappears, and a 50-foot-long, 20-foot-wide boat shaped like a swan takes its place. The boat is self-propelled and moves across water at a speed of 6 miles per hour. You can take a Magic action while on the boat to command it to move or to turn up to 90 degrees. The boat remains for 24 hours and then disappears. You can dismiss the boat as a Magic action.",
+		descriptionFull: "You can take a Magic action to touch the token to a body of water at least 60 feet in diameter. The token disappears, and a 50-foot-long, 20-foot-wide boat shaped like a swan takes its place. The boat is self-propelled and moves across water at a speed of 6 miles per hour. You can take a Magic action while on the boat to command it to move or to turn up to 90 degrees. The boat remains for 24 hours and then disappears. You can dismiss the boat as a Magic action.",
 		action: [["action", " (create/dismiss)"]]
 	},
-	"tree": {
-		description: "This tiny object looks like a feather. As a Magic action, I can touch it to an unoccupied space on the ground. If this is done outdoors, the token disappears, and in its place a nonmagical oak tree springs into existence. The tree is 60 ft tall and has a 5-ft diameter trunk, and its branches at the top spread out in a 20-ft radius.",
-		descriptionFull: "This tiny object looks like a feather. You must be outdoors to use this token. You can use a Magic action to touch it to an unoccupied space on the ground. The token disappears, and in its place a nonmagical oak tree springs into existence. The tree is 60 feet tall and has a 5-foot-diameter trunk, and its branches at the top spread out in a 20-foot radius.",
+	"tree (uncommon)": {
+		description: "You must be outdoors to use this token. You can take a Magic action to touch it to an unoccupied space on the ground. The token disappears, and in its place a nonmagical oak tree springs into existence. The tree is 60 feet tall and has a 5-foot-diameter trunk, and its branches at the top spread out in a 20-foot radius.",
+		descriptionFull: "You must be outdoors to use this token. You can take a Magic action to touch it to an unoccupied space on the ground. The token disappears, and in its place a nonmagical oak tree springs into existence. The tree is 60 feet tall and has a 5-foot-diameter trunk, and its branches at the top spread out in a 20-foot radius.",
 		action: [["action", ""]]
 	},
-	"whip": {
-		description: "As a Magic action, can throw the token 10 ft, where it turns into a floating whip for 1 hour, until I use an action to dismiss it, I die, or I become incapacitated. As a bonus action, I can have it fly 20 ft and make a melee spell attack against a creature within 10 ft of it, with a +9 to hit and dealing 1d6+5 force damage.",
-		descriptionFull: "This tiny object looks like a feather. You can use a Magic action to throw the token to a point within 10 feet of you. The token disappears, and a floating whip takes its place. You can then use a bonus action to make a melee spell attack against a creature within 10 feet of the whip, with an attack bonus of +9. On a hit, the target takes 1d6+5 force damage.\n   As a bonus action on your turn, you can direct the whip to fly up to 20 feet and repeat the attack against a creature within 10 feet of it. The whip disappears after 1 hour, when you use a bonus action to dismiss it, or when you are incapacitated or die.",
-		action: [["action", " (create)"], ["bous action", " (direct)"]]
-	}
+	"whip (rare)": {
+		description: "You can take a Magic action to throw the token to a point within 10 feet of yourself. The token disappears, and a floating whip takes its place. You can then take a Bonus Action to make a melee spell attack against a creature within 10 feet of the whip, with an attack bonus of +9. On a hit, the target takes 1d6 + 5 Force damage.\n As a Bonus Action, you can direct the whip to fly up to 20 feet and repeat the attack against a creature within 10 feet of the whip. The whip disappears after 1 hour, when you take a Magic action to dismiss it, or when you die or have the Incapacitated condition.",
+		descriptionFull: "You can take a Magic action to throw the token to a point within 10 feet of yourself. The token disappears, and a floating whip takes its place. You can then take a Bonus Action to make a melee spell attack against a creature within 10 feet of the whip, with an attack bonus of +9. On a hit, the target takes 1d6 + 5 Force damage.\n As a Bonus Action, you can direct the whip to fly up to 20 feet and repeat the attack against a creature within 10 feet of the whip. The whip disappears after 1 hour, when you take a Magic action to dismiss it, or when you die or have the Incapacitated condition.",
+		action: [["action", " (create)"], ["bonus action", " (direct)"], ["bonus action", " (whip melee"]],
+	},
 };
 MagicItemsList["quarterstaff of the acrobat"] = {
 	name: "Quarterstaff of the Acrobat",
@@ -5502,12 +5751,10 @@ MagicItemsList["quarterstaff of the acrobat"] = {
 	type: "weapon (quarterstaff)",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "This magical warhammer adds a +3 bonus to attack and damage rolls made with it. While holding this weapon, I can emit a dim green light (10ft) as a Bonus Action or after initiative and can extinguish the light as a Bonus Action.",
-	descriptionLong: "This magical warhammer adds a +3 bonus to attack and damage rolls made with it. While holding this weapon, I can emit a dim green light (10ft) as a Bonus Action or after initiative and can extinguish the light as a Bonus Action.\n" +
-		"\n While holding this weapon, I can take a Bonus action to alter its form, turning into a 6-in rod or 10-ft pole or returning it to its original form.",
-	descriptionFull: "This magical warhammer adds a +3 bonus to attack and damage rolls made with it. While holding this weapon, I can emit a dim green light (10ft) as a Bonus Action or after initiative and can extinguish the light as a Bonus Action.\n" +
-		"\n While holding this weapon, I can take a Bonus action to alter its form, turning into a 6-in rod or 10-ft pole or returning it to its original form." +
-		"\n This weapon has 3 forms." + toUni("Acrobatic Assist - Quarterstaff or 10ft Pole") + "While holding this weapon, you have Advantage on Dex (Acrobatics) checks." + toUni("Attack Deflection - Quarterstaff") + "When you are hit by an attack while holding the weapon, you can take a Reaction to twirl the weapon around you, gaining +5 bonus to your AC against a triggering attack, potentially causing the attack to miss you. You can't use this propety again until you finish a Short or Long Rest." + toUni("Ranged Weapon - Quarterstaff") + "This weapon has the Thrown property with a normal range of 30 feet and a long range of 120 feet. Immediately after you make a ranged attack with the weapon, it flies back to your hand.",
+	description: "This magic quarterstaff adds a +2 bonus to attack and damage rolls made with it. While holding this weapon, I can emit a dim green light (10ft) as a Bonus Action or after you roll Initiative and can extinguish the light as a Bonus Action. You can take a Bonus Action to alter its form, tunring it into a 6-inch rod or 10-foot pole, or revert it back to its Quarterstaff form.",
+	descriptionFull: "This magic weapon adds a +2 bonus to attack and damage rolls made with it. While holding this weapon, I can emit a dim green light (10ft) as a Bonus Action or after initiative and can extinguish the light as a Bonus Action.\n" +
+		"\n While holding this weapon, you can take a Bonus Action to alter its form, turning it into a 6-inch rod (for ease of storage) or a 10-foot pole, or reverting it a Quarterstaff; the weapon will elongate only as far as the surrounding space allows." +
+		"\n In certain forms, the weapon has the following additional properties." + toUni("Acrobatic Assist - Quarterstaff or 10ft Pole") + "While holding this weapon, you have Advantage on Dex (Acrobatics) checks." + toUni("Attack Deflection - Quarterstaff") + "When you are hit by an attack while holding the weapon, you can take a Reaction to twirl the weapon around you, gaining +5 bonus to your AC against a triggering attack, potentially causing the attack to miss you. You can't use this propety again until you finish a Short or Long Rest." + toUni("Ranged Weapon - Quarterstaff") + "This weapon has the Thrown property with a normal range of 30 feet and a long range of 120 feet. Immediately after you make a ranged attack with the weapon, it flies back to your hand.",
 	attunement: true,
 	weight: 4,
 	modifers: [2, 2],
@@ -5519,7 +5766,8 @@ MagicItemsList["quarterstaff of the acrobat"] = {
 		name: "Quarterstaff of the Acrobat",
 		source: [["DMG2024", 279]],
 		description: "Versatile (1d8); Thrown, Returning; Magical",
-		selectNow: true
+		isMagical: true,
+		selectNow: true,
 	}],
 	toNotesPage: [{
 		name: "Quartstaff of the Acrobat",
@@ -9018,7 +9266,7 @@ MagicItemsList["whelm"] = {
 		selection : ["detect evil and good", "locate object"],
 		firstCol : "oncelr"
 	}]
-};	
+};
 MagicItemsList["wind fan"] = {
 	name: "Wind Fan",
 	source: [["DMG2024", 325]],
