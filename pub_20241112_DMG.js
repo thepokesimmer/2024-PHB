@@ -5797,8 +5797,8 @@ MagicItemsList["ring of animal influence"] = {
 	source: [["DMG2024", 292]],
 	type: "ring",
 	rarity: "rare",
-	description: "This ring has 3 charges, and regains 1d3 expended charges daily at dawn. While wearing the ring, I can expend 1 charge to cast Animal Friendship, Fear (affect Beasts only), Speak with Animals using a DC13 spell save.",
-	descriptionFull: "This ring has 3 charges, and regains 1d3 expended charges daily at dawn. While wearing the ring, I can expend 1 charge to cast Animal Friendship, Fear (affect Beasts only), Speak with Animals using a DC13 spell save.",
+	description: "This ring has 3 charges, and regains 1d3 expended charges daily at dawn. While wearing the ring, you can expend 1 charge to cast Animal Friendship, Fear (affect Beasts only), Speak with Animals using a DC13 spell save.",
+	descriptionFull: "This ring has 3 charges, and regains 1d3 expended charges daily at dawn. While wearing the ring, you can expend 1 charge to cast Animal Friendship, Fear (affect Beasts only), Speak with Animals using a DC13 spell save.",
 	usages: 3,
 	recovery: "dawn",
 	additional: "regains 1d3",
@@ -5813,19 +5813,19 @@ MagicItemsList["ring of animal influence"] = {
 	},
 	spellChanges: {
 		"fear": {
-			description: "All Beasts save or drop held items and Frightened; Dash away; extra save at EoT if no line of sight",
+			description: "All Beasts in a 30-foot Cone Wisdom save or drop held items and Frightened; Dash away; extra Wisdom save at end of turn if no line of sight",
 			changes: "affects Beasts only",
 		},
 	},
-};	
+};
 MagicItemsList["ring of djinni summoning"] = {
 	name: "Ring of Djinni Summoning",
 	source: [["DMG2024", 292]],
 	type: "ring",
 	rarity: "legendary",
 	magicItemTable: "?",
-	description: "As a Magic action, I can speak this ring's command word to summon a djinni within 120 ft, remaining while I concentrate, up to 1 hour. After that time, I can't summon it for 24 hours. It is friendly to me and my allies, obeys my commands, but takes no actions if not commanded to. The ring loses its magic If the djini dies.",
-	descriptionFull: "While wearing this ring, you can speak its command word as a Magic action to summon a particular djinni from the Elemental Plane of Air. The djinni appears in an unoccupied space you choose within 120 feet of you. It remains as long as you concentrate (as if concentrating on a spell), to a maximum of 1 hour, or until it drops to 0 hit points. It then returns to its home plane.\n   While summoned, the djinni is friendly to you and your companions. It obeys any commands you give it, no matter what language you use. If you fail to command it, the djinni defends itself against attackers but takes no other actions.\n   After the djinni departs, it can't be summoned again for 24 hours, and the ring becomes nonmagical if the djinni dies.",
+	description: "As a Magic action, you can summon a Djinni within 120 ft, remaining while I Concentrate, up to 1 hour. After that time, I can't summon it for 24 hours. It is friendly to me and my allies, obeys my commands, but takes no actions if not commanded to. The ring loses its magic If the Djinni dies.",
+	descriptionFull: "While wearing this ring, you can take a Magic action to summon a particular Djinni from the Elemental Plane of Air. The Djinni appears in an unoccupied space you choose within 120 feet of yourself. It remains as long as you maintain Concentration, to a maximum of 1 hour, or until it drops to 0 Hit Points.\n While summoned, the Djinni is Friendly to you and your allies, and it obeys your commands. If you fail to command it, the Djinni defends itself against attackers but takes no other actions.\n After the Djinni departs, it can’t be summoned again for 24 hours, and the ring becomes nonmagical if the Djinni dies.\n Rings of Djinni Summoning are often created by the Djinn they summon and given to mortals as gifts of friendship or tokens of esteem.",
 	attunement: true,
 	usages: 1,
 	recovery: "24 hours"
@@ -5836,7 +5836,7 @@ MagicItemsList["ring of elemental command"] = {
 	type: "ring",
 	rarity: "legendary",
 	magicItemTable: "?",
-	description: "Select one of the four types of this ring, with each type being linked to one of the four Elemental Planes.",
+	description: "Select one of the four types of this ring, with each type being linked to one of the four Elemental Planes. Each Ring has Advantage on attack rolls against Elementals and they have Disadvatage on attack rolls against you, you can take a Magic action to try to compel an Elemental within 60 ft/ DC 18 WIS save; Charmed on fail.",
 	descriptionFull: "This ring is linked to one of the four Elemental Planes. The GM chooses or randomly determines the linked plane.\n While wearing this ring, you have advantage on attack rolls against Elementals, and they have disadvantage on attack rolls against you. You can take a Magic action to try to compel an Elemental you see within 60-feet. The Elemental must make a DC18 WIS save or it has the Charmed condition until the start of your next turn. You determine its move and action on its next turn.\n In addition, you have access to properties based on the linked plane. The ring has 5 charges. It regains 1d4 + 1 expended charges daily at dawn. Spells cast from the ring have a save DC of 18.",
 	attunement: true,
 	allowDuplicates: true,
@@ -5848,8 +5848,8 @@ MagicItemsList["ring of elemental command"] = {
 	"air": {
 		name: "Ring of Elemental Command (Air)",
 		sortname: "Ring of Elemental Command, Air",
-		description: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants me adv. on attacks vs. elementals aand they have disadv. vs. me. I can cast Feather Fall, Wind Wall (1 Charge), Gust of Wind (2 Charges), and Chain Lighting (3 Charges). I have resistance to Lightning damage. My Fly Speed equals my walking Speed and I can hover. I also know Auran.",
-		descriptionFull: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants me adv. on attacks vs. elementals aand they have disadv. vs. me. I can cast Feather Fall, Wind Wall (1 Charge), Gust of Wind (2 Charges), and Chain Lighting (3 Charges). I have resistance to Lightning damage. My Fly Speed equals my walking Speed and I can hover. I also know Auran.",
+		description: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants you Advantage on attacks vs. Elementals and they have Disadvantage vs. you. You can cast Feather Fall, Wind Wall (1 Charge), Gust of Wind (2 Charges), and Chain Lighting (3 Charges). You have Resistance to Lightning damage. My Fly Speed equals my walking Speed and I can hover. I also know Auran.",
+		descriptionFull: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants you Advantage on attacks vs. Elementals and they have Disadvantage vs. you. You can cast Feather Fall, Wind Wall (1 Charge), Gust of Wind (2 Charges), and Chain Lighting (3 Charges). You have Resistance to Lightning damage. My Fly Speed equals my walking Speed and I can hover. I also know Auran.",
 		languageProfs: ["auran"],
 		dmgres: ["lightning"],
 		speed: { fly: { spd: "walk", enc: "walk" } },
@@ -5876,12 +5876,20 @@ MagicItemsList["ring of elemental command"] = {
 			selection: ["chain lightning"],
 			firstCol: 3,
 		}],
+		toNotesPage: [
+			"Each Ring of Elemental Command is linked to one of the four Elemental Planes. The DM chooses or randomly determines the linked plane. For example, a Ring of Elemental Command (air) is linked to the Elemental Plane of Air.\n" +
+			"Every Ring of Elemental Command has the following two properties:\n" +
+			toUni("Elemental Bane") + ". While wearing the ring, you have Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you.\n" +
+			toUni("Elemental Compulsion") + ". While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the Charmed condition until the start your next turn, and you determine what it does with its move and action on its next turn.\n" +
+			toUni("Elemental Focus") + ". While wearing the ring, you benefit from additional properties corresponding to the ring's linked Elemental Plane:\n" +
+			"\u2022" + toUni("Air") + ". You know Auran, you have Resistance to Lightning damage, and you have a Fly Speed equal to your Speed and can hover.",
+		],
 	},
 	"earth": {
 		name: "Ring of Elemental Command (Earth)",
 		sortname: "Ring of Elemental Command, Earth",
-		description: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants me adv. on attacks vs. elementals aand they have disadv. vs. me. I can cast Stone Shape (2 Charges), Stone Skin & Wall of Stone (3 Charges), Earthquake (5 Charges). I have resistance to Acid damage. I can move through solid earth, rock, rocks are not Difficult Terrain for me and without disturbing the areas I pass. I also know Terran.",
-		descriptionFull: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants me adv. on attacks vs. elementals aand they have disadv. vs. me. I can cast Stone Shape (2 Charges), Stone Skin & Wall of Stone (3 Charges), Earthquake (5 Charges). I have resistance to Acid damage. I can move through solid earth, rock, rocks are not Difficult Terrain for me and without disturbing the areas I pass. I also know Terran.",
+		description: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants you Advantage on attacks vs. Elementals and they have Disadvantage vs. you. You can cast Stone Shape (2 Charges), Stone Skin & Wall of Stone (3 Charges), Earthquake (5 Charges). You have Resistance to Acid damage. You can move through solid earth, rock, rocks are not Difficult Terrain for you and without disturbing the areas I pass. I also know Terran.",
+		descriptionFull: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants you Advantage on attacks vs. Elementals and they have Disadvantage vs. you. You can cast Stone Shape (2 Charges), Stone Skin & Wall of Stone (3 Charges), Earthquake (5 Charges). You have Resistance to Acid damage. You can move through solid earth, rock, rocks are not Difficult Terrain for you and without disturbing the areas I pass. I also know Terran.",
 		languageProfs: ["terran"],
 		dmgres: ["acid"],
 		fixedDC: 18,
@@ -5903,6 +5911,14 @@ MagicItemsList["ring of elemental command"] = {
 			selection: ["earthquake"],
 			firstCol: 5,
 		}],
+		toNotesPage: [
+			"Each Ring of Elemental Command is linked to one of the four Elemental Planes. The DM chooses or randomly determines the linked plane. For example, a Ring of Elemental Command (Air) is linked to the Elemental Plane of Air.\n" +
+			"Every Ring of Elemental Command has the following two properties:\n" +
+			toUni("Elemental Bane") + ". While wearing the ring, you have Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you.\n" +
+			toUni("Elemental Compulsion") + ". While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the Charmed condition until the start your next turn, and you determine what it does with its move and action on its next turn.\n" +
+			toUni("Elemental Focus") + ". While wearing the ring, you benefit from additional properties corresponding to the ring's linked Elemental Plane:\n" +
+			"\u2022" + toUni("Earth") + ". You know Terran, and you have Resistance to Acid damage. Terrain composed of rubble, rocks, or dirt isn’t Difficult Terrain for you. In addition, you can move through solid earth or rock as if those areas were Difficult Terrain without disturbing the matter through which you pass. If you end your turn in solid earth or rock, you are shunted out to the nearest unoccupied space you last occupied.",
+		],
 	},
 	"fire": {
 		name: "Ring of Elemental Command (Fire)",
@@ -5934,6 +5950,14 @@ MagicItemsList["ring of elemental command"] = {
 			selection: ["fire storm"],
 			firstCol: 4,
 		}],
+		toNotesPage: [
+			"Each Ring of Elemental Command is linked to one of the four Elemental Planes. The DM chooses or randomly determines the linked plane. For example, a Ring of Elemental Command (air) is linked to the Elemental Plane of Air.\n" +
+			"Every Ring of Elemental Command has the following two properties:\n" +
+			toUni("Elemental Bane") + ". While wearing the ring, you have Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you.\n" +
+			toUni("Elemental Compulsion") + ". While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the Charmed condition until the start your next turn, and you determine what it does with its move and action on its next turn.\n" +
+			toUni("Elemental Focus") + ". While wearing the ring, you benefit from additional properties corresponding to the ring's linked Elemental Plane:\n" +
+			"\u2022" + toUni("Fire") + ". You know Ignan, and you have Immunity to Fire damage.",
+		],
 	},
 	"water": {
 		name: "Ring of Elemental Command (Water)",
@@ -5967,13 +5991,15 @@ MagicItemsList["ring of elemental command"] = {
 			selection: ["tsunami"],
 			firstCol: 5,
 		}],
+		toNotesPage: [
+			"Each Ring of Elemental Command is linked to one of the four Elemental Planes. The DM chooses or randomly determines the linked plane. For example, a Ring of Elemental Command (air) is linked to the Elemental Plane of Air.\n" +
+			"Every Ring of Elemental Command has the following two properties:\n" +
+			toUni("Elemental Bane") + ". While wearing the ring, you have Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you.\n" +
+			toUni("Elemental Compulsion") + ". While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the Charmed condition until the start your next turn, and you determine what it does with its move and action on its next turn.\n" +
+			toUni("Elemental Focus") + ". While wearing the ring, you benefit from additional properties corresponding to the ring's linked Elemental Plane:\n" +
+			"\u2022" + toUni("Water") + ". You know Aquan, you gain a Swim Speed of 60 feet, and you can breathe underwater.",
+		],
 	},
-	toNotesPage: [{
-		name: "Compel Elemental",
-		note: [
-			"While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the Charmed condition until the start your next turn, and you determine what it does with its move and action on its next turn.",
-		]
-	}],
 };
 MagicItemsList["ring of evasion"] = {
 	name: "Ring of Evasion",
@@ -5981,7 +6007,7 @@ MagicItemsList["ring of evasion"] = {
 	type: "ring",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "This ring has 3 charges, and it regains 1d3 expended charges daily at dawn. As a reaction when I fail a Dexterity saving throw while wearing it, I can expend 1 of its charges to succeed on that saving throw instead.",
+	description: "This ring has 3 charges, and it regains 1d3 expended charges daily at dawn. As you reaction when I fail a Dexterity saving throw while wearing it, you can expend 1 of its charges to succeed on that saving throw instead.",
 	descriptionFull: "This ring has 3 charges, and it regains 1d3 expended charges daily at dawn. When you fail a Dexterity saving throw while wearing it, you can use your reaction to expend 1 of its charges to succeed on that saving throw instead.",
 	attunement: true,
 	usages: 3,
@@ -5995,7 +6021,7 @@ MagicItemsList["ring of feather falling"] = {
 	type: "ring",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "When I fall while wearing this ring, I descend 60 ft per round and take no damage from falling.",
+	description: "When you fall while wearing this ring, you descend 60 ft per round and take no damage from falling.",
 	descriptionFull: "When you fall while wearing this ring, you descend 60 feet per round and take no damage from falling.",
 	attunement: true
 };
@@ -6005,8 +6031,8 @@ MagicItemsList["ring of free action"] = {
 	type: "ring",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "While I wear this ring, difficult terrain doesn't cost me extra movement. In addition, magic can neither reduce my speed nor cause me to be paralyzed or restrained.",
-	descriptionFull: "While you wear this ring, difficult terrain doesn't cost you extra movement. In addition, magic can neither reduce your speed nor cause you to be paralyzed or restrained.",
+	description: "While you wear this ring, Difficult Terrain doesn’t cost you extra movement. In addition, magic can neither reduce any of your Speeds nor cause you to have the Paralyzed or Restrained condition.",
+	descriptionFull: "While you wear this ring, Difficult Terrain doesn’t cost you extra movement. In addition, magic can neither reduce any of your Speeds nor cause you to have the Paralyzed or Restrained condition.",
 	attunement: true,
 	savetxt: { immune: ["paralyzed (by magic)", "restrained (by magic)"] }
 };
@@ -6016,10 +6042,10 @@ MagicItemsList["ring of invisibility"] = {
 	type: "ring",
 	rarity: "legendary",
 	magicItemTable: "?",
-	description: "While wearing this ring, I can take a Magic Action to turn invisible. Anything I am wearing or carrying is invisible with me. I remain invisible until the ring is removed or until I use a bonus action to become visible again.",
-	descriptionFull: "While wearing this ring, you can take a Magic action to turn invisible. Anything you are wearing or carrying is invisible with you. You remain invisible until the ring is removedo r until you use a bonus action to become visible again.",
+	description: "While wearing this ring, you can take a Magic action to give yourself the Invisible condition. You remain Invisible until the ring is removed or until you take a Bonus Action to become visible again.",
+	descriptionFull: "While wearing this ring, you can take a Magic action to give yourself the Invisible condition. You remain Invisible until the ring is removed or until you take a Bonus Action to become visible again.",
 	attunement: true,
-	action: [["action", " (start)"], ["bonus action", " (stop)"]]
+	action: [["action", " (start)"], ["Bonus action", " (stop)"]]
 };
 MagicItemsList["ring of jumping"] = {
 	name: "Ring of Jumping",
@@ -6027,10 +6053,9 @@ MagicItemsList["ring of jumping"] = {
 	type: "ring",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "As a bonus action, I can use this ring to cast Jump on myself. That spell causes my jump distance to triple for 1 minute.",
-	descriptionFull: "While wearing this ring, you can cast the Jump spell from it as a bonus action at will, but can target only yourself when you do so.",
+	description: "While wearing this ring, you can cast Jump from it, but can target only yourself when you do so. This causes my Jump distance to triple for 1 minute.",
+	descriptionFull: "While wearing this ring, you can cast Jump from it, but can target only yourself when you do so.",
 	attunement: true,
-	action: [["bonus action", ""]],
 	spellcastingBonus: {
 		name: "Self Only",
 		spells: ["jump"],
@@ -6041,7 +6066,7 @@ MagicItemsList["ring of jumping"] = {
 		"jump": {
 			time: "1 bns",
 			range: "Self",
-			changes: "The casting time is only a bonus action instead of an action and it can only affect the wearer."
+			changes: "The casting time is only a Bonus action instead of an action and it can only affect the wearer."
 		}
 	}
 };
@@ -6051,11 +6076,10 @@ MagicItemsList["ring of mind shielding"] = {
 	type: "ring",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "This ring makes me immune to magic that allows others to read my thoughts, determine if I'm lying, know my alignment or creature type, and telepathy only works if I allow it. As Magic action, I can cause it to become imperceptible as long as I wear it and not die, or perceptible again. If I die while wearing it, my soul enters it.",
-	descriptionLong: "While wearing this ring, I'm immune to magic that allows others to read my thoughts, know my alignment or creature type, or determine if I'm lying. Also, telepathy only works if I allow it. As Magic action, I can cause it to become imperceptible for as long as I wear it and not die, or perceptible again. If I die while wearing it, my soul enters it unless it already houses a soul. I can remain in the ring or depart for the afterlife. As long as my soul is in the ring, I can telepathically communicate with any creature wearing it. A wearer can't prevent this telepathic communication.",
+	description: "This ring makes you immune to magic that allows others to read my thoughts, determine if I'm lying, know my alignment or creature type. Telepathy only works if I allow it. As a Magic action, I can cause it to become imperceptible as long as I wear it and not die, or perceptible again. If I die while wearing it, my soul enters it.",
 	descriptionFull: "While wearing this ring, you are immune to magic that allows other creatures to read your thoughts, determine whether you are lying, know your alignment, or know your creature type. Creatures can telepathically communicate with you only if you allow it.\n   You can use Magic action to cause the ring to become imperceptible until you use another action to make it perceptible, until you remove the ring, or until you die.\n   If you die while wearing the ring, your soul enters it, unless it already houses a soul. You can remain in the ring or depart for the afterlife. As long as your soul is in the ring, you can telepathically communicate with any creature wearing it. A wearer can't prevent this telepathic communication.",
 	attunement: true,
-	action: [["action", "Ring of Mind Shielding: (im)perceptible"]],
+	action: [["action", "(im)perceptible"]],
 	savetxt: { immune: ["magic reading my thoughts, truthfullness, alignment, or type"] }
 };
 MagicItemsList["ring of protection"] = {
@@ -6064,30 +6088,30 @@ MagicItemsList["ring of protection"] = {
 	type: "ring",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "While wearing this ring, I gain a +1 bonus to AC and saving throws.",
+	description: "You gain a +1 bonus to AC and saving throws while wearing this ring.",
 	descriptionFull: "You gain a +1 bonus to AC and saving throws while wearing this ring.",
 	attunement: true,
-	extraAC: [{ name: "Ring of Protection", mod: 1, magic: true, text: "I gain a +1 bonus to AC while attuned." }],
-	addMod: [{ type: "save", field: "all", mod: 1, text: "While I wear the Ring of Protection, I gain a +1 bonus to all my saving throws." }]
+	extraAC: [{ name: "Ring of Protection", mod: 1, magic: true, text: "+1 bonus to AC." }],
+	addMod: [{ type: "save", field: "all", mod: 1, text: "+1 to ALL saving throws." }]
 };
 MagicItemsList["ring of regeneration"] = {
-	name : "Ring of Regeneration",
+	name: "Ring of Regeneration",
 	source: [["DMG2024", 294]],
-	type : "ring",
-	rarity : "very rare",
-	magicItemTable : "?",
-	description : "While wearing this ring, I regain 1d6 Hit Points every 10 minutes if I have at least 1 Hit Point. If I lose a body part, the ring causes the missing part to regrow and return to full functionality after 1d6 + 1 days if I have at least 1 Hit Point the whole time.",
-	descriptionFull : "While wearing this ring, you regain 1d6 Hit Points every 10 minutes if you have at least 1 Hit Point. If you lose a body part, the ring causes the missing part to regrow and return to full functionality after 1d6 + 1 days if you have at least 1 Hit Point the whole time.",
-	attunement : true
-};	
+	type: "ring",
+	rarity: "very rare",
+	magicItemTable: "?",
+	description: "While wearing this ring, you regain 1d6 Hit Points every 10 minutes if you have at least 1 Hit Point. If you lose a body part, the ring causes the missing part to regrow and return to full functionality after 1d6 + 1 days if you have at least 1 Hit Point the whole time.",
+	descriptionFull: "While wearing this ring, you regain 1d6 Hit Points every 10 minutes if you have at least 1 Hit Point. If you lose a body part, the ring causes the missing part to regrow and return to full functionality after 1d6 + 1 days if you have at least 1 Hit Point the whole time.",
+	attunement: true
+};
 MagicItemsList["ring of resistance"] = {
 	name: "Ring of Resistance",
 	source: [["DMG2024", 294]],
 	type: "ring",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "I have resistance to one damage type while wearing this ring. The gem in the ring indicates the type of damage.",
-	descriptionFull: "You have resistance to one damage type while wearing this ring. The gem in the ring indicates the type, which the GM chooses or determines randomly.\n\n" + toUni("d10\tDamage Type\tGem") +
+	description: "You have Resistance to one damage type while wearing this ring. The gem in the ring indicates the type of damage.",
+	descriptionFull: "You have Resistance to one damage type while wearing this ring. The gem in the ring indicates the type, which the GM chooses or determines randomly.\n\n" + toUni("d10\tDamage Type\tGem") +
 		"\n   1\tAcid\t\tPearl" +
 		"\n   2\tCold\t\tTourmaline" +
 		"\n   3\tFire\t\tGarnet" +
@@ -6098,59 +6122,86 @@ MagicItemsList["ring of resistance"] = {
 		"\n   8\tPsychic\t\tJade" +
 		"\n   9\tRadiant\t\tTopaz" +
 		"\n 10\tThunder\t\tSpinel",
-	attunement: true,
+	attunement: false,
 	choices: ["Acid", "Cold", "Fire", "Force", "Lightning", "Necrotic", "Poison", "Psychic", "Radiant", "Thunder"],
 	choicesNotInMenu: true,
 	"acid": {
 		name: "Ring of Acid Resistance",
-		description: "While I'm wearing this ring set with a pearl and I'm attuned to it, I have resistance to acid damage.",
+		description: "While wearing this ring set with a Pearl and attuned to it, you have resistance to acid damage.",
 		dmgres: ["Acid"]
 	},
 	"cold": {
 		name: "Ring of Cold Resistance",
-		description: "While I'm wearing this ring set with a tourmaline and I'm attuned to it, I have resistance to cold damage.",
+		description: "While wearing this ring set with a Tourmaline and attuned to it, you have resistance to cold damage.",
 		dmgres: ["Cold"]
 	},
 	"fire": {
 		name: "Ring of Fire Resistance",
-		description: "While I'm wearing this ring set with a garnet and I'm attuned to it, I have resistance to fire damage.",
+		description: "While wearing this ring set with a Garnet and attuned to it, you have resistance to fire damage.",
 		dmgres: ["Fire"]
 	},
 	"force": {
 		name: "Ring of Force Resistance",
-		description: "While I'm wearing this ring set with a sapphire and I'm attuned to it, I have resistance to force damage.",
+		description: "While wearing this ring set with a Sapphire and attuned to it, you have resistance to force damage.",
 		dmgres: ["Force"]
 	},
 	"lightning": {
 		name: "Ring of Lightning Resistance",
-		description: "While I'm wearing this ring set with a citrine and I'm attuned to it, I have resistance to lightning damage.",
+		description: "While wearing this ring set with a Citrine and attuned to it, you have resistance to lightning damage.",
 		dmgres: ["Lightning"]
 	},
 	"necrotic": {
 		name: "Ring of Necrotic Resistance",
-		description: "While I'm wearing this ring set with jet and I'm attuned to it, I have resistance to necrotic damage.",
+		description: "While wearing this ring set with Jet and attuned to it, you have resistance to necrotic damage.",
 		dmgres: ["Necrotic"]
 	},
 	"poison": {
 		name: "Ring of Poison Resistance",
-		description: "While I'm wearing this ring set with an amethyst and I'm attuned to it, I have resistance to poison damage.",
+		description: "While wearing this ring set with an Amethyst and attuned to it, you have resistance to poison damage.",
 		dmgres: ["Poison"]
 	},
 	"psychic": {
 		name: "Ring of Psychic Resistance",
-		description: "While I'm wearing this ring set with jade and I'm attuned to it, I have resistance to psychic damage.",
+		description: "While wearing this ring set with Jade and attuned to it, you have resistance to psychic damage.",
 		dmgres: ["Psychic"]
 	},
 	"radiant": {
 		name: "Ring of Radiant Resistance",
-		description: "While I'm wearing this ring set with a topaz and I'm attuned to it, I have resistance to radiant damage.",
+		description: "While wearing this ring set with a Topaz and attuned to it, you have resistance to radiant damage.",
 		dmgres: ["Radiant"]
 	},
 	"thunder": {
 		name: "Ring of Thunder Resistance",
-		description: "While I'm wearing this ring set with a spinel and I'm attuned to it, I have resistance to thunder damage.",
+		description: "While wearing this ring set with a Spinel and attuned to it, you have resistance to thunder damage.",
 		dmgres: ["Thunder"]
 	}
+};
+// add spells for ring of shooting stars that are not in the spell lists
+SpellsList["lightning spheres"] = {
+	name: "Lightning Spheres",
+	level: "2",
+	school: "Conj",
+	time: "1 a",
+	range: "120 ft",
+	components: "M\u0192",
+	compMaterial: "Spells cast by magic items don't require any components other than the magic item itself.",
+	duration: "Conc, 1 min",
+	save: "Dex",
+	description: "1-4 spheres; bns a move all 30 ft; 1st crea in 5 ft save or Lightning dmg (1:4d12, 2:5d4, 3:2d6, 4:2d4)",
+	descriptionFull: "You can expend 2 charges from the Ring of Shooting Stars as a Magic action to create one to four 3-foot-diameter spheres of lightning. The more spheres you create, the less powerful each sphere is individually.\n   Each sphere appears in an unoccupied space you can see within 120 feet of you. The spheres last as long as you concentrate (as if concentrating on a spell), up to 1 minute. Each sphere sheds dim light in a 30-foot radius.\n   As a Bonus action, you can move each sphere up to 30 feet, but no farther than 120 feet away from you. When a creature other than you comes within 5 feet of a sphere, the sphere discharges lightning at that creature and disappears. That creature must make a DC 15 Dexterity saving throw. On a failed save, the creature takes lightning damage based on the number of spheres you created (1 sphere = 4d12, 2 spheres = 5d4, 3 spheres = 2d6, 4 sphere = 2d4).",
+};
+SpellsList["shooting stars"] = {
+	name: "Shooting Stars",
+	level: "0",
+	school: "Evoc",
+	time: "1 a",
+	range: "60 ft",
+	components: "M\u0192",
+	compMaterial: "Spells cast by magic items don't require any components other than the magic item itself.",
+	save: "Dex",
+	duration: "Instantaneous",
+	description: "15ft cube in range per expended charge; all crea in cube Dex save or 5d4 Radiant damage, save halves",
+	descriptionFull: "You can expend 1 to 3 charges from the ring of shooting starts as an action. For every charge you expend, you launch a glowing mote of light from the ring at a point you can see within 60 feet of you. Each creature within a 15-foot cube originating from that point is showered in sparks and must make a DC 15 Dexterity saving throw, taking 5d4 fire damage on a failed save, or half as much damage on a successful one.",
 };
 MagicItemsList["ring of shooting stars"] = {
 	name: "Ring of Shooting Stars",
@@ -6158,8 +6209,16 @@ MagicItemsList["ring of shooting stars"] = {
 	type: "ring",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "This ring has 6 charges and it regains 1d6 expended charges daily at dawn. While wearing this ring in dim light or darkness, I can cast Dancing Lights and Light at will. As an action, I can expend charges to cast Faerie Fire, Ball Lightning (see 3rd page notes), or Shooting Stars (see 3rd page notes). All spells DC 15.",
-	descriptionFull: "While wearing this ring in dim light or darkness, you can cast Dancing Lights and Light from the ring at will. Casting either spell from the ring requires an action.\n   The ring has 6 charges for the following other properties. The ring regains 1d6 expended charges daily at dawn.\n   " + toUni("Faerie Fire") + ". You can expend 1 charge as an action to cast Faerie Fire from the ring.\n   " + toUni("Ball Lightning") + ". You can expend 2 charges as an action to create one to four 3-foot-diameter spheres of lightning. The more spheres you create, the less powerful each sphere is individually.\n   Each sphere appears in an unoccupied space you can see within 120 feet of you. The spheres last as long as you concentrate (as if concentrating on a spell), up to 1 minute. Each sphere sheds dim light in a 30-foot radius.\n   As a bonus action, you can move each sphere up to 30 feet, but no farther than 120 feet away from you. When a creature other than you comes within 5 feet of a sphere, the sphere discharges lightning at that creature and disappears. That creature must make a DC 15 Dexterity saving throw. On a failed save, the creature takes lightning damage based on the number of spheres you created (4 spheres = 2d4, 3 spheres = 2d6, 2 spheres = 5d4, 1 sphere = 4d12).\n   " + toUni("Shooting Stars") + ". \n   You can expend 1 to 3 charges as an action. For every charge you expend, you launch a glowing mote of light from the ring at a point you can see within 60 feet of you. Each creature within a 15-foot cube originating from that point is showered in sparks and must make a DC 15 Dexterity saving throw. taking 5d4 fire damage on a failed save, or half as much damage on a successful one.",
+	description: "This ring has 6 charges and it regains 1d6 expended charges daily at dawn. You can cast Dancing Lights and Light at will. You can expend charges to cast Faerie Fire (1 Charge), Lightning Spheres (2 Charges / Magic action), or Shooting Stars (1-3 Charges / Magic Action). All spells DC 15.",
+	descriptionFull: "You can cast Dancing Lights or Light from the ring.  ring has 6 charges and regains 1d6 expended charges daily at dawn.\n" +
+		toUni("Faerie Fire") + ". You can expend 1 charge as an action to cast Faerie Fire from the ring.\n   " + toUni("Lightning Spheres") + ". You can expend 2 charges as a Magic action to create up to four 3-foot-diameter spheres of lightning.\n " + "Each sphere appears in an unoccupied space you can see within 120 feet of yourself. The spheres last as long as you maintain Concentration, up to 1 minute. Each sphere sheds Dim Light in a 30-foot radius.\n" +
+		"As a Bonus Action, you can move each sphere up to 30 feet, but no farther than 120 feet away from yourself. The first time the sphere comes within 5 feet of a creature other than you that isn’t behind Total Cover, the sphere discharges lightning at that creature and disappears. That creature makes a DC 15 Dexterity saving throw. On a failed save, the creature takes Lightning damage based on the number of spheres you created, as shown in the following table. On a successful save, the creature takes half as much damage.\n" +
+		"\tNumber of Spheres\tLightning Damage\n " +
+		"\t1\t4d12\n " +
+		"\t2\t5d4\n " +
+		"\t3\t2d6\n " +
+		"\t4\t2d4\n " +
+		toUni("Shooting Stars") + ". You can expend 1 to 3 charges as a Magic action. For every charge you expend, you launch a glowing mote of light from the ring at a point you can see within 60 feet of yourself. Each creature in a 15-foot Cube originating from that point is showered in sparks and makes a DC 15 Dexterity saving throw, taking 5d4 Radiant damage on a failed save or half as much damage on a successful one.",
 	attunement: true,
 	toNotesPage: [{
 		name: "Lightning Spheres",
@@ -6167,7 +6226,7 @@ MagicItemsList["ring of shooting stars"] = {
 		additional: "2 charges",
 		note: [
 			"As a Magic action, I can create 1-4 spheres of lightning of 3-ft diameter within 120 ft",
-			"These last while I concentrate, up to 1 min; As a bonus action, I can move them 30 ft",
+			"These last while I concentrate, up to 1 min; As a Bonus action, I can move them 30 ft",
 			"When a creature (not me) comes within 5 ft of a sphere, it discharges and disappears",
 			"The target must make a DC 15 Dex save or take lightning damage",
 			"A sphere sheds dim light in 30-ft radius, its damage depends on the number created:",
@@ -6201,49 +6260,15 @@ MagicItemsList["ring of shooting stars"] = {
 		firstCol: 1
 	}, {
 		name: "Lighting Spheres (2 chr)",
-		spells: ["flaming sphere"],
-		selection: ["flaming sphere"],
+		spells: ["lightning spheres"],
+		selection: ["lightning spheres"],
 		firstCol: 2
 	}, {
 		name: "Shooting stars (1-3 chr)",
-		spells: ["magic missile"],
-		selection: ["magic missile"],
+		spells: ["shooting stars"],
+		selection: ["shooting stars"],
 		firstCol: "1+"
-	}],
-	spellChanges: {
-		"flaming sphere": { // change into Ball Lightning
-			name: "Ball Lightning",
-			source: [["PHB2024", 275]],
-			level: "",
-			school: "Conj",
-			time: "1 a",
-			range: "120 ft",
-			components: "M\u0192",
-			compMaterial: "Spells cast by magic items don't require any components other than the magic item itself.",
-			duration: "Conc, 1 min",
-			save: "Dex",
-			description: "1-4 spheres; bns a move all 30 ft; 1st crea in 5 ft save or Lightning dmg (1:4d12, 2:5d4, 3:2d6, 4:2d4)",
-			descriptionShorter: false,
-			descriptionFull: "You can expend 2 charges from the ring of shooting starts as an action to create one to four 3-foot-diameter spheres of lightning. The more spheres you create, the less powerful each sphere is individually.\n   Each sphere appears in an unoccupied space you can see within 120 feet of you. The spheres last as long as you concentrate (as if concentrating on a spell), up to 1 minute. Each sphere sheds dim light in a 30-foot radius.\n   As a bonus action, you can move each sphere up to 30 feet, but no farther than 120 feet away from you. When a creature other than you comes within 5 feet of a sphere, the sphere discharges lightning at that creature and disappears. That creature must make a DC 15 Dexterity saving throw. On a failed save, the creature takes lightning damage based on the number of spheres you created (4 spheres = 2d4, 3 spheres = 2d6, 2 spheres = 5d4, 1 sphere = 4d12).",
-			completeRewrite: true, // indicates that the changes here even overwrite the tooltip
-			changes: "The listing of 'Flaming Sphere' has been completely changed to reflect the 'Ball Lightning' ability of the Ring of Shooting Stars. Even the information above is changed."
-		},
-		"magic missile": { // change into Shooting Stars
-			name: "Shooting Stars",
-			source: [["PHB2024", 295]],
-			level: "",
-			school: "Evoc",
-			time: "1 a",
-			range: "120 ft",
-			components: "M\u0192",
-			compMaterial: "Spells cast by magic items don't require any components other than the magic item itself.",
-			duration: "Instantaneous",
-			description: "15-ft cube in range per expended charge; all crea in cubes take 5d4 Fire damage, save halves",
-			descriptionFull: "You can expend 1 to 3 charges from the ring of shooting starts as an action. For every charge you expend, you launch a glowing mote of light from the ring at a point you can see within 60 feet of you. Each creature within a 15-foot cube originating from that point is showered in sparks and must make a DC 15 Dexterity saving throw, taking 5d4 fire damage on a failed save, or half as much damage on a successful one.",
-			completeRewrite: true, // indicates that the changes here even overwrite the tooltip
-			changes: "The listing of 'Magic Missile' has been completely changed to reflect the 'Shooting Stars' ability of the Ring of Shooting Stars. Even the information above is changed."
-		}
-	}
+	}]
 };
 MagicItemsList["ring of spell storing"] = { // contains contributions by Fourleafclov
 	name: "Ring of Spell Storing",
@@ -6251,7 +6276,7 @@ MagicItemsList["ring of spell storing"] = { // contains contributions by Fourlea
 	type: "ring",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "This ring can hold up to 5 levels of spell slots. Any creature can cast a spell into the ring using a 1-5th level spell slot, which is then stored if there is space. I can cast stored spells from the ring, freeing up space, using the original caster's attack bonus, save DC, spellcasting ability score, and the initial spell slot level.",
+	description: "This ring can hold up to 5 levels of spell slots. Any creature can cast a spell into the ring using a 1-5th level spell slot, which is then stored if there is space. You can cast stored spells from the ring, freeing up space, using the original caster's attack bonus, save DC, spellcasting ability score, and the initial spell slot level.",
 	descriptionFull: "This ring stores spells cast into it, holding them until the attuned wearer uses them. The ring can store up to 5 levels worth of spells at a time. When found, it contains 1d6-1 levels of stored spells chosen by the DM.\n   Any creature can cast a spell of 1st through 5th level into the ring by touching the ring as the spell is cast. The spell has no effect, other than to be stored in the ring. If the ring can't hold the spell, the spell is expended without effect. The level of the slot used to cast the spell determines how much space it uses.\n   While wearing this ring, you can cast any spell stored in it. The spell uses the slot level, spell save DC, spell attack bonus, and spellcasting ability of the original caster, but is otherwise treated as if you cast the spell. The spell cast from the ring is no longer stored in it, freeing up space.",
 	attunement: true,
 	usages: "5 lvls",
@@ -6263,10 +6288,10 @@ MagicItemsList["ring of spell turning"] = {
 	type: "ring",
 	rarity: "legendary",
 	magicItemTable: "?",
-	description: "While wearing this ring, I have advantage on saves against any spell that targets only me (not in an area of effect). If I succeed on the spell save of a spell level 7 or lower, the spell has no effect on me. If I was the only target, and it didn't create and area of affect, I can take a Reaction to reflect the spell back to the caster; against their own spell save DC.",
-	descriptionFull: "While wearing this ring, you have advantage on saving throws against any spell that targets only you (not in an area of effect). On a successful save, if the spell is 7th level or lower, the spell has no effect on you and you can take a reaction to reflect the spell towards the caster, using the slot level, spell save DC, attack bonus, and spellcasting ability of the caster.",
+	description: "While wearing this ring, you have Advantage on saving throws against spells. If I succeed on the save of a spell level 7 or lower, the spell has no effect on me. If you were the only target, and it didn't create an area of affect, I can take a Reaction to deflect the spell back to the caster; against their own spell save DC.",
+	descriptionFull: "While wearing this ring, you have Advantage on saving throws against spells. If you succeed on the save for a spell of level 7 or lower, the spell has no effect on you. If that spell targeted only you and didn’t create an area of effect, you can take a Reaction to deflect the spell back at the spell’s caster; the caster must make a saving throw against the spell using their own spell save DC.",
 	attunement: true,
-	savetxt: { adv_vs: ["spells (targeting only me)"] }
+	savetxt: { adv_vs: ["spells"] }
 };
 MagicItemsList["ring of swimming"] = {
 	name: "Ring of Swimming",
@@ -6276,7 +6301,7 @@ MagicItemsList["ring of swimming"] = {
 	magicItemTable: "?",
 	description: "I have a swimming speed of 40 feet while wearing this ring.",
 	descriptionFull: "You have a swimming speed of 40 feet while wearing this ring.",
-	speed: { swim: { spd: "fixed 40" } }
+	speed: { swim: { spd: "fixed 40", enc: "fixed 30" } }
 };
 MagicItemsList["ring of telekinesis"] = {
 	name: "Ring of Telekinesis",
@@ -6284,8 +6309,8 @@ MagicItemsList["ring of telekinesis"] = {
 	type: "ring",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "While wearing this ring, I can cast Telekinesis at will. After casting the spell, and as a Magic action I can exert my will on one creature or object I can see within 60 ft.",
-	descriptionFull: "While wearing this ring, you can cast Telekinesis at will. After casting the spell, and as a Magic action you can exert you will on one creature or object you can see within 60 ft. You can affect the same target, or choose a new one. You can try to move a creature Huge or smaller, the target must make a Str save or it moves 30 feet in any direction within range, and the target is Restrained. If lifted in the air, it is suspended and falls at the end of your next turn unless this option is used again.",
+	description: "While wearing this ring, you can cast Telekinesis from it. After casting the spell, and as a Magic action you can exert my will on one creature or object you can see within 60 ft.",
+	descriptionFull: "hile wearing this ring, you can cast Telekinesis from it. After casting the spell, and as a Magic action you can exert you will on one creature or object you can see within 60 ft. You can affect the same target, or choose a new one. You can try to move a creature Huge or smaller, the target must make a Strength save or it moves 30 feet in any direction within range, and the target is Restrained. If lifted in the air, it is suspended and falls at the end of your next turn unless this option is used again. If the target is an object, Huge or smaller, and is not worn or carried, you automatically move it 30ft in any direction within the spells range.",
 	attunement: true,
 	spellcastingBonus: {
 		name: "At will",
@@ -6300,9 +6325,13 @@ MagicItemsList["ring of the ram"] = {
 	type: "ring",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "This ring has 3 charges, regaining 1d3 charges daily at dawn. As Magic action, I can use charges to make a ranged attack on a target I can see within 60 ft, with a +7 to hit, doing 2d10 force damage per charge and pushing it 5 ft per charge. If I target an unattended object, I can try to break it with a +5 per charge on the Strength check.",
+	description: "This ring has 3 charges, regaining 1d3 charges daily at dawn. As Magic action, you can use charges to make a ranged attack on a target you can see within 60 ft, with a +7 to hit, doing 2d10 force damage per charge and pushing it away from you 5 ft. If I target an unattended object, you can try to break it with a +5 bonus per charge on the Strength check.",
 	descriptionFull: "This ring has 3 charges, and it regains 1d3 expended charges daily at dawn. While wearing the ring, you can use a Magic action to expend 1 to 3 of its charges to attack one creature you can see within 60 feet of you. The ring produces a spectral ram's head and makes its attack roll with a +7 bonus. On a hit, for each charge you spend, the target takes 2d10 force damage and is pushed 5 feet away from you.\n   Alternatively, you can expend 1 to 3 of the ring's charges as a Magic action to try to break an object you can see within 60 feet of you that isn't being worn or carried. The ring makes a Strength check with a +5 bonus for each charge you spend.",
 	attunement: true,
+	action: [["action", "(ranged attack)"], ["action", "(break object)"]],
+	usages: 3,
+	recovery: "dawn",
+	additional: "regains 1d3",
 	weaponsAdd: ["Ring of the Ram"],
 	weaponOptions: {
 		regExpSearch: /^(?=.*ring)(?=.*ram).*$/i,
@@ -6312,7 +6341,7 @@ MagicItemsList["ring of the ram"] = {
 		type: "Magic Item",
 		damage: [2, 10, "force"],
 		range: "60 ft",
-		description: "Damage is per charge used, also pushes 5 ft away per charge used",
+		description: "Damage is per charge used, also pushes 5 ft away",
 		abilitytodamage: false,
 		modifiers: [7, ""]
 	}
@@ -6323,8 +6352,8 @@ MagicItemsList["ring of three wishes"] = {
 	type: "ring",
 	rarity: "legendary",
 	magicItemTable: "?",
-	description: "While wearing this ring, I can use an action to expend 1 of its 3 charges to cast the Wish spell from it. The ring becomes nonmagical when I use the last charge.",
-	descriptionFull: "While wearing this ring, you can use an action to expend 1 of its 3 charges to cast the Wish spell from it. The ring becomes nonmagical when you use the last charge.",
+	description: "While wearing this ring, you can expend 1 of its 3 charges to cast Wish from it. The ring becomes nonmagical when you use the last charge.",
+	descriptionFull: "While wearing this ring, you can expend 1 of its 3 charges to cast Wish from it. The ring becomes nonmagical when you use the last charge.",
 	usages: 3,
 	recovery: "Never",
 	spellFirstColTitle: "Ch",
@@ -6341,7 +6370,7 @@ MagicItemsList["ring of warmth"] = {
 	type: "ring",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "While wearing this ring, Cold damage I receive is reduced by 2d8. In addition, I and everything I wear and carry are unharmed by temperatures as low as -50 \u00B0F.",
+	description: "While wearing this ring, Cold damage you receive is reduced by 2d8. Yourself and anything you carry are unharmed by temperatures as low as -50 \u00B0F.",
 	descriptionFull: "While wearing this ring, Cold damage I receive is reduced by 2d8. In addition, you and everything you wear and carry are unharmed by temperatures as low as -50 degrees Fahrenheit.",
 	attunement: true,
 };
@@ -6352,7 +6381,13 @@ MagicItemsList["ring of water walking"] = {
 	rarity: "uncommon",
 	magicItemTable: "?",
 	description: "While wearing this ring, I can stand on and move across any liquid surface as if it were solid ground.",
-	descriptionFull: "While wearing this ring, you can stand on and move across any liquid surface as if it were solid ground."
+	descriptionFull: "While wearing this ring, you can stand on and move across any liquid surface as if it were solid ground.",
+	spellcastingBonus: [{
+		name: "At will",
+		spells: ["water walk"],
+		selection: ["water walk"],
+		firstCol: "atwill",
+	}]
 };
 MagicItemsList["ring of x-ray vision"] = {
 	name: "Ring of X-ray Vision",
@@ -6360,13 +6395,13 @@ MagicItemsList["ring of x-ray vision"] = {
 	type: "ring",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "As a Magic action, I can speak this ring's command word to make me see into and through solid matter as if it is transparent and light passes through for 1 minute within 30 ft (1 ft stone, 1 inch metal, 3 ft wood/dirt, not lead). When I use this again before a long rest, I must make a DC 15 Con save or gain 1 level of exhaustion.",
-	descriptionFull: "While wearing this ring, you can take a Magic action to speak its command word. When you do so, you can see into and through solid matter for 1 minute. This vision has a radius of 30 feet. To you, solid objects within that radius appear transparent and don't prevent light from passing through them. The vision can penetrate 1 foot of stone, 1 inch of common metal, or up to 3 feet of wood or dirt. Thicker substances block the vision, as does a thin sheet of lead.\n   Whenever you use the ring again before taking a long rest, you must succeed on a DC 15 Constitution saving throw or gain one level of exhaustion.",
+	description: "As a Magic action, you gain X-ray vision and can see into and through solid matter as if it is transparent and light passes through for 1 minute within 30 ft (1 ft stone, 1 inch metal, 3 ft wood/dirt, not lead). When you use this again before a long rest, you must make a DC 15 Constitution save or gain 1 level of exhaustion.",
+	descriptionFull: "While wearing this ring, you can take a Magic action to gain X-ray vision with a range of 30 feet for 1 minute. To you, solid objects within that radius appear transparent and don’t prevent light from passing through them. The vision can penetrate 1 foot of stone, 1 inch of common metal, or up to 3 feet of wood or dirt. Thicker substances or a thin sheet of lead block the vision.\n   Whenever you use the ring again before taking a Long Rest, you must succeed on a DC 15 Constitution saving throw or gain 1 Exhaustion level.",
 	attunement: true,
-	action: [["action", ""]],
+	action: [["action", "x-ray vision"]],
 	usages: 1,
 	recovery: "long rest",
-	additional: "more uses: DC 15 Con save"
+	additional: "more uses: DC 15 Con save or gain 1 Exhaustion level"
 };
 MagicItemsList["rival coin"] = {
 	name: "Rival Coin",
@@ -6374,13 +6409,13 @@ MagicItemsList["rival coin"] = {
 	type: "wondrous item",
 	rarity: "common",
 	magicItemTable: "?",
-	description: "This coin has 1 charge, and regains expended charges at dawn. I can take a Magic action to toss the coin. Roll any die to determine if it lands on heads (even number) or tails (odd number). See Notes.",
-	descriptionFull: "This coin has 1 charge, and regains expended charges at dawn. I can take a Magic action to toss the coin. Roll any die to determine if it lands on heads (even number) or tails (odd number). The roll determines the effect gained:" +
+	description: "This coin has 1 charge, and regains expended charges at dawn. You can take a Magic action to toss the coin. Roll any die to determine if it lands on heads (even number) or tails (odd number). See Notes.",
+	descriptionFull: "This coin has 1 charge, and regains expended charges at dawn. You can take a Magic action to toss the coin. Roll any die to determine if it lands on heads (even number) or tails (odd number). The roll determines the effect gained:" +
 		"\n" +
-		"\u2022 >>Heads<<: I target once creature I can see within 60 ft. The target makes a DC 13 Wis Save or takes 2d4 Psychic damage and has DisAdvantage on its next attack roll. On a successful save, the target takes 1d4 Psychic damage." +
+		"\u2022 >>Heads<<: You target once creature you can see within 60 ft. The target makes a DC 13 Wisdom saving throw or take 2d4 Psychic damage and has Disadvantage on its next attack roll. On a successful save, the target takes 1d4 Psychic damage." +
 		"\n" +
-		"\u2022 >>Tails<<: I take 1d4 Psychic damage.",
-	action: [["action", "Flip"]],
+		"\u2022 >>Tails<<: You take 1d4 Psychic damage.",
+	action: [["action", "CoinFlip"]],
 	usages: 1,
 	recovery: "dawn",
 };
@@ -6390,8 +6425,8 @@ MagicItemsList["robe of eyes"] = { // contains contributions by SoilentBrad
 	type: "wondrous item",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "This robe gives me: adv. on sight-based Perception checks, Darkvision and Truesight up to 120-ft. I can't close or avert my eyes. If Light is cast on it or Daylight within 5 ft of it, I'm blinded for 1 min, Con save (DC 11-Light, 15-Daylight) at the end of my each of my turns to end.",
-	descriptionFull: "This robe is adorned with eyelike patterns. While you wear the robe, you gain the following benefits:\n \u2022 You have advantage on Wisdom (Perception) checks that rely on sight.\n \u2022 You have darkvision and truesight out to a range of 120 feet.\n\n A Light spell cast on the robe or a Daylight spell cast within 5 feet of the robe causes you to be blinded for 1 minute. At the end of each of your turns, you can make a Constitution saving throw (DC 11 for Light or DC 15 for Daylight), ending the blindness on a success.",
+	description: "This robe gives you the following benefits: Advantage on sight-based Perception checks; Darkvision and Truesight up to 120-ft. If Light is cast on it or Daylight within 5 ft of it, you're blinded for 1 min, Con save (DC 11-Light, 15-Daylight) at the end of my each of my turns until succussful.",
+	descriptionFull: "This robe is adorned with eyelike patterns. While you wear the robe, you gain the following benefits:\n" + toUni("All-Around Vision") + ". The robe gives you Advantage on Wisdom (Perception) checks that rely on sight.\n" + toUni("Special Senses") + ". You have Darkvision and Truesight, both with a range of 120 feet.\n" + toUni("Drawbacks") + ". A Light spell cast on the robe or a Daylight spell cast within 5 feet of the robe gives you the Blinded condition for 1 minute. At the end of each of your turns, you make a Constitution saving throw (DC 11 for Light or DC 15 for Daylight), ending the condition on yourself on a success.",
 	attunement: true,
 	weight: 4,
 	vision: [
@@ -6406,8 +6441,8 @@ MagicItemsList["robe of scintillating colors"] = { // contains contributions by 
 	type: "wondrous item",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "This robe has 3 charges, regaining 1d3 at dawn. As a Magic action, I can use 1 charge to shed a 30-ft radius bright light, or 30 ft dim light until the end of my next turn, causing all that see me to have Disadv. on attacks against me. All within 30 ft that can see me at activation make a DC 15 Wis save or stunned until effect ends.",
-	descriptionFull: "This robe has 3 charges, and it regains 1d3 expended charges daily at dawn. While you wear it, you can take a Magic action and expend 1 charge to cause the garment to display a shifting pattern of dazzling hues until the end of your next turn. During this time, the robe sheds bright light in a 30-foot radius and dim light for an additional 30 feet. Creatures that can see you have disadvantage on attack rolls against you. In addition, any creature in the bright light that can see you when the robe's power is activated must succeed on a DC 15 Wisdom saving throw or become stunned until the effect ends.",
+	description: "This robe has 3 charges, regaining 1d3 at dawn. As a Magic action, you can use 1 charge to shed a 30-ft radius Bright Light and an additional 30 ft Dim Light until the end of my next turn, causing all that see me to have Disadvantage on attacks against you. All within 30 ft that can see me at activation make a DC 15 Wisdom save or Stunned until effect ends.",
+	descriptionFull: "This robe has 3 charges, and it regains 1d3 expended charges daily at dawn. While you wear it, you can take a Magic action and expend 1 charge to cause the garment to display a shifting pattern of dazzling hues until the end of your next turn. During this time, the robe sheds Bright Light in a 30-foot radius and Dim Light for an additional 30 feet, and creatures that can see you have Disadvantage on attack rolls against you. Any creature in the Bright Light that can see you when the robe’s power is activated must succeed on a DC 15 Wisdom saving throw or have the Stunned condition until the effect ends.",
 	attunement: true,
 	weight: 4,
 	usages: 3,
@@ -6421,11 +6456,11 @@ MagicItemsList["robe of stars"] = { // contains contributions by SoilentBrad
 	type: "wondrous item",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "This dark robe gives a +1 bonus to saving throws. It has 6 large stars embroidered on it, that I can use to cast Magic Missile at 5th-level. 1d6 used stars reappear at dusk. As a Magic action, I can enter or exit the Astral Plane along with all I'm wearing and carrying. I can return by taking a Magic action, appearing in the spot I left.",
+	description: "This dark robe gives a +1 bonus to saving throws while worn. It has 6 large stars embroidered on it, that I can use to cast Magic Missile at 5th-level. 1d6 removed stars reappear at dusk. As a Magic action, I can enter the Astral Plane along with all I'm wearing and carrying. I can return by taking a Magic action, appearing in the spot I left or nearest unoccupied space.",
 	descriptionFull: "This black or dark blue robe is embroidered with small white or silver stars. You gain a +1 bonus to saving throws while you wear it.\n   Six stars, located on the robe's upper front portion, are particularly large. While wearing this robe, you can use a Magic action to pull off one of the stars and use it to cast Magic Missile as a 5th-level spell. Daily at dusk, 1d6 removed stars reappear on the robe.\n   While you wear the robe, you can take a Magic action to enter the Astral Plane along with everything you are wearing and carrying. You remain there until you use a Magic action to return to the plane you were on. You reappear in the last space you occupied, or if that space is occupied, the nearest unoccupied space.",
 	attunement: true,
 	weight: 4,
-	action: [["action", ""]],
+	action: [["action", "Enter/Exit Astral"]],
 	usages: 6,
 	recovery: "Dusk",
 	additional: "regains 1d6",
@@ -6450,9 +6485,11 @@ MagicItemsList["robe of the archmagi"] = { // contains contributions by SoilentB
 	type: "wondrous item",
 	rarity: "legendary",
 	magicItemTable: "?",
-	description: "I gain these benefits while wearing the robe: if unarmored, my AC is 15 + my Dex mod; I have adv on saves against spells and magical effects; my spell save DC and spell attack bonus increase by 2.",
-	descriptionFull: "This elegant garment is made from exquisite cloth adorned with silvery runes. This item requires attunement by a Sorceror, Warlock, or Wizard.\n   You gain these benefits while wearing the robe:\n \u2022 If you aren't wearing armor, your base Armor Class is 15 + your Dexterity modifier.\n \u2022 You have advantage on saving throws against spell and other magical effects.\n \u2022 Your spell save DC and spell attack bonus each increase by 2.",
+	description: "You gain these benefits while wearing the robe: if unarmored, AC is 15 + Dex mod; you have Advantage on saves against spells and magical effects; your spell save DC and spell attack bonus increase by 2.",
+	descriptionFull: "This elegant garment is made from exquisite cloth and adorned with runes.\n You gain these benefits while wearing the robe:\n" + toUni("Armor") + ". If you aren't wearing armor, your base Armor Class is 15 + your Dexterity modifier.\n" + toUni("Magic Resistance") + ". You have Advantage on saving throws against spells and other magical effects.\n" + toUni("War Mage") + ". Your spell save DC and spell attack bonus each increase by 2.",
 	attunement: true,
+	prerequisite: "Requires attunement by a Sorcerer, Warlock, or Wizard",
+	prereqeval: function (v) { return (classes.known.sorcerer || classes.known.warlock || classes.known.wizard); },
 	weight: 4,
 	savetxt: { adv_vs: ["spells", "magical effects"] },
 	calcChanges: {
@@ -6468,10 +6505,8 @@ MagicItemsList["robe of the archmagi"] = { // contains contributions by SoilentB
 		regExpSearch: /^(?=.*robe)(?=.*(archmage|archmagi)).*$/i,
 		name: "Robe of the Archmagi",
 		source: [["DMG2024", "-"]],
-		ac: 15,
+		ac: 15 + What('Dex Mod'),
 		weight: 4,
-		prerequisite: "Requires attunement by a good sorcerer, warlock, or wizard",
-		prereqeval: function (v) { return (classes.known.sorcerer || classes.known.warlock || classes.known.wizard); }
 	},
 };
 MagicItemsList["robe of useful items"] = {
@@ -6480,8 +6515,8 @@ MagicItemsList["robe of useful items"] = {
 	type: "wondrous item",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "As an action while donned, I can detach one patch, causing it to become the thing it represents. The robe becomes ordinary if it runs out of patches. It has two each of: dagger, bullseye lantern (filled and lit), steel mirror, 10-ft pole, 50 ft hempen rope, sack. In addition, it has 4d4 patches that are determined by the DM.",
-	descriptionFull: "This robe has cloth patches of various shapes and colors covering it. While wearing the robe. you can use an action to detach one of the patches, causing it to become the object or creature it represents. Once the last patch is removed, the robe becomes an ordinary garment.\n\nThe robe has two of each of the following patches:\n \u2022 Dagger\n \u2022 Bullseye lantern (filled and lit)\n \u2022 Steel mirror\n \u2022 10-foot pole\n \u2022 Hempen rope (50 feet, coiled)\n \u2022 Sack\n\nIn addition, the robe has 4d4 other patches. The DM chooses the patches or determines them randomly.\n\n" + toUni("d100\tPatch") + "\n01-08\tBag of 100 gp\n09-15\tSilver coffer (1 foot long, 6 inches wide and deep) worth 500 gp\n16-22\tIron door (up to 10 feet wide and 10 feet high, barred on one side of your choice), which you can place in an opening you can reach; it conforms to fit the opening, attaching and hinging itself\n23-30\t10 gems worth 100 gp each\n31-44\tWooden ladder (24 feet long)\n45-51\tA riding horse with saddle bags\n52-59\tPit (a cube 10 feet on a side), which you can place on the ground within 10 feet of you\n60-68\t4 potions of healing\n69-75\tRowboat (12 feet long)\n76-83\tSpell scroll containing one spell of 1st to 3rd level\n84-90\t2 mastiffs\n91-96\tWindow (2 feet by 4 feet, up to 2 feet deep), which you can place on a vertical surface you can reach\n97-00\tPortable ram",
+	description: "You can take a Magic action to detach one of the many patches, causing it to become the object or creature it represents. It has two patches each of a Bullseye Lantern (filled and lit), Dagger, Mirror, Pole, Rope (coiled), Sack. In addition, it has 4d4 patches that are determined by the DM.",
+	descriptionFull: "This robe has cloth patches of various shapes and colors covering it. While wearing the robe. you can take a Magic action to detach one of the patches, causing it to become the object or creature it represents. Once the last patch is removed, the robe becomes an ordinary garment.\n\nThe robe has two of each of the following patches:\n \u2022 Bullseye lantern (filled and lit)\n \u2022 Dagger\n \u2022 Mirror\n \u2022 Pole\n \u2022 Rope (coiled)\n \u2022 Sack\n\nIn addition, the robe has 4d4 other patches. The DM chooses the patches or determines them randomly.\n\n" + toUni("d100\tPatch") + "\n01-08\tBag of 100 gp\n09-15\tSilver coffer (1 foot long, 6 inches wide and deep) worth 500 gp\n16-22\tIron door (up to 10 feet wide and 10 feet high, barred on one side of your choice), which you can place in an opening you can reach; it conforms to fit the opening, attaching and hinging itself\n23-30\t10 gems worth 100 gp each\n31-44\tWooden ladder (24 feet long)\n45-51\tRiding Horse with Riding Saddle\n52-59\tOpen pit (a 10-foot cube), which you can place on the ground within 10 feet of you\n60-68\t4 Potions of Healing\n69-75\tRowboat (12 feet long)\n76-83\tSpell Scroll containing one spell of level 1,2, or 3 (your choice)\n84-90\t2 Mastiffs\n91-96\tWindow (2 feet by 4 feet, up to 2 feet deep), which you can place on a vertical surface you can reach\n97-00\tPortable Ram",
 	weight: 4,
 	action: ["action", ""]
 };
@@ -6491,9 +6526,9 @@ MagicItemsList["rod of absorption"] = {
 	type: "rod",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "As a reaction while holding this rod, I can use it to absorb a spell targeting only me, without an area of effect. It has no effect and its spell slot level is stored in the rod. I can expend these levels as if they are spell slots to power my own spells up to 5th-level. Once the rod has absorbed 50 levels, it can absorb no more.",
+	description: "While holding this rod, you can take a Reaction to absorb a spell that is targeting only you and doesn’t create an area of effect. It has no effect and its spell slot level is stored in the rod. You can expend these levels as if they are spell slots to power your own spells up to 5th-level. Once the rod has absorbed 50 levels, it can absorb no more.",
 	descriptionLong: "As a reaction while holding this rod, I can use it to absorb a spell targeting only me and without an area of effect. The spell has no effect and its energy is stored in the rod. This energy has the same level as the spell when it was cast. Once the rod has absorbed 50 levels, it can absorb no more. I can expend these levels as if they are spell slots to power my own spells up to 5th-level and only for spell slot levels I have access to otherwise. For example, I can expend 3 levels to cast one of my spells using a 3rd-level spell slot. When the rod can't absorb any more levels and has no energy left, it becomes nonmagical.",
-	descriptionFull: "While holding this rod, you can use your reaction to absorb a spell that is targeting only you and not with an area of effect. The absorbed spell's effect is canceled, and the spell's energy\u2014not the spell itself\u2014is stored in the rod. The energy has the same level as the spell when it was cast. The rod can absorb and store up to 50 levels of energy over the course of its existence. Once the rod absorbs 50 levels of energy, it can't absorb more. If you are targeted by a spell that the rod can't store, the rod has no effect on that spell.\n   When you become attuned to the rod, you know how many levels of energy the rod has absorbed over the course of its existence, and how many levels of spell energy it currently has stored.\n   If you are a spellcaster holding the rod, you can convert energy stored in it into spell slots to cast spells you have prepared or know. You can create spell slots only of a level equal to or lower than your own spell slots, up to a maximum of 5th level. You use the stored levels in place of your slots, but otherwise cast the spell as normal. For example, you can use 3 levels stored in the rod as a 3rd-level spell slot.\n   A newly found rod has 1d10 levels of spell energy stored in it already. A rod that can no longer absorb spell energy and has no energy remaining becomes nonmagical.",
+	descriptionFull: "While holding this rod, you can take a Reaction to absorb a spell that is targeting only you and doesn’t create an area of effect. The absorbed spell’s effect is canceled, and the spell’s energy—not the spell itself—is stored in the rod. The energy has the same level as the spell when it was cast. A canceled spell dissipates with no effect, and any resources used to cast it are wasted. The rod can absorb and store up to 50 levels of energy over the course of its existence. Once the rod absorbs 50 levels of energy, it can’t absorb more. If you are targeted by a spell that the rod can’t store, the rod has no effect on that spell.\n When you become attuned to the rod, you know how many levels of energy the rod has absorbed over the course of its existence and how many levels of spell energy it currently has stored.\n  If you are a spellcaster holding the rod, you can convert energy stored in it into spell slots to cast spells you have prepared or know. You can create spell slots only of a level equal to or lower than your own spell slots, up to a maximum of level 5. You use the stored levels in place of your slots but otherwise cast the spell as normal. For example, you can use 3 levels stored in the rod as a level 3 spell slot.\n   A newly found rod has 1d10 levels of spell energy stored in it already. A rod that can no longer absorb spell energy and has no energy remaining becomes nonmagical.",
 	attunement: true,
 	weight: 2,
 	action: [["reaction", ""]],
@@ -6513,16 +6548,15 @@ MagicItemsList["rod of alertness"] = { // contains contributions by SoilentBrad
 	type: "rod",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "While holding this rod, I have adv. on initiative and Perception and can cast certain spells. As an action once per dawn, I can plant it in the ground, making it shed 60-ft radius bright light, dim for another 60 ft for 10 min. In the bright light, my allies and I gain +1 AC, +1 bonus to saves, and can sense invisible hostiles.",
-	descriptionLong: "While holding this rod, I have advantage on my initiative and Wisdom (Perception) checks. As an action, I can use it to cast either Detect Evil and Good, Detect Magic, Detect Poison and Disease, or See Invisibility. As an action once per dawn, I can plant the rod's haft in the ground, making its head shed bright light in a 60-ft radius and dim light for another 60 ft. This lasts 10 minutes or until a creature pulls the rod from the ground as an action. While in the bright light, my allies and I gain +1 bonus to AC and saving throws and can sense the location of any invisible hostile creatures that are also within the bright light.",
-	descriptionFull: "This rod has a flanged head and the following properties.\n   " + toUni("Alertness") + ". While holding the rod, you have advantage on Wisdom (Perception) checks and on rolls for initiative.\n   " + toUni("Spells") + ". While holding the rod, you can use an action to cast one of the following spells from it: Detect Evil and Good, Detect Magic, Detect Poison and Disease, or See Invisibility.\n   " + toUni("Protective Aura") + ". As a Magic action, you can plant the haft end of the rod in the ground, whereupon the rod's head sheds bright light in a 60-foot radius and dim light for an additional 60 feet. While in that bright light, you and any creature that is friendly to you gain a +1 bonus to AC and saving throws and can sense the location of any invisible hostile creature that is also in the bright light.\n   The rod's head stops glowing and the effect ends after 10 minutes, or when a creature uses an action to pull the rod from the ground. This property can't be used again until the next dawn.",
+	description: "While holding this rod, I have Advantage on Initiative and Wisdom (Perception) checks and can cast certain spells. As an Magic action once per dawn, I can plant it in the ground, making it shed 60-ft radius Bright Light, and Dim Light for another 60 ft for 10 min. In Bright Light, my allies and I gain +1 to AC and saveing throws, and can sense any Invisible creatures within the Bright Light.",
+	descriptionFull: "This rod has the following properties.\n   " + toUni("Alertness") + ". While holding the rod, you have Advantage on Wisdom (Perception) checks and Initiative rolls.\n   " + toUni("Spells") + ". While holding the rod, you can cast one of the following spells from it: Detect Evil and Good, Detect Magic, Detect Poison and Disease, or See Invisibility.\n   " + toUni("Protective Aura") + ". As a Magic action, you can plant the haft end of the rod in the ground, whereupon the rod's head sheds Bright Light in a 60-foot radius and Dim Light for an additional 60 feet. While in that Bright Light, you and your allies gain a +1 bonus to AC and saving throws and can sense the location of any Invisible creature that is also in the Bright Light.\n   The rod's head stops glowing and the effect ends after 10 minutes or when a creature uses a Magic action to pull the rod from the ground. Once used, this property can't be used again until the next dawn.",
 	attunement: true,
 	weight: 2,
 	usages: 1,
 	recovery: "dawn",
 	limfeaname: "Rod of Alertness (Plant in Ground)",
 	advantages: [["Initiative", true], ["Perception", true]],
-	vision: [["Adv. on Perception checks", 0]],
+	vision: [["Bright Light: Sense Invisible", 0]],
 	action: [["action", ""]],
 	spellcastingBonus: [{
 		name: "Robe of Alertness",
@@ -6537,11 +6571,11 @@ MagicItemsList["rod of lordly might"] = {
 	type: "rod",
 	rarity: "legendary",
 	magicItemTable: "?",
-	description: "This rod functions as a +3 mace. As a bonus action, I can press one of the six buttons on the rod, changing it. The rod can also drain life, paralyze, and terrify, each once per dawn. See the notes page for what the different buttons do and how the functions work that can each be used once per dawn.",
-	descriptionFull: "This rod has a flanged head, and it functions as a magic mace that grants a +3 bonus to attack and damage roll made with it. The rod has properties associated with six different buttons that are set in a row along the haft. It has three other properties as well, detailed below.\n   " + toUni("Six Buttons") + ". You can press one of the rod's six buttons as a bonus action. A button's effect lasts until you push a different button or until you push the same button again, which causes the rod to revert to its normal form.\n   If you press " + toUni("button 1") + ", the rod becomes a flame tongue as a fiery blade sprouts from the end opposite the rod's flanged head (you choose the type of sword).\n   If you press " + toUni("button 2") + ", the rod's flanged head folds down and two crescent-shaped blades spring out, transforming the rod into a magic battleaxe that grants a +3 bonus to attack and damage rolls made with it.\n   If you press " + toUni("button 3") + ", the rod's flanged head folds down, a spear point springs from the rod's tip, and the rod's handle lengthens into a 6-foot haft, transforming the rod into a magic spear that grants a +3 bonus to attack and damage rolls made with it.\n   If you press " + toUni("button 4") + ", the rod transforms into a climbing pole up to 50 feet long, as you specify. In surfaces as hard as granite, a spike at the bottom and three hooks at the top anchor the pole. Horizontal bars 3 inches long fold out from the sides, 1 foot apart, forming a ladder. The pole can bear up to 4,000 pounds. More weight or lack of solid anchoring causes the rod to revert to its normal form.\n   If you press " + toUni("button 5") + ", the rod transforms into a handheld battering ram and gram its user a +10 bonus to Strength checks made to break through doors, barricades, and other barriers.\n   If you press " + toUni("button 6") + ", the rod assumes or remains in its normal form and indicates magnetic north. (Nothing happens if this function of the rod is used in a location that has no magnetic north.) The rod also gives you knowledge of your approximate depth beneath the ground or your height above it.\n   " + toUni("Drain Life") + ". When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Constitution saving throw. On a failure, the target rakes an extra 4d6 necrotic damage, and you regain a number of hit points equal to half that necrotic damage. This property can't be used again until the next dawn.\n   " + toUni("Paralyze") + ". When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Strength saving throw. On a failure, the target is paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on a success. This property can't be used again until the next dawn.\n   " + toUni("Terrify") + ". While holding the rod, you can use an action to force each creature you can see within 30 feet of you to make a DC 17 Wisdom saving throw. On a failure, a target is frightened of you for 1 minute. A frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. This property can't be used again until the next dawn.",
+	description: "This rod functions as a +3 mace. As a Bonus action, I can press one of the six buttons on the rod, changing it. The rod can also drain life, paralyze, and terrify, on a melee attack, each once per dawn. See Notes Page for Buttons/Controls.",
+	descriptionFull: "This rod has a flanged head, and it functions as a magic mace that grants a +3 bonus to attack and damage rolls made with it. The rod has properties associated with six different buttons that are set in a row along the haft. It has three other properties as well, detailed below.\n   " + toUni("Buttons") + ". You can press one of the following buttons as a Bonus Action; a button's effect lasts until you push a different button or until you push the same button again, which causes the rod to revert to its normal form.\n " + toUni("Button 1") + ".  A fiery blade sprouts from the end opposite the rod’s flanged head. The flames shed Bright Light in a 40-foot radius and Dim Light for an additional 40 feet, and the blade functions as a magic Longsword or Shortsword (your choice) that deals an extra 2d6 Fire damage on a hit.\n " + toUni("Button 2") + ". The rod’s flanged head folds down and two crescent-shaped blades spring out, transforming the rod into a magic Battleaxe that grants a +3 bonus to attack rolls and damage rolls made with it.\n  " + toUni("Button 3") + ". The rod’s flanged head folds down, a spear point springs from the rod’s tip, and the rod’s handle lengthens into a 6-foot haft, transforming the rod into a magic Spear that grants a +3 bonus to attack rolls and damage rolls made with it.\n  " + toUni("Button 4") + ". The rod transforms into a climbing pole up to 50 feet long (you specify the length), though the rod’s buttons remain within your reach. In surfaces as hard as granite, a spike at the bottom and three hooks at the top anchor the pole. Horizontal bars 3 inches long fold out from the sides, 1 foot apart, forming a ladder. The pole can bear up to 4,000 pounds. More weight or lack of solid anchoring causes the rod to revert to its normal form.\n  " + toUni("Button 5") + ". The rod transforms into a handheld battering ram and grants its user a +10 bonus to Strength (Athletics) checks made to break through doors, barricades, and other barriers.\n  " + toUni("Button 6") + ". The rod assumes or remains in its normal form and indicates magnetic north. (Nothing happens if this function of the rod is used in a location that has no magnetic north.) The rod also gives you knowledge of your approximate depth beneath the ground or your height above it.\n   " + toUni("Drain Life") + ". When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Constitution saving throw. On a failed save, the target rakes an extra 4d6 Necrotic damage, and you regain a number of Hit Points equal to half that necrotic damage. This property can't be used again until the next dawn.\n   " + toUni("Paralyze") + ". When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Constitution saving throw. On a failed save, the target is Paralyzed for 1 minute. The target repeats the saving throw at the end of each of its turns, ending the effect on a success. This property can't be used again until the next dawn.\n   " + toUni("Terrify") + ". While holding the rod, you can take a Magic action to force each creature you can see within 30 feet of you to make a DC 17 Wisdom saving throw. On a failed save, a target has the Frightened condition for 1 minute. A Frightened target repeats the save at the end of each of its turns, ending the effect on itself on a success. This property can't be used again until the next dawn.",
 	attunement: true,
 	weight: 2,
-	action: [["bonus action", " (press button)"], ["action", " (Terrify)"]],
+	action: [["Bonus action", " (press button)"], ["action", " (Terrify)"]],
 	extraLimitedFeatures: [{
 		name: "Rod of Lordly Might (Drain Life)",
 		usages: 1,
@@ -6559,38 +6593,39 @@ MagicItemsList["rod of lordly might"] = {
 		baseWeapon: "battleaxe",
 		regExpSearch: /^(?=.*rod)(?=.*lordly)(?=.*might)(?=.*axe).*$/i,
 		name: "Rod of Lordly Might (Axe)",
-		source: [["SRD", 240], ["D", 196]],
+		source: [["PHB2024", "-"]],
 		modifiers: [3, 3]
 	}, {
 		baseWeapon: "mace",
 		regExpSearch: /^(?=.*rod)(?=.*lordly)(?=.*might)(?=.*mace).*$/i,
 		name: "Rod of Lordly Might (Mace)",
-		source: [["SRD", 240], ["D", 196]],
+		source: [["PHB2024", "-"]],
 		modifiers: [3, 3]
 	}, {
 		baseWeapon: "spear",
 		regExpSearch: /^(?=.*rod)(?=.*lordly)(?=.*might)(?=.*spear).*$/i,
 		name: "Rod of Lordly Might (Spear)",
-		source: [["SRD", 240], ["D", 196]],
+		source: [["PHB2024", "-"]],
 		modifiers: [3, 3]
 	}],
 	toNotesPage: [{
 		name: "Buttons and Other Functions",
 		note: [
-			"The rod of lordly might has a flanged head, and it functions as a magic mace that grants a +3 bonus to attack and damage roll made with it.",
-			"As a bonus action, I can press one of the six different buttons that are set in a row along the haft of the rod. A button's effect lasts until a different button is pushed, or until the same button is pushed again, whereupon it reverts to its normal form.",
-			"\u2022 1st button. A fiery blade sprouts from the end opposite the rod's flanged head. These flames shed bright light in a 40-ft radius and dim light for an additional 40 ft. It now functions as a sword (I can choose which type) that deals an extra 2d6 fire damage to any target it hits. [Write \"lordly might\" in the name of a sword in the attack section to have this damage added to the attack's description, for example \"Rod of Lordly Might (Greatsword)\".]",
-			"\u2022 2nd button. The rod's flanged head folds down and two crescent-shaped blades spring out, transforming the rod into a magic battleaxe that grants a +3 bonus to attack and damage rolls made with it.",
-			"\u2022 3rd button. The rod's flanged head folds down, a spear point springs from the rod's tip, and the rod's handle lengthens into a 6-foot haft, transforming the rod into a magic spear that grants a +3 bonus to attack and damage rolls made with it.",
-			"\u2022 4th button. The rod transforms into a climbing pole up to 50 ft long, as I specify. In surfaces as hard as granite, a spike at the bottom and three hooks at the top anchor the pole. Horizontal bars 3 inch long fold out from the sides, 1 ft apart, forming a ladder. The pole can bear up to 4000 lb. More weight or lack of solid anchoring causes the rod to revert to its normal form.",
-			"\u2022 5th button. The rod transforms into a handheld battering ram and gram its user a +10 bonus to Strength checks made to break through doors, barricades, and other barriers.",
-			"\u2022 6th button. The rod assumes or remains in its normal form and indicates magnetic north. (Nothing happens if this function of the rod is used in a location that has no magnetic north.) The rod also gives me knowledge of my approximate depth beneath the ground or my height above it.",
+			"The rod of lordly might has a flanged head, and it functions as a magic Mace that grants a +3 bonus to attack and damage roll made with it.",
+			"As a Bonus action, I can press one of the six different buttons that are set in a row along the haft of the rod. A button's effect lasts until a different button is pushed, or until the same button is pushed again, whereupon it reverts to its normal form.",
+			"\u2022 Button 1.  A fiery blade sprouts from the end opposite the rod’s flanged head. The flames shed Bright Light in a 40-foot radius and Dim Light for an additional 40 feet, and the blade functions as a magic Longsword or Shortsword (your choice) that deals an extra 2d6 Fire damage on a hit.",
+			"\u2022 Button 2.  The rod’s flanged head folds down and two crescent-shaped blades spring out, transforming the rod into a magic Battleaxe that grants a +3 bonus to attack rolls and damage rolls made with it.",
+			"\u2022 Button 3.  The rod’s flanged head folds down, a spear point springs from the rod’s tip, and the rod’s handle lengthens into a 6-foot haft, transforming the rod into a magic Spear that grants a +3 bonus to attack rolls and damage rolls made with it.",
+			"\u2022 Button 4.  The rod transforms into a climbing pole up to 50 feet long (you specify the length), though the rod’s buttons remain within your reach. In surfaces as hard as granite, a spike at the bottom and three hooks at the top anchor the pole. Horizontal bars 3 inches long fold out from the sides, 1 foot apart, forming a ladder. The pole can bear up to 4,000 pounds. More weight or lack of solid anchoring causes the rod to revert to its normal form.",
+			"\u2022 Button 5.  The rod transforms into a handheld battering ram and grants its user a +10 bonus to Strength (Athletics) checks made to break through doors, barricades, and other barriers.",
+			"\u2022 Button 6.  The rod assumes or remains in its normal form and indicates magnetic north. (Nothing happens if this function of the rod is used in a location that has no magnetic north.) The rod also gives you knowledge of your approximate depth beneath the ground or your height above it.",
 			"The rod also has three functions that work independent of the buttons.",
-			"\u2022 Drain Life. When I hit a creature with a melee attack using the rod, I can force the target to make a DC 17 Constitution saving throw. On a failure, the target rakes an extra 4d6 necrotic damage, and I regain a number of hit points equal to half that necrotic damage. This property can't be used again until the next dawn.",
-			"\u2022 Paralyze. When I hit a creature with a melee attack using the rod, I can force the target to make a DC 17 Strength saving throw. On a failure, the target is paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on a success. This property can't be used again until the next dawn.",
-			"\u2022 Terrify. As an action while holding the rod, I can force each creature I can see within 30 ft of me to make a DC 17 Wisdom saving throw. On a failure, a target is frightened of me for 1 minute. A frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. This property can't be used again until the next dawn."
+			"\u2022 Drain Life. When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Constitution saving throw. On a failed save, the target takes an extra 4d6 Necrotic damage, and you regain a number of Hit Points equal to half that Necrotic damage. Once used, this property can’t be used again until the next dawn.",
+			"\u2022 Paralyze.   When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Constitution saving throw. On a failed save, the target has the Paralyzed condition for 1 minute. The target repeats the save at the end of each of its turns, ending the effect on a success. Once used, this property can’t be used again until the next dawn.",
+			"\u2022 Terrify.    While holding the rod, you can take a Magic action to force each creature you can see within 30 feet of yourself to make a DC 17 Wisdom saving throw. On a failed save, a target has the Frightened condition for 1 minute. A Frightened target repeats the save at the end of each of its turns, ending the effect on itself on a success. Once used, this property can’t be used again until the next dawn."
 		]
 	}],
+
 	calcChanges: {
 		atkAdd: [
 			function (fields, v) {
@@ -6610,8 +6645,8 @@ MagicItemsList["rod of resurrection"] = {
 	type: "rod",
 	rarity: "legendary",
 	magicItemTable: "?",
-	description: "This rod has 5 charges and regains 1 expended charge daily at dawn. While I hold it, I can use an action to expend 1 charge and cast Heal from it, or expend 5 charges and cast Resurrection from it. If the rod is reduced to 0 charges, roll a d20. On a 1, the rod disappears in a burst of radiance.",
-	descriptionFull: "The rod has 5 charges. While you hold it, you can use an action to cast one of the following spells from it: Heal (expends 1 charge) or Resurrection (expends 5 charges).\n   The rod regains 1 expended charge daily at dawn. If the rod is reduced to 0 charges, roll a d20. On a 1, the rod disappears in a burst of radiance.",
+	description: "This rod has 5 charges and regains 1 expended charge daily at dawn. While I hold it, I can expend 1 charge and cast Heal from it, or expend 5 charges and cast Resurrection from it. If the rod is reduced to 0 charges, roll a d20. On a 1, the rod disappears in a harmless burst of radiance.",
+	descriptionFull: "The rod has 5 charges. While you hold it, you can expend charges to cast one of the following spells from it: Heal (expends 1 charge) or Resurrection (expends 5 charges).\n   The rod regains 1 expended charge daily at dawn. If the rod is reduced to 0 charges, roll a d20. On a 1, the rod disappears in a harmless burst of radiance.",
 	attunement: true,
 	weight: 2,
 	usages: 5,
@@ -6629,12 +6664,6 @@ MagicItemsList["rod of resurrection"] = {
 		selection: ["resurrection"],
 		firstCol: 5
 	}],
-	spellChanges: {
-		"resurrection": {
-			time: "1 a",
-			changes: "Casting time is only 1 action instead of 1 hour."
-		}
-	}
 };
 MagicItemsList["rod of rulership"] = {
 	name: "Rod of Rulership",
@@ -6642,7 +6671,7 @@ MagicItemsList["rod of rulership"] = {
 	type: "rod",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "As a Magic action once per dawn, I can use this rod to have chosen creatures I can see within 120 ft make a DC 15 Wis save or be charmed by me for 8 hours. While charmed in this way, a target regards me as its trusted leader. It stops being charmed if my allies or I harm it or it is commanded to go against its nature.",
+	description: "As a Magic action once per dawn, you can use this rod to have chosen creatures you can see within 120 ft make a DC 15 Wisdom saving throw or be Charmed by me for 8 hours. While charmed in this way, a target regards you as its trusted leader. It stops being charmed if my allies or I harm it or it is commanded to go against its nature.",
 	descriptionFull: "You can use a Magic action to present the rod and command obedience from each creature of your choice that you can see within 120 feet of you. Each target must succeed on a DC 15 Wisdom saving throw or be charmed by you for 8 hours. While charmed in this way, the creature regards you as its trusted leader. If harmed by you or your companions, or commanded to do something contrary to its nature, a target ceases to be charmed in this way. The rod can't be used again until the next dawn.",
 	attunement: true,
 	weight: 2,
@@ -6656,26 +6685,26 @@ MagicItemsList["rod of security"] = {
 	type: "rod",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "As a Magic action once per 10 days, I can transport myself and up to 199 willing others I can see to an extraplanar paradise for 200 days divided by the number of creatures or until I end it as an action. Creatures within the paradise don't age, have enough to eat and drink, and regain HP every hour as if having spent 1 HD.",
-	descriptionFull: "While holding this rod, you can use a Magic action to activate it. The rod then instantly transports you and up to 199 other willing creatures you can see to a paradise that exists in an extraplanar space. You choose the form that the paradise takes. It could be a tranquil garden, lovely glade, cheery tavern, immense palace, tropical island, fantastic carnival, or whatever else you can imagine. Regardless of its nature, the paradise contains enough water and food to sustain its visitors. Everything else that can be interacted with inside the extraplanar space can exist only there. For example, a flower picked from a garden in the paradise disappears if it is taken outside the extraplanar space.\n   For each hour spent in the paradise, a visitor regains hit points as if it had spent 1 Hit Die. Also, creatures don't age while in the paradise, although time passes normally. Visitors can remain in the paradise for up to 200 days divided by the number of creatures present (round down).\n   When the time runs out or you use an action to end it, all visitors reappear in the location they occupied when you activated the rod, or an unoccupied space nearest that location. The rod can't be used again until ten days have passed.",
+	description: "As a Magic action once per 10 days, I can transport myself and up to 199 willing others I can see to a demiplane for 200 days divided by the number of creatures or until I end it as a Magic action. Creatures within the demiplane don't age, have enough to eat and drink, and regain HP every hour as if having spent 1 HD.",
+	descriptionFull: "While holding this rod, you can take a Magic action to activate it. The rod then instantly transports you and up to 199 other willing creatures you can see to a demiplane. You choose the form the demiplane takes. It could be a tranquil garden, a cheery tavern, an immense palace, a tropical island, a fantastic carnival, or whatever else you can imagine. Regardless of its nature, the demiplane contains enough water and food to sustain its visitors, and the demiplane’s environment can’t harm its occupants. Everything else that can be interacted with there can exist only there. For example, a flower picked from a garden there disappears if it is taken outside the demiplane.\n   For each hour spent in the demiplane, a visitor regains Hit Points as if it had spent 1 Hit Point Die. Also, creatures don’t age while there, although time passes normally. Visitors can remain there for up to 200 days divided by the number of creatures present (round down).\n   When the time runs out or you take a Magic action to end the effect, all visitors reappear in the location they occupied when you activated the rod or an unoccupied space nearest that location. Once used, this property can’t be used again until 10 days have passed..",
 	weight: 2,
 	usages: 1,
 	recovery: "10 days",
-	action: [["action", ""]]
+	action: [["action", "(de)activate"]]
 };
 MagicItemsList["rod of the pact keeper, +1, +2, or +3"] = {
 	name: "Rod of the Pact Keeper, +1, +2, or +3",
 	source: [["DMG2024", 301]],
 	type: "rod",
-	description: "While holding this rod, I gain a bonus to spell attack rolls and to the saving throw DCs of my warlock spells, determined by the rod's rarity: uncommon (+1), rare (+2), or very rare (+3). As a Magic action once per long rest, I can regain one warlock spell slot while holding the rod.",
-	descriptionFull: "While holding this rod, you gain a bonus to spell attack rolls and to the saving throw DCs of your warlock spells. The bonus is determined by the rod's rarity: uncommon (+1), rare (+2), or very rare (+3).\n   In addition, you can regain one warlock spell slot as a Magic action while holding the rod. You can't use this property again until you finish a long rest.",
+	description: "While holding this rod, you gain a bonus to spell attack rolls and to the saving throw DCs of your warlock spells, determined by the rod's rarity: uncommon (+1), rare (+2), or very rare (+3). In addition, you can regain one spell slot as a Magic action while holding the rod. You can’t use this property again until you finish a Long Rest.",
+	descriptionFull: "While holding this rod, you gain a bonus to spell attack rolls and to the saving throw DCs of your warlock spells. The bonus is determined by the rod's rarity: uncommon (+1), rare (+2), or very rare (+3).\n In addition, you can regain one spell slot as a Magic action while holding the rod. You can’t use this property again until you finish a Long Rest.",
 	attunement: true,
 	weight: 2,
 	prerequisite: "Requires attunement by a warlock",
 	prereqeval: function (v) { return classes.known.warlock; },
 	usages: 1,
 	recovery: "long rest",
-	limfeaname: "Rod of the Pact Keeper (warlock spell slot)",
+	limfeaname: "Rod of the Pact Keeper (Warlock spell slot)",
 	action: [["action", ""]],
 	allowDuplicates: true,
 	choices: ["+1 Rod (uncommon)", "+2 Rod (rare)", "+3 Rod (very rare)"],
@@ -6683,13 +6712,13 @@ MagicItemsList["rod of the pact keeper, +1, +2, or +3"] = {
 		name: "Rod of the Pact Keeper +1",
 		rarity: "uncommon",
 		magicItemTable: "?",
-		description: "While holding this rod, I gain a +1 bonus to spell attack rolls and to the saving throw DCs of my warlock spells. As a Magic action once per long rest, I can regain one warlock spell slot while holding the rod.",
+		description: "While holding this rod, you gain a +1 bonus to spell attack rolls and to the saving throw DCs of you Warlock spells. As a Magic action once per long rest, you can regain one warlock spell slot while holding the rod.",
 		calcChanges: {
 			spellCalc: [
 				function (type, spellcasters, ability) {
 					if (type !== "prepare" && spellcasters.indexOf('warlock') !== -1) return 1;
 				},
-				"While holding the Rod of the Pact Keeper, I gain a +1 bonus to spell attack rolls and to the saving throw DCs of my warlock spells."
+				"While holding the Rod of the Pact Keeper, you gain a +1 bonus to spell attack rolls and to the saving throw DCs of my warlock spells."
 			]
 		}
 	},
@@ -6697,13 +6726,13 @@ MagicItemsList["rod of the pact keeper, +1, +2, or +3"] = {
 		name: "Rod of the Pact Keeper +2",
 		rarity: "rare",
 		magicItemTable: "?",
-		description: "While holding this rod, I gain a +2 bonus to spell attack rolls and to the saving throw DCs of my warlock spells. As a Magic action once per long rest, I can regain one warlock spell slot while holding the rod.",
+		description: "While holding this rod, you gain a +2 bonus to spell attack rolls and to the saving throw DCs of your Warlock spells. As a Magic action once per long rest, you can regain one warlock spell slot while holding the rod.",
 		calcChanges: {
 			spellCalc: [
 				function (type, spellcasters, ability) {
 					if (type !== "prepare" && spellcasters.indexOf('warlock') !== -1) return 2;
 				},
-				"While holding the Rod of the Pact Keeper, I gain a +2 bonus to spell attack rolls and to the saving throw DCs of my warlock spells."
+				"While holding the Rod of the Pact Keeper, you gain a +2 bonus to spell attack rolls and to the saving throw DCs of your Warlock spells."
 			]
 		}
 	},
@@ -6711,13 +6740,13 @@ MagicItemsList["rod of the pact keeper, +1, +2, or +3"] = {
 		name: "Rod of the Pact Keeper +3",
 		rarity: "very rare",
 		magicItemTable: "?",
-		description: "While holding this rod, I gain a +3 bonus to spell attack rolls and to the saving throw DCs of my warlock spells. As a Magic action once per long rest, I can regain one warlock spell slot while holding the rod.",
+		description: "While holding this rod, you gain a +3 bonus to spell attack rolls and to the saving throw DCs of your Warlock spells. As a Magic action once per long rest, you can regain one Warlock spell slot while holding the rod.",
 		calcChanges: {
 			spellCalc: [
 				function (type, spellcasters, ability) {
 					if (type !== "prepare" && spellcasters.indexOf('warlock') !== -1) return 3;
 				},
-				"While holding the Rod of the Pact Keeper, I gain a +3 bonus to spell attack rolls and to the saving throw DCs of my warlock spells."
+				"While holding the Rod of the Pact Keeper, you gain a +3 bonus to spell attack rolls and to the saving throw DCs of you Warlock spells."
 			]
 		}
 	}
@@ -6728,46 +6757,45 @@ MagicItemsList["rope of climbing"] = {
 	type: "wondrous item",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "This 60 ft silk rope can hold 3000 lb. As a Magic action, I can hold one end of the rope and command its other end to: start/stop moving (10 ft per turn), (un)fasten itself, coil itself, or (un)knot itself (50 ft length, adv. to climb it). It has AC 20, 20 HP, heals 1 HP/5 min.",
-	descriptionLong: "This 60-ft length of silk rope can hold up to 3000 lb. While holding one end of the rope, I can take a Magic action to command the other end to move 10 ft to a chosen destination up to its maximum length away, moving 10 ft on each of my turns until it reaches it. I can also use the bonus action to tell it to stop moving, to fasten itself securely, to unfasten itself, to knot or unknot itself, or to coil itself for carrying. While knotted, the rope shortens to 50 ft and grants advantage to climb it. The rope has AC 20 and 20 HP, regaining 1 HP per 5 minutes.",
-	descriptionFull: "This 60-foot length of silk rope weighs 3 pounds and can hold up to 3,000 pounds. If you hold one end of the rope and use a Magic action to animate it, you can command the other end to move toward a destination you choose. That end moves 10 feet on your turn when you first command it and 10 feet on each of your turns until reaching its destination, up to its maximum length away, or until you tell it to stop. You can also tell the rope to fasten itself securely to an object or to unfasten itself, to knot or unknot itself, or to coil itself for carrying.\n   If you tell the rope to knot, large knots appear at 1-foot intervals along the rope. While knotted, the rope shortens to a 50-foot length and grants advantage on checks made to climb it.\n   The rope has AC 20 and 20 hit points. It regains 1 hit point every 5 minutes as long as it has at least 1 hit point. If the rope drops to 0 hit points, it is destroyed.",
+	description: "This 60-ft rope can hold 3000 lb. As a Magic action, you can hold one end of the rope and command its other end to: start/stop moving (10 ft per turn), (un)fasten itself, coil itself, or (un)knot itself (50 ft length, adv. to climb it). It has AC 20, 20 HP, heals 1 HP/5 min.",
+	descriptionFull: "This 60-foot length of rope can hold up to 3,000 pounds. While holding one end of the rope, you can take a Magic action to command the other end of the rope to animate and move toward a destination you choose, up to the rope’s length away from you. That end moves 10 feet on your turn when you first command it and 10 feet at the start of each of your subsequent turns until reaching its destination or until you tell it to stop. You can also tell the rope to fasten itself securely to an object or to unfasten itself, to knot or unknot itself, or to coil itself for carrying.\n   If you tell the rope to knot, large knots appear at 1-foot intervals along the rope. While knotted, the rope shortens to a 50-foot length and grants Advantage on ability checks made to climb using the rope.\n   The rope has AC 20, HP 20, and Immunity to Poison and Psychic damage. It regains 1 Hit Point every 5 minutes as long as it has at least 1 Hit Point. If the rope drops to 0 Hit Points, it is destroyed.",
 	weight: 3,
-	action: [["action", " (animate)"], ["bonus action", " (move/fasten/knot/coil)"]]
+	action: [["action", " (animate)"]]
 };
 MagicItemsList["rope of entanglement"] = {
-	name : "Rope of Entanglement",
+	name: "Rope of Entanglement",
 	source: [["DMG2024", 301]],
-	type : "wondrous item",
-	rarity : "rare",
-	magicItemTable : "?",
-	description : "As a Magic action while I hold one end of this 30 ft rope and command the other end to cause a creature I can see within 20 ft to make a DC 15 Dex save or be Restrained by the rope. I can release it as a bonus action or by letting my end of the rope go. The creature can, as an action, escape with a DC 15 Dex(Acrobatics)/Str(Athletics) check. The rope has AC 20, 20 HP, heals 1 HP/5 min.",
-	descriptionFull : "This rope is 30 feet long. While holding one end of the rope, you can take a Magic action to command the other end to dart forward and entangle one creature you can see within 20 feet of yourself. The target must succeed on a DC 15 Dexterity saving throw or have the Restrained condition. You can release the target by letting go of your end of the rope (causing the rope to coil up in the target’s space) or by using a Bonus Action to repeat the command (causing the rope to coil up in your hand).\n   A target Restrained by the rope can take an action to make its choice of a DC 15 Strength (Athletics) or Dexterity (Acrobatics) check. On a successful check, the target is no longer Restrained by the rope. If you’re still holding onto the rope when a target escapes from it, you can take a Reaction to command the rope to coil up in your hand; otherwise, the rope coils up in the target’s space.\n   The rope has AC 20, HP 20, and Immunity to Poison and Psychic damage. It regains 1 Hit Point every 5 minutes as long as it has at least 1 Hit Point. If the rope drops to 0 Hit Points, it is destroyed.",
-	weight : 3,
-	action : [["action", " (entangle)"], ["bonus action", " (release)"]],
-	weaponOptions : [{
-		regExpSearch : /^(?=.*rope)(?=.*entanglement).*$/i,
-		name : "Rope of Entanglement",
-		source : [["DMG2024", 301]],
-		ability : 0,
-		type : "Magic Item",
-		damage : ["Dex save", "", "Restrained"],
-		range : "20 ft",
-		description : "Dexterity saving throw or restrained; DC 15 Strength or Dexterity check to escape",
-		abilitytodamage : false,
-		weight : 3,
-		modifiers : [7, 0],
-		dc : true,
-		isNotWeapon : true,
-		isAlwaysProf : false,
+	type: "wondrous item",
+	rarity: "rare",
+	magicItemTable: "?",
+	description: "As a Magic action while you hold one end of this 30 ft rope and command the other end to cause a creature you can see within 20 ft to make a DC 15 Dex save or be Restrained by the rope. You can release it as a Bonus action or by letting your end of the rope go. The creature can, as an action, escape with a DC 15 Dex(Acrobatics)/Str(Athletics) check. The rope has AC 20, 20 HP, heals 1 HP/5 min.",
+	descriptionFull: "This rope is 30 feet long. While holding one end of the rope, you can take a Magic action to command the other end to dart forward and entangle one creature you can see within 20 feet of yourself. The target must succeed on a DC 15 Dexterity saving throw or have the Restrained condition. You can release the target by letting go of your end of the rope (causing the rope to coil up in the target’s space) or by using a Bonus action to repeat the command (causing the rope to coil up in your hand).\n   A target Restrained by the rope can take an action to make its choice of a DC 15 Strength (Athletics) or Dexterity (Acrobatics) check. On a successful check, the target is no longer Restrained by the rope. If you’re still holding onto the rope when a target escapes from it, you can take a Reaction to command the rope to coil up in your hand; otherwise, the rope coils up in the target’s space.\n   The rope has AC 20, HP 20, and Immunity to Poison and Psychic damage. It regains 1 Hit Point every 5 minutes as long as it has at least 1 Hit Point. If the rope drops to 0 Hit Points, it is destroyed.",
+	weight: 3,
+	action: [["action", " (entangle)"], ["Bonus action", " (release)"]],
+	weaponOptions: [{
+		regExpSearch: /^(?=.*rope)(?=.*entanglement).*$/i,
+		name: "Rope of Entanglement",
+		source: [["DMG2024", 301]],
+		ability: 0,
+		type: "Magic Item",
+		damage: ["Dex save", "", "Restrained"],
+		range: "20 ft",
+		description: "Dexterity saving throw or restrained; DC 15 Strength or Dexterity check to escape",
+		abilitytodamage: false,
+		weight: 3,
+		modifiers: [7, 0],
+		dc: true,
+		isNotWeapon: true,
+		isAlwaysProf: false,
 	}]
-};	
+};
 MagicItemsList["rope of mending"] = {
 	name: "Rope of Mending",
 	source: [["DMG2024", 302]],
 	magicItemTable: "?",
 	type: "wondrous item",
 	rarity: "common",
-	description: "I can cut this 50-foot coil of rope into any number of smaller pieces, and then use a Magic action to cause the pieces to knit back together. The pieces must be in contact with each other and not otherwise in use. A rope of mending is forever shortened if a section of it is lost.",
+	description: "You can cut this 50-foot coil of rope into any number of smaller pieces, and then use a Magic action to cause the pieces to knit back together. The pieces must be in contact with each other and not otherwise in use. A rope of mending is forever shortened if a section of it is lost.",
 	descriptionFull: "You can cut this 50-foot coil of rope into any number of smaller pieces, and then use a Magic action to cause the pieces to knit back together. The pieces must be in contact with each other and not otherwise in use. A rope of mending is forever shortened if a section of it is lost or destroyed.",
 	action: [["action", ""]],
 	weight: 10
@@ -6778,7 +6806,7 @@ MagicItemsList["ruby of the war mage"] = {
 	magicItemTable: "?",
 	type: "wondrous item",
 	rarity: "common",
-	description: "By pressing this 1-inch-diameter ruby etched with eldritch runes to a simple or martial weapon for 10 minutes, it attaches itself to the weapon. I can then use that weapon as a spellcasting focus. Once attached, it can't be removed unless my attunement ends, I detach it as a Magic action, or the weapon is destroyed.",
+	description: "By pressing this 1-inch-diameter ruby etched with eldritch runes to a simple or martial weapon for 10 minutes, it attaches itself to the weapon. You can then use that weapon as a spellcasting focus. Once attached, it can't be removed unless my attunement ends, you detach it as a Magic action, or the weapon is destroyed.",
 	descriptionFull: "Etched with eldritch runes, this 1-inch-diameter ruby allows you to use a simple or martial weapon as a spellcasting focus for your spells. For this property to work, you must attach the ruby to the weapon by pressing the ruby against it for at least 10 minutes. Thereafter, the ruby can't be removed unless you detach it as a Magic action or the weapon is destroyed. The ruby does fall off the weapon if your attunement to the ruby ends.",
 	attunement: true,
 	prerequisite: "Requires attunement by a spellcaster",
@@ -6932,11 +6960,15 @@ MagicItemsList["scroll of titan summoning"] = {
 		name: "Scroll of Colossus Summoning",
 		description: "Once, as a Magic action, I can use this to summon a Colossus in an unoccupied space on the ground or in water that I can see within 1 mile of myself. The titan is hostile towards all other creatures and disappears when it drops to 0 HP. If summoned into a space that isn't large enough to contain it, it fails and is wasted."
 	},
+	"elemental cataclysm": {
+		name: "Scroll of Elemental Cataclysm Summoning",
+		description: "Once, as a Magic action, I can use this to summon an Elemental Cataclysm in an unoccupied space on the ground or in water that I can see within 1 mile of myself. The titan is hostile towards all other creatures and disappears when it drops to 0 HP. If summoned into a space that isn't large enough to contain it, it fails and is wasted."
+	},
 	"empyrean": {
 		name: "Scroll of Empyrean Summoning",
 		description: "Once, as a Magic action, I can use this to summon an Empyrean in an unoccupied space on the ground or in water that I can see within 1 mile of myself. The titan is hostile towards all other creatures and disappears when it drops to 0 HP. If summoned into a space that isn't large enough to contain it, it fails and is wasted."
 	},
-	"Kraken": {
+	"kraken": {
 		name: "Scroll of Kraken Summoning",
 		description: "Once, as a Magic action, I can use this to summon a Kraken in an unoccupied space on the ground or in water that I can see within 1 mile of myself. The titan is hostile towards all other creatures and disappears when it drops to 0 HP. If summoned into a space that isn't large enough to contain it, it fails and is wasted."
 	},
@@ -8386,24 +8418,43 @@ MagicItemsList["tentacle rod"] = {
 		selectNow: true
 	}]
 };
-MagicItemsList["*thunderous greatclub*"] = {
+MagicItemsList["thunderous greatclub"] = {
 	name: "Thunderous Greatclub",
 	source: [["DMG2024", 316]],
-	type: "weapon (Greatclub)",
-	rarity: "Very Rare",
+	type: "weapon (greatclub)",
+	rarity: "very rare",
 	magicItemTable: "?",
+	description: "The weapon deals an extra 1d8 Thunder damage to any creature it hits and an extra 3d8 Thunder damage to objects it hits that aren’t being worn or carried.",
+	descriptionFull: "While you are attuned to this magic weapon, your Strength is 20 unless your Strength is already equal to or greater than that score. The weapon deals an extra 1d8 Thunder damage to any creature it hits and an extra 3d8 Thunder damage to objects it hits that aren’t being worn or carried.\n" + "The weapon has the following additional properties.\n" + toUni("Clap of Thunder") +". As a Magic action, you can strike the weapon against a hard surface to create a loud clap of thunder audible out to 300 feet. You also create a 30-foot Cone of thunderous energy. Each creature in the Cone must succeed on a DC 15 Strength saving throw or have the Prone condition. Nonmagical objects in the Cone that aren’t being worn or carried take 3d8 Thunder damage.\n" + toUni("Earthquake") +" . As a Magic action, you can strike the weapon against the ground to create an intense seismic disturbance in a 50-foot-radius circle centered on the point of impact. Structures in contact with the ground in that area take 50 Bludgeoning damage, and each creature on the ground in that area must succeed on a DC 20 Dexterity saving throw or have the Prone condition. If that creature is also concentrating, it must succeed on a DC 20 Constitution saving throw or its Concentration is broken. In addition, you can cause a 30-foot-deep, 10-foot-wide fissure to open up on the ground anywhere in the area. Any creature on a spot where the fissure opens must succeed on a DC 20 Dexterity saving throw, falling into the fissure on a failed save or moving with the fissure’s edge on a successful one. Any structure on a spot where the fissure opens collapses into the fissure. Once you use this property, it can’t be used again until the next dawn.",
 	attunement: true,
-	description: "",
-	descriptionFull: "While you are attuned to this magic weapon, your Strength is 20 unless your Strength is already equal to or greater than that score. The weapon deals an extra 1d8 Thunder damage to any creature it hits and an extra 3d8 Thunder damage to objects it hits that aren’t being worn or carried.\n   The weapon has the following additional properties.\n   " + toUni("Clap of Thunder") + "As a Magic action, you can strike the weapon against a hard surface to create a loud clap of thunder audible out to 300 feet. You also create a 30-foot Cone of thunderous energy. Each creature in the Cone must succeed on a DC 15 Strength saving throw or have the Prone condition. Nonmagical objects in the Cone that aren’t being worn or carried take 3d8 Thunder damage.\n   " + toUni("Earthquake") + "As a Magic action, you can strike the weapon against the ground to create an intense seismic disturbance in a 50-foot-radius circle centered on the point of impact. Structures in contact with the ground in that area take 50 Bludgeoning damage, and each creature on the ground in that area must succeed on a DC 20 Dexterity saving throw or have the Prone condition. If that creature is also concentrating, it must succeed on a DC 20 Constitution saving throw or its Concentration is broken. In addition, you can cause a 30-foot-deep, 10-foot-wide fissure to open up on the ground anywhere in the area. Any creature on a spot where the fissure opens must succeed on a DC 20 Dexterity saving throw, falling into the fissure on a failed save or moving with the fissure’s edge on a successful one. Any structure on a spot where the fissure opens collapses into the fissure. Once you use this property, it can’t be used again until the next dawn.",
+	weight: 10,
+	scoresOverride: [20, 0, 0, 0, 0, 0],
+	action: [["action", " (Clap of Thunder)"], ["action", " (Earthquake)"]],
+	weaponAdd: "thunderous greatclub",
 	weaponOptions: [{
 		baseWeapon: "greatclub",
 		regExpSearch: /thunderous greatclub/i,
-		name: "Thunderous Greatclub",
-		source: [["DMG2024", 316]],
-		description: "+1d8 Thunder to Crea. Hit, +3d8 Thunder to Obj. Hit; Two-Handed; Push",
-		selectNow: true
+		name: "thunderous greatclub",
+		source: [["DMG2024", "-"]],
+		description: "Two-handed; +1d8 Thunder v Crea; +3d8 v obj; Clap of Thunder - SEE NOTES; Earthquake - SEE NOTES",
+		isMagicWeapon: true,
 	}],
-	action : [["action", " (Clap of Thunder"], ["action", " (Earthquake)"]],
+	extraLimitedFeatures: [{
+		name: "Earthquake",
+		usages: 1,
+		recovery: "dawn",
+		description: "As a Magic action you can strike the weapon against the ground to create a seismic disturbance in 50 ft radius center on point of impact. Structures in contact take 50 bludgeoning dmg, each creature in area make DC 20 Dex save or fall prone. If creature is concentrating, make DC 20 save or lose concentration. You open a 30ft deep, 10ft wide fissue to open anywhere in the area. Any Creature on a spot where the fissure opens must make a DC20 dex save, falling into the fissure on failure or moving to the edge on sucess. Any structure on a fissure spot collapses into fissure. This can be used once per dawn."
+	}],
+	toNotesPage: [{
+		name: "Thunderous Greatclub",
+		note: [
+			"While attuned to this magic weapon, your Strength is 20 unless your Strength is already equal to or greater than that score." +
+			"The weapon deals an extra 1d8 Thunder damage to any creature it hits and an extra 3d8 Thunder damage to objects it hits that aren’t being worn or carried.\n" +
+			"The weapon has the following additional properties.\n"+
+			toUni("Clap of Thunder") + ". As a Magic action, you can strike the weapon against a hard surface to create a loud clap of thunder audible out to 300 feet. You also create a 30-foot Cone of thunderous energy. Each creature in the Cone must succeed on a DC 15 Strength saving throw or have the Prone condition. Nonmagical objects in the Cone that aren’t being worn or carried take 3d8 Thunder damage.\n" +
+			toUni("Earthquake") + " . As a Magic action, you can strike the weapon against the ground to create an intense seismic disturbance in a 50-foot-radius circle centered on the point of impact. Structures in contact with the ground in that area take 50 Bludgeoning damage, and each creature on the ground in that area must succeed on a DC 20 Dexterity saving throw or have the Prone condition. If that creature is also concentrating, it must succeed on a DC 20 Constitution saving throw or its Concentration is broken. In addition, you can cause a 30-foot-deep, 10-foot-wide fissure to open up on the ground anywhere in the area. Any creature on a spot where the fissure opens must succeed on a DC 20 Dexterity saving throw, falling into the fissure on a failed save or moving with the fissure’s edge on a successful one. Any structure on a spot where the fissure opens collapses into the fissure. Once you use this property, it can’t be used again until the next dawn.",
+		]
+	}],
 };	
 MagicItemsList["tome of clear thought"] = {
 	name: "Tome of Clear Thought",
