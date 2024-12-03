@@ -20140,7 +20140,7 @@ legacySpellRefactor("wrathful smite", {
 	timeFull : "Bonus Action, which you take immediately after hitting a creature with a Melee weapon or Unarmed strike",
 	range : "Self",
 	components : "V",
-	duration : "Conc, 1 min",
+	duration : "1 min",
 	save : "Wis",
 	description : "Melee weapon/unarmed hit +1d6 Necrotic dmg and save or Frightened; EoT save to end",
 	descriptionFull : "The target takes an extra 1d6 Necrotic damage from the attack, and it must succeed on a Wisdom saving throw or have the Frightened condition until the spell ends. At the end of each of its turns, the Frightened target repeats the save, ending the spell on itself on a success." + AtHigherLevels + "The damage increases by 1d6 for each spell slot level above 1."
