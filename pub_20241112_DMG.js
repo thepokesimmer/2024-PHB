@@ -6432,8 +6432,8 @@ MagicItemsList["robe of eyes"] = { // contains contributions by SoilentBrad
 	vision: [
 		["Darkvision", "fixed 120"],
 		["Truesight", "fixed 120"],
+		["Adv on sight-based Perception"],
 	],
-	savetxt: "Adv. on sight-based Perception",
 };
 MagicItemsList["robe of scintillating colors"] = { // contains contributions by SoilentBrad
 	name: "Robe of Scintillating Colors",
@@ -6474,7 +6474,7 @@ MagicItemsList["robe of stars"] = { // contains contributions by SoilentBrad
 	},
 	spellChanges: {
 		"magic missile": {
-			description: "8 darts hit creature(s) I can see for 1d4+1 Force dmg per dart",
+			description: "7 darts hit creature(s) I can see for 1d4+1 Force dmg per dart",
 			changes: "Magic Missile cast from the Robe of Stars is always at 5th-level."
 		}
 	}
@@ -6629,13 +6629,13 @@ MagicItemsList["rod of lordly might"] = {
 	calcChanges: {
 		atkAdd: [
 			function (fields, v) {
-				if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && (/sword|scimitar|rapier/i).test(v.baseWeaponName) && (/^(?=.*lordly)(?=.*might).*$/i).test(v.WeaponTextName)) {
+				if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && (/sword/i).test(v.baseWeaponName) && (/^(?=.*lordly)(?=.*might).*$/i).test(v.WeaponTextName)) {
 					v.theWea.isMagicWeapon = true;
 					fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
 					fields.Description += (fields.Description ? '; ' : '') + '+2d6 fire damage';
 				}
 			},
-			'If I include the words "Lordly Might" in a the name of a sword, it will be treated as the magic weapon Flame Tongue. It adds +2d6 fire damage on a hit and shines light.'
+			'If I include the words "Lordly Might" in a the name of a long sword or short sword, it adds +2d6 fire damage on a hit and shines light.'
 		]
 	}
 };
@@ -6704,7 +6704,7 @@ MagicItemsList["rod of the pact keeper, +1, +2, or +3"] = {
 	prereqeval: function (v) { return classes.known.warlock; },
 	usages: 1,
 	recovery: "long rest",
-	limfeaname: "Rod of the Pact Keeper (Warlock spell slot)",
+	limfeaname: "Rod of the Pact Keeper (spell slot)",
 	action: [["action", ""]],
 	allowDuplicates: true,
 	choices: ["+1 Rod (uncommon)", "+2 Rod (rare)", "+3 Rod (very rare)"],
