@@ -7020,7 +7020,7 @@ legacyClassRefactor("warlock", {
           firstCol: "atwill",
         }],
         description: desc([
-          "I can cast Silent Image on yourself without expending a spell slot.",
+          "I can cast Silent Image on myself without expending a spell slot.",
         ]),
       },
       "one with shadows (5+)": {
