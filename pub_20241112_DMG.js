@@ -8309,14 +8309,14 @@ MagicItemsList["sylvan talon"] = {
 };
 MagicItemsList["talisman of pure good"] = {
 	name: "Talisman of Pure Good",
-	source: [["DMG2024", 314]],
+	source: [["DMG2024", "-"]],
 	type: "wondrous item",
 	rarity: "legendary",
 	magicItemTable: "?",
-	description: "I can use this talisman as a holy symbol, and it gives a +2 bonus on my spell attacks while I wear or hold it. Any Fiend or Undead that touches the talistman takes 8d6 radiant, and again each time it ends its turn holding or carrying the talisman. As a Magic action, I can use 1 of its 7 charges to have one creature within 120 ft make a DC 20 Dex save or be destroyed, if the target is a Fiend or Undead, it has DisAdv on the roll. On succussful save, target takes 4d6 Psychic. On last charge, the talisman is destroyed.",
-	descriptionLong: "I can use this talisman as a holy symbol, and it gives a +2 bonus on my spell attacks while I wear or hold it. As a Magic action, I can use 1 of its 7 charges to have one creature within 120 ft make a DC 20 Dex save or be destroyed, if the target is a Fiend or Undead, it has DisAdv on the roll. On succussful save, target takes 4d6 Psychic. On last charge, the talisman is destroyed.",
-	descriptionFull: "I can use this talisman as a holy symbol, and it gives a +2 bonus on my spell attacks while I wear or hold it.\n" +
-		toUni("Pure Rebuke") + "\n As a Magic action, I can use 1 of its 7 charges to have one creature within 120 ft make a DC 20 Dex save or be destroyed, if the target is a Fiend or Undead, it has DisAdv on the roll.On succussful save, target takes 4d6 Psychic.On last charge, the talisman is destroyed.",
+	description: "You can use this talisman as a Holy Symbol, and it gives a +2 bonus to your spell attacks while worn or held. Any Fiend or Undead that touches the talisman takes 8d6 Radiant, and again each time it ends its turn holding or carrying the talisman. As a Magic action, you can use 1 of its 7 charges to have one creature within 120 ft make a DC 20 Dex save, if the target is a Fiend or Undead, it has DisAdv on the roll. On succussful save, target takes 4d6 Psychic. On fail, it falls into the fissure and is destroyed. On last charge, the talisman is destroyed.",
+	descriptionFull: "This talisman is a mighty symbol of goodness. A Fiend or an Undead that touches the talisman takes 8d6 Radiant damage and takes the damage again each time it ends its turn holding or carrying the talisman.\n" +
+		toUni("Holy Symbol") + ". You can use the talisman as a Holy Symbol. You gain a +2 bonus to spell attack rolls while you wear or hold it.\n " +
+		toUni("Pure Rebuke") + ". The talisman has 7 charges. While wearing or holding the talisman, you can take a Magic action to expend 1 charge and target one creature you can see on the ground within 120 feet of yourself. A flaming fissure opens under the target, and the target makes a DC 20 Dexterity saving throw. If the target is a Fiend or an Undead, it has Disadvantage on the save. On a failed save, the target falls into the fissure and is destroyed, leaving no remains. On a successful save, the target isn’t cast into the fissure but takes 4d6 Psychic damage from the ordeal. In either case, the fissure then closes, leaving no trace of its existence. When you expend the last charge, the talisman disperses into motes of golden light and is destroyed.",
 	attunement: true,
 	weight: 1,
 	prerequisite: "Requires attunement by a Cleric or Paladin",
@@ -8337,80 +8337,84 @@ MagicItemsList["talisman of pure good"] = {
 };
 MagicItemsList["talisman of the sphere"] = {
 	name: "Talisman of the Sphere",
-	source: [["DMG2024", 315]],
+	source: [["DMG2024", "-"]],
 	type: "wondrous item",
 	rarity: "legendary",
 	magicItemTable: "?",
-	description: "I can use this talisman as a holy symbol, and it gives a +2 bonus on my spell attacks while I wear or hold it. Any Fiend or Undead that touches the talistman takes 8d6 radiant, and again each time it ends its turn holding or carrying the talisman. As a Magic action, I can use 1 of its 7 charges to have one creature within 120 ft make a DC 20 Dex save or be destroyed, if the target is a Fiend or Undead, it has DisAdv on the roll. On succussful save, target takes 4d6 Psychic. On last charge, the talisman is destroyed.",
-	descriptionFull: "While I'm holding this talisman, I have Advantage on any Intelligence (Arcana) check to control a sphere of annihilation. In addition, when I start my turn with control over a sphere of annihilation, I can take a Magic action to move it 10 ft plus 10 ft \xd7 my Intelligence modifier. This movement  doesn't have to be in a straight line.",
+	description: "While holding or wearing this talisman, you have Advantage on any Intelligence (Arcana) check to control a Sphere of Annihilation. In addition, when you start your turn with control over a Sphere of Annihilation, you can take a Magic action to move it 10 ft plus 10 ft plus your Intelligence modifier.",
+	descriptionFull: "While holding or wearing this talisman, you have Advantage on any Intelligence (Arcana) check you make to control a Sphere of Annihilation. In addition, when you start your turn in control of a Sphere of Annihilation, you can take a Magic action to move it 10 feet plus a number of additional feet equal to 10 times your Intelligence modifier. This movement doesn’t have to be in a straight line.",
 	attunement: true,
-	weight: 1,
+	action: [["action", ""]],
 	vision: [["Adv. on Int (Arcana) to control Sphere of Annihil.", 1]],
+	weight: 1
 };
 MagicItemsList["talisman of ultimate evil"] = {
 	name: "Talisman of Ultimate Evil",
-	source: [["DMG2024", 315]],
+	source: [["DMG2024", "-"]],
 	type: "wondrous item",
 	rarity: "legendary",
 	magicItemTable: "?",
-	description: "I can use this talisman as a holy symbol, it gives a +2 bonus on my spell attacks. As a Magic action, I can use 1 of its 6 charges to target one creature within 120 ft make a DC 20 Dex save or be destroyed; Celestial beings have DisAdv on save. On successful save, the target takes 4d6 Psychic damage.  Creatures that are not a fiend or undead that touch it take 8d6 necrotic damage each time it ends its turn holding or carrying the talisman.",
-	descriptionLong: "If I'm an evil cleric or paladin, I can use this talisman as a holy symbol and it grants me a +2 bonus on my spell attack rolls. As an action, I can use 1 of its 6 charges to target one creature on the ground that I can see within 120 ft of me. If it is good, a flaming fissure opens under it and it must succeed on a DC 20 Dexterity save or fall into the fissure and be destroyed, leaving no remains of it or the fissure. The talisman is destroyed when the last of its charges is used. Non-evil creatures touching it take necrotic damage, 8d6 if good or 6d6 if neutral. This damage repeats at the end of each turn carrying the talisman.",
-	descriptionFull: "This item symbolizes unrepentant evil. A creature that isn’t a Fiend or an Undead that touches the talisman takes 8d6 Necrotic damage and takes the damage again each time it ends its turn holding or carrying the talisman.\n" + toUni("Holy Symbol") + "If you are an evil cleric or paladin, you can use the talisman as a holy symbol, and you gain a +2 bonus to spell attack rolls while you wear or hold it.\n" + toUni("Ultimate End") + "\n The talisman has 6 charges. If you are wearing or holding it, you can use an action to expend 1 charge from the talisman and choose one creature you can see on the ground within 120 feet of you. If the target is of good alignment, a flaming fissure opens under it. The target must succeed on a DC 20 Dexterity saving throw or fall into the fissure and be destroyed, leaving no remains.If the target is Celestial, it has DisAdv on the save. The fissure then closes, leaving no trace of its existence. When you expend the last charge, the talisman dissolves into foul-smelling slime and is destroyed.",
+	description: "You can use this talisman as a Holy Symbol and if you are an evil cleric or paladin, it gives a +2 bonus on spell attack rolls while worn or held. As a Magic action, you can use 1 of its 6 charges to have and target 1 creature you can see on the ground within within 120 ft and create a flaming fissure under the target. The target must make a DC 20 Dex save. If target is Celestial, is has Disadvantage on the save. On fail, target falls into fissure and is destroyed. On save, the target takes 4d6 Psychic damage. Non-evil creatures touching it take 8d6 Necrotic damage.",
+	descriptionFull: "This item symbolizes unrepentant evil. A creature that isn't a Fiend or Undead takes 8d6 Necrotic damage and takes the damage again each time it ends its turn holding or carrying the talisman\n" +
+		toUni("Holy Symbol") + ". You can use the talisman as a Holy Symbol. You gain a +2 bonus to spell attack rolls while you wear or hold it.\n" +
+		toUni("Ultimate End") + ". The talisman has 6 charges. While wearing or holding the talisman, you can take a Magic action to expend 1 charge and target one creature you can see on the ground within 120 feet of yourself. A flaming fissure opens under the target, and the target makes a DC 20 Dexterity saving throw. If the target is a Celestial, it has Disadvantage on the save. On a failed save, the target falls into the fissure and is destroyed, leaving no remains. On a successful save, the target isn’t cast into the fissure but takes 4d6 Psychic damage from the ordeal. In either case, the fissure then closes, leaving no trace of its existence. When you expend the last charge, the talisman dissolves into foul-smelling slime and is destroyed.",
 	attunement: true,
 	weight: 1,
+	prerequisite: "Requires attunement by a creature of evil alignment",
+	prereqeval: function (v) { return (/evil/i).test(What("Alignment")); },
 	usages: 6,
 	recovery: "never",
-	action: [["action", "Ultimate End"]],
+	action: [["action", ""]],
 	calcChanges: {
 		spellCalc: [
 			function (type, spellcasters, ability) {
-				if (type == "attack" && (classes.known.paladin || classes.known.cleric)) return 2;
+				if (type == "attack" && (classes.known.paladin || classes.known.cleric) && (/evil/i).test(What("Alignment"))) return 2;
 			},
-			"If I'm a cleric or paladin, I gain a +2 bonus on my spell attack rolls while wearing or holding the Talisman of Ultimate Evil."
+			"If I'm an evil cleric or paladin, I gain a +2 bonus on my spell attack rolls while wearing or holding the Talisman of Ultimate Evil."
 		]
 	}
 };
 MagicItemsList["talking doll"] = {
 	name: "Talking Doll",
-	source: [["DMG2024", 315]],
+	source: [["DMG2024", "-"]],
 	magicItemTable: "?",
 	type: "wondrous item",
 	rarity: "common",
 	attunement: true,
-	description: "During a short rest with this doll within 5 ft of me, I can tell it to say up to 6 phrases of up to 6 words each, and set a condition under which the doll speaks each phrase. Conditions must happen within 5 ft of the doll. The doll can remember only 6 phrases that are lost when my attunement to it ends.",
-	descriptionFull: "While this stuffed doll is within 5 feet of you, you can spend a short rest telling it to say up to six phrases, none of which can be more than six words long, and set an observable condition under which the doll speaks each phrase. You can also replace old phrases with new ones. Whatever the condition, it must occur within 5 feet of the doll to make it speak. For example, whenever someone picks up the doll, it might say, \"I want a piece of candy.\" The doll's phrases are lost when your attunement to the doll ends."
+	description: "During a short rest with this doll within 5 ft of you, you can tell it to say up to 6 phrases of up to 6 words each, and set an observable condition under which the doll speaks each phrase. Conditions must happen within 5 ft of the doll. The doll can remember only 6 phrases that are lost when my attunement to it ends.",
+	descriptionFull: "While this doll is within 5 feet of you, you can spend a Short Rest telling it to say up to six phrases, none of which can be more than six words long, and set a condition under which the doll speaks each phrase. You can also replace old phrases with new ones. Whatever the condition, it must occur within 5 feet of the doll to make it speak. For example, whenever someone picks up the doll, it might say, “I want a piece of candy.” The doll’s phrases are lost when your Attunement to the doll ends."
 };
 MagicItemsList["tankard of sobriety"] = {
 	name: "Tankard of Sobriety",
-	source: [["DMG2024", 315]],
+	source: [["DMG2024", "-"]],
 	magicItemTable: "?",
 	type: "wondrous item",
 	rarity: "common",
-	description: "This tankard has a stern face sculpted into one side. I can drink ale, wine, or any other nonmagical alcoholic beverage poured into it without becoming inebriated. The tankard has no effect on magical liquids or harmful substances such as poison.",
+	description: "This tankard has a stern face sculpted into one side. You can drink ale, wine, or any other nonmagical alcoholic beverage poured into it without becoming inebriated. The tankard has no effect on magical liquids or harmful substances such as poison.",
 	descriptionFull: "This tankard has a stern face sculpted into one side. You can drink ale, wine, or any other nonmagical alcoholic beverage poured into it without becoming inebriated. The tankard has no effect on magical liquids or harmful substances such as poison.",
 	weight: 1
 };
 MagicItemsList["tentacle rod"] = {
 	name: "Tentacle Rod",
-	source: [["DMG2024", 316]],
+	source: [["DMG2024", "-"]],
 	type: "rod",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "As a Magic action, all 3 tentacles of this rod attack with 15 ft reach, +9 to hit, dealing 1d6 Psychic damage. If a target is hit by all 3 it must make a DC 15 Dex save or be Restrained until I'm incapacitated or I have taken a Bonus Action to release the target or until the target is no longer within 15 feet of me. While restrained, the target takes 3d6 psychic damage at the start of each of its turns. It can repeat the save at the end of each of its turns.",
-	descriptionLong: "As a Magic action while holding the rod, I can direct each of its three tentacles to attack a creature I can see within 15 ft. Each tentacle makes a melee attack roll, +9 to hit, dealing 1d6 Psychic damage. If a target is hit by all three tentacles, it must make a DC 15 Dex saving throw. On a failure, it becomes Restrained until I'm incapacitated or I have taken a Bonus Action to release the target or until the target is no longer within 15 feet of me. While restrained, it takes 3d6 at the start of each of its turns. At the end of each of its turns, it can repeat the saving throw, ending the effect on itself on a success.",
-	descriptionFull: "As a Magic while holding the rod, I can direct each of its three tentacles to attack a creature I can see within 15 ft. Each tentacle makes a melee attack roll, +9 to hit, dealing 1d6 Psychic damage. If a target is hit by all three tentacles, it must make a DC 15 Dex saving throw. On a failure, it becomes Restrained until I'm incapacitated or I have taken a Bonus Action to release the target or until the target is no longer within 15 feet of me. While restrained, it takes 3d6 at the start of each of its turns. At the end of each of its turns, it can repeat the saving throw, ending the effect on itself on a success.",
+	description: "As a Magic action, all 3 tentacles of this rod attack with 15 ft reach, +9 to hit, dealing 1d6 Psychic damage. If a target is hit by all 3 it must make a DC 15 Dex save or be Restrained until you have the Incapacitated condition, released by Bonus Action, or until the target is no longer within 15 feet. While Restrained, the target takes 3d6 Psychic damage at the start of each of its turns. Repeat the save at the end of each of its turns.",
+	descriptionFull: "This rod ends in three rubbery tentacles. While holding the rod, you can take a Magic action to direct the tentacles to stretch outward, each one attacking a creature you can see within 15 feet of yourself. For each tentacle, make a melee attack roll with a +9 bonus. A tentacle deals 1d6 Psychic damage on a hit. If you hit the same target with all three tentacles, the target must succeed on a DC 15 Dexterity saving throw or have the Restrained condition until you have the Incapacitated condition, until you take a Bonus Action to release the target, or until the target is no longer within 15 feet of you. While Restrained in this way, the target takes 3d6 Psychic damage at the start of each of its turns. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success.",
 	attunement: true,
 	weight: 2,
-	action: [["action", ""]],
+	action: [["action", "Tentacles"], "bonus action", "Release"],
 	weaponOptions: [{
-		regExpSearch: /tentacle rod/i,
+		regExpSearch: /^(?=.*tentacle)(?=.*rod).*$/i,
 		name: "Tentacle Rod",
-		source: [["DMG2024", "-"]],
-		ability: 0,
+		source: [["PHB2024", "-"]],
+		ability: 2,
+		DC: 15,
 		type: "Magic Item",
 		damage: [1, 6, "psychic"],
 		range: "Melee (15 ft)",
-		description: "Action to use, 3 attacks; If all 3 hit same target, it DC 15 Dex save or restrained, see magic item",
+		description: "Magic Action: 3 attacks. All hit same: DC 15 Dex save or Restrained. Restrained: target +3d6 psychic start/turn",
 		abilitytodamage: false,
 		modifiers: [9, ""],
 		weight: 2,
@@ -8420,49 +8424,50 @@ MagicItemsList["tentacle rod"] = {
 };
 MagicItemsList["thunderous greatclub"] = {
 	name: "Thunderous Greatclub",
-	source: [["DMG2024", 316]],
+	source: [["DMG2024", "-"]],
 	type: "weapon (greatclub)",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "The weapon deals an extra 1d8 Thunder damage to any creature it hits and an extra 3d8 Thunder damage to objects it hits that aren’t being worn or carried.",
-	descriptionFull: "While you are attuned to this magic weapon, your Strength is 20 unless your Strength is already equal to or greater than that score. The weapon deals an extra 1d8 Thunder damage to any creature it hits and an extra 3d8 Thunder damage to objects it hits that aren’t being worn or carried.\n" + "The weapon has the following additional properties.\n" + toUni("Clap of Thunder") +". As a Magic action, you can strike the weapon against a hard surface to create a loud clap of thunder audible out to 300 feet. You also create a 30-foot Cone of thunderous energy. Each creature in the Cone must succeed on a DC 15 Strength saving throw or have the Prone condition. Nonmagical objects in the Cone that aren’t being worn or carried take 3d8 Thunder damage.\n" + toUni("Earthquake") +" . As a Magic action, you can strike the weapon against the ground to create an intense seismic disturbance in a 50-foot-radius circle centered on the point of impact. Structures in contact with the ground in that area take 50 Bludgeoning damage, and each creature on the ground in that area must succeed on a DC 20 Dexterity saving throw or have the Prone condition. If that creature is also concentrating, it must succeed on a DC 20 Constitution saving throw or its Concentration is broken. In addition, you can cause a 30-foot-deep, 10-foot-wide fissure to open up on the ground anywhere in the area. Any creature on a spot where the fissure opens must succeed on a DC 20 Dexterity saving throw, falling into the fissure on a failed save or moving with the fissure’s edge on a successful one. Any structure on a spot where the fissure opens collapses into the fissure. Once you use this property, it can’t be used again until the next dawn.",
+	description: "While attuned, your Str is 20 and the weapon deals an extra 1d8 Thunder damage to any creature it hits and an extra 3d8 Thunder damage to objects it hits that aren’t being worn or carried.",
+	descriptionFull: "While you are attuned to this magic weapon, your Strength is 20 unless your Strength is already equal to or greater than that score. The weapon deals an extra 1d8 Thunder damage to any creature it hits and an extra 3d8 Thunder damage to objects it hits that aren’t being worn or carried.\n" + "The weapon has the following additional properties.\n" + toUni("Clap of Thunder") + ". As a Magic action, you can strike the weapon against a hard surface to create a loud clap of thunder audible out to 300 feet. You also create a 30-foot Cone of thunderous energy. Each creature in the Cone must succeed on a DC 15 Strength saving throw or have the Prone condition. Nonmagical objects in the Cone that aren’t being worn or carried take 3d8 Thunder damage.\n" + toUni("Earthquake") + " . As a Magic action, you can strike the weapon against the ground to create an intense seismic disturbance in a 50-foot-radius circle centered on the point of impact. Structures in contact with the ground in that area take 50 Bludgeoning damage, and each creature on the ground in that area must succeed on a DC 20 Dexterity saving throw or have the Prone condition. If that creature is also concentrating, it must succeed on a DC 20 Constitution saving throw or its Concentration is broken. In addition, you can cause a 30-foot-deep, 10-foot-wide fissure to open up on the ground anywhere in the area. Any creature on a spot where the fissure opens must succeed on a DC 20 Dexterity saving throw, falling into the fissure on a failed save or moving with the fissure’s edge on a successful one. Any structure on a spot where the fissure opens collapses into the fissure. Once you use this property, it can’t be used again until the next dawn.",
 	attunement: true,
 	weight: 10,
 	scoresOverride: [20, 0, 0, 0, 0, 0],
-	action: [["action", " (Clap of Thunder)"], ["action", " (Earthquake)"]],
+	action: [["action", "Clap of Thunder"], ["action", "Earthquake"]],
 	weaponAdd: "thunderous greatclub",
 	weaponOptions: [{
 		baseWeapon: "greatclub",
-		regExpSearch: /thunderous greatclub/i,
+		regExpSearch: /^(?=.*thunderous)(?=.*greatclub).*$/i,
 		name: "thunderous greatclub",
 		source: [["DMG2024", "-"]],
-		description: "Two-handed; +1d8 Thunder v Crea; +3d8 v obj; Clap of Thunder - SEE NOTES; Earthquake - SEE NOTES",
+		description: "Two-handed, Push; +1d8 Thunder v Crea; +3d8 v Obj;",
 		isMagicWeapon: true,
+		selectNow: true,
 	}],
 	extraLimitedFeatures: [{
 		name: "Earthquake",
 		usages: 1,
 		recovery: "dawn",
-		description: "As a Magic action you can strike the weapon against the ground to create a seismic disturbance in 50 ft radius center on point of impact. Structures in contact take 50 bludgeoning dmg, each creature in area make DC 20 Dex save or fall prone. If creature is concentrating, make DC 20 save or lose concentration. You open a 30ft deep, 10ft wide fissue to open anywhere in the area. Any Creature on a spot where the fissure opens must make a DC20 dex save, falling into the fissure on failure or moving to the edge on sucess. Any structure on a fissure spot collapses into fissure. This can be used once per dawn."
+		description: "As a Magic action you can strike the weapon against the ground to create a seismic disturbance in 50 ft radius center on point of impact. Structures take 50 bludgeoning dmg, each creature in area make DC 20 DEX save or fall Prone. If creature is concentrating, make DC 20 CON save or lose concentration. You open a 30ft deep, 10ft wide fissure on ground anywhere in the area. Any creature on a spot where the fissure opens must make a DC20 DEX save, falling into the fissure on failure or moving to the edge on sucess. Any structure on a fissure spot collapses into fissure. Once you used this property, it can't be used again until the next dawn."
 	}],
 	toNotesPage: [{
 		name: "Thunderous Greatclub",
 		note: [
-			"While attuned to this magic weapon, your Strength is 20 unless your Strength is already equal to or greater than that score." +
+			"While you are attuned to this magic weapon, your Strength is 20 unless your Strength is already equal to or greater than that score." +
 			"The weapon deals an extra 1d8 Thunder damage to any creature it hits and an extra 3d8 Thunder damage to objects it hits that aren’t being worn or carried.\n" +
-			"The weapon has the following additional properties.\n"+
-			toUni("Clap of Thunder") + ". As a Magic action, you can strike the weapon against a hard surface to create a loud clap of thunder audible out to 300 feet. You also create a 30-foot Cone of thunderous energy. Each creature in the Cone must succeed on a DC 15 Strength saving throw or have the Prone condition. Nonmagical objects in the Cone that aren’t being worn or carried take 3d8 Thunder damage.\n" +
-			toUni("Earthquake") + " . As a Magic action, you can strike the weapon against the ground to create an intense seismic disturbance in a 50-foot-radius circle centered on the point of impact. Structures in contact with the ground in that area take 50 Bludgeoning damage, and each creature on the ground in that area must succeed on a DC 20 Dexterity saving throw or have the Prone condition. If that creature is also concentrating, it must succeed on a DC 20 Constitution saving throw or its Concentration is broken. In addition, you can cause a 30-foot-deep, 10-foot-wide fissure to open up on the ground anywhere in the area. Any creature on a spot where the fissure opens must succeed on a DC 20 Dexterity saving throw, falling into the fissure on a failed save or moving with the fissure’s edge on a successful one. Any structure on a spot where the fissure opens collapses into the fissure. Once you use this property, it can’t be used again until the next dawn.",
+			"The weapon has the following additional properties:\n" +
+			"\u2022 Clap of Thunder. As a Magic action, you can strike the weapon against a hard surface to create a loud clap of thunder audible out to 300 feet. You also create a 30-foot Cone of thunderous energy. Each creature in the Cone must succeed on a DC 15 Strength saving throw or have the Prone condition. Nonmagical objects in the Cone that aren’t being worn or carried take 3d8 Thunder damage.\n" +
+			"\u2022 Earthquake. As a Magic action, you can strike the weapon against the ground to create an intense seismic disturbance in a 50-foot-radius circle centered on the point of impact. Structures in contact with the ground in that area take 50 Bludgeoning damage, and each creature on the ground in that area must succeed on a DC 20 Dexterity saving throw or have the Prone condition. If that creature is also concentrating, it must succeed on a DC 20 Constitution saving throw or its Concentration is broken. In addition, you can cause a 30-foot-deep, 10-foot-wide fissure to open up on the ground anywhere in the area. Any creature on a spot where the fissure opens must succeed on a DC 20 Dexterity saving throw, falling into the fissure on a failed save or moving with the fissure’s edge on a successful one. Any structure on a spot where the fissure opens collapses into the fissure. Once you use this property, it can’t be used again until the next dawn.",
 		]
 	}],
-};	
+};
 MagicItemsList["tome of clear thought"] = {
 	name: "Tome of Clear Thought",
-	source: [["DMG2024", 317]],
+	source: [["DMG2024", "-"]],
 	type: "wondrous item",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "This book contains memory and logic exercises, and its words are charged with magic. If I spend 48 hours within a period of 6 days to study its contents and practicing its guidelines, my Intelligence score increases by 2, as does my maximum for that score. The tome then loses its magic, but regains it in a century.",
+	description: "This book contains memory and logic exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book’s contents and practicing its guidelines, your Intelligence increases by 2, to a maximum of 30. The manual then loses its magic but regains it in a century.",
 	descriptionFull: "This book contains memory and logic exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Intelligence score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century.",
 	weight: 5,
 	scoresMaximum: [0, 0, 0, 30, 0, 0],
@@ -8472,11 +8477,11 @@ MagicItemsList["tome of clear thought"] = {
 };
 MagicItemsList["tome of leadership and influence"] = {
 	name: "Tome of Leadership and Influence",
-	source: [["DMG2024", 317]],
+	source: [["DMG2024", "-"]],
 	type: "wondrous item",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "This book contains guidelines for influencing and charming others and its words are charged with magic. If I spend 48 hours within 6 days studying its contents and practicing its guidelines, my Charisma score increases by 2, as does my maximum for that score. The tome then loses its magic, but regains it in a century.",
+	description: "This book contains guidelines for influencing and charming others and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying its contents and practicing its guidelines, your Charisma score increases by 2, to a maximum of 30. The manual then loses its magic, but regains it in a century.",
 	descriptionFull: "This book contains guidelines for influencing and charming others, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Charisma score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century.",
 	weight: 5,
 	scoresMaximum: [0, 0, 0, 0, 0, 30],
@@ -8486,13 +8491,12 @@ MagicItemsList["tome of leadership and influence"] = {
 };
 MagicItemsList["tome of the stilled tongue"] = {
 	name: "Tome of the Stilled Tongue",
-	source: [["DMG2024", 317]],
+	source: [["DMG2024", "-"]],
 	type: "wondrous item",
 	rarity: "legendary",
 	magicItemTable: "?",
-	description: "I can use this thick leather-bound tome as a spellbook and an arcane focus. Once per dawn while holding it, I can use a bonus action to cast a spell I have written in it, without expending a spell slot or using any verbal or somatic components. Removing the tongue on the cover erases all spells within.",
-	descriptionLong: "The first few pages of this thick leather-bound tome are filled with indecipherable scrawls. The remaining pages are blank and pristine. I can use it as a spellbook and an arcane focus. Once per dawn while holding it, I can use a bonus action to cast a spell I have written in the tome, without expending a spell slot or using any verbal or somatic components. While attuned to the book, I can remove the tongue from the book's cover, permanently erasing all spells within. Vecna watches the user or this tome and sometimes has cryptic messages appear in it at midnight and fade away after they are read.",
-	descriptionFull: "This thick leather-bound volume has a desiccated tongue pinned to the front cover. Five of these tomes exist, and it's unknown which one is the original. The grisly cover decoration on the first tome of the stilled tongue once belonged to a treacherous former servant of the lich-god Vecna, keeper of secrets. The tongues pinned to the covers of the four copies came from other spellcasters who crossed Vecna. The first few pages of each tome are filled with indecipherable scrawls. The remaining pages are blank and pristine.\n   If you can attune to this item, you can use it as a spellbook and an arcane focus. In addition, while holding the tome, you can use a bonus action to cast a spell you have written in this tome, without expending a spell slot or using any verbal or somatic components. Once used, this property of the tome can't be used again until the next dawn.\n   While attuned to the book, you can remove the tongue from the book's cover. If you do so, all spells written in the book are permanently erased.\n   Vecna watches anyone using this tome. He can also write cryptic messages in the book. These messages appear at midnight and fade away after they are read.",
+	description: "You can use this thick leather-bound tome as a spellbook and an arcane focus. Once per dawn while holding it, you can take a Bonus actoin to cast a spell you have written in it, without expending a spell slot or using any verbal or somatic components. Once used, this property can't be used again until the next dawn. Removing the tongue on the cover erases all spells within.",
+	descriptionFull: "This book has a desiccated tongue pinned to its front cover. Five of these tomes exist, and it’s unknown which one is the original. The tongue on the first Tome of the Stilled Tongue belonged to a treacherous former servant of the lich Vecna. The tongues pinned to the covers of the four copies came from other spellcasters who crossed Vecna. The first few pages of each tome are filled with indecipherable scrawls. The remaining pages are blank.\n   While attuned to this item, you can use it as a Spellbook and an Arcane Focus. In addition, while holding the tome, you can take a Bonus Action to cast a spell you have written in this tome, without expending a spell slot or using any Verbal or Somatic components. Once used, this property of the tome can’t be used again until the next dawn.\n   Only you can remove the tongue from the book’s cover. If you do so, all spells written in the book are permanently erased.\n   Vecna watches anyone using this tome and can write cryptic messages in it. These messages typically fade away after they are read.",
 	attunement: true,
 	weight: 5,
 	prerequisite: "Requires attunement by a wizard",
@@ -8503,12 +8507,12 @@ MagicItemsList["tome of the stilled tongue"] = {
 };
 MagicItemsList["tome of understanding"] = {
 	name: "Tome of Understanding",
-	source: [["DMG2024", 317]],
+	source: [["DMG2024", "-"]],
 	type: "wondrous item",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "This book contains intuition and insight exercises, and its words are charged with magic. If I spend 48 hours within a period of 6 days studying its contents and practicing its guidelines, my Wisdom score increases by 2, as does my maximum for that score. The tome then loses its magic, but regains it in a century.",
-	descriptionFull: "This book contains intuition and insight exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Wisdom score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century.",
+	description: "This book contains intuition and insight exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying its contents and practicing its guidelines, your Wisdom score increases by 2, to a maximum of 30. The manual then loses its magic, but regains it in a century.",
+	descriptionFull: "This book contains intuition and insight exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book’s contents and practicing its guidelines, your Wisdom increases by 2, to a maximum of 30. The manual then loses its magic, but regains it in a century.",
 	weight: 5,
 	scoresMaximum: [0, 0, 0, 0, 30, 0],
 	eval: function () {
@@ -8517,12 +8521,12 @@ MagicItemsList["tome of understanding"] = {
 };
 MagicItemsList["trident of fish command"] = {
 	name: "Trident of Fish Command",
-	source: [["DMG2024", 317]],
+	source: [["DMG2024", "-"]],
 	type: "weapon (trident)",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "This magic trident has 3 charges. While I carry it, I can use an action and expend 1 charge to cast Dominate Beast (save DC 15) from it on a beast that has a swim speed. The trident regains 1d3 expended charges daily at dawn.",
-	descriptionFull: "This trident is a magic weapon. It has 3 charges. While you carry it, you can use an action and expend 1 charge to cast Dominate Beast (save DC 15) from it on a beast that has an innate swimming speed. The trident regains 1d3 expended charges daily at dawn.",
+	description: "This magic weapon has 3 charges, regaining 1d3 at dawn. While you carry it, you can expend 1 charge to cast Dominate Beast (save DC 15) from it on a Beast that has a Swim Speed.",
+	descriptionFull: "This magic weapon has 3 charges, and it regains 1d3 expended charges daily at dawn. While you carry it, you can expend 1 charge to cast Dominate Beast (save DC 15) from it on a Beast that has a Swim Speed.",
 	attunement: true,
 	weight: 4,
 	usages: 3,
@@ -8531,9 +8535,9 @@ MagicItemsList["trident of fish command"] = {
 	weaponsAdd: ["Trident of Fish Command"],
 	weaponOptions: {
 		baseWeapon: "trident",
-		regExpSearch: /trident of fish command/i,
+		regExpSearch: /^(?=.*trident)(?=.*fish)(?=.*command).*$/i,
 		name: "Trident of Fish Command",
-		source: [["PHB2024", "-"]]
+		source: [["PHB2024", "-"]],
 	},
 	fixedDC: 15,
 	spellFirstColTitle: "Ch",
@@ -8546,41 +8550,47 @@ MagicItemsList["trident of fish command"] = {
 	spellChanges: {
 		"dominate beast": {
 			description: "1 beast with swim speed save or charmed, follows telepathic commands, 1 a for complete control",
-			changes: "Can only affect 1 beast with swim speed."
+			changes: "Can only affect beasts with innate swim speed."
 		}
 	}
 };
 MagicItemsList["universal solvent"] = {
 	name: "Universal Solvent",
-	source: [["DMG2024", 318]],
+	source: [["DMG2024", "-"]],
 	type: "wondrous item",
 	rarity: "legendary",
 	magicItemTable: "?",
-	description: "This tube holds milky liquid with a strong alcohol smell. When found, the tube contains 1d6+1 ounces. Once as an action, I can pour 1+ ounces onto a surface within reach. Each ounce instantly dissolves up to 1 square foot of adhesive it touches, including sovereign glue.",
-	descriptionFull: "This tube holds milky liquid with a strong alcohol smell. When found, the tube contains 1d6+1 ounces. Once as an action, I can pour 1+ ounces onto a surface within reach. Each ounce instantly dissolves up to 1 square foot of adhesive it touches, including sovereign glue.",
-	usages: "1d6+ 1",
-	recovery: "never",
+	description: "This tube holds milky liquid with a strong alcohol smell, when found it contains 1d6+1 ounces. You can take a Utilize action, to pour 1 or more ounces from the tube onto a surface within reach. The liquid instantly dissolves up to 1 square foot of adhesive it touches, including Sovereign Glue.",
+	descriptionFull: "This tube holds milky liquid with a strong alcohol smell. When found, a tube contains 1d6 + 1 ounces. You can take a Utilize action to pour 1 or more ounces of solvent from the tube onto a surface within reach. Each ounce instantly dissolves up to 1 square foot of adhesive it touches, including Sovereign Glue.",
+	action: [["action", ""]],
 };
-MagicItemsList["veteran's cane"] = {
+MagicItemsList["veterans cane"] = {
 	name: "Veteran's Cane",
-	source: [["DMG2024", 318]],
+	source: [["DMG2024", "-"]],
 	magicItemTable: "?",
 	type: "wondrous item",
 	rarity: "common",
-	description: "As a bonus action, I can transform this cane an ordinary longsword, or revert it back into a walking cane.",
-	descriptionFull: "As a bonus action, I can transform this cane an ordinary longsword, or revert it back into a walking cane.",
+	description: "Once as a bonus action, I can grasp this walking cane and speak its command word to have it transform into an ordinary longsword. Once transformed, the longsword is nonmagical and can revert back to a walking cane.",
+	descriptionFull: "When you grasp this walking cane and use a bonus action to speak the command word, it transforms into an ordinary longsword.",
 	weight: 4,
-	action: [["bonus action", ""]]
+	action: [["bonus action", ""]],
+	weaponOptions: [{
+		baseWeapon: "longsword",
+		regExpSearch: /^(?=.*veteran)(?=.*cane)(?=.*long)(?=.*sword).*$/i,
+		name: "Veterans Cane (Longsword)",
+		source: ["DMG2024", "-"],
+		selectNow: true,
+	}],
 };
 MagicItemsList["vicious weapon"] = {
 	name: "Vicious Weapon",
 	nameTest: "Vicious",
-	source: [["DMG2024", 318]],
+	source: [["DMG2024", "-"]],
 	type: "weapon (simple or martial)",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "When I successfully hit with this weapon, the target takes an extra 2d6 damage of the weapon's type.",
-	descriptionFull: "When I successfully hit with this weapon, the target takes an extra 2d6 damage of the weapon's type.",
+	description: "When you hit a creature, the target takes an extra 2d6 damage of the weapon's damage type.",
+	descriptionFull: "This magic weapon deals an extra 2d6 damage to any creature it hits. This extra damage is of the same type as the weapon�s normal damage.",
 	chooseGear: {
 		type: "weapon",
 		prefixOrSuffix: "suffix",
@@ -8592,27 +8602,27 @@ MagicItemsList["vicious weapon"] = {
 				if (!v.isSpell && !v.theWea.isMagicWeapon && (/vicious/i).test(v.WeaponTextName)) {
 					v.theWea.isMagicWeapon = true;
 					fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
-					fields.Description += (fields.Description ? '; ' : '') + 'target takes +2d6';
+					fields.Description += (fields.Description ? '; ' : '') + 'target takes +2d6 ' + (fields.Damage_Type);
 				}
 			},
-			'If I include the word "Vicious" in a the name of a weapon, it will be treated as the magic weapon Vicious Weapon. On a successful hit, target takes an extra 2d6 of the same damage type.'
+			'If you include the word "Vicious" in a the name of a weapon, it will be treated as the magic weapon Vicious Weapon. On a successful hit, target takes an extra 2d6 of the same damage type.'
 		]
 	}
 };
 MagicItemsList["vorpal sword"] = {
 	name: "Vorpal Sword",
 	nameTest: "Vorpal",
-	source: [["DMG2024", 318]],
+	source: [["DMG2024", "-"]],
 	type: "weapon (Glaive, Greatsword, Longsword, Scimitar)",
 	rarity: "legendary",
 	magicItemTable: "?",
 	attunement: true,
-	description: "I have a +3 bonus to attack and damage rolls with this magic sword. It ignores slashing damage resistance. On a roll of 20 to hit, it cuts off one head" + (typePF ? "" : ", possibly killing it instantly") + ". If the target has no head, is immune to slashing damage, has legendary actions, or its neck is too wide, it takes an extra 30 slashing damage instead.",
-	descriptionFull: "You gain a +3 bonus to attack and damage rolls made with this magic weapon. In addition, the weapon ignores resistance to slashing damage.\n   When you attack a creature that has at least one head with this weapon and roll a 20 on the attack roll, you cut off one of the creature's heads. The creature dies if it can't survive without the lost head. A creature is immune to this effect if it is immune to slashing damage, doesn't have or need a head, has legendary actions, or the DM decides that the creature is too big for its head to be cut off with this weapon. Such a creature instead takes an extra 30 slashing damage.",
+	description: "You have a +3 bonus to attack and damage rolls with this magic weapon. It ignores slashing damage resistance. On a roll of 20 to hit, it cuts off one head" + (typePF ? "" : ", possibly killing it instantly") + ". If the target has no head, is immune to slashing damage, has legendary actions, or its neck is too wide, it takes +30 slashing damage instead.",
+	descriptionFull: "You gain a +3 bonus to attack and damage rolls made with this magic weapon. In addition, the weapon ignores Resistance to Slashing damage.\n   When you use this weapon to attack a creature that has at least one head and roll a 20 on the d20 for the attack roll, you cut off one of the creature�s heads. The creature dies if it can�t survive without the lost head. A creature is immune to this effect if it has Immunity to Slashing damage, if it doesn�t have or need a head, or if the DM decides that the creature is too big for its head to be cut off with this weapon. Such a creature instead takes an extra 30 Slashing damage from the hit. If the creature has Legendary Resistance, it can expend one daily use of that trait to avoid losing its head, taking the extra damage instead.",
 	chooseGear: {
 		type: "weapon",
 		prefixOrSuffix: "suffix",
-		descriptionChange: ["replace", "weapon"],
+		descriptionChange: ["replace", ""],
 		excludeCheck: function (inObjKey, inObj) {
 			var testRegex = /glaive|greatsword|longsword|scimitar/i;
 			return (!(testRegex).test(inObjKey) && (!inObj.baseWeapon || !(testRegex).test(inObj.baseWeapon))) || (inObj.baseWeapon && !inObj.damage ? WeaponsList[inObj.baseWeapon].damage : inObj.damage)[2] !== "slashing";
@@ -8627,7 +8637,7 @@ MagicItemsList["vorpal sword"] = {
 					fields.Description += (fields.Description ? '; ' : '') + 'Ignores slashing resistance; On 20 to hit: cut off head';
 				}
 			},
-			'If I include the word "Vorpal" in a the name of a sword that deals slashing damage, it will be treated as the magic weapon Vorpal Sword. It has +3 to hit and damage and on a roll of 20 on the attack roll, it cuts off a head of the target.'
+			'If I include the word "Vorpal" in a the name of a weapon that deals slashing damage, it will be treated as the magic weapon Vorpal Sword. It has +3 to hit and damage and on a roll of 20 on the attack roll, it cuts off a head of the target.'
 		],
 		atkCalc: [
 			function (fields, v, output) {
