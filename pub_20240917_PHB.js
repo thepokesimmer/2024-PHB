@@ -7020,7 +7020,7 @@ legacyClassRefactor("warlock", {
           firstCol: "atwill",
         }],
         description: desc([
-          "I can cast Silent Image without expending a spell slot.",
+          "I can cast Silent Image on myself without expending a spell slot.",
         ]),
       },
       "one with shadows (5+)": {
@@ -26158,7 +26158,7 @@ CreatureList["undead spirit (skeletal)(9)"] = {
 };
 CreatureList["undead spirit (putrid/ghostly)(3)"] = {
 	name : "Undead Spirit (Putrid/Ghostly)(lvl 3)",
-	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*skeletal)(?=.*3).*$/i,
+	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*3).*$/i,
 	source : [["PHB2024", 328]],
 	size : 3,
 	type : "Undead",
@@ -26182,11 +26182,11 @@ CreatureList["undead spirit (putrid/ghostly)(3)"] = {
 	attacksAction : 1,
 	features : [{
 		name : "Festering Aura (Putrid Only)",
-		description : "Constitution Saving Throw: DC equals my spell save DC, any creature (other than I) that starts its turn within a 5-foot Emanation originating from the spirit. Failure: The creature has the Poisoned condition until the start of its next turn.",
+		description : "Constitution Saving Throw: DC equals my spell save DC, any creature (other than me) that starts its turn within a 5-foot Emanation originating from the spirit. Failure: The creature has the Poisoned condition until the start of its next turn.",
 		joinString : "\n   ",
 	}, {
 		name : "Incorporeal Passage (Ghostly Only)",
-		description : "The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turninside an object, it is shunted to teh nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled.",
+		description : "The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled.",
 		joinString : "\n   ",
 	}],
 	attacks : [{
@@ -26207,7 +26207,7 @@ CreatureList["undead spirit (putrid/ghostly)(3)"] = {
 };
 CreatureList["undead spirit (putrid/ghostly)(4)"] = {
 	name : "Undead Spirit (Putrid/Ghostly)(lvl 4)",
-	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*skeletal)(?=.*4).*$/i,
+	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*4).*$/i,
 	source : [["PHB2024", 328]],
 	size : 3,
 	type : "Undead",
@@ -26231,11 +26231,11 @@ CreatureList["undead spirit (putrid/ghostly)(4)"] = {
 	attacksAction : 2,
 	features : [{
 		name : "Festering Aura (Putrid Only)",
-		description : "Constitution Saving Throw: DC equals my spell save DC, any creature (other than I) that starts its turn within a 5-foot Emanation originating from the spirit. Failure: The creature has the Poisoned condition until the start of its next turn.",
+		description : "Constitution Saving Throw: DC equals my spell save DC, any creature (other than me) that starts its turn within a 5-foot Emanation originating from the spirit. Failure: The creature has the Poisoned condition until the start of its next turn.",
 		joinString : "\n   ",
 	}, {
 		name : "Incorporeal Passage (Ghostly Only)",
-		description : "The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turninside an object, it is shunted to teh nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled.",
+		description : "The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled.",
 		joinString : "\n   ",
 	}],
 	attacks : [{
@@ -26256,7 +26256,7 @@ CreatureList["undead spirit (putrid/ghostly)(4)"] = {
 };
 CreatureList["undead spirit (putrid/ghostly)(5)"] = {
 	name : "Undead Spirit (Putrid/Ghostly)(lvl 5)",
-	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*skeletal)(?=.*5).*$/i,
+	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*5).*$/i,
 	source : [["PHB2024", 328]],
 	size : 3,
 	type : "Undead",
@@ -26280,11 +26280,11 @@ CreatureList["undead spirit (putrid/ghostly)(5)"] = {
 	attacksAction : 2,
 	features : [{
 		name : "Festering Aura (Putrid Only)",
-		description : "Constitution Saving Throw: DC equals my spell save DC, any creature (other than I) that starts its turn within a 5-foot Emanation originating from the spirit. Failure: The creature has the Poisoned condition until the start of its next turn.",
+		description : "Constitution Saving Throw: DC equals my spell save DC, any creature (other than me) that starts its turn within a 5-foot Emanation originating from the spirit. Failure: The creature has the Poisoned condition until the start of its next turn.",
 		joinString : "\n   ",
 	}, {
 		name : "Incorporeal Passage (Ghostly Only)",
-		description : "The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turninside an object, it is shunted to teh nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled.",
+		description : "The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled.",
 		joinString : "\n   ",
 	}],
 	attacks : [{
@@ -26305,7 +26305,7 @@ CreatureList["undead spirit (putrid/ghostly)(5)"] = {
 };
 CreatureList["undead spirit (putrid/ghostly)(6)"] = {
 	name : "Undead Spirit (Putrid/Ghostly)(lvl 6)",
-	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*skeletal)(?=.*6).*$/i,
+	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*6).*$/i,
 	source : [["PHB2024", 328]],
 	size : 3,
 	type : "Undead",
@@ -26329,11 +26329,11 @@ CreatureList["undead spirit (putrid/ghostly)(6)"] = {
 	attacksAction : 3,
 	features : [{
 		name : "Festering Aura (Putrid Only)",
-		description : "Constitution Saving Throw: DC equals my spell save DC, any creature (other than I) that starts its turn within a 5-foot Emanation originating from the spirit. Failure: The creature has the Poisoned condition until the start of its next turn.",
+		description : "Constitution Saving Throw: DC equals my spell save DC, any creature (other than me) that starts its turn within a 5-foot Emanation originating from the spirit. Failure: The creature has the Poisoned condition until the start of its next turn.",
 		joinString : "\n   ",
 	}, {
 		name : "Incorporeal Passage (Ghostly Only)",
-		description : "The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turninside an object, it is shunted to teh nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled.",
+		description : "The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled.",
 		joinString : "\n   ",
 	}],
 	attacks : [{
@@ -26354,7 +26354,7 @@ CreatureList["undead spirit (putrid/ghostly)(6)"] = {
 };
 CreatureList["undead spirit (putrid/ghostly)(7)"] = {
 	name : "Undead Spirit (Putrid/Ghostly)(lvl 7)",
-	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*skeletal)(?=.*7).*$/i,
+	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*7).*$/i,
 	source : [["PHB2024", 328]],
 	size : 3,
 	type : "Undead",
@@ -26378,11 +26378,11 @@ CreatureList["undead spirit (putrid/ghostly)(7)"] = {
 	attacksAction : 3,
 	features : [{
 		name : "Festering Aura (Putrid Only)",
-		description : "Constitution Saving Throw: DC equals my spell save DC, any creature (other than I) that starts its turn within a 5-foot Emanation originating from the spirit. Failure: The creature has the Poisoned condition until the start of its next turn.",
+		description : "Constitution Saving Throw: DC equals my spell save DC, any creature (other than me) that starts its turn within a 5-foot Emanation originating from the spirit. Failure: The creature has the Poisoned condition until the start of its next turn.",
 		joinString : "\n   ",
 	}, {
 		name : "Incorporeal Passage (Ghostly Only)",
-		description : "The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turninside an object, it is shunted to teh nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled.",
+		description : "The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled.",
 		joinString : "\n   ",
 	}],
 	attacks : [{
@@ -26403,7 +26403,7 @@ CreatureList["undead spirit (putrid/ghostly)(7)"] = {
 };
 CreatureList["undead spirit (putrid/ghostly)(8)"] = {
 	name : "Undead Spirit (Putrid/Ghostly)(lvl 8)",
-	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*skeletal)(?=.*8).*$/i,
+	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*8).*$/i,
 	source : [["PHB2024", 328]],
 	size : 3,
 	type : "Undead",
@@ -26427,11 +26427,11 @@ CreatureList["undead spirit (putrid/ghostly)(8)"] = {
 	attacksAction : 4,
 	features : [{
 		name : "Festering Aura (Putrid Only)",
-		description : "Constitution Saving Throw: DC equals my spell save DC, any creature (other than I) that starts its turn within a 5-foot Emanation originating from the spirit. Failure: The creature has the Poisoned condition until the start of its next turn.",
+		description : "Constitution Saving Throw: DC equals my spell save DC, any creature (other than me) that starts its turn within a 5-foot Emanation originating from the spirit. Failure: The creature has the Poisoned condition until the start of its next turn.",
 		joinString : "\n   ",
 	}, {
 		name : "Incorporeal Passage (Ghostly Only)",
-		description : "The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turninside an object, it is shunted to teh nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled.",
+		description : "The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled.",
 		joinString : "\n   ",
 	}],
 	attacks : [{
@@ -26452,7 +26452,7 @@ CreatureList["undead spirit (putrid/ghostly)(8)"] = {
 };
 CreatureList["undead spirit (putrid/ghostly)(9)"] = {
 	name : "Undead Spirit (Putrid/Ghostly)(lvl 9)",
-	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*skeletal)(?=.*9).*$/i,
+	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*9).*$/i,
 	source : [["PHB2024", 328]],
 	size : 3,
 	type : "Undead",
@@ -26476,11 +26476,11 @@ CreatureList["undead spirit (putrid/ghostly)(9)"] = {
 	attacksAction : 4,
 	features : [{
 		name : "Festering Aura (Putrid Only)",
-		description : "Constitution Saving Throw: DC equals my spell save DC, any creature (other than I) that starts its turn within a 5-foot Emanation originating from the spirit. Failure: The creature has the Poisoned condition until the start of its next turn.",
+		description : "Constitution Saving Throw: DC equals my spell save DC, any creature (other than me) that starts its turn within a 5-foot Emanation originating from the spirit. Failure: The creature has the Poisoned condition until the start of its next turn.",
 		joinString : "\n   ",
 	}, {
 		name : "Incorporeal Passage (Ghostly Only)",
-		description : "The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turninside an object, it is shunted to teh nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled.",
+		description : "The spirit can move through other creatures and objects as if they were Difficult Terrain. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes 1d10 Force damage for every 5 feet traveled.",
 		joinString : "\n   ",
 	}],
 	attacks : [{
