@@ -10,6 +10,200 @@ SourceList.DMG2024 = {
 };
 // Coded By: ThePokésimmer and ShadowzAll with contributions from Reading Toskr, and TrackAtNite
 //Functions
+
+//Supernatural Gifts
+FeatsList["blessing of health"] = {
+	name: "Blessing of Health [Supernatural Gift]",
+	source : [["DMG2024", 98]],
+	regExpSearch : /^(?=.*blessing)(?=.*health).*$/i,
+	scores : [0, 0, 2, 0, 0, 0],
+	scoresMaximum : [0, 0, 22, 0, 0, 0],
+	description : "My Constitution score increases by 2, up to a maximum of 22.",
+	descriptionFull : "Your Constitution score increases by 2, up to a maximum of 22.",
+};
+FeatsList["blessing of magic resistance"] = {
+	name: "Blessing of Magic Resistance [Supernatural Gift]",
+	source : [["DMG2024", 98]],
+	regExpSearch : /^(?=.*blessing)(?=.*magic)(?=.*resistance).*$/i,
+	savetxt : { adv_vs : ["spells and other magical effects; "] },
+	description : "I have Advantage on saving throws against spells and other magical effects.",
+	descriptionFull : "You have Advantage on saving throws against spells and other magical effects.",
+};
+FeatsList["blessing of protection"] = {
+	name: "Blessing of Protection [Supernatural Gift]",
+	source : [["DMG2024", 99]],
+	regExpSearch : /^(?=.*blessing)(?=.*protection).*$/i,
+	extraAC : { mod : 1, misc : true },
+	description : "I have Advantage on saving throws against spells and other magical effects.",
+	descriptionFull : "You have Advantage on saving throws against spells and other magical effects.",
+};
+FeatsList["blessing of understanding"] = {
+	name: "Blessing of Understanding [Supernatural Gift]",
+	source : [["DMG2024", 99]],
+	regExpSearch : /^(?=.*blessing)(?=.*understanding).*$/i,
+	scores : [0, 0, 0, 0, 2, 0],
+	scoresMaximum : [0, 0, 0, 0, 22, 0],
+	description : "My Wisdom score increases by 2, up to a maximum of 22.",
+	descriptionFull : "Your Wisdom score increases by 2, up to a maximum of 22.",
+};
+FeatsList["blessing of valhalla"] = {
+	name : "Blessing of Valhalla [Supernatural Gift]",
+	source : [["DMG2024", 99]],
+	regExpSearch : /^(?=.*blessing)(?=.*valhalla).*$/i,
+	usages : 1,
+	recovery : "7 days",
+	description : "This Blessing grants me the power to summon spirit warriors, as if I am blowing a silver Horn of Valhalla. Once I use this Blessing, I can’t use it again until 7 days have passed. (See Notes Page)",
+	descriptionFull : "This Blessing grants you the power to summon spirit warriors, as if you are blowing a silver Horn of Valhalla. Once you use this Blessing, you can’t use it again until 7 days have passed.",
+	toNotesPage : [{
+		name : "Blessing of Valhalla",
+		note : "As a Magic action once per 7 days, I can use this blessing to summon 2 warrior spirits from Ysgard within 60 ft me. These have the statistics of a Berserker and return after 1 hour or when they drop to 0 HP. They are friendly to me and my companions and follow my commands."
+	}],
+};
+FeatsList["blessing of weapon enhancement"] = {
+	name: "Blessing of Weapon Enhancement [Supernatural Gift]",
+	source : [["DMG2024", 99]],
+	regExpSearch : /^(?=.*blessing)(?=.*weapon)(?=.*enhancement).*$/i,
+	description : "One nonmagical weapon in your possession becomes a +1 Weapon while you wield it.",
+	descriptionFull : "One nonmagical weapon in your possession becomes a +1 Weapon while you wield it.",
+};
+FeatsList["blessing of wound closure"] = {
+	name: "Blessing of Wound Closure [Supernatural Gift]",
+	source : [["DMG2024", 99]],
+	regExpSearch : /^(?=.*blessing)(?=.*wound)(?=.*closure).*$/i,
+	description : "This Blessing grants me the benefits of a Periapt of Wound Closure. (See Notes Page)",
+	descriptionFull : "This Blessing grants you the benefits of a Periapt of Wound Closure.",
+	toNotesPage : {
+		name : "Blessing of Wound Closure",
+		note : "Whenever I make a Death Saving Throw, I can change a roll of 9 or lower to a 10, turning a failed save into a successful one. Whenever I roll a Hit Point die to regain Hit Points, double the number of Hit Points it restores.",
+	},
+};
+FeatsList["charm of animal conjuring"] = {
+	name: "Charm of Animal Conjuring [Supernatural Gift]",
+	source : [["DMG2024", 99]],
+	regExpSearch : /^(?=.*charm)(?=.*animal)(?=.*conjuring).*$/i,
+	usages : 3,
+	recovery : "Never",
+	spellFirstColTitle : "CH",
+	spellcastingBonus : [{
+		name : "Charm of Animal Conjuring",
+		spells : "conjure animals",
+		selection : "conjure animals",
+		times : 1,
+		firstCol : 1,
+	}],
+	description : "This Charm allows me to cast Conjure Animals. Once used three times, the Charm vanishes from me.",
+	descriptionFull : "This Charm allows you to cast Conjure Animals. Once used three times, the Charm vanishes from you.",
+};
+FeatsList["charm of darkvision"] = {
+	name: "Charm of Darkvision [Supernatural Gift]",
+	source : [["DMG2024", 99]],
+	regExpSearch : /^(?=.*charm)(?=.*darkvision).*$/i,
+	usages : 3,
+	recovery : "Never",
+	spellFirstColTitle : "CH",
+	spellcastingBonus : [{
+		name : "Charm of Darkvision",
+		spells : "darkvision",
+		selection : "darkvision",
+		times : 1,
+		firstCol : 1,
+	}],
+	description : "This Charm allows me to cast Darkvision. Once used three times, the Charm vanishes from me.",
+	descriptionFull : "This Charm allows you to cast Darkvision. Once used three times, the Charm vanishes from you.",
+};
+FeatsList["charm of feather falling"] = {
+	name: "Charm of Feather Falling [Supernatural Gift]",
+	source : [["DMG2024", 99]],
+	regExpSearch : /^(?=.*charm)(?=.*feather)(?=.*falling).*$/i,
+	usages : "10 days",
+	recovery : "Never",
+	description : "This Charm grants me the benefits of a Ring of Feather Falling. These benefits last for 10 days, after which the Charm vanishes from me. (See Notes Page)",
+	descriptionFull : "This Charm grants you the benefits of a Ring of Feather Falling. These benefits last for 10 days, after which the Charm vanishes from you.",
+	toNotesPage : {
+		name : "Charm of Feather Falling",
+		note : "When I fall while having this charm, I descend 60 ft per round and take no damage from falling.",
+	},
+};
+FeatsList["charm of heroism"] = {
+	name: "Charm of Heroism [Supernatural Gift]",
+	source : [["DMG2024", 99]],
+	regExpSearch : /^(?=.*charm)(?=.*heroism).*$/i,
+	usages : 1,
+	recovery : "Never",
+	action : "action",
+	description : "This Charm allows me to give myself the benefit of a Potion of Heroism as a Magic action. Once I do so, the Charm vanishes from me. (See Notes Page)",
+	descriptionFull : "This Charm allows you to give yourself the benefit of a Potion of Heroism as a Magic action. Once you do so, the Charm vanishes from you.",
+	toNotesPage : {
+		name : "Charm of Heroism",
+		note : "When I activate this charm, I gain 10 Temporary Hit Points that last for 1 hour. For the same duration, I am under the effect of the Bless spell (no Concentration required)",
+		},
+};
+FeatsList["charm of restoration"] = {
+	name: "Charm of Restoration [Supernatural Gift]",
+	source : [["DMG2024", 99]],
+	regExpSearch : /^(?=.*charm)(?=.*restoration).*$/i,
+	usages : 3,
+	recovery : "Never",
+	spellFirstColTitle : "CH",
+	spellcastingBonus : [{
+		name : "Charm of Restoration",
+		spells : ["lesser restoration"],
+		selection : ["lesser restoration"],
+		times : 1,
+		firstCol : 1,
+	}, {
+		name : "Charm of Restoration",
+		spells : ["greater restoration"],
+		selection : ["greater restoration"],
+		times : 1,
+		firstCol : 2,
+	}],
+	description : "This Charm has 3 charges. I can expend some of its charges to cast one of the following spells: Greater Restoration (2 charges) or Lesser Restoration (1 charge). Once all its charges have been expended, the Charm vanishes from me.",
+	descriptionFull : "This Charm has 3 charges. You can expend some of its charges to cast one of the following spells: Greater Restoration (2 charges) or Lesser Restoration (1 charge). Once all its charges have been expended, the Charm vanishes from you.",
+};
+FeatsList["charm of the slayer"] = {
+	name: "Charm of the Slayer [Supernatural Gift]",
+	source : [["DMG2024", 99]],
+	regExpSearch : /^(?=.*charm)(?=.*slayer).*$/i,
+	usages : "9 days",
+	recovery : "Never",
+	description : "One weapon in your possession becomes a Dragon Slayer or Giant Slayer (DM’s choice) for the next 9 days. The Charm then vanishes from you, and the weapon returns to normal. (See Notes Page)",
+	descriptionFull : "One weapon in your possession becomes a Dragon Slayer or Giant Slayer (DM’s choice) for the next 9 days. The Charm then vanishes from you, and the weapon returns to normal.",
+	choices : ["Dragon Slayer", "Giant Slayer"],
+	"dragon slayer" : {
+		name : "Charm of the Dragon Slayer [Supernatural Gift]",
+		description : "One weapon in my possession becomes a Dragon Slayer weapon for the next 9 days. The Charm then vanishes from me, and the weapon returns to normal. (See Notes Page)",
+		descriptionFull : "One weapon in your possession becomes a Dragon Slayer weapon for the next 9 days. The Charm then vanishes from you, and the weapon returns to normal.",
+		toNotesPage : {
+			name : "Charm of the Dragon Slayer",
+			note : "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. The weapon deals an extra 3d6 damage of the weapon’s type if the target is a Dragon.",
+		},
+	},
+	"giant slayer" : {
+		name : "Charm of the Giant Slayer [Supernatural Gift]",
+		description : "One weapon in my possession becomes a Giant Slayer weapon for the next 9 days. The Charm then vanishes from me, and the weapon returns to normal. (See Notes Page)",
+		descriptionFull : "One weapon in your possession becomes a Giant Slayer weapon for the next 9 days. The Charm then vanishes from you, and the weapon returns to normal.",
+		toNotesPage : {
+			name : "Charm of the Giant Slayer",
+			note : "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. When you hit a Giant with this weapon, the Giant takes an extra 2d6 damage of the weapon’s type and must succeed on a DC 15 Strength saving throw or have the Prone condition.",
+		},
+	},
+};
+FeatsList["charm of vitality"] = {
+	name: "Charm of Vitality [Supernatural Gift]",
+	source : [["DMG2024", 99]],
+	regExpSearch : /^(?=.*charm)(?=.*vitality).*$/i,
+	usages : 1,
+	recovery : "Never",
+	action : "action",
+	description : "This Charm allows me to give myself the benefit of a Potion of Vitality as a Magic action. Once I do so, the Charm vanishes from me. (See Notes Page)",
+	descriptionFull : "This Charm allows you to give yourself the benefit of a Potion of Vitality as a Magic action. Once you do so, the Charm vanishes from you.",
+	toNotesPage : {
+		name : "Charm of Vitality",
+		note : "When I activate this charm, it removes any Exhaustion levels I have and ends the Poisoned condition on me. For the next 24 hours, I regain the maximum number of Hit Points for any Hit Point Die I spend.",
+	},
+};
+//Magic Items
 MagicItemsList["adamantine armor"] = {
 	name : "Adamantine Armor",
 	source : [["DMG2024", 227]],
@@ -5181,7 +5375,7 @@ MagicItemsList["periapt of wound closure"] = { // contributed by AelarTheElfRogu
 	type: "wondrous item",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "Whenever you make a Death Saving Throw, you can change a roll of 9 or lower to a 10, turning a failed save into a successful one. Whenever I roll a Hit Point die to regain Hit Points, double the number of Hit Points it restores.",
+	description: "Whenever I make a Death Saving Throw, I can change a roll of 9 or lower to a 10, turning a failed save into a successful one. Whenever I roll a Hit Point die to regain Hit Points, double the number of Hit Points it restores.",
 	descriptionFull: "While wearing this pendant, you gain the following benefits.\n" + toUni("Life Preservation") + " Whenever you make a Death Saving Throw, you can change a roll of 9 or lower to a 10, turning a failed save into a successful one.\n" + toUni("Natural Healing Boost") +"Whenever you roll a Hit Point Die to regain Hit Points, double the number of Hit Points it restores.",
 	attunement: true,
 	weight: 1
@@ -5535,7 +5729,7 @@ MagicItemsList["potion of heroism"] = {
 	type: "potion",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "When you drink this potion, you gain 10 Temporary Hit Points that last for 1 hour. For the same duration, you are under the effect of the Bless spell (no Concentration required). For the same duration, the consumer is under the effect of the Bless spell (no concentration required), which adds +1d4 on all attack rolls and saving throws. This blue potion bubbles and steams as if boiling.",
+	description: "When I drink this potion, I gain 10 Temporary Hit Points that last for 1 hour. For the same duration, I am under the effect of the Bless spell (no Concentration required)",
 	descriptionFull: "When you drink this potion, you gain 10 Temporary Hit Points that last for 1 hour. For the same duration, you are under the effect of the Bless spell (no Concentration required). This blue potion bubbles and steams as if boiling.",
 	weight: 0.5
 };
@@ -6021,7 +6215,7 @@ MagicItemsList["ring of feather falling"] = {
 	type: "ring",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "When you fall while wearing this ring, you descend 60 ft per round and take no damage from falling.",
+	description: "When I fall while wearing this ring, I descend 60 ft per round and take no damage from falling.",
 	descriptionFull: "When you fall while wearing this ring, you descend 60 feet per round and take no damage from falling.",
 	attunement: true
 };
@@ -6961,11 +7155,15 @@ MagicItemsList["scroll of titan summoning"] = {
 		name: "Scroll of Colossus Summoning",
 		description: "Once, as a Magic action, I can use this to summon a Colossus in an unoccupied space on the ground or in water that I can see within 1 mile of myself. The titan is hostile towards all other creatures and disappears when it drops to 0 HP. If summoned into a space that isn't large enough to contain it, it fails and is wasted."
 	},
+	"elemental cataclysm": {
+		name: "Scroll of Elemental Cataclysm Summoning",
+		description: "Once, as a Magic action, I can use this to summon an Elemental Cataclysm in an unoccupied space on the ground or in water that I can see within 1 mile of myself. The titan is hostile towards all other creatures and disappears when it drops to 0 HP. If summoned into a space that isn't large enough to contain it, it fails and is wasted."
+	},
 	"empyrean": {
 		name: "Scroll of Empyrean Summoning",
 		description: "Once, as a Magic action, I can use this to summon an Empyrean in an unoccupied space on the ground or in water that I can see within 1 mile of myself. The titan is hostile towards all other creatures and disappears when it drops to 0 HP. If summoned into a space that isn't large enough to contain it, it fails and is wasted."
 	},
-	"Kraken": {
+	"kraken": {
 		name: "Scroll of Kraken Summoning",
 		description: "Once, as a Magic action, I can use this to summon a Kraken in an unoccupied space on the ground or in water that I can see within 1 mile of myself. The titan is hostile towards all other creatures and disappears when it drops to 0 HP. If summoned into a space that isn't large enough to contain it, it fails and is wasted."
 	},
