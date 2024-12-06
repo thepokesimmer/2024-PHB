@@ -8886,7 +8886,7 @@ BackgroundFeatureList["savage attacker"] = {
 };
 //Species
 legacyRaceRefactor("aasimar", {
-  regExpSearch: /^(?=.*aasimar).*$/i,
+  regExpSearch: /aasimar/i,
   name: "Aasimar",
   sortname: "Aasimar",
   source: [["PHB2024", 186]],
@@ -13417,6 +13417,7 @@ ArmourList["plate"] = {
 ToolsList["alchemist's supplies"] = {
   infoname: "Alchemist's Supplies [50 gp]",
   name: "Alchemist's Supplies",
+  amount: "",
   weight: 8,
   type: "artisan's tools",
   source: [["PHB2024", 220]],
@@ -13424,6 +13425,7 @@ ToolsList["alchemist's supplies"] = {
 ToolsList["brewer's supplies"] = {
   infoname: "Brewer's Supplies [20 gp]",
   name: "Brewer's Supplies",
+  amount: "",
   weight: 9,
   type: "artisan's tools",
   source: [["PHB2024", 220]],
@@ -13431,6 +13433,7 @@ ToolsList["brewer's supplies"] = {
 ToolsList["calligrapher's supplies"] = {
   infoname: "Calligrapher's Supplies [10 gp]",
   name: "Calligrapher's Supplies",
+  amount: "",
   weight: 5,
   type: "artisan's tools",
   source: [["PHB2024", 220]],
@@ -13438,6 +13441,7 @@ ToolsList["calligrapher's supplies"] = {
 ToolsList["carpenter's tools"] = {
   infoname: "Carpenter's Tools [8 gp]",
   name: "Carpenter's Tools",
+  amount: "",
   weight: 6,
   type: "artisan's tools",
   source: [["PHB2024", 220]],
@@ -13445,6 +13449,7 @@ ToolsList["carpenter's tools"] = {
 ToolsList["cartographer's tools"] = {
   infoname: "Cartographer's Tools [15 gp]",
   name: "Cartographer's Tools",
+  amount: "",
   weight: 6,
   type: "artisan's tools",
   source: [["PHB2024", 220]],
@@ -13452,6 +13457,7 @@ ToolsList["cartographer's tools"] = {
 ToolsList["cobbler's tools"] = {
   infoname: "Cobbler's tools [5 gp]",
   name: "Cobbler's Tools",
+  amount: "",
   weight: 5,
   type: "artisan's tools",
   source: [["PHB2024", 220]],
@@ -13459,6 +13465,7 @@ ToolsList["cobbler's tools"] = {
 ToolsList["cook's utensils"] = {
   infoname: "Cook's Utensils [1 gp]",
   name: "Cook's Utensils",
+  amount: "",
   weight: 8,
   type: "artisan's tools",
   source: [["PHB2024", 220]],
@@ -13466,6 +13473,7 @@ ToolsList["cook's utensils"] = {
 ToolsList["glassblower's tools"] = {
   infoname: "Glassblower's Tools [30 gp]",
   name: "Glassblower's Tools",
+  amount: "",
   weight: 5,
   type: "artisan's tools",
   source: [["PHB2024", 220]],
@@ -13473,6 +13481,7 @@ ToolsList["glassblower's tools"] = {
 ToolsList["jeweler's tools"] = {
   infoname: "Jeweler's Tools [20 gp]",
   name: "Jeweler's Tools",
+  amount: "",
   weight: 2,
   type: "artisan's tools",
   source: [["PHB2024", 220]],
@@ -13480,6 +13489,7 @@ ToolsList["jeweler's tools"] = {
 ToolsList["leatherworker's tools"] = {
   infoname: "Leatherworker's Tools [5 gp]",
   name: "Leatherworker's tools",
+  amount: "",
   weight: 5,
   type: "artisan's tools",
   source: [["PHB2024", 220]],
@@ -13487,6 +13497,7 @@ ToolsList["leatherworker's tools"] = {
 ToolsList["mason's tools"] = {
   infoname: "Mason's Tools [10 gp]",
   name: "Mason's Tools",
+  amount: "",
   weight: 8,
   type: "artisan's tools",
   source: [["PHB2024", 221]],
@@ -13494,6 +13505,7 @@ ToolsList["mason's tools"] = {
 ToolsList["painter's supplies"] = {
   infoname: "Painter's Supplies [10 gp]",
   name: "Painter's Supplies",
+  amount: "",
   weight: 5,
   type: "artisan's tools",
   source: [["PHB2024", 221]],
@@ -13501,6 +13513,7 @@ ToolsList["painter's supplies"] = {
 ToolsList["potter's tools"] = {
   infoname: "Potter's Tools [10 gp]",
   name: "Potter's Tools",
+  amount: "",
   weight: 3,
   type: "artisan's tools",
   source: [["PHB2024", 221]],
@@ -13508,6 +13521,7 @@ ToolsList["potter's tools"] = {
 ToolsList["smith's tools"] = {
   infoname: "Smith's Tools [20 gp]",
   name: "Smith's Tools",
+  amount: "",
   weight: 8,
   type: "artisan's tools",
   source: [["PHB2024", 221]],
@@ -13515,6 +13529,7 @@ ToolsList["smith's tools"] = {
 ToolsList["tinker's tools"] = {
   infoname: "Tinker's Tools [50 gp]",
   name: "Tinker's Tools",
+  amount: "",
   weight: 10,
   type: "artisan's tools",
   source: [["PHB2024", 221]],
@@ -13522,6 +13537,7 @@ ToolsList["tinker's tools"] = {
 ToolsList["weaver's tools"] = {
   infoname: "Weaver's Tools [1 gp]",
   name: "Weaver's Tools",
+  amount: "",
   weight: 5,
   type: "artisan's tools",
   source: [["PHB2024", 221]],
@@ -13529,6 +13545,7 @@ ToolsList["weaver's tools"] = {
 ToolsList["woodcarver's tools"] = {
   infoname: "Woodcarver's Tools [1 gp]",
   name: "Woodcarver's Tools",
+  amount: "",
   weight: 5,
   type: "artisan's tools",
   source: [["PHB2024", 221]],
@@ -13536,18 +13553,21 @@ ToolsList["woodcarver's tools"] = {
 ToolsList["disguise kit"] = {
   infoname: "Disguise Kit [25 gp]",
   name: "Disguise Kit",
+  amount: "",
   weight: 3,
   source: [["PHB2024", 221]],
 };
 ToolsList["forgery kit"] = {
   infoname: "Forgery Kit [15 gp]",
   name: "Forgery Kit",
+  amount: "",
   weight: 5,
   source: [["PHB2024", 221]],
 };
 ToolsList["dice"] = {
   infoname: "Dice [1 sp]",
   name: "Dice",
+  amount: "",
   weight: "",
   type: "gaming set",
   source: [["PHB2024", 221]],
@@ -13555,6 +13575,7 @@ ToolsList["dice"] = {
 ToolsList["dragonchess"] = {
   infoname: "Dragonchess [1 gp]",
   name: "Dragonchess",
+  amount: "",
   weight: "",
   type: "gaming set",
   source: [["PHB2024", 221]],
@@ -13562,6 +13583,7 @@ ToolsList["dragonchess"] = {
 ToolsList["playing cards"] = {
   infoname: "Playing Cards [5 sp]",
   name: "Playing Cards",
+  amount: "",
   weight: "",
   type: "gaming set",
   source: [["PHB2024", 221]],
@@ -13569,6 +13591,7 @@ ToolsList["playing cards"] = {
 ToolsList["three-dragon ante"] = {
   infoname: "Three-Dragon Ante [1 gp]",
   name: "Three-Dragon Ante",
+  amount: "",
   weight: "",
   type: "gaming set",
   source: [["PHB2024", 221]],
@@ -13576,12 +13599,14 @@ ToolsList["three-dragon ante"] = {
 ToolsList["herbalism kit"] = {
   infoname: "Herbalism Kit [5 gp]",
   name: "Herbalism Kit",
+  amount: "",
   weight: 3,
   source: [["PHB2024", 221]],
 };
 ToolsList["bagpipes"] = {
   infoname: "Bagpipes [30 gp]",
   name: "Bagpipes",
+  amount: "",
   weight: 6,
   type: "musical instrument",
   source: [["PHB2024", 221]],
@@ -13589,6 +13614,7 @@ ToolsList["bagpipes"] = {
 ToolsList["drum"] = {
   infoname: "Drum [6 gp]",
   name: "Drum",
+  amount: "",
   weight: 3,
   type: "musical instrument",
   source: [["PHB2024", 221]],
@@ -13596,6 +13622,7 @@ ToolsList["drum"] = {
 ToolsList["dulcimer"] = {
   infoname: "Dulcimer [25 gp]",
   name: "Dulcimer",
+  amount: "",
   weight: 10,
   type: "musical instrument",
   source: [["PHB2024", 221]],
@@ -13603,6 +13630,7 @@ ToolsList["dulcimer"] = {
 ToolsList["flute"] = {
   infoname: "Flute [2 gp]",
   name: "Flute",
+  amount: "",
   weight: 1,
   type: "musical instrument",
   source: [["PHB2024", 221]],
@@ -13610,6 +13638,7 @@ ToolsList["flute"] = {
 ToolsList["horn"] = {
   infoname: "Horn [3 gp]",
   name: "Horn",
+  amount: "",
   weight: 2,
   type: "musical instrument",
   source: [["PHB2024", 221]],
@@ -13617,6 +13646,7 @@ ToolsList["horn"] = {
 ToolsList["lute"] = {
   infoname: "Lute [35 gp]",
   name: "Lute",
+  amount: "",
   weight: 2,
   type: "musical instrument",
   source: [["PHB2024", 221]],
@@ -13624,6 +13654,7 @@ ToolsList["lute"] = {
 ToolsList["lyre"] = {
   infoname: "Lyre [30 gp]",
   name: "Lyre",
+  amount: "",
   weight: 2,
   type: "musical instrument",
   source: [["PHB2024", 221]],
@@ -13631,6 +13662,7 @@ ToolsList["lyre"] = {
 ToolsList["pan flute"] = {
   infoname: "Pan Flute [12 gp]",
   name: "Pan Flute",
+  amount: "",
   weight: 2,
   type: "musical instrument",
   source: [["PHB2024", 221]],
@@ -13638,6 +13670,7 @@ ToolsList["pan flute"] = {
 ToolsList["shawm"] = {
   infoname: "Shawm [2 gp]",
   name: "Shawm",
+  amount: "",
   weight: 1,
   type: "musical instrument",
   source: [["PHB2024", 221]],
@@ -13645,6 +13678,7 @@ ToolsList["shawm"] = {
 ToolsList["viol"] = {
   infoname: "Viol [30 gp]",
   name: "Viol",
+  amount: "",
   weight: 1,
   type: "musical instrument",
   source: [["PHB2024", 221]],
@@ -13652,18 +13686,21 @@ ToolsList["viol"] = {
 ToolsList["navigator's tools"] = {
   infoname: "Navigator's Tools [25 gp]",
   name: "Navigator's Tools",
+  amount: "",
   weight: 2,
   source: [["PHB2024", 221]],
 };
 ToolsList["poisoner's kit"] = {
   infoname: "Poisoner's Kit [50 gp]",
   name: "Poisoner's Kit",
+  amount: "",
   weight: 2,
   source: [["PHB2024", 221]],
 };
 ToolsList["thieves' tools"] = {
   infoname: "Thieves' Tools [25 gp]",
   name: "Thieves' Tools",
+  amount: "",
   weight: 1,
   source: [["PHB2024", 221]],
 };
