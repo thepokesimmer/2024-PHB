@@ -12,195 +12,181 @@ SourceList.DMG2024 = {
 //Functions
 
 //Supernatural Gifts
-FeatsList["blessing of health"] = {
-	name: "Blessing of Health [Supernatural Gift]",
+FeatsList["blessings"] = {
+	name : "Blessings [Supernatural Gifts]",
 	source : [["DMG2024", 98]],
-	regExpSearch : /^(?=.*blessing)(?=.*health).*$/i,
-	scores : [0, 0, 2, 0, 0, 0],
-	scoresMaximum : [0, 0, 22, 0, 0, 0],
-	description : "My Constitution score increases by 2, up to a maximum of 22.",
-	descriptionFull : "Your Constitution score increases by 2, up to a maximum of 22.",
-};
-FeatsList["blessing of magic resistance"] = {
-	name: "Blessing of Magic Resistance [Supernatural Gift]",
-	source : [["DMG2024", 98]],
-	regExpSearch : /^(?=.*blessing)(?=.*magic)(?=.*resistance).*$/i,
-	savetxt : { adv_vs : ["spells and other magical effects; "] },
-	description : "I have Advantage on saving throws against spells and other magical effects.",
-	descriptionFull : "You have Advantage on saving throws against spells and other magical effects.",
-};
-FeatsList["blessing of protection"] = {
-	name: "Blessing of Protection [Supernatural Gift]",
-	source : [["DMG2024", 99]],
-	regExpSearch : /^(?=.*blessing)(?=.*protection).*$/i,
-	extraAC : { mod : 1, misc : true },
-	description : "I have Advantage on saving throws against spells and other magical effects.",
-	descriptionFull : "You have Advantage on saving throws against spells and other magical effects.",
-};
-FeatsList["blessing of understanding"] = {
-	name: "Blessing of Understanding [Supernatural Gift]",
-	source : [["DMG2024", 99]],
-	regExpSearch : /^(?=.*blessing)(?=.*understanding).*$/i,
-	scores : [0, 0, 0, 0, 2, 0],
-	scoresMaximum : [0, 0, 0, 0, 22, 0],
-	description : "My Wisdom score increases by 2, up to a maximum of 22.",
-	descriptionFull : "Your Wisdom score increases by 2, up to a maximum of 22.",
-};
-FeatsList["blessing of valhalla"] = {
-	name : "Blessing of Valhalla [Supernatural Gift]",
-	source : [["DMG2024", 99]],
-	regExpSearch : /^(?=.*blessing)(?=.*valhalla).*$/i,
-	usages : 1,
-	recovery : "7 days",
-	description : "This Blessing grants me the power to summon spirit warriors, as if I am blowing a silver Horn of Valhalla. Once I use this Blessing, I can’t use it again until 7 days have passed. (See Notes Page)",
-	descriptionFull : "This Blessing grants you the power to summon spirit warriors, as if you are blowing a silver Horn of Valhalla. Once you use this Blessing, you can’t use it again until 7 days have passed.",
-	toNotesPage : [{
-		name : "Blessing of Valhalla",
-		note : "As a Magic action once per 7 days, I can use this blessing to summon 2 warrior spirits from Ysgard within 60 ft me. These have the statistics of a Berserker and return after 1 hour or when they drop to 0 HP. They are friendly to me and my companions and follow my commands."
-	}],
-};
-FeatsList["blessing of weapon enhancement"] = {
-	name: "Blessing of Weapon Enhancement [Supernatural Gift]",
-	source : [["DMG2024", 99]],
-	regExpSearch : /^(?=.*blessing)(?=.*weapon)(?=.*enhancement).*$/i,
-	description : "One nonmagical weapon in your possession becomes a +1 Weapon while you wield it.",
-	descriptionFull : "One nonmagical weapon in your possession becomes a +1 Weapon while you wield it.",
-};
-FeatsList["blessing of wound closure"] = {
-	name: "Blessing of Wound Closure [Supernatural Gift]",
-	source : [["DMG2024", 99]],
-	regExpSearch : /^(?=.*blessing)(?=.*wound)(?=.*closure).*$/i,
-	description : "This Blessing grants me the benefits of a Periapt of Wound Closure. (See Notes Page)",
-	descriptionFull : "This Blessing grants you the benefits of a Periapt of Wound Closure.",
-	toNotesPage : {
-		name : "Blessing of Wound Closure",
-		note : "Whenever I make a Death Saving Throw, I can change a roll of 9 or lower to a 10, turning a failed save into a successful one. Whenever I roll a Hit Point die to regain Hit Points, double the number of Hit Points it restores.",
+	regExpSearch : /blessings/i,
+	description : "A Blessing is usually bestowed by a god or a godlike being.",
+	descriptionFull : "A supernatural gift is a special reward granted by a being or force of great magical power. Supernatural gifts come in two forms: Blessing. A Blessing is usually bestowed by a god or a godlike being.",
+	choices : ["Health", "Magic Resistance", "Protection", "Understanding", "Valhalla", "Weapon Enhancement", "Wound Closure"],
+	"health" : {
+		name: "Blessing of Health [Supernatural Gift]",
+		scores : [0, 0, 2, 0, 0, 0],
+		scoresMaximum : [0, 0, 22, 0, 0, 0],
+		description : "My Constitution score increases by 2, up to a maximum of 22.",
+		descriptionFull : "Your Constitution score increases by 2, up to a maximum of 22.",	
+	},
+	"magic resistance" : {
+		name: "Blessing of Magic Resistance [Supernatural Gift]",
+		savetxt : { adv_vs : ["spells and other magical effects; "] },
+		description : "I have Advantage on saving throws against spells and other magical effects.",
+		descriptionFull : "You have Advantage on saving throws against spells and other magical effects.",	
+	},
+	"protection" : {
+		name: "Blessing of Protection [Supernatural Gift]",
+		extraAC : { mod : 1, misc : true },
+		description : "I have Advantage on saving throws against spells and other magical effects.",
+		descriptionFull : "You have Advantage on saving throws against spells and other magical effects.",	
+	},
+	"understanding" : {
+		name: "Blessing of Understanding [Supernatural Gift]",
+		scores : [0, 0, 0, 0, 2, 0],
+		scoresMaximum : [0, 0, 0, 0, 22, 0],
+		description : "My Wisdom score increases by 2, up to a maximum of 22.",
+		descriptionFull : "Your Wisdom score increases by 2, up to a maximum of 22.",
+	},
+	"valhalla" : {
+		name : "Blessing of Valhalla [Supernatural Gift]",
+		usages : 1,
+		recovery : "7 days",
+		description : "This Blessing grants me the power to summon spirit warriors, as if I am blowing a silver Horn of Valhalla. Once I use this Blessing, I can’t use it again until 7 days have passed. (See Notes Page)",
+		descriptionFull : "This Blessing grants you the power to summon spirit warriors, as if you are blowing a silver Horn of Valhalla. Once you use this Blessing, you can’t use it again until 7 days have passed.",
+		toNotesPage : [{
+			name : "Blessing of Valhalla",
+			note : "As a Magic action once per 7 days, I can use this blessing to summon 2 warrior spirits from Ysgard within 60 ft me. These have the statistics of a Berserker and return after 1 hour or when they drop to 0 HP. They are friendly to me and my companions and follow my commands."
+		}],
+	},
+	"weapon enhancement" : {
+		name: "Blessing of Weapon Enhancement [Supernatural Gift]",
+		description : "One nonmagical weapon in your possession becomes a +1 Weapon while you wield it.",
+		descriptionFull : "One nonmagical weapon in your possession becomes a +1 Weapon while you wield it.",
+	},
+	"wound closure" : {
+		name: "Blessing of Wound Closure [Supernatural Gift]",
+		description : "This Blessing grants me the benefits of a Periapt of Wound Closure. (See Notes Page)",
+		descriptionFull : "This Blessing grants you the benefits of a Periapt of Wound Closure.",
+		toNotesPage : [{
+			name : "Blessing of Wound Closure",
+			note : "Whenever I make a Death Saving Throw, I can change a roll of 9 or lower to a 10, turning a failed save into a successful one. Whenever I roll a Hit Point die to regain Hit Points, double the number of Hit Points it restores.",
+		}],
 	},
 };
-FeatsList["charm of animal conjuring"] = {
-	name: "Charm of Animal Conjuring [Supernatural Gift]",
+FeatsList["charms"] = {
+	name : "Charms [Supernatural Gifts]",
 	source : [["DMG2024", 99]],
-	regExpSearch : /^(?=.*charm)(?=.*animal)(?=.*conjuring).*$/i,
-	usages : 3,
-	recovery : "Never",
-	spellFirstColTitle : "CH",
-	spellcastingBonus : [{
-		name : "Charm of Animal Conjuring",
-		spells : "conjure animals",
-		selection : "conjure animals",
-		times : 1,
-		firstCol : 1,
-	}],
-	description : "This Charm allows me to cast Conjure Animals. Once used three times, the Charm vanishes from me.",
-	descriptionFull : "This Charm allows you to cast Conjure Animals. Once used three times, the Charm vanishes from you.",
-};
-FeatsList["charm of darkvision"] = {
-	name: "Charm of Darkvision [Supernatural Gift]",
-	source : [["DMG2024", 99]],
-	regExpSearch : /^(?=.*charm)(?=.*darkvision).*$/i,
-	usages : 3,
-	recovery : "Never",
-	spellFirstColTitle : "CH",
-	spellcastingBonus : [{
-		name : "Charm of Darkvision",
-		spells : "darkvision",
-		selection : "darkvision",
-		times : 1,
-		firstCol : 1,
-	}],
-	description : "This Charm allows me to cast Darkvision. Once used three times, the Charm vanishes from me.",
-	descriptionFull : "This Charm allows you to cast Darkvision. Once used three times, the Charm vanishes from you.",
-};
-FeatsList["charm of feather falling"] = {
-	name: "Charm of Feather Falling [Supernatural Gift]",
-	source : [["DMG2024", 99]],
-	regExpSearch : /^(?=.*charm)(?=.*feather)(?=.*falling).*$/i,
-	usages : "10 days",
-	recovery : "Never",
-	description : "This Charm grants me the benefits of a Ring of Feather Falling. These benefits last for 10 days, after which the Charm vanishes from me. (See Notes Page)",
-	descriptionFull : "This Charm grants you the benefits of a Ring of Feather Falling. These benefits last for 10 days, after which the Charm vanishes from you.",
-	toNotesPage : {
-		name : "Charm of Feather Falling",
-		note : "When I fall while having this charm, I descend 60 ft per round and take no damage from falling.",
+	regExpSearch : /charms/i,
+	description : "A Charm is usually the work of a powerful spirit, a magical location, or a mythic creature. Unlike a magic item, a supernatural gift isn’t an object and doesn’t require Attunement.",
+	descriptionFull : "A supernatural gift is a special reward granted by a being or force of great magical power. Supernatural gifts come in two forms: Charm. A Charm is usually the work of a powerful spirit, a magical location, or a mythic creature. Unlike a magic item, a supernatural gift isn’t an object and doesn’t require Attunement.",
+	choices : ["Animal Conjuring", "Darkvision", "Feather Falling", "Heroism", "Restoration", "Dragon Slayer", "Giant Slayer", "Vitality"],
+	"animal conjuring" : {
+		name: "Charm of Animal Conjuring [Supernatural Gift]",
+		usages : 3,
+		recovery : "Never",
+		spellFirstColTitle : "CH",
+		spellcastingBonus : [{
+			name : "Charm of Animal Conjuring",
+			spells : "conjure animals",
+			selection : "conjure animals",
+			times : 1,
+			firstCol : 1,
+		}],
+		description : "This Charm allows me to cast Conjure Animals. Once used three times, the Charm vanishes from me.",
+		descriptionFull : "This Charm allows you to cast Conjure Animals. Once used three times, the Charm vanishes from you.",	
 	},
-};
-FeatsList["charm of heroism"] = {
-	name: "Charm of Heroism [Supernatural Gift]",
-	source : [["DMG2024", 99]],
-	regExpSearch : /^(?=.*charm)(?=.*heroism).*$/i,
-	usages : 1,
-	recovery : "Never",
-	action : "action",
-	description : "This Charm allows me to give myself the benefit of a Potion of Heroism as a Magic action. Once I do so, the Charm vanishes from me. (See Notes Page)",
-	descriptionFull : "This Charm allows you to give yourself the benefit of a Potion of Heroism as a Magic action. Once you do so, the Charm vanishes from you.",
-	toNotesPage : {
-		name : "Charm of Heroism",
-		note : "When I activate this charm, I gain 10 Temporary Hit Points that last for 1 hour. For the same duration, I am under the effect of the Bless spell (no Concentration required)",
-		},
-};
-FeatsList["charm of restoration"] = {
-	name: "Charm of Restoration [Supernatural Gift]",
-	source : [["DMG2024", 99]],
-	regExpSearch : /^(?=.*charm)(?=.*restoration).*$/i,
-	usages : 3,
-	recovery : "Never",
-	spellFirstColTitle : "CH",
-	spellcastingBonus : [{
-		name : "Charm of Restoration",
-		spells : ["lesser restoration"],
-		selection : ["lesser restoration"],
-		times : 1,
-		firstCol : 1,
-	}, {
-		name : "Charm of Restoration",
-		spells : ["greater restoration"],
-		selection : ["greater restoration"],
-		times : 1,
-		firstCol : 2,
-	}],
-	description : "This Charm has 3 charges. I can expend some of its charges to cast one of the following spells: Greater Restoration (2 charges) or Lesser Restoration (1 charge). Once all its charges have been expended, the Charm vanishes from me.",
-	descriptionFull : "This Charm has 3 charges. You can expend some of its charges to cast one of the following spells: Greater Restoration (2 charges) or Lesser Restoration (1 charge). Once all its charges have been expended, the Charm vanishes from you.",
-};
-FeatsList["charm of the slayer"] = {
-	name: "Charm of the Slayer [Supernatural Gift]",
-	source : [["DMG2024", 99]],
-	regExpSearch : /^(?=.*charm)(?=.*slayer).*$/i,
-	usages : "9 days",
-	recovery : "Never",
-	description : "One weapon in your possession becomes a Dragon Slayer or Giant Slayer (DM’s choice) for the next 9 days. The Charm then vanishes from you, and the weapon returns to normal. (See Notes Page)",
-	descriptionFull : "One weapon in your possession becomes a Dragon Slayer or Giant Slayer (DM’s choice) for the next 9 days. The Charm then vanishes from you, and the weapon returns to normal.",
-	choices : ["Dragon Slayer", "Giant Slayer"],
+	"darkvision" : {
+		name: "Charm of Darkvision [Supernatural Gift]",
+		usages : 3,
+		recovery : "Never",
+		spellFirstColTitle : "CH",
+		spellcastingBonus : [{
+			name : "Charm of Darkvision",
+			spells : "darkvision",
+			selection : "darkvision",
+			times : 1,
+			firstCol : 1,
+		}],
+		description : "This Charm allows me to cast Darkvision. Once used three times, the Charm vanishes from me.",
+		descriptionFull : "This Charm allows you to cast Darkvision. Once used three times, the Charm vanishes from you.",
+	},
+	"feather falling" : {
+		name: "Charm of Feather Falling [Supernatural Gift]",
+		source : [["DMG2024", 99]],
+		regExpSearch : /^(?=.*charm)(?=.*feather)(?=.*falling).*$/i,
+		usages : "10 days",
+		recovery : "Never",
+		description : "This Charm grants me the benefits of a Ring of Feather Falling. These benefits last for 10 days, after which the Charm vanishes from me. (See Notes Page)",
+		descriptionFull : "This Charm grants you the benefits of a Ring of Feather Falling. These benefits last for 10 days, after which the Charm vanishes from you.",
+		toNotesPage : [{
+			name : "Charm of Feather Falling",
+			note : "When I fall while having this charm, I descend 60 ft per round and take no damage from falling.",
+		}],
+	},
+	"heroism" : {
+		name: "Charm of Heroism [Supernatural Gift]",
+		usages : 1,
+		recovery : "Never",
+		action : "action",
+		description : "This Charm allows me to give myself the benefit of a Potion of Heroism as a Magic action. Once I do so, the Charm vanishes from me. (See Notes Page)",
+		descriptionFull : "This Charm allows you to give yourself the benefit of a Potion of Heroism as a Magic action. Once you do so, the Charm vanishes from you.",
+		toNotesPage : [{
+			name : "Charm of Heroism",
+			note : "When I activate this charm, I gain 10 Temporary Hit Points that last for 1 hour. For the same duration, I am under the effect of the Bless spell (no Concentration required)",
+		}],	
+	},
+	"restoration" : {
+		name: "Charm of Restoration [Supernatural Gift]",
+		usages : 3,
+		recovery : "Never",
+		spellFirstColTitle : "CH",
+		spellcastingBonus : [{
+			name : "Charm of Restoration",
+			spells : ["lesser restoration"],
+			selection : ["lesser restoration"],
+			times : 1,
+			firstCol : 1,
+		}, {
+			name : "Charm of Restoration",
+			spells : ["greater restoration"],
+			selection : ["greater restoration"],
+			times : 1,
+			firstCol : 2,
+		}],
+		description : "This Charm has 3 charges. I can expend some of its charges to cast one of the following spells: Greater Restoration (2 charges) or Lesser Restoration (1 charge). Once all its charges have been expended, the Charm vanishes from me.",
+		descriptionFull : "This Charm has 3 charges. You can expend some of its charges to cast one of the following spells: Greater Restoration (2 charges) or Lesser Restoration (1 charge). Once all its charges have been expended, the Charm vanishes from you.",
+	},
 	"dragon slayer" : {
 		name : "Charm of the Dragon Slayer [Supernatural Gift]",
+		usages : "9 days",
+		recovery : "Never",
 		description : "One weapon in my possession becomes a Dragon Slayer weapon for the next 9 days. The Charm then vanishes from me, and the weapon returns to normal. (See Notes Page)",
 		descriptionFull : "One weapon in your possession becomes a Dragon Slayer weapon for the next 9 days. The Charm then vanishes from you, and the weapon returns to normal.",
-		toNotesPage : {
+		toNotesPage : [{
 			name : "Charm of the Dragon Slayer",
 			note : "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. The weapon deals an extra 3d6 damage of the weapon’s type if the target is a Dragon.",
-		},
+		}],
 	},
 	"giant slayer" : {
 		name : "Charm of the Giant Slayer [Supernatural Gift]",
+		usages : "9 days",
+		recovery : "Never",
 		description : "One weapon in my possession becomes a Giant Slayer weapon for the next 9 days. The Charm then vanishes from me, and the weapon returns to normal. (See Notes Page)",
 		descriptionFull : "One weapon in your possession becomes a Giant Slayer weapon for the next 9 days. The Charm then vanishes from you, and the weapon returns to normal.",
-		toNotesPage : {
+		toNotesPage : [{
 			name : "Charm of the Giant Slayer",
 			note : "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. When you hit a Giant with this weapon, the Giant takes an extra 2d6 damage of the weapon’s type and must succeed on a DC 15 Strength saving throw or have the Prone condition.",
-		},
+		}],
 	},
-};
-FeatsList["charm of vitality"] = {
-	name: "Charm of Vitality [Supernatural Gift]",
-	source : [["DMG2024", 99]],
-	regExpSearch : /^(?=.*charm)(?=.*vitality).*$/i,
-	usages : 1,
-	recovery : "Never",
-	action : "action",
-	description : "This Charm allows me to give myself the benefit of a Potion of Vitality as a Magic action. Once I do so, the Charm vanishes from me. (See Notes Page)",
-	descriptionFull : "This Charm allows you to give yourself the benefit of a Potion of Vitality as a Magic action. Once you do so, the Charm vanishes from you.",
-	toNotesPage : {
-		name : "Charm of Vitality",
-		note : "When I activate this charm, it removes any Exhaustion levels I have and ends the Poisoned condition on me. For the next 24 hours, I regain the maximum number of Hit Points for any Hit Point Die I spend.",
+	"vitality" : {
+		name: "Charm of Vitality [Supernatural Gift]",
+		usages : 1,
+		recovery : "Never",
+		action : "action",
+		description : "This Charm allows me to give myself the benefit of a Potion of Vitality as a Magic action. Once I do so, the Charm vanishes from me. (See Notes Page)",
+		descriptionFull : "This Charm allows you to give yourself the benefit of a Potion of Vitality as a Magic action. Once you do so, the Charm vanishes from you.",
+		toNotesPage : [{
+			name : "Charm of Vitality",
+			note : "When I activate this charm, it removes any Exhaustion levels I have and ends the Poisoned condition on me. For the next 24 hours, I regain the maximum number of Hit Points for any Hit Point Die I spend.",
+		}],
 	},
 };
 //Magic Items
@@ -6965,7 +6951,7 @@ MagicItemsList["rope of entanglement"] = {
 	description: "As a Magic action while you hold one end of this 30 ft rope and command the other end to cause a creature you can see within 20 ft to make a DC 15 Dex save or be Restrained by the rope. You can release it as a Bonus action or by letting your end of the rope go. The creature can, as an action, escape with a DC 15 Dex(Acrobatics)/Str(Athletics) check. The rope has AC 20, 20 HP, heals 1 HP/5 min.",
 	descriptionFull: "This rope is 30 feet long. While holding one end of the rope, you can take a Magic action to command the other end to dart forward and entangle one creature you can see within 20 feet of yourself. The target must succeed on a DC 15 Dexterity saving throw or have the Restrained condition. You can release the target by letting go of your end of the rope (causing the rope to coil up in the target’s space) or by using a Bonus action to repeat the command (causing the rope to coil up in your hand).\n   A target Restrained by the rope can take an action to make its choice of a DC 15 Strength (Athletics) or Dexterity (Acrobatics) check. On a successful check, the target is no longer Restrained by the rope. If you’re still holding onto the rope when a target escapes from it, you can take a Reaction to command the rope to coil up in your hand; otherwise, the rope coils up in the target’s space.\n   The rope has AC 20, HP 20, and Immunity to Poison and Psychic damage. It regains 1 Hit Point every 5 minutes as long as it has at least 1 Hit Point. If the rope drops to 0 Hit Points, it is destroyed.",
 	weight: 3,
-	action: [["action", " (entangle)"], ["Bonus action", " (release)"]],
+	action: [["action", " (entangle)"], ["bonus action", " (release)"], ["reaction", " (coil)"]],
 	weaponOptions: [{
 		regExpSearch: /^(?=.*rope)(?=.*entanglement).*$/i,
 		name: "Rope of Entanglement",
@@ -6990,7 +6976,7 @@ MagicItemsList["rope of mending"] = {
 	type: "wondrous item",
 	rarity: "common",
 	description: "You can cut this 50-foot coil of rope into any number of smaller pieces, and then use a Magic action to cause the pieces to knit back together. The pieces must be in contact with each other and not otherwise in use. A rope of mending is forever shortened if a section of it is lost.",
-	descriptionFull: "You can cut this 50-foot coil of rope into any number of smaller pieces, and then use a Magic action to cause the pieces to knit back together. The pieces must be in contact with each other and not otherwise in use. A rope of mending is forever shortened if a section of it is lost or destroyed.",
+	descriptionFull: "This 50-foot coil of rope can repair itself when cut into any number of smaller pieces. As a Magic action, you can cause all pieces of the rope that are in contact with each other and not otherwise in use to knit back together. A Rope of Mending is forever shortened if a section of it is lost or destroyed.",
 	action: [["action", ""]],
 	weight: 10
 };
@@ -7001,7 +6987,7 @@ MagicItemsList["ruby of the war mage"] = {
 	type: "wondrous item",
 	rarity: "common",
 	description: "By pressing this 1-inch-diameter ruby etched with eldritch runes to a simple or martial weapon for 10 minutes, it attaches itself to the weapon. You can then use that weapon as a spellcasting focus. Once attached, it can't be removed unless my attunement ends, you detach it as a Magic action, or the weapon is destroyed.",
-	descriptionFull: "Etched with eldritch runes, this 1-inch-diameter ruby allows you to use a simple or martial weapon as a spellcasting focus for your spells. For this property to work, you must attach the ruby to the weapon by pressing the ruby against it for at least 10 minutes. Thereafter, the ruby can't be removed unless you detach it as a Magic action or the weapon is destroyed. The ruby does fall off the weapon if your attunement to the ruby ends.",
+	descriptionFull: "Etched with eldritch runes, this 1-inch-diameter ruby allows you to use a Simple or Martial weapon as a Spellcasting Focus for your spells. For this property to work, you must attach the ruby to the weapon by pressing the ruby against it for at least 10 minutes. Thereafter, the ruby can’t be removed unless you detach it as a Magic action, the weapon is destroyed, or your Attunement to the ruby ends.",
 	attunement: true,
 	prerequisite: "Requires attunement by a spellcaster",
 	prereqeval: function (v) { return v.isSpellcaster; }
@@ -7013,7 +6999,7 @@ MagicItemsList["saddle of the cavalier"] = {
 	rarity: "uncommon",
 	magicItemTable: "?",
 	description: "While you are seated in it and astride a mount, Attack rolls against the mount have Disadvantage and you can't be dismounted against your will, unless you are Incapacitated.",
-	descriptionFull: "This saddle confers the following benefits while you are seated in it and astride a mount.\n" + toUni("Protected Mount") + ". Attack rolls against the mount have Disadvantage.\n" + toUni("Secure Rider") + ". You can't be dismounted against your will. This property is suppressed whil you have the Incapacitated condition.",
+	descriptionFull: "This saddle confers the following benefits while you are seated in it and astride a mount.\n" + toUni("Protected Mount") + ". Attack rolls against the mount have Disadvantage.\n" + toUni("Secure Rider") + ". You can't be dismounted against your will. This property is suppressed while you have the Incapacitated condition.",
 	weight: 25
 };
 MagicItemsList["scarab of protection"] = {
@@ -7023,7 +7009,7 @@ MagicItemsList["scarab of protection"] = {
 	rarity: "legendary",
 	magicItemTable: "?",
 	description: "This beetle-shaped medallion gives you a +1 bonus to AC, Advantage on saving throws against spells. Additionally, if you fail a save against a Necromancy spell or an effect from an Undead, you can take a Reaction to expend 1 charge and succeed on the save instead. The scarab has 12 charges and crumbles into powder when the last is used.",
-	descriptionFull: "This beetle-shaped medallion provides three benefits while it is on your person:\n \u2022 Defense: You gain +1 AC.\n \u2022 Spell Resistance: You have advantage on saving throws against spells.\n \u2022 Preservation: The scarab has 12 charges. If you fail a saving throw against a Necromancy spell or a harmful effect originating from an Undead, you can take a reaction to expend 1 charge and turn the failed save into a successful one. The scarab crumbles into powder and is destroyed when its last charge is expended.",
+	descriptionFull: "This beetle-shaped medallion provides three benefits while it is on your person:\n \u2022 " + toUni("Defense") + ": You gain +1 AC.\n \u2022 " + toUni("Spell Resistance") + ": You have advantage on saving throws against spells.\n \u2022 " +toUni("Preservation") +": The scarab has 12 charges. If you fail a saving throw against a Necromancy spell or a harmful effect originating from an Undead, you can take a reaction to expend 1 charge and turn the failed save into a successful one. The scarab crumbles into powder and is destroyed when its last charge is expended.",
 	attunement: true,
 	savetxt: { adv_vs: ["spells"] },
 	extraAC: [{ mod: 1, magic: true }],
@@ -7073,59 +7059,59 @@ MagicItemsList["scroll of protection"] = {
 	choices: ["Aberrations", "Beasts", "Celestials", "Constructs", "Dragons", "Elementals", "Humanoids", "Fey", "Fiends", "Giants", "Monstrosities", "Oozes", "Plants", "Undead"],
 	"aberrations": {
 		name: "Scroll of Protection from Aberrations",
-		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Aberrations can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends."
+		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Aberrations can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends. As a Magic action, an Aberration within 5 ft of the Emanation can make a DC 15 Cha save to stop being affected."
 	},
 	"beasts": {
 		name: "Scroll of Protection from Beasts",
-		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Beasts can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends."
+		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Beasts can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends. As a Magic action, a Beast within 5 ft of the Emanation can make a DC 15 Cha save to stop being affected."
 	},
 	"celestials": {
 		name: "Scroll of Protection from Celestials",
-		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Celestials can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends."
+		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Celestials can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends. As a Magic action, a Celestial within 5 ft of the Emanation can make a DC 15 Cha save to stop being affected."
 	},
 	"constructs": {
 		name: "Scroll of Protection from Constructs",
-		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Constructs can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends."
+		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Constructs can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends. As a Magic action, a Construct within 5 ft of the Emanation can make a DC 15 Cha save to stop being affected."
 	},
 	"dragons": {
 		name: "Scroll of Protection from Dragons",
-		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Dragons can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends."
+		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Dragons can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends. As a Magic action, a Dragon within 5 ft of the Emanation can make a DC 15 Cha save to stop being affected."
 	},
 	"elementals": {
 		name: "Scroll of Protection from Elementals",
-		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Elementals can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends."
+		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Elementals can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends. As a Magic action, an Elemental within 5 ft of the Emanation can make a DC 15 Cha save to stop being affected."
 	},
 	"humanoids": {
 		name: "Scroll of Protection from Humanoids",
-		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Humanoids can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends."
+		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Humanoids can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends. As a Magic action, a Humanoid within 5 ft of the Emanation can make a DC 15 Cha save to stop being affected."
 	},
 	"fey": {
 		name: "Scroll of Protection from Fey",
-		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Fey can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends."
+		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Fey can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends. As a Magic action, a Fey within 5 ft of the Emanation can make a DC 15 Cha save to stop being affected."
 	},
 	"fiends": {
 		name: "Scroll of Protection from Fiends",
-		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Fiends can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends."
+		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Fiends can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends. As a Magic action, a Fiend within 5 ft of the Emanation can make a DC 15 Cha save to stop being affected."
 	},
 	"giants": {
 		name: "Scroll of Protection from Giants",
-		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Giants can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends."
+		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Giants can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends. As a Magic action, a Giant within 5 ft of the Emanation can make a DC 15 Cha save to stop being affected."
 	},
 	"monstrosities": {
 		name: "Scroll of Protection from Monstrosities",
-		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Monstrosities can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends."
+		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Monstrosities can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends. As a Magic action, a Monstrocity within 5 ft of the Emanation can make a DC 15 Cha save to stop being affected."
 	},
 	"oozes": {
 		name: "Scroll of Protection from Oozes",
-		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Oozes can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends."
+		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Oozes can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends. As a Magic action, an Ooze within 5 ft of the Emanation can make a DC 15 Cha save to stop being affected."
 	},
 	"plants": {
 		name: "Scroll of Protection from Plants",
-		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Plants can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends."
+		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Plants can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends. As a Magic action, a Plant within 5 ft of the Emanation can make a DC 15 Cha save to stop being affected."
 	},
 	"undead": {
 		name: "Scroll of Protection from Undead",
-		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Undead can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends."
+		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Undead can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends. As a Magic action, an Undead within 5 ft of the Emanation can make a DC 15 Cha save to stop being affected."
 	}
 };
 MagicItemsList["scroll of titan summoning"] = {
@@ -7276,7 +7262,7 @@ MagicItemsList["shield of the cavalier"] = {
 	type: "shield",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "While holding this Shield, you have a +2 bonus to AC. This bonus is in addition to the Shield's normal bonus to AC.",
+	description: "While holding this Shield, I have a +2 AC bonus. When I use Attack action, 1 atk can be with it. Once per dawn, as a Reaction when I or ally in 5 ft is targeted by an atk or save, I can make a 5-ft Emanation to stop effect. It's immobile & lasts for 1 min or until I drop conc.",
 	descriptionFull: "While holding this Shield, you have a +2 bonus to AC. This bonus is in addition to the Shields normal bonus to AC. The Shield has additional properties that you can use while holding it." +
 		"\n   " + toUni("Forceful Bash") + ". When you take the Attack action, you can make one of the attack rolls using the Shield against a target within 5 feet of yourself. Apply your Proficiency Bonus and Strength modifier to the attack roll. On a hit, the Shield deals Force damage to the target equal to 2d6 + 2 + your Strength modifier, and if the target is a creature, you can push it up to 10 feet directly away from yourself. If the creature is your size or smaller, you can also knock it down, giving it the Prone condition.'" +
 		"\n   " + toUni("Protective Field") + ". As a Reaction, when you or an ally you can see within 5 feet of you is targeted by an attack or makes a saving throw against an area of effect, you can use the Shield to create an immobile 5-foot Emanation originating from you. When the Emanation appears, any creatures or objects not fully contained within it are pushed into the nearest unoccupied spaces outside it. The attack or area of effect that triggered the Reaction has no effect on creatures and objects inside the Emanation, which lasts as long as you maintain Concentration, up to 1 minute. Nothing can pass into or out of the Emanation. A creature or object inside the Emanation can’t be damaged by attacks or effects originating from outside, nor can a creature inside the Emanation damage anything outside it. Once this property is used, it can’t be used again until the next dawn.",
@@ -7315,7 +7301,7 @@ MagicItemsList["silvered weapon"] = {
 	type: "Weapon (simple or martial weapon)",
 	rarity: "common",
 	magicItemTable: "?",
-	description: "When you score a Critical Hit against a creature that is shape-shifted, you deal one additional die of damage.",
+	description: "When I score a Critical Hit against a creature that is shape-shifted, I deal one additional die of damage.",
 	descriptionFull: "An alchemical process has bonded silver to this magic weapon. When you score a Critical Hit with it against a creature that is shape-shifted, the weapon deals one additional die of damage.",
 	chooseGear: {
 		type: "weapon",
@@ -7341,8 +7327,8 @@ MagicItemsList["slippers of spider climbing"] = {
 	type: "wondrous item",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "While you wear these light shoes, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving my hands free. You have a climbing speed equal to my walking speed. However, the slippers don't allow me to move this way on a slippery surface, such as one covered by ice or oil.",
-	descriptionFull: "While you wear these light shoes, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free. You have a climbing speed equal to your walking speed. However, the slippers don't allow you to move this way on a slippery surface, such as one covered by ice or oil.",
+	description: "While I wear these light shoes, I can move up, down, and across vertical surfaces and along ceilings, while leaving my hands free. I have a Climb Speed equal to your Speed. However, the slippers don’t allow me to move this way on a slippery surface, such as one covered by ice or oil.",
+	descriptionFull: "While you wear these light shoes, you can move up, down, and across vertical surfaces and along ceilings, while leaving your hands free. You have a Climb Speed equal to your Speed. However, the slippers don’t allow you to move this way on a slippery surface, such as one covered by ice or oil.",
 	attunement: true,
 	speed: { climb: { spd: "walk", enc: "walk" } }
 };
@@ -7384,14 +7370,13 @@ MagicItemsList["spellguard shield"] = {
 	attunement: true,
 	weight: 6,
 	shieldAdd: "Spellguard Shield",
-	savetxt: { adv_vs: ["spells", "magical effects"] },
-	vision: ["spell attack rolls Disadvantage against me"]
+	savetxt : { adv_vs : ["spells", "magical effects"], text : ["Spell attack rolls Disadvantage against me"] },
 };
 MagicItemsList["spell scroll"] = {
 	name: "Spell Scroll",
 	source: [["DMG2024", 305]],
 	type: "scroll",
-	description: "If the spell on this scroll is on your spell list, you can cast it without its Material components using its normal casting time. If the spell is of a higher level than you can cast, you can make an ability check using my spellcasting ability (DC = 10 + spell level). The spell level on the scroll determins saving throw DC, attack bonus, and rarity.",
+	description: "If the spell on this scroll is on my spell list, I can cast it without its Material components using its normal casting time. If the spell is of a higher level than I can cast, I can make an ability check using my spellcasting ability (DC = 10 + spell level). The spell level on the scroll determins saving throw DC, attack bonus, and rarity.",
 	descriptionFull: "A Spell Scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your spell list, you can read the scroll and cast its spell without Material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell’s normal casting time. Once the spell is cast, the scroll crumbles to dust. If the casting is interrupted, the scroll isn’t lost.\n   If the spell is on your spell list but of a higher level than you can normally cast, you make an ability check using your spellcasting ability to determine whether you cast the spell. The DC equals 10 plus the spell’s level. On a failed check, the spell disappears from the scroll with no other effect.\n   The level of the spell on the scroll determines the spell’s saving throw DC and attack bonus, as well as the scroll’s rarity, as shown in the following table.\n\n" + toUni("Spell Level\tRarity\t\tSave DC\tAttack Bonus") + [
 		"\nCantrip\tCommon  \t13\t+5",
 		"1  \tCommon  \t13\t+5",
@@ -7429,7 +7414,7 @@ MagicItemsList["spell scroll"] = {
 		sortname: "Spell Scroll  (cantrip)",
 		rarity: "common",
 		magicItemTable: "?",
-		description: "If the cantrip on this scroll is on your spell list, you can cast it, having the scroll crumble to dust afterwards. If you can't cast any cantrips, you need to make a DC 10 check with my spellcasting ability to use this scroll or it is destroyed if you fail. The cantrip is cast with DC 13 and a +5 attack modifier.",
+		description: "If the cantrip on this scroll is on my spell list, I can cast it, having the scroll crumble to dust afterwards. If I can't cast any cantrips, I need to make a DC 10 check with my spellcasting ability to use this scroll or it is destroyed if I fail. The cantrip is cast with DC 13 and a +5 attack modifier.",
 		descriptionFull: "A Spell Scroll bears the words of a single spell, written as a mystical cipher. If the spell is on your spell list, you can read the scroll and cast its spell without providing any Material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.\n   If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC equals 10. On a failed check, the spell disappears from the scroll with no other effect.\n   Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust.\n   A spell cast from this scroll has a save DC of 13 and an attack bonus of +5.",
 		fixedDC: 13,
 		spellFirstColTitle: "Us", // used
@@ -7444,7 +7429,7 @@ MagicItemsList["spell scroll"] = {
 	"1st-level": {
 		rarity: "common",
 		magicItemTable: "?",
-		description: "If the 1st-level spell on this scroll is on your spell list, you can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that you can't yet cast, you need to make a DC 11 check with your spellcasting ability to use this scroll or it is destroyed if you fail. The spell is cast with DC 13 and a +5 attack modifier.",
+		description: "If the 1st-level spell on this scroll is on my spell list, I can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that I can't yet cast, I need to make a DC 11 check with your spellcasting ability to use this scroll or it is destroyed if I fail. The spell is cast with DC 13 and a +5 attack modifier.",
 		descriptionFull: "A spell scroll bears the words of a single spell, written as a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.\n   If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC is 11. On a failed check, the spell disappears from the scroll with no other effect.\n   Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust.\n   A spell cast from this scroll has a save DC of 13 and an attack bonus of +5.\n   A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 11 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.",
 		fixedDC: 13,
 		spellFirstColTitle: "Us", // used
@@ -7459,7 +7444,7 @@ MagicItemsList["spell scroll"] = {
 	"2nd-level": {
 		rarity: "uncommon",
 		magicItemTable: "?",
-		description: "If the 2nd-level spell on this scroll is on your spell list, you can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that you can't yet cast, you need to make a DC 12 check with your spellcasting ability to use this scroll or destroy it if you fail. The spell is cast with DC 13 and a +5 attack modifier.",
+		description: "If the 2nd-level spell on this scroll is on my spell list, I can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that I can't yet cast, I need to make a DC 12 check with your spellcasting ability to use this scroll or it is destroyed if I fail. The spell is cast with DC 13 and a +5 attack modifier.",
 		descriptionFull: "A spell scroll bears the words of a single spell, written as a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.\n   If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC is 12. On a failed check, the spell disappears from the scroll with no other effect.\n   Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust.\n   A spell cast from this scroll has a save DC of 13 and an attack bonus of +5.\n   A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 12 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.",
 		fixedDC: 13,
 		spellFirstColTitle: "Us", // used
@@ -7474,7 +7459,7 @@ MagicItemsList["spell scroll"] = {
 	"3rd-level": {
 		rarity: "uncommon",
 		magicItemTable: "?",
-		description: "If the 3rd-level spell on this scroll is on your spell list, you can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that you can't yet cast, you need to make a DC 13 check with your spellcasting ability to use this scroll or it is destroyed if you fail. The spell is cast with DC 15 and a +7 attack modifier.",
+		description: "If the 3rd-level spell on this scroll is on my spell list, I can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that I can't yet cast, I need to make a DC 13 check with your spellcasting ability to use this scroll or it is destroyed if I fail. The spell is cast with DC 15 and a +7 attack modifier.",
 		descriptionFull: "A spell scroll bears the words of a single spell, written as a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.\n   If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC is 13. On a failed check, the spell disappears from the scroll with no other effect.\n   Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust.\n   A spell cast from this scroll has a save DC of 15 and an attack bonus of +7.\n   A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 13 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.",
 		fixedDC: 15,
 		spellFirstColTitle: "Us", // used
@@ -7489,7 +7474,7 @@ MagicItemsList["spell scroll"] = {
 	"4th-level": {
 		rarity: "rare",
 		magicItemTable: "?",
-		description: "If the 4th-level spell on this scroll is on your spell list, you can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that you can't yet cast, you need to make a DC 14 check with your spellcasting ability to use this scroll or it is destroyed if you fail. The spell is cast with DC 15 and a +7 attack modifier.",
+		description: "If the 4th-level spell on this scroll is on my spell list, I can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that I can't yet cast, I need to make a DC 14 check with your spellcasting ability to use this scroll or it is destroyed if I fail. The spell is cast with DC 15 and a +7 attack modifier.",
 		descriptionFull: "A spell scroll bears the words of a single spell, written as a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.\n   If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC is 14. On a failed check, the spell disappears from the scroll with no other effect.\n   Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust.\n   A spell cast from this scroll has a save DC of 15 and an attack bonus of +7.\n   A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 14 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.",
 		fixedDC: 15,
 		spellFirstColTitle: "Us", // used
@@ -7504,7 +7489,7 @@ MagicItemsList["spell scroll"] = {
 	"5th-level": {
 		rarity: "rare",
 		magicItemTable: "?",
-		description: "If the 5th-level spell on this scroll is on your spell list, you can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that you can't yet cast, you need to make a DC 15 check with your spellcasting ability to use this scroll or it is destroyed if you fail. The spell is cast with DC 17 and a +9 attack modifier.",
+		description: "If the 5th-level spell on this scroll is on my spell list, I can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that I can't yet cast, I need to make a DC 15 check with your spellcasting ability to use this scroll or it is destroyed if I fail. The spell is cast with DC 17 and a +9 attack modifier.",
 		descriptionFull: "A spell scroll bears the words of a single spell, written as a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.\n   If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC is 15. On a failed check, the spell disappears from the scroll with no other effect.\n   Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust.\n   A spell cast from this scroll has a save DC of 17 and an attack bonus of +9.\n   A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 15 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.",
 		fixedDC: 17,
 		spellFirstColTitle: "Us", // used
@@ -7519,7 +7504,7 @@ MagicItemsList["spell scroll"] = {
 	"6th-level": {
 		rarity: "very rare",
 		magicItemTable: "?",
-		description: "If the 6th-level spell on this scroll is on your spell list, you can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that you can't yet cast, you need to make a DC 16 check with your spellcasting ability to use this scroll or it is destroyed if you fail. The spell is cast with DC 17 and a +9 attack modifier.",
+		description: "If the 6th-level spell on this scroll is on my spell list, I can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that I can't yet cast, I need to make a DC 16 check with your spellcasting ability to use this scroll or it is destroyed if I fail. The spell is cast with DC 17 and a +9 attack modifier.",
 		descriptionFull: "A spell scroll bears the words of a single spell, written as a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.\n   If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC is 16. On a failed check, the spell disappears from the scroll with no other effect.\n   Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust.\n   A spell cast from this scroll has a save DC of 17 and an attack bonus of +9.\n   A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 16 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.",
 		fixedDC: 17,
 		spellFirstColTitle: "Us", // used
@@ -7534,7 +7519,7 @@ MagicItemsList["spell scroll"] = {
 	"7th-level": {
 		rarity: "very rare",
 		magicItemTable: "?",
-		description: "If the 7th-level spell on this scroll is on your spell list, you can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that you can't yet cast, you need to make a DC 17 check with your spellcasting ability to use this scroll or it is destroyed if you fail. The spell is cast with DC 18 and a +10 attack modifier.",
+		description: "If the 7th-level spell on this scroll is on my spell list, I can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that I can't yet cast, I need to make a DC 17 check with your spellcasting ability to use this scroll or it is destroyed if I fail. The spell is cast with DC 18 and a +10 attack modifier.",
 		descriptionFull: "A spell scroll bears the words of a single spell, written as a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.\n   If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC is 17. On a failed check, the spell disappears from the scroll with no other effect.\n   Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust.\n   A spell cast from this scroll has a save DC of 18 and an attack bonus of +10.\n   A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 17 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.",
 		fixedDC: 18,
 		spellFirstColTitle: "Us", // used
@@ -7549,7 +7534,7 @@ MagicItemsList["spell scroll"] = {
 	"8th-level": {
 		rarity: "very rare",
 		magicItemTable: ["D", "?"],
-		description: "If the 8th-level spell on this scroll is on your spell list, you can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that you can't yet cast, you need to make a DC 18 check with your spellcasting ability to use this scroll or it is destroyed if you fail. The spell is cast with DC 18 and a +10 attack modifier.",
+		description: "If the 8th-level spell on this scroll is on my spell list, I can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that I can't yet cast, I need to make a DC 18 check with your spellcasting ability to use this scroll or it is destroyed if I fail. The spell is cast with DC 18 and a +10 attack modifier.",
 		descriptionFull: "A spell scroll bears the words of a single spell, written as a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.\n   If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC is 18. On a failed check, the spell disappears from the scroll with no other effect.\n   Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust.\n   A spell cast from this scroll has a save DC of 18 and an attack bonus of +10.\n   A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 18 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.",
 		fixedDC: 18,
 		spellFirstColTitle: "Us", // used
@@ -7564,7 +7549,7 @@ MagicItemsList["spell scroll"] = {
 	"9th-level": {
 		rarity: "legendary",
 		magicItemTable: "?",
-		description: "If the 9th-level spell on this scroll is on your spell list, you can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that you can't yet cast, you need to make a DC 19 check with your spellcasting ability to use this scroll or it is destroyed if you fail. The spell is cast with DC 19 and a +11 attack modifier.",
+		description: "If the 9th-level spell on this scroll is on my spell list, I can cast it, having the scroll crumble to dust afterwards. If the spell is of a level that I can't yet cast, I need to make a DC 19 check with your spellcasting ability to use this scroll or it is destroyed if I fail. The spell is cast with DC 19 and a +11 attack modifier.",
 		descriptionFull: "A spell scroll bears the words of a single spell, written as a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.\n   If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC is 19. On a failed check, the spell disappears from the scroll with no other effect.\n   Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust.\n   A spell cast from this scroll has a save DC of 19 and an attack bonus of +11.\n   A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 19 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.",
 		fixedDC: 19,
 		spellFirstColTitle: "Us", // used
@@ -7577,7 +7562,7 @@ MagicItemsList["spell scroll"] = {
 		}
 	},
 	"mixed levels": {
-		description: "If the spell on this scroll is on your spell list, you can cast it, having the scroll crumble to dust afterwards. If the spell's level is higher than you can cast, you need to make a DC 10 + spell level check with my spellcasting ability, destroying it if you fail. The DC will be listed on the spell sheet's first column (spell attack = DC - 8).",
+		description: "If the spell on this scroll is on my spell list, I can cast it, having the scroll crumble to dust afterwards. If the spell's level is higher than I can cast, I need to make a DC 10 + spell level check with my spellcasting ability, destroying it if I fail. The DC will be listed on the spell sheet's first column (spell attack = DC - 8).",
 		spellFirstColTitle: "DC",
 		spellcastingBonus: {
 			level: [0, 9],
@@ -7603,7 +7588,7 @@ MagicItemsList["sphere of annihilation"] = {
 	type: "wondrous item",
 	rarity: "legendary",
 	magicItemTable: "?",
-	description: "This 2-ft radius black sphere obliterates all matter it comes into contact with, except artifacts. Anything not wholly engulfed by it and destroyed takes 8d10 force damage. If within 60-ft of it, you can control it as a Magic action with a DC 25 Intelligence (Arcana) check, moving it 5 ft \xD7 your Intelligence modifier, or 10 ft towards you if you fail. See notes page for more details.",
+	description: "This 2-ft radius black sphere obliterates all matter it comes into contact with, except artifacts. Anything not wholly engulfed by it and destroyed takes 8d10 force damage. If within 60-ft of it, I can control it as a Magic action with a DC 25 Intelligence (Arcana) check, moving it 5 ft \xD7 my Intelligence modifier, or 10 ft towards me if I fail. See notes page for more details.",
 	descriptionFull: "This 2-foot-diameter black sphere is a hole in the multiverse, hovering in space and stabilized by a magical field surrounding it.\n   The sphere obliterates all matter it passes through and all matter that passes through it. Artifacts are the exception. Unless an artifact is susceptible to damage from a sphere of annihilation, it passes through the sphere unscathed. Anything else that touches the sphere but isn't wholly engulfed and obliterated by it takes 8d10 force damage.\n   The sphere is stationary until someone controls it. If you are within 60 feet of an uncontrolled sphere, you can use a Magic action to make a DC 25 Intelligence (Arcana) check. On a success, the sphere levitates in one direction of your choice, up to a number of feet equal to 5 \xD7 your Intelligence modifier (minimum 5 feet). On a failure, the sphere moves 10 feet toward you. A creature whose space the sphere enters must succeed on a DC 19 Dexterity saving throw or be touched by it, taking 8d10 force damage.\n   If you attempt to control a sphere that is under another creature's control, you make an Intelligence (Arcana) check contested by the other creature's Intelligence (Arcana) check. The winner of the contest gains control of the sphere and can levitate it as normal.\n   If the sphere comes into contact with a planar portal, such as that created by the Gate spell, or an extradimensional space, such as that within a portable hole, the DM determines randomly what happens, using the following table.\n\n" + toUni("d100\tResult") + "\n01-50\tThe sphere is destroyed.\n51-85\tThe sphere moves through the portal or into the extradimensional space.\n86-00\tA spatial rift sends each creature and object within 180 feet of the sphere, including the sphere, to a random plane of existence.",
 	action: [["action", ""]],
 	toNotesPage: [{
@@ -7626,7 +7611,7 @@ MagicItemsList["spirit board"] = {
 	rarity: "very rare",
 	magicItemTable: "?",
 	description: "This board has 3 charges and regains 1 expended charge daily at dawn. While touching the planchette, you can take 1 minute to cast Augury (1 charge) or Commune (3 charges).",
-	descriptionFull: "This board has 3 charges and regains 1 expended charge daily at dawn. While touching the planchette, you can take 1 minute to cast one of the spells on the table below. The table indicates how many charges you must expend to cast the spell. As you cast the spell, you call on the spirits of the dead to guide the planchette across the board’s surface, answering your questions by pointing to the letters or words on the board.\n" +
+	descriptionFull: "This ornate wooden board has the letters of the Common alphabet printed on one side, alongside the words “Yes” and “No” and symbols representing “Weal” and “Woe.” The board comes with a heart-shaped, wooden planchette. This planchette must be resting on the lettered side of the board for the board’s magic to function./n   This board has 3 charges and regains 1 expended charge daily at dawn. While touching the planchette, you can take 1 minute to cast one of the spells on the table below. The table indicates how many charges you must expend to cast the spell. As you cast the spell, you call on the spirits of the dead to guide the planchette across the board’s surface, answering your questions by pointing to the letters or words on the board.\n" +
 					"\t Spell \t Charge\n \t Augury \t 1\n \t Commune \t 3 ",
 	usages: "3",
 	recovery: "dawn",
@@ -9588,7 +9573,7 @@ MagicItemsList["wraps of unarmed power"] = {
 		name: "Wraps of Unarmed Power +1",
 		nameTest: "+1 Wraps of Unarmed Power",
 		rarity: "uncommon",
-		description: "While wearing these wraps, you gain a +1 bonus to the attack and damage rolls of your unarmed strikes. You Unarmed Strikes are considered magical and those strikes can deal your choice of Force or their normal damage.",
+		description: "While wearing these wraps, you gain a +1 bonus to the attack and damage rolls of your unarmed strikes. Your unarmed Strikes are considered magical and those strikes can deal your choice of Force or their normal damage.",
 		calcChanges: {
 			atkAdd: [
 				function (fields, v) {
@@ -9613,7 +9598,7 @@ MagicItemsList["wraps of unarmed power"] = {
 		name: "Wraps of Unarmed Power +2",
 		nameTest: "+2 Wraps of Unarmed Power",
 		rarity: "rare",
-		description: "While wearing these wraps, you gain a +2 bonus to the attack and damage rolls of your unarmed strikes. You Unarmed Strikes are considered magical and those strikes can deal your choice of Force or their normal damage.",
+		description: "While wearing these wraps, you gain a +2 bonus to the attack and damage rolls of your unarmed strikes. Your unarmed Strikes are considered magical and those strikes can deal your choice of Force or their normal damage.",
 		calcChanges: {
 			atkAdd: [
 				function (fields, v) {
@@ -9637,7 +9622,7 @@ MagicItemsList["wraps of unarmed power"] = {
 		name: "Wraps of Unarmed Power +3",
 		nameTest: "+3 Wraps of Unarmed Power",
 		rarity: "very rare",
-		description: "While wearing these wraps, you gain a +3 bonus to the attack and damage rolls of your unarmed strikes. You Unarmed Strikes are considered magical and those strikes can deal your choice of Force or their normal damage.",
+		description: "While wearing these wraps, you gain a +3 bonus to the attack and damage rolls of your unarmed strikes. Your unarmed Strikes are considered magical and those strikes can deal your choice of Force or their normal damage.",
 		calcChanges: {
 			atkAdd: [
 				function (fields, v) {
