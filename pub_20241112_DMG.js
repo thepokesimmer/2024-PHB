@@ -7686,7 +7686,7 @@ MagicItemsList["staff of charming"] = {
 		firstCol: 1,
 		times: 3
 	},
-	action: [["reaction", "reflect enchantment (1 charge)"]],
+	action: [["reaction", " reflect enchantment (1 charge)"]],
 };
 MagicItemsList["staff of fire"] = {
 	name: "Staff of Fire",
@@ -7694,7 +7694,7 @@ MagicItemsList["staff of fire"] = {
 	type: "staff",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "You have resistance to fire while holding this staff. It has 10 charges, regaining 1d6+4 expended charges at dawn. If you use its last charge, roll a d20. On a 1, it is destroyed. You can use its charges to cast Burning Hands (1 charge), Fireball (3 charges), and Wall of Fire (4 charges), using your spellcasting ability.",
+	description: "I have Resistance to Fire damage while holding this staff. It has 10 charges, regaining 1d6+4 expended charges at dawn. If I use its last charge, roll a d20. On a 1, it is destroyed. I can use its charges to cast Burning Hands (1 charge), Fireball (3 charges), and Wall of Fire (4 charges), using my Spellcasting Ability.",
 	descriptionFull: "You have resistance to fire damage while you hold this staff.\n   The staff has 10 charges. While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell: Burning Hands (1 charge), Fireball (3 charges), or Wall of Fire (4 charges).\n   The staff regains 1d6+4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff blackens, crumbles into cinders, and is destroyed.",
 	attunement: true,
 	weight: 4,
@@ -7742,8 +7742,8 @@ MagicItemsList["staff of frost"] = {
 	type: "staff",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "You have Resistance to Cold damage while you hold this staff. It has 10 charges, regaining 1d6+4 at dawn. You can use its charges to cast Cone of Cold (5 charges), Fog Cloud (1 charge), Ice Storm (4 charges), and Wall of Ice (4 charges) using your spellcasting ability.",
-	descriptionFull: "You have Resistance to Cold damage while you hold this staff.\n   The staff has 10 charges. While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell: Cone of Cold (5 charges), Fog Cloud (1 charge), Ice Storm (4 charges), or Wall of Ice (4 charges).\n   The staff regains 1d6+4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1. the staff turns to water and is destroyed.",
+	description: "I have Resistance to Cold damage while I hold this staff. It has 10 charges, regaining 1d6+4 at dawn. I can use its charges to cast Cone of Cold (5 charges), Fog Cloud (1 charge), Ice Storm (4 charges), and Wall of Ice (4 charges) using my Spellcasting Ability.",
+	descriptionFull: "You have Resistance to Cold damage while you hold this staff.\n   The staff has 10 charges. While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell: Cone of Cold (5 charges), Fog Cloud (1 charge), Ice Storm (4 charges), or Wall of Ice (4 charges).\n   The staff regains 1d6+4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff turns to water and is destroyed.",
 	attunement: true,
 	weight: 4,
 	prerequisite: "Requires attunement by a druid, sorcerer, warlock, or wizard",
@@ -7778,7 +7778,7 @@ MagicItemsList["staff of healing"] = {
 	type: "staff",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "This staff has 10 charges, regaining 1d6+4 expended charges at dawn. You can use its charges to cast Cure Wounds (1 charge per spell level, up to 4th), Lesser Restoration (2 charges), and Mass Cure Wounds (5 charges) using your spellcasting ability.",
+	description: "This staff has 10 charges, regaining 1d6+4 expended charges at dawn. I can use its charges to cast Cure Wounds (1 charge per spell level, up to 4th), Lesser Restoration (2 charges), and Mass Cure Wounds (5 charges) using my Spellcasting Ability.",
 	descriptionFull: "This staff has 10 charges. While holding the staff, you can cast one of the spells on the following table from it, using your spellcasting ability modifier. The table indicates how many charges you must expend to cast the spell: Cure Wounds (1 charge per spell level, up to 4th), Lesser Restoration (2 charges), or Mass Cure Wounds (5 charges).\n" +
 		"\n The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff vanishes in a flash of light, lost forever.",
 	attunement: true,
@@ -7809,7 +7809,7 @@ MagicItemsList["staff of healing"] = {
 	spellChanges: {
 		"cure wounds": {
 			noSpellUpcasting: false,
-			description: "1 living creature heals 1d8+1d8/SL+spell mod HP; +1 SL/extra charge",
+			description: "1 living creature heals 2d8+2d8/SL+spell mod HP; +1 SL/extra charge",
 			changes: "The spell level Cure Wounds is cast at depends on the amount of charges spend, 1 charge per spell slot level."
 		}
 	}
@@ -7821,7 +7821,7 @@ MagicItemsList["staff of power"] = {
 	rarity: "very rare",
 	magicItemTable: "?",
 	description: "While holding this quarterstaff, you gain a +2 bonus on saves, AC, and spell attacks. The staff has 20 charges, regaining 2d8+4 at dawn. As a Magic action you can break it, causing a 30-ft Emanation originating from itself. You have a 50 percent to travel to a random plane. If you fail to avoid the effect, you take 16 times the number of remaing charges in the staff in Force damage.",
-	descriptionFull: "This staff has 20 charges and can be wielded as a magic Quarterstaff that grants a +2 bonus to attack rolls and damage rolls made with it. While holding it, you gain a +2 bonus to Armor Class, saving throws, and spell attack rolls.\n " + toUni("Spells") + ". While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell: Cone of Cold (5 charges), Fireball (5th-level version, 5 charges), Globe of Invulnerability (6 charges), Hold Monster (5 charges), Levitate (2 charges). Lightning Bolt (5th-level version, 5 charges), Magic Missile (1 charge), Ray of Enfeeblement (1 charge), or Wall of Force (5 charges).\n   " + toUni("Retributive Strike") + ". You can take a Magic action to break the staff over your knee or against a solid surface. The staff is destroyed and releases its magic in an explosion that fills a 30-foot Emanation originating from itself. You have a 50 percent chance to instantly travel to a random plane of existence, avoiding the explosion. If you fail to avoid the effect, you take Force damage equal to 16 times the number of charges in the staff. Each other creature in the area makes a DC 17 Dexterity saving throw. On a failed save, a creature takes Force damage equal to 4 times the number of charges in the staff. On a successful save, a creature takes half as much damage.",
+	descriptionFull: "This staff has 20 charges and can be wielded as a magic Quarterstaff that grants a +2 bonus to attack rolls and damage rolls made with it. While holding it, you gain a +2 bonus to Armor Class, saving throws, and spell attack rolls.\n " + toUni("Spells") + ". While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell. Cone of Cold (5 charges), Fireball (5th-level version, 5 charges), Globe of Invulnerability (6 charges), Hold Monster (5 charges), Levitate (2 charges). Lightning Bolt (5th-level version, 5 charges), Magic Missile (1 charge), Ray of Enfeeblement (1 charge), or Wall of Force (5 charges).\n   " + toUni("Regaining Charges") + ". The staff regains 2d8 + 4 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 1, the staff retains its +2 bonus to attack rolls and damage rolls but loses all other properties. On a 20, the staff regains 1d8 + 2 charges." + toUni("Retributive Strike") + ". You can take a Magic action to break the staff over your knee or against a solid surface. The staff is destroyed and releases its magic in an explosion that fills a 30-foot Emanation originating from itself. You have a 50 percent chance to instantly travel to a random plane of existence, avoiding the explosion. If you fail to avoid the effect, you take Force damage equal to 16 times the number of charges in the staff. Each other creature in the area makes a DC 17 Dexterity saving throw. On a failed save, a creature takes Force damage equal to 4 times the number of charges in the staff. On a successful save, a creature takes half as much damage.",
 	attunement: true,
 	weight: 4,
 	prerequisite: "Requires attunement by a sorcerer, warlock, or wizard",
@@ -7888,7 +7888,7 @@ MagicItemsList["staff of power"] = {
 		},
 		"lightning bolt": {
 			nameShort: "Lightning Bolt (5th level)",
-			description: "100-ft long 5-ft wide all 10d6 Lightning dmg; save halves; unattended flammable obj ignite",
+			description: "100-ft long 5-ft wide all 10d6 Lightning dmg; save halves",
 			changes: "Cast as if using a 5th-level spell slot."
 		}
 	}
@@ -7899,7 +7899,7 @@ MagicItemsList["staff of striking"] = {
 	type: "staff",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "This staff can be wielded as a magic Quarterstaff that grants a +3 bonus to attack and damage rolls and has 10 charges, regaining 1d6+4 at dawn. When you hit with a melee attack using it, you can expend up to 3 of its charges. For each charge you expend, the target takes an extra 1d6 force damage.",
+	description: "This staff can be wielded as a magic Quarterstaff that grants a +3 bonus to attack and damage rolls and has 10 charges, regaining 1d6+4 at dawn. When I hit with a melee attack using it, I can expend up to 3 of its charges. For each charge you expend, the target takes an extra 1d6 Force damage.",
 	descriptionFull: "This staff can be wielded as a magic Quarterstaff that grants a +3 bonus to attack and damage rolls made with it.\n   The staff has 10 charges. When you hit with a melee attack using it, you can expend up to 3 of its charges. For each charge you expend, the target takes an extra 1d6 force damage. The staff regains 1d6+4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff becomes a nonmagical quarterstaff.",
 	attunement: true,
 	weight: 4,
@@ -7922,8 +7922,8 @@ MagicItemsList["staff of swarming insects"] = {
 	type: "staff",
 	rarity: "rare",
 	magicItemTable: "?",
-	description: "This staff has 10 charges, regaining 1d6+4 at dawn (On a 1, a swarm of insects consumes and destroys the staff, then disperses). While holding the staff, you can take a Magic action to expend 1 charge to create a swarm of flying insects to fill a 30-ft Emanation that originates from you for 10 minutes that moves with me, making the area Heavily Obscured for anybody but you. A 10+ mph wind disperses it.",
-	descriptionFull: "This staff has 10 charges.\n " + toUni("Insect Cloud") + ". While holding the staff, you can use a Magic action and expend 1 charge to cause a swarm of harmless flying insects to spread out in a 30-foot radius from you. The insects remain for 10 minutes, making the area heavily obscured for creatures other than you. The swarm moves with you, remaining centered on you. A wind of at least 10 miles per hour disperses the swarm and ends the effect\n" + toUni("Spells") + ". While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC and spell attack modifier. The table indicates how many charges you must expend to cast the spell: Giant Insect (4 charges) or Insect Plague (5 charges).\n",
+	description: "This staff has 10 charges, regaining 1d6+4 at dawn (On a 1, a swarm of insects consumes and destroys the staff, then disperses). While holding the staff, you can take a Magic action to expend 1 charge to create a swarm of flying insects to fill a 30-ft Emanation that originates from you for 10 minutes that moves with me, making the area Heavily Obscured for anybody but you. A strong wind disperses it.",
+	descriptionFull: "This staff has 10 charges.\n   " + toUni("Insect Cloud") + ". While holding the staff, you can use a Magic action and expend 1 charge to cause a swarm of harmless flying insects to spread out in a 30-foot radius from you. The insects remain for 10 minutes, making the area heavily obscured for creatures other than you. The swarm moves with you, remaining centered on you. A wind of at least 10 miles per hour disperses the swarm and ends the effect\n   " + toUni("Spells") + ". While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC and spell attack modifier. The table indicates how many charges you must expend to cast the spell: Giant Insect (4 charges) or Insect Plague (5 charges).\n   " + toUni("Regaining Charges") + ". The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 1, a swarm of insects consumes and destroys the staff, then disperses.",
 	attunement: true,
 	weight: 4,
 	prerequisite: "Requires attunement by a bard, cleric, druid, sorcerer, warlock, or wizard",
@@ -9573,7 +9573,7 @@ MagicItemsList["wraps of unarmed power"] = {
 		name: "Wraps of Unarmed Power +1",
 		nameTest: "+1 Wraps of Unarmed Power",
 		rarity: "uncommon",
-		description: "While wearing these wraps, you gain a +1 bonus to the attack and damage rolls of your unarmed strikes. Your unarmed Strikes are considered magical and those strikes can deal your choice of Force or their normal damage.",
+		description: "While wearing these wraps, you gain a +1 bonus to the attack and damage rolls of your unarmed strikes. You Unarmed Strikes are considered magical and those strikes can deal your choice of Force or their normal damage.",
 		calcChanges: {
 			atkAdd: [
 				function (fields, v) {
@@ -9598,7 +9598,7 @@ MagicItemsList["wraps of unarmed power"] = {
 		name: "Wraps of Unarmed Power +2",
 		nameTest: "+2 Wraps of Unarmed Power",
 		rarity: "rare",
-		description: "While wearing these wraps, you gain a +2 bonus to the attack and damage rolls of your unarmed strikes. Your unarmed Strikes are considered magical and those strikes can deal your choice of Force or their normal damage.",
+		description: "While wearing these wraps, you gain a +2 bonus to the attack and damage rolls of your unarmed strikes. You Unarmed Strikes are considered magical and those strikes can deal your choice of Force or their normal damage.",
 		calcChanges: {
 			atkAdd: [
 				function (fields, v) {
@@ -9622,7 +9622,7 @@ MagicItemsList["wraps of unarmed power"] = {
 		name: "Wraps of Unarmed Power +3",
 		nameTest: "+3 Wraps of Unarmed Power",
 		rarity: "very rare",
-		description: "While wearing these wraps, you gain a +3 bonus to the attack and damage rolls of your unarmed strikes. Your unarmed Strikes are considered magical and those strikes can deal your choice of Force or their normal damage.",
+		description: "While wearing these wraps, you gain a +3 bonus to the attack and damage rolls of your unarmed strikes. You Unarmed Strikes are considered magical and those strikes can deal your choice of Force or their normal damage.",
 		calcChanges: {
 			atkAdd: [
 				function (fields, v) {
