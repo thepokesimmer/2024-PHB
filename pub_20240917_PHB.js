@@ -1,8 +1,8 @@
 var iFileName = "pub_20240917_PHB.js";
 RequiredSheetVersion("13.2.1");
-SourceList.PHB2024 = {
+SourceList.P24 = {
   name: "2024 Player's Handbook",
-  abbreviation: "PHB2024",
+  abbreviation: "P24",
   abbreviationSpellsheet: "P4",
   group: "Core Sources",
   url: "https://marketplace.dndbeyond.com/core-rules/3709000?pid=DB3709000",
@@ -156,7 +156,7 @@ function legacyRaceRefactor(raceKey, newRace){
 legacyClassRefactor("barbarian", {
 	regExpSearch: /barbarian/i,
 	name: "Barbarian",
-	source: [["PHB2024", 51]],
+	source: [["P24", 51]],
 	primaryAbility: ["Strength"],
 	abilitySave: 1,
 	prereqs: "Strength 13",
@@ -184,7 +184,7 @@ legacyClassRefactor("barbarian", {
 	features: {
 		"rage": {
 		name: "Rage",
-		source: [["PHB2024", 51]],
+		source: [["P24", 51]],
 		minlevel: 1,
 		action: ["bonus action", "Enter Rage"],
 		usages: [2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6],
@@ -209,7 +209,7 @@ legacyClassRefactor("barbarian", {
     },
 		"unarmored defense": {
 			name: "Unarmored Defense",
-			source: [["PHB2024", 51]],
+			source: [["P24", 51]],
 			minlevel: 1,
 			description: desc([
 				"While not wearing armor, my base Armor Class equals 10 + Dex + Con, I can use Shields and still benefit.",
@@ -217,7 +217,7 @@ legacyClassRefactor("barbarian", {
 			armorOptions: [{
 				regExpSearch: /justToAddToDropDownAndEffectWildShape/,
 				name: "Unarmored Defense (Con)",
-				source: [["PHB2024", 51]],
+				source: [["P24", 51]],
 				ac: "10+Con",
 				affectsWildShape: true,
 				selectNow: true
@@ -225,7 +225,7 @@ legacyClassRefactor("barbarian", {
 		},
 		"weapon mastery": {
 			name: "Weapon Mastery",
-			source: [["PHB2024", 52]],
+			source: [["P24", 52]],
 			minlevel: 1,
             description: desc([
 				"I gain mastery with a number of Simple/Martial Melee weapons. Can change 1 every long rest",
@@ -405,7 +405,7 @@ legacyClassRefactor("barbarian", {
 		},
 		"danger sense": {
 		  name: "Danger Sense",
-		  source: [["PHB2024", 52]],
+		  source: [["P24", 52]],
 		  minlevel: 2,
 		  savetxt: {adv_vs: ["Dex saves, when not Incapacitated; "]},
 		  description: desc([
@@ -414,7 +414,7 @@ legacyClassRefactor("barbarian", {
 		},
 		"reckless attack": {
 		  name: "Reckless Attack",
-		  source: [["PHB2024", 52]],
+		  source: [["P24", 52]],
 		  minlevel: 2,
 		  description: desc([
             "When I make my first attack roll on my turn, I can attack recklessly. Until the start of my next turn, I have Advantage on Strength-based attack rolls but attack rolls against me also have Advantage",
@@ -422,7 +422,7 @@ legacyClassRefactor("barbarian", {
 		},
 		"subclassfeature3": {
 		  name: "Barbarian Subclass",
-		  source: [["PHB2024", 52]],
+		  source: [["P24", 52]],
 		  minlevel: 3,
 		  description: desc([
 			"Choose a Barbarian subclass and put it in the 'Class' field.",
@@ -430,7 +430,7 @@ legacyClassRefactor("barbarian", {
 		},
 		"primal knowledge": {
 		  name: "Primal Knowledge",
-		  source: [["PHB2024", 52]],
+		  source: [["P24", 52]],
 		  minlevel: 3,
 		  description: desc([
             "Gain proficiency in one additional skill from the Barbarian level 1 skill list.",
@@ -488,7 +488,7 @@ legacyClassRefactor("barbarian", {
 		},
 		"fast movement": {
 		  name: "Fast Movement",
-		  source: [["PHB2024", 53]],
+		  source: [["P24", 53]],
 		  minlevel: 5,
 		  speed: {allModes: "+10"},
 		  description: desc([
@@ -497,7 +497,7 @@ legacyClassRefactor("barbarian", {
 		},
 		"feral instinct": {
 		  name: "Feral Instinct",
-		  source: [["PHB2024", 53]],
+		  source: [["P24", 53]],
 		  minlevel: 7,
 		  description: desc([
 			"My instincts are so honed that I have Advantage on Initiative rolls.",
@@ -506,7 +506,7 @@ legacyClassRefactor("barbarian", {
 		},
 		"instinctive pounce": {
 		  name: "Instinctive Pounce",
-		  source: [["PHB2024", 53]],
+		  source: [["P24", 53]],
 		  minlevel: 7,
 		  description: desc([
 			"As part of the Bonus Action I take to enter my Rage, I can move up to half my Speed.",
@@ -514,7 +514,7 @@ legacyClassRefactor("barbarian", {
 		},
 		"brutal strike": {
 		  name: "Brutal Strike",
-		  source: [["PHB2024", 53]],
+		  source: [["P24", 53]],
 		  minlevel: 9,
 		  additional: ["", "", "", "", "", "", "", "", "1 Brutal Strike Option, 1d10", "1 Brutal Strike Option, 1d10", "1 Brutal Strike Option, 1d10", "1 Brutal Strike Option, 1d10", "1 Brutal Strike Option, 1d10", "1 Brutal Strike Option, 1d10", "1 Brutal Strike Option, 1d10", "1 Brutal Strike Option, 1d10", "2 Brutal Strike Option, 2d10", "2 Brutal Strike Option, 2d10", "2 Brutal Strike Option, 2d10", "2 Brutal Strike Option, 2d10"],
 		  description: desc([
@@ -542,7 +542,7 @@ legacyClassRefactor("barbarian", {
 		},
 		"relentless rage": {
 		  name: "Relentless Rage",
-		  source: [["PHB2024", 53]],
+		  source: [["P24", 53]],
 		  minlevel: 9,
           description: desc([
             "While Raging, if I drop to 0 HP but not killed outright, make a DC 10 Constitution save. On success, set HP to half my Barbarian level.",
@@ -551,7 +551,7 @@ legacyClassRefactor("barbarian", {
 		},
 		"improved brutal strike": {
 		  name: "Improved Brutal Strike",
-		  source: [["PHB2024", 53]],
+		  source: [["P24", 53]],
 		  minlevel: 13,
           description: desc([
             "Gain 2 new Brutal Strike options. (See Third Page).",
@@ -578,7 +578,7 @@ legacyClassRefactor("barbarian", {
 		},
 		"persistent rage": {
 		  name: "Persistent Rage",
-		  source: [["PHB2024", 53]],
+		  source: [["P24", 53]],
 		  minlevel: 15,
           description: desc([
             "Regain all Rage uses when I roll Initiative, once per Long Rest.",
@@ -587,7 +587,7 @@ legacyClassRefactor("barbarian", {
 		},
 		"indomitable might": {
 		  name: "Indomitable Might",
-		  source: [["PHB2024", 53]],
+		  source: [["P24", 53]],
 		  minlevel: 18,
 		  description: desc([
 			"If my total for a Strength check or Strength saving throw is less than my Strength score, I can use that score in place of the total.",
@@ -595,7 +595,7 @@ legacyClassRefactor("barbarian", {
 		},
 		"epic boon": {
 		  name: "Epic Boon",
-		  source: [["PHB2024", 53]],
+		  source: [["P24", 53]],
 		  minlevel: 19,
 		  description: desc([
 			"I gain an Epic Boon feat, or another feat of my choice for which I qualify.",
@@ -603,7 +603,7 @@ legacyClassRefactor("barbarian", {
 		},
 		"primal champion": {
 		  name: "Primal Champion",
-		  source: [["PHB2024", 53]],
+		  source: [["P24", 53]],
 		  minlevel: 20,
 		  scores: [4, 0, 4, 0, 0, 0],
 		  scoresMaximum: [25, 0, 25, 0, 0, 0],
@@ -616,11 +616,11 @@ legacyClassRefactor("barbarian", {
 legacySubClassRefactor("barbarian", "berserker", {
   regExpSearch: /^(?=.*(barbarian))(?=.*(berserker)).*$/i,
   subname: "Path of the Berserker",
-  source: [["PHB2024", 54]],
+  source: [["P24", 54]],
   features: {
     "subclassfeature3": {
       name: "Frenzy",
-      source: [["PHB2024", 54]],
+      source: [["P24", 54]],
       minlevel: 3,
       additional: ["2d6", "2d6", "2d6", "2d6", "2d6", "2d6", "2d6", "2d6", "3d6", "3d6", "3d6", "3d6", "3d6", "3d6", "3d6", "4d6", "4d6", "4d6", "4d6", "4d6"],
       description: desc([
@@ -629,7 +629,7 @@ legacySubClassRefactor("barbarian", "berserker", {
     },
     "subclassfeature6": {
       name: "Mindless Rage",
-      source: [["PHB2024", 54]],
+      source: [["P24", 54]],
       minlevel: 6,
       savetxt: {immune: ["Charmed while Raging; ", "Frightened while Raging; "]},
       description: desc([
@@ -638,7 +638,7 @@ legacySubClassRefactor("barbarian", "berserker", {
     },
     "subclassfeature10": {
       name: "Retaliation",
-      source: [["PHB2024", 54]],
+      source: [["P24", 54]],
       minlevel: 10,
       action: ["reaction", "Retaliation"],
       description: desc([
@@ -647,7 +647,7 @@ legacySubClassRefactor("barbarian", "berserker", {
     },
     "subclassfeature14": {
       name: "Intimidating Presence",
-      source: [["PHB2024", 54]],
+      source: [["P24", 54]],
       minlevel: 14,
       action: "action",
       usages: 1,
@@ -662,11 +662,11 @@ legacySubClassRefactor("barbarian", "wild heart", {
   regExpSearch: /^(?=.*(barbarian))(?=.*(wild))(?=.*(heart)).*$/i,
   subname: "Path of the Wild Heart",
   replaces: "path of the totem warrior",
-  source: [["PHB2024", 55]],
+  source: [["P24", 55]],
   features: {
     "subclassfeature3": {
       name: "Animal Speaker",
-      source: [["PHB2024", 55]],
+      source: [["P24", 55]],
       minlevel: 3,
       spellcastingAbility: 5,
       spellcastingBonus: [{
@@ -682,7 +682,7 @@ legacySubClassRefactor("barbarian", "wild heart", {
     },
     "subclassfeature3.1": {
       name: "Rage of the Wilds",
-      source: [["PHB2024", 55]],
+      source: [["P24", 55]],
       minlevel: 3,
       description: desc([
         "Choose an animal aspect when I enter a Rage (See Third Page).",
@@ -718,7 +718,7 @@ legacySubClassRefactor("barbarian", "wild heart", {
     },
     "subclassfeature6": {
       name: "Aspect of the Wilds",
-      source: [["PHB2024", 55]],
+      source: [["P24", 55]],
       minlevel: 6,
       choices: ["Owl", "Panther", "Salmon"],
       "owl": {
@@ -748,7 +748,7 @@ legacySubClassRefactor("barbarian", "wild heart", {
     },
     "subclassfeature10": {
       name: "Nature Speaker",
-      source: [["PHB2024", 55]],
+      source: [["P24", 55]],
       minlevel: 10,
       spellcastingBonus: [{
         name: "Nature Speaker",
@@ -763,7 +763,7 @@ legacySubClassRefactor("barbarian", "wild heart", {
     },
     "subclassfeature14": {
       name: "Power of the Wilds",
-      source: [["PHB2024", 55]],
+      source: [["P24", 55]],
       minlevel: 14,
       description: desc([
         "I gain 3 new Rage of the Wild options (See Third Page).",
@@ -802,11 +802,11 @@ legacySubClassRefactor("barbarian", "wild heart", {
 AddSubClass("barbarian", "world tree", {
   regExpSearch: /^(?=.*(barbarian))(?=.*(world))(?=.*(tree)).*$/i,
   subname: "Path of the World Tree",
-  source: [["PHB2024", 56]],
+  source: [["P24", 56]],
   features: {
     "subclassfeature3": {
       name: "Vitality of the Tree",
-      source: [["PHB2024", 56]],
+      source: [["P24", 56]],
       minlevel: 3,
       additional: ["2d6", "2d6", "2d6", "2d6", "2d6", "2d6", "2d6", "2d6", "3d6", "3d6", "3d6", "3d6", "3d6", "3d6", "3d6", "4d6", "4d6", "4d6", "4d6", "4d6"],
       description: desc([
@@ -816,7 +816,7 @@ AddSubClass("barbarian", "world tree", {
     },
     "subclassfeature6": {
       name: "Branches of the Tree",
-      source: [["PHB2024", 54]],
+      source: [["P24", 54]],
       minlevel: 6,
       action: "reaction",
       description: desc([
@@ -825,7 +825,7 @@ AddSubClass("barbarian", "world tree", {
     },
     "subclassfeature10": {
       name: "Battering Roots",
-      source: [["PHB2024", 56]],
+      source: [["P24", 56]],
       minlevel: 10,
       description: desc([
         "Extend reach by 10 feet with Heavy or Versatile weapons. Use Push or Topple mastery properties when hitting with such weapons in addition to a different property."
@@ -833,7 +833,7 @@ AddSubClass("barbarian", "world tree", {
     },
     "subclassfeature14": {
       name: "Travel Along the Tree",
-      source: [["PHB2024", 56]],
+      source: [["P24", 56]],
       minlevel: 14,
       action: "bonus action",
       description: desc([
@@ -846,11 +846,11 @@ legacySubClassRefactor("barbarian", "zealot", {
   regExpSearch: /^(?=.*(barbarian))(?=.*(zealot)).*$/i,
   subname: "Path of the Zealot",
   replaces: "path of the zealot",
-  source: [["PHB2024", 57]],
+  source: [["P24", 57]],
   features: {
     "subclassfeature3": {
       name: "Divine Fury",
-      source: [["PHB2024", 57]],
+      source: [["P24", 57]],
       minlevel: 3,
 	  additional: ["", "", "1d6+1", "1d6+2", "1d6+2", "1d6+3", "1d6+3", "1d6+4", "1d6+4", "1d6+5", "1d6+5", "1d6+6", "1d6+6", "1d6+7", "1d6+7", "1d6+8", "1d6+8", "1d6+9", "1d6+9", "1d6+10"],
       description: desc([
@@ -859,7 +859,7 @@ legacySubClassRefactor("barbarian", "zealot", {
     },
     "subclassfeature3.1": {
       name: "Warrior of the Gods",
-      source: [["PHB2024", 57]],
+      source: [["P24", 57]],
       minlevel: 3,
       action: "Bonus Action",
 	  limfeaname: "Healing Pool: d12",
@@ -871,7 +871,7 @@ legacySubClassRefactor("barbarian", "zealot", {
     },
     "subclassfeature6": {
       name: "Fanatical Focus",
-      source: [["PHB2024", 57]],
+      source: [["P24", 57]],
       minlevel: 6,
       description: desc([
         "Once per Rage, reroll a failed save with a bonus equal to my Rage Damage bonus. I must use new roll"
@@ -879,7 +879,7 @@ legacySubClassRefactor("barbarian", "zealot", {
     },
     "subclassfeature10": {
       name: "Zealous Presence",
-      source: [["PHB2024", 57]],
+      source: [["P24", 57]],
       minlevel: 10,
       action: "bonus action",
       usages: 1,
@@ -890,7 +890,7 @@ legacySubClassRefactor("barbarian", "zealot", {
     },
     "subclassfeature14": {
       name: "Rage of the Gods",
-      source: [["PHB2024", 57]],
+      source: [["P24", 57]],
       minlevel: 14,
       action: ["reaction", "Revivification"],
       usages: 1,
@@ -904,7 +904,7 @@ legacySubClassRefactor("barbarian", "zealot", {
 legacyClassRefactor("bard", {
   regExpSearch: /bard/i,
   name: "Bard",
-  source: [["PHB2024", 59]],
+  source: [["P24", 59]],
   primaryAbility: ["Charisma"],
   abilitySave: 6,
   prereqs: "Charisma 13",
@@ -943,7 +943,7 @@ legacyClassRefactor("bard", {
   features: {
     "bardic inspiration": {
       name: "Bardic Inspiration",
-      source: [["PHB2024", 59]],
+      source: [["P24", 59]],
       minlevel: 1,
       action: "bonus action",
       additional: ["d6", "d6", "d6", "d6", "d8", "d8", "d8", "d8", "d8", "d10", "d10", "d10", "d10", "d10", "d12", "d12", "d12", "d12", "d12", "d12"],
@@ -959,7 +959,7 @@ legacyClassRefactor("bard", {
     },
     "spellcasting": {
       name: "Spellcasting",
-      source: [["PHB2024", 59]],
+      source: [["P24", 59]],
       minlevel: 1,
 	  additional: levels.map(function (n, idx) {
         var cantr = [2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4][idx];
@@ -975,7 +975,7 @@ legacyClassRefactor("bard", {
     "expertise": function () {
       var a = {
         name: "Expertise",
-        source: [["PHB2024", 60]],
+        source: [["P24", 60]],
         minlevel: 2,
 		additional: levels.map(function (n) {
           return n < 2 ? "" : "with " + (n < 9 ? 2 : 4) + " skills";
@@ -1004,7 +1004,7 @@ legacyClassRefactor("bard", {
     }(),
     "jack of all trades": {
       name: "Jack of All Trades",
-      source: [["PHB2024", 60]],
+      source: [["P24", 60]],
       minlevel: 2,
 	  addMod : [ { type : "skill", field : "Init", mod : "-Prof/2", text : "" } ],
       eval: function () {
@@ -1019,7 +1019,7 @@ legacyClassRefactor("bard", {
     },
     "subclassfeature3": {
       name: "Bard Subclass",
-      source: [["PHB2024", 60]],
+      source: [["P24", 60]],
       minlevel: 3,
       description: desc([
         "Choose a Bard subclass and put it in the 'Class' field.",
@@ -1027,7 +1027,7 @@ legacyClassRefactor("bard", {
     },
     "font of inspiration": {
       name: "Font of Inspiration",
-      source: [["PHB2024", 61]],
+      source: [["P24", 61]],
       minlevel: 5,
       description: desc([
         "I regain all uses of Bardic Inspiration (BI) when I finish a Short or Long Rest.",
@@ -1036,7 +1036,7 @@ legacyClassRefactor("bard", {
     },
     "countercharm": {
       name: "Countercharm",
-      source: [["PHB2024", 61]],
+      source: [["P24", 61]],
       minlevel: 7,
       action: "reaction",
       description: desc([
@@ -1045,7 +1045,7 @@ legacyClassRefactor("bard", {
     },
     "magical secrets": {
       name: "Magical Secrets",
-      source: [["PHB2024", 61]],
+      source: [["P24", 61]],
       minlevel: 10,
       spellcastingList: {
         class: ["bard", "cleric", "druid", "wizard"],
@@ -1056,7 +1056,7 @@ legacyClassRefactor("bard", {
     },
     "superior inspiration": {
       name: "Superior Inspiration",
-      source: [["PHB2024", 61]],
+      source: [["P24", 61]],
       minlevel: 18,
       description: desc([
         "When I roll Initiative I regain expended uses of BI until I have two if I have fewer.",
@@ -1064,7 +1064,7 @@ legacyClassRefactor("bard", {
     },
     "epic boon": {
       name: "Epic Boon",
-      source: [["PHB2024", 61]],
+      source: [["P24", 61]],
       minlevel: 19,
       description: desc([
         "I gain an Epic Boon feat, or another feat of my choice for which I qualify.",
@@ -1072,7 +1072,7 @@ legacyClassRefactor("bard", {
     },
     "words of creation": {
       name: "Words of Creation",
-      source: [["PHB2024", 61]],
+      source: [["P24", 61]],
       minlevel: 20,
       spellcastingBonus: [{
         name: "Words of Creation",
@@ -1090,17 +1090,17 @@ legacyClassRefactor("bard", {
 AddSubClass("bard", "dance", {
   regExpSearch: /^(?=.*(bard))(?=.*(dance)).*$/i,
   subname: "College of Dance",
-  source: [["PHB2024", 64]],
+  source: [["P24", 64]],
   replaces: "college of dance",
   features: {
     "subclassfeature3": {
       name: "Dazzling Footwork",
-      source: [["PHB2024", 64]],
+      source: [["P24", 64]],
       minlevel: 3,
       armorOptions: [{
         regExpSearch: /justToAddToDropDownAndEffectWildShape/,
         name: "Unarmored Defense (Cha)",
-        source: [["PHB2024", 64]],
+        source: [["P24", 64]],
         ac: "10+Cha",
         affectsWildShape: true,
         selectNow: true
@@ -1140,7 +1140,7 @@ AddSubClass("bard", "dance", {
     },
     "subclassfeature6": {
       name: "Inspiring Movement",
-      source: [["PHB2024", 64]],
+      source: [["P24", 64]],
       minlevel: 6,
       action: "reaction",
       description: desc([
@@ -1150,7 +1150,7 @@ AddSubClass("bard", "dance", {
     },
     "subclassfeature6.1": {
       name: "Tandem Footwork",
-      source: [["PHB2024", 64]],
+      source: [["P24", 64]],
       minlevel: 6,
       description: desc([
         "If I'm not Incapacitated when I roll Initiative I can roll one BI die. Each ally within 30 ft who can see or hear me adds the BI roll as a bonus to their Initative.",
@@ -1158,7 +1158,7 @@ AddSubClass("bard", "dance", {
     },
     "subclassfeature14": {
       name: "Leading Evasion",
-      source: [["PHB2024", 65]],
+      source: [["P24", 65]],
       minlevel: 14,
       description: desc([
         "Unless Incapacitated, when making a Dex save to take only half damage, myself and allies within 5 ft take no damage on a success & half on a fail.",
@@ -1169,12 +1169,12 @@ AddSubClass("bard", "dance", {
 legacySubClassRefactor("bard", "glamour", {
   regExpSearch: /^(?=.*(bard))(?=.*(glamour)).*$/i,
   subname: "College of Glamour",
-  source: [["PHB2024", 65]],
+  source: [["P24", 65]],
   replaces: "college of glamour",
   features: {
     "subclassfeature3": {
       name: "Beguiling Magic",
-      source: [["PHB2024", 65]],
+      source: [["P24", 65]],
       minlevel: 3,
       usages: 1,
       recovery: "long rest",
@@ -1192,7 +1192,7 @@ legacySubClassRefactor("bard", "glamour", {
     },
     "subclassfeature3.1": {
       name: "Mantle of Inspiration",
-      source: [["PHB2024", 65]],
+      source: [["P24", 65]],
       minlevel: 3,
       action: "bonus action",
       description: desc([
@@ -1201,7 +1201,7 @@ legacySubClassRefactor("bard", "glamour", {
     },
     "subclassfeature6": {
       name: "Mantle of Majesty",
-      source: [["PHB2024", 65]],
+      source: [["P24", 65]],
       minlevel: 6,
       action: "bonus action",
       usages: 1,
@@ -1221,7 +1221,7 @@ legacySubClassRefactor("bard", "glamour", {
     },
     "subclassfeature14": {
       name: "Unbreakable Majesty",
-      source: [["PHB2024", 66]],
+      source: [["P24", 66]],
       minlevel: 14,
       action: "bonus action",
       usages: 1,
@@ -1235,12 +1235,12 @@ legacySubClassRefactor("bard", "glamour", {
 legacySubClassRefactor("bard", "lore", {
   regExpSearch: /^(?=.*(bard))(?=.*(lore)).*$/i,
   subname: "College of Lore",
-  source: [["PHB2024", 66]],
+  source: [["P24", 66]],
   replaces: "college of lore",
   features: {
     "subclassfeature3": {
       name: "Bonus Proficiencies",
-      source: [["PHB2024", 66]],
+      source: [["P24", 66]],
       minlevel: 3,
       skillstxt: "Choose any 3 skills",
       description: desc([
@@ -1249,7 +1249,7 @@ legacySubClassRefactor("bard", "lore", {
     },
     "subclassfeature3.1": {
       name: "Cutting Words",
-      source: [["PHB2024", 66]],
+      source: [["P24", 66]],
       minlevel: 3,
       action: "reaction",
       description: desc([
@@ -1258,7 +1258,7 @@ legacySubClassRefactor("bard", "lore", {
     },
     "subclassfeature6": {
       name: "Magical Discoveries",
-      source: [["PHB2024", 66]],
+      source: [["P24", 66]],
       minlevel: 6,
       spellcastingBonus: [{
         name: "Magical Discoveries",
@@ -1272,7 +1272,7 @@ legacySubClassRefactor("bard", "lore", {
     },
     "subclassfeature14": {
       name: "Peerless Skill",
-      source: [["PHB2024", 67]],
+      source: [["P24", 67]],
       minlevel: 14,
       description: desc([
         "When I fail a check/attack I can roll one BI die & add it. The BI isn't spent on a fail.",
@@ -1283,13 +1283,13 @@ legacySubClassRefactor("bard", "lore", {
 legacySubClassRefactor("bard", "valor", {
   regExpSearch: /^(?=.*(bard))(?=.*(valor)).*$/i,
   subname: "College of Valor",
-  source: [["PHB2024", 67]],
+  source: [["P24", 67]],
   replaces: "college of valor",
   attacks: [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
   features: {
     "subclassfeature3": {
       name: "Combat Inspiration",
-      source: [["PHB2024", 67]],
+      source: [["P24", 67]],
       minlevel: 3,
       description: desc([
         "A creature with a BI die from me can use it for one of the following:",
@@ -1299,7 +1299,7 @@ legacySubClassRefactor("bard", "valor", {
     },
     "subclassfeature3.1": {
       name: "Martial Training",
-      source: [["PHB2024", 67]],
+      source: [["P24", 67]],
       minlevel: 3,
       armorProfs: [false, true, false, true],
       weaponProfs: [false, true],
@@ -1310,7 +1310,7 @@ legacySubClassRefactor("bard", "valor", {
     },
     "subclassfeature6": {
       name: "Extra Attack",
-      source: [["PHB2024", 67]],
+      source: [["P24", 67]],
       minlevel: 6,
       description: desc([
         "I can attack twice instead of once when I Attack on my turn.",
@@ -1319,7 +1319,7 @@ legacySubClassRefactor("bard", "valor", {
     },
     "subclassfeature14": {
       name: "Battle Magic",
-      source: [["PHB2024", 67]],
+      source: [["P24", 67]],
       minlevel: 14,
       action: ["bonus action", "Weapon Attack (After Casing Spell)"],
       description: desc([
@@ -1331,7 +1331,7 @@ legacySubClassRefactor("bard", "valor", {
 legacyClassRefactor("cleric", {
   regExpSearch: /cleric/i,
   name: "Cleric",
-  source: [["PHB2024", 59]],
+  source: [["P24", 59]],
   primaryAbility: ["Wisdom"],
   abilitySave: 5,
   prereqs: "Wisdom 13",
@@ -1367,7 +1367,7 @@ legacyClassRefactor("cleric", {
   features: {
     "spellcasting": {
       name: "Spellcasting",
-      source: [["PHB2024", 69]],
+      source: [["P24", 69]],
       minlevel: 1,
       additional: levels.map(function (n, idx) {
         var cantr = [3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5][idx];
@@ -1392,7 +1392,7 @@ legacyClassRefactor("cleric", {
     },
     "divine order": {
       name: "Divine Order",
-      source: [["PHB2024", 70]],
+      source: [["P24", 70]],
       minlevel: 1,
       choices: ["Protector", "Thaumaturge"],
       "protector": {
@@ -1421,7 +1421,7 @@ legacyClassRefactor("cleric", {
     },
     "channel divinity": {
       name: "Channel Divinity",
-      source: [["PHB2024", 70]],
+      source: [["P24", 70]],
       minlevel: 2,
 	  usages: [0, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4],
 	  recovery: "long rest",
@@ -1434,7 +1434,7 @@ legacyClassRefactor("cleric", {
     },
     "subclassfeature3": {
       name: "Cleric Subclass",
-      source: [["PHB2024", 71]],
+      source: [["P24", 71]],
       minlevel: 3,
       description: desc([
         "Choose a Cleric subclass and put it in the 'Class' field.",
@@ -1442,7 +1442,7 @@ legacyClassRefactor("cleric", {
     },
     "sear undead": {
       name: "Sear Undead",
-      source: [["PHB2024", 71]],
+      source: [["P24", 71]],
       minlevel: 5,
       description: desc([
         "When I use my Channel Divinity: Turn Undead, each Undead that fails its save against that use takes my Wis mod d8s Radiant damage (min 1) without ending the Turn effect.",
@@ -1450,7 +1450,7 @@ legacyClassRefactor("cleric", {
     },
     "blessed strikes": {
       name: "Blessed Strikes",
-      source: [["PHB2024", 71]],
+      source: [["P24", 71]],
       minlevel: 7,
       choices: ["Divine Strike", "Potent Spellcasting"],
       "divine strike": {
@@ -1488,7 +1488,7 @@ legacyClassRefactor("cleric", {
     },
     "divine intervention": {
       name: "Divine Intervention",
-      source: [["PHB2024", 71]],
+      source: [["P24", 71]],
       minlevel: 10,
       usages: 1,
       recovery: "long rest",
@@ -1498,7 +1498,7 @@ legacyClassRefactor("cleric", {
     },
     "improved blessed strikes": {
       name: "Improved Blessed Strikes",
-      source: [["PHB2024", 71]],
+      source: [["P24", 71]],
       minlevel: 14,
       choices: ["Divine Strike", "Potent Spellcasting"],
       "divine strike": {
@@ -1519,7 +1519,7 @@ legacyClassRefactor("cleric", {
     },
     "epic boon": {
       name: "Epic Boon",
-      source: [["PHB2024", 71]],
+      source: [["P24", 71]],
       minlevel: 19,
       description: desc([
         "I gain an Epic Boon feat, or another feat of my choice for which I qualify.",
@@ -1527,7 +1527,7 @@ legacyClassRefactor("cleric", {
     },
     "greater divine intervention": {
       name: "Greater Divine Intervention",
-      source: [["PHB2024", 71]],
+      source: [["P24", 71]],
       minlevel: 20,
       description: desc([
         "When I use Divine Intervention I can choose Wish when I select a spell, but can't use Divine Intervention again until I finish 2d4 Long Rests.",
@@ -1538,13 +1538,13 @@ legacyClassRefactor("cleric", {
 legacySubClassRefactor("cleric", "life", {
   regExpSearch: /^(?=.*(cleric))(?=.*(life)).*$/i,
   subname: "Life Domain",
-  source: [["PHB2024", 73]],
+  source: [["P24", 73]],
   replaces: "life domain",
   spellcastingExtra: ["aid", "bless", "cure wounds", "lesser restoration", "mass healing word", "revivify", "aura of life", "death ward", "greater restoration", "mass cure wounds"],
   features: {
     "subclassfeature3": {
       name: "Disciple of Life",
-      source: [["PHB2024", 73]],
+      source: [["P24", 73]],
       minlevel: 3,
       description: desc([
         "When I cast a spell with a spell slot that gives HP it gives addtl 2 + slot level HP.",
@@ -1552,7 +1552,7 @@ legacySubClassRefactor("cleric", "life", {
     },
     "subclassfeature3.1": {
       name: "Channel Divinity: Preserve Life",
-      source: [["PHB2024", 73]],
+      source: [["P24", 73]],
       minlevel: 3,
       action: "action",
       description: desc([
@@ -1561,7 +1561,7 @@ legacySubClassRefactor("cleric", "life", {
     },
     "subclassfeature6": {
       name: "Blessed Healer",
-      source: [["PHB2024", 74]],
+      source: [["P24", 74]],
       minlevel: 6,
       description: desc([
         "When I restore HP with a spell slot to another creature(s), I regain 2 + slot level HP.",
@@ -1569,7 +1569,7 @@ legacySubClassRefactor("cleric", "life", {
     },
     "subclassfeature17": {
       name: "Supreme Healing",
-      source: [["PHB2024", 74]],
+      source: [["P24", 74]],
       minlevel: 17,
       description: desc([
         "I can heal max HP when I would roll to restore HP with a spell or Channel Divinity.",
@@ -1580,13 +1580,13 @@ legacySubClassRefactor("cleric", "life", {
 legacySubClassRefactor("cleric", "light", {
   regExpSearch: /^(?=.*(cleric))(?=.*(light)).*$/i,
   subname: "Light Domain",
-  source: [["PHB2024", 74]],
+  source: [["P24", 74]],
   replaces: "light domain",
   spellcastingExtra: ["burning hands", "faerie fire", "scorching ray", "see invisibility", "daylight", "fireball", "arcane eye", "wall of fire", "flame strike", "scrying"],
   features: {
     "subclassfeature3": {
       name: "Channel Divinity: Radiance of Dawn",
-      source: [["PHB2024", 74]],
+      source: [["P24", 74]],
       minlevel: 3,
 	  additional: ["", "", "2d10 + 3", "2d10 + 4", "2d10 + 5", "2d10 + 6", "2d10 + 7", "2d10 + 8", "2d10 + 9", "2d10 + 10", "2d10 + 11", "2d10 + 12", "2d10 + 13", "2d10 + 14", "2d10 + 15", "2d10 + 16", "2d10 + 17", "2d10 + 18", "2d10 + 19", "2d10 + 20"],
       description: desc([
@@ -1595,7 +1595,7 @@ legacySubClassRefactor("cleric", "light", {
     },
     "subclassfeature3.1": {
       name: "Warding Flare",
-      source: [["PHB2024", 74]],
+      source: [["P24", 74]],
       minlevel: 3,
       usages: "Wisdom modifier per ",
       usagescalc: "event.value = Math.max(1, What('Wis Mod'));",
@@ -1608,7 +1608,7 @@ legacySubClassRefactor("cleric", "light", {
     },
     "subclassfeature6": {
       name: "Improved Warding Flare",
-      source: [["PHB2024", 75]],
+      source: [["P24", 75]],
       minlevel: 6,
       description: desc([
         "I regain all uses of Warding Flare when I finish a rest. When I use it I can give the target of the attack 2d6 + my Wis mod Temp HP.",
@@ -1616,7 +1616,7 @@ legacySubClassRefactor("cleric", "light", {
     },
     "subclassfeature17": {
       name: "Corona of Light",
-      source: [["PHB2024", 75]],
+      source: [["P24", 75]],
       minlevel: 17,
       usages: "Wisdom modifier per ",
       usagescalc: "event.value = Math.max(1, What('Wis Mod'));",
@@ -1630,13 +1630,13 @@ legacySubClassRefactor("cleric", "light", {
 legacySubClassRefactor("cleric", "trickery", {
   regExpSearch: /^(?=.*(cleric))(?=.*(trickery)).*$/i,
   subname: "Trickery Domain",
-  source: [["PHB2024", 75]],
+  source: [["P24", 75]],
   replaces: "trickery domain",
   spellcastingExtra: ["charm person", "disguise self", "invisibility", "pass without trace", "hypnotic pattern", "nondetection", "confusion", "dimension door", "dominate person", "modify memory"],
   features: {
     "subclassfeature3": {
       name: "Blessing of the Trickster",
-      source: [["PHB2024", 75]],
+      source: [["P24", 75]],
       minlevel: 3,
       action: "action",
       description: desc([
@@ -1645,7 +1645,7 @@ legacySubClassRefactor("cleric", "trickery", {
     },
     "subclassfeature3.1": {
       name: "Channel Divinity: Invoke Duplicity",
-      source: [["PHB2024", 75]],
+      source: [["P24", 75]],
       minlevel: 3,
       action: ["bonus action", "Invoke/Move"],
       description: desc([
@@ -1657,7 +1657,7 @@ legacySubClassRefactor("cleric", "trickery", {
     },
     "subclassfeature6": {
       name: "Trickster's Transposition",
-      source: [["PHB2024", 76]],
+      source: [["P24", 76]],
       minlevel: 6,
       description: desc([
         "When I use a Bonus Action to create or move my double I can swap places with it.",
@@ -1665,7 +1665,7 @@ legacySubClassRefactor("cleric", "trickery", {
     },
     "subclassfeature17": {
       name: "Improved Duplicity",
-      source: [["PHB2024", 76]],
+      source: [["P24", 76]],
       minlevel: 17,
       description: desc([
         "My Invoke Duplicity illusion has grown more powerful:",
@@ -1678,13 +1678,13 @@ legacySubClassRefactor("cleric", "trickery", {
 legacySubClassRefactor("cleric", "war", {
   regExpSearch: /^(?=.*(cleric))(?=.*(war)).*$/i,
   subname: "War Domain",
-  source: [["PHB2024", 76]],
+  source: [["P24", 76]],
   replaces: "war domain",
   spellcastingExtra: ["guiding bolt", "magic weapon", "shield of faith", "spiritual weapon", "crusader's mantle", "spirit guardians", "fire shield", "freedom of movement", "hold monster", "steel wind strike"],
   features: {
     "subclassfeature3": {
       name: "Channel Divinity: Guided Strikes",
-      source: [["PHB2024", 77]],
+      source: [["P24", 77]],
       minlevel: 3,
       action: "reaction",
       description: desc([
@@ -1693,7 +1693,7 @@ legacySubClassRefactor("cleric", "war", {
     },
     "subclassfeature3.1": {
       name: "War Priest",
-      source: [["PHB2024", 77]],
+      source: [["P24", 77]],
       minlevel: 3,
       usages: "Wisdom modifier per ",
       usagescalc: "event.value = Math.max(1, What('Wis Mod'));",
@@ -1705,7 +1705,7 @@ legacySubClassRefactor("cleric", "war", {
     },
     "subclassfeature6": {
       name: "Channel Divinity: War God's Blessing",
-      source: [["PHB2024", 77]],
+      source: [["P24", 77]],
       minlevel: 6,
       description: desc([
         "I can cast Shield of Faith or Spiritual Weapon without a spell slot or Conc; it lasts 1 min, until I cast it again, become Incapacitated, or die.",
@@ -1713,7 +1713,7 @@ legacySubClassRefactor("cleric", "war", {
     },
     "subclassfeature14": {
       name: "Avatar of Battle",
-      source: [["PHB2024", 77]],
+      source: [["P24", 77]],
       minlevel: 14,
       dmgres: ["Bludgeoning", "Piercing", "Slashing"],
       description: desc([
@@ -1725,7 +1725,7 @@ legacySubClassRefactor("cleric", "war", {
 legacyClassRefactor("druid", {
   regExpSearch: /druid/i,
   name: "Druid",
-  source: [["PHB2024", 79]],
+  source: [["P24", 79]],
   primaryAbility: ["Wisdom"],
   abilitySave: 5,
   prereqs: "Wisdom 13",
@@ -1767,7 +1767,7 @@ legacyClassRefactor("druid", {
   features: {
     "spellcasting": {
       name: "Spellcasting",
-      source: [["PHB2024", 79]],
+      source: [["P24", 79]],
       minlevel: 1,
       additional: levels.map(function (n, idx) {
         var cantr = [2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4][idx];
@@ -1792,7 +1792,7 @@ legacyClassRefactor("druid", {
     },
     "druidic": {
       name: "Druidic",
-      source: [["PHB2024", 80]],
+      source: [["P24", 80]],
       minlevel: 1,
       languageProfs: ["Druidic"],
       calcChanges : {
@@ -1812,7 +1812,7 @@ legacyClassRefactor("druid", {
     },
     "primal order": {
       name: "Primal Order",
-      source: [["PHB2024", 80]],
+      source: [["P24", 80]],
       minlevel: 1,
       choices: ["Magician", "Warden"],
       "magician": {
@@ -1841,7 +1841,7 @@ legacyClassRefactor("druid", {
     },
     "wild shape": {
       name: "Wild Shape",
-      source: [["PHB2024", 80]],
+      source: [["P24", 80]],
       minlevel: 2,
       action: ["bonus action", "Wild Shape (Shift/Revert)"],
       usages: [0, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4],
@@ -1861,7 +1861,7 @@ legacyClassRefactor("druid", {
     },
     "wild companion": {
       name: "Wild Companion",
-      source: [["PHB2024", 81]],
+      source: [["P24", 81]],
       minlevel: 2,
       spellcastingBonus: [{
         name: "Wild Companion",
@@ -1892,7 +1892,7 @@ legacyClassRefactor("druid", {
     },
     "subclassfeature3": {
       name: "Druid Subclass",
-      source: [["PHB2024", 81]],
+      source: [["P24", 81]],
       minlevel: 3,
       description: desc([
         "Choose a Druid subclass and put it in the 'Class' field.",
@@ -1900,7 +1900,7 @@ legacyClassRefactor("druid", {
     },
     "wild resurgence": {
       name: "Wild Resurgence",
-      source: [["PHB2024", 81]],
+      source: [["P24", 81]],
       minlevel: 5,
       description: desc([
         "Once per turn, I can regain a Wild Shape use by expending a spell slot. I can also exchange a Wild Shape use for a level 1 spell slot once per long rest.",
@@ -1908,7 +1908,7 @@ legacyClassRefactor("druid", {
     },
     "elemental fury": {
       name: "Elemental Fury",
-      source: [["PHB2024", 81]],
+      source: [["P24", 81]],
       minlevel: 7,
       choices: ["Primal Strike", "Potent Spellcasting"],
       "primal strike": {
@@ -1946,7 +1946,7 @@ legacyClassRefactor("druid", {
     },
     "improved elemental fury": {
       name: "Improved Elemental Fury",
-      source: [["PHB2024", 81]],
+      source: [["P24", 81]],
       minlevel: 15,
       choices: ["Primal Strike", "Potent Spellcasting"],
       "primal strike": {
@@ -1967,7 +1967,7 @@ legacyClassRefactor("druid", {
     },
     "beast spells": {
       name: "Beast Spells",
-      source: [["PHB2024", 81]],
+      source: [["P24", 81]],
       minlevel: 18,
       description: desc([
         "I can cast spells while in Wild Shape, except those with costly/consumed material components",
@@ -1975,7 +1975,7 @@ legacyClassRefactor("druid", {
     },
     "epic boon": {
       name: "Epic Boon",
-      source: [["PHB2024", 81]],
+      source: [["P24", 81]],
       minlevel: 19,
       description: desc([
         "I gain an Epic Boon feat, or another feat of my choice for which I qualify.",
@@ -1983,7 +1983,7 @@ legacyClassRefactor("druid", {
     },
     "archdruid": {
       name: "Archdruid",
-      source: [["PHB2024", 82]],
+      source: [["P24", 82]],
       minlevel: 20,
       usages: 1,
       recovery: "long rest",
@@ -1996,12 +1996,12 @@ legacyClassRefactor("druid", {
 legacySubClassRefactor("druid", "land", {
   regExpSearch: /^(?=.*(druid))(?=.*(land)).*$/i,
   subname: "Circle of the Land",
-  source: [["PHB2024", 84]],
+  source: [["P24", 84]],
   replaces: "circle of the land",
   features: {
     "subclassfeature3": {
       name: "Circle of the Land Spells",
-      source: [["PHB2024", 84]],
+      source: [["P24", 84]],
       minlevel: 3,
       choices: ["Arid Land", "Polar Land", "Temperate Land", "Tropical Land"],
       "arid land": {
@@ -2038,7 +2038,7 @@ legacySubClassRefactor("druid", "land", {
     },
     "subclassfeature3.1": {
       name: "Land's Aid",
-      source: [["PHB2024", 85]],
+      source: [["P24", 85]],
       minlevel: 3,
       action: "action",
 	  additional: ["", "", "", "2d6", "2d6", "2d6", "2d6", "2d6", "2d6", "3d6", "3d6", "3d6", "3d6", "4d6", "4d6", "4d6", "4d6", "4d6", "4d6", "4d6"],
@@ -2048,7 +2048,7 @@ legacySubClassRefactor("druid", "land", {
     },
     "subclassfeature6": {
       name: "Natural Recovery",
-      source: [["PHB2024", 85]],
+      source: [["P24", 85]],
       minlevel: 6,
       usages: 1,
       recovery: "long rest",
@@ -2058,7 +2058,7 @@ legacySubClassRefactor("druid", "land", {
     },
     "subclassfeature10": {
       name: "Nature's Ward",
-      source: [["PHB2024", 85]],
+      source: [["P24", 85]],
       minlevel: 10,
       savetxt: {
         immune: ["Poisoned condition"],
@@ -2098,7 +2098,7 @@ legacySubClassRefactor("druid", "land", {
     },
     "subclassfeature14": {
       name: "Nature's Sanctuary",
-      source: [["PHB2024", 86]],
+      source: [["P24", 86]],
       minlevel: 14,
       action: [["action", "Summon Sanctuary"], ["bonus action", "Move Sanctuary"]],
       description: desc([
@@ -2110,13 +2110,13 @@ legacySubClassRefactor("druid", "land", {
 legacySubClassRefactor("druid", "moon", {
   regExpSearch: /^(?=.*(druid))(?=.*(moon)).*$/i,
   subname: "Circle of the Moon",
-  source: [["PHB2024", 86]],
+  source: [["P24", 86]],
   replaces: "circle of the moon",
   spellcastingExtra: ["cure wounds", "moonbeam", "starry wisp", "conjure animals", "fount of moonlight", "mass cure wounds"],
   features: {
     "subclassfeature3": {
       name: "Circle Forms",
-      source: [["PHB2024", 86]],
+      source: [["P24", 86]],
       minlevel: 3,
 	  additional: ["", "", "CR 1, 9 Temp HP", "CR 1, 12 Temp HP", "CR 1, 15 Temp HP", "CR 2, 18 Temp HP", "CR 2, 21 Temp HP", "CR 2, 24 Temp HP", "CR 3, 27 Temp HP", "CR 3, 30 Temp HP", "CR 3, 33 Temp HP", "CR 4, 36 Temp HP", "CR 4, 39 Temp HP", "CR 4, 42 Temp HP", "CR 5, 45 Temp HP", "CR 5, 48 Temp HP", "CR 5, 51 Temp HP", "CR 6, 54 Temp HP", "CR 6, 57 Temp HP", "CR 6, 60 Temp HP"],
       description: desc([
@@ -2125,7 +2125,7 @@ legacySubClassRefactor("druid", "moon", {
     },
     "subclassfeature6": {
       name: "Improved Circle Forms",
-      source: [["PHB2024", 87]],
+      source: [["P24", 87]],
       minlevel: 6,
       description: desc([
         "In Wild Shape, I can choose to deal Radiant damage with my attacks. I also add my Wisdom modifier to Constitution saving throws.",
@@ -2133,7 +2133,7 @@ legacySubClassRefactor("druid", "moon", {
     },
     "subclassfeature10": {
       name: "Moonlight Step",
-      source: [["PHB2024", 87]],
+      source: [["P24", 87]],
       minlevel: 10,
       usages: "Wisdom modifier per ",
       usagescalc: "event.value = Math.max(1, What('Wis Mod'));",
@@ -2145,7 +2145,7 @@ legacySubClassRefactor("druid", "moon", {
     },
     "subclassfeature14": {
       name: "Lunar Form",
-      source: [["PHB2024", 87]],
+      source: [["P24", 87]],
       minlevel: 14,
       description: desc([
         "Once per turn, I can deal an extra 2d10 Radiant damage with a Wild Shape attack.",
@@ -2157,12 +2157,12 @@ legacySubClassRefactor("druid", "moon", {
 AddSubClass("druid", "sea", {
   regExpSearch: /^(?=.*(druid))(?=.*(sea)).*$/i,
   subname: "Circle of the Sea",
-  source: [["PHB2024", 87]],
+  source: [["P24", 87]],
   spellcastingExtra: ["fog cloud", "gust of wind", "ray of frost", "shatter", "thunderwave", "lightning bolt", "water breathing", "control water", "ice storm", "conjure elemental", "hold monster"],
   features: {
     "subclassfeature3": {
       name: "Wrath of the Sea",
-      source: [["PHB2024", 87]],
+      source: [["P24", 87]],
       minlevel: 3,
       action: "bonus action",
       description: desc([
@@ -2172,7 +2172,7 @@ AddSubClass("druid", "sea", {
     },
     "subclassfeature6": {
       name: "Aquatic Affinity",
-      source: [["PHB2024", 87]],
+      source: [["P24", 87]],
       minlevel: 6,
       speed: {swim: {spd: "walk", enc: "walk"}},
       description: desc([
@@ -2181,7 +2181,7 @@ AddSubClass("druid", "sea", {
     },
     "subclassfeature10": {
       name: "Stormborn",
-      source: [["PHB2024", 87]],
+      source: [["P24", 87]],
       minlevel: 10,
       description: desc([
         "While my ocean spray is active, I gain a Fly Speed equal to my walking Speed and Resistance to Cold, Lightning, and Thunder damage",      
@@ -2189,7 +2189,7 @@ AddSubClass("druid", "sea", {
     },
     "subclassfeature14": {
       name: "Oceanic Gift",
-      source: [["PHB2024", 88]],
+      source: [["P24", 88]],
       minlevel: 14,
       description: desc([
         "I can manifest my ocean spray around another willing creature within 60 feet. By expending two uses of Wild Shape, I can cover both myself and the other creature with the spray.",
@@ -2200,12 +2200,12 @@ AddSubClass("druid", "sea", {
 legacySubClassRefactor("druid", "stars", {
   regExpSearch: /^(?=.*(druid))(?=.*(stars)).*$/i,
   subname: "Circle of Stars",
-  source: [["PHB2024", 88]],
+  source: [["P24", 88]],
   replaces: "circle of the stars",
   features: {
     "subclassfeature3": {
       name: "Star Map",
-      source: [["PHB2024", 88]],
+      source: [["P24", 88]],
       minlevel: 3,
       description: desc([
         "I've created a star map, a Tiny object which i can use as my spellcasting focus.",
@@ -2230,7 +2230,7 @@ legacySubClassRefactor("druid", "stars", {
     },
     "subclassfeature3.1": {
       name: "Starry Form",
-      source: [["PHB2024", 88]],
+      source: [["P24", 88]],
       minlevel: 3,
       description : desc([
         "As a bonus action, I can expend a use of wild shape to take on a starry form for 10 min",
@@ -2241,7 +2241,7 @@ legacySubClassRefactor("druid", "stars", {
       weaponOptions : [{
         regExpSearch : /^(?=.*luminous)(?=.*arrow).*$/i,
         name : "Luminous Arrow",
-        source : [["PHB2024", 89]],
+        source : [["P24", 89]],
         ability : 5,
         type : "Spell",
         damage : [1, 8, "radiant"],
@@ -2255,7 +2255,7 @@ legacySubClassRefactor("druid", "stars", {
       extraname : "Starry Form",
       "archer constellation" : {
         name : "Archer Constellation",
-        source : [["PHB2024", 89]],
+        source : [["P24", 89]],
         description : desc([
           "As a bonus action, I can make a ranged spell attack to hurl a luminous arrow 60 ft"
         ]),
@@ -2266,7 +2266,7 @@ legacySubClassRefactor("druid", "stars", {
       },
       "chalice constellation" : {
         name : "Chalice Constellation",
-        source : [["PHB2024", 89]],
+        source : [["P24", 89]],
         description : desc([
           "When I cast a healing spell with a spell slot, I can heal myself or another within 30 ft of me"
         ]),
@@ -2276,7 +2276,7 @@ legacySubClassRefactor("druid", "stars", {
       },
       "dragon constellation" : {
         name : "Dragon Constellation",
-        source : [["PHB2024", 89]],
+        source : [["P24", 89]],
         description : desc([
           "I can treat a roll below 10 as a 10 for Int/Wis/Con checks and saves to maintain concentration",
           "From 10th-level onwards, I also gain a flying speed of 20 ft and can hover"
@@ -2292,7 +2292,7 @@ legacySubClassRefactor("druid", "stars", {
     },
     "subclassfeature6": {
       name: "Cosmic Omen",
-      source: [["PHB2024", 89]],
+      source: [["P24", 89]],
       minlevel: 6,
       description : desc([
         "When I finish a long rest, I roll a die to gain an omen based on the result (odd/even)",
@@ -2307,7 +2307,7 @@ legacySubClassRefactor("druid", "stars", {
     },
     "subclassfeature10": {
       name: "Twinkling Constellations",
-      source: [["PHB2024", 89]],
+      source: [["P24", 89]],
       minlevel: 10,
       description : desc([
         "While in my starry form, I can change the constellation at the start of each of my turns",
@@ -2327,7 +2327,7 @@ legacySubClassRefactor("druid", "stars", {
     },
     "subclassfeature14": {
       name: "Full of Stars",
-      source: [["PHB2024", 89]],
+      source: [["P24", 89]],
       minlevel: 14,
       description: desc([
         "while in starry form, I gain Resistance to Bludgeoning, Piercing, and Slashing damage.",
@@ -2343,7 +2343,7 @@ legacySubClassRefactor("druid", "stars", {
 legacyClassRefactor("fighter", {
   regExpSearch: /fighter/i,
   name: "Fighter",
-  source: [["PHB2024", 91]],
+  source: [["P24", 91]],
   primaryAbility: "Strength or Dexterity",
   prereqs: "Strength 13 or Dexterity 13",
   improvements: [0, 0, 0, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 6, 6, 6, 7, 7],
@@ -2372,7 +2372,7 @@ legacyClassRefactor("fighter", {
   features: {
     "fighting style": {
       name: "Fighting Style",
-      source: [["PHB2024", 91]],
+      source: [["P24", 91]],
       minlevel: 1,
       description: desc([
         "Choose a Fighting Style Feat using the 'Choose Feature' Button",
@@ -2394,7 +2394,7 @@ legacyClassRefactor("fighter", {
     },
     "second wind": {
       name: "Second Wind",
-      source: [["PHB2024", 91]],
+      source: [["P24", 91]],
       minlevel: 1,
 	  action: "bonus action",
       usages: [2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
@@ -2407,7 +2407,7 @@ legacyClassRefactor("fighter", {
     },
     "weapon mastery": {
       name: "Weapon Mastery",
-      source: [["PHB2024", 91]],
+      source: [["P24", 91]],
       minlevel: 1,
       description: desc([
         "I gain mastery with a number of simple/martial weapons. Can change 1 every long rest",
@@ -2685,7 +2685,7 @@ legacyClassRefactor("fighter", {
     },
     "action surge": {
       name: "Action Surge",
-      source: [["PHB2024", 91]],
+      source: [["P24", 91]],
       minlevel: 2,
       usages: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2],
 	  recovery: "short rest",
@@ -2695,7 +2695,7 @@ legacyClassRefactor("fighter", {
     },
     "tactical mind": {
       name: "Tactical Mind",
-      source: [["PHB2024", 91]],
+      source: [["P24", 91]],
       minlevel: 2,
       description: desc([
         "When I fail an ability check, expend a Second Wind to add 1d10; on fail, not expended",
@@ -2703,7 +2703,7 @@ legacyClassRefactor("fighter", {
     },
     "subclassfeature3": {
       name: "Fighter Subclass",
-      source: [["PHB2024", 92]],
+      source: [["P24", 92]],
       minlevel: 3,
       description: desc([
         "Choose a Fighter subclass and put it in the 'Class' field.",
@@ -2711,7 +2711,7 @@ legacyClassRefactor("fighter", {
     },
     "extra attack": {
       name: "Extra Attack",
-      source: [["PHB2024", 92]],
+      source: [["P24", 92]],
       minlevel: 5,
       description: desc([
         "I can attack twice instead of once whenever I take the Attack Action on my Turn",
@@ -2719,7 +2719,7 @@ legacyClassRefactor("fighter", {
     },
     "tactical shift": {
       name: "Tactical Shift",
-      source: [["PHB2024", 92]],
+      source: [["P24", 92]],
       minlevel: 5,
       description: desc([
         "When using Second Wind, can move half my speed without provoking Opportunity Attacks",
@@ -2727,7 +2727,7 @@ legacyClassRefactor("fighter", {
     },
     "indomitable": {
       name: "Indomitable",
-      source: [["PHB2024", 92]],
+      source: [["P24", 92]],
       minlevel: 9,
       usages: 1,
       recovery: "long rest",
@@ -2737,7 +2737,7 @@ legacyClassRefactor("fighter", {
     },
     "tactical master": {
       name: "Tactical Master",
-      source: [["PHB2024", 92]],
+      source: [["P24", 92]],
       minlevel: 9,
       description: desc([
         "Can replace one weapon master property with Push/Sap/Slow for that attack",
@@ -2745,7 +2745,7 @@ legacyClassRefactor("fighter", {
     },
     "two extra attack": {
       name: "Two Extra Attack",
-      source: [["PHB2024", 92]],
+      source: [["P24", 92]],
       minlevel: 11,
       description: desc([
         "Can attack three times instead of twice whenever I take the Attack action on my turn.",
@@ -2753,7 +2753,7 @@ legacyClassRefactor("fighter", {
     },
     "studied attacks": {
       name: "Studied Attacks",
-      source: [["PHB2024", 92]],
+      source: [["P24", 92]],
       minlevel: 13,
       description: desc([
         "On attack roll miss, gain adv. on next attack against same creature till end my next turn",
@@ -2761,7 +2761,7 @@ legacyClassRefactor("fighter", {
     },
     "epic boon": {
       name: "Epic Boon",
-      source: [["PHB2024", 92]],
+      source: [["P24", 92]],
       minlevel: 19,
       description: desc([
         "I gain an Epic Boon feat, or another feat of my choice for which I qualify.",
@@ -2769,7 +2769,7 @@ legacyClassRefactor("fighter", {
     },
     "three extra attacks": {
       name: "Three Extra Attacks",
-      source: [["PHB2024", 92]],
+      source: [["P24", 92]],
       minlevel: 20,
       description: desc([
         "I can attack four times instead of three whenever I take the Attack action on my turn.",
@@ -2780,11 +2780,11 @@ legacyClassRefactor("fighter", {
 legacySubClassRefactor("fighter", "battle master", {
   regExpSearch: /^(?=.*(fighter))(?=.*(battle))(?=.*(master)).*$/i,
   subname: "Battle Master",
-  source: [["PHB2024", 93]],
+  source: [["P24", 93]],
   features: {
     "subclassfeature3": {
       name: "Combat Superiority",
-      source: [["PHB2024", 93]],
+      source: [["P24", 93]],
       minlevel: 3,
       additional: ["", "", "d8", "d8", "d8", "d8", "d8", "d8", "d8", "d10", "d10", "d10", "d10", "d10", "d10", "d10", "d10", "d12", "d12", "d12"],
       usages: [0, 0, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6],
@@ -2920,7 +2920,7 @@ legacySubClassRefactor("fighter", "battle master", {
     },
     "subclassfeature3.1": {
       name: "Student of War",
-      source: [["PHB2024", 94]],
+      source: [["P24", 94]],
       minlevel: 3,
       toolProfs: [["Artisan's Tools", 1]],
       skillstxt: [["I gain 1 additional Fighter skill of choice."]],
@@ -2930,7 +2930,7 @@ legacySubClassRefactor("fighter", "battle master", {
     },
     "subclassfeature7": {
       name: "Know my Enemy",
-      source: [["PHB2024", 94]],
+      source: [["P24", 94]],
       minlevel: 7,
       description: desc([
         "As a Bonus Action, observe any Immunities/Resistances/Vulnerabilities of a creature within",
@@ -2939,7 +2939,7 @@ legacySubClassRefactor("fighter", "battle master", {
     },
     "subclassfeature15": {
       name: "Relentless",
-      source: [["PHB2024", 94]],
+      source: [["P24", 94]],
       minlevel: 15,
       description: desc([
         "When I use a maneuver, I can roll 1d8 once per turn instead of spending a SD",
@@ -2950,11 +2950,11 @@ legacySubClassRefactor("fighter", "battle master", {
 legacySubClassRefactor("fighter", "champion", {
   regExpSearch: /^(?=.*(fighter))(?=.*(champion)).*$/i,
   subname: "Champion",
-  source: [["PHB2024", 96]],
+  source: [["P24", 96]],
   features: {
     "subclassfeature3": {
       name: "Improved Critical",
-      source: [["PHB2024", 96]],
+      source: [["P24", 96]],
       minlevel: 3,
       calcChanges: {
         atkAdd: [
@@ -2974,7 +2974,7 @@ legacySubClassRefactor("fighter", "champion", {
     },
     "subclassfeature3.1": {
       name: "Remarkable Athlete",
-      source: [["PHB2024", 96]],
+      source: [["P24", 96]],
       minlevel: 3,
       description: desc([
         "I have Advantage on Initiative and Strength(Athletics) checks",
@@ -2983,7 +2983,7 @@ legacySubClassRefactor("fighter", "champion", {
     },
     "subclassfeature7": {
       name: "Additional Fighting Style",
-      source: [["PHB2024", 96]],
+      source: [["P24", 96]],
       minlevel: 7,
       eval: function () {
         AddString('Feat Note 1', 'Champion Fighting Style feat', '; ');
@@ -2997,7 +2997,7 @@ legacySubClassRefactor("fighter", "champion", {
     },
     "subclassfeature10": {
       name: "Heroic Warrior",
-      source: [["PHB2024", 96]],
+      source: [["P24", 96]],
       minlevel: 10,
       description: desc([
         "I gain Heroic Inspiration in combat when I start a turn without it",
@@ -3005,7 +3005,7 @@ legacySubClassRefactor("fighter", "champion", {
     },
     "subclassfeature15": {
       name: "Superior Critical",
-      source: [["PHB2024", 96]],
+      source: [["P24", 96]],
       minlevel: 15,
       calcChanges: {
         atkAdd: [
@@ -3029,7 +3029,7 @@ legacySubClassRefactor("fighter", "champion", {
     },
     "subclassfeature18": {
       name: "Survivor",
-      source: [["PHB2024", 96]],
+      source: [["P24", 96]],
       minlevel: 18,
       description: desc([
         "I roll with Advantage on Death Saves and 18-19 counts as a critical success",
@@ -3041,7 +3041,7 @@ legacySubClassRefactor("fighter", "champion", {
 legacySubClassRefactor("fighter", "eldritch knight", {
   regExpSearch: /^(?=.*(fighter))(?=.*(eldritch))(?=.*(knight)).*$/i,
   subname: "Eldritch Knight",
-  source: [["PHB2024", 96]],
+  source: [["P24", 96]],
   spellcastingFactor: 3,
   spellcastingAbility: 4,
   spellcastingList: {
@@ -3056,7 +3056,7 @@ legacySubClassRefactor("fighter", "eldritch knight", {
   features: {
     "subclassfeature3": {
       name: "Spellcasting",
-      source: [["PHB2024", 97]],
+      source: [["P24", 97]],
       minlevel: 3,
       additional: levels.map(function (n, idx) {
         var cantr = [0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3][idx];
@@ -3070,7 +3070,7 @@ legacySubClassRefactor("fighter", "eldritch knight", {
     },
     "subclassfeature3.1": {
       name: "War Bond",
-      source: [["PHB2024", 98]],
+      source: [["P24", 98]],
       minlevel: 3,
       action: ["bonus action", "Summon Bonded Weapon"],
       description: desc([
@@ -3080,7 +3080,7 @@ legacySubClassRefactor("fighter", "eldritch knight", {
     },
     "subclassfeature7": {
       name: "War Magic",
-      source: [["PHB2024", 98]],
+      source: [["P24", 98]],
       minlevel: 7,
       description: desc([
         "When I use my Attack action, I can replace an attack with a Wizard cantrip of 1 action",
@@ -3088,7 +3088,7 @@ legacySubClassRefactor("fighter", "eldritch knight", {
     },
     "subclassfeature10": {
       name: "Eldritch Strike",
-      source: [["PHB2024", 98]],
+      source: [["P24", 98]],
       minlevel: 10,
       description: desc([
         "On a weapon hit, the creature has disadv. on my spell save until the end of my next turn",
@@ -3096,7 +3096,7 @@ legacySubClassRefactor("fighter", "eldritch knight", {
     },
     "subclassfeature15": {
       name: "Arcane Charge",
-      source: [["PHB2024", 98]],
+      source: [["P24", 98]],
       minlevel: 15,
       description: desc([
         "When I use Action Surge, I can also teleport up to 30ft to an unoccupied space I see",
@@ -3105,7 +3105,7 @@ legacySubClassRefactor("fighter", "eldritch knight", {
     },
     "subclassfeature18": {
       name: "Improved War Magic",
-      source: [["PHB2024", 98]],
+      source: [["P24", 98]],
       minlevel: 18,
       description: desc([
         "When I use my Attack action on my turn, I can replace two of my attacks with a",
@@ -3117,11 +3117,11 @@ legacySubClassRefactor("fighter", "eldritch knight", {
 legacySubClassRefactor("fighter", "psi warrior", {
   regExpSearch: /^(?=.*(fighter))(?=.*(psi))(?=.*(warrior)).*$/i,
   subname: "Psi Warrior",
-  source: [["PHB2024", 98]],
+  source: [["P24", 98]],
   features: {
     "subclassfeature3": {
       name: "Psionic Power",
-      source: [["PHB2024", 98]],
+      source: [["P24", 98]],
       minlevel: 3,
       action: [["reaction", "Protective Field"], ["action", "Telekinetic Movement"]],
       limfeaname: "Telekinetic Movement",
@@ -3142,7 +3142,7 @@ legacySubClassRefactor("fighter", "psi warrior", {
     },
     "subclassfeature7": {
       name: "Telekinetic Adept",
-      source: [["PHB2024", 99]],
+      source: [["P24", 99]],
       minlevel: 7,
       limfeaname: "Psi-Powered Leap",
       usages: 1,
@@ -3156,7 +3156,7 @@ legacySubClassRefactor("fighter", "psi warrior", {
     },
     "subclassfeature10": {
       name: "Guarded Mind",
-      source: [["PHB2024", 99]],
+      source: [["P24", 99]],
       minlevel: 10,
       dmgres: ["Psychic"],
       description: desc([
@@ -3166,7 +3166,7 @@ legacySubClassRefactor("fighter", "psi warrior", {
     },
     "subclassfeature15": {
       name: "Bulwark of Force",
-      source: [["PHB2024", 99]],
+      source: [["P24", 99]],
       minlevel: 15,
       action: "bonus action",
       usages: 1,
@@ -3179,7 +3179,7 @@ legacySubClassRefactor("fighter", "psi warrior", {
     },
     "subclassfeature18": {
       name: "Telekinetic Master",
-      source: [["PHB2024", 99]],
+      source: [["P24", 99]],
       minlevel: 18,
       usages: 1,
       recovery: "long rest",
@@ -3201,7 +3201,7 @@ legacySubClassRefactor("fighter", "psi warrior", {
 legacyClassRefactor("monk", {
   regExpSearch: /monk/i,
   name: "Monk",
-  source: [["PHB2024", 101]],
+  source: [["P24", 101]],
   primaryAbility: "Dexterity and Wisdom",
   prereqs: "Strength 13 or Dexterity 13",
   abilitySave: 5,
@@ -3231,7 +3231,7 @@ legacyClassRefactor("monk", {
   features: {
     "martial arts": {
       name: "Martial Arts",
-      source: [["PHB2024", 101]],
+      source: [["P24", 101]],
       minlevel: 1,
       action: [["bonus action", "Unarmed Strike"]],
       additional: levels.map(function (n) {
@@ -3277,12 +3277,12 @@ legacyClassRefactor("monk", {
     },
     "unarmored defense": {
       name: "Unarmored Defense",
-      source: [["PHB2024", 101]],
+      source: [["P24", 101]],
       minlevel: 1,
       armorOptions: [{
         regExpSearch: /justToAddToDropDownAndEffectWildShape/,
         name: "Unarmored Defense (Wis)",
-        source: [["PHB2024", 101]],
+        source: [["P24", 101]],
         ac: "10+Wis",
         affectsWildShape: true,
         selectNow: true
@@ -3293,7 +3293,7 @@ legacyClassRefactor("monk", {
     },
     "monk's focus": {
       name: "Monk's Focus",
-      source: [["PHB2024", 101]],
+      source: [["P24", 101]],
       minlevel: 2,
       limfeaname: "Focus Points",
       usages: levels.map(function (n) {
@@ -3371,7 +3371,7 @@ legacyClassRefactor("monk", {
     },
     "unarmored movement": {
       name: "Unarmored Movement",
-      source: [["PHB2024", 102]],
+      source: [["P24", 102]],
       minlevel: 2,
       additional: levels.map(function (n) {
         if (n < 2) return "";
@@ -3389,7 +3389,7 @@ legacyClassRefactor("monk", {
     },
     "uncanny metabolism": {
       name: "Uncanny Metabolism",
-      source: [["PHB2024", 102]],
+      source: [["P24", 102]],
       minlevel: 2,
       usages: 1,
       recovery: "long rest",
@@ -3399,7 +3399,7 @@ legacyClassRefactor("monk", {
     },
     "deflect attacks": {
 		name: "Deflect Attacks",
-		source: [["PHB2024", 102]],
+		source: [["P24", 102]],
 		minlevel: 3,
 		description: desc([
         "As a reaction, I can reduce Bludg., Pierc., or Slash. dmg done to me",
@@ -3413,7 +3413,7 @@ legacyClassRefactor("monk", {
 	},
     "subclassfeature3": {
       name: "Monk Subclass",
-      source: [["PHB2024", 103]],
+      source: [["P24", 103]],
       minlevel: 3,
       description: desc([
 		"Choose a Monk subclass and put it in the 'Class' field.",
@@ -3421,7 +3421,7 @@ legacyClassRefactor("monk", {
     },
     "slow fall": {
       name: "Slow Fall",
-      source: [["PHB2024", 103]],
+      source: [["P24", 103]],
       minlevel: 4,
       additional: levels.map(function (n) {
         return n < 4 ? "" : (n * 5) + " less falling damage";
@@ -3433,7 +3433,7 @@ legacyClassRefactor("monk", {
 	  "stunning strike" : {
 		name : "Stunning Strike",
 		extraname : "Monk 5",
-		source : [["PHB2024", 103]],
+		source : [["P24", 103]],
 			description : " [1 focus point]" + desc([
 			"Once per turn, after I hit a creature, 1 Focus Point for a Stunning Strike.",
 			"Con save or it's Stunned until my next turn starts.",
@@ -3447,7 +3447,7 @@ legacyClassRefactor("monk", {
     },
     "empowered strikes": {
       name: "Empowered Strikes",
-      source: [["PHB2024", 103]],
+      source: [["P24", 103]],
       minlevel: 6,
       description: desc([
         "My Unarmed Strikes can deal Force damage or their normal damage type.",
@@ -3455,14 +3455,14 @@ legacyClassRefactor("monk", {
     },
     "evasion": {
       name: "Evasion",
-      source: [["PHB2024", 103]],
+      source: [["P24", 103]],
       minlevel: 7,
       description : desc("My Dex saves vs. areas of effect negate damage on success and halve it on failure, while not Incapacitated"),
 	savetxt : { text : ["Dex save vs. area effects: fail \u2015 half dmg, success \u2015 no dmg"] }
     },
     "acrobatic movement": {
       name: "Acrobatic Movement",
-      source: [["PHB2024", 103]],
+      source: [["P24", 103]],
       minlevel: 9,
       description: desc([
         "I can move on vertical surfaces and across liquids without falling during my turn",
@@ -3470,7 +3470,7 @@ legacyClassRefactor("monk", {
     },
 	"heightened focus": {
 		name: "Heightened Focus",
-      source: [["PHB2024", 103]],
+      source: [["P24", 103]],
       minlevel: 10,
       description: desc([
         "My Monk's Focus Features have Improved, (see third page).",
@@ -3478,7 +3478,7 @@ legacyClassRefactor("monk", {
     },
     "self-restoration": {
 		name: "Self-Restoration",
-		source: [["PHB2024", 103]],
+		source: [["P24", 103]],
 		minlevel: 10,
 		description: desc([
 			"At the end of each of my turns, I can remove the Charmed, Frightened, or Poisoned condition.",
@@ -3487,7 +3487,7 @@ legacyClassRefactor("monk", {
     },
     "deflect energy": {
       name: "Deflect Energy",
-      source: [["PHB2024", 103]],
+      source: [["P24", 103]],
       minlevel: 13,
       description: desc([
         "Deflect Attacks works against any damage type.",
@@ -3495,7 +3495,7 @@ legacyClassRefactor("monk", {
     },
     "disciplined survivor": {
     name: "Disciplined Survivor",
-    source: [["PHB2024", 103]],
+    source: [["P24", 103]],
     minlevel: 14,
     description : desc("I am proficient with all saves; I can reroll a failed save once by spending 1 FP, must use new roll"),
 	additional : "1 FP to reroll failed saving throw",
@@ -3503,7 +3503,7 @@ legacyClassRefactor("monk", {
     },
     "perfect focus": {
       name: "Perfect Focus",
-      source: [["PHB2024", 103]],
+      source: [["P24", 103]],
       minlevel: 15,
       description: desc([
         "If I roll Initiative and I have less than 4 FP, I regain up to 4 FP.",
@@ -3511,7 +3511,7 @@ legacyClassRefactor("monk", {
     },
     "superior defense": {
       name: "Superior Defense",
-      source: [["PHB2024", 103]],
+      source: [["P24", 103]],
       minlevel: 18,
       description: desc([
         "At the start of my turn, 3 FP to resist non-Force damage for 1 minute, unless Incapacitated.",
@@ -3519,7 +3519,7 @@ legacyClassRefactor("monk", {
     },
     "epic boon": {
       name: "Epic Boon",
-      source: [["PHB2024", 103]],
+      source: [["P24", 103]],
       minlevel: 19,
       description: desc([
         "I gain an Epic Boon feat, or another feat of my choice for which I qualify.",
@@ -3527,7 +3527,7 @@ legacyClassRefactor("monk", {
     },
     "body and mind": {
       name: "Body and Mind",
-      source: [["PHB2024", 103]],
+      source: [["P24", 103]],
       minlevel: 20,
       scores: [0, 4, 0, 0, 4, 0],
       scoresMaximum: [0, 25, 0, 0, 25, 0],
@@ -3540,12 +3540,12 @@ legacyClassRefactor("monk", {
 legacySubClassRefactor("monk", "mercy", {
   regExpSearch: /^(?=.*(monk))(?=.*(mercy)).*$/i,
   subname: "Warrior of Mercy",
-  source: [["PHB2024", 104]],
+  source: [["P24", 104]],
   replaces: "way of mercy",
   features: {
     "subclassfeature3": {
       name: "Hand of Harm",
-      source: [["PHB2024", 104]],
+      source: [["P24", 104]],
       minlevel: 3,
       description: desc([
         "1/turn when I hit a crea. with an Unarmed Strike and deal dmg",
@@ -3554,7 +3554,7 @@ legacySubClassRefactor("monk", "mercy", {
     },
     "subclassfeature3.1": {
       name: "Hand of Healing",
-      source: [["PHB2024", 104]],
+      source: [["P24", 104]],
       minlevel: 3,
       action: "action",
       description: desc([
@@ -3564,7 +3564,7 @@ legacySubClassRefactor("monk", "mercy", {
     },
     "subclassfeature3.2": {
       name: "Implements of Mercy",
-      source: [["PHB2024", 104]],
+      source: [["P24", 104]],
       minlevel: 3,
       skills: ["Insight", "Medicine"],
       toolProfs: [["Herbalism Kit"]],
@@ -3574,7 +3574,7 @@ legacySubClassRefactor("monk", "mercy", {
     },
     "subclassfeature6": {
 		name: "Physician's Touch",
-		source: [["PHB2024", 104]],
+		source: [["P24", 104]],
 		minlevel: 6,
 		description : desc([
 			"Hand of Healing also ends 1 condition blinded, deafened, paralyzed, poisoned or stunned",
@@ -3583,7 +3583,7 @@ legacySubClassRefactor("monk", "mercy", {
     },
     "subclassfeature11": {
       name: "Flurry of Healing and Harm",
-      source: [["PHB2024", 104]],
+      source: [["P24", 104]],
       minlevel: 11,
       usages: "Wisdom modifier per ",
       usagescalc: "event.value = Math.max(1, What('Wis Mod'));",
@@ -3617,18 +3617,18 @@ legacySubClassRefactor("monk", "mercy", {
 legacySubClassRefactor("monk", "shadow", {
   regExpSearch: /^(?=.*(monk))(?=.*(shadow)).*$/i,
   subname: "Warrior of Shadow",
-  source: [["PHB2024", 105]],
+  source: [["P24", 105]],
   replaces: "way of shadow",
   spellcastingAbility: 5,
   features: {
     "subclassfeature3": {
       name: "Shadow Arts",
-      source: [["PHB2024", 105]],
+      source: [["P24", 105]],
       minlevel: 3,
       "darkness": {
         name: "Darkness",
         extraname: "Shadow Arts",
-        source: [["PHB2024", 105]],
+        source: [["P24", 105]],
         spellcastingBonus: [{
           name: "Shadow Arts",
           spells: ["darkness"],
@@ -3661,7 +3661,7 @@ legacySubClassRefactor("monk", "shadow", {
     },
     "subclassfeature6": {
       name: "Shadow Step",
-      source: [["PHB2024", 105]],
+      source: [["P24", 105]],
       minlevel: 6,
       action: "bonus action",
       description: desc([
@@ -3670,7 +3670,7 @@ legacySubClassRefactor("monk", "shadow", {
     },
     "subclassfeature11": {
       name: "Improved Shadow Step",
-      source: [["PHB2024", 105]],
+      source: [["P24", 105]],
       minlevel: 11,
       description: desc([
         "1 Focus Point, I can use Shadow Step to teleport without needing to start and end in Dim Light or Darkness. I can also make an Unarmed Strike immediately after teleporting.",
@@ -3678,7 +3678,7 @@ legacySubClassRefactor("monk", "shadow", {
     },
     "subclassfeature17": {
       name: "Cloak of Shadows",
-      source: [["PHB2024", 105]],
+      source: [["P24", 105]],
       minlevel: 17,
       action: "action",
       description: desc([
@@ -3695,13 +3695,13 @@ legacySubClassRefactor("monk", "shadow", {
 legacySubClassRefactor("monk", "elements", {
   regExpSearch: /^(?=.*(monk))(?=.*(elements)).*$/i,
   subname: "Warrior of the Elements",
-  source: [["PHB2024", 106]],
+  source: [["P24", 106]],
   replaces: "way of the four elements",
   spellcastingAbility: 5,
   features: {
     "subclassfeature3": {
       name: "Elemental Attunement",
-      source: [["PHB2024", 106]],
+      source: [["P24", 106]],
       minlevel: 3,
       description: desc([
         "At the start of my turn, 1 FP for 10 mins of elemental energy. While active:",
@@ -3717,7 +3717,7 @@ legacySubClassRefactor("monk", "elements", {
     },
     "subclassfeature6": {
       name: "Elemental Burst",
-      source: [["PHB2024", 106]],
+      source: [["P24", 106]],
       minlevel: 6,
       action: "action",
       description: desc([
@@ -3727,7 +3727,7 @@ legacySubClassRefactor("monk", "elements", {
     },
     "subclassfeature11": {
       name: "Stride of the Elements",
-      source: [["PHB2024", 106]],
+      source: [["P24", 106]],
       minlevel: 11,
       description: desc([
         "While my Elemental Attunement is active, I gain Fly and Swim Speed equal to my Speed.",
@@ -3735,7 +3735,7 @@ legacySubClassRefactor("monk", "elements", {
     },
     "subclassfeature17": {
       name: "Elemental Epitome",
-      source: [["PHB2024", 106]],
+      source: [["P24", 106]],
       minlevel: 17,
       description: desc([
         "When Elemental Attunement is active:",
@@ -3750,12 +3750,12 @@ legacySubClassRefactor("monk", "elements", {
 legacySubClassRefactor("monk", "open hand", {
 	regExpSearch: /^(?=.*(monk))(?=.*(open))(?=.*(hand)).*$/i,
 	subname: "Warrior of the Open Hand",
-	source: [["PHB2024", 107]],
+	source: [["P24", 107]],
 	replaces: "way of the open hand",
 	features: {
 		"subclassfeature3": {
       name: "Open Hand Technique",
-      source: [["PHB2024", 107]],
+      source: [["P24", 107]],
       minlevel: 3,
       description: desc([
         "When I hit a crea. with a Flurry of Blows attack, I can impose one of these effects:",
@@ -3766,7 +3766,7 @@ legacySubClassRefactor("monk", "open hand", {
     },
 		"subclassfeature6": {
       name: "Wholeness of Body",
-      source: [["PHB2024", 107]],
+      source: [["P24", 107]],
       minlevel: 6,
       usages: "Wisdom modifier per ",
       usagescalc: "event.value = Math.max(1, What('Wis Mod'));",
@@ -3777,7 +3777,7 @@ legacySubClassRefactor("monk", "open hand", {
     },
 		"subclassfeature11": {
 			name: "Fleet Step",
-			source: [["PHB2024", 107]],
+			source: [["P24", 107]],
 			minlevel: 11,
 			description: desc([
 				"When I use a Bonus Action other than Step of the Wind, I can also use Step of the Wind immediately after.",
@@ -3785,7 +3785,7 @@ legacySubClassRefactor("monk", "open hand", {
 			"quivering palm" : {
 				name : "Quivering Palm",
 				extraname : "Warrior of the Open Hand 17",
-				source: [["PHB2024", 107]],
+				source: [["P24", 107]],
 				description : " [4 focus points]" + desc([
 					"When I hit a creature with an unarmed strike, I can start imperceptible vibrations",
 					"Within my monk level in days, I can use an action to have the creature make a Con save",
@@ -3802,7 +3802,7 @@ legacySubClassRefactor("monk", "open hand", {
 legacyClassRefactor("paladin", {
 	regExpSearch: /paladin/i,
 	name: "Paladin",
-	source: [["PHB2024", 109]],
+	source: [["P24", 109]],
 	primaryAbility: "Strength or Charisma",
 	prereqs: "Strength 13 or Dexterity 13",
 	improvements: [0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5],
@@ -3842,7 +3842,7 @@ legacyClassRefactor("paladin", {
 	features: {
 		"lay on hands": {
 		name: "Lay on Hands",
-		source: [["PHB2024", 109]],
+		source: [["P24", 109]],
 		minlevel : 1,
 		action: "bonus action",
 		usages: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100],
@@ -3854,7 +3854,7 @@ legacyClassRefactor("paladin", {
 		},
 		"spellcasting": {
 			name: "Spellcasting",
-			source: [["PHB2024", 109]],
+			source: [["P24", 109]],
 			minlevel : 1,
 			additional: levels.map(function (n, idx) {
 				var splls = [2, 3, 4, 5, 6, 6, 7, 7, 9, 9, 10, 10, 11, 11, 12, 12, 14, 14, 15, 15][idx];
@@ -3879,7 +3879,7 @@ legacyClassRefactor("paladin", {
 		},
 		"weapon mastery": {
 			name: "Weapon Mastery",
-			source: [["PHB2024", 110]],
+			source: [["P24", 110]],
 			minlevel: 1,
 			description: desc([
 				"I choose two weapons I'm proficient with and gain their mastery features.",
@@ -4158,7 +4158,7 @@ legacyClassRefactor("paladin", {
 		},
 		"fighting style": {
 			name: "Fighting Style",
-			source: [["PHB2024", 110]],
+			source: [["P24", 110]],
 			minlevel: 2,
 			description: desc([
 				"Pick a 'Fighting Style' feat or 'Blessed Warrior'; use Choose Feature above.",
@@ -4199,7 +4199,7 @@ legacyClassRefactor("paladin", {
 		},
 		"channel divinity": {
 			name: "Channel Divinity",
-			source: [["PHB2024", 110]],
+			source: [["P24", 110]],
 			action: ["bonus action", "Divine Sense"],
 			minlevel: 3,
 			usages: [0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
@@ -4211,7 +4211,7 @@ legacyClassRefactor("paladin", {
 		},
 		"subclassfeature3": {
 			name: "Paladin Subclass",
-			source: [["PHB2024", 111]],
+			source: [["P24", 111]],
 			minlevel: 3,
 			description : desc([
 			  "Choose a Paladin subclass and put it in the 'Class' field.",
@@ -4227,7 +4227,7 @@ legacyClassRefactor("paladin", {
 		},
 		"aura of protection": {
 			name: "Aura of Protection",
-			source: [["PHB2024", 111]],
+			source: [["P24", 111]],
 			minlevel: 6,
 			description : desc("While I'm conscious, allies within range and I can add my Cha mod (min 1) to saves"),
 			additional : levels.map(function (n) {
@@ -4237,7 +4237,7 @@ legacyClassRefactor("paladin", {
 		},
 		"abjure foes": {
 			name: "Abjure Foes",
-			source: [["PHB2024", 111]],
+			source: [["P24", 111]],
 			minlevel: 9,
 			action: "action",
 			description: desc([
@@ -4247,7 +4247,7 @@ legacyClassRefactor("paladin", {
 		},
 		"aura of courage": {
 			name: "Aura of Courage",
-			source: [["PHB2024", 111]],
+			source: [["P24", 111]],
 			minlevel: 10,
 			description : desc("While I'm conscious, allies within range and I can't be frightened"),
 			additional : levels.map(function (n) {
@@ -4257,7 +4257,7 @@ legacyClassRefactor("paladin", {
 		},
 		"radiant strikes": {
 			name: "Radiant Strikes",
-			source: [["PHB2024", 111]],
+			source: [["P24", 111]],
 			minlevel: 11,
 			description : desc("Whenever I hit a creature with a melee weapon or unarmed strike, I do an extra 1d8 radiant damage"),
 			calcChanges : {
@@ -4271,7 +4271,7 @@ legacyClassRefactor("paladin", {
 		},
 		"restoring touch": {
 			name: "Restoring Touch",
-			source: [["PHB2024", 111]],
+			source: [["P24", 111]],
 			minlevel: 14,
 			description: desc([
 				"I spend 5 Hit Points of Lay on Hands to remove one of the following:",
@@ -4281,7 +4281,7 @@ legacyClassRefactor("paladin", {
 		},
 		"epic boon": {
 		  name: "Epic Boon",
-		  source: [["PHB2024", 111]],
+		  source: [["P24", 111]],
 		  minlevel: 19,
 		  description: desc([
 			"I gain an Epic Boon feat, or another feat of my choice for which I qualify.",
@@ -4292,13 +4292,13 @@ legacyClassRefactor("paladin", {
 legacySubClassRefactor("paladin", "devotion", {
 	regExpSearch: /^(?=.*(paladin))(?=.*(devotion)).*$/i,
 	subname: "Oath of Devotion",
-	source: [["PHB2024", 113]],
+	source: [["P24", 113]],
 	replaces: "oath of devotion",
 	spellcastingExtra: ["protection from evil and good", "shield of faith", "aid", "zone of truth", "beacon of hope", "dispel magic", "freedom of movement", "guardian of faith", "commune", "flame strike"],
 	features: {
 		"subclassfeature3": {
 			name: "Channel Divinity: Sacred Weapon",
-			source: [["PHB2024", 113]],
+			source: [["P24", 113]],
 			minlevel: 3,
 			description : desc([
 				"As an action, for 10 minutes, I add my Cha modifier to hit for one weapon I'm holding",
@@ -4318,7 +4318,7 @@ legacySubClassRefactor("paladin", "devotion", {
 		},
 		"subclassfeature7": {
 			name: "Aura of Devotion",
-			source: [["PHB2024", 114]],
+			source: [["P24", 114]],
 			minlevel: 7,
 			description : desc("While I'm conscious, allies within range and I can't be charmed"),
 			additional : levels.map(function (n) {
@@ -4328,7 +4328,7 @@ legacySubClassRefactor("paladin", "devotion", {
 		},
 		"subclassfeature15": {
 		name: "Smite of Protection",
-		source: [["PHB2024", 114]],
+		source: [["P24", 114]],
 		minlevel: 15,
 		description: desc([
 			"When I cast Divine Smite my allies & I have Half Cover while in my aura of protection until the start of my next turn.",
@@ -4336,7 +4336,7 @@ legacySubClassRefactor("paladin", "devotion", {
 		},
 		"subclassfeature20": {
 			name: "Holy Nimbus",
-			source: [["PHB2024", 114]],
+			source: [["P24", 114]],
 			minlevel: 20,
 			action: "bonus action",
 			usages: 1,
@@ -4355,13 +4355,13 @@ legacySubClassRefactor("paladin", "devotion", {
 legacySubClassRefactor("paladin", "glory", {
   regExpSearch: /^(?=.*(paladin))(?=.*(glory)).*$/i,
   subname: "Oath of Glory",
-  source: [["PHB2024", 114]],
+  source: [["P24", 114]],
   replaces: "oath of glory",
   spellcastingExtra: ["guiding bolt", "heroism", "enhance ability", "magic weapon", "haste", "protection from energy", "compulsion", "freedom of movement", "legend lore", "yolande's regal presence"],
   features: {
     "subclassfeature3": {
 		name: "Channel Divinity: Inspiring Smite",
-		source: [["PHB2024", 114]],
+		source: [["P24", 114]],
 		minlevel: 3,
 		description : desc([
 			"Immediately after dealing damage with Divine Smite, I can grant temporary HP",
@@ -4373,7 +4373,7 @@ legacySubClassRefactor("paladin", "glory", {
     },
     "subclassfeature3.1": {
       name: "Channel Divinity: Peerless Athlete",
-      source: [["PHB2024", 114]],
+      source: [["P24", 114]],
       minlevel: 3,
       description: desc([
         "As a bonus action, I can get adv. on Str (Athletics) \u0026 Dex (Acrobatics) checks for 1 hour",
@@ -4383,7 +4383,7 @@ legacySubClassRefactor("paladin", "glory", {
     },
     "subclassfeature7": {
 		name: "Aura of Alacrity",
-		source: [["PHB2024", 115]],
+		source: [["P24", 115]],
 		minlevel: 7,
 		description : "\n   If I'm not incapacitated, allies starting their turn in range gain bonus speed for that turn",
 		speed : { walk : { spd : "+10", enc : "+10" } },
@@ -4393,7 +4393,7 @@ legacySubClassRefactor("paladin", "glory", {
     },
     "subclassfeature15": {
 		name: "Glorious Defense",
-		source: [["PHB2024", 115]],
+		source: [["P24", 115]],
 		minlevel: 15,
 		description : desc([
 			"As a reaction when I or another in 10 ft is hit with an attack roll, I can grant bonus AC",
@@ -4407,7 +4407,7 @@ legacySubClassRefactor("paladin", "glory", {
     },
     "subclassfeature20": {
 		name: "Living Legend",
-		source: [["PHB2024", 115]],
+		source: [["P24", 115]],
 		minlevel: 20,
 		description : desc([
 			"As a bonus action, I can empower myself with legends, gaining the following for 10 mins:",
@@ -4426,20 +4426,20 @@ legacySubClassRefactor("paladin", "glory", {
 legacySubClassRefactor("paladin", "ancients", {
   regExpSearch: /^(?=.*(paladin))(?=.*(ancients)).*$/i,
   subname: "Oath of the Ancients",
-  source: [["PHB2024", 115]],
+  source: [["P24", 115]],
   replaces: "oath of the ancients",
   spellcastingExtra: ["ensnaring strike", "speak with animals", "misty step", "moonbeam", "plant growth", "protection from energy", "ice storm", "stoneskin", "commune with nature", "tree stride"],
   features: {
     "subclassfeature3": {
       name: "Channel Divinity: Nature's Wrath",
-      source: [["PHB2024", 115]],
+      source: [["P24", 115]],
       minlevel: 3,
       description : "\n   " + "As a magic action, a creature I can see within 15 ft must make a Str save" + "\n   " + "If it fails this save, it is restrained until it succeeds on a save at the end of its turn",
 	  action : "action",
     },
     "subclassfeature7": {
       name: "Aura of Warding",
-      source: [["PHB2024", 116]],
+      source: [["P24", 116]],
       minlevel: 7,
       dmgres: ["Psychic", "Radiant", "Necrotic"],
       description: desc([
@@ -4451,7 +4451,7 @@ legacySubClassRefactor("paladin", "ancients", {
     },
     "subclassfeature15": {
       name: "Undying Sentinel",
-      source: [["PHB2024", 116]],
+      source: [["P24", 116]],
       minlevel: 15,
       description : "\n   " + "If dropped to 0 hit points and not killed outright, I can choose to stay at 1 hit point" + "\n   " + "Additionally, I suffer no drawbacks of old age and can't be aged magically",
 	  recovery : "long rest",
@@ -4459,7 +4459,7 @@ legacySubClassRefactor("paladin", "ancients", {
     },
     "subclassfeature20": {
       name: "Elder Champion",
-      source: [["PHB2024", 115]],
+      source: [["P24", 115]],
       minlevel: 20,
       description: desc([
         "As a Bonus Action, I can give my Aura of Protection the benefits below for 10 minutes:",
@@ -4473,13 +4473,13 @@ legacySubClassRefactor("paladin", "ancients", {
 legacySubClassRefactor("paladin", "Vengeance", {
   regExpSearch: /^(?=.*(paladin))(?=.*(vengeance)).*$/i,
   subname: "Oath of Vengeance",
-  source: [["PHB2024", 116]],
+  source: [["P24", 116]],
   replaces: "oath of vengeance",
   spellcastingExtra: ["bane", "hunter's mark", "hold person", "misty step", "haste", "protection from energy", "banishment", "dimension door", "hold monster", "scrying"],
   features: {
     "subclassfeature3": {
       name: "Channel Divinity: Vow of Enmity",
-      source: [["PHB2024", 117]],
+      source: [["P24", 117]],
       minlevel: 3,
       description: desc([
         "When I Attack I can make a Vow of Enmity against a creature I choose that I can see within 30 ft.",
@@ -4489,7 +4489,7 @@ legacySubClassRefactor("paladin", "Vengeance", {
     },
     "subclassfeature7": {
       name: "Relentless Avenger",
-      source: [["PHB2024", 117]],
+      source: [["P24", 117]],
       minlevel: 7,
       description: desc([
         "When I hit with an Opp Attack, I reduce the target's Speed to 0 until the end of the current turn.",
@@ -4498,14 +4498,14 @@ legacySubClassRefactor("paladin", "Vengeance", {
     },
     "subclassfeature15": {
       name: "Soul of Vengeance",
-      source: [["PHB2024", 117]],
+      source: [["P24", 117]],
       minlevel: 15,
       description : "\n   " + "When an enemy I have an active Vow of Enmity against makes an attack, I can react" + "\n   " + "As a reaction, I can make a melee weapon attack against it if it is within range",
 	  	action : [["reaction", " (with Vow of Enmity)"]]
     },
     "subclassfeature20": {
       name: "Avenging Angel",
-      source: [["PHB2024", 117]],
+      source: [["P24", 117]],
       minlevel: 20,
       action: "bonus action",
       usages: 1,
@@ -4527,7 +4527,7 @@ legacySubClassRefactor("paladin", "Vengeance", {
 legacyClassRefactor("ranger", {
 	regExpSearch: /ranger/i,
 	name: "Ranger",
-	source: [["PHB2024", 119]],
+	source: [["P24", 119]],
 	primaryAbility: "Dexterity and Wisdom",
 	prereqs: "Dexterity 13 or Wisdom 13",
 	improvements: [0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5],
@@ -4568,7 +4568,7 @@ legacyClassRefactor("ranger", {
 	features: {
 		"favored enemy": {
 			name: "Favored Enemy",
-			source: [["PHB2024", 119]],
+			source: [["P24", 119]],
 			minlevel: 1,
 			usages: [2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6],
 			recovery: "LR",
@@ -4590,7 +4590,7 @@ legacyClassRefactor("ranger", {
 		},
 		"spellcasting": {
 			name: "Spellcasting",
-			source: [["PHB2024", 119]],
+			source: [["P24", 119]],
 			minlevel: 1,
 			additional: levels.map(function (n, idx) {
 				var splls = [2, 3, 4, 5, 6, 6, 7, 7, 9, 9, 10, 10, 11, 11, 12, 12, 14, 14, 15, 15][idx];
@@ -4614,7 +4614,7 @@ legacyClassRefactor("ranger", {
 		},
 		"weapon mastery": {
 			name: "Weapon Mastery",
-			source: [["PHB2024", 120]],
+			source: [["P24", 120]],
 			minlevel: 1,
 			description: desc([
 				"I can use the Mastery properties of two Weapon types.",
@@ -4894,7 +4894,7 @@ legacyClassRefactor("ranger", {
 		"expertise": function () {
 			var a = {
 				name: "Deft Explorer",
-				source: [["PHB2024", 120]],
+				source: [["P24", 120]],
 				minlevel: 2,
 				description: desc("Choose 1 skill proficiency to gain Expertise in that skill."),
 				skillstxt: "Expertise with any one skill proficiency.",
@@ -4924,7 +4924,7 @@ legacyClassRefactor("ranger", {
 		}(),
 		"fighting style": {
 			name: "Fighting Style",
-			source: [["PHB2024", 120]],
+			source: [["P24", 120]],
 			minlevel: 2,
 			description: desc([
 				"I gain either one 'Fighting Style' or 'Druidic Warrior'.",
@@ -4958,7 +4958,7 @@ legacyClassRefactor("ranger", {
 		},
 		"subclassfeature3": {
 			name: "Ranger Subclass",
-			source: [["PHB2024", 120]],
+			source: [["P24", 120]],
 			minlevel: 3,
 			description: desc([
 				"Choose a Ranger subclass and put it in the 'Class' field.",
@@ -4966,7 +4966,7 @@ legacyClassRefactor("ranger", {
 		},
 		"roving": {
 			name: "Roving",
-			source: [["PHB2024", 121]],
+			source: [["P24", 121]],
 			minlevel: 6,
 			speed: {
 				walk: "+5",
@@ -4980,7 +4980,7 @@ legacyClassRefactor("ranger", {
 		},
 		"tireless": {
 			name: "Tireless",
-			source: [["PHB2024", 121]],
+			source: [["P24", 121]],
 			minlevel: 10,
 			action: ["action", " Temporary Hit Points"],
 			usages: "Wis mod per ",
@@ -4993,7 +4993,7 @@ legacyClassRefactor("ranger", {
 		},
 		"relentless hunter": {
 			name: "Relentless Hunter",
-			source: [["PHB2024", 121]],
+			source: [["P24", 121]],
 			minlevel: 13,
 			description: desc([
 				"I maintain Hunter's Mark after taking damage.",
@@ -5001,7 +5001,7 @@ legacyClassRefactor("ranger", {
 		},
 		"nature's veil": {
 			name: "Nature's Veil",
-			source: [["PHB2024", 121]],
+			source: [["P24", 121]],
 			minlevel: 14,
 			action: "bonus action",
 			usages: "Wis mod per ",
@@ -5014,7 +5014,7 @@ legacyClassRefactor("ranger", {
 		},
 		"precise hunter": {
 			name: "Precise Hunter",
-			source: [["PHB2024", 121]],
+			source: [["P24", 121]],
 			minlevel: 17,
 			description: desc([
 				"I have Adv on attack rolls on those marked by my Hunter's Mark.",
@@ -5022,7 +5022,7 @@ legacyClassRefactor("ranger", {
 		},
 		"feral senses": {
 			name: "Feral Senses",
-			source: [["PHB2024", 121]],
+			source: [["P24", 121]],
 			minlevel: 18,
 			vision: [["Blindsight", 30]],
 			description: desc([
@@ -5031,7 +5031,7 @@ legacyClassRefactor("ranger", {
 		},
 		"epic boon": {
 			name: "Epic Boon",
-			source: [["PHB2024", 121]],
+			source: [["P24", 121]],
 			minlevel: 19,
 			description: desc([
 				"I gain an Epic Boon feat, or another feat of my choice for which I qualify.",
@@ -5039,7 +5039,7 @@ legacyClassRefactor("ranger", {
 		},
 		"foe slayer": {
 			name: "Foe Slayer",
-			source: [["PHB2024", 121]],
+			source: [["P24", 121]],
 			minlevel: 20,
 			description: desc([
 				"The damage die of my Hunter's Mark changes to d10.",
@@ -5050,11 +5050,11 @@ legacyClassRefactor("ranger", {
 legacySubClassRefactor("ranger", "beast master", {
 	regExpSearch: /^(?=.*(ranger))(?=.*(beast))(?=.*(master)).*$/i,
 	subname: "Beast Master",
-	source: [["PHB2024", 122]],
+	source: [["P24", 122]],
 	features: {
 		"subclassfeature3": {
 			name: "Primal Companion",
-			source: [["PHB2024", 122]],
+			source: [["P24", 122]],
 			minlevel: 3,
 			action: [["action", "Revive Companion"], ["bonus action", "Command Companion"]],
 			additional: "Companion Sheet",
@@ -5066,7 +5066,7 @@ legacySubClassRefactor("ranger", "beast master", {
 		},
 		"subclassfeature7": {
 			name: "Exceptional Training",
-			source: [["PHB2024", 123]],
+			source: [["P24", 123]],
 			minlevel: 7,
 			description: desc([
 				"As a bonus action, I can command it to take the Dash/Disengage/Dodge/Help action.",
@@ -5074,7 +5074,7 @@ legacySubClassRefactor("ranger", "beast master", {
 		},
 		"subclassfeature11": {
 			name: "Bestial Fury",
-			source: [["PHB2024", 123]],
+			source: [["P24", 123]],
 			minlevel: 11,
 			description: desc([
 				"When I command my Primal Companion to use the Attack action, it can attack twice.",
@@ -5084,7 +5084,7 @@ legacySubClassRefactor("ranger", "beast master", {
 		},
 		"subclassfeature15": {
 			name: "Share Spells",
-			source: [["PHB2024", 123]],
+			source: [["P24", 123]],
 			minlevel: 15,
 			description: desc([
 				"When I cast a spell on myself, I can have it also affect my Primal Companion, if within 30 ft.",
@@ -5095,7 +5095,7 @@ legacySubClassRefactor("ranger", "beast master", {
 legacySubClassRefactor("ranger", "fey wanderer", {
 	regExpSearch: /^(?=.*(ranger))(?=.*(fey))(?=.*(wanderer)).*$/i,
 	subname: "Fey Wanderer",
-	source: [["PHB2024", 124]],
+	source: [["P24", 124]],
 	spellcastingExtra: ["charm person", "misty step", "summon fey", "dimension door", "mislead"],
 	features: {
 		"subclassfeature3": {
@@ -5148,7 +5148,7 @@ legacySubClassRefactor("ranger", "fey wanderer", {
 		},
 		"subclassfeature7": {
 			name: "Beguiling Twist",
-			source: [["PHB2024", 125]],
+			source: [["P24", 125]],
 			minlevel: 7,
 			action: "reaction",
 			savetxt: { adv_vs: ["Charmed", "Frightened"] },
@@ -5161,7 +5161,7 @@ legacySubClassRefactor("ranger", "fey wanderer", {
 		},
 		"subclassfeature11": {
 			name: "Fey Reinforcements",
-			source: [["PHB2024", 125]],
+			source: [["P24", 125]],
 			minlevel: 11,
 			usages: 1,
 			recovery: "long rest",
@@ -5172,7 +5172,7 @@ legacySubClassRefactor("ranger", "fey wanderer", {
 		},
 		"subclassfeature15": {
 			name: "Misty Wanderer",
-			source: [["PHB2024", 125]],
+			source: [["P24", 125]],
 			minlevel: 15,
 			usages: "Wisdom modifier per ",
 			usagescalc: "event.value = Math.max(1, What('Wis Mod'));",
@@ -5187,12 +5187,12 @@ legacySubClassRefactor("ranger", "fey wanderer", {
 legacySubClassRefactor("ranger", "gloom stalker", {
 	regExpSearch: /^(?=.*(ranger))(?=.*(gloom))(?=.*(stalker)).*$/i,
 	subname: "Gloom Stalker",
-	source: [["PHB2024", 125]],
+	source: [["P24", 125]],
 	spellcastingExtra: ["disguise self", "rope trick", "fear", "greater invisibility", "seeming"],
 	features: {
 		"subclassfeature3": {
 			name: "Dread Ambusher",
-			source: [["PHB2024", 125]],
+			source: [["P24", 125]],
 			minlevel: 3,
 			addMod: [{
 				type: "skill",
@@ -5214,7 +5214,7 @@ legacySubClassRefactor("ranger", "gloom stalker", {
 		},
 		"subclassfeature3.1": {
 			name: "Umbral Sight",
-			source: [["PHB2024", 126]],
+			source: [["P24", 126]],
 			minlevel: 3,
 			vision: [["Darkvision", "fixed 60"], ["Darkvision", "+60"]],
 			description: desc([
@@ -5225,7 +5225,7 @@ legacySubClassRefactor("ranger", "gloom stalker", {
 		},
 		"subclassfeature7": {
 			name: "Iron Mind",
-			source: [["PHB2024", 126]],
+			source: [["P24", 126]],
 			minlevel: 7,
 			saves: ["Wis"],
 			description: desc([
@@ -5234,7 +5234,7 @@ legacySubClassRefactor("ranger", "gloom stalker", {
 		},
 		"subclassfeature11": {
 			name: "Stalker's Flurry",
-			source: [["PHB2024", 126]],
+			source: [["P24", 126]],
 			minlevel: 11,
 			description: desc([
 				"When I use the Frighten effect of Dread Ambusher, I can do one of the following:",
@@ -5246,7 +5246,7 @@ legacySubClassRefactor("ranger", "gloom stalker", {
 		},
 		"subclassfeature15": {
 			name: "Shadowy Dodge",
-			source: [["PHB2024", 126]],
+			source: [["P24", 126]],
 			minlevel: 15,
 			action: ["reaction", " (when attacked)"],
 			description: desc([
@@ -5259,11 +5259,11 @@ legacySubClassRefactor("ranger", "gloom stalker", {
 legacySubClassRefactor("ranger", "hunter", {
 	regExpSearch: /^(?=.*(ranger))(?=.*(hunter)).*$/i,
 	subname: "Hunter",
-	source: [["PHB2024", 127]],
+	source: [["P24", 127]],
 	features: {
 		"subclassfeature3": {
 			name: "Hunter's Lore",
-			source: [["PHB2024", 127]],
+			source: [["P24", 127]],
 			minlevel: 3,
 			description: desc([
 				"While a creature is marked by my Hunter's Mark, I know the following about it:",
@@ -5271,7 +5271,7 @@ legacySubClassRefactor("ranger", "hunter", {
 		},
 		"subclassfeature3.1": {
 			name: "Hunter's Prey",
-			source: [["PHB2024", 127]],
+			source: [["P24", 127]],
 			minlevel: 3,
 			choices: ["Colossus Slayer", "Hoarde Breaker"],
 			"colossus slayer": {
@@ -5293,7 +5293,7 @@ legacySubClassRefactor("ranger", "hunter", {
 		},
 		"subclassfeature7": {
 			name: "Defensive Tactics",
-			source: [["PHB2024", 127]],
+			source: [["P24", 127]],
 			minlevel: 7,
 			choices: ["Escape the Hoarde", "Multiattack Defense"],
 			"escape the hoarde": {
@@ -5314,7 +5314,7 @@ legacySubClassRefactor("ranger", "hunter", {
 		},
 		"subclassfeature11": {
 			name: "Superior Hunter's Prey",
-			source: [["PHB2024", 127]],
+			source: [["P24", 127]],
 			minlevel: 11,
 			description: desc([
 				"Once per turn when I deal damage to a creature marked by my Hunter's mark, I can also deal the extra damage to another creature I can see within 30 feet.",
@@ -5322,7 +5322,7 @@ legacySubClassRefactor("ranger", "hunter", {
 		},
 		"subclassfeature15": {
 			name: "Superior Hunter's Defense",
-			source: [["PHB2024", 127]],
+			source: [["P24", 127]],
 			minlevel: 15,
 			action: ["reaction", " (taking damage)"],
 			description: desc([
@@ -5334,7 +5334,7 @@ legacySubClassRefactor("ranger", "hunter", {
 legacyClassRefactor("rogue", {
   regExpSearch: /rogue/i,
   name: "Rogue",
-  source: [["PHB2024", 129]],
+  source: [["P24", 129]],
   primaryAbility: "Dexterity",
   prereqs: "Dexterity 13",
   abilitySave: 2,
@@ -5370,7 +5370,7 @@ legacyClassRefactor("rogue", {
     "expertise": function () {
       var a = {
         name: "Expertise",
-        source: [["PHB2024", 129]],
+        source: [["P24", 129]],
         minlevel: 1,
         description: desc("I gain expertise with any two of my skill proficiencies and two more at 6th level."),
         skillstxt: "Expertise with any two skill proficiencies, and two more at 6th level",
@@ -5399,7 +5399,7 @@ legacyClassRefactor("rogue", {
     }(),
     "sneak attack": {
       name: "Sneak Attack",
-      source: [["PHB2024", 129]],
+      source: [["P24", 129]],
       minlevel: 1,
       additional: ["1d6", "1d6", "2d6", "2d6", "3d6", "3d6", "4d6", "4d6", "5d6", "5d6", "6d6", "6d6", "7d6", "7d6", "8d6", "8d6", "9d6", "9d6", "10d6", "10d6"],
       description: desc([
@@ -5408,7 +5408,7 @@ legacyClassRefactor("rogue", {
     },
     "thieves' cant": {
       name: "Thieves' Cant",
-      source: [["PHB2024", 129]],
+      source: [["P24", 129]],
       minlevel: 1,
       languageProfs: [["Thieves' Cant", 1]],
       description: desc([
@@ -5417,7 +5417,7 @@ legacyClassRefactor("rogue", {
     },
     "weapon mastery": {
       name: "Weapon Mastery",
-      source: [["PHB2024", 129]],
+      source: [["P24", 129]],
       minlevel: 1,
       description: desc([
         "I choose two weapons I'm proficient with & gain their mastery features.",
@@ -5563,7 +5563,7 @@ legacyClassRefactor("rogue", {
     },
     "cunning action": {
       name: "Cunning Action",
-      source: [["PHB2024", 130]],
+      source: [["P24", 130]],
       minlevel: 2,
       action: [["bonus action", "Dash/Disengage/Hide"]],
       description: desc([
@@ -5572,7 +5572,7 @@ legacyClassRefactor("rogue", {
     },
     "subclassfeature3": {
       name: "Rogue Subclass",
-      source: [["PHB2024", 130]],
+      source: [["P24", 130]],
       minlevel: 3,
       description: desc([
         "Choose a Rogue subclass and put it in the 'Class' field.",
@@ -5580,7 +5580,7 @@ legacyClassRefactor("rogue", {
     },
 	"steady aim": {
 	  name: "Steady Aim",
-	  source: [["PHB2024", 130]],
+	  source: [["P24", 130]],
 	  minlevel: 3,
 	  action: ["bonus action", ""],
 	  description: desc([
@@ -5589,7 +5589,7 @@ legacyClassRefactor("rogue", {
 	},
     "cunning strike": {
       name: "Cunning Strike",
-      source: [["PHB2024", 130]],
+      source: [["P24", 130]],
       minlevel: 5,
       description: desc([
         "When I deal Sneak Attack damage I can add one of the following Cunning Strike effects at the cost of Sneak Attack damage dice:",
@@ -5601,7 +5601,7 @@ legacyClassRefactor("rogue", {
     },
     "uncanny dodge": {
       name: "Uncanny Dodge",
-      source: [["PHB2024", 131]],
+      source: [["P24", 131]],
       minlevel: 5,
       action: "reaction",
       description: desc([
@@ -5610,7 +5610,7 @@ legacyClassRefactor("rogue", {
     },
     "evasion": {
       name: "Evasion",
-      source: [["PHB2024", 131]],
+      source: [["P24", 131]],
       minlevel: 7,
       description: desc([
         "If I'm conscious and must make a Dex save to take half damage on an effect I take no damage on a pass & half damage on a fail.",
@@ -5618,7 +5618,7 @@ legacyClassRefactor("rogue", {
     },
     "reliable talent": {
       name: "Reliable Talent",
-      source: [["PHB2024", 131]],
+      source: [["P24", 131]],
       minlevel: 7,
       description: desc([
         "When I make an ability check that uses one of my skill or tool proficiencies, d20 rolls of 9 or lower are 10.",
@@ -5626,7 +5626,7 @@ legacyClassRefactor("rogue", {
     },
     "improved cunning strike": {
       name: "Improved Cunning Strike",
-      source: [["PHB2024", 131]],
+      source: [["P24", 131]],
       minlevel: 11,
       description: desc([
         "Use up to two Cunning Strike effects when I deal Sneak Attack damage, paying the cost for each.",
@@ -5634,7 +5634,7 @@ legacyClassRefactor("rogue", {
     },
     "devious strikes": {
       name: "Devious Strikes",
-      source: [["PHB2024", 131]],
+      source: [["P24", 131]],
       minlevel: 14,
       description: desc([
         "These effects are now among my Cunning Strike options:",
@@ -5646,7 +5646,7 @@ legacyClassRefactor("rogue", {
     },
     "slippery mind": {
       name: "Slippery Mind",
-      source: [["PHB2024", 131]],
+      source: [["P24", 131]],
       minlevel: 15,
       saves: ["Wis", "Cha"],
       description: desc([
@@ -5655,7 +5655,7 @@ legacyClassRefactor("rogue", {
     },
     "elusive": {
       name: "Elusive",
-      source: [["PHB2024", 131]],
+      source: [["P24", 131]],
       minlevel: 18,
       description: desc([
         "No attack roll can have Advantage against me while I'm conscious.",
@@ -5663,7 +5663,7 @@ legacyClassRefactor("rogue", {
     },
     "epic boon": {
       name: "Epic Boon",
-      source: [["PHB2024", 131]],
+      source: [["P24", 131]],
       minlevel: 19,
       description: desc([
         "I gain an Epic Boon feat, or another feat of my choice for which I qualify.",
@@ -5671,7 +5671,7 @@ legacyClassRefactor("rogue", {
     },
     "stroke of luck": {
       name: "Stroke of Luck",
-      source: [["PHB2024", 131]],
+      source: [["P24", 131]],
       minlevel: 20,
       usages: 1,
       recovery: "short rest",
@@ -5684,7 +5684,7 @@ legacyClassRefactor("rogue", {
 legacySubClassRefactor("rogue", "arcane trickster", {
   regExpSearch: /^(?=.*(rogue))(?=.*(arcane))(?=.*(trickster)).*$/i,
   subname: "Arcane Trickster",
-  source: [["PHB2024", 132]],
+  source: [["P24", 132]],
   spellcastingFactor: 3,
   spellcastingAbility: 4,
   spellcastingList: {
@@ -5699,7 +5699,7 @@ legacySubClassRefactor("rogue", "arcane trickster", {
   features: {
     "subclassfeature3": {
       name: "Spellcasting",
-      source: [["PHB2024", 132]],
+      source: [["P24", 132]],
       minlevel: 3,
       additional: levels.map(function (n, idx) {
         var cantr = [0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3][idx];
@@ -5714,7 +5714,7 @@ legacySubClassRefactor("rogue", "arcane trickster", {
     },
     "subclassfeature3.1": {
       name: "Mage Hand Legerdemain",
-      source: [["PHB2024", 133]],
+      source: [["P24", 133]],
       minlevel: 3,
       action: [["bonus action", ""]],
 	  spellcastingBonus : [{
@@ -5737,7 +5737,7 @@ legacySubClassRefactor("rogue", "arcane trickster", {
     },
     "subclassfeature9": {
       name: "Magical Ambush",
-      source: [["PHB2024", 133]],
+      source: [["P24", 133]],
       minlevel: 9,
       description: desc([
         "If I'm Invisible when I cast a spell on a creature it has Disadv on saving throws against the spell on the same turn.",
@@ -5745,7 +5745,7 @@ legacySubClassRefactor("rogue", "arcane trickster", {
     },
     "subclassfeature13": {
       name: "Versatile Trickster",
-      source: [["PHB2024", 133]],
+      source: [["P24", 133]],
       minlevel: 13,
       description: desc([
         "I can use Mage Hand to use the Trip option of my Cunning Strike on a creature within 5ft of the hand when I use it on another creature.",
@@ -5753,7 +5753,7 @@ legacySubClassRefactor("rogue", "arcane trickster", {
     },
     "subclassfeature17": {
       name: "Spell Thief",
-      source: [["PHB2024", 133]],
+      source: [["P24", 133]],
       minlevel: 17,
       description: desc([
         "Once per long rest as a reaction I can force a creature to make an Int save (my spell save DC) after it casts a spell that targets me.",
@@ -5766,11 +5766,11 @@ legacySubClassRefactor("rogue", "arcane trickster", {
 legacySubClassRefactor("rogue", "assassin", {
   regExpSearch: /^(?=.*(rogue))(?=.*(assassin)).*$/i,
   subname: "Assassin",
-  source: [["PHB2024", 133]],
+  source: [["P24", 133]],
   features: {
     "subclassfeature3": {
       name: "Assassinate",
-      source: [["PHB2024", 134]],
+      source: [["P24", 134]],
       minlevel: 3,
       description: desc([
         "Initiative: I have Advantage on Initiative rolls.",
@@ -5782,7 +5782,7 @@ legacySubClassRefactor("rogue", "assassin", {
     },
     "subclassfeature3.1": {
       name: "Assassin's Tools",
-      source: [["PHB2024", 134]],
+      source: [["P24", 134]],
       minlevel: 3,
       toolProfs: [["Disguise Kit"], ["Poisoner's Kit"]],
       description: desc([
@@ -5791,7 +5791,7 @@ legacySubClassRefactor("rogue", "assassin", {
     },
     "subclassfeature9": {
       name: "Infiltration Expertise",
-      source: [["PHB2024", 134]],
+      source: [["P24", 134]],
       minlevel: 9,
       description: desc([
         "Masterful Mimicry: After 1 hour of study I can mimic another person's speech, handwriting, or both.",
@@ -5800,7 +5800,7 @@ legacySubClassRefactor("rogue", "assassin", {
     },
     "subclassfeature13": {
       name: "Envenom Weapons",
-      source: [["PHB2024", 134]],
+      source: [["P24", 134]],
       minlevel: 13,
       description: desc([
         "Targets of the Poison option of my Cunning Strike also take 2d6 Poison damage on a failed save.",
@@ -5808,7 +5808,7 @@ legacySubClassRefactor("rogue", "assassin", {
     },
     "subclassfeature17": {
       name: "Death Strike",
-      source: [["PHB2024", 134]],
+      source: [["P24", 134]],
       minlevel: 17,
 	  additional : "DC 8 + Dex + Prof",
       description: desc([
@@ -5820,11 +5820,11 @@ legacySubClassRefactor("rogue", "assassin", {
 legacySubClassRefactor("rogue", "soulknife", {
   regExpSearch: /^(?=.*(rogue))(?=.*(soulknife)).*$/i,
   subname: "Soulknife",
-  source: [["PHB2024", 135]],
+  source: [["P24", 135]],
   features: {
     "subclassfeature3": {
       name: "Psionic Power",
-      source: [["PHB2024", 135]],
+      source: [["P24", 135]],
       minlevel: 3,
       additional: ["", "", "Psionic Energy Die 4 d6", "Psionic Energy Die 4 d6", "Psionic Energy Die 6 d8", "Psionic Energy Die 6 d8", "Psionic Energy Die 6 d8", "Psionic Energy Die 6 d8", "Psionic Energy Die 8 d8", "Psionic Energy Die 8 d8", "Psionic Energy Die 8 d10", "Psionic Energy Die 8 d10", "Psionic Energy Die 10 d10", "Psionic Energy Die 10 d10", "Psionic Energy Die 10 d10", "Psionic Energy Die 10 d10", "Psionic Energy Die 12 d12", "Psionic Energy Die 12 d12", "Psionic Energy Die 12 d12", "Psionic Energy Die 12 d12"],
       description: desc([
@@ -5838,7 +5838,7 @@ legacySubClassRefactor("rogue", "soulknife", {
     },
     "subclassfeature3.1": {
       name: "Psychic Blades",
-      source: [["PHB2024", 136]],
+      source: [["P24", 136]],
       minlevel: 3,
       action: [["bonus action", "Psychic Blade (after Attack action)"]],
       description: desc([
@@ -5852,7 +5852,7 @@ legacySubClassRefactor("rogue", "soulknife", {
       weaponOptions: [{
         regExpSearch: /^(?=.*psychic)(?=.*blade).*$/i,
         name: "Psychic Blade",
-        source: [["PHB2024", 136]],
+        source: [["P24", 136]],
         ability: 2,
         type: "Simple",
         damage: [1, 6, "psychic"],
@@ -5864,7 +5864,7 @@ legacySubClassRefactor("rogue", "soulknife", {
     },
     "subclassfeature9": {
       name: "Soul Blades",
-      source: [["PHB2024", 136]],
+      source: [["P24", 136]],
       minlevel: 9,
       description: desc([
         "I can use more powers with my Psychic Blades.",
@@ -5874,7 +5874,7 @@ legacySubClassRefactor("rogue", "soulknife", {
     },
     "subclassfeature13": {
       name: "Psychic Veil",
-      source: [["PHB2024", 136]],
+      source: [["P24", 136]],
       minlevel: 13,
       usages: 1,
       recovery: "long rest",
@@ -5887,7 +5887,7 @@ legacySubClassRefactor("rogue", "soulknife", {
     },
     "subclassfeature17": {
       name: "Rend Mind",
-      source: [["PHB2024", 136]],
+      source: [["P24", 136]],
       minlevel: 17,
       usages: 1,
       recovery: "long rest",
@@ -5902,11 +5902,11 @@ legacySubClassRefactor("rogue", "soulknife", {
 legacySubClassRefactor("rogue", "thief", {
   regExpSearch: /^(?=.*(rogue))(?=.*(thief)).*$/i,
   subname: "Thief",
-  source: [["PHB2024", 137]],
+  source: [["P24", 137]],
   features: {
     "subclassfeature3": {
       name: "Fast Hands",
-      source: [["PHB2024", 137]],
+      source: [["P24", 137]],
       minlevel: 3,
       action: ["bonus action", "Pick Lock/Disarm Trap/Utilize Item/Activate Magic Item"],
       description: desc([
@@ -5917,7 +5917,7 @@ legacySubClassRefactor("rogue", "thief", {
     },
     "subclassfeature6": {
       name: "Second-Story Work",
-      source: [["PHB2024", 137]],
+      source: [["P24", 137]],
       minlevel: 3,
       speed: {climb: {spd: "walk", enc: "walk"}},
       description: desc([
@@ -5926,7 +5926,7 @@ legacySubClassRefactor("rogue", "thief", {
     },
     "subclassfeature9": {
       name: "Supreme Sneak",
-      source: [["PHB2024", 137]],
+      source: [["P24", 137]],
       minlevel: 9,
       description: desc([
         "I gain the following Cunning Strike option:",
@@ -5935,7 +5935,7 @@ legacySubClassRefactor("rogue", "thief", {
     },
     "subclassfeature13": {
       name: "Use Magic Device",
-      source: [["PHB2024", 137]],
+      source: [["P24", 137]],
       minlevel: 13,
       description: desc([
         "Attunement: I can attune to up to four magic items at once.",
@@ -5945,7 +5945,7 @@ legacySubClassRefactor("rogue", "thief", {
     },
     "subclassfeature17": {
       name: "Thief's Reflexes",
-      source: [["PHB2024", 137]],
+      source: [["P24", 137]],
       minlevel: 17,
       description: desc([
         "I can take two turns during the first round of any combat at my normal Initiative and my second turn at my Initiative - 10.",
@@ -5956,7 +5956,7 @@ legacySubClassRefactor("rogue", "thief", {
 legacyClassRefactor("sorcerer", {
   regExpSearch: /sorcerer/i,
   name: "Sorcerer",
-  source: [["PHB2024", 139]],
+  source: [["P24", 139]],
   primaryAbility: ["Charisma"],
   abilitySave: 6,
   prereqs: "Charisma 13",
@@ -5992,7 +5992,7 @@ legacyClassRefactor("sorcerer", {
   features: {
     "spellcasting": {
       name: "Spellcasting",
-      source: [["PHB2024", 139]],
+      source: [["P24", 139]],
       minlevel: 1,
       additional: levels.map(function (n, idx) {
         var cantr = [4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6][idx];
@@ -6007,7 +6007,7 @@ legacyClassRefactor("sorcerer", {
     },
     "innate sorcery": {
       name: "Innate Sorcery",
-      source: [["PHB2024", 140]],
+      source: [["P24", 140]],
       minlevel: 1,
       action: "bonus action",
       usages: 2,
@@ -6020,7 +6020,7 @@ legacyClassRefactor("sorcerer", {
     },
     "font of magic": {
       name: "Font of Magic",
-      source: [["PHB2024", 140]],
+      source: [["P24", 140]],
       minlevel: 2,
       description : desc([
 		"As a bonus action, I can use sorcery points to create spell slots and vice versa",
@@ -6037,7 +6037,7 @@ legacyClassRefactor("sorcerer", {
     },
     "metamagic": {
       name: "Metamagic",
-      source: [["PHB2024", 141]],
+      source: [["P24", 141]],
       minlevel: 2,
       extraname: "Metamagic Options",
       extrachoices: ["Careful Spell", "Distant Spell", "Empowered Spell", "Extended Spell", "Heightened Spell", "Quickened Spell", "Seeking Spell", "Subtle Spell", "Transmuted Spell", "Twinned Spell"],
@@ -6111,7 +6111,7 @@ legacyClassRefactor("sorcerer", {
     },
     "subclassfeature3": {
       name: "Sorcerer Subclass",
-      source: [["PHB2024", 141]],
+      source: [["P24", 141]],
       minlevel: 3,
       description: desc([
         "Choose a Sorcerer subclass and put it in the 'Class' field.",
@@ -6119,7 +6119,7 @@ legacyClassRefactor("sorcerer", {
     },
     "sorcerous restoration": {
       name: "Sorcerous Restoration",
-      source: [["PHB2024", 141]],
+      source: [["P24", 141]],
       minlevel: 5,
       usages: 1,
       recovery: "long rest",
@@ -6129,7 +6129,7 @@ legacyClassRefactor("sorcerer", {
     },
     "sorcery incarnate": {
       name: "Sorcery Incarnate",
-      source: [["PHB2024", 141]],
+      source: [["P24", 141]],
       minlevel: 7,
       description: desc([
         "I can spend 2 SP to use Innate Sorcery when I have no uses left. While it's active I can use up to two Metamagic options on each spell I cast.",
@@ -6137,7 +6137,7 @@ legacyClassRefactor("sorcerer", {
     },
     "epic boon": {
       name: "Epic Boon",
-      source: [["PHB2024", 141]],
+      source: [["P24", 141]],
       minlevel: 19,
       description: desc([
         "I gain an Epic Boon feat, or another feat of my choice for which I qualify.",
@@ -6145,7 +6145,7 @@ legacyClassRefactor("sorcerer", {
     },
     "arcane apotheosis": {
       name: "Arcane Apotheosis",
-      source: [["PHB2024", 141]],
+      source: [["P24", 141]],
       minlevel: 20,
       description: desc([
         "While Innate Sorcery is active I can use one Metamagic option on each of my turns without spending SP.",
@@ -6156,12 +6156,12 @@ legacyClassRefactor("sorcerer", {
 legacySubClassRefactor("sorcerer", "aberrant", {
   regExpSearch: /^(?=.*(sorcerer))(?=.*(aberrant)).*$/i,
   subname: "Aberrant Sorcery",
-  source: [["PHB2024", 145]],
+  source: [["P24", 145]],
   replaces: "aberrant mind",
   features: {
     "subclassfeature3": {
       name: "Telepathic Speech",
-      source: [["PHB2024", 145]],
+      source: [["P24", 145]],
       minlevel: 3,
       action: "bonus action",
 	  spellcastingBonus: [{
@@ -6199,7 +6199,7 @@ legacySubClassRefactor("sorcerer", "aberrant", {
     },
     "subclassfeature6": {
       name: "Psionic Sorcery",
-      source: [["PHB2024", 146]],
+      source: [["P24", 146]],
       minlevel: 6,
       description: desc([
         "When I cast a psionic spell of level 1+ I can cast it using a spell slot, or with SP equal to the spell's level. If I cast the spell with SPs It requires no components, unless they are consumed or have a specified cost.",
@@ -6207,7 +6207,7 @@ legacySubClassRefactor("sorcerer", "aberrant", {
     },
     "subclassfeature6.1": {
       name: "Psychic Defense",
-      source: [["PHB2024", 146]],
+      source: [["P24", 146]],
       minlevel: 6,
       dmgres: "Psychic",
       savetxt: {adv_vs: ["Charmed", "Frightened"]},
@@ -6217,7 +6217,7 @@ legacySubClassRefactor("sorcerer", "aberrant", {
     },
     "subclassfeature14": {
       name: "Revelation in Flesh",
-      source: [["PHB2024", 146]],
+      source: [["P24", 146]],
       minlevel: 14,
       action: "bonus action",
       description: desc([
@@ -6263,7 +6263,7 @@ legacySubClassRefactor("sorcerer", "aberrant", {
     },
     "subclassfeature18": {
       name: "Warping Implosion",
-      source: [["PHB2024", 146]],
+      source: [["P24", 146]],
       minlevel: 18,
       action: "action",
       usages: 1,
@@ -6278,12 +6278,12 @@ legacySubClassRefactor("sorcerer", "aberrant", {
 legacySubClassRefactor("sorcerer", "clockwork", {
   regExpSearch: /^(?=.*(sorcerer))(?=.*(clockwork)).*$/i,
   subname: "Clockwork Sorcery",
-  source: [["PHB2024", 146]],
+  source: [["P24", 146]],
   replaces: "clockwork soul",
   features: {
     "subclassfeature3": {
       name: "Clockwork Spells",
-      source: [["PHB2024", 146]],
+      source: [["P24", 146]],
       minlevel: 3,
 	  spellcastingBonus: [{
 		name: "Clockwork Sorcery Spells (3)",
@@ -6331,7 +6331,7 @@ legacySubClassRefactor("sorcerer", "clockwork", {
     },
     "subclassfeature3.1": {
       name: "Restore Balance",
-      source: [["PHB2024", 146]],
+      source: [["P24", 146]],
       minlevel: 3,
       usages: "Charisma modifier per ",
       usagescalc: "event.value = Math.max(1, What('Cha Mod'));",
@@ -6342,7 +6342,7 @@ legacySubClassRefactor("sorcerer", "clockwork", {
     },
     "subclassfeature6": {
       name: "Bastion of Law",
-      source: [["PHB2024", 147]],
+      source: [["P24", 147]],
       minlevel: 6,
       action: ["action", "Bastion of Law 1-5 SP"],
       description: desc([
@@ -6351,7 +6351,7 @@ legacySubClassRefactor("sorcerer", "clockwork", {
     },
     "subclassfeature14": {
       name: "Trance of Order",
-      source: [["PHB2024", 147]],
+      source: [["P24", 147]],
       minlevel: 14,
       action: "bonus action",
       usages: 1,
@@ -6363,7 +6363,7 @@ legacySubClassRefactor("sorcerer", "clockwork", {
     },
     "subclassfeature18": {
       name: "Clockwork Cavalcade",
-      source: [["PHB2024", 147]],
+      source: [["P24", 147]],
       minlevel: 18,
       action: "action",
       usages: 1,
@@ -6382,17 +6382,17 @@ legacySubClassRefactor("sorcerer", "clockwork", {
 legacySubClassRefactor("sorcerer", "draconic", {
   regExpSearch: /^(?=.*(sorcerer))(?=.*(draconic)).*$/i,
   subname: "Draconic Sorcery",
-  source: [["PHB2024", 148]],
+  source: [["P24", 148]],
   replaces: "draconic bloodline",
   features: {
     "subclassfeature3": {
       name: "Draconic Resilience",
-      source: [["PHB2024", 148]],
+      source: [["P24", 148]],
       minlevel: 3,
       armorOptions: [{
         regExpSearch: /justToAddToDropDownAndEffectWildShape/,
         name: "Unarmored Defense (Cha)",
-        source: [["PHB2024", 148]],
+        source: [["P24", 148]],
         ac: "10+Cha",
         affectsWildShape: true,
         selectNow: true
@@ -6440,7 +6440,7 @@ legacySubClassRefactor("sorcerer", "draconic", {
     },
     "subclassfeature6": {
       name: "Elemental Affinity",
-      source: [["PHB2024", 148]],
+      source: [["P24", 148]],
       minlevel: 6,
       description: desc([
         "Use 'Choose Feature' above to choose an elemental affinity. I have Resistance to that damage type; When I do spell damage of that type I can add my Cha mod to 1 damage roll.",
@@ -6474,7 +6474,7 @@ legacySubClassRefactor("sorcerer", "draconic", {
     },
     "subclassfeature14": {
       name: "Dragon Wings",
-      source: [["PHB2024", 148]],
+      source: [["P24", 148]],
       minlevel: 14,
       action: "bonus action",
       usages: 1,
@@ -6486,7 +6486,7 @@ legacySubClassRefactor("sorcerer", "draconic", {
     },
     "subclassfeature18": {
       name: "Dragon Companion",
-      source: [["PHB2024", 149]],
+      source: [["P24", 149]],
       minlevel: 18,
       usages: 1,
       recovery: "long rest",
@@ -6500,11 +6500,11 @@ legacySubClassRefactor("sorcerer", "wild magic", {
   regExpSearch: /^(?=.*(sorcerer))(?=.*(wild ))(?=.*(magic)).*$/i,
   subname: "Wild Magic Sorcery",
   replaces: "wild magic",
-  source: [["PHB2024", 149]],
+  source: [["P24", 149]],
   features: {
     "subclassfeature3": {
       name: "Wild Magic Surge",
-      source: [["PHB2024", 149]],
+      source: [["P24", 149]],
       minlevel: 3,
       description: desc([
         "Once per turn, I can roll 1d20 when I cast a Sorcerer spell with a spell slot. On a 20, I roll on the Wild Magic Surge (WMS) table (See page 3). Spells from the table are unaffected by my Metamagic.",
@@ -6518,7 +6518,7 @@ legacySubClassRefactor("sorcerer", "wild magic", {
     },
     "subclassfeature3.1": {
       name: "Tides of Chaos",
-      source: [["PHB2024", 149]],
+      source: [["P24", 149]],
       minlevel: 3,
       usages: 1,
       recovery: "long rest",
@@ -6528,7 +6528,7 @@ legacySubClassRefactor("sorcerer", "wild magic", {
     },
     "subclassfeature6": {
       name: "Bend Luck",
-      source: [["PHB2024", 149]],
+      source: [["P24", 149]],
       minlevel: 6,
       action: "reaction",
       description: desc([
@@ -6537,7 +6537,7 @@ legacySubClassRefactor("sorcerer", "wild magic", {
     },
     "subclassfeature14": {
       name: "Controlled Chaos",
-      source: [["PHB2024", 149]],
+      source: [["P24", 149]],
       minlevel: 14,
       description: desc([
         "When I roll on the Wild Magic Surge table I can roll twice and use either number.",
@@ -6545,7 +6545,7 @@ legacySubClassRefactor("sorcerer", "wild magic", {
     },
     "subclassfeature18": {
       name: "Tamed Surge",
-      source: [["PHB2024", 150]],
+      source: [["P24", 150]],
       minlevel: 18,
       usages: 1,
       recovery: "long rest",
@@ -6558,7 +6558,7 @@ legacySubClassRefactor("sorcerer", "wild magic", {
 legacyClassRefactor("warlock", {
   regExpSearch: /warlock/i,
   name: "Warlock",
-  source: [["PHB2024", 153]],
+  source: [["P24", 153]],
   primaryAbility: ["Charisma"],
   abilitySave: 6,
   prereqs: "Charisma 13",
@@ -6596,7 +6596,7 @@ legacyClassRefactor("warlock", {
   features: {
     "eldritch invocations": {
       name: "Eldritch Invocations",
-      source: [["PHB2024", 153]],
+      source: [["P24", 153]],
       minlevel: 1,
       description: desc([
         "Use the 'Choose Feature' button above to add Eldritch Invocations (EI) to the third page. I must meet all prereqs. When I gain a Warlock level I can replace one EI with another unless it's a prereq for another EI I have.",
@@ -7273,7 +7273,7 @@ legacyClassRefactor("warlock", {
     },
     "pact magic": {
       name: "Pact Magic",
-      source: [["PHB2024", 153]],
+      source: [["P24", 153]],
       minlevel: 1,
       additional: levels.map(function (n, idx) {
         var cantr = [2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4][idx];
@@ -7287,7 +7287,7 @@ legacyClassRefactor("warlock", {
     },
     "magical cunning": {
       name: "Magical Cunning",
-      source: [["PHB2024", 154]],
+      source: [["P24", 154]],
       minlevel: 2,
       usages: 1,
       recovery: "long rest",
@@ -7297,7 +7297,7 @@ legacyClassRefactor("warlock", {
     },
     "subclassfeature3": {
       name: "Warlock Subclass",
-      source: [["PHB2024", 154]],
+      source: [["P24", 154]],
       minlevel: 3,
       description: desc([
         "Choose a Warlock subclass and put it in the 'Class' field.",
@@ -7305,7 +7305,7 @@ legacyClassRefactor("warlock", {
     },
     "contact patron": {
       name: "Contact Patron",
-      source: [["PHB2024", 155]],
+      source: [["P24", 155]],
       minlevel: 9,
       usages: 1,
       recovery: "long rest",
@@ -7322,7 +7322,7 @@ legacyClassRefactor("warlock", {
     },
     "mystic arcanum": {
       name: "Mystic Arcanum",
-      source: [["PHB2024", 155]],
+      source: [["P24", 155]],
       minlevel: 11,
 	  additional : ["", "", "", "", "", "", "", "", "", "", "6th level", "6th level", "6th and 7th level", "6th and 7th level", "6th, 7th, and 8th level", "6th, 7th, and 8th level", "6th, 7th, 8th, and 9th level", "6th, 7th, 8th, and 9th level", "6th, 7th, 8th, and 9th level", "6th, 7th, 8th, and 9th level"],
       spellcastingBonus: [{
@@ -7356,7 +7356,7 @@ legacyClassRefactor("warlock", {
     },
     "epic boon": {
       name: "Epic Boon",
-      source: [["PHB2024", 155]],
+      source: [["P24", 155]],
       minlevel: 19,
       description: desc([
         "I gain an Epic Boon feat, or another feat of my choice for which I qualify.",
@@ -7364,7 +7364,7 @@ legacyClassRefactor("warlock", {
     },
     "eldritch master": {
       name: "Eldritch Master",
-      source: [["PHB2024", 155]],
+      source: [["P24", 155]],
       minlevel: 20,
       description: desc([
         "When I use my Magical Cunning feature, I regain all expended Pact Magic spell slots.",
@@ -7375,11 +7375,11 @@ legacyClassRefactor("warlock", {
 legacySubClassRefactor("warlock", "the archfey", {
   regExpSearch: /^(?=.*(warlock))(?=.*(archfey)).*$/i,
   subname: "Archfey Patron",
-  source: [["PHB2024", 159]],
+  source: [["P24", 159]],
   features: {
     "subclassfeature3": {
       name: "Steps of the Fey",
-      source: [["PHB2024", 159]],
+      source: [["P24", 159]],
       minlevel: 3,
       usages: "Charisma modifier per ",
       usagescalc: "event.value = Math.max(1, What('Cha Mod'));",
@@ -7419,13 +7419,13 @@ legacySubClassRefactor("warlock", "the archfey", {
 		"refreshing step" : {
 			name : "Refreshing Step",
 			extraname : "Steps of the Fey Option",
-			source : [["PHB2024", 159]],
+			source : [["P24", 159]],
 			description : desc("After I teleport, one creature I can see w/in 10 ft or I gain 1d10 Temp HP."),
 		},
 		"taunting step" : {
 			name : "Taunting Step",
 			extraname : "Steps of the Fey Option",
-			source : [["PHB2024", 159]],
+			source : [["P24", 159]],
 			description : desc("Creatures w/in 5 ft of the space I left must pass a Wis save or have Disadv on attack rolls against creatures other than me until the start of my next turn."),
 		},
 		autoSelectExtrachoices : [{
@@ -7436,7 +7436,7 @@ legacySubClassRefactor("warlock", "the archfey", {
     },
     "subclassfeature6": {
       name: "Misty Escape",
-      source: [["PHB2024", 159]],
+      source: [["P24", 159]],
       minlevel: 6,
 	  action: [["reaction", " (When I take damage)"]],
       description: desc([
@@ -7445,13 +7445,13 @@ legacySubClassRefactor("warlock", "the archfey", {
 	    "disappearing step" : {
 			name : "Disappearing Step",
 			extraname : "Steps of the Fey Option",
-			source : [["PHB2024", 159]],
+			source : [["P24", 159]],
 			description : desc("I'm Invisible until the start of my next turn or I attack, deal damage, or cast a spell."),
 		},
 		"dreadful step" : {
 			name : "Dreadful Step",
 			extraname : "Steps of the Fey Option",
-			source : [["PHB2024", 159]],
+			source : [["P24", 159]],
 			description : desc("Creatures within 5 ft of the space I left OR I appear in must pass a Wis save or take 2d10 Psych damage."),
 		},
 		autoSelectExtrachoices : [{
@@ -7462,7 +7462,7 @@ legacySubClassRefactor("warlock", "the archfey", {
     },
     "subclassfeature10": {
       name: "Beguiling Defenses",
-      source: [["PHB2024", 159]],
+      source: [["P24", 159]],
       minlevel: 10,
       savetxt: {immune: ["Charmed"]},
       usages: 1,
@@ -7474,7 +7474,7 @@ legacySubClassRefactor("warlock", "the archfey", {
     },
     "subclassfeature14": {
       name: "Bewitching Magic",
-      source: [["PHB2024", 160]],
+      source: [["P24", 160]],
       minlevel: 14,
       description: desc([
         "Right after I cast an Ench or Illus spell with an action + spell slot, I can cast Misty Step as part of the same action and without spending a spell slot.",
@@ -7485,11 +7485,11 @@ legacySubClassRefactor("warlock", "the archfey", {
 legacySubClassRefactor("warlock", "the celestial", {
   regExpSearch: /^(?=.*(warlock))(?=.*(celestial)).*$/i,
   subname: "Celestial Patron",
-  source: [["PHB2024", 160]],
+  source: [["P24", 160]],
   features: {
     "subclassfeature3": {
       name: "Healing Light",
-      source: [["PHB2024", 160]],
+      source: [["P24", 160]],
       minlevel: 3,
       limfeaname: "Healing Light (d6s)",
       usages: [0, 0, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
@@ -7530,7 +7530,7 @@ legacySubClassRefactor("warlock", "the celestial", {
     },
     "subclassfeature6": {
       name: "Radiant Soul",
-      source: [["PHB2024", 160]],
+      source: [["P24", 160]],
       minlevel: 6,
       dmgres: ["Radiant"],
       description: desc([
@@ -7539,7 +7539,7 @@ legacySubClassRefactor("warlock", "the celestial", {
     },
     "subclassfeature10": {
       name: "Celestial Resilience",
-      source: [["PHB2024", 161]],
+      source: [["P24", 161]],
       minlevel: 10,
       description: desc([
         "I gain Temp HP when I use Magical Cunning or finish a Rest (my Warlock level + Cha mod). Up to five creatures I can see each gain Temp HP (1/2 my Warlock level + Cha mod).",
@@ -7547,7 +7547,7 @@ legacySubClassRefactor("warlock", "the celestial", {
     },
     "subclassfeature14": {
       name: "Searing Vengeance",
-      source: [["PHB2024", 161]],
+      source: [["P24", 161]],
       minlevel: 14,
       description: desc([
         "Once per Long Rest when an ally within 60 ft or I am about to make a Death Save, I can end Prone & the creature regains half its max HP.",
@@ -7559,11 +7559,11 @@ legacySubClassRefactor("warlock", "the celestial", {
 legacySubClassRefactor("warlock", "the fiend", {
   regExpSearch: /^(?=.*(warlock))(?=.*(fiend)).*$/i,
   subname: "Fiend Patron",
-  source: [["PHB2024", 161]],
+  source: [["P24", 161]],
   features: {
     "subclassfeature3": {
       name: "Dark One's Blessing",
-      source: [["PHB2024", 161]],
+      source: [["P24", 161]],
       minlevel: 3,
 	  spellcastingBonus: [{
 		name: "Fiend Patron Spells (3)",
@@ -7600,7 +7600,7 @@ legacySubClassRefactor("warlock", "the fiend", {
     },
     "subclassfeature6": {
       name: "Dark One's Own Luck",
-      source: [["PHB2024", 162]],
+      source: [["P24", 162]],
       minlevel: 6,
       usages: "Charisma modifier per ",
       usagescalc: "event.value = Math.max(1, What('Cha Mod'));",
@@ -7611,7 +7611,7 @@ legacySubClassRefactor("warlock", "the fiend", {
     },
     "subclassfeature10": {
       name: "Fiendish Resilience",
-      source: [["PHB2024", 162]],
+      source: [["P24", 162]],
       minlevel: 10,
       description: desc([
         "At the end of a Rest, I can choose a damage type (not Force) to be Resistant to until I choose another.",
@@ -7619,7 +7619,7 @@ legacySubClassRefactor("warlock", "the fiend", {
     },
     "subclassfeature14": {
       name: "Hurl Through Hell",
-      source: [["PHB2024", 162]],
+      source: [["P24", 162]],
       minlevel: 14,
       usages: 1,
       recovery: "long rest",
@@ -7633,11 +7633,11 @@ legacySubClassRefactor("warlock", "the fiend", {
 legacySubClassRefactor("warlock", "the great old one", {
   regExpSearch: /^(?=.*(warlock))(?=.*(great old one)).*$/i,
   subname: "Great Old One Patron",
-  source: [["PHB2024", 162]],
+  source: [["P24", 162]],
   features: {
     "subclassfeature3": {
       name: "Awakened Mind",
-      source: [["PHB2024", 162]],
+      source: [["P24", 162]],
       minlevel: 3,
 	  action: "bonus action",
 	  spellcastingBonus: [{
@@ -7675,7 +7675,7 @@ legacySubClassRefactor("warlock", "the great old one", {
     },
     "subclassfeature3.1": {
       name: "Psychic Spells",
-      source: [["PHB2024", 163]],
+      source: [["P24", 163]],
       minlevel: 3,
       description: desc([
         "When I cast a Warlock spell that deals damage I can change to Psych damage. When I cast Ench or Illus Warlock spells I can forgo Verbal or Somatic components.",
@@ -7683,7 +7683,7 @@ legacySubClassRefactor("warlock", "the great old one", {
     },
     "subclassfeature6": {
       name: "Clairvoyant Combatant",
-      source: [["PHB2024", 163]],
+      source: [["P24", 163]],
       minlevel: 6,
       usages: 1,
       recovery: "short rest",
@@ -7694,7 +7694,7 @@ legacySubClassRefactor("warlock", "the great old one", {
     },
     "subclassfeature10": {
       name: "Eldritch Hex",
-      source: [["PHB2024", 163]],
+      source: [["P24", 163]],
       minlevel: 10,
       spellcastingBonus: [{
         name: "Eldritch Hex",
@@ -7708,7 +7708,7 @@ legacySubClassRefactor("warlock", "the great old one", {
     },
     "subclassfeature10.1": {
       name: "Thought Shield",
-      source: [["PHB2024", 163]],
+      source: [["P24", 163]],
       minlevel: 10,
       dmgres: ["Psychic"],
       description: desc([
@@ -7717,7 +7717,7 @@ legacySubClassRefactor("warlock", "the great old one", {
     },
     "subclassfeature14": {
       name: "Create Thrall",
-      source: [["PHB2024", 163]],
+      source: [["P24", 163]],
       minlevel: 14,
       description: desc([
         "Summon Aberration can not require Concentration; That casting lasts 1 min and the Aberration has Temp HP (my Warlock level + Cha mod).",
@@ -7729,7 +7729,7 @@ legacySubClassRefactor("warlock", "the great old one", {
 legacyClassRefactor("wizard", {
   regExpSearch: /wizard/i,
   name: "Wizard",
-  source: [["PHB2024", 165]],
+  source: [["P24", 165]],
   primaryAbility: ["Intelligence"],
   abilitySave: 4,
   prereqs: "Intelligence 13",
@@ -7761,7 +7761,7 @@ legacyClassRefactor("wizard", {
   features: {
     "spellcasting": {
       name: "Spellcasting",
-      source: [["PHB2024", 165]],
+      source: [["P24", 165]],
       minlevel: 1,
       additional: levels.map(function (n, idx) {
         var cantr = [3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5][idx];
@@ -7796,7 +7796,7 @@ legacyClassRefactor("wizard", {
     },
     "ritual adept": {
       name: "Ritual Adept",
-      source: [["PHB2024", 166]],
+      source: [["P24", 166]],
       minlevel: 1,
       description: desc([
         "I can cast any spell as a Ritual if that spell has the Ritual tag and is in my spellbook.",
@@ -7804,7 +7804,7 @@ legacyClassRefactor("wizard", {
     },
     "arcane recovery": {
       name: "Arcane Recovery",
-      source: [["PHB2024", 166]],
+      source: [["P24", 166]],
       minlevel: 1,
 	  usages: 1,
 	  recovery: "short rest",
@@ -7819,7 +7819,7 @@ legacyClassRefactor("wizard", {
     "scholar": function () {
       var a = {
         name: "Scholar",
-        source: [["PHB2024", 166]],
+        source: [["P24", 166]],
         minlevel: 2,
         description: desc("I gain Expertise in one of these in which I have proficiency: Arcana, History, Investigation, Medicine, Nature, or Religion."),
         skillstxt: "I gain Expertise in one skill; Arcana, History, Investigation, Medicine, Nature, or Religion",
@@ -7848,7 +7848,7 @@ legacyClassRefactor("wizard", {
     }(),
     "subclassfeature3": {
       name: "Wizard Subclass",
-      source: [["PHB2024", 167]],
+      source: [["P24", 167]],
       minlevel: 3,
       description: desc([
         "Choose a Wizard subclass and put it in the 'Class' field.",
@@ -7856,7 +7856,7 @@ legacyClassRefactor("wizard", {
     },
     "memorize spell": {
       name: "Memorize Spell",
-      source: [["PHB2024", 167]],
+      source: [["P24", 167]],
       minlevel: 5,
       description: desc([
         "When I finish a Short Rest I can replace one Prepared level 1+ Wizard spell with another.",
@@ -7864,7 +7864,7 @@ legacyClassRefactor("wizard", {
     },
     "spell mastery": {
       name: "Spell Mastery",
-      source: [["PHB2024", 167]],
+      source: [["P24", 167]],
       minlevel: 18,
       description: desc([
         "One level 1 & one level 2 spell in my spellbook with a casting time of 1 action are always Prepared. I can cast them at their lowest level without a spell slot; To cast either at a higher level I must spend a spell slot. I can replace these at the end of a Long Rest.",
@@ -7872,7 +7872,7 @@ legacyClassRefactor("wizard", {
     },
     "epic boon": {
       name: "Epic Boon",
-      source: [["PHB2024", 167]],
+      source: [["P24", 167]],
       minlevel: 19,
       description: desc([
         "I gain an Epic Boon feat, or another feat of my choice for which I qualify.",
@@ -7880,7 +7880,7 @@ legacyClassRefactor("wizard", {
     },
     "signature spells": {
       name: "Signature Spell",
-      source: [["PHB2024", 167]],
+      source: [["P24", 167]],
       minlevel: 20,
       description: desc([
         "Two level 3 spells are always Prepared; Once per Rest I can cast them at their lowest level without a spell slot; To cast either at a higher level I must spend a spell slot.",
@@ -7891,12 +7891,12 @@ legacyClassRefactor("wizard", {
 legacySubClassRefactor("wizard", "abjurer", {
   regExpSearch: /^(?=.*(wizard))(?=.*(abjurer)).*$/i,
   subname: "Abjurer",
-  source: [["PHB2024", 172]],
+  source: [["P24", 172]],
   replaces: "abjuration",
   features: {
     "subclassfeature3": {
       name: "Abjuration Savant",
-      source: [["PHB2024", 172]],
+      source: [["P24", 172]],
       minlevel: 3,
 	  spellcastingBonus: [{
 		name: "Abjuration Savant (3)",
@@ -7969,7 +7969,7 @@ legacySubClassRefactor("wizard", "abjurer", {
     },
     "subclassfeature3.1": {
       name: "Arcane Ward",
-      source: [["PHB2024", 172]],
+      source: [["P24", 172]],
       minlevel: 3,
       description: desc([
         "Once per Long Rest when I cast an Abj spell with a spell slot I can create a magic ward on myself that lasts until the end of my next Long Rest. When I take damage the ward takes it instead; I apply my Resistances & Vulnerabilities before this. If the ward reaches 0 Hit Points I take any remaining damage and the ward can't take any more.",
@@ -7978,7 +7978,7 @@ legacySubClassRefactor("wizard", "abjurer", {
     },
     "subclassfeature6": {
       name: "Projected Ward",
-      source: [["PHB2024", 172]],
+      source: [["P24", 172]],
       minlevel: 6,
       description: desc([
         "When a creature I can see w/in 30 ft of me takes damage, I can take a Reaction for my Arcane Ward to absorb that it after that creature's Resistances & Vulnerabilities. If the ward reaches 0 Hit Points the warded creature takes any remaining damage.",
@@ -7986,7 +7986,7 @@ legacySubClassRefactor("wizard", "abjurer", {
     },
     "subclassfeature10": {
       name: "Spell Breaker",
-      source: [["PHB2024", 173]],
+      source: [["P24", 173]],
       minlevel: 10,
       spellcastingBonus: [{
         name: "Spell Breaker",
@@ -8000,7 +8000,7 @@ legacySubClassRefactor("wizard", "abjurer", {
     },
     "subclassfeature14": {
 	  name : "Spell Resistance",
-	  source : [["PHB2024", 173]],
+	  source : [["P24", 173]],
 	  minlevel : 14,
 	  savetxt : {
 		adv_vs : ["saving throws against spells"],
@@ -8015,12 +8015,12 @@ legacySubClassRefactor("wizard", "abjurer", {
 legacySubClassRefactor("wizard", "diviner", {
   regExpSearch: /^(?=.*(wizard))(?=.*(diviner)).*$/i,
   subname: "Diviner",
-  source: [["PHB2024", 173]],
+  source: [["P24", 173]],
   replaces: "divination",
   features: {
     "subclassfeature3": {
       name: "Divination Savant",
-      source: [["PHB2024", 173]],
+      source: [["P24", 173]],
       minlevel: 3,
 	  spellcastingBonus: [{
 		name: "Divination Savant (3)",
@@ -8093,7 +8093,7 @@ legacySubClassRefactor("wizard", "diviner", {
     },
     "subclassfeature3.1": {
       name: "Portent",
-      source: [["PHB2024", 173]],
+      source: [["P24", 173]],
       minlevel: 3,
       additional: levels.map(function (n) {
         return n < 2 ? "" : (n < 14 ? 2 : 3) + "d20 after a long rest";
@@ -8104,7 +8104,7 @@ legacySubClassRefactor("wizard", "diviner", {
     },
     "subclassfeature6": {
       name: "Expert Divination",
-      source: [["PHB2024", 173]],
+      source: [["P24", 173]],
       minlevel: 6,
       description: desc([
         "When I cast using a level 2+ spell slot, I regain one slot below the level cast & level 5-.",
@@ -8112,7 +8112,7 @@ legacySubClassRefactor("wizard", "diviner", {
     },
     "subclassfeature10": {
       name: "The Third Eye",
-      source: [["PHB2024", 173]],
+      source: [["P24", 173]],
       minlevel: 10,
       action: "bonus action",
       usages: 1,
@@ -8126,7 +8126,7 @@ legacySubClassRefactor("wizard", "diviner", {
     },
     "subclassfeature14": {
       name: "Greater Portent",
-      source: [["PHB2024", 173]],
+      source: [["P24", 173]],
       minlevel: 14,
       description: desc([
         "Roll three d20s for my Portent feature rather than two.",
@@ -8137,12 +8137,12 @@ legacySubClassRefactor("wizard", "diviner", {
 legacySubClassRefactor("wizard", "evoker", {
   regExpSearch: /^(?=.*(wizard))(?=.*(evoker)).*$/i,
   subname: "Evoker",
-  source: [["PHB2024", 174]],
+  source: [["P24", 174]],
   replaces: "evocation",
   features: {
     "subclassfeature3": {
       name: "Evocation Savant",
-      source: [["PHB2024", 174]],
+      source: [["P24", 174]],
       minlevel: 3,
 	  spellcastingBonus: [{
 		name: "Evocation Savant (3)",
@@ -8215,7 +8215,7 @@ legacySubClassRefactor("wizard", "evoker", {
     },
     "subclassfeature3.1": {
       name: "Potent Cantrip",
-      source: [["PHB2024", 174]],
+      source: [["P24", 174]],
       minlevel: 3,
       description: desc([
         "When I cast a cantrip at a creature and miss or the target passes its save, the target takes half the cantrip's damage (if any) but suffers no additional effect from the cantrip.",
@@ -8223,7 +8223,7 @@ legacySubClassRefactor("wizard", "evoker", {
     },
     "subclassfeature6": {
       name: "Sculpt Spell",
-      source: [["PHB2024", 174]],
+      source: [["P24", 174]],
       minlevel: 6,
       description: desc([
         "When I cast an Evoc spell that affects other creatures I can see I can choose the spell's level + 1 creatures who pass automatically & take no damage if they would've taken half.",
@@ -8231,7 +8231,7 @@ legacySubClassRefactor("wizard", "evoker", {
     },
     "subclassfeature10": {
       name: "Empowered Evocation",
-      source: [["PHB2024", 174]],
+      source: [["P24", 174]],
       minlevel: 10,
       description: desc([
         "When I cast an Evoc Wizard spell I can add my Int mod to one of its damage rolls.",
@@ -8239,7 +8239,7 @@ legacySubClassRefactor("wizard", "evoker", {
     },
     "subclassfeature14": {
       name: "Overchannel",
-      source: [["PHB2024", 174]],
+      source: [["P24", 174]],
       minlevel: 14,
       description: desc([
         "When I cast a Wizard spell that deals damage with a slot of level 1-5, I can deal max damage with that spell on the turn I cast it once per rest with no adverse effect.",
@@ -8251,12 +8251,12 @@ legacySubClassRefactor("wizard", "evoker", {
 legacySubClassRefactor("wizard", "illusionist", {
   regExpSearch: /^(?=.*(wizard))(?=.*(illusionist)).*$/i,
   subname: "Illusionist",
-  source: [["PHB2024", 175]],
+  source: [["P24", 175]],
   replaces: "illusion",
   features: {
     "subclassfeature3": {
       name: "Illusion Savant",
-      source: [["PHB2024", 175]],
+      source: [["P24", 175]],
       minlevel: 3,
 	  spellcastingBonus: [{
 		name: "Illusion Savant (3)",
@@ -8329,7 +8329,7 @@ legacySubClassRefactor("wizard", "illusionist", {
     },
     "subclassfeature3.1": {
       name: "Improved Illusion",
-      source: [["PHB2024", 175]],
+      source: [["P24", 175]],
       minlevel: 3,
       spellcastingBonus: [{
         name: "Improved Illusion",
@@ -8343,7 +8343,7 @@ legacySubClassRefactor("wizard", "illusionist", {
     },
     "subclassfeature6": {
       name: "Phantasmal Creatures",
-      source: [["PHB2024", 175]],
+      source: [["P24", 175]],
       minlevel: 6,
       spellcastingBonus: [{
         name: "Phantasmal Creatures",
@@ -8358,7 +8358,7 @@ legacySubClassRefactor("wizard", "illusionist", {
     },
     "subclassfeature10": {
       name: "Illusory Self",
-      source: [["PHB2024", 175]],
+      source: [["P24", 175]],
       minlevel: 10,
       action: "reaction",
       usages: 1,
@@ -8370,7 +8370,7 @@ legacySubClassRefactor("wizard", "illusionist", {
     },
     "subclassfeature14": {
       name: "Illusory Reality",
-      source: [["PHB2024", 175]],
+      source: [["P24", 175]],
       minlevel: 14,
       action: "bonus action",
       description: desc([
@@ -8383,7 +8383,7 @@ legacySubClassRefactor("wizard", "illusionist", {
 BackgroundList["acolyte"] = {
   regExpSearch: /^(?=.*acolyte).*$/i,
   name: "Acolyte",
-  source: [["PHB2024", 178]],
+  source: [["P24", 178]],
   scorestxt: ["+2 and +1 -or- +1 to each from Intelligence, Wisdom, and Charisma"],
   skills: ["Insight", "Religion"],
   gold: 8,
@@ -8405,7 +8405,7 @@ BackgroundList["acolyte"] = {
 BackgroundList["artisan"] = {
   regExpSearch: /^(?=.*artisan).*$/i,
   name: "Artisan",
-  source: [["PHB2024", 178]],
+  source: [["P24", 178]],
   scorestxt: ["+2 and +1 -or- +1 to each from Strength, Dexterity, and Intelligence"],
   skills: ["Investigation", "Persuasion"],
   toolProfs: [["Artisan's tools", 1]],
@@ -8423,7 +8423,7 @@ BackgroundList["artisan"] = {
 BackgroundList["charlatan"] = {
   regExpSearch: /^(?=.*charlatan).*$/i,
   name: "Charlatan",
-  source: [["PHB2024", 179]],
+  source: [["P24", 179]],
   scorestxt: ["+2 and +1 -or- +1 to each from Dexterity, Constitution, and Charisma"],
   skills: ["Deception", "Sleight of Hand"],
   toolProfs: [["Forgery Kit"]],
@@ -8443,7 +8443,7 @@ BackgroundList["charlatan"] = {
 BackgroundList["criminal"] = {
   regExpSearch: /^(?=.*criminal).*$/i,
   name: "Criminal",
-  source: [["PHB2024", 179]],
+  source: [["P24", 179]],
   scorestxt: ["+2 and +1 -or- +1 to each from Dexterity, Constitution, and Intelligence"],
   skills: ["Sleight of Hand", "Stealth"],
   toolProfs: [["Thieves' Tools"]],
@@ -8465,7 +8465,7 @@ BackgroundList["criminal"] = {
 BackgroundList["entertainer"] = {
   regExpSearch: /^(?=.*entertainer).*$/i,
   name: "Entertainer",
-  source: [["PHB2024", 180]],
+  source: [["P24", 180]],
   scorestxt: ["+2 and +1 -or- +1 to each from Strength, Dexterity, and Charisma"],
   skills: ["Acrobatics", "Performance"],
   toolProfs: [["Musical Instrument", 1]],
@@ -8488,7 +8488,7 @@ BackgroundList["entertainer"] = {
 BackgroundList["farmer"] = {
   regExpSearch: /^(?=.*farmer).*$/i,
   name: "Farmer",
-  source: [["PHB2024", 180]],
+  source: [["P24", 180]],
   scorestxt: ["+2 and +1 -or- +1 to each from Strength, Constitution, and Wisdom"],
   skills: ["Animal Handling", "Nature"],
   toolProfs: [["Carpenter's Tools"]],
@@ -8512,7 +8512,7 @@ BackgroundList["farmer"] = {
 BackgroundList["guard"] = {
   regExpSearch: /^(?=.*guard).*$/i,
   name: "Guard",
-  source: [["PHB2024", 181]],
+  source: [["P24", 181]],
   scorestxt: ["+2 and +1 -or- +1 to each from Strength, Intelligence, and Wisdom"],
   skills: ["Athletics", "Perception"],
   toolProfs: [["Gaming Set", 1]],
@@ -8538,7 +8538,7 @@ BackgroundList["guard"] = {
 BackgroundList["guide"] = {
   regExpSearch: /^(?=.*guide).*$/i,
   name: "Guide",
-  source: [["PHB2024", 181]],
+  source: [["P24", 181]],
   scorestxt: ["+2 and +1 -or- +1 to each from Dexterity, Constitution, and Wisdom"],
   skills: ["Stealth", "Survival"],
   toolProfs: [["Cartographer's Tools"]],
@@ -8563,7 +8563,7 @@ BackgroundList["guide"] = {
 BackgroundList["hermit"] = {
   regExpSearch: /^(?=.*hermit).*$/i,
   name: "Hermit",
-  source: [["PHB2024", 182]],
+  source: [["P24", 182]],
   scorestxt: ["+2 and +1 -or- +1 to each from Constitution, Wisdom, and Charisma"],
   skills: ["Medicine", "Religion"],
   toolProfs: [["Herbalism Kit"]],
@@ -8587,7 +8587,7 @@ BackgroundList["hermit"] = {
 BackgroundList["merchant"] = {
   regExpSearch: /^(?=.*merchant).*$/i,
   name: "Merchant",
-  source: [["PHB2024", 182]],
+  source: [["P24", 182]],
   scorestxt: ["+2 and +1 -or- +1 to each from Constitution, Intelligence, and Charisma"],
   skills: ["Animal Handling", "Persuasion"],
   toolProfs: [["Navigator's Tools"]],
@@ -8607,7 +8607,7 @@ BackgroundList["merchant"] = {
 BackgroundList["noble"] = {
   regExpSearch: /^(?=.*noble).*$/i,
   name: "Noble",
-  source: [["PHB2024", 183]],
+  source: [["P24", 183]],
   scorestxt: ["+2 and +1 -or- +1 to each from Strength, Intelligence, and Charisma"],
   skills: ["History", "Persuasion"],
   toolProfs: [["Gaming Set", 1]],
@@ -8628,7 +8628,7 @@ BackgroundList["noble"] = {
 BackgroundList["sage"] = {
   regExpSearch: /^(?=.*sage).*$/i,
   name: "Sage",
-  source: [["PHB2024", 183]],
+  source: [["P24", 183]],
   scorestxt: ["+2 and +1 -or- +1 to each from Constitution, Intelligence, and Wisdom"],
   skills: ["Arcana", "History"],
   toolProfs: [["Calligrapher's Supplies"]],
@@ -8651,7 +8651,7 @@ BackgroundList["sage"] = {
 BackgroundList["sailor"] = {
   regExpSearch: /^(?=.*sailor).*$/i,
   name: "Sailor",
-  source: [["PHB2024", 184]],
+  source: [["P24", 184]],
   scorestxt: ["+2 and +1 -or- +1 to each from Strength, Dexterity, and Wisdom"],
   skills: ["Acrobatics", "Perception"],
   toolProfs: [["Navigator's Tools"]],
@@ -8673,7 +8673,7 @@ BackgroundList["sailor"] = {
 BackgroundList["scribe"] = {
   regExpSearch: /^(?=.*scribe).*$/i,
   name: "Scribe",
-  source: [["PHB2024", 184]],
+  source: [["P24", 184]],
   scorestxt: ["+2 and +1 -or- +1 to each from Dexterity, Intelligence, and Wisdom"],
   skills: ["Investigation", "Perception"],
   toolProfs: [["Calligrapher's Tools"]],
@@ -8695,7 +8695,7 @@ BackgroundList["scribe"] = {
 BackgroundList["soldier"] = {
   regExpSearch: /^(?=.*soldier).*$/i,
   name: "Soldier",
-  source: [["PHB2024", 185]],
+  source: [["P24", 185]],
   scorestxt: ["+2 and +1 -or- +1 to each from Strength, Dexterity, and Constitution"],
   skills: ["Athletics", "Intimidation"],
   toolProfs: [["Gaming Set", 1]],
@@ -8720,7 +8720,7 @@ BackgroundList["soldier"] = {
 BackgroundList["wayfarer"] = {
   regExpSearch: /^(?=.*wayfarer).*$/i,
   name: "Wayfarer",
-  source: [["PHB2024", 185]],
+  source: [["P24", 185]],
   scorestxt: ["+2 and +1 -or- +1 to each from Dexterity, Wisdom, and Charisma"],
   skills: ["Insight", "Stealth"],
   toolProfs: [["Thieves' Tools"]],
@@ -8744,7 +8744,7 @@ BackgroundFeatureList["magic initiate (cleric)"] = {
   description: desc([
     "",
   ]),
-  source: [["PHB2024", 178]],
+  source: [["P24", 178]],
   eval: function () {
     AddFeat("Magic Initiate (Cleric) [Origin]");
   },
@@ -8756,7 +8756,7 @@ BackgroundFeatureList["crafter"] = {
   description: desc([
     "",
   ]),
-  source: [["PHB2024", 178]],
+  source: [["P24", 178]],
   eval: function () {
     AddFeat("Crafter [Origin]");
   },
@@ -8768,7 +8768,7 @@ BackgroundFeatureList["skilled"] = {
   description: desc([
     "",
   ]),
-  source: [["PHB2024", 179]],
+  source: [["P24", 179]],
   eval: function () {
     AddFeat("Skilled [Origin]");
   },
@@ -8780,7 +8780,7 @@ BackgroundFeatureList["alert"] = {
   description: desc([
     "",
   ]),
-  source: [["PHB2024", 179]],
+  source: [["P24", 179]],
   eval: function () {
     AddFeat("Alert [Origin]");
   },
@@ -8792,7 +8792,7 @@ BackgroundFeatureList["musician"] = {
   description: desc([
     "",
   ]),
-  source: [["PHB2024", 180]],
+  source: [["P24", 180]],
   eval: function () {
     AddFeat("Musician [Origin]");
   },
@@ -8804,7 +8804,7 @@ BackgroundFeatureList["tough"] = {
   description: desc([
     "",
   ]),
-  source: [["PHB2024", 180]],
+  source: [["P24", 180]],
   eval: function () {
     AddFeat("Tough [Origin]");
   },
@@ -8816,7 +8816,7 @@ BackgroundFeatureList["magic initiate (druid)"] = {
   description: desc([
     "",
   ]),
-  source: [["PHB2024", 181]],
+  source: [["P24", 181]],
   eval: function () {
     AddFeat("Magic Initiate (Druid) [Origin]");
   },
@@ -8828,7 +8828,7 @@ BackgroundFeatureList["healer"] = {
   description: desc([
     "",
   ]),
-  source: [["PHB2024", 182]],
+  source: [["P24", 182]],
   eval: function () {
     AddFeat("Healer [Origin]");
   },
@@ -8840,7 +8840,7 @@ BackgroundFeatureList["lucky"] = {
   description: desc([
     "",
   ]),
-  source: [["PHB2024", 182]],
+  source: [["P24", 182]],
   eval: function () {
     AddFeat("Lucky [Origin]");
   },
@@ -8852,7 +8852,7 @@ BackgroundFeatureList["magic initiate (wizard)"] = {
   description: desc([
     "",
   ]),
-  source: [["PHB2024", 183]],
+  source: [["P24", 183]],
   eval: function () {
     AddFeat("Magic Initiate (Wizard) [Origin]");
   },
@@ -8864,7 +8864,7 @@ BackgroundFeatureList["tavern brawler"] = {
   description: desc([
     "",
   ]),
-  source: [["PHB2024", 184]],
+  source: [["P24", 184]],
   eval: function () {
     AddFeat("Tavern Brawler [Origin]");
   },
@@ -8876,7 +8876,7 @@ BackgroundFeatureList["savage attacker"] = {
   description: desc([
     "",
   ]),
-  source: [["PHB2024", 185]],
+  source: [["P24", 185]],
   eval: function () {
     AddFeat("Savage Attacker [Origin]");
   },
@@ -8889,7 +8889,7 @@ legacyRaceRefactor("aasimar", {
   regExpSearch: /aasimar/i,
   name: "Aasimar",
   sortname: "Aasimar",
-  source: [["PHB2024", 186]],
+  source: [["P24", 186]],
   plural: "Aasimar",
   size: [3, 4],
   speed: {walk: {spd: 30, enc: 20}},
@@ -8942,7 +8942,7 @@ legacyRaceRefactor("aasimar", {
 legacyRaceRefactor("dragonborn", {
   regExpSearch: /dragonborn/i,
   name: "Dragonborn",
-  source: [["PHB2024", 187]],
+  source: [["P24", 187]],
   plural: "Dragonborn",
   size: 3,
   speed: {
@@ -8952,7 +8952,7 @@ legacyRaceRefactor("dragonborn", {
   weaponOptions: [{
     regExpSearch: /^(?=.*breath)(?=.*weapon).*$/i,
     name: "Breath weapon",
-    source: [["PHB2024", 187]],
+    source: [["P24", 187]],
     ability: 3,
     type: "Natural",
     damage: [1, 10, "fire"],
@@ -8996,7 +8996,7 @@ legacyRaceRefactor("dragonborn", {
     },
     "draconic flight": {
       name: "Draconic Flight",
-      source: [["PHB2024", 187]],
+      source: [["P24", 187]],
       minlevel: 5,
       action: ["bonus action"],
       usages: "Proficiency bonus per ",
@@ -9082,7 +9082,7 @@ legacyRaceRefactor("dwarf", {
   regExpSearch: /^(?=.*dwarf).*$/i,
   name: "Dwarf",
   sortname: "Dwarf",
-  source: [["PHB2024", 188]],
+  source: [["P24", 188]],
   plural: "Dwarves",
   size: 3,
   speed: {walk: {spd: 30, enc: 20}},
@@ -9118,7 +9118,7 @@ legacyRaceRefactor("elf", {
   regExpSearch: /^(?=.*elf).*$/i,
   name: "Elf",
   sortname: "Elf",
-  source: [["PHB2024", 190]],
+  source: [["P24", 190]],
   plural: "Elves",
   size: 3,
   speed: {walk: {spd: 30, enc: 20}},
@@ -9284,7 +9284,7 @@ legacyRaceRefactor("gnome", {
   regExpSearch: /^(?=.*gnome).*$/i,
   name: "Gnome",
   sortname: "Gnome",
-  source: [["PHB2024", 191]],
+  source: [["P24", 191]],
   plural: "Gnomes",
   size: 4,
   speed: {walk: {spd: 30, enc: 20}},
@@ -9362,7 +9362,7 @@ legacyRaceRefactor("goliath", {
   regExpSearch: /^(?=.*goliath).*$/i,
   name: "Goliath",
   sortname: "Goliath",
-  source: [["PHB2024", 192]],
+  source: [["P24", 192]],
   plural: "Goliaths",
   size: 3,
   speed: {walk: {spd: 35, enc: 25}},
@@ -9571,7 +9571,7 @@ legacyRaceRefactor("halfling", {
   regExpSearch: /^(?=.*halfling).*$/i,
   name: "Halfling",
   sortname: "Halfling",
-  source: [["PHB2024", 193]],
+  source: [["P24", 193]],
   plural: "Halflings",
   size: 4,
   speed: {walk: {spd: 30, enc: 20}},
@@ -9586,7 +9586,7 @@ legacyRaceRefactor("human", {
   regExpSearch: /^(?=.*human).*$/i,
   name: "Human",
   sortname: "Human",
-  source: [["PHB2024", 194]],
+  source: [["P24", 194]],
   plural: "Humans",
   size: [3, 4],
   speed: {walk: {spd: 30, enc: 20}},
@@ -9607,7 +9607,7 @@ legacyRaceRefactor("orc", {
   regExpSearch: /^(?=.*orc).*$/i,
   name: "Orc",
   sortname: "Orc",
-  source: [["PHB2024", 195]],
+  source: [["P24", 195]],
   plural: "Orcs",
   size: 3,
   speed: {walk: {spd: 35, enc: 25}},
@@ -9646,7 +9646,7 @@ legacyRaceRefactor("tiefling", {
   regExpSearch: /^(?=.*tiefling).*$/i,
   name: "Tiefling",
   sortname: "Tiefling",
-  source: [["PHB2024", 197]],
+  source: [["P24", 197]],
   plural: "Tieflings",
   size: [3, 4],
   speed: {walk: {spd: 30, enc: 20}},
@@ -9822,7 +9822,7 @@ RaceSubList["tiefling-infernal"] = {
 //Origin Feats
 FeatsList["alert"] = {
   name: "Alert [Origin]",
-  source: [["PHB2024", 200]],
+  source: [["P24", 200]],
   regExpSearch: /^(?=.*alert).*$/i,
   addMod: [{type: "skill", field: "Init", mod: "prof", text: "I can add my Proficiency Bonus to initiative rolls."}],
   description: "I add my Prof Bonus to Initiative rolls. I may swap Initiative with one willing ally as long as neither of us has the Incapacitated condition.",
@@ -9834,7 +9834,7 @@ FeatsList["alert"] = {
 };
 FeatsList["crafter"] = {
   name: "Crafter [Origin]",
-  source: [["PHB2024", 200]],
+  source: [["P24", 200]],
   regExpSearch: /^(?=.*crafter).*$/i,
   toolProfs: [["Artisan's tools", 3]],
   description: "I gain proficiency in three Fast Craft Artisan Tools of choice and can use them to Fast Craft during a long rest, (see Notes Page for details), the fast crafted item lasts until my next long rest. I received a 20% discount on non-magical objects.",
@@ -9861,7 +9861,7 @@ FeatsList["crafter"] = {
 };
 FeatsList["healer"] = {
   name: "Healer [Origin]",
-  source: [["PHB2024", 201]],
+  source: [["P24", 201]],
   regExpSearch: /^(?=.*healer).*$/i,
   action: [["action", "Battle Medic"]],
   description: "I can use a Healer's Kit as an action to allow 1 creature within 5ft of me to roll a Hit Die and regain HP equal to the roll plus my Prof Bonus, and when I roll a 1 on the die to heal using a spell or this feat I can reroll, but must use the new roll.",
@@ -9873,7 +9873,7 @@ FeatsList["healer"] = {
 };
 FeatsList["lucky"] = {
   name: "Lucky [Origin]",
-  source: [["PHB2024", 201]],
+  source: [["P24", 201]],
   regExpSearch: /^(?=.*lucky).*$/i,
   limfeaname: "Luck Points",
   usages: "Proficiency bonus per ",
@@ -9889,7 +9889,7 @@ FeatsList["lucky"] = {
 };
 FeatsList["magic initiate (cleric)"] = {
   name: "Magic Initiate (Cleric) [Origin]",
-  source: [["PHB2024", 201]],
+  source: [["P24", 201]],
   regExpSearch: /^(?=.*magic)(?=.*initiate)(?=.*cleric).*$/i,
   spellcastingAbility: [4, 5, 6],
   spellcastingBonus: [{
@@ -9916,7 +9916,7 @@ FeatsList["magic initiate (cleric)"] = {
 };
 FeatsList["magic initiate (druid)"] = {
   name: "Magic Initiate (Druid) [Origin]",
-  source: [["PHB2024", 201]],
+  source: [["P24", 201]],
   regExpSearch: /^(?=.*magic)(?=.*initiate)(?=.*druid).*$/i,
   spellcastingAbility: [4, 5, 6],
   spellcastingBonus: [{
@@ -9943,7 +9943,7 @@ FeatsList["magic initiate (druid)"] = {
 };
 FeatsList["magic initiate (wizard)"] = {
   name: "Magic Initiate (Wizard) [Origin]",
-  source: [["PHB2024", 201]],
+  source: [["P24", 201]],
   regExpSearch: /^(?=.*magic)(?=.*initiate)(?=.*wizard).*$/i,
   spellcastingAbility: [4, 5, 6],
   spellcastingBonus: [{
@@ -9970,7 +9970,7 @@ FeatsList["magic initiate (wizard)"] = {
 };
 FeatsList["musician"] = {
   name: "Musician [Origin]",
-  source: [["PHB2024", 201]],
+  source: [["P24", 201]],
   regExpSearch: /^(?=.*musician).*$/i,
   toolProfs: [["Musical Instrument", 3]],
   description: "I gain proficiency in 3 Musical Instruments and at the end of a Short or Long Rest I can play a song to give a number of allies up to my Prof Bonus Heroic Inspiration.",
@@ -9982,7 +9982,7 @@ FeatsList["musician"] = {
 };
 FeatsList["savage attacker"] = {
   name: "Savage Attacker [Origin]",
-  source: [["PHB2024", 201]],
+  source: [["P24", 201]],
   regExpSearch: /^(?=.*savage)(?=.*attacker).*$/i,
   description: "I've trained to deal particularly damaging strikes. Once per turn when I hit a target with a weapon, I can roll the weapon's damage dice twice and use either roll against the target.",
   descriptionFull: desc([
@@ -9991,7 +9991,7 @@ FeatsList["savage attacker"] = {
 };
 FeatsList["skilled"] = {
   name: "Skilled [Origin]",
-  source: [["PHB2024", 201]],
+  source: [["P24", 201]],
   regExpSearch: /^(?=.*skilled).*$/i,
   skillstxt: ["I gain Proficiency in three skills or tools of my choice"],
   description: "I gain Proficiency in three skills or tools of my choice",
@@ -10002,7 +10002,7 @@ FeatsList["skilled"] = {
 };
 FeatsList["tavern brawler"] = {
   name: "Tavern Brawler [Origin]",
-  source: [["PHB2024", 202]],
+  source: [["P24", 202]],
   regExpSearch: /^(?=.*tavern)(?=.*brawler).*$/i,
   weaponProfs: [false, false, ["Improvised weapons"]],
   calcChanges: {
@@ -10030,7 +10030,7 @@ FeatsList["tavern brawler"] = {
 };
 FeatsList["tough"] = {
   name: "Tough [Origin]",
-  source: [["PHB2024", 202]],
+  source: [["P24", 202]],
   regExpSearch: /^(?=.*tough).*$/i,
   calcChanges: {
     hp: function (totalHD) {
@@ -10045,7 +10045,7 @@ FeatsList["tough"] = {
 //General Feats
 FeatsList["actor"] = {
   name: "Actor",
-  source: [["PHB2024", 202]],
+  source: [["P24", 202]],
   regExpSearch: /^(?=.*actor).*$/i,
   scores: [0, 0, 0, 0, 0, 1],
   description: "+1 Cha, Adv Cha (Deception or Performance) checks to impersonate a person real or fiction. able to mimic the sounds of others DC 8 + Cha + PB Insight check to determine mimicry",  
@@ -10062,7 +10062,7 @@ FeatsList["actor"] = {
 };
 FeatsList["athlete"] = {
   name: "Athlete",
-  source: [["PHB2024", 202]],
+  source: [["P24", 202]],
   regExpSearch: /^(?=.*athlete).*$/i,
   speed: {climb: {spd: "walk", enc: "walk"}},
   description: "+1 Str or Dex, gain a climb speed equal to speed, can right self from prone using only 5 ft. of movement, can make running long or high jump after only 5 feet of movement.",  
@@ -10089,7 +10089,7 @@ FeatsList["athlete"] = {
 };
 FeatsList["charger"] = {
   name: "Charger",
-  source: [["PHB2024", 202]],
+  source: [["P24", 202]],
   regExpSearch: /^(?=.*charger).*$/i,
   scorestxt: "My Strength or Dexterity score increases by 1, to a maximum of 20.",
   description: "+1 Str or Dex, when I take the Dash action my base speed increases by 10 ft. for that action, and if I move at least 10 ft. in a straight line towards an enemy and attack as part of the Attack action I may either deal an additional 1d8 damage or push the target 10 feet away.",  
@@ -10115,7 +10115,7 @@ FeatsList["charger"] = {
 };
 FeatsList["chef"] = {
   name: "Chef",
-  source: [["PHB2024", 202]],
+  source: [["P24", 202]],
   regExpSearch: /^(?=.*chef).*$/i,
   scorestxt: "My Constitution or Wisdom score increases by 1, to a maximum of 20.",
   toolProfs: [["Cook's Utensils"]],
@@ -10143,7 +10143,7 @@ FeatsList["chef"] = {
 };
 FeatsList["crossbow expert"] = {
   name: "Crossbow Expert",
-  source: [["PHB2024", 203]],
+  source: [["P24", 203]],
   regExpSearch: /^(?=.*crossbow)(?=.*expert).*$/i,
   scores: [0, 1, 0, 0, 0, 0],
   description: "+1 Dex, I ignore the Loading property of crossbows, firing at an enemy within 5 feet does not impose disadvantage, and I can make an off-hand attack with a crossbow that has the light property and add my Dex modifier to the damage of the attack.",  
@@ -10161,7 +10161,7 @@ FeatsList["crossbow expert"] = {
 };
 FeatsList["crusher"] = {
   name: "Crusher",
-  source: [["PHB2024", 203]],
+  source: [["P24", 203]],
   regExpSearch: /^(?=.*crusher).*$/i,
   description: "+1 Str or Con, 1/turn when I hit a crea. with Blud. dmg, I can push 5ft to unoccupied space if crea. is 1 size larger than I or smaller, when I land a critical hit with Blud. dmg atks against that crea. have Adv. until the start of my next turn.",  
   descriptionFull: desc([
@@ -10186,7 +10186,7 @@ FeatsList["crusher"] = {
 };
 FeatsList["defensive duelist"] = {
   name: "Defensive Duelist",
-  source: [["PHB2024", 203]],
+  source: [["P24", 203]],
   regExpSearch: /^(?=.*defensive)(?=.*duelist).*$/i,
   scores: [0, 1, 0, 0, 0, 0],
   action: ["reaction", "Parry"],
@@ -10203,7 +10203,7 @@ FeatsList["defensive duelist"] = {
 };
 FeatsList["dual wielder"] = {
   name: "Dual Wielder",
-  source: [["PHB2024", 203]],
+  source: [["P24", 203]],
   regExpSearch: /^(?=.*dual)(?=.*wielder).*$/i,
   scorestxt: "My Strength or Dexterity score increases by 1, to a maximum of 20.",
   speed: {climb: {spd: "walk", enc: "walk"}},
@@ -10230,7 +10230,7 @@ FeatsList["dual wielder"] = {
 };
 FeatsList["durable"] = {
   name: "Durable",
-  source: [["PHB2024", 203]],
+  source: [["P24", 203]],
   regExpSearch: /^(?=.*crusher).*$/i,
   scores: [0, 0, 1, 0, 0, 0],
   savetxt: {adv_vs: ["Death Saving Throws"]},
@@ -10249,7 +10249,7 @@ FeatsList["durable"] = {
 };
 FeatsList["elemental adept"] = {
   name: "Elemental Adept",
-  source: [["PHB2024", 203]],
+  source: [["P24", 203]],
   regExpSearch: /^(?=.*elemental)(?=.*adept).*$/i,
   scorestxt: "My Intelligence, Wisdom, or Charisma score increases by 1, to a maximum of 20.",
   description: "+1 Int, Wis, or Cha, Choose one of the damage types: acid, cold, fire, lightning, or thunder. Spells I cast ignore resistance to damage from this damage type. For any spell I cast that deals this damage type, I can treat any 1 on a damage die as a 2.",  
@@ -10283,7 +10283,7 @@ FeatsList["elemental adept"] = {
 };
 FeatsList["fey touched"] = {
   name: "Fey Touched",
-  source: [["PHB2024", 203]],
+  source: [["P24", 203]],
   regExpSearch: /^(?=.*fey)(?=.*touched).*$/i,
   spellcastingBonus: [{
     name: "Misty Step",
@@ -10328,7 +10328,7 @@ FeatsList["fey touched"] = {
 };
 FeatsList["grappler"] = {
   name: "Grappler",
-  source: [["PHB2024", 202]],
+  source: [["P24", 202]],
   regExpSearch: /^(?=.*grappler).*$/i,
   description: "+1 Str or Dex, When I make an Unarmed Strike, I may deal damage and grapple the target, I have advantage on attack rolls made to grapple a target and can move my normal speed with a grappled target as long as they are my size or smaller.",  
   descriptionFull: desc([
@@ -10354,7 +10354,7 @@ FeatsList["grappler"] = {
 };
 FeatsList["great weapon master"] = {
   name: "Great Weapon Master",
-  source: [["PHB2024", 203]],
+  source: [["P24", 203]],
   regExpSearch: /^(?=.*great)(?=.*weapon)(?=.*master).*$/i,
   scores: [1, 0, 0, 0, 0, 0],
   description: "+1 Str, When I hit with a weapon that has the Heavy property, I can deal extra damage equal to my Prof Bonus, and if I score a Crit. and reduce a creature to 0 HP I may make another attack with the same weapon as a Bonus Action.",  
@@ -10381,7 +10381,7 @@ FeatsList["great weapon master"] = {
 };
 FeatsList["heavily armored"] = {
   name: "Heavily Armored",
-  source: [["PHB2024", 204]],
+  source: [["P24", 204]],
   regExpSearch: /^(?=.*heavily)(?=.*armored).*$/i,
   choices: ["Strength", "Constitution"],
   "strength": {
@@ -10405,7 +10405,7 @@ FeatsList["heavily armored"] = {
 };
 FeatsList["heavy armor master"] = {
   name: "Heavy Armor Master",
-  source: [["PHB2024", 204]],
+  source: [["P24", 204]],
   regExpSearch: /^(?=.*heavy)(?=.*armor)(?=.*master).*$/i,
   choices: ["Strength", "Constitution"],
   "strength": {
@@ -10429,7 +10429,7 @@ FeatsList["heavy armor master"] = {
 };
 FeatsList["inspiring leader"] = {
   name: "Inspiring Leader",
-  source: [["PHB2024", 204]],
+  source: [["P24", 204]],
   regExpSearch: /^(?=.*inspiring)(?=.*leader).*$/i,
   description: "+1 Wis or Cha, After a rest I can give a performance that grants up to 6 allies (can include yourself) Temp HP = my Character level + Wis/Cha.",  
   descriptionFull: desc([
@@ -10453,7 +10453,7 @@ FeatsList["inspiring leader"] = {
 };
 FeatsList["keen mind"] = {
   name: "Keen Mind",
-  source: [["PHB2024", 205]],
+  source: [["P24", 205]],
   regExpSearch: /^(?=.*keen)(?=.*mind).*$/i,
   scores: [0, 0, 0, 1, 0, 0],
   action: ["bonus action", "Study"],
@@ -10472,7 +10472,7 @@ FeatsList["keen mind"] = {
 };
 FeatsList["lightly armored"] = {
   name: "Lightly Armored",
-  source: [["PHB2024", 205]],
+  source: [["P24", 205]],
   regExpSearch: /^(?=.*lightly)(?=.*armored).*$/i,
   armorProfs: [true, false, false, true],
   description: "+1 Str/Dex, I gain training with Light armor and Shields.",  
@@ -10498,7 +10498,7 @@ FeatsList["lightly armored"] = {
 };
 FeatsList["mage slayer"] = {
   name: "Mage Slayer",
-  source: [["PHB2024", 205]],
+  source: [["P24", 205]],
   regExpSearch: /^(?=.*mage)(?=.*slayer).*$/i,
   limfeaname: "Guarded Mind",
   usages: 1,
@@ -10526,7 +10526,7 @@ FeatsList["mage slayer"] = {
 };
 FeatsList["martial weapon training"] = {
   name: "Martial Weapon Training",
-  source: [["PHB2024", 205]],
+  source: [["P24", 205]],
   regExpSearch: /^(?=.*martial)(?=.*weapon)(?=.*training).*$/i,
   description: "+1 Str/Dex, I gain proficiency with Martial weapons.",  
   descriptionFull: desc([
@@ -10552,7 +10552,7 @@ FeatsList["martial weapon training"] = {
 };
 FeatsList["medium armor master"] = {
   name: "Medium Armor Master",
-  source: [["PHB2024", 205]],
+  source: [["P24", 205]],
   regExpSearch: /^(?=.*medium)(?=.*armor)(?=.*master).*$/i,
   choices: ["Strength", "Dexterity"],
   "strength": {
@@ -10576,7 +10576,7 @@ FeatsList["medium armor master"] = {
 };
 FeatsList["moderately armored"] = {
   name: "Moderately Armored",
-  source: [["PHB2024", 205]],
+  source: [["P24", 205]],
   regExpSearch: /^(?=.*moderately)(?=.*armored).*$/i,
   choices: ["Strength", "Dexterity"],
   "strength": {
@@ -10602,7 +10602,7 @@ FeatsList["moderately armored"] = {
 };
 FeatsList["mounted combatant"] = {
   name: "Mounted Combatant",
-  source: [["PHB2024", 205]],
+  source: [["P24", 205]],
   regExpSearch: /^(?=.*mounted)(?=.*combatant).*$/i,
   choices: ["Strength", "Dexterity", "Wisdom"],
   "strength": {
@@ -10632,7 +10632,7 @@ FeatsList["mounted combatant"] = {
 };
 FeatsList["observant"] = {
   name: "Observant",
-  source: [["PHB2024", 205]],
+  source: [["P24", 205]],
   regExpSearch: /^(?=.*observant).*$/i,
   skillstxt: "Choose 1 : Insight, Investigation, or Perception. I gain Proficiency in the chosen skill, if I am already proficient I gain Expertise.",
   action: ["bonus action", "Search"],
@@ -10659,7 +10659,7 @@ FeatsList["observant"] = {
 };
 FeatsList["piercer"] = {
   name: "Piercer",
-  source: [["PHB2024", 206]],
+  source: [["P24", 206]],
   regExpSearch: /^(?=.*piercer).*$/i,
   description: "+1 Str/Dex, When I hit a creature with an atk roll with a pierc. dmg weapon I can reroll one of the atk dmg dice, on a Crit I deal one additional dmg die.",  
   descriptionFull: desc([
@@ -10686,7 +10686,7 @@ FeatsList["piercer"] = {
 };
 FeatsList["poisoner"] = {
   name: "Poisoner",
-  source: [["PHB2024", 206]],
+  source: [["P24", 206]],
   regExpSearch: /^(?=.*poisoner).*$/i,
   toolProfs: [["Poisoner's Kit"]],
   description: "+1 Dex/Int, my poison ignores Poison Resistance, I gain Prof with the Poisoner's Kit and can apply poison to a weapon or piece of ammo as a Bonus Action when I hit with an atk, the target makes a Con save or takes 2d8 Poison dmg and be Poisoned. DC=8+Dex-or-Int+Prof",  
@@ -10712,12 +10712,12 @@ FeatsList["poisoner"] = {
 };
 FeatsList["polearm master"] = {
   name: "Polearm Master",
-  source: [["PHB2024", 206]],
+  source: [["P24", 206]],
   regExpSearch: /^(?=.*polearm)(?=.*master).*$/i,
   weaponOptions: [{
     regExpSearch: /^(?=.*(polearm|(glaive|guandao|bisento|naginata)|(halberd|\bji\b|kamayari)|(quarterstaff|\bstaff\b|\bbo\b)|(spear|qiang|\byaris?\b)))(?=.*butt)(?=.*end).*$/i,
     name: "Polearm Butt End",
-    source: [["PHB2024", 206]],
+    source: [["P24", 206]],
     ability: 1,
     type: "polearm butt end",
     damage: [1, 4, "bludgeoning"],
@@ -10751,7 +10751,7 @@ FeatsList["polearm master"] = {
 };
 FeatsList["resilient"] = {
   name: "Resilient",
-  source: [["PHB2024", 206]],
+  source: [["P24", 206]],
   regExpSearch: /^(?=.*resilient).*$/i,
   descriptionFull: "Choose one ability in which I lack saving throw proficiency. I gain the following benefits:\n \u2022 Increase the chosen ability score by 1, to a maximum of 20.\n \u2022 I gain proficiency in saving throws using the chosen ability.",
   description: "Select an ability score using the square button on this feat line. I gain proficiency with the saving throw of that ability score and a +1 added to it.",
@@ -10793,7 +10793,7 @@ FeatsList["resilient"] = {
 };
 FeatsList["ritual caster"] = {
   name: "Ritual Caster",
-  source: [["PHB2024", 206]],
+  source: [["P24", 206]],
   regExpSearch: /^(?=.*ritual)(?=.*caster).*$/i,
   descriptionFull: "I gain the following benefits.\n Ability Score Increase. Increase my Intelligence, Wisdom, or Charisma by 1, to a maximum of 20.\n Ritual Spells. Choose a number of level 1 spells equal to my Proficiency Bonus that have the Ritual tag. I always have those spells prepared, and I can cast them with any spell slots I have. The spells' spellcasting ability is the ability increased by this feat. Whenever my Proficiency Bonus increases hereafter, I can add an additional level 1 spell with the Ritual tag to the spells always prepared with this feature.\n Quick Ritual. With this benefit, I can cast a Ritual spell that I have prepared using its regular casting time rather than the extended time for a Ritual. Doing so doesn't require a spell slot. Once I cast the spell in this way, I can't use this benefit again until I finish a Long Rest.",
   description: "Ritual Spells. Prof. Bonus 1st level Ritual spells, do not count against the spells I can have prepared. Quick Ritual. Once per Long Rest can cast a ritual with normal casting time.",
@@ -10817,7 +10817,7 @@ FeatsList["ritual caster"] = {
 };
 FeatsList["sentinel"] = {
   name: "Sentinel",
-  source: [["PHB2024", 207]],
+  source: [["P24", 207]],
   regExpSearch: /^(?=.*sentinel).*$/i,
   choices: ["Strength", "Dexterity"],
   "strength": {
@@ -10843,7 +10843,7 @@ FeatsList["sentinel"] = {
 };
 FeatsList["shadow touched"] = {
   name: "Shadow Touched",
-  source: [["PHB2024", 207]],
+  source: [["P24", 207]],
   regExpSearch: /^(?=.*shadow)(?=.*touched).*$/i,
   spellcastingBonus: [{
     name: "Invisibility",
@@ -10888,7 +10888,7 @@ FeatsList["shadow touched"] = {
 };
 FeatsList["sharpshooter"] = {
   name: "Sharpshooter",
-  source: [["PHB2024", 207]],
+  source: [["P24", 207]],
   regExpSearch: /^(?=.*sharpshooter).*$/i,
   scores: [0, 1, 0, 0, 0, 0],
   descriptionFull: "I gain the following benefits.\n Ability Score Increase. Increase my Dexterity score by 1, to a maximum of 20.\n Bypass Cover. My ranged attacks with weapons ignore Half and Three-Quarter Cover.\n   Firing in Melee. Being within 5 feet of an enemy doesn't impose Disadvantage on my attack rolls with Ranged weapons.\n   Long Shots. Attacking at long range doesn't impose Disadvantage on my attack rolls with Ranged weapons.",
@@ -10910,13 +10910,13 @@ FeatsList["sharpshooter"] = {
 };
 FeatsList["shield master"] = {
   name: "Shield Master",
-  source: [["PHB2024", 207]],
+  source: [["P24", 207]],
   regExpSearch: /^(?=.*shield)(?=.*master).*$/i,
   scores: [1, 0, 0, 0, 0, 0],
   weaponOptions: [{
     regExpSearch: /^(?=.*shield)(?=.*bash).*$/i,
     name: "Shield Bash",
-    source: [["PHB2024", 207]],
+    source: [["P24", 207]],
     ability: 1,
     type: "shield bash",
     damage: ["", "", ""],
@@ -10937,7 +10937,7 @@ FeatsList["shield master"] = {
 };
 FeatsList["skill expert"] = {
   name: "Skill Expert",
-  source: [["PHB2024", 207]],
+  source: [["P24", 207]],
   regExpSearch: /^(?=.*skill)(?=.*expert).*$/i,
   descriptionFull: "I gain the following benefits:\n \u2022 Ability Score Increase. Increase one ability score of my choice by 1, to a maximum of 20.\n \u2022 Skill Proficiency. I gain proficiency in one skill of my choice.\n \u2022 Expertise. Choose one skill in which I have proficiency but lack Expertise. I gain expertise with that skill.",
   description: "I gain proficiency in one skill and expertise in that same skill or another skill I'm proficient with. [+1 to one ability score of my choice]",
@@ -10950,7 +10950,7 @@ FeatsList["skill expert"] = {
 };
 FeatsList["skulker"] = {
   name: "Skulker",
-  source: [["PHB2024", 208]],
+  source: [["P24", 208]],
   regExpSearch: /^(?=.*skulker).*$/i,
   scores: [0, 1, 0, 0, 0, 0],
   descriptionFull: "I gain the following benefits:\n \u2022 Blindsight. I have Blindsight with a range of 10 feet.\n \u2022 Fog of War. I exploit the distractions of battle, gaining Advantage on any Dexterity (Stealth) check I make as part of the Hide action during combat.\n \u2022 Sniper. If I make an attack roll while hidden and the roll misses, making the attack roll doesn't reveal my location.",
@@ -10963,7 +10963,7 @@ FeatsList["skulker"] = {
 };
 FeatsList["slasher"] = {
   name: "Slasher",
-  source: [["PHB2024", 208]],
+  source: [["P24", 208]],
   regExpSearch: /^(?=.*slasher).*$/i,
   descriptionFull: "I gain the following benefits:\n \u2022 Ability Score Increase. Increase my Strength or Dexterity by 1, to a maximum of 20.\n \u2022 Hamstring. Once per turn, I hit a creature with an attack that deals Slashing damage, I can reduce the speed of that creature by 10 feet until the start of my next turn.\n \u2022 Enhanced Critical. When I score a Critical Hit that deals Slashing damage to a creature, it has Disadvantage on attack rolls until the start of my next turn.",
   description: "+1 Str/Dex, Once per turn when I deal slashing damage to a target, I can reduce its speed by 10 ft. until the start of my next turn. When I score a critical hit that deals slashing damage to a creature, the grievous wound causes it to have disadvantage on all attack rolls until the start of my next turn. ",
@@ -10983,7 +10983,7 @@ FeatsList["slasher"] = {
 };
 FeatsList["speedy"] = {
   name: "Speedy",
-  source: [["PHB2024", 208]],
+  source: [["P24", 208]],
   regExpSearch: /^(?=.*speedy).*$/i,
   speed: {walk: "+10"},
   descriptionFull: "I gain the following benefits:\n \u2022 Ability Score Increase. Increase my Dexterity or Constitution by 1, to a maximum of 20.\n \u2022 Speed Increase. My Speed increases by 10 feet.\n \u2022 Dash over Difficult Terrain. When I take the Dash action on my turn, Difficult Terrain doesn't cost me extra movement for the rest of that turn.\n \u2022 Agile Movement. Opportunity Attacks have Disadvantage against me.",
@@ -11004,7 +11004,7 @@ FeatsList["speedy"] = {
 };
 FeatsList["spell sniper"] = {
   name: "Spell Sniper",
-  source: [["PHB2024", 208]],
+  source: [["P24", 208]],
   regExpSearch: /^(?=.*spell)(?=.*sniper).*$/i,
   descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Increase. Increase my Intelligence, Wisdom, or Charisma by 1, to a maximum of 20.\n \u2022 Bypass Cover. My attack rolls for spells ignore Half Cover and Three-quarter Cover.\n \u2022 Casting in Melee. Being within 5 feet of an enemy doesn't impose Disadvantage on my attack rolls with spells.\n \u2022 Increased Range. When I cast a spell that has a range of at least 10 feet and requires me to make an attack roll, I can increase the spell's range by 60 feet.",
   description: "+1 Int/Wis/Cha my spells ignore half and three-quarter cover; casting in melee doesn't impose disadvantage; my ranged spells with a range of 10ft or more have their range increased by 60 ft.",
@@ -11028,7 +11028,7 @@ FeatsList["spell sniper"] = {
 };
 FeatsList["telekinetic"] = {
   name: "Telekinetic",
-  source: [["PHB2024", 208]],
+  source: [["P24", 208]],
   regExpSearch: /^(?=.*telekinetic).*$/i,
   descriptionFull: "I gain the following benefits:\n \u2022 Ability Score Increase. Increase my Intelligence, Wisdom, or Charisma by 1, to a maximum of 20.\n \u2022 Minor Telekinesis. I learn the mage hand cantrip. I can cast it without verbal or somatic components, and I can make the spectral hand invisible. If I already know this spell, its range increases by 30 feet when I cast it. Its spellcasting ability is the ability increased by this feat.\n \u2022 Telekinetic Shove. As a bonus action, I can try to telekinetically shove one creature I can see within 30 feet of me. When I do so, the target must succeed on a Strength saving throw (DC 8 + my proficiency bonus + the ability modifier of the score increased by this feat) or be moved 5 feet toward I or away from I. A creature can willingly fail this save.",
   description: "I know the Mage Hand cantrip, can cast it without components, and the spectral hand can be invisible. As a bonus action, I can shove one creature I can see within 30 ft. It must make a Str save vs. this feat's spell save DC or be moved 5 ft. from or towards me. My spellcasting ability is the ability I choose to increase when I gain this feat. [+1 Int, Wis, or Cha]",
@@ -11080,7 +11080,7 @@ FeatsList["telekinetic"] = {
 };
 FeatsList["telepathic"] = {
   name: "Telepathic",
-  source: [["PHB2024", 208]],
+  source: [["P24", 208]],
   regExpSearch: /^(?=.*telepathic).*$/i,
   descriptionFull: "I gain the following benefits:\n \u2022 Ability Score Increase. Increase my Intelligence, Wisdom, or Charisma by 1, to a maximum of 20.\n \u2022 Telepathic Utterance. I can speak telepathically to any creature I can see within 60 feet of me. My telepathic utterances are in a language I know, and the creature understands me only if it knows that language. My communication doesn't give the creature the ability to respond to me telepathically.\n \u2022 Detect thoughts. I can cast the detect thoughts spell, requiring no spell slot or components, and I must finish a long rest before I can cast it this way again. My spellcasting ability for the spell is the ability increased by this feat. If I have spell slots of 2nd level or higher, I can cast this spell with them.",
   description: "I can telepathically speak to a creature I can see within 60 ft. in a language I know, but it can't respond telepathically. I can cast Detect Thoughts once per long rest at its lowest level, requiring no spell slot or components, and can cast it using a spell slot as normal. My spellcasting ability is the ability I increase with this feat. [+1 Int, Wis, or Cha]",
@@ -11121,7 +11121,7 @@ FeatsList["telepathic"] = {
 };
 FeatsList["war caster"] = {
   name: "War Caster",
-  source: [["PHB2024", 209]],
+  source: [["P24", 209]],
   regExpSearch: /^(?=.*war)(?=.*caster).*$/i,
   descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Increase. Increase my Intelligence, Wisdom, or Charisma by 1, to a maximum of 20.\n \u2022 Concentration. I have Advantage on Constitution saving throws that I make to maintain Concentration.\n \u2022 Reactivate Spell. When a creature provokes an Opportunity Attack from me by leaving my reach, I can take a Reaction to cast a spell at the creature rather than making an Opportunity Attack. The spell must have a casting time of one action and must target only that creature.\n \u2022 Somatic Components. I can perform the Somatic components of spells even when I have Weapons or a Shield in one or both hands.",
   description: "+1 Int/Wis/Cha Advantage on Con saves to maintain concentration on spells when damaged. Perform somatic components even when holding weapons or shield in one or both hands. Cast spell of 1 action casting time that targets only one creature instead of an opportunity attack.",
@@ -11147,7 +11147,7 @@ FeatsList["war caster"] = {
 };
 FeatsList["weapon master"] = {
   name: "Weapon Master",
-  source: [["PHB2024", 209]],
+  source: [["P24", 209]],
   regExpSearch: /^(?=.*weapon)(?=.*master).*$/i,
   descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Increase. Increase my Strength or Dexterity score by 1, to a maximum of 20.\n \u2022 Mastery Property. my training with weapons allows me to use the mastery property of one kind of Simple or Martial weapon of my choice, provided I have proficiency with it. Whenever I finish a Long Rest, I can change the kind of weapon to another kind.",
   description: "+1 Str/Dex, Gain Weapon Mastery in one weapon of choice. can change choice during a long rest provided I have the appropriate proficiencies.",
@@ -11465,7 +11465,7 @@ FeatsList["weapon master"] = {
 };
 FeatsList["fighting style"] = {
   name: "Fighting Style",
-  source: [["PHB2024", 209]],
+  source: [["P24", 209]],
   regExpSearch: /^(?=.*fighting)(?=.*style).*$/i,
   descriptionFull: "Choose a Fighting Style.",
   description: "Choose a Fighting Style.",
@@ -11593,7 +11593,7 @@ FeatsList["fighting style"] = {
 //Epic Boon Feats
 FeatsList["boon of combat prowess"] = {
   name: "Boon of Combat Prowess",
-  source: [["PHB2024", 210]],
+  source: [["P24", 210]],
   descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Peerless Aim. When I miss with an attack roll, I can hit instead. Once I use this benefit, I can't use it again until the start of my next turn.",
   description: "+1 to Any, Once per turn, when I miss with an attack, I can instead hit.",
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
@@ -11639,7 +11639,7 @@ FeatsList["boon of combat prowess"] = {
 };
 FeatsList["boon of dimensional travel"] = {
   name: "Boon of Dimensional Travel",
-  source: [["PHB2024", 210]],
+  source: [["P24", 210]],
   descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Blink Steps. Immediately after I take the Attack action or the Magic action, I can teleport up to 30 feet to an unoccupied space I can see.",
   description: "+1 to Any, Once per turn, when I miss with an attack, I can instead hit.",
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
@@ -11685,7 +11685,7 @@ FeatsList["boon of dimensional travel"] = {
 };
 FeatsList["boon of energy resistance"] = {
   name: "Boon of Energy Resistance",
-  source: [["PHB2024", 210]],
+  source: [["P24", 210]],
   action: ["reaction", "Energy Redirection"],
   descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Energy Resistances. I gain Resistance to two of the following damage types of my choice: Acid, Cold, Fire, Lightning, Necrotic, Poison, Psychic, Radiant, or Thunder. Whenever I finish a Long Rest, I can change my choices.\n \u2022 Energy Redirection. When I take damage of one of the types chosen for the Energy Resistances benefit, I can take a Reaction to direct damage of the same type toward another creature I can see within 60 feet of yourself that isn't behind Total Cover. If I do so, that creature must succeed on a Dexterity saving throw (DC 8 plus my Constitution modifier and Proficiency Bonus) or take damage equal to 2d12 plus my Constitution modifier.",
   description: "+1 to Any, +2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to back on the crea who targeted I 2d12 of energy type as long as they are not behind total cover.",
@@ -11877,7 +11877,7 @@ FeatsList["boon of energy resistance"] = {
 };
 FeatsList["boon of fate"] = {
   name: "Boon of Fate",
-  source: [["PHB2024", 210]],
+  source: [["P24", 210]],
   descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Improved Fate. When I or another creature within 60 feet of me succeeds or fails a D20 Test I can roll 2d4 and apply the total rolled as a bonus or penalty to the d20 roll. Once I use this benefit, I can't use it again until I roll Initiative or finish a Short or Long Rest.",
   description: "+1 to Any, Once per Initiative/Rest I can roll 2d4 and apply them as a bonus or penalty to a single D20 Test rolled by yourself or another creature within 60 feet of I.",
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
@@ -11923,7 +11923,7 @@ FeatsList["boon of fate"] = {
 };
 FeatsList["boon of fortitude"] = {
   name: "Boon of Fortitude",
-  source: [["PHB2024", 210]],
+  source: [["P24", 210]],
   calcChanges: {
     hp: function (totalHD) {
       return [+40, '\n + ' + totalHD + ' + 40 from the Boon of Fortitude feat ', true];
@@ -11974,7 +11974,7 @@ FeatsList["boon of fortitude"] = {
 };
 FeatsList["boon of irresistible offense"] = {
   name: "Boon of Irresistible Offense",
-  source: [["PHB2024", 211]],
+  source: [["P24", 211]],
   descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Overcome Defenses. The Bludgeoning, Piercing, and Slashing damage I deal always ignores Resistance.\n \u2022 Overwhelming Strike. When I roll a 20 on the d20 for an attack roll, I can deal extra damage to the target equal to the ability score increased by this feat.",
   description: "+1 to Any, Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to the ability modifier of the score I increased by this feat.",
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
@@ -12020,7 +12020,7 @@ FeatsList["boon of irresistible offense"] = {
 };
 FeatsList["boon of recovery"] = {
   name: "Boon of Recovery",
-  source: [["PHB2024", 211]],
+  source: [["P24", 211]],
   action: ["bonus action", "Recovery"],
   limfeaname: "Last Stand",
   usages: 1,
@@ -12088,7 +12088,7 @@ FeatsList["boon of recovery"] = {
 };
 FeatsList["boon of skill"] = {
   name: "Boon of Skill",
-  source: [["PHB2024", 211]],
+  source: [["P24", 211]],
   skills: ["Athletics", "Acrobatics", "Sleight of Hand", "Stealth", "Arcana", "History", "Investigation", "Nature", "Religion", "Animal Handling", "Insight", "Medicine", "Perception", "Survival", "Deception", "Intimidation", "Performance", "Persuasion"],
   skillstxt: "I gain expertise in one skill of choice.",
   descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 All-Around Adept. I gain proficiency in all skills.\n \u2022 Expertise. Choose one skill in which I lack Expertise. I gain Expertise in that skill.",
@@ -12136,7 +12136,7 @@ FeatsList["boon of skill"] = {
 };
 FeatsList["boon of speed"] = {
   name: "Boon of Speed",
-  source: [["PHB2024", 211]],
+  source: [["P24", 211]],
   descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Escape Artist. As a Bonus Action, I can take the Disengage action, which also ends the Grappled condition on I.\n \u2022 Quickness. I Speed increases by 30 feet.",
   description: "+1 to Any, Speed +30 ft., Bonus Action to Disengage, which also ends the Grappled condition.",
   speed: {walk: "+30"},
@@ -12183,7 +12183,7 @@ FeatsList["boon of speed"] = {
 };
 FeatsList["boon of spell recall"] = {
   name: "Boon of Spell Recall",
-  source: [["PHB2024", 211]],
+  source: [["P24", 211]],
   descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase my Intelligence, Wisdom, or Charisma score by 1, to a Maximum of 30.\n \u2022 Free Casting. Whenever I cast a spell with a level 1-4 spell slot, roll1d4. If the number I roll is the same as the slot's level, the slot isn't expended.",
   description: "+1 Int/Wis/Cha, When I cast a spell level 1-4, roll 1d4 if the number rolled matches the slot's level the spell slot isn't expended.",
   choices: ["Intelligence", "Wisdom", "Charisma"],
@@ -12211,7 +12211,7 @@ FeatsList["boon of spell recall"] = {
 };
 FeatsList["boon of the night spirit"] = {
   name: "Boon of the Night Spirit",
-  source: [["PHB2024", 211]],
+  source: [["P24", 211]],
   action: [["bonus action", "Merge with Shadows"], ["reaction", "Merge with Shadows"]],
   descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Merge with Shadows. While within Dim Light or Darkness, I can give yourself the Invisible condition as a Bonus Action, or a Reaction.\n \u2022 Shadowy Form. While within Dim Light or Darkness, I have Resistance to all damage except Psychic and Radiant.",
   description: "+1 to Any, While in Dim Light or Darkness, I have Resistance to all damage except Psychic or Radiant, and as a bns/rea I can turn invisible while in Dim Light or Darkness.",
@@ -12258,7 +12258,7 @@ FeatsList["boon of the night spirit"] = {
 };
 FeatsList["boon of truesight"] = {
   name: "Boon of Truesight",
-  source: [["PHB2024", 211]],
+  source: [["P24", 211]],
   vision: [["Truesight", 60]],
   descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Truesight. I have Truesight with a range of 60 feet.",
   description: "+1 to Any, I have Truesight with a range of 60 feet..",
@@ -12307,7 +12307,7 @@ FeatsList["boon of truesight"] = {
 WeaponsList["club"] = {
   name: "Club",
   infoname: "Club [1 sp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /club/i,
   type: "Simple",
   ability: 1,
@@ -12322,7 +12322,7 @@ WeaponsList["club"] = {
 WeaponsList["dagger"] = {
   name: "Dagger",
   infoname: "Dagger [2 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /dagger/i,
   type: "Simple",
   ability: 2,
@@ -12338,7 +12338,7 @@ WeaponsList["dagger"] = {
 WeaponsList["greatclub"] = {
   name: "Greatclub",
   infoname: "Greatclub [2 sp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /greatclub/i,
   type: "Simple",
   ability: 1,
@@ -12353,7 +12353,7 @@ WeaponsList["greatclub"] = {
 WeaponsList["handaxe"] = {
   name: "Handaxe",
   infoname: "Handaxe [5 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /handaxe/i,
   type: "Simple",
   ability: 1,
@@ -12369,7 +12369,7 @@ WeaponsList["handaxe"] = {
 WeaponsList["javelin"] = {
   name: "Javelin",
   infoname: "Javelin [5 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /javelin/i,
   type: "Simple",
   ability: 1,
@@ -12385,7 +12385,7 @@ WeaponsList["javelin"] = {
 WeaponsList["light hammer"] = {
   name: "Light Hammer",
   infoname: "Light Hammer [2 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /^(?=.*light)(?=.*hammer).*$/i,
   type: "Simple",
   ability: 1,
@@ -12401,7 +12401,7 @@ WeaponsList["light hammer"] = {
 WeaponsList["mace"] = {
   name: "Mace",
   infoname: "Mace [5 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /mace/i,
   type: "Simple",
   ability: 1,
@@ -12416,7 +12416,7 @@ WeaponsList["mace"] = {
 WeaponsList["quarterstaff"] = {
   name: "Quarterstaff",
   infoname: "Quarterstaff [2 sp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /quarterstaff/i,
   type: "Simple",
   ability: 1,
@@ -12431,7 +12431,7 @@ WeaponsList["quarterstaff"] = {
 WeaponsList["sickle"] = {
   name: "Sickle",
   infoname: "Sickle [1 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /sickle/i,
   type: "Simple",
   ability: 1,
@@ -12446,7 +12446,7 @@ WeaponsList["sickle"] = {
 WeaponsList["spear"] = {
   name: "Spear",
   infoname: "Spear [1 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /spear/i,
   type: "Simple",
   ability: 1,
@@ -12462,7 +12462,7 @@ WeaponsList["spear"] = {
 WeaponsList["dart"] = {
   name: "Dart",
   infoname: "Dart [5 cp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /dart/i,
   type: "Simple",
   ability: 2,
@@ -12478,7 +12478,7 @@ WeaponsList["dart"] = {
 WeaponsList["light crossbow"] = {
   name: "Light Crossbow",
   infoname: "Light Crossbow [25 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /^(?=.*light)(?=.*crossbow).*$/i,
   type: "Simple",
   ability: 2,
@@ -12494,7 +12494,7 @@ WeaponsList["light crossbow"] = {
 WeaponsList["shortbow"] = {
   name: "Shortbow",
   infoname: "Shortbow [25 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /shortbow/i,
   type: "Simple",
   ability: 2,
@@ -12510,7 +12510,7 @@ WeaponsList["shortbow"] = {
 WeaponsList["sling"] = {
   name: "Sling",
   infoname: "Sling [1 sp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /sling/i,
   type: "Simple",
   ability: 2,
@@ -12525,7 +12525,7 @@ WeaponsList["sling"] = {
 WeaponsList["battleaxe"] = {
   name: "Battleaxe",
   infoname: "Battleaxe [10 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /battleaxe/i,
   type: "Martial",
   ability: 1,
@@ -12540,7 +12540,7 @@ WeaponsList["battleaxe"] = {
 WeaponsList["flail"] = {
   name: "Flail",
   infoname: "Flail [10 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /flail/i,
   type: "Martial",
   ability: 1,
@@ -12555,7 +12555,7 @@ WeaponsList["flail"] = {
 WeaponsList["glaive"] = {
   name: "Glaive",
   infoname: "Glaive [20 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /glaive/i,
   type: "Martial",
   ability: 1,
@@ -12570,7 +12570,7 @@ WeaponsList["glaive"] = {
 WeaponsList["greataxe"] = {
   name: "Greataxe",
   infoname: "Greataxe [30 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /greataxe/i,
   type: "Martial",
   ability: 1,
@@ -12585,7 +12585,7 @@ WeaponsList["greataxe"] = {
 WeaponsList["greatsword"] = {
   name: "Greatsword",
   infoname: "Greatsword [50 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /greatsword/i,
   type: "Martial",
   ability: 1,
@@ -12600,7 +12600,7 @@ WeaponsList["greatsword"] = {
 WeaponsList["halberd"] = {
   name: "Halberd",
   infoname: "Halberd [20 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /halberd/i,
   type: "Martial",
   ability: 1,
@@ -12615,7 +12615,7 @@ WeaponsList["halberd"] = {
 WeaponsList["lance"] = {
   name: "Lance",
   infoname: "Lance [10 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /lance/i,
   type: "Martial",
   ability: 1,
@@ -12630,7 +12630,7 @@ WeaponsList["lance"] = {
 WeaponsList["longsword"] = {
   name: "Longsword",
   infoname: "Longsword [15 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /longsword/i,
   type: "Martial",
   ability: 1,
@@ -12645,7 +12645,7 @@ WeaponsList["longsword"] = {
 WeaponsList["maul"] = {
   name: "Maul",
   infoname: "Maul [10 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /maul/i,
   type: "Martial",
   ability: 1,
@@ -12660,7 +12660,7 @@ WeaponsList["maul"] = {
 WeaponsList["morningstar"] = {
   name: "Morningstar",
   infoname: "Morningstar [15 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /morningstar/i,
   type: "Martial",
   ability: 1,
@@ -12675,7 +12675,7 @@ WeaponsList["morningstar"] = {
 WeaponsList["pike"] = {
   name: "Pike",
   infoname: "Pike [5 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /pike/i,
   type: "Martial",
   ability: 1,
@@ -12690,7 +12690,7 @@ WeaponsList["pike"] = {
 WeaponsList["rapier"] = {
   name: "Rapier",
   infoname: "Rapier [25 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /rapier/i,
   type: "Martial",
   ability: 2,
@@ -12705,7 +12705,7 @@ WeaponsList["rapier"] = {
 WeaponsList["scimitar"] = {
   name: "Scimitar",
   infoname: "Scimitar [25 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /scimitar/i,
   type: "Martial",
   ability: 2,
@@ -12720,7 +12720,7 @@ WeaponsList["scimitar"] = {
 WeaponsList["shortsword"] = {
   name: "Shortsword",
   infoname: "Shortsword [10 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /shortsword/i,
   type: "Martial",
   ability: 1,
@@ -12735,7 +12735,7 @@ WeaponsList["shortsword"] = {
 WeaponsList["trident"] = {
   name: "Trident",
   infoname: "Trident [5 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /trident/i,
   type: "Martial",
   ability: 1,
@@ -12751,7 +12751,7 @@ WeaponsList["trident"] = {
 WeaponsList["warhammer"] = {
   name: "Warhammer",
   infoname: "Warhammer [15 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /warhammer/i,
   type: "Martial",
   ability: 1,
@@ -12766,7 +12766,7 @@ WeaponsList["warhammer"] = {
 WeaponsList["war pick"] = {
   name: "War Pick",
   infoname: "War Pick [5 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /^(?=.*war)(?=.*pick).*$/i,
   type: "Martial",
   ability: 1,
@@ -12781,7 +12781,7 @@ WeaponsList["war pick"] = {
 WeaponsList["whip"] = {
   name: "Whip",
   infoname: "Whip [2 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /whip/i,
   type: "Martial",
   ability: 1,
@@ -12796,7 +12796,7 @@ WeaponsList["whip"] = {
 WeaponsList["blowgun"] = {
   name: "Blowgun",
   infoname: "Blowgun [10 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /blowgun/i,
   type: "Martial",
   ability: 2,
@@ -12812,7 +12812,7 @@ WeaponsList["blowgun"] = {
 WeaponsList["hand crossbow"] = {
   name: "Hand Crossbow",
   infoname: "Hand Crossbow [75 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /^(?=.*hand)(?=.*crossbow).*$/i,
   type: "Martial",
   ability: 2,
@@ -12828,7 +12828,7 @@ WeaponsList["hand crossbow"] = {
 WeaponsList["heavy crossbow"] = {
   name: "Heavy Crossbow",
   infoname: "Heavy Crossbow [50 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /^(?=.*heavy)(?=.*crossbow).*$/i,
   type: "Martial",
   ability: 2,
@@ -12844,7 +12844,7 @@ WeaponsList["heavy crossbow"] = {
 WeaponsList["longbow"] = {
   name: "Longbow",
   infoname: "Longbow [50 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /longbow/i,
   type: "Martial",
   ability: 2,
@@ -12860,7 +12860,7 @@ WeaponsList["longbow"] = {
 WeaponsList["musket"] = {
   name: "Musket",
   infoname: "Musket [500 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /musket/i,
   type: "Martial",
   ability: 2,
@@ -12876,7 +12876,7 @@ WeaponsList["musket"] = {
 WeaponsList["pistol"] = {
   name: "Pistol",
   infoname: "Pistol [250 gp]",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   regExpSearch: /pistol/i,
   type: "Martial",
   ability: 2,
@@ -12891,7 +12891,7 @@ WeaponsList["pistol"] = {
 };
 WeaponsList["vial of acid"] = {
   name: "Vial of Acid",
-  source: [["PHB2024", 222]],
+  source: [["P24", 222]],
   regExpSearch: /^(?=.*vial)(?=.*acid).*$/i,
   list: "improvised",
   ability: 2,
@@ -12908,7 +12908,7 @@ WeaponsList["vial of acid"] = {
 };
 WeaponsList["alchemist fire"] = {
   name: "Alchemist's Fire",
-  source: [["PHB2024", 222]],
+  source: [["P24", 222]],
   regExpSearch: /^(?=.*alchemist)(?=.*fire).*$/i,
   list: "improvised",
   ability: 2,
@@ -12925,7 +12925,7 @@ WeaponsList["alchemist fire"] = {
 };
 WeaponsList["holy water"] = {
   name: "Holy Water",
-  source: [["PHB2024", 226]],
+  source: [["P24", 226]],
   regExpSearch: /^(?=.*holy)(?=.*water).*$/i,
   list: "improvised",
   ability: 2,
@@ -12942,7 +12942,7 @@ WeaponsList["holy water"] = {
 WeaponsList["acid splash"] = {
   regExpSearch: /^(?=.*acid)(?=.*splash).*$/i,
   name: "Acid Splash",
-  source: [["PHB2024", 239]],
+  source: [["P24", 239]],
   list: "spell",
   ability: 4,
   type: "Cantrip",
@@ -12955,7 +12955,7 @@ WeaponsList["acid splash"] = {
 WeaponsList["chill touch"] = {
   regExpSearch: /^(?=.*chill)(?=.*touch).*$/i,
   name: "Chill Touch",
-  source: [["PHB2024", 249]],
+  source: [["P24", 249]],
   list: "spell",
   ability: 6,
   type: "Cantrip",
@@ -12967,7 +12967,7 @@ WeaponsList["chill touch"] = {
 WeaponsList["eldritch blast"] = {
   regExpSearch: /(agonizing|eldritch|repelling).(spear|blast)/i,
   name: "Eldritch Blast",
-  source: [["PHB2024", 267]],
+  source: [["P24", 267]],
   list: "spell",
   ability: 6,
   type: "Cantrip",
@@ -12979,7 +12979,7 @@ WeaponsList["eldritch blast"] = {
 WeaponsList["fire bolt"] = {
   regExpSearch: /^(?=.*fire)(?=.*bolt).*$/i,
   name: "Fire Bolt",
-  source: [["PHB2024", 274]],
+  source: [["P24", 274]],
   list: "spell",
   ability: 6,
   type: "Cantrip",
@@ -12991,7 +12991,7 @@ WeaponsList["fire bolt"] = {
 WeaponsList["mind sliver"] = {
   regExpSearch: /^(?=.*mind)(?=.*sliver).*$/i,
   name: "Mind Sliver",
-  source: [["PHB2024", 298]],
+  source: [["P24", 298]],
   list: "spell",
   ability: 6,
   type: "Cantrip",
@@ -13004,7 +13004,7 @@ WeaponsList["mind sliver"] = {
 WeaponsList["poison spray"] = {
   regExpSearch: /^(?=.*poison)(?=.*spray).*$/i,
   name: "Poison Spray",
-  source: [["PHB2024", 306]],
+  source: [["P24", 306]],
   list: "spell",
   ability: 6,
   type: "Cantrip",
@@ -13017,7 +13017,7 @@ WeaponsList["poison spray"] = {
 WeaponsList["produce flame"] = {
   regExpSearch: /^(?=.*produce)(?=.*flame).*$/i,
   name: "Produce Flame",
-  source: [["PHB2024", 308]],
+  source: [["P24", 308]],
   list: "spell",
   ability: 5,
   type: "Cantrip",
@@ -13029,7 +13029,7 @@ WeaponsList["produce flame"] = {
 WeaponsList["ray of frost"] = {
   regExpSearch: /^(?=.*ray)(?=.*frost).*$/i,
   name: "Ray of Frost",
-  source: [["PHB2024", 311]],
+  source: [["P24", 311]],
   list: "spell",
   ability: 6,
   type: "Cantrip",
@@ -13041,7 +13041,7 @@ WeaponsList["ray of frost"] = {
 WeaponsList["sacred flame"] = {
   regExpSearch: /^(?=.*sacred)(?=.*flame).*$/i,
   name: "Sacred Flame",
-  source: [["PHB2024", 313]],
+  source: [["P24", 313]],
   list: "spell",
   ability: 5,
   type: "Cantrip",
@@ -13055,7 +13055,7 @@ WeaponsList["shillelagh"] = {
   baseWeapon: "quarterstaff",
   regExpSearch: /shillelagh/i,
   name: "Shillelagh",
-  source: [["PHB2024", 316]],
+  source: [["P24", 316]],
   list: "spell",
   ability: 5,
   type: "Simple",
@@ -13068,7 +13068,7 @@ WeaponsList["shillelagh"] = {
 WeaponsList["shocking grasp"] = {
   regExpSearch: /^(?=.*shocking)(?=.*grasp).*$/i,
   name: "Shocking Grasp",
-  source: [["PHB2024", 316]],
+  source: [["P24", 316]],
   list: "spell",
   ability: 6,
   type: "Cantrip",
@@ -13080,7 +13080,7 @@ WeaponsList["shocking grasp"] = {
 WeaponsList["sorcerous burst"] = {
   regExpSearch: /^(?=.*sorcerous)(?=.*burst).*$/i,
   name: "Sorcerous Burst",
-  source: [["PHB2024", 318]],
+  source: [["P24", 318]],
   list: "spell",
   ability: 6,
   type: "Cantrip",
@@ -13092,7 +13092,7 @@ WeaponsList["sorcerous burst"] = {
 WeaponsList["starry wisp"] = {
   regExpSearch: /^(?=.*starry)(?=.*wisp).*$/i,
   name: "Starry Wisp",
-  source: [["PHB2024", 320]],
+  source: [["P24", 320]],
   list: "spell",
   ability: 6,
   type: "Cantrip",
@@ -13104,7 +13104,7 @@ WeaponsList["starry wisp"] = {
 WeaponsList["thorn whip"] = {
   regExpSearch: /^(?=.*thorn)(?=.*whip).*$/i,
   name: "Thorn Whip",
-  source: [["PHB2024", 333]],
+  source: [["P24", 333]],
   list: "spell",
   ability: 5,
   type: "Cantrip",
@@ -13116,7 +13116,7 @@ WeaponsList["thorn whip"] = {
 WeaponsList["thunderclap"] = {
   regExpSearch: /thunderclap/i,
   name: "Thunderclap",
-  source: [["PHB2024", 333]],
+  source: [["P24", 333]],
   list: "spell",
   ability: 6,
   type: "Cantrip",
@@ -13129,7 +13129,7 @@ WeaponsList["thunderclap"] = {
 WeaponsList["vicious mockery"] = {
   regExpSearch: /^(?=.*vicious)(?=.*mockery).*$/i,
   name: "Vicious Mockery",
-  source: [["PHB2024", 337]],
+  source: [["P24", 337]],
   list: "spell",
   ability: 6,
   type: "Cantrip",
@@ -13142,7 +13142,7 @@ WeaponsList["vicious mockery"] = {
 WeaponsList["word of radiance"] = {
   regExpSearch: /^(?=.*word)(?=.*radiance).*$/i,
   name: "Word of Radiance",
-  source: [["PHB2024", 343]],
+  source: [["P24", 343]],
   list: "spell",
   ability: 5,
   type: "Cantrip",
@@ -13155,7 +13155,7 @@ WeaponsList["word of radiance"] = {
 WeaponsList["net"] = {
 	regExpSearch : /\bnet(ting)?s?\b/i,
 	name : "Net",
-	source : [["PHB2024", 227]],
+	source : [["P24", 227]],
 	list : "ranged",
 	ability : 2,
 	type : "Martial",
@@ -13172,7 +13172,7 @@ WeaponsList["net"] = {
 AmmoList["arrows"] = {
   name: "Arrows",
   infoname: "Arrows [1 gp]",
-  source: [["PHB2024", 222]],
+  source: [["P24", 222]],
   icon: "Arrows",
   amount: 20,
   weight: 0.05,
@@ -13180,7 +13180,7 @@ AmmoList["arrows"] = {
 AmmoList["bolts"] = {
   name: "Bolts",
   infoname: "Bolts [1 gp]",
-  source: [["PHB2024", 222]],
+  source: [["P24", 222]],
   icon: "Arrows",
   invName: "Crossbow bolts",
   weight: 0.075,
@@ -13188,7 +13188,7 @@ AmmoList["bolts"] = {
 AmmoList["bullets, firearm"] = {
   name: "Bullets, Firearm",
   infoname: "Bullets, Firearm [3 gp]",
-  source: [["PHB2024", 222]],
+  source: [["P24", 222]],
   icon: "Bullets",
   invName: "Firearm bullets",
   weight: 0.1,
@@ -13196,7 +13196,7 @@ AmmoList["bullets, firearm"] = {
 AmmoList["bullets, sling"] = {
   name: "Bullets, Sling",
   infoname: "Bullets, Sling [4 cp]",
-  source: [["PHB2024", 222]],
+  source: [["P24", 222]],
   icon: "Arrows",
   invName: "Sling bullets",
   weight: 0.075,
@@ -13204,70 +13204,70 @@ AmmoList["bullets, sling"] = {
 AmmoList["needles"] = {
   name: "Needles",
   infoname: "Needles [1 gp]",
-  source: [["PHB2024", 222]],
+  source: [["P24", 222]],
   invName: "Blowgun needles",
   amount: 50,
   weight: 0.02,
 };
 AmmoList["dagger"] = {
   name: "Daggers",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   weight: 1,
   icon: "Daggers"
 };
 AmmoList["dart"] = {
   name: "Darts",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   weight: 0.25,
   icon: "Arrows"
 };
 AmmoList["flask"] = {
   name: "Flasks (1 pint)",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   weight: 1,
   icon: "Flasks"
 };
 AmmoList["handaxe"] = {
   name: "Handaxes",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   weight: 2,
   icon: "Axes",
   alternatives: ["Axe"]
 };
 AmmoList["javelin"] = {
   name: "Javelins",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   weight: 2,
   icon: "Spears"
 };
 AmmoList["light hammer"] = {
   name: "Light Hammers",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   weight: 2,
   icon: "Hammers",
   alternatives: ["Hammer"]
 };
 AmmoList["spear"] = {
   name: "Spears",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   weight: 3,
   icon: "Spears"
 };
 AmmoList["trident"] = {
   name: "Tridents",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   weight: 4,
   icon: "Spears"
 };
 AmmoList["vial"] = {
   name: "Vials (4 ounces)",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   weight: 0.25,
   icon: "Vials"
 };
 AmmoList["alchemist fire"] = {
   name: "Alchemist's Fire, flasks",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   weight: 1,
   icon: "Flasks",
   invName: "Alchemist's fire, flasks of",
@@ -13275,7 +13275,7 @@ AmmoList["alchemist fire"] = {
 };
 AmmoList["vials of acid"] = {
   name: "Vials of Acid",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   weight: 1,
   icon: "Vials",
   invName: "Acid, vials of",
@@ -13283,7 +13283,7 @@ AmmoList["vials of acid"] = {
 };
 AmmoList["holy water"] = {
   name: "Holy Water, flasks",
-  source: [["PHB2024", 215]],
+  source: [["P24", 215]],
   weight: 1,
   icon: "Flasks",
   invName: "Holy Water, flasks of",
@@ -13293,7 +13293,7 @@ AmmoList["holy water"] = {
 ArmourList["padded"] = {
   name: "Padded Armor",
   infoname: "Padded Armor [5 gp]",
-  source: [["PHB2024", 219]],
+  source: [["P24", 219]],
   regExpSearch: /^(?=.*padded)(?=.*armor).*$/i,
   ac: 11,
   type: "light",
@@ -13303,7 +13303,7 @@ ArmourList["padded"] = {
 ArmourList["leather"] = {
   name: "Leather Armor",
   infoname: "Leather Armor [10 gp]",
-  source: [["PHB2024", 219]],
+  source: [["P24", 219]],
   regExpSearch: /^(?=.*leather)(?=.*armor).*$/i,
   ac: 11,
   type: "light",
@@ -13313,7 +13313,7 @@ ArmourList["leather"] = {
 ArmourList["studded leather"] = {
   name: "Studded Leather Armor",
   infoname: "Studded Leather Armor [45 gp]",
-  source: [["PHB2024", 219]],
+  source: [["P24", 219]],
   regExpSearch: /^(?=.*studded)(?=.*leather)(?=.*armor).*$/i,
   ac: 12,
   type: "light",
@@ -13323,7 +13323,7 @@ ArmourList["studded leather"] = {
 ArmourList["hide"] = {
   name: "Hide Armor",
   infoname: "Hide Armor [10 gp]",
-  source: [["PHB2024", 219]],
+  source: [["P24", 219]],
   regExpSearch: /^(?=.*hide)(?=.*armor).*$/i,
   ac: 12,
   type: "medium",
@@ -13333,7 +13333,7 @@ ArmourList["hide"] = {
 ArmourList["chain shirt"] = {
   name: "Chain Shirt",
   infoname: "Chain Shirt [50 gp]",
-  source: [["PHB2024", 219]],
+  source: [["P24", 219]],
   regExpSearch: /^(?=.*chain)(?=.*shirt).*$/i,
   ac: 13,
   type: "medium",
@@ -13343,7 +13343,7 @@ ArmourList["chain shirt"] = {
 ArmourList["scale mail"] = {
   name: "Scale Mail",
   infoname: "Scale Mail [50 gp]",
-  source: [["PHB2024", 219]],
+  source: [["P24", 219]],
   regExpSearch: /^(?=.*Scale)(?=.*mail).*$/i,
   ac: 14,
   type: "medium",
@@ -13353,7 +13353,7 @@ ArmourList["scale mail"] = {
 ArmourList["breastplate"] = {
   name: "Breastplate",
   infoname: "Breastplate [400 gp]",
-  source: [["PHB2024", 219]],
+  source: [["P24", 219]],
   regExpSearch: /breastplate/i,
   ac: 14,
   type: "medium",
@@ -13363,7 +13363,7 @@ ArmourList["breastplate"] = {
 ArmourList["half plate"] = {
   name: "Half Plate",
   infoname: "Half Plate [750 gp]",
-  source: [["PHB2024", 219]],
+  source: [["P24", 219]],
   regExpSearch: /^(?=.*half)(?=.*plate).*$/i,
   ac: 15,
   type: "medium",
@@ -13373,7 +13373,7 @@ ArmourList["half plate"] = {
 ArmourList["ring mail"] = {
   name: "Ring Mail",
   infoname: "Ring Mail [30 gp]",
-  source: [["PHB2024", 219]],
+  source: [["P24", 219]],
   regExpSearch: /^(?=.*ring)(?=.*mail).*$/i,
   ac: 14,
   type: "heavy",
@@ -13383,7 +13383,7 @@ ArmourList["ring mail"] = {
 ArmourList["chain mail"] = {
   name: "Chain Mail",
   infoname: "Chain Mail [75 gp]",
-  source: [["PHB2024", 219]],
+  source: [["P24", 219]],
   regExpSearch: /^(?=.*chain)(?=.*mail).*$/i,
   ac: 16,
   type: "heavy",
@@ -13394,7 +13394,7 @@ ArmourList["chain mail"] = {
 ArmourList["splint"] = {
   name: "Splint Armor",
   infoname: "Splint Armor [200 gp]",
-  source: [["PHB2024", 219]],
+  source: [["P24", 219]],
   regExpSearch: /^(?=.*splint)(?=.*armor).*$/i,
   ac: 17,
   type: "heavy",
@@ -13405,7 +13405,7 @@ ArmourList["splint"] = {
 ArmourList["plate"] = {
   name: "Plate Armor",
   infoname: "Plate Armor [1500 gp]",
-  source: [["PHB2024", 219]],
+  source: [["P24", 219]],
   regExpSearch: /^(?=.*plate)(?=.*armor).*$/i,
   ac: 18,
   type: "heavy",
@@ -13420,7 +13420,7 @@ ToolsList["alchemist's supplies"] = {
   amount: "",
   weight: 8,
   type: "artisan's tools",
-  source: [["PHB2024", 220]],
+  source: [["P24", 220]],
 };
 ToolsList["brewer's supplies"] = {
   infoname: "Brewer's Supplies [20 gp]",
@@ -13428,7 +13428,7 @@ ToolsList["brewer's supplies"] = {
   amount: "",
   weight: 9,
   type: "artisan's tools",
-  source: [["PHB2024", 220]],
+  source: [["P24", 220]],
 };
 ToolsList["calligrapher's supplies"] = {
   infoname: "Calligrapher's Supplies [10 gp]",
@@ -13436,7 +13436,7 @@ ToolsList["calligrapher's supplies"] = {
   amount: "",
   weight: 5,
   type: "artisan's tools",
-  source: [["PHB2024", 220]],
+  source: [["P24", 220]],
 };
 ToolsList["carpenter's tools"] = {
   infoname: "Carpenter's Tools [8 gp]",
@@ -13444,7 +13444,7 @@ ToolsList["carpenter's tools"] = {
   amount: "",
   weight: 6,
   type: "artisan's tools",
-  source: [["PHB2024", 220]],
+  source: [["P24", 220]],
 };
 ToolsList["cartographer's tools"] = {
   infoname: "Cartographer's Tools [15 gp]",
@@ -13452,7 +13452,7 @@ ToolsList["cartographer's tools"] = {
   amount: "",
   weight: 6,
   type: "artisan's tools",
-  source: [["PHB2024", 220]],
+  source: [["P24", 220]],
 };
 ToolsList["cobbler's tools"] = {
   infoname: "Cobbler's tools [5 gp]",
@@ -13460,7 +13460,7 @@ ToolsList["cobbler's tools"] = {
   amount: "",
   weight: 5,
   type: "artisan's tools",
-  source: [["PHB2024", 220]],
+  source: [["P24", 220]],
 };
 ToolsList["cook's utensils"] = {
   infoname: "Cook's Utensils [1 gp]",
@@ -13468,7 +13468,7 @@ ToolsList["cook's utensils"] = {
   amount: "",
   weight: 8,
   type: "artisan's tools",
-  source: [["PHB2024", 220]],
+  source: [["P24", 220]],
 };
 ToolsList["glassblower's tools"] = {
   infoname: "Glassblower's Tools [30 gp]",
@@ -13476,7 +13476,7 @@ ToolsList["glassblower's tools"] = {
   amount: "",
   weight: 5,
   type: "artisan's tools",
-  source: [["PHB2024", 220]],
+  source: [["P24", 220]],
 };
 ToolsList["jeweler's tools"] = {
   infoname: "Jeweler's Tools [20 gp]",
@@ -13484,7 +13484,7 @@ ToolsList["jeweler's tools"] = {
   amount: "",
   weight: 2,
   type: "artisan's tools",
-  source: [["PHB2024", 220]],
+  source: [["P24", 220]],
 };
 ToolsList["leatherworker's tools"] = {
   infoname: "Leatherworker's Tools [5 gp]",
@@ -13492,7 +13492,7 @@ ToolsList["leatherworker's tools"] = {
   amount: "",
   weight: 5,
   type: "artisan's tools",
-  source: [["PHB2024", 220]],
+  source: [["P24", 220]],
 };
 ToolsList["mason's tools"] = {
   infoname: "Mason's Tools [10 gp]",
@@ -13500,7 +13500,7 @@ ToolsList["mason's tools"] = {
   amount: "",
   weight: 8,
   type: "artisan's tools",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["painter's supplies"] = {
   infoname: "Painter's Supplies [10 gp]",
@@ -13508,7 +13508,7 @@ ToolsList["painter's supplies"] = {
   amount: "",
   weight: 5,
   type: "artisan's tools",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["potter's tools"] = {
   infoname: "Potter's Tools [10 gp]",
@@ -13516,7 +13516,7 @@ ToolsList["potter's tools"] = {
   amount: "",
   weight: 3,
   type: "artisan's tools",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["smith's tools"] = {
   infoname: "Smith's Tools [20 gp]",
@@ -13524,7 +13524,7 @@ ToolsList["smith's tools"] = {
   amount: "",
   weight: 8,
   type: "artisan's tools",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["tinker's tools"] = {
   infoname: "Tinker's Tools [50 gp]",
@@ -13532,7 +13532,7 @@ ToolsList["tinker's tools"] = {
   amount: "",
   weight: 10,
   type: "artisan's tools",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["weaver's tools"] = {
   infoname: "Weaver's Tools [1 gp]",
@@ -13540,7 +13540,7 @@ ToolsList["weaver's tools"] = {
   amount: "",
   weight: 5,
   type: "artisan's tools",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["woodcarver's tools"] = {
   infoname: "Woodcarver's Tools [1 gp]",
@@ -13548,21 +13548,21 @@ ToolsList["woodcarver's tools"] = {
   amount: "",
   weight: 5,
   type: "artisan's tools",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["disguise kit"] = {
   infoname: "Disguise Kit [25 gp]",
   name: "Disguise Kit",
   amount: "",
   weight: 3,
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["forgery kit"] = {
   infoname: "Forgery Kit [15 gp]",
   name: "Forgery Kit",
   amount: "",
   weight: 5,
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["dice"] = {
   infoname: "Dice [1 sp]",
@@ -13570,7 +13570,7 @@ ToolsList["dice"] = {
   amount: "",
   weight: "",
   type: "gaming set",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["dragonchess"] = {
   infoname: "Dragonchess [1 gp]",
@@ -13578,7 +13578,7 @@ ToolsList["dragonchess"] = {
   amount: "",
   weight: "",
   type: "gaming set",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["playing cards"] = {
   infoname: "Playing Cards [5 sp]",
@@ -13586,7 +13586,7 @@ ToolsList["playing cards"] = {
   amount: "",
   weight: "",
   type: "gaming set",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["three-dragon ante"] = {
   infoname: "Three-Dragon Ante [1 gp]",
@@ -13594,14 +13594,14 @@ ToolsList["three-dragon ante"] = {
   amount: "",
   weight: "",
   type: "gaming set",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["herbalism kit"] = {
   infoname: "Herbalism Kit [5 gp]",
   name: "Herbalism Kit",
   amount: "",
   weight: 3,
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["bagpipes"] = {
   infoname: "Bagpipes [30 gp]",
@@ -13609,7 +13609,7 @@ ToolsList["bagpipes"] = {
   amount: "",
   weight: 6,
   type: "musical instrument",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["drum"] = {
   infoname: "Drum [6 gp]",
@@ -13617,7 +13617,7 @@ ToolsList["drum"] = {
   amount: "",
   weight: 3,
   type: "musical instrument",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["dulcimer"] = {
   infoname: "Dulcimer [25 gp]",
@@ -13625,7 +13625,7 @@ ToolsList["dulcimer"] = {
   amount: "",
   weight: 10,
   type: "musical instrument",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["flute"] = {
   infoname: "Flute [2 gp]",
@@ -13633,7 +13633,7 @@ ToolsList["flute"] = {
   amount: "",
   weight: 1,
   type: "musical instrument",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["horn"] = {
   infoname: "Horn [3 gp]",
@@ -13641,7 +13641,7 @@ ToolsList["horn"] = {
   amount: "",
   weight: 2,
   type: "musical instrument",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["lute"] = {
   infoname: "Lute [35 gp]",
@@ -13649,7 +13649,7 @@ ToolsList["lute"] = {
   amount: "",
   weight: 2,
   type: "musical instrument",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["lyre"] = {
   infoname: "Lyre [30 gp]",
@@ -13657,7 +13657,7 @@ ToolsList["lyre"] = {
   amount: "",
   weight: 2,
   type: "musical instrument",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["pan flute"] = {
   infoname: "Pan Flute [12 gp]",
@@ -13665,7 +13665,7 @@ ToolsList["pan flute"] = {
   amount: "",
   weight: 2,
   type: "musical instrument",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["shawm"] = {
   infoname: "Shawm [2 gp]",
@@ -13673,7 +13673,7 @@ ToolsList["shawm"] = {
   amount: "",
   weight: 1,
   type: "musical instrument",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["viol"] = {
   infoname: "Viol [30 gp]",
@@ -13681,28 +13681,28 @@ ToolsList["viol"] = {
   amount: "",
   weight: 1,
   type: "musical instrument",
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["navigator's tools"] = {
   infoname: "Navigator's Tools [25 gp]",
   name: "Navigator's Tools",
   amount: "",
   weight: 2,
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["poisoner's kit"] = {
   infoname: "Poisoner's Kit [50 gp]",
   name: "Poisoner's Kit",
   amount: "",
   weight: 2,
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 ToolsList["thieves' tools"] = {
   infoname: "Thieves' Tools [25 gp]",
   name: "Thieves' Tools",
   amount: "",
   weight: 1,
-  source: [["PHB2024", 221]],
+  source: [["P24", 221]],
 };
 //Gear
 GearList["acid"] = {
@@ -14276,7 +14276,7 @@ GearList["waterskin"] = {
 //Packs
 PacksList["burglar"] = {
   name: "Burglar's pack (16 gp)",
-  source: [["PHB2024", 224]],
+  source: [["P24", 224]],
   items: [
     ["Backpack, with:", "", 5],
     ["Bag of 1000 ball bearings", "", 2],
@@ -14293,7 +14293,7 @@ PacksList["burglar"] = {
 };
 PacksList["diplomat"] = {
   name: "Diplomat's pack (39 gp)",
-  source: [["PHB2024", 225]],
+  source: [["P24", 225]],
   items: [
     ["Chest, with:", "", 25],
     ["Fine clothes", "", 6],
@@ -14310,7 +14310,7 @@ PacksList["diplomat"] = {
 };
 PacksList["dungeoneer"] = {
   name: "Dungeoneer's pack (12 gp)",
-  source: [["PHB2024", 225]],
+  source: [["P24", 225]],
   items: [
     ["Backpack, with:", "", 5],
     ["Caltrops", 20, 0.1],
@@ -14325,7 +14325,7 @@ PacksList["dungeoneer"] = {
 };
 PacksList["entertainer"] = {
   name: "Entertainer's pack (40 gp)",
-  source: [["PHB2024", 225]],
+  source: [["P24", 225]],
   items: [
     ["Backpack, with:", "", 5],
     ["Bedroll", "", 7],
@@ -14341,7 +14341,7 @@ PacksList["entertainer"] = {
 };
 PacksList["explorer"] = {
   name: "Explorer's pack (10 gp)",
-  source: [["PHB2024", 225]],
+  source: [["P24", 225]],
   items: [
     ["Backpack, with:", "", 5],
     ["Bedroll", "", 7],
@@ -14355,7 +14355,7 @@ PacksList["explorer"] = {
 };
 PacksList["priest"] = {
   name: "Priest's pack (33 gp)",
-  source: [["PHB2024", 225]],
+  source: [["P24", 225]],
   items: [
     ["Backpack, with:", "", 5],
     ["Blanket", "", 3],
@@ -14368,7 +14368,7 @@ PacksList["priest"] = {
 };
 PacksList["scholar"] = {
   name: "Scholar's pack (40 gp)",
-  source: [["PHB2024", 225]],
+  source: [["P24", 225]],
   items: [
     ["Backpack, with:", "", 5],
     ["Book", "", 5],
@@ -14385,7 +14385,7 @@ PacksList["scholar"] = {
 legacySpellRefactor("acid splash", {
 	name : "Acid Splash",
 	classes : ["artificer","sorcerer", "wizard"],
-	source : [["PHB2024", 239]],
+	source : [["P24", 239]],
 	level : 0,
 	school : "Evoc",
 	time : "1 a",
@@ -14400,7 +14400,7 @@ legacySpellRefactor("acid splash", {
 legacySpellRefactor("aid", {
 	name : "Aid",
 	classes : ["artificer","bard", "cleric", "druid", "paladin", "ranger"],
-	source : [["PHB2024", 239]],
+	source : [["P24", 239]],
 	level : 2,
 	school : "Abjur",
 	time : "1 a",
@@ -14414,7 +14414,7 @@ legacySpellRefactor("aid", {
 legacySpellRefactor("alarm", {
 	name : "Alarm",
 	classes : ["artificer","ranger", "wizard"],
-	source : [["PHB2024", 239]],
+	source : [["P24", 239]],
 	ritual : true,
 	level : 1,
 	school : "Abjur",
@@ -14429,7 +14429,7 @@ legacySpellRefactor("alarm", {
 legacySpellRefactor("alter self", {
 	name : "Alter Self",
 	classes : ["artificer","sorcerer", "wizard"],
-	source : [["PHB2024", 239]],
+	source : [["P24", 239]],
 	level : 2,
 	school : "Trans",
 	time : "1 a",
@@ -14443,7 +14443,7 @@ legacySpellRefactor("animal friendship", {
 	name : "Animal Friendship",
 	nameShort : "Animal Friendship*",
 	classes : ["bard", "druid", "ranger"],
-	source : [["PHB2024", 239]],
+	source : [["P24", 239]],
 	level : 1,
 	school : "Ench",
 	time : "1 a",
@@ -14459,7 +14459,7 @@ legacySpellRefactor("animal messenger", {
 	name : "Animal Messenger",
 	nameShort : "Animal Messenger*",
 	classes : ["bard", "druid", "ranger"],
-	source : [["PHB2024", 240]],
+	source : [["P24", 240]],
 	ritual : true,
 	level : 2,
 	school : "Ench",
@@ -14476,7 +14476,7 @@ legacySpellRefactor("animal shapes", {
 	name : "Animal Shapes",
 	nameShort : "Animal Shapes*",
 	classes : ["druid"],
-	source : [["PHB2024", 240]],
+	source : [["P24", 240]],
 	level : 8,
 	school : "Trans",
 	time : "1 a",
@@ -14489,7 +14489,7 @@ legacySpellRefactor("animal shapes", {
 legacySpellRefactor("animate dead", {
 	name : "Animate Dead",
 	classes : ["cleric", "wizard"],
-	source : [["PHB2024", 240]],
+	source : [["P24", 240]],
 	level : 3,
 	school : "Necro",
 	time : "1 min",
@@ -14503,7 +14503,7 @@ legacySpellRefactor("animate dead", {
 legacySpellRefactor("animate objects", {
 	name : "Animate Objects",
 	classes : ["artificer","bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 240]],
+	source : [["P24", 240]],
 	level : 5,
 	school : "Trans",
 	time : "1 a",
@@ -14516,7 +14516,7 @@ legacySpellRefactor("animate objects", {
 legacySpellRefactor("antilife shell", {
 	name : "Antilife Shell",
 	classes : ["druid"],
-	source : [["PHB2024", 241]],
+	source : [["P24", 241]],
 	level : 5,
 	school : "Abjur",
 	time : "1 a",
@@ -14529,7 +14529,7 @@ legacySpellRefactor("antilife shell", {
 legacySpellRefactor("antimagic field", {
 	name : "Antimagic Field",
 	classes : ["cleric", "wizard"],
-	source : [["PHB2024", 241]],
+	source : [["P24", 241]],
 	level : 8,
 	school : "Abjur",
 	time : "1 a",
@@ -14543,7 +14543,7 @@ legacySpellRefactor("antimagic field", {
 legacySpellRefactor("antipathy/sympathy", {
 	name : "Antipathy/Sympathy",
 	classes : ["bard", "druid", "wizard"],
-	source : [["PHB2024", 242]],
+	source : [["P24", 242]],
 	level : 8,
 	school : "Ench",
 	time : "1 h",
@@ -14558,7 +14558,7 @@ legacySpellRefactor("antipathy/sympathy", {
 legacySpellRefactor("arcane eye", {
 	name : "Arcane Eye",
 	classes : ["artificer","wizard"],
-	source : [["PHB2024", 242]],
+	source : [["P24", 242]],
 	level : 4,
 	school : "Div",
 	time : "1 a",
@@ -14573,7 +14573,7 @@ legacySpellRefactor("arcane gate", {
 	name : "Arcane Gate",
 	nameShort : "Arcane Gate*",
 	classes : ["sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 242]],
+	source : [["P24", 242]],
 	level : 6,
 	school : "Conj",
 	time : "1 a",
@@ -14586,7 +14586,7 @@ legacySpellRefactor("arcane gate", {
 legacySpellRefactor("arcane lock", {
 	name : "Arcane Lock",
 	classes : ["artificer", "wizard"],
-	source : [["PHB2024", 242]],
+	source : [["P24", 242]],
 	level : 2,
 	school : "Abjur",
 	time : "1 a",
@@ -14600,7 +14600,7 @@ legacySpellRefactor("arcane lock", {
 legacySpellRefactor("arcane vigor", {
 	name : "Arcane Vigor",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 242]],
+	source : [["P24", 242]],
 	level : 2,
 	school : "Abjur",
 	time : "1 bns",
@@ -14613,7 +14613,7 @@ legacySpellRefactor("arcane vigor", {
 legacySpellRefactor("armor of agathys", {
 	name : "Armor of Agathys",
 	classes : ["warlock"],
-	source : [["PHB2024", 243]],
+	source : [["P24", 243]],
 	level : 1,
 	school : "Abjur",
 	time : "1 bns",
@@ -14627,7 +14627,7 @@ legacySpellRefactor("armor of agathys", {
 legacySpellRefactor("arms of hadar", {
 	name : "Arms of Hadar",
 	classes : ["warlock"],
-	source : [["PHB2024", 243]],
+	source : [["P24", 243]],
 	level : 1,
 	school : "Conj",
 	time : "1 a",
@@ -14641,7 +14641,7 @@ legacySpellRefactor("arms of hadar", {
 legacySpellRefactor("astral projection", {
 	name : "Astral Projection",
 	classes : ["cleric", "warlock", "wizard"],
-	source : [["PHB2024", 243]],
+	source : [["P24", 243]],
 	level : 9,
 	school : "Necro",
 	time : "1 h (D)",
@@ -14655,7 +14655,7 @@ legacySpellRefactor("astral projection", {
 legacySpellRefactor("augury", {
 	name : "Augury",
 	classes : ["cleric", "druid", "wizard"],
-	source : [["PHB2024", 244]],
+	source : [["P24", 244]],
 	ritual : true,
 	level : 2,
 	school : "Div",
@@ -14670,7 +14670,7 @@ legacySpellRefactor("augury", {
 legacySpellRefactor("aura of life", {
 	name : "Aura of Life",
 	classes : ["cleric", "paladin"],
-	source : [["PHB2024", 244]],
+	source : [["P24", 244]],
 	level : 4,
 	school : "Abjur",
 	time : "1 a",
@@ -14683,7 +14683,7 @@ legacySpellRefactor("aura of life", {
 legacySpellRefactor("aura of purity", {
 	name : "Aura of Purity",
 	classes : ["cleric", "paladin"],
-	source : [["PHB2024", 244]],
+	source : [["P24", 244]],
 	level : 4,
 	school : "Abjur",
 	time : "1 a",
@@ -14696,7 +14696,7 @@ legacySpellRefactor("aura of purity", {
 legacySpellRefactor("aura of vitality", {
 	name : "Aura of Vitality",
 	classes : ["cleric", "druid", "paladin"],
-	source : [["PHB2024", 244]],
+	source : [["P24", 244]],
 	level : 3,
 	school : "Abjur",
 	time : "1 a",
@@ -14709,7 +14709,7 @@ legacySpellRefactor("aura of vitality", {
 legacySpellRefactor("awaken", {
 	name : "Awaken",
 	classes : ["bard", "druid"],
-	source : [["PHB2024", 244]],
+	source : [["P24", 244]],
 	level : 5,
 	school : "Trans",
 	time : "8 h",
@@ -14724,7 +14724,7 @@ legacySpellRefactor("bane", {
 	name : "Bane",
 	nameShort : "Bane*",
 	classes : ["bard", "cleric", "warlock"],
-	source : [["PHB2024", 245]],
+	source : [["P24", 245]],
 	level : 1,
 	school : "Ench",
 	time : "1 a",
@@ -14739,7 +14739,7 @@ legacySpellRefactor("bane", {
 legacySpellRefactor("banishing smite", {
 	name : "Banishing Smite",
 	classes : ["paladin"],
-	source : [["PHB2024", 245]],
+	source : [["P24", 245]],
 	level : 5,
 	school : "Conj",
 	time : "1 bns*",
@@ -14754,7 +14754,7 @@ legacySpellRefactor("banishment", {
 	name : "Banishment",
 	nameShort : "Banishment*",
 	classes : ["cleric", "paladin", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 245]],
+	source : [["P24", 245]],
 	level : 4,
 	school : "Abjur",
 	time : "1 a",
@@ -14769,7 +14769,7 @@ legacySpellRefactor("banishment", {
 legacySpellRefactor("barkskin", {
 	name : "Barkskin",
 	classes : ["druid", "ranger"],
-	source : [["PHB2024", 245]],
+	source : [["P24", 245]],
 	level : 2,
 	school : "Trans",
 	time : "1 bns",
@@ -14783,7 +14783,7 @@ legacySpellRefactor("barkskin", {
 legacySpellRefactor("beacon of hope", {
 	name : "Beacon of Hope",
 	classes : ["cleric"],
-	source : [["PHB2024", 245]],
+	source : [["P24", 245]],
 	level : 3,
 	school : "Abjur",
 	time : "1 a",
@@ -14796,7 +14796,7 @@ legacySpellRefactor("beacon of hope", {
 legacySpellRefactor("beast sense", {
 	name : "Beast Sense",
 	classes : ["druid", "ranger"],
-	source : [["PHB2024", 245]],
+	source : [["P24", 245]],
 	ritual : true,
 	level : 2,
 	school : "Div",
@@ -14812,7 +14812,7 @@ legacySpellRefactor("befuddlement", {
 	nameShort : "Befuddlement*",
 	replaces : "feeblemind",
 	classes : ["bard", "druid", "warlock", "wizard"],
-	source : [["PHB2024", 245]],
+	source : [["P24", 245]],
 	level : 8,
 	school : "Ench",
 	time : "1 a",
@@ -14827,7 +14827,7 @@ legacySpellRefactor("befuddlement", {
 legacySpellRefactor("bestow curse", {
 	name : "Bestow Curse",
 	classes : ["bard", "cleric", "wizard"],
-	source : [["PHB2024", 246]],
+	source : [["P24", 246]],
 	level : 3,
 	school : "Necro",
 	time : "1 a",
@@ -14843,7 +14843,7 @@ legacySpellRefactor("bigby's hand", {
 	nameShort : "Bigby's Hand*",
 	nameAlt : "Arcane Hand",
 	classes : ["artificer","sorcerer", "wizard"],
-	source : [["PHB2024", 246]],
+	source : [["P24", 246]],
 	level : 5,
 	school : "Evoc",
 	time : "1 a",
@@ -14857,7 +14857,7 @@ legacySpellRefactor("bigby's hand", {
 legacySpellRefactor("blade barrier", {
 	name : "Blade Barrier",
 	classes : ["cleric"],
-	source : [["PHB2024", 247]],
+	source : [["P24", 247]],
 	level : 6,
 	school : "Evoc",
 	time : "1 a",
@@ -14874,7 +14874,7 @@ legacySpellRefactor("blade barrier", {
 legacySpellRefactor("blade ward", {
 	name : "Blade Ward",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 247]],
+	source : [["P24", 247]],
 	level : 0,
 	school : "Abjur",
 	time : "1 a",
@@ -14887,7 +14887,7 @@ legacySpellRefactor("blade ward", {
 legacySpellRefactor("bless", {
 	name : "Bless",
 	classes : ["cleric", "paladin"],
-	source : [["PHB2024", 247]],
+	source : [["P24", 247]],
 	level : 1,
 	school : "Ench",
 	time : "1 a",
@@ -14902,7 +14902,7 @@ legacySpellRefactor("blight", {
 	name : "Blight",
 	nameShort : "Blight*",
 	classes : ["druid", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 247]],
+	source : [["P24", 247]],
 	level : 4,
 	school : "Necro",
 	time : "1 a",
@@ -14916,7 +14916,7 @@ legacySpellRefactor("blight", {
 legacySpellRefactor("blinding smite", {
 	name : "Blinding Smite",
 	classes : ["paladin"],
-	source : [["PHB2024", 247]],
+	source : [["P24", 247]],
 	level : 3,
 	school : "Evoc",
 	time : "1 bns*",
@@ -14932,7 +14932,7 @@ legacySpellRefactor("blindness/deafness", {
 	name : "Blindness/Deafness",
 	nameShort : "Blindness/Deafness*",
 	classes : ["bard", "cleric", "sorcerer", "wizard"],
-	source : [["PHB2024", 248]],
+	source : [["P24", 248]],
 	level : 2,
 	school : "Trans",
 	time : "1 a",
@@ -14946,7 +14946,7 @@ legacySpellRefactor("blindness/deafness", {
 legacySpellRefactor("blink", {
 	name : "Blink",
 	classes : ["artificer","sorcerer", "wizard"],
-	source : [["PHB2024", 248]],
+	source : [["P24", 248]],
 	level : 3,
 	school : "Trans",
 	time : "1 a",
@@ -14959,7 +14959,7 @@ legacySpellRefactor("blink", {
 legacySpellRefactor("blur", {
 	name : "Blur",
 	classes : ["artificer","sorcerer", "wizard"],
-	source : [["PHB2024", 248]],
+	source : [["P24", 248]],
 	level : 2,
 	school : "Illus",
 	time : "1 a",
@@ -14972,7 +14972,7 @@ legacySpellRefactor("blur", {
 legacySpellRefactor("burning hands", {
 	name : "Burning Hands",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 248]],
+	source : [["P24", 248]],
 	level : 1,
 	school : "Evoc",
 	time : "1 a",
@@ -14987,7 +14987,7 @@ legacySpellRefactor("call lightning", {
 	name : "Call Lightning",
 	nameShort : "Call Lightning*",
 	classes : ["druid"],
-	source : [["PHB2024", 248]],
+	source : [["P24", 248]],
 	level : 3,
 	school : "Conj",
 	time : "1 a",
@@ -15002,7 +15002,7 @@ legacySpellRefactor("call lightning", {
 legacySpellRefactor("calm emotions", {
 	name : "Calm Emotions",
 	classes : ["bard", "cleric"],
-	source : [["PHB2024", 249]],
+	source : [["P24", 249]],
 	level : 2,
 	school : "Ench",
 	time : "1 a",
@@ -15019,7 +15019,7 @@ legacySpellRefactor("chain lightning", {
 	name : "Chain Lightning",
 	nameShort : "Chain Lightning*",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 249]],
+	source : [["P24", 249]],
 	level : 6,
 	school : "Evoc",
 	time : "1 a",
@@ -15035,7 +15035,7 @@ legacySpellRefactor("charm monster", {
 	name : "Charm Monster",
 	nameShort : "Charm Monster*",
 	classes : ["bard", "druid", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 249]],
+	source : [["P24", 249]],
 	level : 4,
 	school : "Ench",
 	time : "1 a",
@@ -15050,7 +15050,7 @@ legacySpellRefactor("charm person", {
 	name : "Charm Person",
 	nameShort : "Charm Person*",
 	classes : ["bard", "druid", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 249]],
+	source : [["P24", 249]],
 	level : 1,
 	school : "Ench",
 	time : "1 a",
@@ -15064,7 +15064,7 @@ legacySpellRefactor("charm person", {
 legacySpellRefactor("chill touch", {
 	name : "Chill Touch",
 	classes : ["sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 249]],
+	source : [["P24", 249]],
 	level : 0,
 	school : "Necro",
 	time : "1 a",
@@ -15079,7 +15079,7 @@ legacySpellRefactor("chill touch", {
 legacySpellRefactor("chromatic orb", {
 	name : "Chromatic Orb",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 249]],
+	source : [["P24", 249]],
 	level : 1,
 	school : "Evoc",
 	time : "1 a",
@@ -15099,7 +15099,7 @@ legacySpellRefactor("chromatic orb", {
 legacySpellRefactor("circle of death", {
 	name : "Circle of Death",
 	classes : ["sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 250]],
+	source : [["P24", 250]],
 	level : 6,
 	school : "Necro",
 	time : "1 a",
@@ -15114,7 +15114,7 @@ legacySpellRefactor("circle of death", {
 legacySpellRefactor("circle of power", {
 	name : "Circle of Power",
 	classes : ["cleric", "paladin", "wizard"],
-	source : [["PHB2024", 250]],
+	source : [["P24", 250]],
 	level : 5,
 	school : "Abjur",
 	time : "1 a",
@@ -15127,7 +15127,7 @@ legacySpellRefactor("circle of power", {
 legacySpellRefactor("clairvoyance", {
 	name : "Clairvoyance",
 	classes : ["bard", "cleric", "sorcerer", "wizard"],
-	source : [["PHB2024", 250]],
+	source : [["P24", 250]],
 	level : 3,
 	school : "Div",
 	time : "10 min",
@@ -15141,7 +15141,7 @@ legacySpellRefactor("clairvoyance", {
 legacySpellRefactor("clone", {
 	name : "Clone",
 	classes : ["wizard"],
-	source : [["PHB2024", 251]],
+	source : [["P24", 251]],
 	level : 8,
 	school : "Necro",
 	time : "1 h",
@@ -15155,7 +15155,7 @@ legacySpellRefactor("clone", {
 legacySpellRefactor("cloudkill", {
 	name : "Cloudkill",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 251]],
+	source : [["P24", 251]],
 	level : 5,
 	school : "Conj",
 	time : "1 a",
@@ -15170,7 +15170,7 @@ legacySpellRefactor("cloudkill", {
 legacySpellRefactor("cloud of daggers", {
 	name : "Cloud of Daggers",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 251]],
+	source : [["P24", 251]],
 	level : 2,
 	school : "Conj",
 	time : "1 a",
@@ -15184,7 +15184,7 @@ legacySpellRefactor("cloud of daggers", {
 legacySpellRefactor("color spray", {
 	name : "Color Spray",
 	classes : ["bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 251]],
+	source : [["P24", 251]],
 	level : 1,
 	school : "Illus",
 	time : "1 a",
@@ -15200,7 +15200,7 @@ legacySpellRefactor("command", {
 	name : "Command",
 	nameShort : "Command*",
 	classes : ["bard", "cleric", "paladin"],
-	source : [["PHB2024", 251]],
+	source : [["P24", 251]],
 	level : 1,
 	school : "Ench",
 	time : "1 a",
@@ -15214,7 +15214,7 @@ legacySpellRefactor("command", {
 legacySpellRefactor("commune", {
 	name : "Commune",
 	classes : ["cleric"],
-	source : [["PHB2024", 252]],
+	source : [["P24", 252]],
 	ritual : true,
 	level : 5,
 	school : "Div",
@@ -15230,7 +15230,7 @@ legacySpellRefactor("commune with nature", {
 	name : "Commune with Nature",
 	nameShort : "Commune w. Nature",
 	classes : ["druid", "ranger"],
-	source : [["PHB2024", 252]],
+	source : [["P24", 252]],
 	ritual : true,
 	level : 5,
 	school : "Div",
@@ -15245,7 +15245,7 @@ legacySpellRefactor("compelled duel", {
 	name : "Compelled Duel",
 	nameShort : "Compelled Duel*",
 	classes : ["paladin"],
-	source : [["PHB2024", 252]],
+	source : [["P24", 252]],
 	level : 1,
 	school : "Ench",
 	time : "1 bns",
@@ -15260,7 +15260,7 @@ legacySpellRefactor("comprehend languages", {
 	name : "Comprehend Languages",
 	nameShort : "Comp. Languages",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 252]],
+	source : [["P24", 252]],
 	ritual : true,
 	level : 1,
 	school : "Div",
@@ -15276,7 +15276,7 @@ legacySpellRefactor("compulsion", {
 	name : "Compulsion",
 	nameShort : "Compulsion*",
 	classes : ["bard"],
-	source : [["PHB2024", 252]],
+	source : [["P24", 252]],
 	level : 4,
 	school : "Ench",
 	time : "1 a",
@@ -15290,7 +15290,7 @@ legacySpellRefactor("compulsion", {
 legacySpellRefactor("cone of cold", {
 	name : "Cone of Cold",
 	classes : ["druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 253]],
+	source : [["P24", 253]],
 	level : 5,
 	school : "Evoc",
 	time : "1 a",
@@ -15305,7 +15305,7 @@ legacySpellRefactor("cone of cold", {
 legacySpellRefactor("confusion", {
 	name : "Confusion",
 	classes : ["bard", "druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 253]],
+	source : [["P24", 253]],
 	level : 4,
 	school : "Ench",
 	time : "1 a",
@@ -15321,7 +15321,7 @@ legacySpellRefactor("conjure animals", {
 	name : "Conjure Animals",
 	nameShort : "Conjure Animals*",
 	classes : ["druid", "ranger"],
-	source : [["PHB2024", 254]],
+	source : [["P24", 254]],
 	level : 3,
 	school : "Conj",
 	time : "1 a",
@@ -15336,7 +15336,7 @@ legacySpellRefactor("conjure barrage", {
 	name : "Conjure Barrage",
 	nameShort : "Conjure Barrage*",
 	classes : ["ranger"],
-	source : [["PHB2024", 254]],
+	source : [["P24", 254]],
 	level : 3,
 	school : "Conj",
 	time : "1 a",
@@ -15352,7 +15352,7 @@ legacySpellRefactor("conjure celestial", {
 	name : "Conjure Celestial",
 	nameShort : "Conjure Celestial*",
 	classes : ["cleric"],
-	source : [["PHB2024", 254]],
+	source : [["P24", 254]],
 	level : 7,
 	school : "Conj",
 	time : "1 a",
@@ -15366,7 +15366,7 @@ legacySpellRefactor("conjure elemental", {
 	name : "Conjure Elemental",
 	nameShort : "Conjure Elemental*",
 	classes : ["druid", "wizard"],
-	source : [["PHB2024", 254]],
+	source : [["P24", 254]],
 	level : 5,
 	school : "Conj",
 	time : "1 a",
@@ -15380,7 +15380,7 @@ legacySpellRefactor("conjure fey", {
 	name : "Conjure Fey",
 	nameShort : "Conjure Fey*",
 	classes : ["druid"],
-	source : [["PHB2024", 255]],
+	source : [["P24", 255]],
 	level : 6,
 	school : "Conj",
 	time : "1 a",
@@ -15394,7 +15394,7 @@ legacySpellRefactor("conjure minor elementals", {
 	name : "Conjure Minor Elementals",
 	nameShort : "Conj. Minor Elementals",
 	classes : ["druid", "wizard"],
-	source : [["PHB2024", 255]],
+	source : [["P24", 255]],
 	level : 4,
 	school : "Conj",
 	time : "1 a",
@@ -15408,7 +15408,7 @@ legacySpellRefactor("conjure volley", {
 	name : "Conjure Volley",
 	nameShort : "Conjure Volley*",
 	classes : ["ranger"],
-	source : [["PHB2024", 255]],
+	source : [["P24", 255]],
 	level : 5,
 	school : "Conj",
 	time : "1 a",
@@ -15424,7 +15424,7 @@ legacySpellRefactor("conjure woodland beings", {
 	name : "Conjure Woodland Beings",
 	nameShort : "Conj. Woodland Beings*",
 	classes : ["druid", "ranger"],
-	source : [["PHB2024", 255]],
+	source : [["P24", 255]],
 	level : 4,
 	school : "Conj",
 	time : "1 a",
@@ -15438,7 +15438,7 @@ legacySpellRefactor("conjure woodland beings", {
 legacySpellRefactor("contact other plane", {
 	name : "Contact Other Plane",
 	classes : ["warlock", "wizard"],
-	source : [["PHB2024", 255]],
+	source : [["P24", 255]],
 	ritual : true,
 	level : 5,
 	school : "Div",
@@ -15453,7 +15453,7 @@ legacySpellRefactor("contact other plane", {
 legacySpellRefactor("contagion", {
 	name : "Contagion",
 	classes : ["cleric", "druid"],
-	source : [["PHB2024", 256]],
+	source : [["P24", 256]],
 	level : 5,
 	school : "Necro",
 	time : "1 a",
@@ -15467,7 +15467,7 @@ legacySpellRefactor("contagion", {
 legacySpellRefactor("contingency", {
 	name : "Contingency",
 	classes : ["wizard"],
-	source : [["PHB2024", 256]],
+	source : [["P24", 256]],
 	level : 6,
 	school : "Evoc",
 	time : "10 min",
@@ -15481,7 +15481,7 @@ legacySpellRefactor("contingency", {
 legacySpellRefactor("continual flame", {
 	name : "Continual Flame",
 	classes : ["artificer","cleric", "druid", "wizard"],
-	source : [["PHB2024", 256]],
+	source : [["P24", 256]],
 	level : 2,
 	school : "Evoc",
 	time : "1 a",
@@ -15495,7 +15495,7 @@ legacySpellRefactor("continual flame", {
 legacySpellRefactor("control water", {
 	name : "Control Water",
 	classes : ["cleric", "druid", "wizard"],
-	source : [["PHB2024", 256]],
+	source : [["P24", 256]],
 	level : 4,
 	school : "Trans",
 	time : "1 a",
@@ -15509,7 +15509,7 @@ legacySpellRefactor("control water", {
 legacySpellRefactor("control weather", {
 	name : "Control Weather",
 	classes : ["cleric", "druid", "wizard"],
-	source : [["PHB2024", 257]],
+	source : [["P24", 257]],
 	level : 8,
 	school : "Trans",
 	time : "10 min",
@@ -15523,7 +15523,7 @@ legacySpellRefactor("control weather", {
 legacySpellRefactor("cordon of arrows", {
 	name : "Cordon of Arrows",
 	classes : ["ranger"],
-	source : [["PHB2024", 258]],
+	source : [["P24", 258]],
 	level : 2,
 	school : "Trans",
 	time : "1 a",
@@ -15539,7 +15539,7 @@ legacySpellRefactor("counterspell", {
 	name : "Counterspell",
 	nameShort : "Counterspell*",
 	classes : ["sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 258]],
+	source : [["P24", 258]],
 	level : 3,
 	school : "Abjur",
 	time : "1 rea",
@@ -15554,7 +15554,7 @@ legacySpellRefactor("counterspell", {
 legacySpellRefactor("create food and water", {
 	name : "Create Food and Water",
 	classes : ["artificer","cleric", "paladin"],
-	source : [["PHB2024", 258]],
+	source : [["P24", 258]],
 	level : 3,
 	school : "Conj",
 	time : "1 a",
@@ -15567,7 +15567,7 @@ legacySpellRefactor("create food and water", {
 legacySpellRefactor("create or destroy water", {
 	name : "Create or Destroy Water",
 	classes : ["cleric", "druid"],
-	source : [["PHB2024", 258]],
+	source : [["P24", 258]],
 	level : 1,
 	school : "Trans",
 	time : "1 a",
@@ -15581,7 +15581,7 @@ legacySpellRefactor("create or destroy water", {
 legacySpellRefactor("create undead", {
 	name : "Create Undead",
 	classes : ["cleric", "warlock", "wizard"],
-	source : [["PHB2024", 258]],
+	source : [["P24", 258]],
 	level : 6,
 	school : "Necro",
 	time : "1 min",
@@ -15595,7 +15595,7 @@ legacySpellRefactor("create undead", {
 legacySpellRefactor("creation", {
 	name : "Creation",
 	classes : ["artificer","sorcerer", "wizard"],
-	source : [["PHB2024", 259]],
+	source : [["P24", 259]],
 	level : 5,
 	school : "Illus",
 	time : "1 min",
@@ -15610,7 +15610,7 @@ legacySpellRefactor("crown of madness", {
 	name : "Crown of Madness",
 	nameShort : "Crown of Madness*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 259]],
+	source : [["P24", 259]],
 	level : 2,
 	school : "Ench",
 	time : "1 a",
@@ -15624,7 +15624,7 @@ legacySpellRefactor("crown of madness", {
 legacySpellRefactor("crusader's mantle", {
 	name : "Crusader's Mantle",
 	classes : ["paladin"],
-	source : [["PHB2024", 259]],
+	source : [["P24", 259]],
 	level : 3,
 	school : "Evoc",
 	time : "1 a",
@@ -15637,7 +15637,7 @@ legacySpellRefactor("crusader's mantle", {
 legacySpellRefactor("cure wounds", {
 	name : "Cure Wounds",
 	classes : ["artificer","bard", "cleric", "druid", "paladin", "ranger"],
-	source : [["PHB2024", 259]],
+	source : [["P24", 259]],
 	level : 1,
 	school : "Abjur",
 	time : "1 a",
@@ -15650,7 +15650,7 @@ legacySpellRefactor("cure wounds", {
 legacySpellRefactor("dancing lights", {
 	name : "Dancing Lights",
 	classes : ["artificer","bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 259]],
+	source : [["P24", 259]],
 	level : 0,
 	school : "Illus",
 	time : "1 a",
@@ -15664,7 +15664,7 @@ legacySpellRefactor("dancing lights", {
 legacySpellRefactor("darkness", {
 	name : "Darkness",
 	classes : ["sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 260]],
+	source : [["P24", 260]],
 	level : 2,
 	school : "Evoc",
 	time : "1 a",
@@ -15678,7 +15678,7 @@ legacySpellRefactor("darkness", {
 legacySpellRefactor("darkvision", {
 	name : "Darkvision",
 	classes : ["artificer","druid", "ranger", "sorcerer", "wizard"],
-	source : [["PHB2024", 260]],
+	source : [["P24", 260]],
 	level : 2,
 	school : "Trans",
 	time : "1 a",
@@ -15692,7 +15692,7 @@ legacySpellRefactor("darkvision", {
 legacySpellRefactor("daylight", {
 	name : "Daylight",
 	classes : ["sorcerer","cleric", "druid", "paladin", "ranger"],
-	source : [["PHB2024", 260]],
+	source : [["P24", 260]],
 	level : 3,
 	school : "Evoc",
 	time : "1 a",
@@ -15705,7 +15705,7 @@ legacySpellRefactor("daylight", {
 legacySpellRefactor("death ward", {
 	name : "Death Ward",
 	classes : ["cleric", "paladin"],
-	source : [["PHB2024", 261]],
+	source : [["P24", 261]],
 	level : 4,
 	school : "Abjur",
 	time : "1 a",
@@ -15718,7 +15718,7 @@ legacySpellRefactor("death ward", {
 legacySpellRefactor("delayed blast fireball", {
 	name : "Delayed Blast Fireball",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 261]],
+	source : [["P24", 261]],
 	level : 7,
 	school : "Evoc",
 	time : "1 a",
@@ -15735,7 +15735,7 @@ legacySpellRefactor("demiplane", {
 	name : "Demiplane",
 	nameShort : "Demiplane*",
 	classes : ["sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 261]],
+	source : [["P24", 261]],
 	level : 8,
 	school : "Conj",
 	time : "1 a",
@@ -15748,7 +15748,7 @@ legacySpellRefactor("demiplane", {
 legacySpellRefactor("destructive wave", {
 	name : "Destructive Wave",
 	classes : ["paladin"],
-	source : [["PHB2024", 261]],
+	source : [["P24", 261]],
 	level : 5,
 	school : "Evoc",
 	time : "1 a",
@@ -15770,7 +15770,7 @@ legacySpellRefactor("destructive wave", {
 legacySpellRefactor("detect evil and good", {
 	name : "Detect Evil and Good",
 	classes : ["cleric", "paladin"],
-	source : [["PHB2024", 261]],
+	source : [["P24", 261]],
 	level : 1,
 	school : "Div",
 	time : "1 a",
@@ -15783,7 +15783,7 @@ legacySpellRefactor("detect evil and good", {
 legacySpellRefactor("detect magic", {
 	name : "Detect Magic",
 	classes : ["artificer","bard", "cleric", "druid", "paladin", "ranger", "sorcerer", "sorcerer", "warlock","wizard"],
-	source : [["PHB2024", 262]],
+	source : [["P24", 262]],
 	ritual : true,
 	level : 1,
 	school : "Div",
@@ -15798,7 +15798,7 @@ legacySpellRefactor("detect poison and disease", {
 	name : "Detect Poison and Disease",
 	nameShort : "Detect Poison/Disease",
 	classes : ["cleric", "druid", "paladin", "ranger"],
-	source : [["PHB2024", 262]],
+	source : [["P24", 262]],
 	ritual : true,
 	level : 1,
 	school : "Div",
@@ -15813,7 +15813,7 @@ legacySpellRefactor("detect poison and disease", {
 legacySpellRefactor("detect thoughts", {
 	name : "Detect Thoughts",
 	classes : ["bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 262]],
+	source : [["P24", 262]],
 	level : 2,
 	school : "Div",
 	time : "1 a",
@@ -15828,7 +15828,7 @@ legacySpellRefactor("detect thoughts", {
 legacySpellRefactor("dimension door", {
 	name : "Dimension Door",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 262]],
+	source : [["P24", 262]],
 	level : 4,
 	school : "Conj",
 	time : "1 a",
@@ -15841,7 +15841,7 @@ legacySpellRefactor("dimension door", {
 legacySpellRefactor("disguise self", {
 	name : "Disguise Self",
 	classes : ["artificer","bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 262]],
+	source : [["P24", 262]],
 	level : 1,
 	school : "Illus",
 	time : "1 a",
@@ -15855,7 +15855,7 @@ legacySpellRefactor("disintegrate", {
 	name : "Disintegrate",
 	nameShort : "Disintegrate*",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 263]],
+	source : [["P24", 263]],
 	level : 6,
 	school : "Trans",
 	time : "1 a",
@@ -15870,7 +15870,7 @@ legacySpellRefactor("disintegrate", {
 legacySpellRefactor("dispel evil and good", {
 	name : "Dispel Evil and Good",
 	classes : ["cleric", "paladin"],
-	source : [["PHB2024", 263]],
+	source : [["P24", 263]],
 	level : 5,
 	school : "Abjur",
 	time : "1 a",
@@ -15884,7 +15884,7 @@ legacySpellRefactor("dispel evil and good", {
 legacySpellRefactor("dispel magic", {
 	name : "Dispel Magic",
 	classes : ["artificer","bard", "cleric", "druid", "paladin", "ranger", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 264]],
+	source : [["P24", 264]],
 	level : 3,
 	school : "Abjur",
 	time : "1 a",
@@ -15898,7 +15898,7 @@ legacySpellRefactor("dissonant whispers", {
 	name : "Dissonant Whispers",
 	nameShort : "Dissonant Whispers*",
 	classes : ["bard"],
-	source : [["PHB2024", 264]],
+	source : [["P24", 264]],
 	level : 1,
 	school : "Ench",
 	time : "1 a",
@@ -15912,7 +15912,7 @@ legacySpellRefactor("dissonant whispers", {
 legacySpellRefactor("divination", {
 	name : "Divination",
 	classes : ["cleric", "druid", "wizard"],
-	source : [["PHB2024", 264]],
+	source : [["P24", 264]],
 	ritual : true,
 	level : 4,
 	school : "Div",
@@ -15927,7 +15927,7 @@ legacySpellRefactor("divination", {
 legacySpellRefactor("divine favor", {
 	name : "Divine Favor",
 	classes : ["paladin"],
-	source : [["PHB2024", 265]],
+	source : [["P24", 265]],
 	level : 1,
 	school : "Trans",
 	time : "1 bns",
@@ -15940,7 +15940,7 @@ legacySpellRefactor("divine favor", {
 legacySpellRefactor("divine smite", {
 	name : "Divine Smite",
 	classes : ["paladin"],
-	source : [["PHB2024", 265]],
+	source : [["P24", 265]],
 	level : 1,
 	school : "Evoc",
 	time : "1 bns*",
@@ -15954,7 +15954,7 @@ legacySpellRefactor("divine smite", {
 legacySpellRefactor("divine word", {
 	name : "Divine Word",
 	classes : ["cleric"],
-	source : [["PHB2024", 265]],
+	source : [["P24", 265]],
 	level : 7,
 	school : "Evoc",
 	time : "1 bns",
@@ -15969,7 +15969,7 @@ legacySpellRefactor("dominate beast", {
 	name : "Dominate Beast",
 	nameShort : "Dominate Beast*",
 	classes : ["druid", "ranger", "sorcerer"],
-	source : [["PHB2024", 265]],
+	source : [["P24", 265]],
 	level : 4,
 	school : "Ench",
 	time : "1 a",
@@ -15984,7 +15984,7 @@ legacySpellRefactor("dominate monster", {
 	name : "Dominate Monster",
 	nameShort : "Dominate Monster*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 265]],
+	source : [["P24", 265]],
 	level : 8,
 	school : "Ench",
 	time : "1 a",
@@ -15999,7 +15999,7 @@ legacySpellRefactor("dominate person", {
 	name : "Dominate Person",
 	nameShort : "Dominate Person*",
 	classes : ["bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 266]],
+	source : [["P24", 266]],
 	level : 5,
 	school : "Ench",
 	time : "1 a",
@@ -16013,7 +16013,7 @@ legacySpellRefactor("dominate person", {
 legacySpellRefactor("dragon's breath", {
 	name : "Dragon's Breath",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 266]],
+	source : [["P24", 266]],
 	level : 2,
 	school : "Trans",
 	time : "1 bns",
@@ -16037,7 +16037,7 @@ legacySpellRefactor("drawmij's instant summons", {
 	nameShort : "Draw. Instant Sum.",
 	nameAlt : "Instant Summons",
 	classes : ["wizard"],
-	source : [["PHB2024", 266]],
+	source : [["P24", 266]],
 	ritual : true,
 	level : 6,
 	school : "Conj",
@@ -16052,7 +16052,7 @@ legacySpellRefactor("drawmij's instant summons", {
 legacySpellRefactor("dream", {
 	name : "Dream",
 	classes : ["bard", "warlock", "wizard"],
-	source : [["PHB2024", 266]],
+	source : [["P24", 266]],
 	level : 5,
 	school : "Illus",
 	time : "1 min",
@@ -16067,7 +16067,7 @@ legacySpellRefactor("dream", {
 legacySpellRefactor("druidcraft", {
 	name : "Druidcraft",
 	classes : ["druid"],
-	source : [["PHB2024", 266]],
+	source : [["P24", 266]],
 	level : 0,
 	school : "Trans",
 	time : "1 a",
@@ -16081,7 +16081,7 @@ legacySpellRefactor("earthquake", {
 	name : "Earthquake",
 	nameShort : "Earthquake*",
 	classes : ["cleric", "druid", "sorcerer"],
-	source : [["PHB2024", 267]],
+	source : [["P24", 267]],
 	level : 8,
 	school : "Trans",
 	time : "1 a",
@@ -16095,7 +16095,7 @@ legacySpellRefactor("earthquake", {
 legacySpellRefactor("eldritch blast", {
 	name : "Eldritch Blast",
 	classes : ["warlock"],
-	source : [["PHB2024", 267]],
+	source : [["P24", 267]],
 	level : 0,
 	school : "Evoc",
 	time : "1 a",
@@ -16111,7 +16111,7 @@ legacySpellRefactor("eldritch blast", {
 legacySpellRefactor("elementalism", {
 	name : "Elementalism",
 	classes : ["druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 167]],
+	source : [["P24", 167]],
 	level : 0,
 	school : "Trans",
 	time : "1 a",
@@ -16124,7 +16124,7 @@ legacySpellRefactor("elementalism", {
 legacySpellRefactor("elemental weapon", {
 	name : "Elemental Weapon",
 	classes : ["artificer","druid", "paladin", "ranger"],
-	source : [["PHB2024", 268]],
+	source : [["P24", 268]],
 	level : 3,
 	school : "Trans",
 	time : "1 a",
@@ -16144,7 +16144,7 @@ legacySpellRefactor("elemental weapon", {
 legacySpellRefactor("enhance ability", {
 	name : "Enhance Ability",
 	classes : ["artificer","bard", "cleric", "druid", "ranger", "sorcerer", "wizard"],
-	source : [["PHB2024", 268]],
+	source : [["P24", 268]],
 	level : 2,
 	school : "Trans",
 	time : "1 a",
@@ -16159,7 +16159,7 @@ legacySpellRefactor("enlarge/reduce", {
 	name : "Enlarge/Reduce",
 	nameShort : "Enlarge/Reduce*",
 	classes : ["artificer","bard", "druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 268]],
+	source : [["P24", 268]],
 	level : 2,
 	school : "Trans",
 	time : "1 a",
@@ -16175,7 +16175,7 @@ legacySpellRefactor("enlarge/reduce", {
 legacySpellRefactor("ensnaring strike", {
 	name : "Ensnaring Strike",
 	classes : ["ranger"],
-	source : [["PHB2024", 268]],
+	source : [["P24", 268]],
 	level : 1,
 	school : "Conj",
 	time : "1 bns*",
@@ -16191,7 +16191,7 @@ legacySpellRefactor("ensnaring strike", {
 legacySpellRefactor("entangle", {
 	name : "Entangle",
 	classes : ["druid", "ranger"],
-	source : [["PHB2024", 268]],
+	source : [["P24", 268]],
 	level : 1,
 	school : "Conj",
 	time : "1 a",
@@ -16206,7 +16206,7 @@ legacySpellRefactor("enthrall", {
 	name : "Enthrall",
 	nameShort : "Enthrall*",
 	classes : ["bard", "warlock"],
-	source : [["PHB2024", 269]],
+	source : [["P24", 269]],
 	level : 2,
 	school : "Ench",
 	time : "1 a",
@@ -16220,7 +16220,7 @@ legacySpellRefactor("enthrall", {
 legacySpellRefactor("etherealness", {
 	name : "Etherealness",
 	classes : ["bard", "cleric", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 269]],
+	source : [["P24", 269]],
 	level : 7,
 	school : "Conj",
 	time : "1 a",
@@ -16235,7 +16235,7 @@ legacySpellRefactor("evard's black tentacles", {
 	nameShort : "Evard's Black Tentacles*",
 	nameAlt : "Black Tentacles",
 	classes : ["wizard"],
-	source : [["PHB2024", 270]],
+	source : [["P24", 270]],
 	level : 4,
 	school : "Conj",
 	time : "1 a",
@@ -16251,7 +16251,7 @@ legacySpellRefactor("evard's black tentacles", {
 legacySpellRefactor("expeditious retreat", {
 	name : "Expeditious Retreat",
 	classes : ["artificer","sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 270]],
+	source : [["P24", 270]],
 	level : 1,
 	school : "Trans",
 	time : "1 bns",
@@ -16265,7 +16265,7 @@ legacySpellRefactor("eyebite", {
 	name : "Eyebite",
 	nameShort : "Eyebite*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 270]],
+	source : [["P24", 270]],
 	level : 6,
 	school : "Necro",
 	time : "1 a",
@@ -16279,7 +16279,7 @@ legacySpellRefactor("eyebite", {
 legacySpellRefactor("fabricate", {
 	name : "Fabricate",
 	classes : ["artificer","wizard"],
-	source : [["PHB2024", 271]],
+	source : [["P24", 271]],
 	level : 4,
 	school : "Trans",
 	time : "10 min",
@@ -16292,7 +16292,7 @@ legacySpellRefactor("fabricate", {
 legacySpellRefactor("faerie fire", {
 	name : "Faerie Fire",
 	classes : ["artificer","bard", "druid"],
-	source : [["PHB2024", 271]],
+	source : [["P24", 271]],
 	level : 1,
 	school : "Evoc",
 	time : "1 a",
@@ -16306,7 +16306,7 @@ legacySpellRefactor("faerie fire", {
 legacySpellRefactor("false life", {
 	name : "False Life",
 	classes : ["artificer","sorcerer", "wizard"],
-	source : [["PHB2024", 271]],
+	source : [["P24", 271]],
 	level : 1,
 	school : "Necro",
 	time : "1 a",
@@ -16320,7 +16320,7 @@ legacySpellRefactor("false life", {
 legacySpellRefactor("fear", {
 	name : "Fear",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 271]],
+	source : [["P24", 271]],
 	level : 3,
 	school : "Illus",
 	time : "1 a",
@@ -16335,7 +16335,7 @@ legacySpellRefactor("fear", {
 legacySpellRefactor("feather fall", {
 	name : "Feather Fall",
 	classes : ["artificer","bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 271]],
+	source : [["P24", 271]],
 	level : 1,
 	school : "Trans",
 	time : "1 rea",
@@ -16350,7 +16350,7 @@ legacySpellRefactor("feather fall", {
 legacySpellRefactor("feign death", {
 	name : "Feign Death",
 	classes : ["bard", "cleric", "druid", "wizard"],
-	source : [["PHB2024", 271]],
+	source : [["P24", 271]],
 	ritual : true,
 	level : 3,
 	school : "Necro",
@@ -16365,7 +16365,7 @@ legacySpellRefactor("feign death", {
 legacySpellRefactor("find familiar", {
 	name : "Find Familiar",
 	classes : ["wizard"],
-	source : [["PHB2024", 272]],
+	source : [["P24", 272]],
 	ritual : true,
 	level : 1,
 	school : "Conj",
@@ -16380,7 +16380,7 @@ legacySpellRefactor("find familiar", {
 legacySpellRefactor("find steed", {
 	name : "Find Steed",
 	classes : ["paladin"],
-	source : [["PHB2024", 272]],
+	source : [["P24", 272]],
 	level : 2,
 	school : "Conj",
 	time : "1 a",
@@ -16393,7 +16393,7 @@ legacySpellRefactor("find steed", {
 legacySpellRefactor("find the path", {
 	name : "Find the Path",
 	classes : ["bard", "cleric", "druid"],
-	source : [["PHB2024", 273]],
+	source : [["P24", 273]],
 	level : 6,
 	school : "Div",
 	time : "1 min",
@@ -16407,7 +16407,7 @@ legacySpellRefactor("find the path", {
 legacySpellRefactor("find traps", {
 	name : "Find Traps",
 	classes : ["cleric", "druid", "ranger"],
-	source : [["PHB2024", 273]],
+	source : [["P24", 273]],
 	level : 2,
 	school : "Div",
 	time : "1 a",
@@ -16421,7 +16421,7 @@ legacySpellRefactor("finger of death", {
 	name : "Finger of Death",
 	nameShort : "Finger of Death*",
 	classes : ["sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 273]],
+	source : [["P24", 273]],
 	level : 7,
 	school : "Necro",
 	time : "1 a",
@@ -16435,7 +16435,7 @@ legacySpellRefactor("finger of death", {
 legacySpellRefactor("fireball", {
 	name : "Fireball",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 274]],
+	source : [["P24", 274]],
 	level : 3,
 	school : "Evoc",
 	time : "1 a",
@@ -16450,7 +16450,7 @@ legacySpellRefactor("fireball", {
 legacySpellRefactor("fire bolt", {
 	name : "Fire Bolt",
 	classes : ["artificer","sorcerer", "wizard"],
-	source : [["PHB2024", 274]],
+	source : [["P24", 274]],
 	level : 0,
 	school : "Evoc",
 	time : "1 a",
@@ -16464,7 +16464,7 @@ legacySpellRefactor("fire bolt", {
 legacySpellRefactor("fire shield", {
 	name : "Fire Shield",
 	classes : ["druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 274]],
+	source : [["P24", 274]],
 	level : 4,
 	school : "Evoc",
 	time : "1 a",
@@ -16485,7 +16485,7 @@ legacySpellRefactor("fire shield", {
 legacySpellRefactor("fire storm", {
 	name : "Fire Storm",
 	classes : ["cleric", "druid", "sorcerer"],
-	source : [["PHB2024", 275]],
+	source : [["P24", 275]],
 	level : 7,
 	school : "Evoc",
 	time : "1 a",
@@ -16499,7 +16499,7 @@ legacySpellRefactor("fire storm", {
 legacySpellRefactor("flame blade", {
 	name : "Flame Blade",
 	classes : ["druid", "sorcerer"],
-	source : [["PHB2024", 275]],
+	source : [["P24", 275]],
 	level : 2,
 	school : "Evoc",
 	time : "1 bns",
@@ -16514,7 +16514,7 @@ legacySpellRefactor("flame blade", {
 legacySpellRefactor("flame strike", {
 	name : "Flame Strike",
 	classes : ["cleric"],
-	source : [["PHB2024", 275]],
+	source : [["P24", 275]],
 	level : 5,
 	school : "Evoc",
 	time : "1 a",
@@ -16531,7 +16531,7 @@ legacySpellRefactor("flame strike", {
 legacySpellRefactor("flaming sphere", {
 	name : "Flaming Sphere",
 	classes : ["druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 275]],
+	source : [["P24", 275]],
 	level : 2,
 	school : "Conj",
 	time : "1 a",
@@ -16548,7 +16548,7 @@ legacySpellRefactor("flesh to stone", {
 	name : "Flesh to Stone",
 	nameShort : "Flesh to Stone*",
 	classes : ["druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 275]],
+	source : [["P24", 275]],
 	level : 6,
 	school : "Trans",
 	time : "1 a",
@@ -16563,7 +16563,7 @@ legacySpellRefactor("flesh to stone", {
 legacySpellRefactor("fly", {
 	name : "Fly",
 	classes : ["artificer","sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 276]],
+	source : [["P24", 276]],
 	level : 3,
 	school : "Trans",
 	time : "1 a",
@@ -16577,7 +16577,7 @@ legacySpellRefactor("fly", {
 legacySpellRefactor("fog cloud", {
 	name : "Fog Cloud",
 	classes : ["druid", "ranger", "sorcerer", "wizard"],
-	source : [["PHB2024", 276]],
+	source : [["P24", 276]],
 	level : 1,
 	school : "Conj",
 	time : "1 a",
@@ -16590,7 +16590,7 @@ legacySpellRefactor("fog cloud", {
 legacySpellRefactor("forbiddance", {
 	name : "Forbiddance",
 	classes : ["cleric"],
-	source : [["PHB2024", 276]],
+	source : [["P24", 276]],
 	ritual : true,
 	level : 6,
 	school : "Abjur",
@@ -16614,7 +16614,7 @@ legacySpellRefactor("forbiddance", {
 legacySpellRefactor("forcecage", {
 	name : "Forcecage",
 	classes : ["bard", "warlock", "wizard"],
-	source : [["PHB2024", 276]],
+	source : [["P24", 276]],
 	level : 7,
 	school : "Evoc",
 	time : "1 a",
@@ -16629,7 +16629,7 @@ legacySpellRefactor("forcecage", {
 legacySpellRefactor("foresight", {
 	name : "Foresight",
 	classes : ["bard", "druid", "warlock", "wizard"],
-	source : [["PHB2024", 276]],
+	source : [["P24", 276]],
 	level : 9,
 	school : "Div",
 	time : "1 min",
@@ -16643,7 +16643,7 @@ legacySpellRefactor("foresight", {
 legacySpellRefactor("fount of moonlight", {
 	name : "Fount of Moonlight",
 	classes : ["bard", "druid"],
-	source : [["PHB2024", 277]],
+	source : [["P24", 277]],
 	level : 4,
 	school : "Evoc",
 	time : "1 a",
@@ -16657,7 +16657,7 @@ legacySpellRefactor("fount of moonlight", {
 legacySpellRefactor("freedom of movement", {
 	name : "Freedom of Movement",
 	classes : ["artificer","bard", "cleric", "druid", "ranger"],
-	source : [["PHB2024", 277]],
+	source : [["P24", 277]],
 	level : 4,
 	school : "Abjur",
 	time : "1 a",
@@ -16672,7 +16672,7 @@ legacySpellRefactor("friends", {
 	name : "Friends",
 	nameShort : "Friends*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 277]],
+	source : [["P24", 277]],
 	level : 0,
 	school : "Ench",
 	time : "1 a",
@@ -16686,7 +16686,7 @@ legacySpellRefactor("friends", {
 legacySpellRefactor("gaseous form", {
 	name : "Gaseous Form",
 	classes : ["sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 277]],
+	source : [["P24", 277]],
 	level : 3,
 	school : "Trans",
 	time : "1 a",
@@ -16701,7 +16701,7 @@ legacySpellRefactor("gate", {
 	name : "Gate",
 	nameShort : "Gate*",
 	classes : ["cleric", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 277]],
+	source : [["P24", 277]],
 	level : 9,
 	school : "Conj",
 	time : "1 a",
@@ -16716,7 +16716,7 @@ legacySpellRefactor("geas", {
 	name : "Geas",
 	nameShort : "Geas*",
 	classes : ["bard", "cleric", "druid", "paladin", "wizard"],
-	source : [["PHB2024", 278]],
+	source : [["P24", 278]],
 	level : 5,
 	school : "Ench",
 	time : "1 min",
@@ -16731,7 +16731,7 @@ legacySpellRefactor("geas", {
 legacySpellRefactor("gentle repose", {
 	name : "Gentle Repose",
 	classes : ["cleric", "paladin", "wizard"],
-	source : [["PHB2024", 278]],
+	source : [["P24", 278]],
 	ritual : true,
 	level : 2,
 	school : "Necro",
@@ -16747,7 +16747,7 @@ legacySpellRefactor("giant insect", {
 	name : "Giant Insect",
 	nameShort : "Giant Insect*",
 	classes : ["druid"],
-	source : [["PHB2024", 279]],
+	source : [["P24", 279]],
 	level : 4,
 	school : "Conj",
 	time : "1 a",
@@ -16760,7 +16760,7 @@ legacySpellRefactor("giant insect", {
 legacySpellRefactor("glibness", {
 	name : "Glibness",
 	classes : ["bard", "warlock"],
-	source : [["PHB2024", 279]],
+	source : [["P24", 279]],
 	level : 8,
 	school : "Ench",
 	time : "1 a",
@@ -16773,7 +16773,7 @@ legacySpellRefactor("glibness", {
 legacySpellRefactor("globe of invulnerability", {
 	name : "Globe of Invulnerability",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 279]],
+	source : [["P24", 279]],
 	level : 6,
 	school : "Abjur",
 	time : "1 a",
@@ -16787,7 +16787,7 @@ legacySpellRefactor("globe of invulnerability", {
 legacySpellRefactor("glyph of warding", {
 	name : "Glyph of Warding",
 	classes : ["artificer","bard", "cleric", "wizard"],
-	source : [["PHB2024", 279]],
+	source : [["P24", 279]],
 	level : 3,
 	school : "Abjur",
 	time : "1 h",
@@ -16801,7 +16801,7 @@ legacySpellRefactor("glyph of warding", {
 legacySpellRefactor("goodberry", {
 	name : "Goodberry",
 	classes : ["druid", "ranger"],
-	source : [["PHB2024", 280]],
+	source : [["P24", 280]],
 	level : 1,
 	school : "Conj",
 	time : "1 a",
@@ -16817,7 +16817,7 @@ legacySpellRefactor("grasping vine", {
 	name : "Grasping Vine",
 	nameShort : "Grasping Vine*",
 	classes : ["druid", "ranger"],
-	source : [["PHB2024", 280]],
+	source : [["P24", 280]],
 	level : 4,
 	school : "Conj",
 	time : "1 bns",
@@ -16830,7 +16830,7 @@ legacySpellRefactor("grasping vine", {
 legacySpellRefactor("grease", {
 	name : "Grease",
 	classes : ["artificer","sorcerer", "wizard"],
-	source : [["PHB2024", 280]],
+	source : [["P24", 280]],
 	level : 1,
 	school : "Conj",
 	time : "1 a",
@@ -16845,7 +16845,7 @@ legacySpellRefactor("grease", {
 legacySpellRefactor("greater invisibility", {
 	name : "Greater Invisibility",
 	classes : ["bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 281]],
+	source : [["P24", 281]],
 	level : 4,
 	school : "Illus",
 	time : "1 a",
@@ -16858,7 +16858,7 @@ legacySpellRefactor("greater invisibility", {
 legacySpellRefactor("greater restoration", {
 	name : "Greater Restoration",
 	classes : ["artificer","bard", "cleric", "druid", "paladin", "ranger"],
-	source : [["PHB2024", 281]],
+	source : [["P24", 281]],
 	level : 5,
 	school : "Abjur",
 	time : "1 a",
@@ -16873,7 +16873,7 @@ legacySpellRefactor("guardian of faith", {
 	name : "Guardian of Faith",
 	nameShort : "Guardian of Faith*",
 	classes : ["cleric"],
-	source : [["PHB2024", 281]],
+	source : [["P24", 281]],
 	level : 4,
 	school : "Conj",
 	time : "1 a",
@@ -16888,7 +16888,7 @@ legacySpellRefactor("guardian of faith", {
 legacySpellRefactor("guards and wards", {
 	name : "Guards and Wards",
 	classes : ["bard", "wizard"],
-	source : [["PHB2024", 282]],
+	source : [["P24", 282]],
 	level : 6,
 	school : "Abjur",
 	time : "10 h",
@@ -16902,7 +16902,7 @@ legacySpellRefactor("guards and wards", {
 legacySpellRefactor("guidance", {
 	name : "Guidance",
 	classes : ["artificer","cleric", "druid"],
-	source : [["PHB2024", 282]],
+	source : [["P24", 282]],
 	level : 0,
 	school : "Div",
 	time : "1 a",
@@ -16915,7 +16915,7 @@ legacySpellRefactor("guidance", {
 legacySpellRefactor("guiding bolt", {
 	name : "Guiding Bolt",
 	classes : ["cleric"],
-	source : [["PHB2024", 282]],
+	source : [["P24", 282]],
 	level : 1,
 	school : "Evoc",
 	time : "1 a",
@@ -16928,7 +16928,7 @@ legacySpellRefactor("guiding bolt", {
 legacySpellRefactor("gust of wind", {
 	name : "Gust of Wind",
 	classes : ["druid", "ranger", "sorcerer", "wizard"],
-	source : [["PHB2024", 282]],
+	source : [["P24", 282]],
 	level : 2,
 	school : "Evoc",
 	time : "1 a",
@@ -16943,7 +16943,7 @@ legacySpellRefactor("gust of wind", {
 legacySpellRefactor("hail of thorns", {
 	name : "Hail of Thorns",
 	classes : ["ranger"],
-	source : [["PHB2024", 283]],
+	source : [["P24", 283]],
 	level : 1,
 	school : "Conj",
 	time : "1 bns*",
@@ -16959,7 +16959,7 @@ legacySpellRefactor("hail of thorns", {
 legacySpellRefactor("hallow", {
 	name : "Hallow",
 	classes : ["cleric"],
-	source : [["PHB2024", 283]],
+	source : [["P24", 283]],
 	level : 5,
 	school : "Abjur",
 	time : "24 h",
@@ -16973,7 +16973,7 @@ legacySpellRefactor("hallow", {
 legacySpellRefactor("hallucinatory terrain", {
 	name : "Hallucinatory Terrain",
 	classes : ["bard", "druid", "warlock", "wizard"],
-	source : [["PHB2024", 283]],
+	source : [["P24", 283]],
 	level : 4,
 	school : "Illus",
 	time : "10 min",
@@ -16988,7 +16988,7 @@ legacySpellRefactor("harm", {
 	name : "Harm",
 	nameShort : "Harm*",
 	classes : ["cleric"],
-	source : [["PHB2024", 283]],
+	source : [["P24", 283]],
 	level : 6,
 	school : "Necro",
 	time : "1 a",
@@ -17003,7 +17003,7 @@ legacySpellRefactor("haste", {
 	name : "Haste",
 	nameShort : "Haste*",
 	classes : ["artificer","sorcerer", "wizard"],
-	source : [["PHB2024", 284]],
+	source : [["P24", 284]],
 	level : 3,
 	school : "Trans",
 	time : "1 a",
@@ -17018,7 +17018,7 @@ legacySpellRefactor("heal", {
 	name : "Heal",
 	nameShort : "Heal*",
 	classes : ["cleric", "druid"],
-	source : [["PHB2024", 284]],
+	source : [["P24", 284]],
 	level : 6,
 	school : "Abjur",
 	time : "1 a",
@@ -17033,7 +17033,7 @@ legacySpellRefactor("healing word", {
 	name : "Healing Word",
 	nameShort : "Healing Word*",
 	classes : ["bard", "cleric", "druid"],
-	source : [["PHB2024", 284]],
+	source : [["P24", 284]],
 	level : 1,
 	school : "Abjur",
 	time : "1 bns",
@@ -17047,7 +17047,7 @@ legacySpellRefactor("heat metal", {
 	name : "Heat Metal",
 	nameShort : "Heat Metal*",
 	classes : ["artificer","bard", "druid"],
-	source : [["PHB2024", 284]],
+	source : [["P24", 284]],
 	level : 2,
 	school : "Trans",
 	time : "1 a",
@@ -17064,7 +17064,7 @@ legacySpellRefactor("hellish rebuke", {
 	name : "Hellish Rebuke",
 	nameShort : "Hellish Rebuke*",
 	classes : ["warlock"],
-	source : [["PHB2024", 284]],
+	source : [["P24", 284]],
 	level : 1,
 	school : "Evoc",
 	time : "1 rea",
@@ -17079,7 +17079,7 @@ legacySpellRefactor("hellish rebuke", {
 legacySpellRefactor("heroes' feast", {
 	name : "Heroes' Feast",
 	classes : ["bard", "cleric", "druid"],
-	source : [["PHB2024", 284]],
+	source : [["P24", 284]],
 	level : 6,
 	school : "Conj",
 	time : "10 min",
@@ -17093,7 +17093,7 @@ legacySpellRefactor("heroes' feast", {
 legacySpellRefactor("heroism", {
 	name : "Heroism",
 	classes : ["bard", "paladin"],
-	source : [["PHB2024", 285]],
+	source : [["P24", 285]],
 	level : 1,
 	school : "Ench",
 	time : "1 a",
@@ -17107,7 +17107,7 @@ legacySpellRefactor("hex", {
 	name : "Hex",
 	nameShort : "Hex*",
 	classes : ["warlock"],
-	source : [["PHB2024", 285]],
+	source : [["P24", 285]],
 	level : 1,
 	school : "Ench",
 	time : "1 bns",
@@ -17123,7 +17123,7 @@ legacySpellRefactor("hold monster", {
 	name : "Hold Monster",
 	nameShort : "Hold Monster*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 285]],
+	source : [["P24", 285]],
 	level : 5,
 	school : "Ench",
 	time : "1 a",
@@ -17139,7 +17139,7 @@ legacySpellRefactor("hold person", {
 	name : "Hold Person",
 	nameShort : "Hold Person*",
 	classes : ["bard", "cleric", "druid", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 286]],
+	source : [["P24", 286]],
 	level : 2,
 	school : "Ench",
 	time : "1 a",
@@ -17154,7 +17154,7 @@ legacySpellRefactor("hold person", {
 legacySpellRefactor("holy aura", {
 	name : "Holy Aura",
 	classes : ["cleric"],
-	source : [["PHB2024", 286]],
+	source : [["P24", 286]],
 	level : 8,
 	school : "Abjur",
 	time : "1 a",
@@ -17169,7 +17169,7 @@ legacySpellRefactor("holy aura", {
 legacySpellRefactor("hunger of hadar", {
 	name : "Hunger of Hadar",
 	classes : ["warlock"],
-	source : [["PHB2024", 286]],
+	source : [["P24", 286]],
 	level : 3,
 	school : "Conj",
 	time : "1 a",
@@ -17185,7 +17185,7 @@ legacySpellRefactor("hunter's mark", {
 	name : "Hunter's Mark",
 	nameShort : "Hunter's Mark*",
 	classes : ["ranger"],
-	source : [["PHB2024", 287]],
+	source : [["P24", 287]],
 	level : 1,
 	school : "Div",
 	time : "1 bns",
@@ -17198,7 +17198,7 @@ legacySpellRefactor("hunter's mark", {
 legacySpellRefactor("hypnotic pattern", {
 	name : "Hypnotic Pattern",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 287]],
+	source : [["P24", 287]],
 	level : 3,
 	school : "Illus",
 	time : "1 a",
@@ -17213,7 +17213,7 @@ legacySpellRefactor("hypnotic pattern", {
 legacySpellRefactor("ice knife", {
 	name : "Ice Knife",
 	classes : ["druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 287]],
+	source : [["P24", 287]],
 	level : 1,
 	school : "Conj",
 	time : "1 a",
@@ -17232,7 +17232,7 @@ legacySpellRefactor("ice knife", {
 legacySpellRefactor("ice storm", {
 	name : "Ice Storm",
 	classes : ["druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 287]],
+	source : [["P24", 287]],
 	level : 4,
 	school : "Evoc",
 	time : "1 a",
@@ -17248,7 +17248,7 @@ legacySpellRefactor("ice storm", {
 legacySpellRefactor("identify", {
 	name : "Identify",
 	classes : ["artificer","bard", "wizard"],
-	source : [["PHB2024", 287]],
+	source : [["P24", 287]],
 	ritual : true,
 	level : 1,
 	school : "Div",
@@ -17263,7 +17263,7 @@ legacySpellRefactor("identify", {
 legacySpellRefactor("illusory script", {
 	name : "Illusory Script",
 	classes : ["bard", "warlock", "wizard"],
-	source : [["PHB2024", 288]],
+	source : [["P24", 288]],
 	ritual : true,
 	level : 1,
 	school : "Illus",
@@ -17279,7 +17279,7 @@ legacySpellRefactor("imprisonment", {
 	name : "Imprisonment",
 	nameShort : "Imprisonment*",
 	classes : ["warlock", "wizard"],
-	source : [["PHB2024", 288]],
+	source : [["P24", 288]],
 	level : 9,
 	school : "Abjur",
 	time : "1 min",
@@ -17294,7 +17294,7 @@ legacySpellRefactor("imprisonment", {
 legacySpellRefactor("incendiary cloud", {
 	name : "Incendiary Cloud",
 	classes : ["druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 288]],
+	source : [["P24", 288]],
 	level : 8,
 	school : "Conj",
 	time : "1 a",
@@ -17309,7 +17309,7 @@ legacySpellRefactor("incendiary cloud", {
 legacySpellRefactor("inflict wounds", {
 	name : "Inflict Wounds",
 	classes : ["cleric"],
-	source : [["PHB2024", 288]],
+	source : [["P24", 288]],
 	level : 1,
 	school : "Necro",
 	time : "1 a",
@@ -17323,7 +17323,7 @@ legacySpellRefactor("inflict wounds", {
 legacySpellRefactor("insect plague", {
 	name : "Insect Plague",
 	classes : ["cleric", "druid", "sorcerer"],
-	source : [["PHB2024", 289]],
+	source : [["P24", 289]],
 	level : 5,
 	school : "Conj",
 	time : "1 a",
@@ -17339,7 +17339,7 @@ legacySpellRefactor("insect plague", {
 legacySpellRefactor("invisibility", {
 	name : "Invisibility",
 	classes : ["artificer","bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 289]],
+	source : [["P24", 289]],
 	level : 2,
 	school : "Illus",
 	time : "1 a",
@@ -17354,7 +17354,7 @@ legacySpellRefactor("jallarzi's storm of radiance", {
 	name : "Jallarzi's Storm of Radiance",
 	nameShort : "Jal.'s Storm of Radiance*",
 	classes : ["warlock", "wizard"],
-	source : [["PHB2024", 289]],
+	source : [["P24", 289]],
 	level : 5,
 	school : "Evoc",
 	time : "1 a",
@@ -17369,7 +17369,7 @@ legacySpellRefactor("jallarzi's storm of radiance", {
 legacySpellRefactor("jump", {
 	name : "Jump",
 	classes : ["artificer","druid", "ranger", "sorcerer", "wizard"],
-	source : [["PHB2024", 290]],
+	source : [["P24", 290]],
 	level : 1,
 	school : "Trans",
 	time : "1 bns",
@@ -17384,7 +17384,7 @@ legacySpellRefactor("knock", {
 	name : "Knock",
 	nameShort : "Knock*",
 	classes : ["bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 290]],
+	source : [["P24", 290]],
 	level : 2,
 	school : "Trans",
 	time : "1 a",
@@ -17397,7 +17397,7 @@ legacySpellRefactor("knock", {
 legacySpellRefactor("legend lore", {
 	name : "Legend Lore",
 	classes : ["bard", "cleric", "wizard"],
-	source : [["PHB2024", 290]],
+	source : [["P24", 290]],
 	level : 5,
 	school : "Div",
 	time : "10 min",
@@ -17412,7 +17412,7 @@ legacySpellRefactor("leomund's secret chest", {
 	name : "Leomund's Secret Chest",
 	nameAlt : "Secret Chest",
 	classes : ["artificer","wizard"],
-	source : [["PHB2024", 290]],
+	source : [["P24", 290]],
 	level : 4,
 	school : "Conj",
 	time : "1 a",
@@ -17427,7 +17427,7 @@ legacySpellRefactor("leomund's tiny hut", {
 	name : "Leomund's Tiny Hut",
 	nameAlt : "Tiny Hut",
 	classes : ["bard", "wizard"],
-	source : [["PHB2024", 291]],
+	source : [["P24", 291]],
 	ritual : true,
 	level : 3,
 	school : "Evoc",
@@ -17442,7 +17442,7 @@ legacySpellRefactor("leomund's tiny hut", {
 legacySpellRefactor("lesser restoration", {
 	name : "Lesser Restoration",
 	classes : ["artificer","bard", "cleric", "druid", "paladin", "ranger"],
-	source : [["PHB2024", 291]],
+	source : [["P24", 291]],
 	level : 2,
 	school : "Abjur",
 	time : "1 bns",
@@ -17456,7 +17456,7 @@ legacySpellRefactor("levitate", {
 	name : "Levitate",
 	nameShort : "Levitate*",
 	classes : ["artificer","sorcerer", "wizard"],
-	source : [["PHB2024", 291]],
+	source : [["P24", 291]],
 	level : 2,
 	school : "Trans",
 	time : "1 a",
@@ -17471,7 +17471,7 @@ legacySpellRefactor("levitate", {
 legacySpellRefactor("light", {
 	name : "Light",
 	classes : ["artificer","bard", "cleric", "sorcerer", "wizard"],
-	source : [["PHB2024", 292]],
+	source : [["P24", 292]],
 	level : 0,
 	school : "Evoc",
 	time : "1 a",
@@ -17485,7 +17485,7 @@ legacySpellRefactor("light", {
 legacySpellRefactor("lightning arrow", {
 	name : "Lightning Arrow",
 	classes : ["ranger"],
-	source : [["PHB2024", 292]],
+	source : [["P24", 292]],
 	level : 3,
 	school : "Trans",
 	time : "1 bns*",
@@ -17505,7 +17505,7 @@ legacySpellRefactor("lightning arrow", {
 legacySpellRefactor("lightning bolt", {
 	name : "Lightning Bolt",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 292]],
+	source : [["P24", 292]],
 	level : 3,
 	school : "Evoc",
 	time : "1 a",
@@ -17521,7 +17521,7 @@ legacySpellRefactor("locate animals or plants", {
 	name : "Locate Animals or Plants",
 	nameShort : "Locate Animal/Plants",
 	classes : ["bard", "druid", "ranger"],
-	source : [["PHB2024", 292]],
+	source : [["P24", 292]],
 	ritual : true,
 	level : 2,
 	school : "Div",
@@ -17536,7 +17536,7 @@ legacySpellRefactor("locate animals or plants", {
 legacySpellRefactor("locate creature", {
 	name : "Locate Creature",
 	classes : ["bard", "cleric", "druid", "paladin", "ranger", "wizard"],
-	source : [["PHB2024", 292]],
+	source : [["P24", 292]],
 	level : 4,
 	school : "Div",
 	time : "1 a",
@@ -17550,7 +17550,7 @@ legacySpellRefactor("locate creature", {
 legacySpellRefactor("locate object", {
 	name : "Locate Object",
 	classes : ["bard", "cleric", "druid", "paladin", "ranger", "wizard"],
-	source : [["PHB2024", 293]],
+	source : [["P24", 293]],
 	level : 2,
 	school : "Div",
 	time : "1 a",
@@ -17564,7 +17564,7 @@ legacySpellRefactor("locate object", {
 legacySpellRefactor("longstrider", {
 	name : "Longstrider",
 	classes : ["artificer","bard", "druid", "ranger", "wizard"],
-	source : [["PHB2024", 293]],
+	source : [["P24", 293]],
 	level : 1,
 	school : "Trans",
 	time : "1 a",
@@ -17578,7 +17578,7 @@ legacySpellRefactor("longstrider", {
 legacySpellRefactor("mage armor", {
 	name : "Mage Armor",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 293]],
+	source : [["P24", 293]],
 	level : 1,
 	school : "Abjur",
 	time : "1 a",
@@ -17592,7 +17592,7 @@ legacySpellRefactor("mage armor", {
 legacySpellRefactor("mage hand", {
 	name : "Mage Hand",
 	classes : ["artificer","bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 293]],
+	source : [["P24", 293]],
 	level : 0,
 	school : "Conj",
 	time : "1 a",
@@ -17606,7 +17606,7 @@ legacySpellRefactor("magic circle", {
 	name : "Magic Circle",
 	nameShort : "Magic Circle*",
 	classes : ["cleric", "paladin", "warlock", "wizard"],
-	source : [["PHB2024", 293]],
+	source : [["P24", 293]],
 	level : 3,
 	school : "Abjur",
 	time : "1 min",
@@ -17621,7 +17621,7 @@ legacySpellRefactor("magic jar", {
 	name : "Magic Jar",
 	nameShort : "Magic Jar*",
 	classes : ["wizard"],
-	source : [["PHB2024", 294]],
+	source : [["P24", 294]],
 	level : 6,
 	school : "Necro",
 	time : "1 min",
@@ -17636,7 +17636,7 @@ legacySpellRefactor("magic missile", {
 	name : "Magic Missile",
 	nameShort : "Magic Missile*",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 295]],
+	source : [["P24", 295]],
 	level : 1,
 	school : "Evoc",
 	time : "1 a",
@@ -17651,7 +17651,7 @@ legacySpellRefactor("magic mouth", {
 	name : "Magic Mouth",
 	nameShort : "Magic Mouth*",
 	classes : ["artificer","bard", "wizard"],
-	source : [["PHB2024", 295]],
+	source : [["P24", 295]],
 	ritual : true,
 	level : 2,
 	school : "Illus",
@@ -17666,7 +17666,7 @@ legacySpellRefactor("magic mouth", {
 legacySpellRefactor("magic weapon", {
 	name : "Magic Weapon",
 	classes : ["paladin", "ranger", "sorcerer", "wizard"],
-	source : [["PHB2024", 295]],
+	source : [["P24", 295]],
 	level : 2,
 	school : "Trans",
 	time : "1 bns",
@@ -17680,7 +17680,7 @@ legacySpellRefactor("major image", {
 	name : "Major Image",
 	nameShort : "Major Image*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 295]],
+	source : [["P24", 295]],
 	level : 3,
 	school : "Illus",
 	time : "1 a",
@@ -17695,7 +17695,7 @@ legacySpellRefactor("mass cure wounds", {
 	name : "Mass Cure Wounds",
 	nameShort : "Mass Cure Wounds*",
 	classes : ["bard", "cleric", "druid"],
-	source : [["PHB2024", 296]],
+	source : [["P24", 296]],
 	level : 5,
 	school : "Abjur",
 	time : "1 a",
@@ -17709,7 +17709,7 @@ legacySpellRefactor("mass heal", {
 	name : "Mass Heal",
 	nameShort : "Mass Heal*",
 	classes : ["cleric"],
-	source : [["PHB2024", 296]],
+	source : [["P24", 296]],
 	level : 9,
 	school : "Abjur",
 	time : "1 a",
@@ -17724,7 +17724,7 @@ legacySpellRefactor("mass healing word", {
 	name : "Mass Healing Word",
 	nameShort : "Mass Healing Word*",
 	classes : ["bard", "cleric"],
-	source : [["PHB2024", 296]],
+	source : [["P24", 296]],
 	level : 3,
 	school : "Abjur",
 	time : "1 bns",
@@ -17738,7 +17738,7 @@ legacySpellRefactor("mass suggestion", {
 	name : "Mass Suggestion",
 	nameShort : "Mass Suggestion*",
 	classes : ["bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 296]],
+	source : [["P24", 296]],
 	level : 6,
 	school : "Ench",
 	time : "1 a",
@@ -17754,7 +17754,7 @@ legacySpellRefactor("maze", {
 	name : "Maze",
 	nameShort : "Maze*",
 	classes : ["wizard"],
-	source : [["PHB2024", 296]],
+	source : [["P24", 296]],
 	level : 8,
 	school : "Conj",
 	time : "1 a",
@@ -17767,7 +17767,7 @@ legacySpellRefactor("maze", {
 legacySpellRefactor("meld into stone", {
 	name : "Meld into Stone",
 	classes : ["cleric", "druid", "ranger"],
-	source : [["PHB2024", 296]],
+	source : [["P24", 296]],
 	ritual : true,
 	level : 3,
 	school : "Trans",
@@ -17782,7 +17782,7 @@ legacySpellRefactor("melf's acid arrow", {
 	name : "Melf's Acid Arrow",
 	nameAlt : "Acid Arrow",
 	classes : ["wizard"],
-	source : [["PHB2024", 297]],
+	source : [["P24", 297]],
 	level : 2,
 	school : "Evoc",
 	time : "1 a",
@@ -17800,7 +17800,7 @@ legacySpellRefactor("melf's acid arrow", {
 legacySpellRefactor("mending", {
 	name : "Mending",
 	classes : ["artificer","bard", "cleric", "druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 297]],
+	source : [["P24", 297]],
 	level : 0,
 	school : "Trans",
 	time : "1 min",
@@ -17814,7 +17814,7 @@ legacySpellRefactor("mending", {
 legacySpellRefactor("message", {
 	name : "Message",
 	classes : ["artificer","bard", "druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 298]],
+	source : [["P24", 298]],
 	level : 0,
 	school : "Trans",
 	time : "1 a",
@@ -17829,7 +17829,7 @@ legacySpellRefactor("meteor swarm", {
 	name : "Meteor Swarm",
 	nameShort : "Meteor Swarm*",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 298]],
+	source : [["P24", 298]],
 	level : 9,
 	school : "Evoc",
 	time : "1 a",
@@ -17843,7 +17843,7 @@ legacySpellRefactor("meteor swarm", {
 legacySpellRefactor("mind blank", {
 	name : "Mind Blank",
 	classes : ["bard", "wizard"],
-	source : [["PHB2024", 298]],
+	source : [["P24", 298]],
 	level : 8,
 	school : "Abjur",
 	time : "1 a",
@@ -17857,7 +17857,7 @@ legacySpellRefactor("mind sliver", {
 	name : "Mind Sliver",
 	nameShort : "Mind Sliver*",
 	classes : ["sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 298]],
+	source : [["P24", 298]],
 	level : 0,
 	school : "Ench",
 	time : "1 a",
@@ -17874,7 +17874,7 @@ legacySpellRefactor("mind spike", {
 	name : "Mind Spike",
 	nameShort : "Mind Spike*",
 	classes : ["sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 298]],
+	source : [["P24", 298]],
 	level : 2,
 	school : "Div",
 	time : "1 a",
@@ -17890,7 +17890,7 @@ legacySpellRefactor("mind spike", {
 legacySpellRefactor("minor illusion", {
 	name : "Minor Illusion",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 298]],
+	source : [["P24", 298]],
 	level : 0,
 	school : "Illus",
 	time : "1 a",
@@ -17904,7 +17904,7 @@ legacySpellRefactor("minor illusion", {
 legacySpellRefactor("mirage arcane", {
 	name : "Mirage Arcane",
 	classes : ["bard", "druid", "wizard"],
-	source : [["PHB2024", 299]],
+	source : [["P24", 299]],
 	level : 7,
 	school : "Illus",
 	time : "10 min",
@@ -17918,7 +17918,7 @@ legacySpellRefactor("mirage arcane", {
 legacySpellRefactor("mirror image", {
 	name : "Mirror Image",
 	classes : ["sorcerer", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 299]],
+	source : [["P24", 299]],
 	level : 2,
 	school : "Illus",
 	time : "1 a",
@@ -17931,7 +17931,7 @@ legacySpellRefactor("mirror image", {
 legacySpellRefactor("mislead", {
 	name : "Mislead",
 	classes : ["bard", "warlock", "wizard"],
-	source : [["PHB2024", 299]],
+	source : [["P24", 299]],
 	level : 5,
 	school : "Illus",
 	time : "1 a",
@@ -17945,7 +17945,7 @@ legacySpellRefactor("misty step", {
 	name : "Misty Step",
 	nameShort : "Misty Step*",
 	classes : ["sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 299]],
+	source : [["P24", 299]],
 	level : 2,
 	school : "Conj",
 	time : "1 bns",
@@ -17959,7 +17959,7 @@ legacySpellRefactor("modify memory", {
 	name : "Modify Memory",
 	nameShort : "Modify Memory*",
 	classes : ["bard", "wizard"],
-	source : [["PHB2024", 299]],
+	source : [["P24", 299]],
 	level : 5,
 	school : "Ench",
 	time : "1 a",
@@ -17973,7 +17973,7 @@ legacySpellRefactor("modify memory", {
 legacySpellRefactor("moonbeam", {
 	name : "Moonbeam",
 	classes : ["druid"],
-	source : [["PHB2024", 300]],
+	source : [["P24", 300]],
 	level : 2,
 	school : "Evoc",
 	time : "1 a",
@@ -17991,7 +17991,7 @@ legacySpellRefactor("mordenkainen's faithful hound", {
 	nameShort : "Mor. Faithful Hound*",
 	nameAlt : "Faithful Hound",
 	classes : ["artificer","wizard"],
-	source : [["PHB2024", 300]],
+	source : [["P24", 300]],
 	level : 4,
 	school : "Conj",
 	time : "1 a",
@@ -18009,7 +18009,7 @@ legacySpellRefactor("mordenkainen's magnificent mansion", {
 	nameShort : "Mor. Magni. Mansion",
 	nameAlt : "Magnificent Mansion",
 	classes : ["bard", "wizard"],
-	source : [["PHB2024", 300]],
+	source : [["P24", 300]],
 	level : 7,
 	school : "Conj",
 	time : "1 min",
@@ -18025,7 +18025,7 @@ legacySpellRefactor("mordenkainen's private sanctum", {
 	nameShort : "Mor. Private Sanctum",
 	nameAlt : "Private Sanctum",
 	classes : ["artificer","wizard"],
-	source : [["PHB2024", 301]],
+	source : [["P24", 301]],
 	level : 4,
 	school : "Abjur",
 	time : "10 min",
@@ -18040,7 +18040,7 @@ legacySpellRefactor("mordenkainen's sword", {
 	name : "Mordenkainen's Sword",
 	nameAlt : "Arcane Sword",
 	classes : ["bard", "wizard"],
-	source : [["PHB2024", 302]],
+	source : [["P24", 302]],
 	level : 7,
 	school : "Evoc",
 	time : "1 a",
@@ -18055,7 +18055,7 @@ legacySpellRefactor("mordenkainen's sword", {
 legacySpellRefactor("move earth", {
 	name : "Move Earth",
 	classes : ["druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 302]],
+	source : [["P24", 302]],
 	level : 6,
 	school : "Trans",
 	time : "1 a",
@@ -18069,7 +18069,7 @@ legacySpellRefactor("move earth", {
 legacySpellRefactor("nondetection", {
 	name : "Nondetection",
 	classes : ["bard", "ranger", "wizard"],
-	source : [["PHB2024", 302]],
+	source : [["P24", 302]],
 	level : 3,
 	school : "Abjur",
 	time : "1 a",
@@ -18084,7 +18084,7 @@ legacySpellRefactor("nystul's magic aura", {
 	name : "Nystul's Magic Aura",
 	nameAlt : "Arcanist's Magic Aura",
 	classes : ["wizard"],
-	source : [["PHB2024", 302]],
+	source : [["P24", 302]],
 	level : 2,
 	school : "Illus",
 	time : "1 a",
@@ -18099,7 +18099,7 @@ legacySpellRefactor("otiluke's freezing sphere", {
 	name : "Otiluke's Freezing Sphere",
 	nameAlt : "Freezing Sphere",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 302]],
+	source : [["P24", 302]],
 	level : 6,
 	school : "Evoc",
 	time : "1 a",
@@ -18115,7 +18115,7 @@ legacySpellRefactor("otiluke's resilient sphere", {
 	name : "Otiluke's Resilient Sphere",
 	nameAlt : "Resilient Sphere",
 	classes : ["artificer","wizard"],
-	source : [["PHB2024", 303]],
+	source : [["P24", 303]],
 	level : 4,
 	school : "Abjur",
 	time : "1 a",
@@ -18132,7 +18132,7 @@ legacySpellRefactor("otto's irresistible dance", {
 	nameShort : "Otto's Irresistible Dance*",
 	nameAlt : "Irresistible Dance",
 	classes : ["bard", "wizard"],
-	source : [["PHB2024", 303]],
+	source : [["P24", 303]],
 	level : 6,
 	school : "Ench",
 	time : "1 a",
@@ -18146,7 +18146,7 @@ legacySpellRefactor("passwall", {
 	name : "Passwall",
 	nameShort : "Passwall*",
 	classes : ["wizard"],
-	source : [["PHB2024", 303]],
+	source : [["P24", 303]],
 	level : 5,
 	school : "Trans",
 	time : "1 a",
@@ -18160,7 +18160,7 @@ legacySpellRefactor("passwall", {
 legacySpellRefactor("pass without trace", {
 	name : "Pass Without Trace",
 	classes : ["druid", "ranger"],
-	source : [["PHB2024", 303]],
+	source : [["P24", 303]],
 	level : 2,
 	school : "Abjur",
 	time : "1 a",
@@ -18175,7 +18175,7 @@ legacySpellRefactor("phantasmal force", {
 	name : "Phantasmal Force",
 	nameShort : "Phantasmal Force*",
 	classes : ["bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 304]],
+	source : [["P24", 304]],
 	level : 2,
 	school : "Illus",
 	time : "1 a",
@@ -18192,7 +18192,7 @@ legacySpellRefactor("phantasmal killer", {
 	name : "Phantasmal Killer",
 	nameShort : "Phantasmal Killer*",
 	classes : ["bard", "wizard"],
-	source : [["PHB2024", 304]],
+	source : [["P24", 304]],
 	level : 4,
 	school : "Illus",
 	time : "1 a",
@@ -18206,7 +18206,7 @@ legacySpellRefactor("phantasmal killer", {
 legacySpellRefactor("phantom steed", {
 	name : "Phantom Steed",
 	classes : ["wizard"],
-	source : [["PHB2024", 304]],
+	source : [["P24", 304]],
 	ritual : true,
 	level : 3,
 	school : "Illus",
@@ -18220,7 +18220,7 @@ legacySpellRefactor("phantom steed", {
 legacySpellRefactor("planar ally", {
 	name : "Planar Ally",
 	classes : ["cleric"],
-	source : [["PHB2024", 304]],
+	source : [["P24", 304]],
 	level : 6,
 	school : "Conj",
 	time : "10 min",
@@ -18233,7 +18233,7 @@ legacySpellRefactor("planar ally", {
 legacySpellRefactor("planar binding", {
 	name : "Planar Binding",
 	classes : ["bard", "cleric", "druid", "warlock", "wizard"],
-	source : [["PHB2024", 305]],
+	source : [["P24", 305]],
 	level : 5,
 	school : "Abjur",
 	time : "1 h",
@@ -18248,7 +18248,7 @@ legacySpellRefactor("planar binding", {
 legacySpellRefactor("plane shift", {
 	name : "Plane Shift",
 	classes : ["cleric", "druid", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 305]],
+	source : [["P24", 305]],
 	level : 7,
 	school : "Conj",
 	time : "1 a",
@@ -18262,7 +18262,7 @@ legacySpellRefactor("plane shift", {
 legacySpellRefactor("plant growth", {
 	name : "Plant Growth",
 	classes : ["bard", "druid", "ranger"],
-	source : [["PHB2024", 305]],
+	source : [["P24", 305]],
 	level : 3,
 	school : "Trans",
 	time : "1 a/8h",
@@ -18276,7 +18276,7 @@ legacySpellRefactor("plant growth", {
 legacySpellRefactor("poison spray", {
 	name : "Poison Spray",
 	classes : ["artificer","druid", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 306]],
+	source : [["P24", 306]],
 	level : 0,
 	school : "Necro",
 	time : "1 a",
@@ -18291,7 +18291,7 @@ legacySpellRefactor("polymorph", {
 	name : "Polymorph",
 	nameShort : "Polymorph*",
 	classes : ["bard", "druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 306]],
+	source : [["P24", 306]],
 	level : 4,
 	school : "Trans",
 	time : "1 a",
@@ -18307,7 +18307,7 @@ legacySpellRefactor("power word fortify", {
 	name : "Power Word Fortify",
 	nameShort : "Power Word Fortify*",
 	classes : ["bard", "cleric"],
-	source : [["PHB2024", 306]],
+	source : [["P24", 306]],
 	level : 7,
 	school : "Ench",
 	time : "1 a",
@@ -18321,7 +18321,7 @@ legacySpellRefactor("power word heal", {
 	name : "Power Word Heal",
 	nameShort : "Power Word Heal*",
 	classes : ["bard", "cleric"],
-	source : [["PHB2024", 306]],
+	source : [["P24", 306]],
 	level : 9,
 	school : "Ench",
 	time : "1 a",
@@ -18336,7 +18336,7 @@ legacySpellRefactor("power word kill", {
 	name : "Power Word Kill",
 	nameShort : "Power Word Kill*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 306]],
+	source : [["P24", 306]],
 	level : 9,
 	school : "Ench",
 	time : "1 a",
@@ -18350,7 +18350,7 @@ legacySpellRefactor("power word stun", {
 	name : "Power Word Stun",
 	nameShort : "Power Word Stun*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 306]],
+	source : [["P24", 306]],
 	level : 8,
 	school : "Ench",
 	time : "1 a",
@@ -18364,7 +18364,7 @@ legacySpellRefactor("power word stun", {
 legacySpellRefactor("prayer of healing", {
 	name : "Prayer of Healing",
 	classes : ["cleric", "paladin"],
-	source : [["PHB2024", 307]],
+	source : [["P24", 307]],
 	level : 2,
 	school : "Abjur",
 	time : "10 min",
@@ -18377,7 +18377,7 @@ legacySpellRefactor("prayer of healing", {
 legacySpellRefactor("prestidigitation", {
 	name : "Prestidigitation",
 	classes : ["artificer","bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 307]],
+	source : [["P24", 307]],
 	level : 0,
 	school : "Trans",
 	time : "1 a",
@@ -18390,7 +18390,7 @@ legacySpellRefactor("prestidigitation", {
 legacySpellRefactor("prismatic spray", {
 	name : "Prismatic Spray",
 	classes : ["bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 307]],
+	source : [["P24", 307]],
 	level : 7,
 	school : "Evoc",
 	time : "1 a",
@@ -18418,7 +18418,7 @@ legacySpellRefactor("prismatic spray", {
 legacySpellRefactor("prismatic wall", {
 	name : "Prismatic Wall",
 	classes : ["bard", "wizard"],
-	source : [["PHB2024", 308]],
+	source : [["P24", 308]],
 	level : 9,
 	school : "Abjur",
 	time : "1 a",
@@ -18442,7 +18442,7 @@ legacySpellRefactor("prismatic wall", {
 legacySpellRefactor("produce flame", {
 	name : "Produce Flame",
 	classes : ["druid"],
-	source : [["PHB2024", 308]],
+	source : [["P24", 308]],
 	level : 0,
 	school : "Conj",
 	time : "1 bns",
@@ -18457,7 +18457,7 @@ legacySpellRefactor("produce flame", {
 legacySpellRefactor("programmed illusion", {
 	name : "Programmed Illusion",
 	classes : ["bard", "wizard"],
-	source : [["PHB2024", 309]],
+	source : [["P24", 309]],
 	level : 6,
 	school : "Illus",
 	time : "1 a",
@@ -18471,7 +18471,7 @@ legacySpellRefactor("programmed illusion", {
 legacySpellRefactor("project image", {
 	name : "Project Image",
 	classes : ["bard", "wizard"],
-	source : [["PHB2024", 309]],
+	source : [["P24", 309]],
 	level : 7,
 	school : "Illus",
 	time : "1 a",
@@ -18485,7 +18485,7 @@ legacySpellRefactor("project image", {
 legacySpellRefactor("protection from energy", {
 	name : "Protection from Energy",
 	classes : ["artificer","cleric", "druid", "ranger", "sorcerer", "wizard"],
-	source : [["PHB2024", 309]],
+	source : [["P24", 309]],
 	level : 3,
 	school : "Abjur",
 	time : "1 a",
@@ -18499,7 +18499,7 @@ legacySpellRefactor("protection from evil and good", {
 	name : "Protection from Evil and Good",
 	nameShort : "Prot. from Evil/Good",
 	classes : ["cleric", "druid", "paladin", "warlock", "wizard"],
-	source : [["PHB2024", 309]],
+	source : [["P24", 309]],
 	level : 1,
 	school : "Abjur",
 	time : "1 a",
@@ -18513,7 +18513,7 @@ legacySpellRefactor("protection from evil and good", {
 legacySpellRefactor("protection from poison", {
 	name : "Protection from Poison",
 	classes : ["artificer","cleric", "druid", "paladin", "ranger"],
-	source : [["PHB2024", 310]],
+	source : [["P24", 310]],
 	level : 2,
 	school : "Abjur",
 	time : "1 a",
@@ -18526,7 +18526,7 @@ legacySpellRefactor("protection from poison", {
 legacySpellRefactor("purify food and drink", {
 	name : "Purify Food and Drink",
 	classes : ["artificer","cleric", "druid", "paladin"],
-	source : [["PHB2024", 310]],
+	source : [["P24", 310]],
 	ritual : true,
 	level : 1,
 	school : "Trans",
@@ -18540,7 +18540,7 @@ legacySpellRefactor("purify food and drink", {
 legacySpellRefactor("raise dead", {
 	name : "Raise Dead",
 	classes : ["bard", "cleric", "paladin"],
-	source : [["PHB2024", 310]],
+	source : [["P24", 310]],
 	level : 5,
 	school : "Necro",
 	time : "1 h",
@@ -18556,7 +18556,7 @@ legacySpellRefactor("rary's telepathic bond", {
 	nameShort : "Rary's Telepath. Bond",
 	nameAlt : "Telepathic Bond",
 	classes : ["bard", "wizard"],
-	source : [["PHB2024", 311]],
+	source : [["P24", 311]],
 	ritual : true,
 	level : 5,
 	school : "Div",
@@ -18571,7 +18571,7 @@ legacySpellRefactor("rary's telepathic bond", {
 legacySpellRefactor("ray of enfeeblement", {
 	name : "Ray of Enfeeblement",
 	classes : ["warlock", "wizard"],
-	source : [["PHB2024", 311]],
+	source : [["P24", 311]],
 	level : 2,
 	school : "Necro",
 	time : "1 a",
@@ -18585,7 +18585,7 @@ legacySpellRefactor("ray of enfeeblement", {
 legacySpellRefactor("ray of frost", {
 	name : "Ray of Frost",
 	classes : ["artificer","sorcerer", "wizard"],
-	source : [["PHB2024", 311]],
+	source : [["P24", 311]],
 	level : 0,
 	school : "Evoc",
 	time : "1 a",
@@ -18599,7 +18599,7 @@ legacySpellRefactor("ray of frost", {
 legacySpellRefactor("ray of sickness", {
 	name : "Ray of Sickness",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 311]],
+	source : [["P24", 311]],
 	level : 1,
 	school : "Necro",
 	time : "1 a",
@@ -18612,7 +18612,7 @@ legacySpellRefactor("ray of sickness", {
 legacySpellRefactor("regenerate", {
 	name : "Regenerate",
 	classes : ["bard", "cleric", "druid"],
-	source : [["PHB2024", 311]],
+	source : [["P24", 311]],
 	level : 7,
 	school : "Trans",
 	time : "1 min",
@@ -18631,7 +18631,7 @@ legacySpellRefactor("regenerate", {
 legacySpellRefactor("reincarnate", {
 	name : "Reincarnate",
 	classes : ["druid"],
-	source : [["PHB2024", 311]],
+	source : [["P24", 311]],
 	level : 5,
 	school : "Necro",
 	time : "1 h",
@@ -18645,7 +18645,7 @@ legacySpellRefactor("reincarnate", {
 legacySpellRefactor("remove curse", {
 	name : "Remove Curse",
 	classes : ["cleric", "paladin", "warlock", "wizard"],
-	source : [["PHB2024", 312]],
+	source : [["P24", 312]],
 	level : 3,
 	school : "Abjur",
 	time : "1 a",
@@ -18658,7 +18658,7 @@ legacySpellRefactor("remove curse", {
 legacySpellRefactor("resistance", {
 	name : "Resistance",
 	classes : ["artificer","cleric", "druid"],
-	source : [["PHB2024", 312]],
+	source : [["P24", 312]],
 	level : 0,
 	school : "Abjur",
 	time : "1 a",
@@ -18671,7 +18671,7 @@ legacySpellRefactor("resistance", {
 legacySpellRefactor("resurrection", {
 	name : "Resurrection",
 	classes : ["bard", "cleric"],
-	source : [["PHB2024", 312]],
+	source : [["P24", 312]],
 	level : 7,
 	school : "Necro",
 	time : "1 h",
@@ -18685,7 +18685,7 @@ legacySpellRefactor("resurrection", {
 legacySpellRefactor("reverse gravity", {
 	name : "Reverse Gravity",
 	classes : ["druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 312]],
+	source : [["P24", 312]],
 	level : 7,
 	school : "Trans",
 	time : "1 a",
@@ -18700,7 +18700,7 @@ legacySpellRefactor("reverse gravity", {
 legacySpellRefactor("revivify", {
 	name : "Revivify",
 	classes : ["artificer","cleric", "paladin", "ranger"],
-	source : [["PHB2024", 312]],
+	source : [["P24", 312]],
 	level : 3,
 	school : "Necro",
 	time : "1 a",
@@ -18714,7 +18714,7 @@ legacySpellRefactor("revivify", {
 legacySpellRefactor("rope trick", {
 	name : "Rope Trick",
 	classes : ["artificer","wizard"],
-	source : [["PHB2024", 312]],
+	source : [["P24", 312]],
 	level : 2,
 	school : "Trans",
 	time : "1 a",
@@ -18729,7 +18729,7 @@ legacySpellRefactor("sacred flame", {
 	name : "Sacred Flame",
 	nameShort : "Sacred Flame*",
 	classes : ["cleric"],
-	source : [["PHB2024", 313]],
+	source : [["P24", 313]],
 	level : 0,
 	school : "Evoc",
 	time : "1 a",
@@ -18745,7 +18745,7 @@ legacySpellRefactor("sacred flame", {
 legacySpellRefactor("sanctuary", {
 	name : "Sanctuary",
 	classes : ["artificer","cleric"],
-	source : [["PHB2024", 313]],
+	source : [["P24", 313]],
 	level : 1,
 	school : "Abjur",
 	time : "1 bns",
@@ -18760,7 +18760,7 @@ legacySpellRefactor("sanctuary", {
 legacySpellRefactor("scorching ray", {
 	name : "Scorching Ray",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 313]],
+	source : [["P24", 313]],
 	level : 2,
 	school : "Evoc",
 	time : "1 a",
@@ -18774,7 +18774,7 @@ legacySpellRefactor("scorching ray", {
 legacySpellRefactor("scrying", {
 	name : "Scrying",
 	classes : ["bard", "cleric", "druid", "warlock", "wizard"],
-	source : [["PHB2024", 313-14]],
+	source : [["P24", 313-14]],
 	level : 5,
 	school : "Div",
 	time : "10 min",
@@ -18789,7 +18789,7 @@ legacySpellRefactor("scrying", {
 legacySpellRefactor("searing smite", {
 	name : "Searing Smite",
 	classes : ["paladin"],
-	source : [["PHB2024", 314]],
+	source : [["P24", 314]],
 	level : 1,
 	school : "Evoc",
 	time : "1 bns*",
@@ -18808,7 +18808,7 @@ legacySpellRefactor("searing smite", {
 legacySpellRefactor("see invisibility", {
 	name : "See Invisibility",
 	classes : ["artificer","bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 314]],
+	source : [["P24", 314]],
 	level : 2,
 	school : "Div",
 	time : "1 a",
@@ -18823,7 +18823,7 @@ legacySpellRefactor("seeming", {
 	name : "Seeming",
 	nameShort : "Seeming*",
 	classes : ["bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 314]],
+	source : [["P24", 314]],
 	level : 5,
 	school : "Illus",
 	time : "1 a",
@@ -18837,7 +18837,7 @@ legacySpellRefactor("seeming", {
 legacySpellRefactor("sending", {
 	name : "Sending",
 	classes : ["bard", "cleric", "wizard"],
-	source : [["PHB2024", 314]],
+	source : [["P24", 314]],
 	level : 3,
 	school : "Div",
 	time : "1 a",
@@ -18851,7 +18851,7 @@ legacySpellRefactor("sending", {
 legacySpellRefactor("sequester", {
 	name : "Sequester",
 	classes : ["wizard"],
-	source : [["PHB2024", 315]],
+	source : [["P24", 315]],
 	level : 7,
 	school : "Trans",
 	time : "1 a",
@@ -18865,7 +18865,7 @@ legacySpellRefactor("sequester", {
 legacySpellRefactor("shapechange", {
 	name : "Shapechange",
 	classes : ["druid", "wizard"],
-	source : [["PHB2024", 315]],
+	source : [["P24", 315]],
 	level : 9,
 	school : "Trans",
 	time : "1 a",
@@ -18879,7 +18879,7 @@ legacySpellRefactor("shapechange", {
 legacySpellRefactor("shatter", {
 	name : "Shatter",
 	classes : ["bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 316]],
+	source : [["P24", 316]],
 	level : 2,
 	school : "Evoc",
 	time : "1 a",
@@ -18894,7 +18894,7 @@ legacySpellRefactor("shatter", {
 legacySpellRefactor("shield", {
 	name : "Shield",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 316]],
+	source : [["P24", 316]],
 	level : 1,
 	school : "Abjur",
 	time : "1 rea",
@@ -18908,7 +18908,7 @@ legacySpellRefactor("shield", {
 legacySpellRefactor("shield of faith", {
 	name : "Shield of Faith",
 	classes : ["cleric", "paladin"],
-	source : [["PHB2024", 316]],
+	source : [["P24", 316]],
 	level : 1,
 	school : "Abjur",
 	time : "1 bns",
@@ -18922,7 +18922,7 @@ legacySpellRefactor("shield of faith", {
 legacySpellRefactor("shillelagh", {
 	name : "Shillelagh",
 	classes : ["druid"],
-	source : [["PHB2024", 316]],
+	source : [["P24", 316]],
 	level : 0,
 	school : "Trans",
 	time : "1 bns",
@@ -18938,7 +18938,7 @@ legacySpellRefactor("shining smite", {
 	name : "Shining Smite",
 	replacs : "branding smite",
 	classes : ["paladin"],
-	source : [["PHB2024", 316]],
+	source : [["P24", 316]],
 	level : 2,
 	school : "Trans",
 	time : "1 bns*",
@@ -18952,7 +18952,7 @@ legacySpellRefactor("shining smite", {
 legacySpellRefactor("shocking grasp", {
 	name : "Shocking Grasp",
 	classes : ["artificer","sorcerer", "wizard"],
-	source : [["PHB2024", 316]],
+	source : [["P24", 316]],
 	level : 0,
 	school : "Evoc",
 	time : "1 a",
@@ -18966,7 +18966,7 @@ legacySpellRefactor("shocking grasp", {
 legacySpellRefactor("silence", {
 	name : "Silence",
 	classes : ["bard", "cleric", "ranger"],
-	source : [["PHB2024", 316]],
+	source : [["P24", 316]],
 	ritual : true,
 	level : 2,
 	school : "Illus",
@@ -18980,7 +18980,7 @@ legacySpellRefactor("silence", {
 legacySpellRefactor("silent image", {
 	name : "Silent Image",
 	classes : ["bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 317]],
+	source : [["P24", 317]],
 	level : 1,
 	school : "Illus",
 	time : "1 a",
@@ -18994,7 +18994,7 @@ legacySpellRefactor("silent image", {
 legacySpellRefactor("simulacrum", {
 	name : "Simulacrum",
 	classes : ["wizard"],
-	source : [["PHB2024", 317]],
+	source : [["P24", 317]],
 	level : 7,
 	school : "Illus",
 	time : "12 h",
@@ -19008,7 +19008,7 @@ legacySpellRefactor("simulacrum", {
 legacySpellRefactor("sleep", {
 	name : "Sleep",
 	classes : ["bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 317]],
+	source : [["P24", 317]],
 	level : 1,
 	school : "Ench",
 	time : "1 a",
@@ -19023,7 +19023,7 @@ legacySpellRefactor("sleep", {
 legacySpellRefactor("sleet storm", {
 	name : "Sleet Storm",
 	classes : ["druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 317]],
+	source : [["P24", 317]],
 	level : 3,
 	school : "Conj",
 	time : "1 a",
@@ -19038,7 +19038,7 @@ legacySpellRefactor("sleet storm", {
 legacySpellRefactor("slow", {
 	name : "Slow",
 	classes : ["bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 318]],
+	source : [["P24", 318]],
 	level : 3,
 	school : "Trans",
 	time : "1 a",
@@ -19053,7 +19053,7 @@ legacySpellRefactor("slow", {
 legacySpellRefactor("sorcerous burst", {
 	name : "Sorcerous Burst",
 	classes : ["sorcerer"],
-	source : [["PHB2024", 318]],
+	source : [["P24", 318]],
 	level : 0,
 	school : "Evoc",
 	time : "1 a",
@@ -19067,7 +19067,7 @@ legacySpellRefactor("sorcerous burst", {
 legacySpellRefactor("spare the dying", {
 	name : "Spare the Dying",
 	classes : ["artificer","cleric", "druid"],
-	source : [["PHB2024", 318]],
+	source : [["P24", 318]],
 	level : 0,
 	school : "Necro",
 	time : "1 a",
@@ -19080,7 +19080,7 @@ legacySpellRefactor("spare the dying", {
 legacySpellRefactor("speak with animals", {
 	name : "Speak with Animals",
 	classes : ["bard", "druid", "ranger", "warlock"],
-	source : [["PHB2024", 318]],
+	source : [["P24", 318]],
 	ritual : true,
 	level : 1,
 	school : "Div",
@@ -19094,7 +19094,7 @@ legacySpellRefactor("speak with animals", {
 legacySpellRefactor("speak with dead", {
 	name : "Speak with Dead",
 	classes : ["bard", "cleric", "wizard"],
-	source : [["PHB2024", 318]],
+	source : [["P24", 318]],
 	level : 3,
 	school : "Necro",
 	time : "1 a",
@@ -19108,7 +19108,7 @@ legacySpellRefactor("speak with dead", {
 legacySpellRefactor("speak with plants", {
 	name : "Speak with Plants",
 	classes : ["bard", "druid", "ranger"],
-	source : [["PHB2024", 319]],
+	source : [["P24", 319]],
 	level : 3,
 	school : "Trans",
 	time : "1 a",
@@ -19121,7 +19121,7 @@ legacySpellRefactor("speak with plants", {
 legacySpellRefactor("spider climb", {
 	name : "Spider Climb",
 	classes : ["artificer","sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 319]],
+	source : [["P24", 319]],
 	level : 2,
 	school : "Trans",
 	time : "1 a",
@@ -19135,7 +19135,7 @@ legacySpellRefactor("spider climb", {
 legacySpellRefactor("spike growth", {
 	name : "Spike Growth",
 	classes : ["druid", "ranger"],
-	source : [["PHB2024", 319]],
+	source : [["P24", 319]],
 	level : 2,
 	school : "Trans",
 	time : "1 a",
@@ -19150,7 +19150,7 @@ legacySpellRefactor("spike growth", {
 legacySpellRefactor("spirit guardians", {
 	name : "Spirit Guardians",
 	classes : ["cleric"],
-	source : [["PHB2024", 319]],
+	source : [["P24", 319]],
 	level : 3,
 	school : "Conj",
 	time : "1 a",
@@ -19172,7 +19172,7 @@ legacySpellRefactor("spirit guardians", {
 legacySpellRefactor("spiritual weapon", {
 	name : "Spiritual Weapon",
 	classes : ["cleric"],
-	source : [["PHB2024", 319]],
+	source : [["P24", 319]],
 	level : 2,
 	school : "Evoc",
 	time : "1 bns",
@@ -19186,7 +19186,7 @@ legacySpellRefactor("spiritual weapon", {
 legacySpellRefactor("staggering smite", {
 	name : "Staggering Smite",
 	classes : ["paladin"],
-	source : [["PHB2024", 320]],
+	source : [["P24", 320]],
 	level : 4,
 	school : "Ench",
 	time : "1 bns*",
@@ -19201,7 +19201,7 @@ legacySpellRefactor("staggering smite", {
 legacySpellRefactor("starry wisp", {
 	name : "Starry Wisp",
 	classes : ["bard", "druid"],
-	source : [["PHB2024", 320]],
+	source : [["P24", 320]],
 	level : 0,
 	school : "Evoc",
 	time : "1 a",
@@ -19216,7 +19216,7 @@ legacySpellRefactor("steel wind strike", {
 	name : "Steel Wind Strike",
 	nameShort : "Steel Wind Strike*",
 	classes : ["ranger", "wizard"],
-	source : [["PHB2024", 320]],
+	source : [["P24", 320]],
 	level : 5,
 	school : "Conj",
 	time : "1 a",
@@ -19230,7 +19230,7 @@ legacySpellRefactor("steel wind strike", {
 legacySpellRefactor("stinking cloud", {
 	name : "Stinking Cloud",
 	classes : ["bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 321]],
+	source : [["P24", 321]],
 	level : 3,
 	school : "Conj",
 	time : "1 a",
@@ -19245,7 +19245,7 @@ legacySpellRefactor("stinking cloud", {
 legacySpellRefactor("stone shape", {
 	name : "Stone Shape",
 	classes : ["artificer","cleric", "druid", "wizard"],
-	source : [["PHB2024", 321]],
+	source : [["P24", 321]],
 	level : 4,
 	school : "Trans",
 	time : "1 a",
@@ -19259,7 +19259,7 @@ legacySpellRefactor("stone shape", {
 legacySpellRefactor("stoneskin", {
 	name : "Stoneskin",
 	classes : ["artificer","druid", "ranger", "sorcerer", "wizard"],
-	source : [["PHB2024", 321]],
+	source : [["P24", 321]],
 	level : 4,
 	school : "Trans",
 	time : "1 a",
@@ -19273,7 +19273,7 @@ legacySpellRefactor("stoneskin", {
 legacySpellRefactor("storm of vengeance", {
 	name : "Storm of Vengeance",
 	classes : ["druid"],
-	source : [["PHB2024", 321]],
+	source : [["P24", 321]],
 	level : 9,
 	school : "Conj",
 	time : "1 a",
@@ -19289,7 +19289,7 @@ legacySpellRefactor("suggestion", {
 	name : "Suggestion",
 	nameShort : "Suggestion*",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 321]],
+	source : [["P24", 321]],
 	level : 2,
 	school : "Ench",
 	time : "1 a",
@@ -19305,7 +19305,7 @@ legacySpellRefactor("summon aberration", {
 	name : "Summon Aberration",
 	nameShort : "Summon Aberration*",
 	classes : ["warlock", "wizard"],
-	source : [["PHB2024", 322]],
+	source : [["P24", 322]],
 	level : 4,
 	school : "Conj",
 	time : "1 a",
@@ -19320,7 +19320,7 @@ legacySpellRefactor("summon beast", {
 	name : "Summon Beast",
 	nameShort : "Summon Beast*",
 	classes : ["druid", "ranger"],
-	source : [["PHB2024", 322]],
+	source : [["P24", 322]],
 	level : 2,
 	school : "Conj",
 	time : "1 a",
@@ -19335,7 +19335,7 @@ legacySpellRefactor("summon celestial", {
 	name : "Summon Celestial",
 	nameShort : "Summon Celestial*",
 	classes : ["cleric", "paladin"],
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	level : 5,
 	school : "Conj",
 	time : "1 a",
@@ -19350,7 +19350,7 @@ legacySpellRefactor("summon construct", {
 	name : "Summon Construct",
 	nameShort : "Summon Construct*",
 	classes : ["artificer","wizard"],
-	source : [["PHB2024", 324]],
+	source : [["P24", 324]],
 	level : 4,
 	school : "Conj",
 	time : "1 a",
@@ -19365,7 +19365,7 @@ legacySpellRefactor("summon dragon", {
 	name : "Summon Dragon",
 	nameShort : "Summon Dragon*",
 	classes : ["wizard"],
-	source : [["PHB2024", 324]],
+	source : [["P24", 324]],
 	level : 5,
 	school : "Conj",
 	time : "1 a",
@@ -19380,7 +19380,7 @@ legacySpellRefactor("summon elemental", {
 	name : "Summon Elemental",
 	nameShort : "Summon Elemental*",
 	classes : ["druid", "ranger", "wizard"],
-	source : [["PHB2024", 325]],
+	source : [["P24", 325]],
 	level : 4,
 	school : "Conj",
 	time : "1 a",
@@ -19395,7 +19395,7 @@ legacySpellRefactor("summon fey", {
 	name : "Summon Fey",
 	nameShort : "Summon Fey*",
 	classes : ["druid", "ranger", "warlock", "wizard"],
-	source : [["PHB2024", 326]],
+	source : [["P24", 326]],
 	level : 3,
 	school : "Conj",
 	time : "1 a",
@@ -19410,7 +19410,7 @@ legacySpellRefactor("summon fiend", {
 	name : "Summon Fiend",
 	nameShort : "Summon Fiend*",
 	classes : ["warlock", "wizard"],
-	source : [["PHB2024", 326]],
+	source : [["P24", 326]],
 	level : 6,
 	school : "Conj",
 	time : "1 a",
@@ -19425,7 +19425,7 @@ legacySpellRefactor("summon undead", {
 	name : "Summon Undead",
 	nameShort : "Summon Undead*",
 	classes : ["warlock", "wizard"],
-	source : [["PHB2024", 328]],
+	source : [["P24", 328]],
 	level : 3,
 	school : "Necro",
 	time : "1 a",
@@ -19439,7 +19439,7 @@ legacySpellRefactor("summon undead", {
 legacySpellRefactor("sunbeam", {
 	name : "Sunbeam",
 	classes : ["cleric", "druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 329]],
+	source : [["P24", 329]],
 	level : 6,
 	school : "Evoc",
 	time : "1 a",
@@ -19456,7 +19456,7 @@ legacySpellRefactor("sunbeam", {
 legacySpellRefactor("sunburst", {
 	name : "Sunburst",
 	classes : ["cleric", "druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 329]],
+	source : [["P24", 329]],
 	level : 8,
 	school : "Evoc",
 	time : "1 a",
@@ -19471,7 +19471,7 @@ legacySpellRefactor("sunburst", {
 legacySpellRefactor("swift quiver", {
 	name : "Swift Quiver",
 	classes : ["ranger"],
-	source : [["PHB2024", 329]],
+	source : [["P24", 329]],
 	level : 5,
 	school : "Trans",
 	time : "1 bns",
@@ -19485,7 +19485,7 @@ legacySpellRefactor("swift quiver", {
 legacySpellRefactor("symbol", {
 	name : "Symbol",
 	classes : ["bard", "cleric", "druid", "wizard"],
-	source : [["PHB2024", 329]],
+	source : [["P24", 329]],
 	level : 7,
 	school : "Abjur",
 	time : "1 min",
@@ -19499,7 +19499,7 @@ legacySpellRefactor("symbol", {
 legacySpellRefactor("synaptic static", {
 	name : "Synaptic Static",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 330]],
+	source : [["P24", 330]],
 	level : 5,
 	school : "Ench",
 	time : "1 a",
@@ -19516,7 +19516,7 @@ legacySpellRefactor("tasha's bubbling cauldron", {
 	nameAlt : "Bubbling Cauldron",
 	nameShort : "T's Bubbling Cauldron",
 	classes : ["warlock", "wizard"],
-	source : [["PHB2024", 330]],
+	source : [["P24", 330]],
 	level : 6,
 	school : "Conj",
 	time : "1 a",
@@ -19532,7 +19532,7 @@ legacySpellRefactor("tasha's hideous laughter", {
 	nameShort : "T's Hideous Laughter*",
 	nameAlt : "Hideous Laughter",
 	classes : ["bard", "warlock", "wizard"],
-	source : [["PHB2024", 331]],
+	source : [["P24", 331]],
 	level : 1,
 	school : "Ench",
 	time : "1 a",
@@ -19548,7 +19548,7 @@ legacySpellRefactor("telekinesis", {
 	name : "Telekinesis",
 	nameShort : "Telekinesis*",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 331]],
+	source : [["P24", 331]],
 	level : 5,
 	school : "Trans",
 	time : "1 a",
@@ -19562,7 +19562,7 @@ legacySpellRefactor("telekinesis", {
 legacySpellRefactor("telepathy", {
 	name : "Telepathy",
 	classes : ["wizard"],
-	source : [["PHB2024", 331]],
+	source : [["P24", 331]],
 	level : 8,
 	school : "Div",
 	time : "1 a",
@@ -19577,7 +19577,7 @@ legacySpellRefactor("teleport", {
 	name : "Teleport",
 	nameShort : "Teleport*",
 	classes : ["bard", "sorcerer", "wizard"],
-	source : [["PHB2024", 331]],
+	source : [["P24", 331]],
 	level : 7,
 	school : "Conj",
 	time : "1 a",
@@ -19611,7 +19611,7 @@ legacySpellRefactor("teleport", {
 legacySpellRefactor("teleportation circle", {
 	name : "Teleportation Circle",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 332]],
+	source : [["P24", 332]],
 	level : 5,
 	school : "Conj",
 	time : "1 min",
@@ -19627,7 +19627,7 @@ legacySpellRefactor("tenser's floating disk", {
 	nameShort : "Tenser's Floating Disk*",
 	nameAlt : "Floating Disk",
 	classes : ["wizard"],
-	source : [["PHB2024", 332]],
+	source : [["P24", 332]],
 	ritual : true,
 	level : 1,
 	school : "Conj",
@@ -19642,7 +19642,7 @@ legacySpellRefactor("tenser's floating disk", {
 legacySpellRefactor("thaumaturgy", {
 	name : "Thaumaturgy",
 	classes : ["cleric"],
-	source : [["PHB2024", 333]],
+	source : [["P24", 333]],
 	level : 0,
 	school : "Trans",
 	time : "1 a",
@@ -19655,7 +19655,7 @@ legacySpellRefactor("thaumaturgy", {
 legacySpellRefactor("thorn whip", {
 	name : "Thorn Whip",
 	classes : ["artificer","druid"],
-	source : [["PHB2024", 333]],
+	source : [["P24", 333]],
 	level : 0,
 	school : "Trans",
 	time : "1 a",
@@ -19670,7 +19670,7 @@ legacySpellRefactor("thorn whip", {
 legacySpellRefactor("thunderclap", {
 	name : "Thunderclap",
 	classes : ["artificer","bard", "druid", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 333]],
+	source : [["P24", 333]],
 	level : 0,
 	school : "Evoc",
 	time : "1 a",
@@ -19685,7 +19685,7 @@ legacySpellRefactor("thunderclap", {
 legacySpellRefactor("thunderous smite", {
 	name : "Thunderous Smite",
 	classes : ["paladin"],
-	source : [["PHB2024", 334]],
+	source : [["P24", 334]],
 	level : 1,
 	school : "Evoc",
 	time : "1 bns*",
@@ -19700,7 +19700,7 @@ legacySpellRefactor("thunderous smite", {
 legacySpellRefactor("thunderwave", {
 	name : "Thunderwave",
 	classes : ["bard", "druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 334]],
+	source : [["P24", 334]],
 	level : 1,
 	school : "Evoc",
 	time : "1 a",
@@ -19714,7 +19714,7 @@ legacySpellRefactor("thunderwave", {
 legacySpellRefactor("time stop", {
 	name : "Time Stop",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 334]],
+	source : [["P24", 334]],
 	level : 9,
 	school : "Trans",
 	time : "1 a",
@@ -19728,7 +19728,7 @@ legacySpellRefactor("toll the dead", {
 	name : "Toll the Dead",
 	nameShort : "Toll the Dead*",
 	classes : ["cleric", "warlock", "wizard"],
-	source : [["PHB2024", 334]],
+	source : [["P24", 334]],
 	level : 0,
 	school : "Necro",
 	time : "1 a",
@@ -19743,7 +19743,7 @@ legacySpellRefactor("toll the dead", {
 legacySpellRefactor("tongues", {
 	name : "Tongues",
 	classes : ["bard", "cleric", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 334]],
+	source : [["P24", 334]],
 	level : 3,
 	school : "Div",
 	time : "1 a",
@@ -19757,7 +19757,7 @@ legacySpellRefactor("tongues", {
 legacySpellRefactor("transport via plants", {
 	name : "Transport via Plants",
 	classes : ["druid"],
-	source : [["PHB2024", 334]],
+	source : [["P24", 334]],
 	level : 6,
 	school : "Conj",
 	time : "1 a",
@@ -19770,7 +19770,7 @@ legacySpellRefactor("transport via plants", {
 legacySpellRefactor("tree stride", {
 	name : "Tree Stride",
 	classes : ["druid", "ranger"],
-	source : [["PHB2024", 335]],
+	source : [["P24", 335]],
 	level : 5,
 	school : "Conj",
 	time : "1 a",
@@ -19784,7 +19784,7 @@ legacySpellRefactor("true polymorph", {
 	name : "True Polymorph",
 	nameShort : "True Polymorph*",
 	classes : ["bard", "warlock", "wizard"],
-	source : [["PHB2024", 335]],
+	source : [["P24", 335]],
 	level : 9,
 	school : "Trans",
 	time : "1 a",
@@ -19799,7 +19799,7 @@ legacySpellRefactor("true polymorph", {
 legacySpellRefactor("true resurrection", {
 	name : "True Resurrection",
 	classes : ["cleric", "druid"],
-	source : [["PHB2024", 336]],
+	source : [["P24", 336]],
 	level : 9,
 	school : "Necro",
 	time : "1 h",
@@ -19813,7 +19813,7 @@ legacySpellRefactor("true resurrection", {
 legacySpellRefactor("true seeing", {
 	name : "True Seeing",
 	classes : ["bard", "cleric", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 336]],
+	source : [["P24", 336]],
 	level : 6,
 	school : "Div",
 	time : "1 a",
@@ -19827,7 +19827,7 @@ legacySpellRefactor("true seeing", {
 legacySpellRefactor("true strike", {
 	name : "True Strike",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 336]],
+	source : [["P24", 336]],
 	level : 0,
 	school : "Div",
 	time : "1 a",
@@ -19842,7 +19842,7 @@ legacySpellRefactor("true strike", {
 legacySpellRefactor("tsunami", {
 	name : "Tsunami",
 	classes : ["druid"],
-	source : [["PHB2024", 336]],
+	source : [["P24", 336]],
 	level : 8,
 	school : "Conj",
 	time : "1 min",
@@ -19859,7 +19859,7 @@ legacySpellRefactor("tsunami", {
 legacySpellRefactor("unseen servant", {
 	name : "Unseen Servant",
 	classes : ["bard", "warlock", "wizard"],
-	source : [["PHB2024", 336]],
+	source : [["P24", 336]],
 	ritual : true,
 	level : 1,
 	school : "Conj",
@@ -19874,7 +19874,7 @@ legacySpellRefactor("unseen servant", {
 legacySpellRefactor("vampiric touch", {
 	name : "Vampiric Touch",
 	classes : ["sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 337]],
+	source : [["P24", 337]],
 	level : 3,
 	school : "Necro",
 	time : "1 a",
@@ -19887,7 +19887,7 @@ legacySpellRefactor("vampiric touch", {
 legacySpellRefactor("vicious mockery", {
 	name : "Vicious Mockery",
 	classes : ["bard"],
-	source : [["PHB2024", 337]],
+	source : [["P24", 337]],
 	level : 0,
 	school : "Ench",
 	time : "1 a",
@@ -19902,7 +19902,7 @@ legacySpellRefactor("vicious mockery", {
 legacySpellRefactor("vitriolic sphere", {
 	name : "Vitriolic Sphere",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 337]],
+	source : [["P24", 337]],
 	level : 4,
 	school : "Evoc",
 	time : "1 a",
@@ -19922,7 +19922,7 @@ legacySpellRefactor("vitriolic sphere", {
 legacySpellRefactor("wall of fire", {
 	name : "Wall of Fire",
 	classes : ["druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 338]],
+	source : [["P24", 338]],
 	level : 4,
 	school : "Evoc",
 	time : "1 a",
@@ -19940,7 +19940,7 @@ legacySpellRefactor("wall of fire", {
 legacySpellRefactor("wall of force", {
 	name : "Wall of Force",
 	classes : ["wizard"],
-	source : [["PHB2024", 338]],
+	source : [["P24", 338]],
 	level : 5,
 	school : "Evoc",
 	time : "1 a",
@@ -19954,7 +19954,7 @@ legacySpellRefactor("wall of force", {
 legacySpellRefactor("wall of ice", {
 	name : "Wall of Ice",
 	classes : ["wizard"],
-	source : [["PHB2024", 339]],
+	source : [["P24", 339]],
 	level : 6,
 	school : "Evoc",
 	time : "1 a",
@@ -19970,7 +19970,7 @@ legacySpellRefactor("wall of ice", {
 legacySpellRefactor("wall of stone", {
 	name : "Wall of Stone",
 	classes : ["artificer","druid", "sorcerer", "wizard"],
-	source : [["PHB2024", 339]],
+	source : [["P24", 339]],
 	level : 5,
 	school : "Evoc",
 	time : "1 a",
@@ -19985,7 +19985,7 @@ legacySpellRefactor("wall of stone", {
 legacySpellRefactor("wall of thorns", {
 	name : "Wall of Thorns",
 	classes : ["druid"],
-	source : [["PHB2024", 339]],
+	source : [["P24", 339]],
 	level : 6,
 	school : "Conj",
 	time : "1 a",
@@ -20002,7 +20002,7 @@ legacySpellRefactor("wall of thorns", {
 legacySpellRefactor("warding bond", {
 	name : "Warding Bond",
 	classes : ["cleric", "paladin"],
-	source : [["PHB2024", 340]],
+	source : [["P24", 340]],
 	level : 2,
 	school : "Abjur",
 	time : "1 a",
@@ -20016,7 +20016,7 @@ legacySpellRefactor("warding bond", {
 legacySpellRefactor("water breathing", {
 	name : "Water Breathing",
 	classes : ["artificer","druid", "ranger", "sorcerer", "wizard"],
-	source : [["PHB2024", 340]],
+	source : [["P24", 340]],
 	ritual : true,
 	level : 3,
 	school : "Trans",
@@ -20031,7 +20031,7 @@ legacySpellRefactor("water breathing", {
 legacySpellRefactor("water walk", {
 	name : "Water Walk",
 	classes : ["artificer","cleric", "druid", "ranger", "sorcerer"],
-	source : [["PHB2024", 340]],
+	source : [["P24", 340]],
 	ritual : true,
 	level : 3,
 	school : "Trans",
@@ -20046,7 +20046,7 @@ legacySpellRefactor("water walk", {
 legacySpellRefactor("web", {
 	name : "Web",
 	classes : ["artificer","sorcerer", "wizard"],
-	source : [["PHB2024", 340]],
+	source : [["P24", 340]],
 	level : 2,
 	school : "Conj",
 	time : "1 a",
@@ -20061,7 +20061,7 @@ legacySpellRefactor("web", {
 legacySpellRefactor("weird", {
 	name : "Weird",
 	classes : ["warlock", "wizard"],
-	source : [["PHB2024", 341]],
+	source : [["P24", 341]],
 	level : 9,
 	school : "Illus",
 	time : "1 a",
@@ -20076,7 +20076,7 @@ legacySpellRefactor("weird", {
 legacySpellRefactor("wind walk", {
 	name : "Wind Walk",
 	classes : ["druid"],
-	source : [["PHB2024", 341]],
+	source : [["P24", 341]],
 	level : 6,
 	school : "Trans",
 	time : "1 min",
@@ -20090,7 +20090,7 @@ legacySpellRefactor("wind walk", {
 legacySpellRefactor("wind wall", {
 	name : "Wind Wall",
 	classes : ["druid", "ranger"],
-	source : [["PHB2024", 341]],
+	source : [["P24", 341]],
 	level : 3,
 	school : "Evoc",
 	time : "1 a",
@@ -20108,7 +20108,7 @@ legacySpellRefactor("wind wall", {
 legacySpellRefactor("wish", {
 	name : "Wish",
 	classes : ["sorcerer", "wizard"],
-	source : [["PHB2024", 341]],
+	source : [["P24", 341]],
 	level : 9,
 	school : "Conj",
 	time : "1 a",
@@ -20121,7 +20121,7 @@ legacySpellRefactor("wish", {
 legacySpellRefactor("witch bolt", {
 	name : "Witch Bolt",
 	classes : ["sorcerer", "warlock", "wizard"],
-	source : [["PHB2024", 343]],
+	source : [["P24", 343]],
 	level : 1,
 	school : "Evoc",
 	time : "1 a",
@@ -20141,7 +20141,7 @@ legacySpellRefactor("word of radiance", {
 	name : "Word of Radiance",
 	nameShort : "Word of Radiance*",
 	classes : ["cleric"],
-	source : [["PHB2024", 343]],
+	source : [["P24", 343]],
 	level : 0,
 	school : "Evoc",
 	time : "1 a",
@@ -20157,7 +20157,7 @@ legacySpellRefactor("word of radiance", {
 legacySpellRefactor("word of recall", {
 	name : "Word of Recall",
 	classes : ["cleric"],
-	source : [["PHB2024", 343]],
+	source : [["P24", 343]],
 	level : 6,
 	school : "Conj",
 	time : "1 a",
@@ -20170,7 +20170,7 @@ legacySpellRefactor("word of recall", {
 legacySpellRefactor("wrathful smite", {
 	name : "Wrathful Smite",
 	classes : ["paladin"],
-	source : [["PHB2024", 343]],
+	source : [["P24", 343]],
 	level : 1,
 	school : "Necro",
 	time : "1 bns*",
@@ -20186,7 +20186,7 @@ legacySpellRefactor("yolande's regal presence", {
 	name : "Yolande's Regal Presence",
 	nameShort : "Yolande's Regal Presence*",
 	classes : ["bard", "wizard"],
-	source : [["PHB2024", 343]],
+	source : [["P24", 343]],
 	level : 5,
 	school : "Ench",
 	time : "1 a",
@@ -20200,7 +20200,7 @@ legacySpellRefactor("yolande's regal presence", {
 legacySpellRefactor("zone of truth", {
 	name : "Zone of Truth",
 	classes : ["bard", "cleric", "paladin"],
-	source : [["PHB2024", 343]],
+	source : [["P24", 343]],
 	level : 2,
 	school : "Ench",
 	time : "1 a",
@@ -20217,7 +20217,7 @@ CompanionList["familiar"] = {
 	nameTooltip : "the Find Familiar spell",
 	nameOrigin : "1st-level conjuration [ritual] spell",
 	nameMenu : "Familiar (Find Familiar spell)",
-	source : [["PHB2024", 272]],
+	source : [["P24", 272]],
 	action : [
 		["action", "Familiar (dismiss/reappear)"],
 		["action", "Use familiar's senses"]
@@ -20281,7 +20281,7 @@ CompanionList["pact_of_the_chain"] = {
 	nameTooltip : "Warlock (Pact of the Chain)",
 	nameOrigin : "variant of the Find Familiar 1st-level conjuration [ritual] spell",
 	nameMenu : "Pact of the Chain familiar (Warlock feature)",
-	source : [["PHB2024", 157]],
+	source : [["P24", 157]],
 	includeCheck : function(sCrea, objCrea, iCreaCR, bIsAL) {
 		// return true if to be included, or a string to add a note to the menu option
 		return !objCrea.companion ? false : objCrea.companion.indexOf("familiar") !== -1 ? true : bIsAL && objCrea.companion.indexOf("familiar_not_al") !== -1 ? " (if DM approves)" : false;
@@ -20309,7 +20309,7 @@ CompanionList["mount"] = {
 	nameTooltip : "the Find Steed spell",
 	nameOrigin : "2nd-level conjuration spell",
 	nameMenu : "Steed (Find Steed spell)",
-	source : [["PHB2024", 272]],
+	source : [["P24", 272]],
 	action : [["action", "Find Steed (dismiss)"]],
 	notes : [{
 		name : "Summon an otherworldly being that appears as a loyal steed",
@@ -20350,7 +20350,7 @@ CompanionList["companion"] = {
 	nameTooltip : "Beast Master: Ranger's Companion",
 	nameOrigin : "Beast Master 3",
 	nameMenu : "Ranger's Companion (Beast Master feature)",
-	source : [["PHB2024", 122]],
+	source : [["P24", 122]],
 	action : [["bonus action", "Ranger's Companion (command)"]],
 	notes : [{
 		name : "If the beast has died within the lasts hour,",
@@ -20378,12 +20378,12 @@ CompanionList["companion"] = {
 		].join("\n   "),
 		joinString : typePF ? ": " : ":\n   "
 	}, {
-		name : "Extra Attack (Ranger 5, PHB2024 120)",
+		name : "Extra Attack (Ranger 5, P24 120)",
 		description : "If the beast takes the Attack action, I can use my Extra Attack feature to attack once myself",
 		joinString : "\n   ",
 		minlevel : 5
 	}, {
-		name : "Exceptional Training (Beast Master 7, PHB2024 123)",
+		name : "Exceptional Training (Beast Master 7, P24 123)",
 		description : [
 			"The beast's attacks can deal Force damage or its normal damage type",
 			"As a bonus action, I can command it to take the Dash, Disengage, Dodge, or Help action on its turn"
@@ -20410,7 +20410,7 @@ CompanionList["companion"] = {
 			processActions(false, "Beast Master: Ranger's Companion", [["bonus action", "Exceptional Training (Dash/Disengage/Dodge/Help)"]], "Ranger's Companion");
 		}
 	}, {
-		name : "Bestial Fury (Beast Master 11, PHB2024 123)",
+		name : "Bestial Fury (Beast Master 11, P24 123)",
 		description : "The beast can make two attacks (or multiattack) when I command it to take an Attack action, In addition, the first time each turn it hits a creature affected by my Hunter's Mark spell, it deals extra Force damage equal to the bonus damage of that spell.",
 		joinString : "\n   ",
 		minlevel : 11,
@@ -20421,7 +20421,7 @@ CompanionList["companion"] = {
 			Value(prefix + "Comp.Use.Attack.perAction", 1);
 		}
 	}, {
-		name : "Share Spells (Beast Master 15, PHB2024 123)",
+		name : "Share Spells (Beast Master 15, P24 123)",
 		description : "When I cast a spell on myself, I can have it also affect my primal companion if it is within 30 ft of me",
 		joinString : "\n   ",
 		minlevel : 15
@@ -20447,7 +20447,7 @@ CompanionList["companion"] = {
 CreatureList["ape"] = {
 	name : "Ape",
 	regExpSearch : /ape/i,
-	source : [["PHB2024", 346]],
+	source : [["P24", 346]],
 	size : 3,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -20486,7 +20486,7 @@ CreatureList["ape"] = {
 CreatureList["badger"] = {
 	name : "Badger",
 	regExpSearch : /badger/i,
-	source : [["PHB2024", 346]],
+	source : [["P24", 346]],
 	size : 5,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -20515,7 +20515,7 @@ CreatureList["badger"] = {
 CreatureList["bat"] = {
 	name : "Bat",
 	regExpSearch : /bat/i,
-	source : [["PHB2024", 346]],
+	source : [["P24", 346]],
 	size : 5,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -20541,7 +20541,7 @@ CreatureList["bat"] = {
 CreatureList["black bear"] = {
 	name : "Black Bear",
 	regExpSearch : /^(?=.*(black))(?=.*(bear)).*$/i,
-	source : [["PHB2024", 346]],
+	source : [["P24", 346]],
 	size : 3,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -20574,7 +20574,7 @@ CreatureList["black bear"] = {
 CreatureList["boar"] = {
 	name : "Boar",
 	regExpSearch : /boar/i,
-	source : [["PHB2024", 347]],
+	source : [["P24", 347]],
 	size : 3,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -20606,7 +20606,7 @@ CreatureList["boar"] = {
 CreatureList["brown bear"] = {
 	name : "Brown Bear",
 	regExpSearch : /^(?=.*(brown))(?=.*(bear)).*$/i,
-	source : [["PHB2024", 347]],
+	source : [["P24", 347]],
 	size : 2,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -20645,7 +20645,7 @@ CreatureList["brown bear"] = {
 CreatureList["camel"] = {
 	name : "Camel",
 	regExpSearch : /camel/i,
-	source : [["PHB2024", 347]],
+	source : [["P24", 347]],
 	size : 2,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -20672,7 +20672,7 @@ CreatureList["camel"] = {
 CreatureList["cat"] = {
 	name : "Cat",
 	regExpSearch : /cat/i,
-	source : [["PHB2024", 347]],
+	source : [["P24", 347]],
 	size : 5,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -20709,7 +20709,7 @@ CreatureList["cat"] = {
 CreatureList["constrictor snake"] = {
 	name : "Constrictor Snake",
 	regExpSearch : /^(?=.*(constrictor))(?=.*(snake)).*$/i,
-	source : [["PHB2024", 348]],
+	source : [["P24", 348]],
 	size : 2,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -20745,7 +20745,7 @@ CreatureList["constrictor snake"] = {
 CreatureList["crab"] = {
 	name : "Crab",
 	regExpSearch : /crab/i,
-	source : [["PHB2024", 348]],
+	source : [["P24", 348]],
 	size : 5,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -20779,7 +20779,7 @@ CreatureList["crab"] = {
 CreatureList["crocodile"] = {
 	name : "Crocodile",
 	regExpSearch : /crocodile/i,
-	source : [["PHB2024", 348]],
+	source : [["P24", 348]],
 	size : 2,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -20815,7 +20815,7 @@ CreatureList["crocodile"] = {
 CreatureList["dire wolf"] = {
 	name : "Dire Wolf",
 	regExpSearch : /^(?=.*(dire))(?=.*(wolf)).*$/i,
-	source : [["PHB2024", 348]],
+	source : [["P24", 348]],
 	size : 2,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -20852,7 +20852,7 @@ CreatureList["dire wolf"] = {
 CreatureList["draft horse"] = {
 	name : "Draft Horse",
 	regExpSearch : /^(?=.*(draft))(?=.*(horse)).*$/i,
-	source : [["PHB2024", 349]],
+	source : [["P24", 349]],
 	size : 2,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -20879,7 +20879,7 @@ CreatureList["draft horse"] = {
 CreatureList["elephant"] = {
 	name : "Elephant",
 	regExpSearch : /elephant/i,
-	source : [["PHB2024", 349]],
+	source : [["P24", 349]],
 	size : 1,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -20918,7 +20918,7 @@ CreatureList["elephant"] = {
 CreatureList["elk"] = {
 	name : "Elk",
 	regExpSearch : /elk/i,
-	source : [["PHB2024", 349]],
+	source : [["P24", 349]],
 	size : 2,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -20948,7 +20948,7 @@ CreatureList["elk"] = {
 CreatureList["frog"] = {
 	name : "Frog",
 	regExpSearch : /frog/i,
-	source : [["PHB2024", 349]],
+	source : [["P24", 349]],
 	size : 5,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -20989,7 +20989,7 @@ CreatureList["frog"] = {
 CreatureList["giant badger"] = {
 	name : "Giant Badger",
 	regExpSearch : /^(?=.*(giant))(?=.*(badger)).*$/i,
-	source : [["PHB2024", 350]],
+	source : [["P24", 350]],
 	size : 3,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21019,7 +21019,7 @@ CreatureList["giant badger"] = {
 CreatureList["giant crab"] = {
 	name : "Giant Crab",
 	regExpSearch : /^(?=.*(giant))(?=.*(crab)).*$/i,
-	source : [["PHB2024", 350]],
+	source : [["P24", 350]],
 	size : 3,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21055,7 +21055,7 @@ CreatureList["giant crab"] = {
 CreatureList["giant goat"] = {
 	name : "Giant Goat",
 	regExpSearch : /^(?=.*(giant))(?=.*(goat)).*$/i,
-	source : [["PHB2024", 350]],
+	source : [["P24", 350]],
 	size : 2,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21085,7 +21085,7 @@ CreatureList["giant goat"] = {
 CreatureList["giant seahorse"] = {
 	name : "Giant Seahorse",
 	regExpSearch : /^(?=.*(giant))(?=.*(seahorse)).*$/i,
-	source : [["PHB2024", 350]],
+	source : [["P24", 350]],
 	size : 2,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21123,7 +21123,7 @@ CreatureList["giant seahorse"] = {
 CreatureList["giant spider"] = {
 	name : "Giant Spider",
 	regExpSearch : /^(?=.*(giant))(?=.*(spider)).*$/i,
-	source : [["PHB2024", 351]],
+	source : [["P24", 351]],
 	size : 2,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21169,7 +21169,7 @@ CreatureList["giant spider"] = {
 CreatureList["giant weasel"] = {
 	name : "Giant Weasel",
 	regExpSearch : /^(?=.*(giant))(?=.*(weasel)).*$/i,
-	source : [["PHB2024", 351]],
+	source : [["P24", 351]],
 	size : 3,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21200,7 +21200,7 @@ CreatureList["giant weasel"] = {
 CreatureList["goat"] = {
 	name : "Goat",
 	regExpSearch : /goat/i,
-	source : [["PHB2024", 351]],
+	source : [["P24", 351]],
 	size : 3,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21230,7 +21230,7 @@ CreatureList["goat"] = {
 CreatureList["hawk"] = {
 	name : "Hawk",
 	regExpSearch : /hawk/i,
-	source : [["PHB2024", 352]],
+	source : [["P24", 352]],
 	size : 5,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21260,7 +21260,7 @@ CreatureList["hawk"] = {
 CreatureList["imp"] = {
 	name : "Imp",
 	regExpSearch : /imp/i,
-	source : [["PHB2024", 352]],
+	source : [["P24", 352]],
 	size : 5,
 	type : "Fiend",
 	subtype : "devil",
@@ -21315,7 +21315,7 @@ CreatureList["imp"] = {
 CreatureList["lion"] = {
 	name : "Lion",
 	regExpSearch : /lion/i,
-	source : [["PHB2024", 352]],
+	source : [["P24", 352]],
 	size : 2,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21364,7 +21364,7 @@ CreatureList["lion"] = {
 CreatureList["lizard"] = {
 	name : "Lizard",
 	regExpSearch : /lizard/i,
-	source : [["PHB2024", 353]],
+	source : [["P24", 353]],
 	size : 5,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21399,7 +21399,7 @@ CreatureList["lizard"] = {
 CreatureList["mastiff"] = {
 	name : "Mastiff",
 	regExpSearch : /mastiff/i,
-	source : [["PHB2024", 353]],
+	source : [["P24", 353]],
 	size : 3,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21430,7 +21430,7 @@ CreatureList["mastiff"] = {
 CreatureList["mule"] = {
 	name : "Mule",
 	regExpSearch : /mule/i,
-	source : [["PHB2024", 353]],
+	source : [["P24", 353]],
 	size : 3,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21463,7 +21463,7 @@ CreatureList["mule"] = {
 CreatureList["octopus"] = {
 	name : "Octopus",
 	regExpSearch : /octopus/i,
-	source : [["PHB2024", 353]],
+	source : [["P24", 353]],
 	size : 4,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21509,7 +21509,7 @@ CreatureList["octopus"] = {
 CreatureList["owl"] = {
 	name : "Owl",
 	regExpSearch : /owl/i,
-	source : [["PHB2024", 354]],
+	source : [["P24", 354]],
 	size : 5,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21546,7 +21546,7 @@ CreatureList["owl"] = {
 CreatureList["panther"] = {
 	name : "Panther",
 	regExpSearch : /panther/i,
-	source : [["PHB2024", 354]],
+	source : [["P24", 354]],
 	size : 3,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21585,7 +21585,7 @@ CreatureList["panther"] = {
 CreatureList["pony"] = {
 	name : "Pony",
 	regExpSearch : /pony/i,
-	source : [["PHB2024", 354]],
+	source : [["P24", 354]],
 	size : 3,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21612,7 +21612,7 @@ CreatureList["pony"] = {
 CreatureList["pseudodragon"] = {
 	name : "Pseudodragon",
 	regExpSearch : /pseudodragon/i,
-	source : [["PHB2024", 354]],
+	source : [["P24", 354]],
 	size : 5,
 	type : "Dragon",
 	alignment : "Neutral Good",
@@ -21657,7 +21657,7 @@ CreatureList["pseudodragon"] = {
 CreatureList["quasit"] = {
 	name : "Quasit",
 	regExpSearch : /quasit/i,
-	source : [["PHB2024", 355]],
+	source : [["P24", 355]],
 	size : 5,
 	type : "Fiend",
 	subtype : "demon",
@@ -21710,7 +21710,7 @@ CreatureList["quasit"] = {
 CreatureList["rat"] = {
 	name : "Rat",
 	regExpSearch : /rat/i,
-	source : [["PHB2024", 355]],
+	source : [["P24", 355]],
 	size : 5,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21746,7 +21746,7 @@ CreatureList["rat"] = {
 CreatureList["raven"] = {
 	name : "Raven",
 	regExpSearch : /raven/i,
-	source : [["PHB2024", 355]],
+	source : [["P24", 355]],
 	size : 5,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21782,7 +21782,7 @@ CreatureList["raven"] = {
 CreatureList["reef shark"] = {
 	name : "Reef Shark",
 	regExpSearch : /^(?=.*(reef))(?=.*(shark)).*$/i,
-	source : [["PHB2024", 356]],
+	source : [["P24", 356]],
 	size : 3,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21821,7 +21821,7 @@ CreatureList["reef shark"] = {
 CreatureList["riding horse"] = {
 	name : "Riding Horse",
 	regExpSearch : /^(?=.*(riding))(?=.*(horse)).*$/i,
-	source : [["PHB2024", 356]],
+	source : [["P24", 356]],
 	size : 2,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21848,7 +21848,7 @@ CreatureList["riding horse"] = {
 CreatureList["scorpion"] = {
 	name : "Scorpion",
 	regExpSearch : /scorpion/i,
-	source : [["PHB2024", 356]],
+	source : [["P24", 356]],
 	size : 5,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -21875,7 +21875,7 @@ CreatureList["scorpion"] = {
 CreatureList["skeleton"] = {
 	name : "Skeleton",
 	regExpSearch : /skeleton/i,
-	source : [["PHB2024", 355]],
+	source : [["P24", 355]],
 	size : 3,
 	type : "Undead",
 	alignment : "Lawful Evil",
@@ -21913,7 +21913,7 @@ CreatureList["skeleton"] = {
 CreatureList["slaad Tadpole"] = {
 	name : "Slaad Tadpole",
 	regExpSearch : /^(?=.*(slaad))(?=.*(tadpole)).*$/i,
-	source : [["PHB2024", 357]],
+	source : [["P24", 357]],
 	size : 5,
 	type : "Aberration",
 	alignment : "Chaotic Neutral",
@@ -21949,7 +21949,7 @@ CreatureList["slaad Tadpole"] = {
 CreatureList["sphinx of wonder"] = {
 	name : "Sphinx of Wonder",
 	regExpSearch : /^(?=.*(sphinx))(?=.*(wonder)).*$/i,
-	source : [["PHB2024", 357]],
+	source : [["P24", 357]],
 	size : 5,
 	type : "Celestial",
 	alignment : "Lawful Good",
@@ -21992,7 +21992,7 @@ CreatureList["sphinx of wonder"] = {
 CreatureList["spider"] = {
 	name : "Spider",
 	regExpSearch : /spider/i,
-	source : [["PHB2024", 357]],
+	source : [["P24", 357]],
 	size : 5,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -22033,7 +22033,7 @@ CreatureList["spider"] = {
 CreatureList["sprite"] = {
 	name : "Sprite",
 	regExpSearch : /sprite/i,
-	source : [["PHB2024", 358]],
+	source : [["P24", 358]],
 	size : 5,
 	type : "Fey",
 	alignment : "Neutral Good",
@@ -22079,7 +22079,7 @@ CreatureList["sprite"] = {
 CreatureList["tiger"] = {
 	name : "Tiger",
 	regExpSearch : /tiger/i,
-	source : [["PHB2024", 358]],
+	source : [["P24", 358]],
 	size : 2,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -22118,7 +22118,7 @@ CreatureList["tiger"] = {
 CreatureList["venomous snake"] = {
 	name : "Venomous Snake",
 	regExpSearch : /^(?=.*(venomous))(?=.*(snake)).*$/i,
-	source : [["PHB2024", 358]],
+	source : [["P24", 358]],
 	size : 5,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -22148,7 +22148,7 @@ CreatureList["venomous snake"] = {
 CreatureList["warhorse"] = {
 	name : "Warhorse",
 	regExpSearch : /warhorse/i,
-	source : [["PHB2024", 359]],
+	source : [["P24", 359]],
 	size : 2,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -22175,7 +22175,7 @@ CreatureList["warhorse"] = {
 CreatureList["weasel"] = {
 	name : "Weasel",
 	regExpSearch : /weasel/i,
-	source : [["PHB2024", 359]],
+	source : [["P24", 359]],
 	size : 5,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -22207,7 +22207,7 @@ CreatureList["weasel"] = {
 CreatureList["wolf"] = {
 	name : "Wolf",
 	regExpSearch : /wolf/i,
-	source : [["PHB2024", 359]],
+	source : [["P24", 359]],
 	size : 3,
 	type : "Beast",
 	alignment : "Unaligned",
@@ -22244,7 +22244,7 @@ CreatureList["wolf"] = {
 CreatureList["zombie"] = {
 	name : "Zombie",
 	regExpSearch : /zombie/i,
-	source : [["PHB2024", 359]],
+	source : [["P24", 359]],
 	size : 3,
 	type : "Undead",
 	alignment : "Neutral Evil",
@@ -22276,7 +22276,7 @@ CreatureList["zombie"] = {
 };
 CreatureList["beast of the land"] = {
 	name : "Beast of the Land",
-	source : [["PHB2024", 123]],
+	source : [["P24", 123]],
 	regExpSearch : /^(?=.*beast)(?=.*of)(?=.*the)(?=.*land).*$/i,
 	size : 3,
 	type : ["Beast"],
@@ -22330,7 +22330,7 @@ CreatureList["beast of the land"] = {
 };
 CreatureList["beast of the sea"] = {
 	name : "Beast of the Sea",
-	source : [["PHB2024", 124]],
+	source : [["P24", 124]],
 	regExpSearch : /^(?=.*beast)(?=.*of)(?=.*the)(?=.*sea).*$/i,
 	size : 3,
 	type : ["Beast"],
@@ -22385,7 +22385,7 @@ CreatureList["beast of the sea"] = {
 };
 CreatureList["beast of the sky"] = {
 	name : "Beast of the Sky",
-	source : [["PHB2024", 124]],
+	source : [["P24", 124]],
 	regExpSearch : /^(?=.*beast)(?=.*of)(?=.*the)(?=.*sky).*$/i,
 	size : 4,
 	type : ["Beast"],
@@ -22444,7 +22444,7 @@ CompanionList["spell_creatures"] = {
 	name : "Spell Creatures",
 	nameMenu : "Spell Creatures (Creatures Created/Summoned by a Spell)",
 	nameOrigin : "Spell Creatures Created by spell effects of conjuration or transmutation spells",
-	source : [["PHB2024", 234]],
+	source : [["P24", 234]],
 	attributesChange : function(sCrea, objCrea) {
     // Check for spell attribute before attempting to access it.
     if(!CreatureList[sCrea].spell) return; 
@@ -22487,7 +22487,7 @@ CompanionList["spell_creatures"] = {
 CreatureList["animated object (tsm)"] = {
 	name : "Animated Object (Tiny/Small/Medium)",
 	regExpSearch : /^(?=.*animated)(?=.*object)(?=.*tsm).*$/i,
-	source : [["PHB2024", 241]],
+	source : [["P24", 241]],
 	size : [3, 4, 5],
 	type : "Construct",
 	alignment : "Unaligned",
@@ -22519,7 +22519,7 @@ CreatureList["animated object (tsm)"] = {
 CreatureList["animated object (l)"] = {
 	name : "Animated Object (Large)",
 	regExpSearch : /^(?=.*animated)(?=.*object)(?=.*l).*$/i,
-	source : [["PHB2024", 241]],
+	source : [["P24", 241]],
 	size : 2,
 	type : "Construct",
 	alignment : "Unaligned",
@@ -22551,7 +22551,7 @@ CreatureList["animated object (l)"] = {
 CreatureList["animated object (h)"] = {
 	name : "Animated Object (Huge)",
 	regExpSearch : /^(?=.*animated)(?=.*object)(?=.*h).*$/i,
-	source : [["PHB2024", 241]],
+	source : [["P24", 241]],
 	size : 1,
 	type : "Construct",
 	alignment : "Unaligned",
@@ -22584,7 +22584,7 @@ CreatureList["animated object (h)"] = {
 CreatureList["otherworldly steed (2)"] = {
 	name : "Otherworldly Steed (lvl 2)",
 	regExpSearch : /^(?=.*otherworldly)(?=.*steed)(?=.*2).*$/i,
-	source : [["PHB2024", 273]],
+	source : [["P24", 273]],
 	size : 2,
 	type : ["Celestial", "Fey", "Fiend"],
 	alignment : "Neutral",
@@ -22631,7 +22631,7 @@ CreatureList["otherworldly steed (2)"] = {
 CreatureList["otherworldly steed (3)"] = {
 	name : "Otherworldly Steed (lvl 3)",
 	regExpSearch : /^(?=.*otherworldly)(?=.*steed)(?=.*3).*$/i,
-	source : [["PHB2024", 273]],
+	source : [["P24", 273]],
 	size : 2,
 	type : ["Celestial", "Fey", "Fiend"],
 	alignment : "Neutral",
@@ -22678,7 +22678,7 @@ CreatureList["otherworldly steed (3)"] = {
 CreatureList["otherworldly steed (4)"] = {
 	name : "Otherworldly Steed (lvl 4)",
 	regExpSearch : /^(?=.*otherworldly)(?=.*steed)(?=.*4).*$/i,
-	source : [["PHB2024", 273]],
+	source : [["P24", 273]],
 	size : 2,
 	type : ["Celestial", "Fey", "Fiend"],
 	alignment : "Neutral",
@@ -22725,7 +22725,7 @@ CreatureList["otherworldly steed (4)"] = {
 CreatureList["otherworldly steed (5)"] = {
 	name : "Otherworldly Steed (lvl 5)",
 	regExpSearch : /^(?=.*otherworldly)(?=.*steed)(?=.*5).*$/i,
-	source : [["PHB2024", 273]],
+	source : [["P24", 273]],
 	size : 2,
 	type : ["Celestial", "Fey", "Fiend"],
 	alignment : "Neutral",
@@ -22773,7 +22773,7 @@ CreatureList["otherworldly steed (5)"] = {
 CreatureList["giant insect (4)"] = {
 	name : "Giant Insect (lvl 4)",
 	regExpSearch : /^(?=.*giant)(?=.*insect)(?=.*4).*$/i,
-	source : [["PHB2024", 379]],
+	source : [["P24", 379]],
 	size : 2,
 	type : ["Beast"],
 	alignment : "Unaligned",
@@ -22823,7 +22823,7 @@ CreatureList["giant insect (4)"] = {
 CreatureList["giant insect (5)"] = {
 	name : "Giant Insect (lvl 5)",
 	regExpSearch : /^(?=.*giant)(?=.*insect)(?=.*5).*$/i,
-	source : [["PHB2024", 379]],
+	source : [["P24", 379]],
 	size : 2,
 	type : ["Beast"],
 	alignment : "Unaligned",
@@ -22873,7 +22873,7 @@ CreatureList["giant insect (5)"] = {
 CreatureList["giant insect (6)"] = {
 	name : "Giant Insect (lvl 6)",
 	regExpSearch : /^(?=.*giant)(?=.*insect)(?=.*6).*$/i,
-	source : [["PHB2024", 379]],
+	source : [["P24", 379]],
 	size : 2,
 	type : ["Beast"],
 	alignment : "Unaligned",
@@ -22923,7 +22923,7 @@ CreatureList["giant insect (6)"] = {
 CreatureList["giant insect (7)"] = {
 	name : "Giant Insect (lvl 7)",
 	regExpSearch : /^(?=.*giant)(?=.*insect)(?=.*7).*$/i,
-	source : [["PHB2024", 379]],
+	source : [["P24", 379]],
 	size : 2,
 	type : ["Beast"],
 	alignment : "Unaligned",
@@ -22973,7 +22973,7 @@ CreatureList["giant insect (7)"] = {
 CreatureList["giant insect (8)"] = {
 	name : "Giant Insect (lvl 8)",
 	regExpSearch : /^(?=.*giant)(?=.*insect)(?=.*8).*$/i,
-	source : [["PHB2024", 379]],
+	source : [["P24", 379]],
 	size : 2,
 	type : ["Beast"],
 	alignment : "Unaligned",
@@ -23023,7 +23023,7 @@ CreatureList["giant insect (8)"] = {
 CreatureList["giant insect (9)"] = {
 	name : "Giant Insect (lvl 9)",
 	regExpSearch : /^(?=.*giant)(?=.*insect)(?=.*9).*$/i,
-	source : [["PHB2024", 379]],
+	source : [["P24", 379]],
 	size : 2,
 	type : ["Beast"],
 	alignment : "Unaligned",
@@ -23074,7 +23074,7 @@ CreatureList["giant insect (9)"] = {
 CreatureList["aberrant spirit (4)"] = {
 	name : "Aberrant Spirit (lvl 4)",
 	regExpSearch : /^(?=.*aberrant)(?=.*spirit)(?=.*4).*$/i,
-	source : [["PHB2024", 322]],
+	source : [["P24", 322]],
 	size : 3,
 	type : "Aberration",
 	alignment : "Neutral",
@@ -23132,7 +23132,7 @@ CreatureList["aberrant spirit (4)"] = {
 CreatureList["aberrant spirit (5)"] = {
 	name : "Aberrant Spirit (lvl 5)",
 	regExpSearch : /^(?=.*aberrant)(?=.*spirit)(?=.*5).*$/i,
-	source : [["PHB2024", 322]],
+	source : [["P24", 322]],
 	size : 3,
 	type : "Aberration",
 	alignment : "Neutral",
@@ -23190,7 +23190,7 @@ CreatureList["aberrant spirit (5)"] = {
 CreatureList["aberrant spirit (6)"] = {
 	name : "Aberrant Spirit (lvl 6)",
 	regExpSearch : /^(?=.*aberrant)(?=.*spirit)(?=.*6).*$/i,
-	source : [["PHB2024", 322]],
+	source : [["P24", 322]],
 	size : 3,
 	type : "Aberration",
 	alignment : "Neutral",
@@ -23248,7 +23248,7 @@ CreatureList["aberrant spirit (6)"] = {
 CreatureList["aberrant spirit (7)"] = {
 	name : "Aberrant Spirit (lvl 7)",
 	regExpSearch : /^(?=.*aberrant)(?=.*spirit)(?=.*7).*$/i,
-	source : [["PHB2024", 322]],
+	source : [["P24", 322]],
 	size : 3,
 	type : "Aberration",
 	alignment : "Neutral",
@@ -23306,7 +23306,7 @@ CreatureList["aberrant spirit (7)"] = {
 CreatureList["aberrant spirit (8)"] = {
 	name : "Aberrant Spirit (lvl 8)",
 	regExpSearch : /^(?=.*aberrant)(?=.*spirit)(?=.*8).*$/i,
-	source : [["PHB2024", 322]],
+	source : [["P24", 322]],
 	size : 3,
 	type : "Aberration",
 	alignment : "Neutral",
@@ -23364,7 +23364,7 @@ CreatureList["aberrant spirit (8)"] = {
 CreatureList["aberrant spirit (9)"] = {
 	name : "Aberrant Spirit (lvl 9)",
 	regExpSearch : /^(?=.*aberrant)(?=.*spirit)(?=.*9).*$/i,
-	source : [["PHB2024", 322]],
+	source : [["P24", 322]],
 	size : 3,
 	type : "Aberration",
 	alignment : "Neutral",
@@ -23423,7 +23423,7 @@ CreatureList["aberrant spirit (9)"] = {
 CreatureList["bestial spirit (lw)(2)"] = {
 	name : "Bestial Spirit (Land/Water)(lvl 2)",
 	regExpSearch : /^(?=.*bestial)(?=.*spirit)(?=.*landwater)(?=.*2).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 4,
 	type : "Beast",
 	alignment : "Neutral",
@@ -23464,7 +23464,7 @@ CreatureList["bestial spirit (lw)(2)"] = {
 CreatureList["bestial spirit (lw)(3)"] = {
 	name : "Bestial Spirit (Land/Water)(lvl 3)",
 	regExpSearch : /^(?=.*bestial)(?=.*spirit)(?=.*landwater)(?=.*3).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 4,
 	type : "Beast",
 	alignment : "Neutral",
@@ -23505,7 +23505,7 @@ CreatureList["bestial spirit (lw)(3)"] = {
 CreatureList["bestial spirit (lw)(4)"] = {
 	name : "Bestial Spirit (Land/Water)(lvl 4)",
 	regExpSearch : /^(?=.*bestial)(?=.*spirit)(?=.*landwater)(?=.*4).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 4,
 	type : "Beast",
 	alignment : "Neutral",
@@ -23546,7 +23546,7 @@ CreatureList["bestial spirit (lw)(4)"] = {
 CreatureList["bestial spirit (lw)(5)"] = {
 	name : "Bestial Spirit (Land/Water)(lvl 5)",
 	regExpSearch : /^(?=.*bestial)(?=.*spirit)(?=.*landwater)(?=.*5).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 4,
 	type : "Beast",
 	alignment : "Neutral",
@@ -23587,7 +23587,7 @@ CreatureList["bestial spirit (lw)(5)"] = {
 CreatureList["bestial spirit (lw)(6)"] = {
 	name : "Bestial Spirit (Land/Water)(lvl 6)",
 	regExpSearch : /^(?=.*bestial)(?=.*spirit)(?=.*landwater)(?=.*6).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 4,
 	type : "Beast",
 	alignment : "Neutral",
@@ -23628,7 +23628,7 @@ CreatureList["bestial spirit (lw)(6)"] = {
 CreatureList["bestial spirit (lw)(7)"] = {
 	name : "Bestial Spirit (Land/Water)(lvl 7)",
 	regExpSearch : /^(?=.*bestial)(?=.*spirit)(?=.*landwater)(?=.*7).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 4,
 	type : "Beast",
 	alignment : "Neutral",
@@ -23669,7 +23669,7 @@ CreatureList["bestial spirit (lw)(7)"] = {
 CreatureList["bestial spirit (lw)(8)"] = {
 	name : "Bestial Spirit (Land/Water)(lvl 8)",
 	regExpSearch : /^(?=.*bestial)(?=.*spirit)(?=.*landwater)(?=.*8).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 4,
 	type : "Beast",
 	alignment : "Neutral",
@@ -23710,7 +23710,7 @@ CreatureList["bestial spirit (lw)(8)"] = {
 CreatureList["bestial spirit (lw)(9)"] = {
 	name : "Bestial Spirit (Land/Water)(lvl 9)",
 	regExpSearch : /^(?=.*bestial)(?=.*spirit)(?=.*landwater)(?=.*9).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 4,
 	type : "Beast",
 	alignment : "Neutral",
@@ -23751,7 +23751,7 @@ CreatureList["bestial spirit (lw)(9)"] = {
 CreatureList["bestial spirit (a)(2)"] = {
 	name : "Bestial Spirit (Air)(lvl 2)",
 	regExpSearch : /^(?=.*bestial)(?=.*spirit)(?=.*air)(?=.*2).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 4,
 	type : "Beast",
 	alignment : "Neutral",
@@ -23788,7 +23788,7 @@ CreatureList["bestial spirit (a)(2)"] = {
 CreatureList["bestial spirit (a)(3)"] = {
 	name : "Bestial Spirit (Air)(lvl 3)",
 	regExpSearch : /^(?=.*bestial)(?=.*spirit)(?=.*air)(?=.*3).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 4,
 	type : "Beast",
 	alignment : "Neutral",
@@ -23825,7 +23825,7 @@ CreatureList["bestial spirit (a)(3)"] = {
 CreatureList["bestial spirit (a)(4)"] = {
 	name : "Bestial Spirit (Air)(lvl 4)",
 	regExpSearch : /^(?=.*bestial)(?=.*air)(?=.*spirit)(?=.*4).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 4,
 	type : "Beast",
 	alignment : "Neutral",
@@ -23862,7 +23862,7 @@ CreatureList["bestial spirit (a)(4)"] = {
 CreatureList["bestial spirit (a)(5)"] = {
 	name : "Bestial Spirit (Air)(lvl 5)",
 	regExpSearch : /^(?=.*bestial)(?=.*spirit)(?=.*air)(?=.*5).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 4,
 	type : "Beast",
 	alignment : "Neutral",
@@ -23899,7 +23899,7 @@ CreatureList["bestial spirit (a)(5)"] = {
 CreatureList["bestial spirit (a)(6)"] = {
 	name : "Bestial Spirit (Air)(lvl 6)",
 	regExpSearch : /^(?=.*bestial)(?=.*spirit)(?=.*air)(?=.*6).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 4,
 	type : "Beast",
 	alignment : "Neutral",
@@ -23936,7 +23936,7 @@ CreatureList["bestial spirit (a)(6)"] = {
 CreatureList["bestial spirit (a)(7)"] = {
 	name : "Bestial Spirit (Air)(lvl 7)",
 	regExpSearch : /^(?=.*bestial)(?=.*spirit)(?=.*air)(?=.*7).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 4,
 	type : "Beast",
 	alignment : "Neutral",
@@ -23973,7 +23973,7 @@ CreatureList["bestial spirit (a)(7)"] = {
 CreatureList["bestial spirit (a)(8)"] = {
 	name : "Bestial Spirit (Air)(lvl 8)",
 	regExpSearch : /^(?=.*bestial)(?=.*spirit)(?=.*air)(?=.*8).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 4,
 	type : "Beast",
 	alignment : "Neutral",
@@ -24010,7 +24010,7 @@ CreatureList["bestial spirit (a)(8)"] = {
 CreatureList["bestial spirit (a)(9)"] = {
 	name : "Bestial Spirit (Air)(lvl 9)",
 	regExpSearch : /^(?=.*bestial)(?=.*spirit)(?=.*air)(?=.*9).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 4,
 	type : "Beast",
 	alignment : "Neutral",
@@ -24048,7 +24048,7 @@ CreatureList["bestial spirit (a)(9)"] = {
 CreatureList["celestial spirit (a)(5)"] = {
 	name : "Celestial Spirit (Avenger)(lvl 5)",
 	regExpSearch : /^(?=.*celestial)(?=.*spirit)(?=.*avenger)(?=.*5).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 2,
 	type : "Celestial",
 	alignment : "Neutral",
@@ -24086,7 +24086,7 @@ CreatureList["celestial spirit (a)(5)"] = {
 CreatureList["celestial spirit (a)(6)"] = {
 	name : "Celestial Spirit (Avenger)(lvl 6)",
 	regExpSearch : /^(?=.*celestial)(?=.*spirit)(?=.*avenger)(?=.*6).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 2,
 	type : "Celestial",
 	alignment : "Neutral",
@@ -24124,7 +24124,7 @@ CreatureList["celestial spirit (a)(6)"] = {
 CreatureList["celestial spirit (a)(7)"] = {
 	name : "Celestial Spirit (Avenger)(lvl 7)",
 	regExpSearch : /^(?=.*celestial)(?=.*spirit)(?=.*avenger)(?=.*7).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 2,
 	type : "Celestial",
 	alignment : "Neutral",
@@ -24162,7 +24162,7 @@ CreatureList["celestial spirit (a)(7)"] = {
 CreatureList["celestial spirit (a)(8)"] = {
 	name : "Celestial Spirit (Avenger)(lvl 8)",
 	regExpSearch : /^(?=.*celestial)(?=.*spirit)(?=.*avenger)(?=.*8).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 2,
 	type : "Celestial",
 	alignment : "Neutral",
@@ -24200,7 +24200,7 @@ CreatureList["celestial spirit (a)(8)"] = {
 CreatureList["celestial spirit (a)(9)"] = {
 	name : "Celestial Spirit (Avenger)(lvl 9)",
 	regExpSearch : /^(?=.*celestial)(?=.*spirit)(?=.*avenger)(?=.*9).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 2,
 	type : "Celestial",
 	alignment : "Neutral",
@@ -24238,7 +24238,7 @@ CreatureList["celestial spirit (a)(9)"] = {
 CreatureList["celestial spirit (d)(5)"] = {
 	name : "Celestial Spirit (Defender)(lvl 5)",
 	regExpSearch : /^(?=.*celestial)(?=.*spirit)(?=.*defender)(?=.*5).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 2,
 	type : "Celestial",
 	alignment : "Neutral",
@@ -24277,7 +24277,7 @@ CreatureList["celestial spirit (d)(5)"] = {
 CreatureList["celestial spirit (d)(6)"] = {
 	name : "Celestial Spirit (Defender)(lvl 6)",
 	regExpSearch : /^(?=.*celestial)(?=.*spirit)(?=.*defender)(?=.*6).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 2,
 	type : "Celestial",
 	alignment : "Neutral",
@@ -24316,7 +24316,7 @@ CreatureList["celestial spirit (d)(6)"] = {
 CreatureList["celestial spirit (d)(7)"] = {
 	name : "Celestial Spirit (Defender)(lvl 7)",
 	regExpSearch : /^(?=.*celestial)(?=.*spirit)(?=.*defender)(?=.*7).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 2,
 	type : "Celestial",
 	alignment : "Neutral",
@@ -24350,7 +24350,7 @@ CreatureList["celestial spirit (d)(7)"] = {
 CreatureList["celestial spirit (d)(8)"] = {
 	name : "Celestial Spirit (Defender)(lvl 8)",
 	regExpSearch : /^(?=.*celestial)(?=.*spirit)(?=.*defender)(?=.*8).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 2,
 	type : "Celestial",
 	alignment : "Neutral",
@@ -24389,7 +24389,7 @@ CreatureList["celestial spirit (d)(8)"] = {
 CreatureList["celestial spirit (d)(9)"] = {
 	name : "Celestial Spirit (Defender)(lvl 9)",
 	regExpSearch : /^(?=.*celestial)(?=.*spirit)(?=.*defender)(?=.*9).*$/i,
-	source : [["PHB2024", 323]],
+	source : [["P24", 323]],
 	size : 2,
 	type : "Celestial",
 	alignment : "Neutral",
@@ -24429,7 +24429,7 @@ CreatureList["celestial spirit (d)(9)"] = {
 CreatureList["construct spirit (4)"] = {
 	name : "Construct Spirit (lvl 4)",
 	regExpSearch : /^(?=.*construct)(?=.*spirit)(?=.*4).*$/i,
-	source : [["PHB2024", 324]],
+	source : [["P24", 324]],
 	size : 3,
 	type : "Construct",
 	alignment : "Neutral",
@@ -24475,7 +24475,7 @@ CreatureList["construct spirit (4)"] = {
 CreatureList["construct spirit (5)"] = {
 	name : "Construct Spirit (lvl 5)",
 	regExpSearch : /^(?=.*construct)(?=.*spirit)(?=.*5).*$/i,
-	source : [["PHB2024", 324]],
+	source : [["P24", 324]],
 	size : 3,
 	type : "Construct",
 	alignment : "Neutral",
@@ -24521,7 +24521,7 @@ CreatureList["construct spirit (5)"] = {
 CreatureList["construct spirit (6)"] = {
 	name : "Construct Spirit (lvl 6)",
 	regExpSearch : /^(?=.*construct)(?=.*spirit)(?=.*6).*$/i,
-	source : [["PHB2024", 324]],
+	source : [["P24", 324]],
 	size : 3,
 	type : "Construct",
 	alignment : "Neutral",
@@ -24567,7 +24567,7 @@ CreatureList["construct spirit (6)"] = {
 CreatureList["construct spirit (7)"] = {
 	name : "Construct Spirit (lvl 7)",
 	regExpSearch : /^(?=.*construct)(?=.*spirit)(?=.*7).*$/i,
-	source : [["PHB2024", 324]],
+	source : [["P24", 324]],
 	size : 3,
 	type : "Construct",
 	alignment : "Neutral",
@@ -24613,7 +24613,7 @@ CreatureList["construct spirit (7)"] = {
 CreatureList["construct spirit (8)"] = {
 	name : "Construct Spirit (lvl 8)",
 	regExpSearch : /^(?=.*construct)(?=.*spirit)(?=.*8).*$/i,
-	source : [["PHB2024", 324]],
+	source : [["P24", 324]],
 	size : 3,
 	type : "Construct",
 	alignment : "Neutral",
@@ -24659,7 +24659,7 @@ CreatureList["construct spirit (8)"] = {
 CreatureList["construct spirit (9)"] = {
 	name : "Construct Spirit (lvl 9)",
 	regExpSearch : /^(?=.*construct)(?=.*spirit)(?=.*9).*$/i,
-	source : [["PHB2024", 324]],
+	source : [["P24", 324]],
 	size : 3,
 	type : "Construct",
 	alignment : "Neutral",
@@ -24706,7 +24706,7 @@ CreatureList["construct spirit (9)"] = {
 CreatureList["draconic spirit (5)"] = {
 	name : "Draconic Spirit (lvl 5)",
 	regExpSearch : /^(?=.*draconic)(?=.*spirit)(?=.*5).*$/i,
-	source : [["PHB2024", 325]],
+	source : [["P24", 325]],
 	size : 2,
 	type : "Dragon",
 	alignment : "Neutral",
@@ -24752,7 +24752,7 @@ CreatureList["draconic spirit (5)"] = {
 CreatureList["draconic spirit (6)"] = {
 	name : "Draconic Spirit (lvl 6)",
 	regExpSearch : /^(?=.*draconic)(?=.*spirit)(?=.*6).*$/i,
-	source : [["PHB2024", 325]],
+	source : [["P24", 325]],
 	size : 2,
 	type : "Dragon",
 	alignment : "Neutral",
@@ -24798,7 +24798,7 @@ CreatureList["draconic spirit (6)"] = {
 CreatureList["draconic spirit (7)"] = {
 	name : "Draconic Spirit (lvl 7)",
 	regExpSearch : /^(?=.*draconic)(?=.*spirit)(?=.*7).*$/i,
-	source : [["PHB2024", 325]],
+	source : [["P24", 325]],
 	size : 2,
 	type : "Dragon",
 	alignment : "Neutral",
@@ -24844,7 +24844,7 @@ CreatureList["draconic spirit (7)"] = {
 CreatureList["draconic spirit (8)"] = {
 	name : "Draconic Spirit (lvl 8)",
 	regExpSearch : /^(?=.*draconic)(?=.*spirit)(?=.*8).*$/i,
-	source : [["PHB2024", 325]],
+	source : [["P24", 325]],
 	size : 2,
 	type : "Dragon",
 	alignment : "Neutral",
@@ -24890,7 +24890,7 @@ CreatureList["draconic spirit (8)"] = {
 CreatureList["draconic spirit (9)"] = {
 	name : "Draconic Spirit (lvl 9)",
 	regExpSearch : /^(?=.*draconic)(?=.*spirit)(?=.*9).*$/i,
-	source : [["PHB2024", 325]],
+	source : [["P24", 325]],
 	size : 2,
 	type : "Dragon",
 	alignment : "Neutral",
@@ -24937,7 +24937,7 @@ CreatureList["draconic spirit (9)"] = {
 CreatureList["elemental spirit (4)"] = {
 	name : "Elemental Spirit (lvl 4)",
 	regExpSearch : /^(?=.*elemental)(?=.*spirit)(?=.*4).*$/i,
-	source : [["PHB2024", 325]],
+	source : [["P24", 325]],
 	size : 3,
 	type : "Elemental",
 	alignment : "Neutral",
@@ -24976,7 +24976,7 @@ CreatureList["elemental spirit (4)"] = {
 CreatureList["elemental spirit (5)"] = {
 	name : "Elemental Spirit (lvl 5)",
 	regExpSearch : /^(?=.*elemental)(?=.*spirit)(?=.*5).*$/i,
-	source : [["PHB2024", 325]],
+	source : [["P24", 325]],
 	size : 3,
 	type : "Elemental",
 	alignment : "Neutral",
@@ -25015,7 +25015,7 @@ CreatureList["elemental spirit (5)"] = {
 CreatureList["elemental spirit (6)"] = {
 	name : "Elemental Spirit (lvl 6)",
 	regExpSearch : /^(?=.*elemental)(?=.*spirit)(?=.*6).*$/i,
-	source : [["PHB2024", 325]],
+	source : [["P24", 325]],
 	size : 3,
 	type : "Elemental",
 	alignment : "Neutral",
@@ -25054,7 +25054,7 @@ CreatureList["elemental spirit (6)"] = {
 CreatureList["elemental spirit (7)"] = {
 	name : "Elemental Spirit (lvl 7)",
 	regExpSearch : /^(?=.*elemental)(?=.*spirit)(?=.*7).*$/i,
-	source : [["PHB2024", 325]],
+	source : [["P24", 325]],
 	size : 3,
 	type : "Elemental",
 	alignment : "Neutral",
@@ -25093,7 +25093,7 @@ CreatureList["elemental spirit (7)"] = {
 CreatureList["elemental spirit (8)"] = {
 	name : "Elemental Spirit (lvl 8)",
 	regExpSearch : /^(?=.*elemental)(?=.*spirit)(?=.*8).*$/i,
-	source : [["PHB2024", 325]],
+	source : [["P24", 325]],
 	size : 3,
 	type : "Elemental",
 	alignment : "Neutral",
@@ -25132,7 +25132,7 @@ CreatureList["elemental spirit (8)"] = {
 CreatureList["elemental spirit (9)"] = {
 	name : "Elemental Spirit (lvl 9)",
 	regExpSearch : /^(?=.*elemental)(?=.*spirit)(?=.*9).*$/i,
-	source : [["PHB2024", 325]],
+	source : [["P24", 325]],
 	size : 3,
 	type : "Elemental",
 	alignment : "Neutral",
@@ -25172,7 +25172,7 @@ CreatureList["elemental spirit (9)"] = {
 CreatureList["fey spirit (3)"] = {
 	name : "Fey Spirit (lvl 3)",
 	regExpSearch : /^(?=.*fey)(?=.*spirit)(?=.*3).*$/i,
-	source : [["PHB2024", 326]],
+	source : [["P24", 326]],
 	size : 4,
 	type : "Fey",
 	alignment : "Neutral",
@@ -25214,7 +25214,7 @@ CreatureList["fey spirit (3)"] = {
 CreatureList["fey spirit (4)"] = {
 	name : "Fey Spirit (lvl 4)",
 	regExpSearch : /^(?=.*fey)(?=.*spirit)(?=.*4).*$/i,
-	source : [["PHB2024", 326]],
+	source : [["P24", 326]],
 	size : 4,
 	type : "Fey",
 	alignment : "Neutral",
@@ -25256,7 +25256,7 @@ CreatureList["fey spirit (4)"] = {
 CreatureList["fey spirit (5)"] = {
 	name : "Fey Spirit (lvl 5)",
 	regExpSearch : /^(?=.*fey)(?=.*spirit)(?=.*5).*$/i,
-	source : [["PHB2024", 326]],
+	source : [["P24", 326]],
 	size : 4,
 	type : "Fey",
 	alignment : "Neutral",
@@ -25298,7 +25298,7 @@ CreatureList["fey spirit (5)"] = {
 CreatureList["fey spirit (6)"] = {
 	name : "Fey Spirit (lvl 6)",
 	regExpSearch : /^(?=.*fey)(?=.*spirit)(?=.*6).*$/i,
-	source : [["PHB2024", 326]],
+	source : [["P24", 326]],
 	size : 4,
 	type : "Fey",
 	alignment : "Neutral",
@@ -25340,7 +25340,7 @@ CreatureList["fey spirit (6)"] = {
 CreatureList["fey spirit (7)"] = {
 	name : "Fey Spirit (lvl 7)",
 	regExpSearch : /^(?=.*fey)(?=.*spirit)(?=.*7).*$/i,
-	source : [["PHB2024", 326]],
+	source : [["P24", 326]],
 	size : 4,
 	type : "Fey",
 	alignment : "Neutral",
@@ -25382,7 +25382,7 @@ CreatureList["fey spirit (7)"] = {
 CreatureList["fey spirit (8)"] = {
 	name : "Fey Spirit (lvl 8)",
 	regExpSearch : /^(?=.*fey)(?=.*spirit)(?=.*8).*$/i,
-	source : [["PHB2024", 326]],
+	source : [["P24", 326]],
 	size : 4,
 	type : "Fey",
 	alignment : "Neutral",
@@ -25424,7 +25424,7 @@ CreatureList["fey spirit (8)"] = {
 CreatureList["fey spirit (9)"] = {
 	name : "Fey Spirit (lvl 9)",
 	regExpSearch : /^(?=.*fey)(?=.*spirit)(?=.*9).*$/i,
-	source : [["PHB2024", 326]],
+	source : [["P24", 326]],
 	size : 4,
 	type : "Fey",
 	alignment : "Neutral",
@@ -25467,7 +25467,7 @@ CreatureList["fey spirit (9)"] = {
 CreatureList["fiendish spirit (demon)(6)"] = {
 	name : "Fiendish Spirit (Demon)(lvl 6)",
 	regExpSearch : /^(?=.*fiendish)(?=.*spirit)(?=.*demon)(?=.*6).*$/i,
-	source : [["PHB2024", 327]],
+	source : [["P24", 327]],
 	size : 2,
 	type : "Fiend",
 	alignment : "Neutral",
@@ -25510,7 +25510,7 @@ CreatureList["fiendish spirit (demon)(6)"] = {
 CreatureList["fiendish spirit (demon)(7)"] = {
 	name : "Fiendish Spirit (Demon)(lvl 7)",
 	regExpSearch : /^(?=.*fiendish)(?=.*spirit)(?=.*demon)(?=.*7).*$/i,
-	source : [["PHB2024", 327]],
+	source : [["P24", 327]],
 	size : 2,
 	type : "Fiend",
 	alignment : "Neutral",
@@ -25553,7 +25553,7 @@ CreatureList["fiendish spirit (demon)(7)"] = {
 CreatureList["fiendish spirit (demon)(8)"] = {
 	name : "Fiendish Spirit (Demon)(lvl 8)",
 	regExpSearch : /^(?=.*fiendish)(?=.*spirit)(?=.*demon)(?=.*8).*$/i,
-	source : [["PHB2024", 327]],
+	source : [["P24", 327]],
 	size : 2,
 	type : "Fiend",
 	alignment : "Neutral",
@@ -25596,7 +25596,7 @@ CreatureList["fiendish spirit (demon)(8)"] = {
 CreatureList["fiendish spirit (demon)(9)"] = {
 	name : "Fiendish Spirit (Demon)(lvl 9)",
 	regExpSearch : /^(?=.*fiendish)(?=.*spirit)(?=.*demon)(?=.*9).*$/i,
-	source : [["PHB2024", 327]],
+	source : [["P24", 327]],
 	size : 2,
 	type : "Fiend",
 	alignment : "Neutral",
@@ -25639,7 +25639,7 @@ CreatureList["fiendish spirit (demon)(9)"] = {
 CreatureList["fiendish spirit (devil)(6)"] = {
 	name : "Fiendish Spirit (Devil)(lvl 6)",
 	regExpSearch : /^(?=.*fiendish)(?=.*spirit)(?=.*devil)(?=.*6).*$/i,
-	source : [["PHB2024", 327]],
+	source : [["P24", 327]],
 	size : 2,
 	type : "Fiend",
 	alignment : "Neutral",
@@ -25682,7 +25682,7 @@ CreatureList["fiendish spirit (devil)(6)"] = {
 CreatureList["fiendish spirit (devil)(7)"] = {
 	name : "Fiendish Spirit (Devil)(lvl 7)",
 	regExpSearch : /^(?=.*fiendish)(?=.*spirit)(?=.*devil)(?=.*7).*$/i,
-	source : [["PHB2024", 327]],
+	source : [["P24", 327]],
 	size : 2,
 	type : "Fiend",
 	alignment : "Neutral",
@@ -25725,7 +25725,7 @@ CreatureList["fiendish spirit (devil)(7)"] = {
 CreatureList["fiendish spirit (devil)(8)"] = {
 	name : "Fiendish Spirit (Devil)(lvl 8)",
 	regExpSearch : /^(?=.*fiendish)(?=.*spirit)(?=.*devil)(?=.*8).*$/i,
-	source : [["PHB2024", 327]],
+	source : [["P24", 327]],
 	size : 2,
 	type : "Fiend",
 	alignment : "Neutral",
@@ -25768,7 +25768,7 @@ CreatureList["fiendish spirit (devil)(8)"] = {
 CreatureList["fiendish spirit (devil)(9)"] = {
 	name : "Fiendish Spirit (Devil)(lvl 9)",
 	regExpSearch : /^(?=.*fiendish)(?=.*spirit)(?=.*devil)(?=.*9).*$/i,
-	source : [["PHB2024", 327]],
+	source : [["P24", 327]],
 	size : 2,
 	type : "Fiend",
 	alignment : "Neutral",
@@ -25811,7 +25811,7 @@ CreatureList["fiendish spirit (devil)(9)"] = {
 CreatureList["fiendish spirit (yugoloth)(6)"] = {
 	name : "Fiendish Spirit (Yugoloth)(lvl 6)",
 	regExpSearch : /^(?=.*fiendish)(?=.*spirit)(?=.*yugoloth)(?=.*6).*$/i,
-	source : [["PHB2024", 327]],
+	source : [["P24", 327]],
 	size : 2,
 	type : "Fiend",
 	alignment : "Neutral",
@@ -25851,7 +25851,7 @@ CreatureList["fiendish spirit (yugoloth)(6)"] = {
 CreatureList["fiendish spirit (yugoloth)(7)"] = {
 	name : "Fiendish Spirit (Yugoloth)(lvl 7)",
 	regExpSearch : /^(?=.*fiendish)(?=.*spirit)(?=.*yugoloth)(?=.*7).*$/i,
-	source : [["PHB2024", 327]],
+	source : [["P24", 327]],
 	size : 2,
 	type : "Fiend",
 	alignment : "Neutral",
@@ -25891,7 +25891,7 @@ CreatureList["fiendish spirit (yugoloth)(7)"] = {
 CreatureList["fiendish spirit (yugoloth)(8)"] = {
 	name : "Fiendish Spirit (Yugoloth)(lvl 8)",
 	regExpSearch : /^(?=.*fiendish)(?=.*spirit)(?=.*yugoloth)(?=.*8).*$/i,
-	source : [["PHB2024", 327]],
+	source : [["P24", 327]],
 	size : 2,
 	type : "Fiend",
 	alignment : "Neutral",
@@ -25931,7 +25931,7 @@ CreatureList["fiendish spirit (yugoloth)(8)"] = {
 CreatureList["fiendish spirit (yugoloth)(9)"] = {
 	name : "Fiendish Spirit (Yugoloth)(lvl 9)",
 	regExpSearch : /^(?=.*fiendish)(?=.*spirit)(?=.*yugoloth)(?=.*9).*$/i,
-	source : [["PHB2024", 327]],
+	source : [["P24", 327]],
 	size : 2,
 	type : "Fiend",
 	alignment : "Neutral",
@@ -25972,7 +25972,7 @@ CreatureList["fiendish spirit (yugoloth)(9)"] = {
 CreatureList["undead spirit (skeletal)(3)"] = {
 	name : "Undead Spirit (Skeletal)(lvl 3)",
 	regExpSearch : /^(?=.*undead)(?=.*spirit)(?=.*skeletal)(?=.*3).*$/i,
-	source : [["PHB2024", 328]],
+	source : [["P24", 328]],
 	size : 3,
 	type : "Undead",
 	alignment : "Neutral",
@@ -26004,7 +26004,7 @@ CreatureList["undead spirit (skeletal)(3)"] = {
 CreatureList["undead spirit (skeletal)(4)"] = {
 	name : "Undead Spirit (Skeletal)(lvl 4)",
 	regExpSearch : /^(?=.*undead)(?=.*spirit)(?=.*skeletal)(?=.*4).*$/i,
-	source : [["PHB2024", 328]],
+	source : [["P24", 328]],
 	size : 3,
 	type : "Undead",
 	alignment : "Neutral",
@@ -26036,7 +26036,7 @@ CreatureList["undead spirit (skeletal)(4)"] = {
 CreatureList["undead spirit (skeletal)(5)"] = {
 	name : "Undead Spirit (Skeletal)(lvl 5)",
 	regExpSearch : /^(?=.*undead)(?=.*spirit)(?=.*skeletal)(?=.*5).*$/i,
-	source : [["PHB2024", 328]],
+	source : [["P24", 328]],
 	size : 3,
 	type : "Undead",
 	alignment : "Neutral",
@@ -26068,7 +26068,7 @@ CreatureList["undead spirit (skeletal)(5)"] = {
 CreatureList["undead spirit (skeletal)(6)"] = {
 	name : "Undead Spirit (Skeletal)(lvl 6)",
 	regExpSearch : /^(?=.*undead)(?=.*spirit)(?=.*skeletal)(?=.*6).*$/i,
-	source : [["PHB2024", 328]],
+	source : [["P24", 328]],
 	size : 3,
 	type : "Undead",
 	alignment : "Neutral",
@@ -26100,7 +26100,7 @@ CreatureList["undead spirit (skeletal)(6)"] = {
 CreatureList["undead spirit (skeletal)(7)"] = {
 	name : "Undead Spirit (Skeletal)(lvl 7)",
 	regExpSearch : /^(?=.*undead)(?=.*spirit)(?=.*skeletal)(?=.*7).*$/i,
-	source : [["PHB2024", 328]],
+	source : [["P24", 328]],
 	size : 3,
 	type : "Undead",
 	alignment : "Neutral",
@@ -26132,7 +26132,7 @@ CreatureList["undead spirit (skeletal)(7)"] = {
 CreatureList["undead spirit (skeletal)(8)"] = {
 	name : "Undead Spirit (Skeletal)(lvl 8)",
 	regExpSearch : /^(?=.*undead)(?=.*spirit)(?=.*skeletal)(?=.*8).*$/i,
-	source : [["PHB2024", 328]],
+	source : [["P24", 328]],
 	size : 3,
 	type : "Undead",
 	alignment : "Neutral",
@@ -26164,7 +26164,7 @@ CreatureList["undead spirit (skeletal)(8)"] = {
 CreatureList["undead spirit (skeletal)(9)"] = {
 	name : "Undead Spirit (Skeletal)(lvl 9)",
 	regExpSearch : /^(?=.*undead)(?=.*spirit)(?=.*skeletal)(?=.*9).*$/i,
-	source : [["PHB2024", 328]],
+	source : [["P24", 328]],
 	size : 3,
 	type : "Undead",
 	alignment : "Neutral",
@@ -26196,7 +26196,7 @@ CreatureList["undead spirit (skeletal)(9)"] = {
 CreatureList["undead spirit (putrid/ghostly)(3)"] = {
 	name : "Undead Spirit (Putrid/Ghostly)(lvl 3)",
 	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*3).*$/i,
-	source : [["PHB2024", 328]],
+	source : [["P24", 328]],
 	size : 3,
 	type : "Undead",
 	alignment : "Neutral",
@@ -26245,7 +26245,7 @@ CreatureList["undead spirit (putrid/ghostly)(3)"] = {
 CreatureList["undead spirit (putrid/ghostly)(4)"] = {
 	name : "Undead Spirit (Putrid/Ghostly)(lvl 4)",
 	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*4).*$/i,
-	source : [["PHB2024", 328]],
+	source : [["P24", 328]],
 	size : 3,
 	type : "Undead",
 	alignment : "Neutral",
@@ -26294,7 +26294,7 @@ CreatureList["undead spirit (putrid/ghostly)(4)"] = {
 CreatureList["undead spirit (putrid/ghostly)(5)"] = {
 	name : "Undead Spirit (Putrid/Ghostly)(lvl 5)",
 	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*5).*$/i,
-	source : [["PHB2024", 328]],
+	source : [["P24", 328]],
 	size : 3,
 	type : "Undead",
 	alignment : "Neutral",
@@ -26343,7 +26343,7 @@ CreatureList["undead spirit (putrid/ghostly)(5)"] = {
 CreatureList["undead spirit (putrid/ghostly)(6)"] = {
 	name : "Undead Spirit (Putrid/Ghostly)(lvl 6)",
 	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*6).*$/i,
-	source : [["PHB2024", 328]],
+	source : [["P24", 328]],
 	size : 3,
 	type : "Undead",
 	alignment : "Neutral",
@@ -26392,7 +26392,7 @@ CreatureList["undead spirit (putrid/ghostly)(6)"] = {
 CreatureList["undead spirit (putrid/ghostly)(7)"] = {
 	name : "Undead Spirit (Putrid/Ghostly)(lvl 7)",
 	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*7).*$/i,
-	source : [["PHB2024", 328]],
+	source : [["P24", 328]],
 	size : 3,
 	type : "Undead",
 	alignment : "Neutral",
@@ -26441,7 +26441,7 @@ CreatureList["undead spirit (putrid/ghostly)(7)"] = {
 CreatureList["undead spirit (putrid/ghostly)(8)"] = {
 	name : "Undead Spirit (Putrid/Ghostly)(lvl 8)",
 	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*8).*$/i,
-	source : [["PHB2024", 328]],
+	source : [["P24", 328]],
 	size : 3,
 	type : "Undead",
 	alignment : "Neutral",
@@ -26490,7 +26490,7 @@ CreatureList["undead spirit (putrid/ghostly)(8)"] = {
 CreatureList["undead spirit (putrid/ghostly)(9)"] = {
 	name : "Undead Spirit (Putrid/Ghostly)(lvl 9)",
 	regExpSearch : /^(?=.*undead)(?=.*putridghostly)(?=.*9).*$/i,
-	source : [["PHB2024", 328]],
+	source : [["P24", 328]],
 	size : 3,
 	type : "Undead",
 	alignment : "Neutral",
