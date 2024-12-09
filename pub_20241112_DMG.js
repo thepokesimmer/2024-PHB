@@ -8468,7 +8468,7 @@ MagicItemsList["sylvan talon"] = {
 		descriptionChange: ["replace", "weapon"],
 		excludeCheck: function (inObjKey, inObj) {
 			var testRegex = /Dagger|Rapier|Scimitar|Shortsword|Sickle|Spear/i;
-			return !(testRegex).test(inObjKey) && (!inObj.baseWeapon || !(testRegex).test(inObj.baseWeapon)) && ((/^(?=.*sylvan)(?=.*talon).*$/i)).test(v.WeaponTextName)
+			return !(testRegex).test(inObjKey) && (!inObj.baseWeapon || !(testRegex).test(inObj.baseWeapon)) && ((/^(?=.*sylvan)(?=.*talon).*$/i)).test(v.WeaponTextName);
 		}
 	},
 };
