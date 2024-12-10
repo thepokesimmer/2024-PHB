@@ -9189,8 +9189,7 @@ RaceSubList["elf-high"] = {
   spellcastingBonus: [{
     name: "High Elf Lineage",
     "class": ["wizard"],
-    spells: ["prestidigitation", 1],
-    selection: ["prestidigitation", 1],
+	selection : ["prestidigitation"],
     level: [0, 0],
     times: 1,
     firstCol: "atwill",
