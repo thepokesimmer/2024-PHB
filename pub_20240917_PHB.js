@@ -8663,7 +8663,7 @@ BackgroundList["sailor"] = {
   ],
   equipleft: [
     ["Navigator's Tools", "", 2],
-    ["Rope, Feet of", 50, 0.1],
+    ["Rope", "", 5],
   ],
   feature: "Tavern Brawler [Origin]",
   trait: [
@@ -14162,11 +14162,11 @@ GearList["robes"] = {
   amount: "",
   weight: 4
 };
-GearList["rope (50 feet)"] = {
-  infoname: "Rope (50 feet) [1 gp]",
-  name: "Rope, feet of",
-  amount: 50,
-  weight: 0.2
+GearList["rope"] = {
+  infoname: "Rope [1 gp]",
+  name: "Rope",
+  amount: "",
+  weight: 5
 };
 GearList["sack"] = {
   infoname: "Sack [1 cp]",
@@ -14286,7 +14286,7 @@ PacksList["burglar"] = {
     ["Hooded lantern", "", 2],
     ["Oil, flasks of", 7, 1],
     ["Rations, days of", 5, 2],
-    ["Rope, feet of", 50, 0.2],
+    ["Rope", "", 5],
     ["Tinderbox", "", 1],
     ["Waterskin", "", 5],
   ]
@@ -14317,7 +14317,7 @@ PacksList["dungeoneer"] = {
     ["Crowbar", "", 5],
     ["Oil, flasks of", 2, 1],
     ["Rations, days of", 10, 2],
-    ["Rope, feet of", 50, 0.2],
+    ["Rope", "", 5],
     ["Tinderbox", "", 1],
     ["Torches", 10, 1],
     ["Waterskin", "", 5],
@@ -14347,7 +14347,7 @@ PacksList["explorer"] = {
     ["Bedroll", "", 7],
     ["Oil, flasks of", 2, 1],
     ["Rations, days of", 10, 2],
-    ["Rope, feet of", 50, 0.2],
+    ["Rope", "", 5],
     ["Torches", 10, 1],
     ["Tinderbox", "", 1],
     ["Waterskin", "", 5],
