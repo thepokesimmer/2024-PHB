@@ -11150,6 +11150,7 @@ FeatsList["weapon master"] = {
   regExpSearch: /^(?=.*weapon)(?=.*master).*$/i,
   descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Increase. Increase my Strength or Dexterity score by 1, to a maximum of 20.\n \u2022 Mastery Property. my training with weapons allows me to use the mastery property of one kind of Simple or Martial weapon of my choice, provided I have proficiency with it. Whenever I finish a Long Rest, I can change the kind of weapon to another kind.",
   description: "+1 Str/Dex, Gain Weapon Mastery in one weapon of choice. can change choice during a long rest provided I have the appropriate proficiencies.",
+  scorestxt: "My Strength or Dexterity score increases by 1, to a maximum of 20.",
   choices: ["Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light Hammer", "Mace", "Quarterstaff", "Sickle", "Spear", "Dart", "Light Crossbow", "Shortbow", "Sling", "Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "Warhammer", "War Pick", "Whip", "Blowgun", "Hand Crossbow", "Heavy Crossbow", "Longbow", "Musket", "Pistol"],
   "club": {
     name: "Club",
