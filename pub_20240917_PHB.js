@@ -2816,7 +2816,7 @@ legacySubClassRefactor("fighter", "battle master", {
         ]),
       },
       "commanding presence": {
-        name: "commanding presence",
+        name: "Commanding presence",
         description: desc([
           "When I make a Charisma (Intimidation, Performance, or Persuasion) check, I can expend one Superiority Die and add that die to the roll.",
         ]),
@@ -8999,8 +8999,7 @@ legacyRaceRefactor("dragonborn", {
       source: [["P24", 187]],
       minlevel: 5,
       action: ["bonus action"],
-      usages: "Proficiency bonus per ",
-      usagescalc: "event.value = How('Proficiency Bonus');",
+      usages: 1,
       recovery: "long rest",
       description: desc([
         "When I reach character level 5, I can channel draconic magic to give yourself temporary flight. As a Bonus Action, I sprout spectral wings on my back that last for 10 minutes or until I retract the wings (no action required) or have the incapacitated condition. During that time I have a Fly Speed equal to my Speed. My wings appear to be made of the same energy as my Breath Weapon. Once I use this trait, I can't use it again until I finish a Long Rest",
