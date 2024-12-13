@@ -35,8 +35,11 @@ FeatsList["blessings"] = {
 	"protection" : {
 		name: "Blessing of Protection [Supernatural Gift]",
 		extraAC : { mod : 1, misc : true },
-		description : "I have Advantage on saving throws against spells and other magical effects.",
-		descriptionFull : "You have Advantage on saving throws against spells and other magical effects.",	
+		addMod : [
+			{ type : "save", field : "all", mod : 1, text : "I gain a +1 bonus to saving throws." },
+		],
+		description : "I gain a +1 bonus to AC and saving throws.",
+		descriptionFull : "You gain a +1 bonus to AC and saving throws.",	
 	},
 	"understanding" : {
 		name: "Blessing of Understanding [Supernatural Gift]",
@@ -47,6 +50,7 @@ FeatsList["blessings"] = {
 	},
 	"valhalla" : {
 		name : "Blessing of Valhalla [Supernatural Gift]",
+		limfeaname : "Blessing of Valhalla",
 		usages : 1,
 		recovery : "7 days",
 		description : "This Blessing grants me the power to summon spirit warriors, as if I am blowing a silver Horn of Valhalla. Once I use this Blessing, I can’t use it again until 7 days have passed. (See Notes Page)",
@@ -58,17 +62,13 @@ FeatsList["blessings"] = {
 	},
 	"weapon enhancement" : {
 		name: "Blessing of Weapon Enhancement [Supernatural Gift]",
-		description : "One nonmagical weapon in your possession becomes a +1 Weapon while you wield it.",
+		description : "One nonmagical weapon in my possession becomes a +1 Weapon while you wield it.",
 		descriptionFull : "One nonmagical weapon in your possession becomes a +1 Weapon while you wield it.",
 	},
 	"wound closure" : {
 		name: "Blessing of Wound Closure [Supernatural Gift]",
-		description : "This Blessing grants me the benefits of a Periapt of Wound Closure. (See Notes Page)",
+		description : "This Blessing grants me the benefits of a Periapt of Wound Closure. Whenever I make a Death Saving Throw, I can change a roll of 9 or lower to a 10, turning a failed save into a successful one. Whenever I roll a Hit Point die to regain Hit Points, double the number of Hit Points it restores.",
 		descriptionFull : "This Blessing grants you the benefits of a Periapt of Wound Closure.",
-		toNotesPage : [{
-			name : "Blessing of Wound Closure",
-			note : "Whenever I make a Death Saving Throw, I can change a roll of 9 or lower to a 10, turning a failed save into a successful one. Whenever I roll a Hit Point die to regain Hit Points, double the number of Hit Points it restores.",
-		}],
 	},
 };
 FeatsList["charms"] = {
@@ -80,6 +80,7 @@ FeatsList["charms"] = {
 	choices : ["Animal Conjuring", "Darkvision", "Feather Falling", "Heroism", "Restoration", "Dragon Slayer", "Giant Slayer", "Vitality"],
 	"animal conjuring" : {
 		name: "Charm of Animal Conjuring [Supernatural Gift]",
+		limfeaname : "Charm of Animal Conjuring",
 		usages : 3,
 		recovery : "Never",
 		spellFirstColTitle : "CH",
@@ -95,6 +96,7 @@ FeatsList["charms"] = {
 	},
 	"darkvision" : {
 		name: "Charm of Darkvision [Supernatural Gift]",
+		limfeaname : "Charm of Darkvision",
 		usages : 3,
 		recovery : "Never",
 		spellFirstColTitle : "CH",
@@ -110,31 +112,24 @@ FeatsList["charms"] = {
 	},
 	"feather falling" : {
 		name: "Charm of Feather Falling [Supernatural Gift]",
-		source : [["D24", 99]],
-		regExpSearch : /^(?=.*charm)(?=.*feather)(?=.*falling).*$/i,
+		limfeaname : "Charm of Feather Falling",
 		usages : "10 days",
 		recovery : "Never",
-		description : "This Charm grants me the benefits of a Ring of Feather Falling. These benefits last for 10 days, after which the Charm vanishes from me. (See Notes Page)",
+		description : "This Charm grants me the benefits of a Ring of Feather Falling. These benefits last for 10 days, after which the Charm vanishes from me. When I fall while having this charm, I descend 60 ft per round and take no damage from falling.",
 		descriptionFull : "This Charm grants you the benefits of a Ring of Feather Falling. These benefits last for 10 days, after which the Charm vanishes from you.",
-		toNotesPage : [{
-			name : "Charm of Feather Falling",
-			note : "When I fall while having this charm, I descend 60 ft per round and take no damage from falling.",
-		}],
 	},
 	"heroism" : {
 		name: "Charm of Heroism [Supernatural Gift]",
+		limfeaname : "Charm of Heroism",
 		usages : 1,
 		recovery : "Never",
 		action : "action",
-		description : "This Charm allows me to give myself the benefit of a Potion of Heroism as a Magic action. Once I do so, the Charm vanishes from me. (See Notes Page)",
+		description : "This Charm allows me to give myself the benefit of a Potion of Heroism as a Magic action. Once I do so, the Charm vanishes from me. When I activate this charm, I gain 10 Temporary Hit Points that last for 1 hour. For the same duration, I am under the effect of the Bless spell (no Concentration required)",
 		descriptionFull : "This Charm allows you to give yourself the benefit of a Potion of Heroism as a Magic action. Once you do so, the Charm vanishes from you.",
-		toNotesPage : [{
-			name : "Charm of Heroism",
-			note : "When I activate this charm, I gain 10 Temporary Hit Points that last for 1 hour. For the same duration, I am under the effect of the Bless spell (no Concentration required)",
-		}],	
 	},
 	"restoration" : {
 		name: "Charm of Restoration [Supernatural Gift]",
+		limfeaname : "Charm of Restoration",
 		usages : 3,
 		recovery : "Never",
 		spellFirstColTitle : "CH",
@@ -156,6 +151,7 @@ FeatsList["charms"] = {
 	},
 	"dragon slayer" : {
 		name : "Charm of the Dragon Slayer [Supernatural Gift]",
+		limfeaname : "Charm of the Dragon Slayer",
 		usages : "9 days",
 		recovery : "Never",
 		description : "One weapon in my possession becomes a Dragon Slayer weapon for the next 9 days. The Charm then vanishes from me, and the weapon returns to normal. (See Notes Page)",
@@ -167,6 +163,7 @@ FeatsList["charms"] = {
 	},
 	"giant slayer" : {
 		name : "Charm of the Giant Slayer [Supernatural Gift]",
+		limfeaname : "Charm of the Giant Slayer",
 		usages : "9 days",
 		recovery : "Never",
 		description : "One weapon in my possession becomes a Giant Slayer weapon for the next 9 days. The Charm then vanishes from me, and the weapon returns to normal. (See Notes Page)",
@@ -178,15 +175,12 @@ FeatsList["charms"] = {
 	},
 	"vitality" : {
 		name: "Charm of Vitality [Supernatural Gift]",
+		limfeaname : "Charm of Vitality",
 		usages : 1,
 		recovery : "Never",
 		action : "action",
-		description : "This Charm allows me to give myself the benefit of a Potion of Vitality as a Magic action. Once I do so, the Charm vanishes from me. (See Notes Page)",
+		description : "This Charm allows me to give myself the benefit of a Potion of Vitality as a Magic action. Once I do so, the Charm vanishes from me. When I activate this charm, it removes any Exhaustion levels I have and ends the Poisoned condition on me. For the next 24 hours, I regain the maximum number of Hit Points for any Hit Point Die I spend.",
 		descriptionFull : "This Charm allows you to give yourself the benefit of a Potion of Vitality as a Magic action. Once you do so, the Charm vanishes from you.",
-		toNotesPage : [{
-			name : "Charm of Vitality",
-			note : "When I activate this charm, it removes any Exhaustion levels I have and ends the Poisoned condition on me. For the next 24 hours, I regain the maximum number of Hit Points for any Hit Point Die I spend.",
-		}],
 	},
 };
 //Magic Items
@@ -4710,54 +4704,32 @@ MagicItemsList["lute of thunderous thumping"] = {
 	weaponsAdd: "Lute of Thunderous Thumping",
 	weaponOptions: {
 		baseWeapon: "club",
-		regExpSearch: /lute of thunderous thumping/i,
+		regExpSearch: /^(?=.*lute)(?=.*thunderous)(?=.*thumping).*$/i,
 		name: "Lute of Thunderous Thumping",
-		source: [["PHB2024", "-"]],
-		description: "light, slow, +2d8 Thunder",
+		source: [["D24", 275]],
+		description: "Light, Slow; +2d8 Thunder",
+	},
+	calcChanges: {
+		atkAdd: [
+			function (fields, v) {
+				if (classes.known.bard) {
+					fields.Description += (fields.Description ? '; ' : '') + 'Cha Mod for attacks';
+				}
+			},
+		],
+		atkCalc: [
+			function (fields, v, output) {
+				if (classes.known.bard && (/lute of thunderous thumping/i).test(v.WeaponTextName)) {
+					output.mod += What('Cha Mod')
+				}
+			},
+			"I can wield this reinforced lute as a magic Club that deals an extra 2d8 Thunder damage on a hit. As a bard, I can also use Charisma instead of Strength for its attacks.",
+		],
 	},
 	toNotesPage: [{
 		name: "Sing and Swing",
-		note: [
-			"You can use your CHA Modifier instead of your STR modifier when making a melee attack roll provided you sing or hum."
-		]
+		note: "If you’re a Bard, you can use your Charisma modifier instead of your Strength modifier when making a melee attack roll with the lute, provided you sing or hum while making the attack.",
 	}],
-	selfChoosing: function () {
-		return classes.known.bard ? "lute of thunderous thumping (bard)" : "lute of thunderous thumping (not bard)";
-	},
-	"lute of thunderous thumping (bard)": {
-		name: "Lute of Thunderous Thumping",
-		description: "This reinforced lute can be wielded as a magic Club that deals an extra 2d8 Thunder damage on a hit.\n\n" + toUni("Sing and Swing") + "You can use your CHA Modifier instead of your STR modifier when making a melee attack roll provided you sing or hum.",
-		weaponsAdd: "Lute of Thunderous Thumping",
-		weaponOptions: {
-			baseWeapon: "club",
-			regExpSearch: /lute of thunderous thumping/i,
-			name: "Lute of Thunderous Thumping",
-			source: [["PHB2024", "-"]],
-			description: "light, slow, +2d8 Thunder",
-		},
-		calcChanges: {
-			atkAdd: [
-				function (fields, v) {
-					if (v.theWea.is('lute of thunderous thumping') && fields.Mod === 1 && What('Cha') > What('Str')) {
-						fields.Mod = 6;
-					}
-				},
-				"I can use my Charisma modifier instead of my Strength modifier for attack rolls made with the Lute of Thunderous Thumping."
-			]
-		},
-	},
-	"lute of thunderous thumping (not bard)": {
-		name: "Lute of Thunderous Thumping",
-		description: "This reinforced lute can be wielded as a magic Club that deals an extra 2d8 Thunder damage on a hit.",
-		weaponsAdd: "Lute of Thunderous Thumping",
-		weaponOptions: {
-			baseWeapon: "club",
-			regExpSearch: /lute of thunderous thumping/i,
-			name: "Lute of Thunderous Thumping",
-			source: [["PHB2024", "-"]],
-			description: "light, slow, +2d8 Thunder;2",
-		}
-	},
 };
 MagicItemsList["mace of disruption"] = {
 	name: "Mace of Disruption",
@@ -8859,13 +8831,13 @@ MagicItemsList["walloping ammunition"] = {
 };
 MagicItemsList["wand of binding"] = {
 	name: "Wand of Binding",
-	source: [["DMG2024", 318]],
+	source: [["D24", 318]],
 	type: "wand",
 	rarity: "rare",
 	magicItemTable: "arcana",
 	description: "This wand has 7 charges, regaining 1d6+1 at dawn. While holding the wand, you can cast one of the following spells, expending the charges: Hold Monster (5) or Hold Person (2).",
 	descriptionFull: "This wand has 7 charges.\n   " + toUni("Spells") + ". While holding the wand, you can cast one of the spells (save DC 17): Hold Monster (5 charges) or Hold Person (2 charges).\n" +
-		"\u2022 The wand regains 1d6+1 expended charges daily at dawn. If you expend the wands last charge, roll 1d20. On a 1, the wand crumbles into ashes an is destroyed.",
+		toUni("Regaining Charges") + ". The wand regains 1d6+1 expended charges daily at dawn. If you expend the wands last charge, roll 1d20. On a 1, the wand crumbles into ashes an is destroyed.",
 	attunement: true,
 	weight: 1,
 	usages: 7,
@@ -8887,12 +8859,13 @@ MagicItemsList["wand of binding"] = {
 };
 MagicItemsList["wand of conducting"] = {
 	name: "Wand of Conducting",
-	source: [["DMG2024", 319]],
+	source: [["D24", 319]],
 	magicItemTable: "?",
 	type: "wand",
 	rarity: "common",
 	description: "This wand has 3 charges, regaining all daily at dawn. As a Magic action, you can wave it around and expend 1 charge to create orchestral music that can be heard out to a range of 120 ft and ends when you stop waving the wand. After last charge, roll a d20. On a 1, a sad tuba sound plays as the wand crumbles to dust.",
-	descriptionFull: "This wand has 3 charges. While holding it, you can take a Magic action to expend 1 charge and create orchestral music by waving it around. The music can be heard out to a range of 120 feet and ends when you stop waving the wand.\n  \u2022 The wand regains all expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, a sad tuba sound plays as the wand crumbles to dust and is destroyed.",
+	descriptionFull: "This wand has 3 charges. While holding it, you can take a Magic action to expend 1 charge and create orchestral music by waving it around. The music can be heard out to a range of 120 feet and ends when you stop waving the wand.\n " +
+		toUni("Regaining Charges") + ". The wand regains all expended charges daily at dawn.If you expend the wand's last charge, roll a d20. On a 1, a sad tuba sound plays as the wand crumbles to dust and is destroyed.",
 	weight: 1,
 	action: [["action", ""]],
 	usages: 3,
@@ -8900,12 +8873,13 @@ MagicItemsList["wand of conducting"] = {
 };
 MagicItemsList["wand of enemy detection"] = {
 	name: "Wand of Enemy Detection",
-	source: [["DMG2024", 319]],
+	source: [["D24", 319]],
 	type: "wand",
 	rarity: "rare",
 	magicItemTable: "?",
 	description: "This wand has 7 charges, regaining 1d6+1 at dawn. While holding it, you can expend 1 charge. For 1 minute, you know the direction of the nearest creature Hostile to you (not distance) within 60 ft, regardless of it being Invisible, ethereal, disguised, or hidden.",
-	descriptionFull: "This wand has 7 charges. While holding it, you can take a Magic action to expend 1 charge. For 1 minute, you know the direction of the nearest creature Hostile to you within 60 feet, but not its distance from you. The wand can sense the presence of Hostile creatures that are Invisible, ethereal, disguised, or hidden, as well as those in plain sight. The effect ends if you stop holding the wand.\n  \u2022 The wand regains 1d6+1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.",
+	descriptionFull: "This wand has 7 charges. While holding it, you can take a Magic action to expend 1 charge. For 1 minute, you know the direction of the nearest creature Hostile to you within 60 feet, but not its distance from you. The wand can sense the presence of Hostile creatures that are Invisible, ethereal, disguised, or hidden, as well as those in plain sight. The effect ends if you stop holding the wand.\n" +
+		toUni("Regaining Charges") + ". The wand regains 1d6 + 1 expended charges daily at dawn.If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.",
 	attunement: false,
 	weight: 1,
 	usages: 7,
@@ -8915,12 +8889,13 @@ MagicItemsList["wand of enemy detection"] = {
 };
 MagicItemsList["wand of fear"] = {
 	name: "Wand of Fear",
-	source: ["DMG2024", 319],
+	source: ["D24", 319],
 	type: "wand",
 	rarity: "rare",
 	magicItemTable: "?",
 	description: "This wand has 7 charges, regaining 1d6+1 at dawn, which can be used to cast Command (1 charge) or Fear (3 charges) while holding the wand.",
-	descriptionFull: "This wand has 7 charges.  While holding the wand, you can cast one of the spells (save DC 15) on the following table from it. The table indicates how many charges you must expend to cast the spell.\n   " + toUni("Command") + ". While holding the wand, you can take a Magic action to expend 1 charge and Command another creature to flee or grovel, as with the Command spell (save DC 15).\n   " + toUni("Fear") + ". While holding the wand, you can take a Magic action to expend 3 charges, causing the wand's tip to emit a 60-foot Cone of amber light. Each creature in the cone must succeed on a DC 15 Wisdom saving throw or become Frightened of you for 1 minute.\n  \u2022 The wand regains 1d6+1 expended charges daily at dawn. If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
+	descriptionFull: "This wand has 7 charges.  While holding the wand, you can cast one of the spells (save DC 15) on the following table from it. The table indicates how many charges you must expend to cast the spell.\n   " + toUni("Command") + ". While holding the wand, you can take a Magic action to expend 1 charge and Command another creature to flee or grovel, as with the Command spell (save DC 15).\n   " + toUni("Fear") + ". While holding the wand, you can take a Magic action to expend 3 charges, causing the wand's tip to emit a 60-foot Cone of amber light. Each creature in the cone must succeed on a DC 15 Wisdom saving throw or become Frightened of you for 1 minute.\n" +
+		toUni("Regaining Charges") + ". The wand regains 1d6 + 1 expended charges daily at dawn.If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
 	attunement: true,
 	weight: 1,
 	usages: 7,
@@ -8953,12 +8928,13 @@ MagicItemsList["wand of fear"] = {
 };
 MagicItemsList["wand of fireballs"] = {
 	name: "Wand of Fireballs",
-	source: [["DMG2024", 319]],
+	source: [["D24", 319]],
 	type: "wand",
 	rarity: "rare",
 	magicItemTable: "?",
 	description: "This wand has 7 charges, regaining 1d6+1 at dawn. You can expend 1 to 3 charges to cast Fireball (save DC 15) from it as a 3rd level spell. The spell level increases by one for each charge expended. When the last charge is used, roll 1d20. On a 1, the wand crumbles into ashes.",
-	descriptionFull: "This wand has 7 charges. While holding it, you can expend no more than 3 charges to cast Fireball (save DC 15) from it. For 1 charge, you cast the level 3 version of the spell. You can increase the spell’s level by 1 for each additional charge you expend.\n  \u2022 The wand regains 1d6+1 expended charges daily at dawn. If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
+	descriptionFull: "This wand has 7 charges. While holding it, you can expend no more than 3 charges to cast Fireball (save DC 15) from it. For 1 charge, you cast the level 3 version of the spell. You can increase the spell’s level by 1 for each additional charge you expend.\n" +
+		toUni("Regaining Charges") + ". The wand regains 1d6 + 1 expended charges daily at dawn.If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
 	attunement: true,
 	weight: 1,
 	prerequisite: "Requires attunement by a spellcaster",
@@ -8969,26 +8945,27 @@ MagicItemsList["wand of fireballs"] = {
 	spellFirstColTitle: "Ch",
 	fixedDC: 15,
 	spellcastingBonus: {
-		name: "1+ charges",
+		name: "1-3 charges",
 		spells: ["fireball"],
 		selection: ["fireball"],
-		firstCol: "1+"
+		firstCol: "1-3"
 	},
 	spellChanges: {
 		"fireball": {
 			description: "20-ft radius Sphere, all crea 8d6+1d6/extra charge Fire dmg; save halves; unattended flammable objects ignite",
-			changes: "For 1 charge, it is cast as the 3rd-level version of the spell, each additional charge expended adds +1 spell level."
+			changes: "For 1 charge, it is cast as the 3rd-level version of the spell. Each additional charge adds +1 spell level (max 5th)."
 		}
 	}
 };
 MagicItemsList["wand of lightning bolts"] = {
 	name: "Wand of Lightning Bolts",
-	source: [["DMG2024", 320]],
+	source: [["D24", 320]],
 	type: "wand",
 	rarity: "rare",
 	magicItemTable: "?",
 	description: "This wand has 7 charges, You can expend up to three of its charges to cast Lightning Bolt (save DC 15) from it as a 3rd level spell. The spell level increases by one for each charge expended after the first.",
-	descriptionFull: "This wand has 7 charges. While holding it, you can expend 1 to 3 its charges to cast the Lightning Bolt spell (save DC 15) from it. For 1 charge, you cast the 3rd-level version of the spell. You can increase the spell level by one for each additional charge you expend.\n  \u2022 The wand regains 1d6+1 expended charges daily at dawn. If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
+	descriptionFull: "This wand has 7 charges. While holding it, you can expend 1 to 3 its charges to cast the Lightning Bolt spell (save DC 15) from it. For 1 charge, you cast the 3rd-level version of the spell. You can increase the spell level by one for each additional charge you expend.\n " +
+		toUni("Regaining Charges") + ". The wand regains 1d6 + 1 expended charges daily at dawn.If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
 	attunement: true,
 	weight: 1,
 	prerequisite: "Requires attunement by a spellcaster",
@@ -8999,26 +8976,27 @@ MagicItemsList["wand of lightning bolts"] = {
 	spellFirstColTitle: "Ch",
 	fixedDC: 15,
 	spellcastingBonus: {
-		name: "1+ charges",
+		name: "1-3 charges",
 		spells: ["lightning bolt"],
 		selection: ["lightning bolt"],
-		firstCol: "1+"
+		firstCol: "1-3"
 	},
 	spellChanges: {
 		"lightning bolt": {
 			description: "100-ft long 5-ft wide Line; each crea in Line Dex save; 8d6+1d6/extra charge Lightn. dmg; save halves",
-			changes: "For 1 charge, it is cast as the 3rd-level version of the spell, but I can increase the spell level by one for each additional charge expended."
+			changes: "For 1 charge, it is cast as the 3rd-level version of the spell. Each additional charge adds +1 spell level (max 5th)."
 		}
 	}
 };
 MagicItemsList["wand of magic detection"] = {
 	name: "Wand of Magic Detection",
-	source: [["DMG2024", 320]],
+	source: [["D24", 320]],
 	type: "wand",
 	rarity: "uncommon",
 	magicItemTable: "?",
 	description: "This wand has 3 charges. While holding it, you can expend 1 charge to cast Detect Magic from it. The wand regains 1d3 expended charges daily at dawn.",
-	descriptionFull: "This wand has 3 charges. While holding it, you can expend 1 charge to cast the Detect Magic spell from it.\n \u2022 The wand regains 1d3 expended charges daily at dawn.",
+	descriptionFull: "This wand has 3 charges. While holding it, you can expend 1 charge to cast the Detect Magic spell from it.\n " +
+		toUni("Regaining Charges") + ". The wand regains 1d3 expended charges daily at dawn.",
 	weight: 1,
 	spellcastingBonus: {
 		name: "1 charge",
@@ -9033,22 +9011,23 @@ MagicItemsList["wand of magic detection"] = {
 };
 MagicItemsList["wand of magic missiles"] = {
 	name: "Wand of Magic Missiles",
-	source: [["DMG2024", 320]],
+	source: [["D24", 320]],
 	type: "wand",
 	rarity: "uncommon",
 	magicItemTable: "?",
 	description: "This wand has 7 charges, regaining 1d6+1 at dawn. While holding it, you can expend 1 to 3 of its charges to cast Magic Missile from it as a 1st level spell. The spell level increases by one for each charge expended after the first. When the last charge is used, roll 1d20. On a 1, the wand crumbles into ashes.",
-	descriptionFull: "This wand has 7 charges. While holding it, you can expend 1 to 3 its charges to cast the Magic Missile spell from it. For 1 charge, you cast the 1st-level version of the spell. You can increase the spell level by one for each additional charge you expend.\n  \u2022 The wand regains 1d6+1 expended charges daily at dawn. If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
+	descriptionFull: "This wand has 7 charges. While holding it, you can expend 1 to 3 its charges to cast the Magic Missile spell from it. For 1 charge, you cast the 1st-level version of the spell. You can increase the spell level by one for each additional charge you expend.\n" +
+		toUni("Regaining Charges") + ". The wand regains 1d6 + 1 expended charges daily at dawn.If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
 	weight: 1,
 	usages: 7,
 	recovery: "dawn",
 	additional: "regains 1d6+1",
 	spellFirstColTitle: "Ch",
 	spellcastingBonus: {
-		name: "1+ charges",
+		name: "1-3 charges",
 		spells: ["magic missile"],
 		selection: ["magic missile"],
-		firstCol: "1+"
+		firstCol: "1-3"
 	},
 	spellChanges: {
 		"magic missile": {
@@ -9059,12 +9038,13 @@ MagicItemsList["wand of magic missiles"] = {
 };
 MagicItemsList["wand of paralysis"] = {
 	name: "Wand of Paralysis",
-	source: [["DMG2024", 321]],
+	source: [["D24", 321]],
 	type: "wand",
 	rarity: "rare",
 	magicItemTable: "?",
 	description: "This wand has 7 charges, regaining 1d6+1 at dawn. While holding the wand, you can take a Magic action to expend 1 charge to have a creature within 60 ft make a DC 15 Constitution saving throw or be Paralyzed for 1 minute. It can repeat this save at the end of each of its turns. When the last charge is used, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
-	descriptionFull: "This wand has 7 charges. While holding it, you can take a Magic action to expend 1 of its charges to cause a thin blue ray to streak from the tip toward a creature you can see within 60 feet of you. The target must succeed on a DC 15 Constitution saving throw or have the Paralyzed condition for 1 minute. At the end of each of the target's turns, it repeats the save, ending the effect on itself on a success.\n  \u2022 The wand regains 1d6+1 expended charges daily at dawn. If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
+	descriptionFull: "This wand has 7 charges. While holding it, you can take a Magic action to expend 1 of its charges to cause a thin blue ray to streak from the tip toward a creature you can see within 60 feet of you. The target must succeed on a DC 15 Constitution saving throw or have the Paralyzed condition for 1 minute. At the end of each of the target's turns, it repeats the save, ending the effect on itself on a success.\n" +
+		toUni("Regaining Charges") + ". The wand regains 1d6 + 1 expended charges daily at dawn.If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
 	attunement: true,
 	weight: 1,
 	prerequisite: "Requires attunement by a spellcaster",
@@ -9077,12 +9057,13 @@ MagicItemsList["wand of paralysis"] = {
 };
 MagicItemsList["wand of polymorph"] = {
 	name: "Wand of Polymorph",
-	source: [["DMG2024", 321]],
+	source: [["D24", 321]],
 	type: "wand",
 	rarity: "very rare",
 	magicItemTable: "?",
 	description: "This wand has 7 charges and regains 1d6+1 expended charges daily at dawn. While holding it, you can expend 1 charge to cast Polymorph (save DC 15) from it. If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
-	descriptionFull: "This wand has 7 charges. While holding it, you can expend 1 charge to cast the Polymorph  (save DC 15) from it.\n  \u2022 The wand regains 1d6+1 expended charges daily at dawn. If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
+	descriptionFull: "This wand has 7 charges. While holding it, you can expend 1 charge to cast the Polymorph  (save DC 15) from it.\n" +
+		toUni("Regaining Charges") + ". The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
 	attunement: true,
 	weight: 1,
 	prerequisite: "Requires attunement by a spellcaster",
@@ -9101,21 +9082,22 @@ MagicItemsList["wand of polymorph"] = {
 };
 MagicItemsList["wand of pyrotechnics"] = {
 	name: "Wand of Pyrotechnics",
-	source: [["DMG2024", 321]],
+	source: [["D24", 321]],
 	magicItemTable: "?",
 	type: "wand",
 	rarity: "common",
 	description: "This wand has 7 charges, regaining 1d6+1 at dawn. While holding it, you can take a Magic action to expend 1 charge to create a harmless burst of multicolored light at a point you can see up to 120 ft away, with the noise travelling 300 ft. The light is as bright as a torch flame but lasts only a second.",
-	descriptionFull: "This wand has 7 charges. While holding it, you can take a Magic action to expend 1 charge and create a harmless burst of multicolored light at a point you can see up to 120 feet away. The burst of light is accompanied by a crackling noise that can be heard up to 300 feet away. The light is as bright as a torch flame but lasts only a second.\n  \u2022 The wand regains 1d6+1 expended charges daily at dawn. If you expend the wand's last charge, roll 1d20. On a 1, the wand erupts in a harmless pyrotechnic display and is destroyed.",
+	descriptionFull: "This wand has 7 charges. While holding it, you can take a Magic action to expend 1 charge and create a harmless burst of multicolored light at a point you can see up to 120 feet away. The burst of light is accompanied by a crackling noise that can be heard up to 300 feet away. The light is as bright as a torch flame but lasts only a second.\n" +
+		toUni("Regaining Charges") + ". The wand regains 1d6 + 1 expended charges daily at dawn.If you expend the wand's last charge, roll 1d20. On a 1, the wand erupts in a harmless pyrotechnic display and is destroyed.",
 	weight: 1,
 	action: [["action", ""]],
-	usages: 3,
+	usages: 7,
 	recovery: "dawn",
 	additional: "regains 1d6+1"
 };
 MagicItemsList["wand of secrets"] = {
 	name: "Wand of Secrets",
-	source: [["DMG2024", 322]],
+	source: [["D24", 322]],
 	type: "wand",
 	rarity: "uncommon",
 	magicItemTable: "?",
@@ -9130,7 +9112,7 @@ MagicItemsList["wand of secrets"] = {
 MagicItemsList["wand of the war mage, +1, +2, or +3"] = {
 	name: "Wand of the War Mage, +1, +2, or +3",
 	nameTest: /^(?=.*war mage)(?=.*(arcane focus|rod|wand|staff)).*$/i,
-	source: [["DMG2024", "-"]],
+	source: [["D24", 322]],
 	type: "wand",
 	description: "While holding this wand, you gain a bonus to spell attack rolls determined by the wand's rarity: uncommon (+1), rare (+2), or very rare (+3). In addition, you ignore Half Cover when making a spell attack roll.",
 	descriptionFull: "While holding this wand, you gain a bonus to spell attack rolls determined by the wand's rarity: uncommon (+1), rare (+2), or very rare (+3). In addition, you ignore Half Cover when making a spell attack roll.",
@@ -9144,7 +9126,7 @@ MagicItemsList["wand of the war mage, +1, +2, or +3"] = {
 		nameTest: /^(?=.*war mage)(?=.*(arcane focus|rod|wand|staff))(?=.*\+1)(?!.*\+2)(?!.*\+3).*$/i,
 		rarity: "uncommon",
 		magicItemTable: "?",
-		description: "While holding this wand, you gain a +1 bonus to spell attack rolls and ignore Half Cover when making a spell attack roll.",
+		description: "While holding this wand, you gain a +1 bonus and ignore Half Cover when making a spell attack roll.",
 		calcChanges: {
 			spellCalc: [
 				function (type, spellcasters, ability) {
@@ -9159,7 +9141,7 @@ MagicItemsList["wand of the war mage, +1, +2, or +3"] = {
 		nameTest: /^(?=.*war mage)(?=.*(arcane focus|rod|wand|staff))(?!.*\+1)(?=.*\+2)(?!.*\+3).*$/i,
 		rarity: "rare",
 		magicItemTable: "?",
-		description: "While holding this wand, you gain a +2 bonus to spell attack rolls and ignore Half Cover when making a spell attack roll.",
+		description: "While holding this wand, you gain a +2 bonus and ignore Half Cover when making a spell attack roll.",
 		calcChanges: {
 			spellCalc: [
 				function (type, spellcasters, ability) {
@@ -9174,7 +9156,7 @@ MagicItemsList["wand of the war mage, +1, +2, or +3"] = {
 		nameTest: /^(?=.*war mage)(?=.*(arcane focus|rod|wand|staff))(?!.*\+1)(?!.*\+2)(?=.*\+3).*$/i,
 		rarity: "very rare",
 		magicItemTable: "?",
-		description: "While holding this wand, you gain a +3 bonus to spell attack rolls and ignore Half Cover when making a spell attack roll.",
+		description: "While holding this wand, you gain a +3 bonus and ignore Half Cover when making a spell attack roll.",
 		calcChanges: {
 			spellCalc: [
 				function (type, spellcasters, ability) {
@@ -9187,12 +9169,13 @@ MagicItemsList["wand of the war mage, +1, +2, or +3"] = {
 };
 MagicItemsList["wand of web"] = {
 	name: "Wand of Web",
-	source: [["DMG2024", 322]],
+	source: [["D24", 322]],
 	type: "wand",
 	rarity: "uncommon",
 	magicItemTable: "?",
 	description: "This wand has 7 charges and regains 1d6+1 expended charges daily at dawn. While holding it, you can expend 1 of its charges to cast Web (save DC 13) from it. If I expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
-	descriptionFull: "This wand has 7 charges. While holding it, you can expend 1 of its charges to cast the Web spell (save DC 13) from it.\n  \u2022 The wand regains 1d6+1 expended charges daily at dawn. If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
+	descriptionFull: "This wand has 7 charges. While holding it, you can expend 1 of its charges to cast the Web spell (save DC 13) from it.\n" +
+		toUni("Regaining Charges") + ". The wand regains 1d6 + 1 expended charges daily at dawn.If you expend the wand's last charge, roll 1d20. On a 1, the wand crumbles into ashes and is destroyed.",
 	attunement: true,
 	weight: 1,
 	prerequisite: "Requires attunement by a spellcaster",
@@ -9211,39 +9194,39 @@ MagicItemsList["wand of web"] = {
 };
 MagicItemsList["wand of wonder"] = {
 	name: "Wand of Wonder",
-	source: [["DMG2024", 322]],
+	source: [["D24", 322]],
 	type: "wand",
 	rarity: "rare",
 	magicItemTable: "?",
 	description: "This wand has 7 charges and regains 1d6+1 expended charges daily at dawn. If you expend its last charge, roll 1d20. On a 1, the wand crumbles into dust and is destroyed. While holding it, you can expend 1 charge, choose a point within 120 ft, and roll 1d100 to see what happens, SEE NOTES.",
-	descriptionFull: "This wand has 7 charges. While holding it, you can take a Magic action to expend 1 charge while choosing a point within 120 feet of yourself. That location becomes the point of origin of a spell or other magical effect determined by rolling on the Wand of Wonder Effects table.\n"+
+	descriptionFull: "This wand has 7 charges. While holding it, you can take a Magic action to expend 1 charge while choosing a point within 120 feet of yourself. That location becomes the point of origin of a spell or other magical effect determined by rolling on the Wand of Wonder Effects table.\n" +
 		"Spells cast from the wand have a save DC of 15. If a spell’s maximum range is normally less than 120 feet, it becomes 120 feet when cast from the wand. If an effect has multiple possible subjects, the DM determines randomly which among them are affected.\n " +
-		"\u2022 The wand regains 1d6+1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into dust and is destroyed.\n" + [
-		toUni("1d100\t\tEffect"),
-		"01-20\tRoll a 1d10:",
-		"- 1d10\t1-2\tYou cast Darkness",
-		"- 1d10\t3-4\tYou cast Faerie Fire.",
-		"- 1d10\t5-6\tYou cast Fire Ball.",
-		"- 1d10\t7-8\tYou cast Slow.",
-		"- 1d10\t9-10\tYou cast Stinking Cloud.",
-		" 21-25\t\tYou are stunned until the start of your next turn, believing something awesome just happened.",
-		" 26-30\t\tYou cast Gust of Wind.",
-		" 31-35\t\tNothing happens at the chosen point. You take 1d6 psychic damage.",
-		" 36-40\t\tHeavy rain falls in a 60-foot radius centered on the target. The area becomes lightly obscured. The rain falls until the start of your next turn.",
-		" 41-45\t\tA cloud of 600 oversized butterflies fills a 30-foot radius centered on the target. The area becomes heavily obscured. The butterflies remain for 10 minutes.",
-		" 46-50\t\tYou cast Lightning Bolt.",
-		" 51-55\t\tYou shrink yourself as if you had cast Enlarge/Reduce on yourself.",
-		" 56-60\t\tA magically formed creature appears in an unoccupied space as close to the chosen point as possible. It disappears after 1 hour or 0 hit points. Roll 1d4: 1: Rhinoceros, 2: Elephant, 3-4: Rat.",
-		" 61-64\t\tGrass grows on the ground in a 60-foot radius centered on the target. If grass is already there, it grows to ten times its normal size and remains overgrown for 1 minute.",
-		" 65-68\t\tAn object of the DM's choice disappears into the Ethereal Plane. The object must be neither worn nor carried, within 120 feet of the target, and no larger than 10 feet in any dimension.",
-		" 69-72\t\tYou shrink yourself as if you had cast Enlarge/Reduce on yourself.",
-		" 73-77\t\tLeaves grow from the target. If you chose a point in space as the target, leaves sprout from the creature nearest to that point. Unless they are picked off, the leaves turn brown and fall off after 24 hours.",
-		" 78-82\t\tA burst of colorful shimmering light extends from you in a 30-foot radius. You and each creature in the area that can see must succeed on a DC 15 Constitution saving throw or become blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-		" 83-87\t\tYou cast Invisibility on yourself.",
-		" 88-92\t\tA stream of 1d4 \xD7 10 gems, each worth 1 gp, shoots from the wand's tip in a line 30 feet long and 5 feet wide. Each gem deals 1 bludgeoning damage, and the total damage of the gems is divided equally among all creatures in the line.",
-		" 93-97\t\tYou cast Polymorph, targeting creature closest to origin. Roll 1d4. 1: Black Bear; 2: Giant Wasp; 3-4: Frog.",
-		" 98-00\t\tIf you targeted a creature, it must make a DC 15 Constitution saving throw. If you didn't target a creature, you become the target and must make the saving throw. If the saving throw fails by 5 or more, the target is instantly petrified. On any other failed save, the target is restrained and begins to turn to stone. While restrained in this way, the target must repeat the saving throw at the end of its next turn, becoming petrified on a failure or ending the effect on a success. The petrification lasts until the target is freed by the Greater Restoration spell or similar magic."
-	],
+		toUni("Regaining Charges") + ". The wand regains 1d6+1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into dust and is destroyed.\n" + [
+			toUni("1d100\t\tEffect"),
+			"01-20\tRoll a 1d10:",
+			"- 1d10\t1-2\tYou cast Darkness",
+			"- 1d10\t3-4\tYou cast Faerie Fire.",
+			"- 1d10\t5-6\tYou cast Fireball.",
+			"- 1d10\t7-8\tYou cast Slow.",
+			"- 1d10\t9-10\tYou cast Stinking Cloud.",
+			" 21-25\t\tYou are Stunned until the start of your next turn, believing something awesome just happened.",
+			" 26-30\t\tYou cast Gust of Wind. The Line created by the spell extends from you to the chosen point of origin.",
+			" 31-35\t\tNothing happens at the chosen point. You take 1d6 Psychic damage.",
+			" 36-40\t\tHeavy rain falls for 1 minute in a 120-ft high, 60-ft radius Cylinder centered on the chosen point of origin. The area is lightly obscured for the duration.",
+			" 41-45\t\tA cloud of 600 oversized butterflies fills a 30-foot radius centered on the target. The area becomes heavily obscured. The butterflies remain for 10 minutes.",
+			" 46-50\t\tYou cast Lightning Bolt.",
+			" 51-55\t\tYou shrink yourself as if you had cast Enlarge/Reduce on yourself.",
+			" 56-60\t\tA magically formed creature appears in an unoccupied space as close to the chosen point as possible. It disappears after 1 hour or 0 hit points. Roll 1d4: 1: Rhinoceros, 2: Elephant, 3-4: Rat.",
+			" 61-64\t\tGrass grows on the ground in a 60-foot radius centered on the target. If grass is already there, it grows to ten times its normal size and remains overgrown for 1 minute.",
+			" 65-68\t\tAn object of the DM's choice disappears into the Ethereal Plane. The object must be neither worn nor carried, within 120 feet of the target, and no larger than 10 feet in any dimension.",
+			" 69-72\t\tYou shrink yourself as if you had cast Enlarge/Reduce on yourself.",
+			" 73-77\t\tLeaves grow from the target. If you chose a point in space as the target, leaves sprout from the creature nearest to that point. Unless they are picked off, the leaves turn brown and fall off after 24 hours.",
+			" 78-82\t\tA burst of colorful shimmering light extends from you in a 30-foot radius. You and each creature in the area that can see must succeed on a DC 15 Constitution saving throw or become blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+			" 83-87\t\tYou cast Invisibility on yourself.",
+			" 88-92\t\tA stream of 1d4 \xD7 10 gems, each worth 1 gp, shoots from the wand's tip in a line 30 feet long and 5 feet wide. Each gem deals 1 Bludgeoning damage, and the total damage of the gems is divided equally among all creatures in the line.",
+			" 93-97\t\tYou cast Polymorph, targeting creature closest to origin. Roll 1d4. 1: Black Bear; 2: Giant Wasp; 3-4: Frog.",
+			" 98-00\t\tIf you targeted a creature, it must make a DC 15 Constitution saving throw. If you didn't target a creature, you become the target and must make the saving throw. If the saving throw fails by 5 or more, the target is instantly Petrified. On any other failed save, the target is Restrained and begins to turn to stone. While Restrained in this way, the target must repeat the saving throw at the end of its next turn, becoming Petrified on a failure or ending the effect on a success. The petrification lasts until the target is freed by the Greater Restoration spell or similar magic."
+		],
 	attunement: true,
 	weight: 1,
 	prerequisite: "Requires attunement by a spellcaster",
@@ -9263,7 +9246,7 @@ MagicItemsList["wand of wonder"] = {
 			"   3-4: You cast Faerie Fire.",
 			"   5-6: You cast Fire Ball.",
 			"   7-8: You cast Slow.",
-	        "   9-10: You cast Stinking Cloud.",
+			"   9-10: You cast Stinking Cloud.",
 			"21-25: You are Stunned until the start of your next turn, believing something awesome just happened.",
 			"26-30: You cast Gust of Wind. The Line created by the spell extends fro you to the chosen point of origin.",
 			"31-35: Nothing happens at the chosen point of origin. You take 1d6 Psychic damage.",
@@ -9296,7 +9279,7 @@ MagicItemsList["wand of wonder"] = {
 		"enlarge/reduce": { range: "120 ft", changes: "All Wand of Wonder spells have a range of 120 ft." },
 		"faerie fire": { range: "120 ft", changes: "All Wand of Wonder spells have a range of 120 ft." },
 		"stinking cloud": { range: "120 ft", changes: "All Wand of Wonder spells have a range of 120 ft." },
-		"polymorch": {range: "120 ft", changes: "All Wand of Wonder spells have a range of 120 ft."},
+		"polymorch": { range: "120 ft", changes: "All Wand of Wonder spells have a range of 120 ft." },
 	}
 };
 var DMG_waveFullDescription = [
@@ -9314,10 +9297,10 @@ var DMG_waveFullDescription = [
 ];
 MagicItemsList["wave"] = {
 	name: "Wave",
-	source: [["DMG2024", 323]],
+	source: [["D24", 323]],
 	type: "weapon (trident)",
 	rarity: "artifact",
-	description: "This sentient trident adds +3 to hit and damage and if I score a critical hit with it, the target takes an extra 21 necrotic damage. While holding Wave, I gain several benefits. SEE NOTES PAGE.",
+	description: "This sentient trident adds +3 to hit and damage and if you score a critical hit with it, the target takes an extra 21 Necrotic damage. While holding Wave, you gain several benefits.\n SEE NOTES PAGE.",
 	descriptionFull: DMG_waveFullDescription.join("\n   ").replace(/>>(.*?)<</g, function (a, match) { return toUni(match); }),
 	attunement: true,
 	weight: 4,
@@ -9325,14 +9308,14 @@ MagicItemsList["wave"] = {
 		baseWeapon: "trident",
 		regExpSearch: /wave/i,
 		name: "Wave",
-		source: [["DMG2024", 323]],
+		source: [["D24", 323]],
 		description: "Thrown, Versatile (1d10), Topple; On crit: +21 Necrotic Damage",
 		modifiers: [3, 3],
 		selectNow: true
 	}],
 	toNotesPage: [{
 		name: "Features",
-		note: desc(DMG_waveFullDescription).replace(/>>(.*?)<</g, function (a, match) { return match.toUpperCase(); }).replace(/you/ig, "I") + "\n\n" + sentientItemConflictTxt,
+		note: desc(DMG_waveFullDescription).replace(/>>(.*?)<</g, function (a, match) { return match.toUpperCase(); }) + "\n\n" + sentientItemConflictTxt,
 	}],
 	//Combat Ready - Advantage on Initiative
 	advantages: [["Initiative", true]],
@@ -9413,14 +9396,14 @@ MagicItemsList["weapon, +1, +2, or +3"] = {
 MagicItemsList["weapon of warning"] = {
 	name: "Weapon of Warning",
 	nameTest: "of Warning",
-	source: [["DMG2024", 324]],
+	source: [["D24", 324]],
 	type: "weapon (any simple or martial)",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "While this magic weapon is on your person, you have advantage on initiative rolls. In addition, both you and your allies within 30 ft of me can't be surprised and the weapon magically awakens us when combat starts, except those Incapacitated by something other than nonmagical sleep.",
+	description: "While this weapon is within your reach, and you are attuned to it, you and your allies within 30 ft magically awaken when combat begin, unless a magically induced sleep. You also have Advantage on Inititative rolls.",
 	descriptionFull: "As long as this weapon is within your reach and you are attuned to it, you and allies within 30 feet of you gain the following benefits.\n\n" +
-					 "\u2022Alarm. The weapon magically awakens each subject who is sleeping naturally when combat begins. This benefit doesn’t wake a subject from magically induced sleep.\n" +
-					 "\u2022Supernatural Readiness. Each subject has Advantage on its Initiative rolls.",
+		"\u2022Alarm. The weapon magically awakens each subject who is sleeping naturally when combat begins. This benefit doesn’t wake a subject from magically induced sleep.\n" +
+		"\u2022Supernatural Readiness. Each subject has Advantage on its Initiative rolls.",
 	attunement: true,
 	chooseGear: {
 		type: "weapon",
@@ -9431,7 +9414,7 @@ MagicItemsList["weapon of warning"] = {
 	calcChanges: {
 		atkAdd: [
 			function (fields, v) {
-				if (!v.theWea.isMagicWeapon && !v.isSpell && (/warning/i).test(v.WeaponTextName)) {
+				if (!v.theWea.isMagicWeapon && !v.isSpell && (/of warning/i).test(v.WeaponTextName)) {
 					v.theWea.isMagicWeapon = true;
 					fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
 				}
@@ -9439,15 +9422,14 @@ MagicItemsList["weapon of warning"] = {
 			'If you include the word "Warning" in the name of a weapon, it will be treated as the magic weapon Weapon of Warning.'
 		]
 	},
-	savetxt: { immune: ["surprised"] }
 };
 MagicItemsList["well of many worlds"] = {
 	name: "Well of Many Worlds",
-	source: [["DMG2024", 324]],
+	source: [["D24", 324]],
 	type: "wondrous item",
 	rarity: "legendary",
 	magicItemTable: "?",
-	description: "As a Magic action, you can unfold this black cloth, 6 ft in diameter, and place it on a solid surface, whereupon it creates a two-way portal to another world or plane, a random one each time. You can use a Magic action to grab it from the edges and fold it, closing the portal. Once used in this way, it can't do so again for 1d8 hours.",
+	description: "You can take a Magic action to unfold this black cloth, 6-ft in diameter, and place it on a solid surface, whereupon it creates a two-way 6-ft diameter circular portal to another world or plane, chosend by the DM. You can use a Magic action to grab it from the edges and fold it, closing the portal. Once used in this way, it can't do so again for 1d8 hours.",
 	descriptionFull: "This fine black cloth, soft as silk, is folded up to the dimensions of a handkerchief. It unfolds into a circular sheet 6 feet in diameter.\n   You can use a Magic action to unfold and place the well of many worlds on a solid surface, whereupon it creates a two-way portal to another world or plane of existence. Each time the item opens a portal, the DM decides where it leads.\n You can take a Magic action to close an open portal by taking hold of the edges of the cloth and folding it up. Once well of many worlds has opened a portal, it can't do so again for 1d8 hours.",
 	action: [["action", " (place/fold)"]],
 	usages: 1,
@@ -9523,12 +9505,12 @@ MagicItemsList["whelm"] = {
 };
 MagicItemsList["wind fan"] = {
 	name: "Wind Fan",
-	source: [["DMG2024", 325]],
+	source: [["D24", 325]],
 	type: "wondrous item",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "While holding this fan, you can cast Gust of Wind (save DC 13) from it. Once used, the fan shouldn't be used again until the next dawn. Each time it is used again before then, it has a cumulative 20% chance of not working and tearing into useless, nonmagical tatters.",
-	descriptionFull: "While holding this fan, you can cast the Gust of Wind spell (save DC 13) from it. Once used, the fan shouldn't be used again until the next dawn. Each time it is used again before then, it has a cumulative 20% chance of not working and tearing into useless, nonmagical tatters.",
+	description: "While holding this fan, you can cast Gust of Wind (save DC 13) from it. Each subsequent time the fan is used before the next dawn, it has a cumulative 20 percent chance of not working; if the fan fails to work, it tears into useless, nonmagical tatters.",
+	descriptionFull: "While holding this fan, you can cast Gust of Wind (save DC 13) from it. Each subsequent time the fan is used before the next dawn, it has a cumulative 20 percent chance of not working; if the fan fails to work, it tears into useless, nonmagical tatters.",
 	usages: 1,
 	recovery: "dawn",
 	additional: "more uses +20% to destroy",
@@ -9542,12 +9524,12 @@ MagicItemsList["wind fan"] = {
 };
 MagicItemsList["winged boots"] = {
 	name: "Winged Boots",
-	source: [["DMG2024", 325]],
+	source: [["D24", 325]],
 	type: "wondrous item",
 	rarity: "uncommon",
 	magicItemTable: "?",
 	description: "These boots have 4 charges and regain 1d4 expended charges at dawn. While wearing these boots, you can take a Magic action to expend 1 charge to gain a Fly Speed of 30 feet for 1 hour. If you are flying when the duration expires, descend 30 ft per round until you land.",
-	descriptionFull: "These boots have 4 charges and regain 1d4 expended charges at dawn. While wearing these boots, you can take a Magic action to expend 1 charge to gain a Fly Speed of 30 feet for 1 hour. If you are flying when the duration expires, you descend 30 ft per round until you land.",
+	descriptionFull: "These boots have 4 charges and regain 1d4 expended charges daily at dawn. While wearing the boots, you can take a Magic action to expend 1 charge, gaining a Fly Speed of 30 feet for 1 hour. If you are flying when the duration expires, you descend at a rate of 30 feet per round until you land.",
 	attunement: true,
 	usages: "4",
 	recovery: "dawn",
@@ -9555,12 +9537,12 @@ MagicItemsList["winged boots"] = {
 };
 MagicItemsList["wings of flying"] = {
 	name: "Wings of Flying",
-	source: [["DMG2024", 325]],
+	source: [["D24", 325]],
 	type: "wondrous item",
 	rarity: "rare",
 	magicItemTable: "?",
 	description: "While wearing this cloak, you can take a Magic action to turn the cloak into a pair of wings on your back. The wings last for 1 hour or until you end the affect early as a Magic action. The wings give a flying speed of 60 ft. When they disappear, you can't use them again for 1d12 hours.",
-	descriptionFull: "While wearing this cloak, you can take a Magic action to turn the cloak into a pair of wings on my back. The wings last for 1 hour or until you end the affect early as a Magic action. The wings give you a flying speed of 60 feet. When they disappear, you can't use them again for 1d12 hours.",
+	descriptionFull: "While wearing this cloak, you can take a Magic action to turn the cloak into a pair of wings on your back. The wings lasts for 1 hour or until you end the effect early as a Magic action. The wings give you a Fly Speed of 60 feet. If you are aloft when the wings disappear, you fall. When the wings disappear, you can’t use them again for 1d12 hours.",
 	attunement: true,
 	action: [["action", " (start/stop)"]],
 	usages: 1,
@@ -9569,26 +9551,26 @@ MagicItemsList["wings of flying"] = {
 MagicItemsList["wraps of unarmed power"] = {
 	name: "Wraps of Unarmed Power, +1, +2, or +3",
 	nameTest: "Wraps of Unarmed Power",
-	source: [["DMG2024", 325]],
+	source: [["D24", 325]],
 	magicItemTable: "?",
 	type: "wondrous item",
-	description: "While wearing these wraps, your unarmed strikes are considered magical and deal either Force damage or their normal damage, and you gain a bonus to their attack and damage rolls. The bonus is determined by rarity: uncommon (+1), rare (+2), or very rare (+3).",
+	description: "While wearing these wraps, you have a bonus to attack rolls and damage rolls made with your Unarmed Strikes. The bonus is determined by the wraps’ rarity, and those strikes deal your choice of Force damage or their normal damage type. The bonus is determined by rarity: uncommon (+1), rare (+2), or very rare (+3).",
 	descriptionFull: "While wearing these wraps, you have a bonus to attack rolls and damage rolls made with your Unarmed Strikes. The bonus is determined by the wraps’ rarity, and those strikes deal your choice of Force damage or their normal damage type. Rarity/Bonus: uncommon (+1), rare (+2), or very rare (+3).",
 	choices: ["+1 Wraps of Unarmed Power (uncommon)", "+2 Wraps of Unarmed Power (rare)", "+3 Wraps of Unarmed Power (very rare)"],
 	"+1 wraps of unarmed power (uncommon)": {
 		name: "Wraps of Unarmed Power +1",
 		nameTest: "+1 Wraps of Unarmed Power",
 		rarity: "uncommon",
-		description: "While wearing these wraps, you gain a +1 bonus to the attack and damage rolls of your unarmed strikes. You Unarmed Strikes are considered magical and those strikes can deal your choice of Force or their normal damage.",
+		description: "While wearing these wraps, you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes. Your Unarmed Strikes can deal your choice of Force or their normal damage.",
 		calcChanges: {
 			atkAdd: [
 				function (fields, v) {
-					if (v.baseWeaponName == "unarmed strike" && !/counts as( a)? magical/i.test(fields.Description)) {
-						fields.Description += (fields.Description ? '; ' : '') + 'Counts as magical; choice of Force or normal dmg';
+					if (v.baseWeaponName == "unarmed strike") {
+						fields.Description += (fields.Description ? '; ' : '') + 'Choice of Force or normal dmg';
 
 					}
 				},
-				"Your unarmed strikes get a +1 bonus to attack / damage rolls and you can choose between Force damage or normal damage.",
+				"Your Unarmed Strikes get a +1 bonus to attack / damage rolls and you can choose between Force damage or normal damage.",
 				700
 			],
 			atkCalc: [
@@ -9604,15 +9586,15 @@ MagicItemsList["wraps of unarmed power"] = {
 		name: "Wraps of Unarmed Power +2",
 		nameTest: "+2 Wraps of Unarmed Power",
 		rarity: "rare",
-		description: "While wearing these wraps, you gain a +2 bonus to the attack and damage rolls of your unarmed strikes. You Unarmed Strikes are considered magical and those strikes can deal your choice of Force or their normal damage.",
+		description: "While wearing these wraps, you gain a +2 bonus to the attack and damage rolls of your Unarmed Strikes. Your Unarmed Strikes can deal your choice of Force or their normal damage.",
 		calcChanges: {
 			atkAdd: [
 				function (fields, v) {
-					if (v.baseWeaponName == "unarmed strike" && !/counts as( a)? magical/i.test(fields.Description)) {
-						fields.Description += (fields.Description ? '; ' : '') + 'Counts as magical; choice of Force or normal damage';
+					if (v.baseWeaponName == "unarmed strike") {
+						fields.Description += (fields.Description ? '; ' : '') + 'Choice of Force or normal damage';
 					}
 				},
-				"Your unarmed strikes get a +2 bonus to attack / damage rolls and you can choose between Force damage or normal damage.",
+				"Your Unarmed Strikes get a +2 bonus to attack / damage rolls and you can choose between Force damage or normal damage.",
 				700
 			],
 			atkCalc: [
@@ -9628,15 +9610,15 @@ MagicItemsList["wraps of unarmed power"] = {
 		name: "Wraps of Unarmed Power +3",
 		nameTest: "+3 Wraps of Unarmed Power",
 		rarity: "very rare",
-		description: "While wearing these wraps, you gain a +3 bonus to the attack and damage rolls of your unarmed strikes. You Unarmed Strikes are considered magical and those strikes can deal your choice of Force or their normal damage.",
+		description: "While wearing these wraps, you gain a +3 bonus to the attack and damage rolls of your Unarmed Strikes. You Unarmed Strikes can deal your choice of Force or their normal damage.",
 		calcChanges: {
 			atkAdd: [
 				function (fields, v) {
-					if (v.baseWeaponName == "unarmed strike" && !/counts as( a)? magical/i.test(fields.Description)) {
-						fields.Description += (fields.Description ? '; ' : '') + 'Counts as magical; choice of Force or normal damage';
+					if (v.baseWeaponName == "unarmed strike") {
+						fields.Description += (fields.Description ? '; ' : '') + 'Choice of Force or normal damage';
 					}
 				},
-				"Your unarmed strikes get a +3 bonus to attack / damage rolls and you can choose between Force damage or normal damage.",
+				"Your Unarmed Strikes get a +3 bonus to attack / damage rolls and you can choose between Force damage or normal damage.",
 				700
 			],
 			atkCalc: [
