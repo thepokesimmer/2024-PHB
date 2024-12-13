@@ -5,7 +5,7 @@ This script also offers compatibility with other published scripts for MPMB Digi
 This script overwrites outdated classes, subclasses, and spells that have been republished.
 To gain access to "Legacy" subclasses and spells, please navigate to the 'select sources' tab on the Java Script Window, They are listed as two separate sources, "Spells Depreciated by 2024 Player's Handbook (Legacy)", and "Subclasses Depreciated by 2024 Player's Handbook (Legacy)", in the 'Exclude from the Automation' side of the Java Script Window. To enable one or both of the Excluded sources, select the one you wish to enable and click the > button, this will add the source to the sheet and the options within will appear when you choose subclasses and spells.
 
-#2024-PHB-Dunamancy-Companion
+# 2024-PHB-Dunamancy-Companion
 Java Script file, for MorePurpleMoreBetter's D&amp;D 5e Digital Character Sheet.
 This script offers compatibility between the Player's Handbook published 09/17/2024 and Explorer's Guide to Wildmount published 03/17/2020.
 This script allows updated classes to select whether they have access to the Dunamancy spells introduced in Explorer's Guide to Wildmount.
