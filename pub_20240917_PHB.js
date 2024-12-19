@@ -135,7 +135,6 @@ function legacySubClassRefactor(classKey, subClassKey, nSC) {
     nSC.regExpSearch = newRegex;
   }
 }
-
 function legacyRaceRefactor(raceKey, newRace){
   if(newRace.replaces){
     for (var replaced of newRace.replaces){
@@ -3792,9 +3791,9 @@ legacySubClassRefactor("monk", "open hand", {
 					"If it fails, it takes 10d12 necrotic damage, half on success."
 				])
 			},
-				autoSelectExtrachoices : [{
+			autoSelectExtrachoices : [{
 				extrachoice : "quivering palm",
-				minlevel : 17
+				minlevel : 17,
 			}]
 		},
 	},
@@ -13293,7 +13292,7 @@ ArmourList["padded"] = {
   name: "Padded Armor",
   infoname: "Padded Armor [5 gp]",
   source: [["P24", 219]],
-  regExpSearch: /^(?=.*padded)(?=.*armor).*$/i,
+  regExpSearch: /^(?!.*(plate|hide))(?=.*(padding|padded)).*$/i,
   ac: 11,
   type: "light",
   stealthdis: true,
@@ -13303,7 +13302,7 @@ ArmourList["leather"] = {
   name: "Leather Armor",
   infoname: "Leather Armor [10 gp]",
   source: [["P24", 219]],
-  regExpSearch: /^(?=.*leather)(?=.*armor).*$/i,
+  regExpSearch: /^(?!.*(padding|padded|studded|studs))(?=.*leather).*$/i,
   ac: 11,
   type: "light",
   stealthdis: false,
@@ -13313,7 +13312,7 @@ ArmourList["studded leather"] = {
   name: "Studded Leather Armor",
   infoname: "Studded Leather Armor [45 gp]",
   source: [["P24", 219]],
-  regExpSearch: /^(?=.*studded)(?=.*leather)(?=.*armor).*$/i,
+  regExpSearch: /^(?=.*(studded|studs))(?=.*leather).*$/i,
   ac: 12,
   type: "light",
   stealthdis: false,
@@ -13323,7 +13322,7 @@ ArmourList["hide"] = {
   name: "Hide Armor",
   infoname: "Hide Armor [10 gp]",
   source: [["P24", 219]],
-  regExpSearch: /^(?=.*hide)(?=.*armor).*$/i,
+  regExpSearch: /^(?!.*(dragon|draconic|molten bronze))(?=.*(hide|skin)).*$/i,
   ac: 12,
   type: "medium",
   stealthdis: false,
@@ -13343,7 +13342,7 @@ ArmourList["scale mail"] = {
   name: "Scale Mail",
   infoname: "Scale Mail [50 gp]",
   source: [["P24", 219]],
-  regExpSearch: /^(?=.*Scale)(?=.*mail).*$/i,
+  regExpSearch: /^(?=.*scale)(?=.*mail).*$/i,
   ac: 14,
   type: "medium",
   stealthdis: true,
@@ -13353,7 +13352,7 @@ ArmourList["breastplate"] = {
   name: "Breastplate",
   infoname: "Breastplate [400 gp]",
   source: [["P24", 219]],
-  regExpSearch: /breastplate/i,
+  regExpSearch: /^(?=.*breast)(?=.*plate).*$/i,
   ac: 14,
   type: "medium",
   stealthdis: false,
@@ -13383,7 +13382,7 @@ ArmourList["chain mail"] = {
   name: "Chain Mail",
   infoname: "Chain Mail [75 gp]",
   source: [["P24", 219]],
-  regExpSearch: /^(?=.*chain)(?=.*mail).*$/i,
+  regExpSearch: /^(?!.*(scale|plate|ring|shirt))(?=.*chain)(?=.*mail).*$/i,
   ac: 16,
   type: "heavy",
   stealthdis: true,
@@ -13405,7 +13404,7 @@ ArmourList["plate"] = {
   name: "Plate Armor",
   infoname: "Plate Armor [1500 gp]",
   source: [["P24", 219]],
-  regExpSearch: /^(?=.*plate)(?=.*armor).*$/i,
+  regExpSearch: /^(?!.*(half|breast))(?=.*plate).*$/i,
   ac: 18,
   type: "heavy",
   stealthdis: true,
