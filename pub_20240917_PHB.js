@@ -1,5 +1,5 @@
 var iFileName = "pub_20240917_PHB.js";
-RequiredSheetVersion("13.2.1");
+RequiredSheetVersion("13.2.3");
 SourceList.P24 = {
   name: "2024 Player's Handbook",
   abbreviation: "P24",
@@ -1361,7 +1361,7 @@ legacyClassRefactor("cleric", {
   spellcastingKnown: {
     cantrips: [3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
     spells: "list",
-    prepared: true,
+    prepared: [4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22],
   },
   features: {
     "spellcasting": {
@@ -1373,17 +1373,6 @@ legacyClassRefactor("cleric", {
         var splls = [4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22][idx];
         return cantr + " cantrips \u0026 " + splls + " spells prepared";
       }),
-      calcChanges: {
-        spellCalc: [
-          function (type, spellcasters, ability) {
-            if (type === "prepare" && spellcasters.indexOf("cleric") !== -1) {
-              var lvl = classes.known.cleric.level;
-              var sArr = [0, 4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22];
-              return sArr[lvl] - lvl - Number(What("Wis Mod"));
-            }
-          }
-        ]
-      },
       description: desc([
         "I can cast Cantrips & Prepared level 1+ Cleric spells using Wis as my spellcasting ability & a Holy Symbol as a Spellcasting Focus.",
 		"I can replace one cantrip with another when I gain a Cleric level; I can change my Prepared spells at the end of a Long Rest.",
@@ -1761,7 +1750,7 @@ legacyClassRefactor("druid", {
   spellcastingKnown: {
     cantrips: [2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
     spells: "list",
-    prepared: true,
+    prepared: [4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22],
   },
   features: {
     "spellcasting": {
@@ -1773,17 +1762,6 @@ legacyClassRefactor("druid", {
         var splls = [4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22][idx];
         return cantr + " cantrips \u0026 " + splls + " spells prepared";
       }),
-      calcChanges: {
-        spellCalc: [
-          function (type, spellcasters, ability) {
-            if (type === "prepare" && spellcasters.indexOf("druid") !== -1) {
-              var lvl = classes.known.druid.level;
-              var sArr = [0, 4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22];
-              return sArr[lvl] - lvl - Number(What("Wis Mod"));
-            }
-          }
-        ]
-      },
       description: desc([
         "I can cast druid spells using Wisdom as my spellcasting ability.", 
 		"I know druid cantrips and can prepare a number of spells from the druid list. I regain spell slots after a long rest."      
@@ -3832,7 +3810,7 @@ legacyClassRefactor("paladin", {
 	spellcastingAbility: 6,
 	spellcastingKnown: {
 		spells: "list",
-		prepared: true,
+		prepared: [2, 3, 4, 5, 6, 6, 7, 7, 9, 9, 10, 10, 11, 11, 12, 12, 14, 14, 15, 15],
 	},
 	spellcastingFactorRoundupMulti: true,
 	spellcastingTable: [[0, 0, 0, 0, 0, 0, 0, 0, 0]].concat(levels.map(function (n) {
@@ -3859,17 +3837,6 @@ legacyClassRefactor("paladin", {
 				var splls = [2, 3, 4, 5, 6, 6, 7, 7, 9, 9, 10, 10, 11, 11, 12, 12, 14, 14, 15, 15][idx];
 				return splls + " spells prepared";
 			}),
-			calcChanges: {
-				spellCalc: [
-					function (type, spellcasters, ability) {
-						if (type === "prepare" && spellcasters.indexOf("paladin") !== -1) {
-						var lvl = classes.known.paladin.level;
-						var sArr = [0, 2, 3, 5, 5, 7, 6, 8, 7, 10, 9, 11, 10, 12, 11, 13, 12, 15, 14, 16, 15];
-						return sArr[lvl] - Math.ceil(lvl / 2) - Number(What("Cha Mod"));
-						}
-					}
-					]
-			},
 			description: desc([
 				"I can cast prepared level 1+ Paladin spells using Charisma as my spellcasting ability.",
 				"I can use a Holy Symbol as a spellcasting focus for my paladin spells.",
@@ -4558,7 +4525,7 @@ legacyClassRefactor("ranger", {
 	spellcastingAbility: 5,
 	spellcastingKnown: {
 		spells: "list",
-		prepared: true,
+		prepared: [2, 3, 4, 5, 6, 6, 7, 7, 9, 9, 10, 10, 11, 11, 12, 12, 14, 14, 15, 15],
 	},
 	spellcastingFactorRoundupMulti: true,
 	spellcastingTable: [[0, 0, 0, 0, 0, 0, 0, 0, 0]].concat(levels.map(function (n) {
@@ -4595,17 +4562,6 @@ legacyClassRefactor("ranger", {
 				var splls = [2, 3, 4, 5, 6, 6, 7, 7, 9, 9, 10, 10, 11, 11, 12, 12, 14, 14, 15, 15][idx];
 				return splls + " spells prepared";
 			}),
-			calcChanges: {
-				spellCalc: [
-					function (type, spellcasters, ability) {
-						if (type === "prepare" && spellcasters.indexOf("ranger") !== -1) {
-							var lvl = classes.known.ranger.level;
-							var sArr = [0, 2, 3, 5, 5, 7, 6, 8, 7, 10, 9, 11, 10, 12, 11, 13, 12, 15, 14, 16, 15];
-							return sArr[lvl] - Math.ceil(lvl / 2) - Number(What("Wis Mod"));
-						}
-					}
-				]
-			},
 			description: desc([
 				"I can cast ranger spells using Wis as my casting ability.",
 				"I can use a Druidic Focus as a spellcasting focus.",
@@ -7755,7 +7711,7 @@ legacyClassRefactor("wizard", {
   spellcastingKnown: {
     cantrips: [3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
     spells: "book",
-    prepared: true,
+    prepared: [4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 18, 19, 21, 22, 23, 24, 25],
   },
   features: {
     "spellcasting": {
@@ -7767,17 +7723,6 @@ legacyClassRefactor("wizard", {
         var splls = [4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 18, 19, 21, 22, 23, 24, 25][idx];
         return cantr + " cantrips \u0026 " + splls + " spells prepared";
       }),
-      calcChanges: {
-        spellCalc: [
-          function (type, spellcasters, ability) {
-            if (type === "prepare" && spellcasters.indexOf("wizard") !== -1) {
-              var lvl = classes.known.wizard.level;
-              var sArr = [0, 4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 18, 19, 21, 22, 23, 24, 25];
-              return sArr[lvl] - lvl - Number(What("Int Mod"));
-            }
-          }
-        ]
-      },
       description: desc([
         "I can cast Prepared Level 1+ Wizard spells using Int as my spellcasting ability.",
 		"I have a unique spellbook for Level 1+ spells; only I or the Identify spell can read it. Prepared spells from other Wizard features count as Wizard spells & don't count against my Prepared Spells.",
@@ -12899,7 +12844,7 @@ WeaponsList["vial of acid"] = {
   range: "20 ft.",
   weight: 1,
   description: "",
-  abilitytodamage: false,
+  abilitytodamage: true,
   isAlwaysProf: true,
   ammo: "vials of acid",
   isNotWeapon: true,
@@ -12916,7 +12861,7 @@ WeaponsList["alchemist fire"] = {
   range: "20 ft.",
   weight: 1,
   description: "Target +1d4 at the start of each of its turns; Can end if target falls prone and uses their action to extinguish.",
-  abilitytodamage: false,
+  abilitytodamage: true,
   isAlwaysProf: true,
   ammo: "alchemist fire",
   isNotWeapon: true,
@@ -12933,7 +12878,7 @@ WeaponsList["holy water"] = {
   range: "20 ft.",
   weight: 1,
   description: "Only does damage against fiends and undead; Comes in flasks",
-  abilitytodamage: false,
+  abilitytodamage: true,
   ammo: "holy water",
   isNotWeapon: true
 };
