@@ -2421,7 +2421,8 @@ MagicItemsList["efreeti bottle"] = { // contributed by AelarTheElfRogue
 	action : [["action", ""]]
 };
 MagicItemsList["efreeti chain"] = {
-	name : "Efreeti Chain",
+	name : "Efreeti Chain +3",
+	nameTest : "/efreeti.*+3/i",
 	source : [["D24", 257]],
 	type : "armor (Chain Mail or Chain Shirt)",
 	rarity : "legendary",
@@ -2432,35 +2433,13 @@ MagicItemsList["efreeti chain"] = {
 	weight : 55,
 	languageProfs : ["Primordial"],
 	savetxt : { immune : ["fire"] },
-	choices: ["Chain Shirt", "Chain Mail"],
-	"chain shirt": {
-		description : "While wearing this chain shirt, I gain a +3 bonus to AC, I am immune to fire damage, and I can understand and speak Primordial. In addition, I can stand on and walk across molten rock as if it were solid ground.",
-		descriptionFull : "While wearing this chain shirt, you gain a +3 bonus to Armor Class, you have Immunity to Fire damage, and you know Primordial. In addition, you can stand on and move across molten rock as if it were solid ground.",
-		armorOptions : {
-			regExpSearch : /^(?=.*efreeti)(?=.*chain)(?=.*shirt).*$/i,
-			name : "Efreeti Chain Shirt",
-			source : [["D24", 257]],
-			type : "medium",
-			ac : 16,
-			stealthdis : false,
-			weight : 20,
-			selectNow: true,
-		},
-	},
-	"chain mail": {
-		description : "While wearing this chain mail, I gain a +3 bonus to AC, I am immune to fire damage, and I can understand and speak Primordial. In addition, I can stand on and walk across molten rock as if it were solid ground.",
-		descriptionFull : "While wearing this chain mail, you gain a +3 bonus to Armor Class, you have Immunity to Fire damage, and you know Primordial. In addition, you can stand on and move across molten rock as if it were solid ground.",
-		armorOptions : {
-			regExpSearch : /^(?=.*efreeti)(?=.*chain)(?=.*mail).*$/i,
-			name : "Efreeti Chain Mail",
-			source : [["D24", 257]],
-			ac: 19,
-			type: "heavy",
-			stealthdis: true,
-			weight: 55,
-			strReq: 13,
-			selectNow: true,
-		},
+	chooseGear : {
+		type : "armor",
+		prefixOrSuffix : ["between", "Efreeti", "+3"],
+		descriptionChange : ["prefix", "armor"],
+		excludeCheck : function (inObjKey, inObj) {
+			return !(/medium|heavy/i).test(inObj.type) || !(/chain/i).test(inObj.name);
+		}
 	}
 };
 MagicItemsList["elemental gem"] = {
@@ -2505,42 +2484,21 @@ MagicItemsList["elixir of health"] = {
 	weight : 0.5
 };
 MagicItemsList["elven chain"] = {
-	name : "Elven Chain",
+	name : "Elven Chain +1",
+	nameTest : "/elven.*+1/i",
 	source : [["D24", 257]],
 	type : "armor (chain mail or chain shirt)",
 	rarity : "rare",
 	magicItemTable : "?",
 	description : "I gain a +1 bonus to AC while I wear this armor. I am considered proficient with this armor even if I lack proficiency with medium armor.",
 	descriptionFull : "You gain a +1 bonus to Armor Class while you wear this armor. You are considered trained with this armor even if you lack training with Medium or Heavy armor.",
-	choices: ["Chain Shirt", "Chain Mail"],
-	"chain shirt": {
-		description : "I gain a +1 bonus to AC while I wear this chain shirt. I am considered proficient with this armor even if I lack proficiency with medium armor.",
-		descriptionFull : "You gain a +1 bonus to Armor Class while you wear this chain shirt. You are considered trained with this armor even if you lack training with Medium or Heavy armor.",
-		armorOptions : {
-			regExpSearch : /^(?=.*elven)(?=.*chain)(?=.*shirt).*$/i,
-			name : "Elven Chain Shirt",
-			source : [["D24", 257]],
-			type : "medium",
-			ac : 14,
-			stealthdis : false,
-			weight : 20,
-			selectNow: true,
-		},
-	},
-	"chain mail": {
-		description : "I gain a +1 bonus to AC while I wear this chain mail. I am considered proficient with this armor even if I lack proficiency with medium armor.",
-		descriptionFull : "You gain a +1 bonus to Armor Class while you wear this chain mail. You are considered trained with this armor even if you lack training with Medium or Heavy armor.",
-		armorOptions : {
-			regExpSearch : /^(?=.*elven)(?=.*chain)(?=.*mail).*$/i,
-			name : "Elven Chain Mail",
-			source : [["D24", 257]],
-			ac: 17,
-			type: "heavy",
-			stealthdis: true,
-			weight: 55,
-			strReq: 13,
-			selectNow: true,
-		},
+	chooseGear : {
+		type : "armor",
+		prefixOrSuffix : ["between", "Elven", "+1"],
+		descriptionChange : ["prefix", "armor"],
+		excludeCheck : function (inObjKey, inObj) {
+			return !(/medium|heavy/i).test(inObj.type) || !(/chain/i).test(inObj.name);
+		}
 	}
 };
 MagicItemsList["enduring spellbook"] = {
@@ -9415,7 +9373,8 @@ MagicItemsList["wraps of unarmed power"] = {
 					if (v.baseWeaponName == "unarmed strike") {
 						output.magic += 1;
 					}
-				}, ''
+				}, 
+				''
 			]
 		}
 	},
@@ -9439,7 +9398,8 @@ MagicItemsList["wraps of unarmed power"] = {
 					if (v.baseWeaponName == "unarmed strike") {
 						output.magic += 2;
 					}
-				}, ''
+				}, 
+				''
 			]
 		}
 	},
@@ -9463,7 +9423,8 @@ MagicItemsList["wraps of unarmed power"] = {
 					if (v.baseWeaponName == "unarmed strike") {
 						output.magic += 3;
 					}
-				}, ''
+				}, 
+				''
 			]
 		}
 	}
