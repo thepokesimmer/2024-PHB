@@ -13289,7 +13289,8 @@ AmmoList["holy water"] = {
 };
 //Armour
 ArmourList["padded"] = {
-  name: "Padded Armor",
+  name: "Padded",
+  invName : "Padded armor",
   infoname: "Padded Armor [5 gp]",
   source: [["P24", 219]],
   regExpSearch: /^(?!.*(plate|hide))(?=.*(padding|padded)).*$/i,
@@ -13299,7 +13300,8 @@ ArmourList["padded"] = {
   weight: 8,
 };
 ArmourList["leather"] = {
-  name: "Leather Armor",
+  name: "Leather",
+  invName : "Leather armor",
   infoname: "Leather Armor [10 gp]",
   source: [["P24", 219]],
   regExpSearch: /^(?!.*(padding|padded|studded|studs))(?=.*leather).*$/i,
@@ -13309,7 +13311,8 @@ ArmourList["leather"] = {
   weight: 10,
 };
 ArmourList["studded leather"] = {
-  name: "Studded Leather Armor",
+  name: "Studded leather",
+  invName : "Studded leather armor",
   infoname: "Studded Leather Armor [45 gp]",
   source: [["P24", 219]],
   regExpSearch: /^(?=.*(studded|studs))(?=.*leather).*$/i,
@@ -13319,7 +13322,8 @@ ArmourList["studded leather"] = {
   weight: 13,
 };
 ArmourList["hide"] = {
-  name: "Hide Armor",
+  name: "Hide",
+  invName : "Hide armor",
   infoname: "Hide Armor [10 gp]",
   source: [["P24", 219]],
   regExpSearch: /^(?!.*(dragon|draconic|molten bronze))(?=.*(hide|skin)).*$/i,
@@ -13329,7 +13333,7 @@ ArmourList["hide"] = {
   weight: 12,
 };
 ArmourList["chain shirt"] = {
-  name: "Chain Shirt",
+  name: "Chain shirt",
   infoname: "Chain Shirt [50 gp]",
   source: [["P24", 219]],
   regExpSearch: /^(?=.*chain)(?=.*shirt).*$/i,
@@ -13339,7 +13343,7 @@ ArmourList["chain shirt"] = {
   weight: 20,
 };
 ArmourList["scale mail"] = {
-  name: "Scale Mail",
+  name: "Scale mail",
   infoname: "Scale Mail [50 gp]",
   source: [["P24", 219]],
   regExpSearch: /^(?=.*scale)(?=.*mail).*$/i,
@@ -13390,7 +13394,8 @@ ArmourList["chain mail"] = {
   strReq: 13,
 };
 ArmourList["splint"] = {
-  name: "Splint Armor",
+  name: "Splint",
+  invName : "Splint armor",
   infoname: "Splint Armor [200 gp]",
   source: [["P24", 219]],
   regExpSearch: /^(?=.*splint)(?=.*armor).*$/i,
@@ -13401,7 +13406,8 @@ ArmourList["splint"] = {
   strReq: 15,
 };
 ArmourList["plate"] = {
-  name: "Plate Armor",
+  name: "Plate",
+  invName : "Plate armor",
   infoname: "Plate Armor [1500 gp]",
   source: [["P24", 219]],
   regExpSearch: /^(?!.*(half|breast))(?=.*plate).*$/i,
