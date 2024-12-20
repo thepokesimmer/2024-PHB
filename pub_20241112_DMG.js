@@ -1,5 +1,5 @@
 var iFileName = "pub_20241112_DMG.js";
-RequiredSheetVersion("13.2.1");
+RequiredSheetVersion("13.2.3");
 SourceList.D24 = {
   name: "2024 Dungeon Master's Guide",
   abbreviation: "D24",
@@ -186,6 +186,7 @@ FeatsList["charms"] = {
 //Magic Items
 MagicItemsList["adamantine armor"] = {
 	name : "Adamantine Armor",
+	nameTest : /adamantine.*armou?r/i,
 	source : [["D24", 227]],
 	magicItemTable : "?",
 	type : "armor (medium or heavy)",
@@ -195,7 +196,7 @@ MagicItemsList["adamantine armor"] = {
 	allowDuplicates : true,
 	chooseGear : {
 		type : "armor",
-		prefixOrSuffix : "brackets",
+		prefixOrSuffix : ["between", "Adamantine", "Armor"],
 		itemName1stPage : ["suffix", "Adamantine"],
 		descriptionChange : ["prefix", "armor"],
 		excludeCheck : function (inObjKey, inObj) {
@@ -1222,8 +1223,9 @@ MagicItemsList["cast-off armor"] = {
 	descriptionFull : "You can doff this armor as a Magic action.",
 	chooseGear : {
 		type : "armor",
-		prefixOrSuffix : "suffix",
-		descriptionChange : ["prefix", "armor"]
+		prefixOrSuffix : ["between", "Cast-Off", "Armor"],
+		itemName1stPage : ["suffix", "Cast-Off"],
+		descriptionChange : ["prefix", "armor"],
 	},
 	action : [["action", ""]]
 };
@@ -2069,8 +2071,9 @@ MagicItemsList["defender"] = {
 	}
 };
 MagicItemsList["demon armor"] = { // contains contributions by Larry Hoy
-	name : "Demon Armor",
+	name : "Demon Armor +1",
 	source : [["D24", 252]],
+	nameTest : "Demon",
 	type : "armor (any)",
 	rarity : "very rare",
 	magicItemTable : "?",
@@ -2080,177 +2083,10 @@ MagicItemsList["demon armor"] = { // contains contributions by Larry Hoy
 	cursed : true,
 	languageProfs : ["Abyssal"],
 	savetxt : { text : ["Disadv. on saves vs. demons"] },
-	choices: ["Padded", "Leather", "Studded Leather", "Hide", "Chain Shirt", "Scale Mail", "Breastplate", "Half Plate", "Ring Mail", "Chain Mail", "Splint", "Plate"],
-	"padded": {
-		description : "While wearing this padded armor, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
-		descriptionFull : "While wearing this padded armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
-		armorOptions : {
-			name: "Demon Padded Armor",
-			source: [["D24", 252]],
-			regExpSearch: /^(?=.*demon)(?=.*padded)(?=.*armor).*$/i,
-			ac: 12,
-			type: "light",
-			stealthdis: true,
-			weight: 8,
-			selectNow: true,
-		},
-	},
-	"leather": {
-		description : "While wearing this leather armor, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
-		descriptionFull : "While wearing this leather armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
-		armorOptions : {
-			name: "Demon Leather Armor",
-			source: [["D24", 252]],
-			regExpSearch: /^(?=.*demon)(?=.*leather)(?=.*armor).*$/i,
-			ac: 12,
-			type: "light",
-			stealthdis: false,
-			weight: 10,
-			selectNow: true,
-		},
-	},
-	"studded leather": {
-		description : "While wearing this studded leather armor, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
-		descriptionFull : "While wearing this studded leather armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
-		armorOptions : {
-			name: "Demon Studded Leather Armor",
-			source: [["D24", 252]],
-			regExpSearch: /^(?=.*demon)(?=.*studded)(?=.*leather)(?=.*armor).*$/i,
-			ac: 13,
-			type: "light",
-			stealthdis: false,
-			weight: 13,
-			selectNow: true,
-		},
-	},
-	"hide": {
-		description : "While wearing this hide armor, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
-		descriptionFull : "While wearing this hide armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
-		armorOptions : {
-			name: "Demon Hide Armor",
-			source: [["D24", 252]],
-			regExpSearch: /^(?=.*demon)(?=.*hide)(?=.*armor).*$/i,
-			ac: 13,
-			type: "medium",
-			stealthdis: false,
-			weight: 12,
-			selectNow: true,
-		},
-	},
-	"chain shirt": {
-		description : "While wearing this chain shirt, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
-		descriptionFull : "While wearing this chain shirt, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
-		armorOptions : {
-			name: "Demon Chain Shirt",
-			source: [["D24", 252]],
-			regExpSearch: /^(?=.*demon)(?=.*chain)(?=.*shirt).*$/i,
-			ac: 14,
-			type: "medium",
-			stealthdis: false,
-			weight: 20,
-			selectNow: true,
-		},
-	},
-	"scale mail": {
-		description : "While wearing this scale mail armor, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
-		descriptionFull : "While wearing this scale mail armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
-		armorOptions : {
-			name: "Demon Scale Mail",
-			source: [["D24", 252]],
-			regExpSearch: /^(?=.*demon)(?=.*scale)(?=.*mail).*$/i,
-			ac: 15,
-			type: "medium",
-			stealthdis: true,
-			weight: 45,
-			selectNow: true,
-		},
-	},
-	"breastplate": {
-		description : "While wearing this breastplate, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
-		descriptionFull : "While wearing this breastplate, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
-		armorOptions : {
-			name: "Demon Breastplate",
-			source: [["D24", 252]],
-			regExpSearch: /^(?=.*demon)(?=.*breastplate).*$/i,
-			ac: 15,
-			type: "medium",
-			stealthdis: false,
-			weight: 20,
-			selectNow: true,
-		},
-	},
-	"half plate": {
-		description : "While wearing this half plate armor, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
-		descriptionFull : "While wearing this half plate armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
-		armorOptions : {
-			name: "Demon Half Plate",
-			source: [["D24", 252]],
-			regExpSearch: /^(?=.*demon)(?=.*half)(?=.*plate).*$/i,
-			ac: 16,
-			type: "medium",
-			stealthdis: true,
-			weight: 40,
-			selectNow: true,
-		},
-	},
-	"ring mail": {
-		description : "While wearing this ring mail, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
-		descriptionFull : "While wearing this ring mail, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
-		armorOptions : {
-			name: "Demon Ring Mail",
-			source: [["D24", 252]],
-			regExpSearch: /^(?=.*demon)(?=.*ring)(?=.*mail).*$/i,
-			ac: 15,
-			type: "heavy",
-			stealthdis: true,
-			weight: 40,
-			selectNow: true,
-		},
-	},
-	"chain mail": {
-		description : "While wearing this chain mail, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
-		descriptionFull : "While wearing this chain mail, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
-		armorOptions : {
-			name: "Demon Chain Mail",
-			source: [["D24", 252]],
-			regExpSearch: /^(?=.*demon)(?=.*chain)(?=.*mail).*$/i,
-			ac: 17,
-			type: "heavy",
-			stealthdis: true,
-			weight: 55,
-			strReq: 13,
-			selectNow: true,
-		},
-	},
-	"splint": {
-		description : "While wearing this splint armor, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
-		descriptionFull : "While wearing this splint armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
-		armorOptions : {
-			name: "Demon Splint Armor",
-			source: [["D24", 252]],
-			regExpSearch: /^(?=.*demon)(?=.*splint)(?=.*armor).*$/i,
-			ac: 18,
-			type: "heavy",
-			stealthdis: true,
-			weight: 60,
-			strReq: 15,
-			selectNow: true,
-		},
-	},
-	"plate": {
-		description : "While wearing this plate armor, I have +1 AC, know Abyssal, and can use its clawed gauntlets to make unarmed strikes that deal 1d8 slashing damage with a +1 bonus to hit and damage. I have disadv. on attacks and on saves vs. demons, their spells and abilities. I can't doff it without Remove Curse or similar magic.",
-		descriptionFull : "While wearing this plate armor, you gain a +1 bonus to Armor Class, and you know Abyssal. In addition, the armor’s clawed gauntlets allow your Unarmed Strikes to deal 1d8 Slashing damage instead of the usual Bludgeoning damage, and you gain a +1 bonus to the attack and damage rolls of your Unarmed Strikes.\n   " + toUni("Curse") + ". Once you don this cursed armor, you can’t doff it unless you are targeted by a Remove Curse spell or similar magic. While wearing the armor, you have Disadvantage on attack rolls against demons and on saving throws against their spells and special abilities.",
-		armorOptions : {
-			name: "Demon Plate Armor",
-			source: [["D24", 252]],
-			regExpSearch: /^(?=.*demon)(?=.*plate)(?=.*armor).*$/i,
-			ac: 19,
-			type: "heavy",
-			stealthdis: true,
-			weight: 65,
-			strReq: 15,
-			selectNow: true,
-		},
+	chooseGear : {
+		type : "armor",
+		prefixOrSuffix : ["between", "Demon", "Armor +1"],
+		descriptionChange : ["prefix", "armor +1"],
 	},
 	weaponsAdd: ["Demon Armor Claws"],
 	weaponOptions: [{
@@ -4720,7 +4556,7 @@ MagicItemsList["lute of thunderous thumping"] = {
 		atkCalc: [
 			function (fields, v, output) {
 				if (classes.known.bard && (/lute of thunderous thumping/i).test(v.WeaponTextName)) {
-					output.mod += What('Cha Mod')
+					output.mod += What('Cha Mod');
 				}
 			},
 			"I can wield this reinforced lute as a magic Club that deals an extra 2d8 Thunder damage on a hit. As a bard, I can also use Charisma instead of Strength for its attacks.",
@@ -5007,8 +4843,9 @@ MagicItemsList["mithral armor"] = {
 		excludeCheck: function (inObjKey, inObj) {
 			return !(/medium|heavy/i).test(inObj.type) || (/hide/i).test(inObj.name);
 		},
-		descriptionChange: ["prefix", "armor"]
-	}
+		descriptionChange: ["prefix", "armor"],
+		noStealthDis : /mithral/i,
+	},
 };
 MagicItemsList["moon-touched sword"] = {
 	name: "Moon-Touched Sword",
