@@ -2334,7 +2334,7 @@ MagicItemsList["dwarven plate"] = {
 	description : "While wearing this armor, I gain a +2 bonus to AC. In addition, if an effect moves me against my will along the ground, I can use my reaction to reduce the distance I am moved by up to 10 ft.",
 	descriptionFull : "While wearing this armor, you gain a +2 bonus to Armor Class. In addition, if an effect moves you against your will along the ground, you can take a Reaction to reduce the distance you are moved by up to 10 feet.",
 	action : [["reaction", ""]],
-	choices: ["Half Plate", "Plate"],
+	choices : ["Half Plate", "Plate"],
 	"half plate": {
 		description : "While wearing this half plate armor, I gain a +2 bonus to AC. In addition, if an effect moves me against my will along the ground, I can use my reaction to reduce the distance I am moved by up to 10 ft.",
 		descriptionFull : "While wearing this half plate armor, you gain a +2 bonus to Armor Class. In addition, if an effect moves you against your will along the ground, you can take a Reaction to reduce the distance you are moved by up to 10 feet.",
@@ -4729,6 +4729,9 @@ MagicItemsList["mariner's armor"] = {
 	description: "While wearing this armor, I have a Swim speed equal to my Speed. In addition, if I start my turn underwater with 0 hit points, I immediately regain 1d4 hit points. The armor is decorated with fish and shell motifs.",
 	descriptionFull: "While wearing this armor, you have a Swim speed equal to your Speed. In addition, whenever you start your turn underwater with 0 hit points, you immediately regain 1d4 hit points. The armor can't heal anyone again until the next dawn. The armor is decorated with fish and shell motifs.",
 	allowDuplicates: true,
+	limfeaname : "Mariner's Armor : Undersea Revival (1d4)",
+	usages : 1,
+	recovery : "Dawn",
 	chooseGear: {
 		type: "armor",
 		prefixOrSuffix: ["brackets"],
@@ -5191,7 +5194,7 @@ MagicItemsList["plate armor of etherealness"] = {
 	attunement: true,
 	description: "While you’re wearing this armor, you can take a Magic action and use a command word to gain the effect of the Etherealness spell. The spell ends immediately if you remove the armor or take a Magic action to repeat the command word.",
 	descriptionFull: "While you’re wearing this armor, you can take a Magic action and use a command word to gain the effect of the Etherealness spell. The spell ends immediately if you remove the armor or take a Magic action to repeat the command word. This property of the armor can’t be used again until the next dawn.\n Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body.",
-	choices: ["Half Plate", "Plate"],
+	choices : ["Half Plate", "Plate"],
 	"half plate": {
 		description: "While you’re wearing this half plate armor, you can take a Magic action and use a command word to gain the effect of the Etherealness spell. The spell ends immediately if you remove the armor or take a Magic action to repeat the command word.",
 		descriptionFull: "While you’re wearing this half platearmor, you can take a Magic action and use a command word to gain the effect of the Etherealness spell. The spell ends immediately if you remove the armor or take a Magic action to repeat the command word. This property of the armor can’t be used again until the next dawn.\n Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body.",
@@ -5365,7 +5368,7 @@ MagicItemsList["potion of giant strength"] = {
 	descriptionFull: "When you drink this potion, your Strength score changes for 1 hour. The type of giant determines the score (see the table below). The potion has no effect on you if your Strength is equal to or greater than that score.\n   This potion’s transparent liquid has floating in it a sliver of light resembling a giant’s fingernail. The potion of frost giant strength and the potion of stone giant strength have the same effect.\n\n" + toUni("Type\t\tStr\tRarity") + "\nHill giant\t\t21\tUncommon\nStone/frost giant\t23\tRare\nFire giant   \t25\tRare\nCloud giant\t27\tVery rare\nStorm giant\t29\tLegendary",
 	weight: 0.5,
 	allowDuplicates: true,
-	choices: ["Hill (Str 21, uncommon)", "Frost (Str 23, rare)", "Stone (Str 23, rare)", "Fire (Str 25, rare)", "Cloud (Str 27, very rare)", "Storm (Str 29, legendary)"],
+	choices : ["Hill (Str 21, uncommon)", "Frost (Str 23, rare)", "Stone (Str 23, rare)", "Fire (Str 25, rare)", "Cloud (Str 27, very rare)", "Storm (Str 29, legendary)"],
 	"hill (str 21, uncommon)": {
 		name: "Potion of Hill Giant Strength",
 		sortname: "Potion of Giant Strength, Hill (Str 21)",
@@ -5443,7 +5446,7 @@ MagicItemsList["potion of healing"] = {
 	descriptionFull: "You regain Hit Points when you drink this potion. The number of Hit Points depends on the potion’s rarity, as shown in the table below. Whatever its potency, the potion's red liquid glimmers when agitated.",
 	weight: 0.5,
 	allowDuplicates: true,
-	choices: ["Healing (2d4+2, common)", "Greater Healing (4d4+4, uncommon)", "Superior Healing (8d4+8, rare)", "Supreme Healing (10d4+20, very rare)"],
+	choices : ["Healing (2d4+2, common)", "Greater Healing (4d4+4, uncommon)", "Superior Healing (8d4+8, rare)", "Supreme Healing (10d4+20, very rare)"],
 	"healing (2d4+2, common)": {
 		name: "Potion of Healing  ",
 		rarity: "common",
@@ -5556,7 +5559,7 @@ MagicItemsList["potion of resistance"] = {
 	descriptionFull: "When you drink this potion, you gain resistance to one type of damage for 1 hour. The DM chooses the type or determines it randomly from the options below.\n\n" + toUni("d10\tType\t\td10\tType") + "\n 1\tAcid\t\t 6\tNecrotic\n 2\tCold\t\t 7\tPoison\n 3\tFire\t\t 8\tPsychic\n 4\tForce\t\t 9\tRadiant\n 5\tLightning   \t 10\tThunder",
 	weight: 0.5,
 	allowDuplicates: true,
-	choices: ["Acid", "Cold", "Fire", "Force", "Lightning", "Necrotic", "Poison", "Psychic", "Radiant", "Thunder"],
+	choices : ["Acid", "Cold", "Fire", "Force", "Lightning", "Necrotic", "Poison", "Psychic", "Radiant", "Thunder"],
 	choicesNotInMenu: true,
 	"acid": {
 		name: "Potion of Acid Resistance",
@@ -5660,7 +5663,7 @@ MagicItemsList["quaal's feather token"] = {
 		"\n21-35\tBird\tRare   \t66-90\tTree\tUncommon" +
 		"\n36-50\tFan\tUncommon   \t91-00\tWhip\tRare",
 	allowDuplicates: true,
-	choices: ["Anchor (Uncommon)", "Bird (Rare)", "Fan (Uncommon)", "Swan Boat (Rare)", "Tree (Uncommon)", "Whip (Rare)"],
+	choices : ["Anchor (Uncommon)", "Bird (Rare)", "Fan (Uncommon)", "Swan Boat (Rare)", "Tree (Uncommon)", "Whip (Rare)"],
 	"anchor (uncommon)": {
 		description: "You can take a Magic action to touch the token to a boat or ship. For the next 24 hours, the vessel can’t be moved by any means. Touching the token to the vessel again ends the effect. When the effect ends, the token disappears.",
 		descriptionFull: "You can take a Magic action to touch the token to a boat or ship. For the next 24 hours, the vessel can’t be moved by any means. Touching the token to the vessel again ends the effect. When the effect ends, the token disappears.",
@@ -5791,7 +5794,7 @@ MagicItemsList["ring of elemental command"] = {
 	usages: 5,
 	recovery: "dawn",
 	additional: "regains 1d4+1",
-	choices: ["air", "earth", "fire", "water"],
+	choices : ["air", "earth", "fire", "water"],
 	"air": {
 		name: "Ring of Elemental Command (Air)",
 		sortname: "Ring of Elemental Command, Air",
@@ -6070,7 +6073,7 @@ MagicItemsList["ring of resistance"] = {
 		"\n   9\tRadiant\t\tTopaz" +
 		"\n 10\tThunder\t\tSpinel",
 	attunement: false,
-	choices: ["Acid", "Cold", "Fire", "Force", "Lightning", "Necrotic", "Poison", "Psychic", "Radiant", "Thunder"],
+	choices : ["Acid", "Cold", "Fire", "Force", "Lightning", "Necrotic", "Poison", "Psychic", "Radiant", "Thunder"],
 	choicesNotInMenu: true,
 	"acid": {
 		name: "Ring of Acid Resistance",
@@ -6654,7 +6657,7 @@ MagicItemsList["rod of the pact keeper, +1, +2, or +3"] = {
 	limfeaname: "Rod of the Pact Keeper (spell slot)",
 	action: [["action", ""]],
 	allowDuplicates: true,
-	choices: ["+1 Rod (uncommon)", "+2 Rod (rare)", "+3 Rod (very rare)"],
+	choices : ["+1 Rod (uncommon)", "+2 Rod (rare)", "+3 Rod (very rare)"],
 	"+1 rod (uncommon)": {
 		name: "Rod of the Pact Keeper +1",
 		rarity: "uncommon",
@@ -6823,7 +6826,7 @@ MagicItemsList["scroll of protection"] = {
 		"36-45\tElementals\t86-90\tPlants",
 		"46-50\tHumonoids\t91-00\tUndead",
 	].join("\n") + "\n Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, creatures of the specified type can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends.\n As a Magic action, a creature within 5 feet of the Emanation can attempt to overcome it, which forces the creature to make a DC 15 Charisma saving throw. On a successful save, the creature ceases to be affected by the Emanation.\n",
-	choices: ["Aberrations", "Beasts", "Celestials", "Constructs", "Dragons", "Elementals", "Humanoids", "Fey", "Fiends", "Giants", "Monstrosities", "Oozes", "Plants", "Undead"],
+	choices : ["Aberrations", "Beasts", "Celestials", "Constructs", "Dragons", "Elementals", "Humanoids", "Fey", "Fiends", "Giants", "Monstrosities", "Oozes", "Plants", "Undead"],
 	"aberrations": {
 		name: "Scroll of Protection from Aberrations",
 		description: "Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, Aberrations can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends."
@@ -6895,7 +6898,7 @@ MagicItemsList["scroll of titan summoning"] = {
 		"31-45\tColossus\t\t91-00\tTarrasque",
 		"46-60\tElemental Cataclysm\t",
 	].join("\n") + "\nUsing an Magic action to read the scroll a particular titan named on the scroll appears in an unoccupied space on the ground or in water that you can see within 1 mile of yourself.\n   The titan is hostile toward all other creatures and disappears when it drops to 0 HP.\n   If the titan is summoned into a space that isn't large enough to contain it, the summoning fails, and the scroll is wasted.",
-	choices: ["Animal Lord", "Blob of Annihilation", "Colossus", "Elemental Cataclysm", "Empyrean", "Kraken", "Tarrasque"],
+	choices : ["Animal Lord", "Blob of Annihilation", "Colossus", "Elemental Cataclysm", "Empyrean", "Kraken", "Tarrasque"],
 	"animal lord": {
 		name: "Scroll of Animal Lord Summoning",
 		description: "Once, as a Magic action, I can use this to summon an Animal Lord in an unoccupied space on the ground or in water that I can see within 1 mile of myself. The titan is hostile towards all other creatures and disappears when it drops to 0 HP. If summoned into a space that isn't large enough to contain it, it fails and is wasted."
@@ -7176,7 +7179,7 @@ MagicItemsList["spell scroll"] = {
 			"When casting a spell using a Spell Scroll, no Material components are needed other than the Spell Scroll itself."
 		]
 	},
-	choices: ["Cantrip", "1st-level", "2nd-level", "3rd-level", "4th-level", "5th-level", "6th-level", "7th-level", "8th-level", "9th-level", "mixed levels"],
+	choices : ["Cantrip", "1st-level", "2nd-level", "3rd-level", "4th-level", "5th-level", "6th-level", "7th-level", "8th-level", "9th-level", "mixed levels"],
 	"cantrip": {
 		name: "Spell Scroll (cantrip)",
 		sortname: "Spell Scroll  (cantrip)",
@@ -8915,7 +8918,7 @@ MagicItemsList["wand of the war mage, +1, +2, or +3"] = {
 	weight: 1,
 	prerequisite: "Requires attunement by a spellcaster",
 	prereqeval: function (v) { return v.isSpellcaster; },
-	choices: ["+1 to spell attacks (uncommon)", "+2 to spell attacks (rare)", "+3 to spell attacks (very rare)"],
+	choices : ["+1 to spell attacks (uncommon)", "+2 to spell attacks (rare)", "+3 to spell attacks (very rare)"],
 	"+1 to spell attacks (uncommon)": {
 		name: "Wand of the War Mage +1",
 		nameTest: /^(?=.*war mage)(?=.*(arcane focus|rod|wand|staff))(?=.*\+1)(?!.*\+2)(?!.*\+3).*$/i,
@@ -9162,7 +9165,7 @@ MagicItemsList["weapon, +1, +2, or +3"] = {
 		prefixOrSuffix: "brackets",
 		descriptionChange: ["replace", "weapon"]
 	},
-	choices: ["+1 Weapon (uncommon)", "+2 Weapon (rare)", "+3 Weapon (very rare)"],
+	choices : ["+1 Weapon (uncommon)", "+2 Weapon (rare)", "+3 Weapon (very rare)"],
 	"+1 weapon (uncommon)": {
 		name: "Weapon +1",
 		nameTest: "+1 Weapon",
@@ -9351,7 +9354,7 @@ MagicItemsList["wraps of unarmed power"] = {
 	type: "wondrous item",
 	description: "While wearing these wraps, you have a bonus to attack rolls and damage rolls made with your Unarmed Strikes. The bonus is determined by the wraps’ rarity, and those strikes deal your choice of Force damage or their normal damage type. The bonus is determined by rarity: uncommon (+1), rare (+2), or very rare (+3).",
 	descriptionFull: "While wearing these wraps, you have a bonus to attack rolls and damage rolls made with your Unarmed Strikes. The bonus is determined by the wraps’ rarity, and those strikes deal your choice of Force damage or their normal damage type. Rarity/Bonus: uncommon (+1), rare (+2), or very rare (+3).",
-	choices: ["+1 Wraps of Unarmed Power (uncommon)", "+2 Wraps of Unarmed Power (rare)", "+3 Wraps of Unarmed Power (very rare)"],
+	choices : ["+1 Wraps of Unarmed Power (uncommon)", "+2 Wraps of Unarmed Power (rare)", "+3 Wraps of Unarmed Power (very rare)"],
 	"+1 wraps of unarmed power (uncommon)": {
 		name: "Wraps of Unarmed Power +1",
 		nameTest: "+1 Wraps of Unarmed Power",
