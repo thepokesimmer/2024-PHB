@@ -6077,52 +6077,52 @@ MagicItemsList["ring of resistance"] = {
 	choicesNotInMenu: true,
 	"acid": {
 		name: "Ring of Acid Resistance",
-		description: "While wearing this ring set with a Pearl and attuned to it, you have resistance to acid damage.",
+		description: "While wearing this ring set with a Pearl, you have resistance to acid damage.",
 		dmgres: ["Acid"]
 	},
 	"cold": {
 		name: "Ring of Cold Resistance",
-		description: "While wearing this ring set with a Tourmaline and attuned to it, you have resistance to cold damage.",
+		description: "While wearing this ring set with a Tourmaline, you have resistance to cold damage.",
 		dmgres: ["Cold"]
 	},
 	"fire": {
 		name: "Ring of Fire Resistance",
-		description: "While wearing this ring set with a Garnet and attuned to it, you have resistance to fire damage.",
+		description: "While wearing this ring set with a Garnet, you have resistance to fire damage.",
 		dmgres: ["Fire"]
 	},
 	"force": {
 		name: "Ring of Force Resistance",
-		description: "While wearing this ring set with a Sapphire and attuned to it, you have resistance to force damage.",
+		description: "While wearing this ring set with a Sapphire, you have resistance to force damage.",
 		dmgres: ["Force"]
 	},
 	"lightning": {
 		name: "Ring of Lightning Resistance",
-		description: "While wearing this ring set with a Citrine and attuned to it, you have resistance to lightning damage.",
+		description: "While wearing this ring set with a Citrine, you have resistance to lightning damage.",
 		dmgres: ["Lightning"]
 	},
 	"necrotic": {
 		name: "Ring of Necrotic Resistance",
-		description: "While wearing this ring set with Jet and attuned to it, you have resistance to necrotic damage.",
+		description: "While wearing this ring set with Jet, you have resistance to necrotic damage.",
 		dmgres: ["Necrotic"]
 	},
 	"poison": {
 		name: "Ring of Poison Resistance",
-		description: "While wearing this ring set with an Amethyst and attuned to it, you have resistance to poison damage.",
+		description: "While wearing this ring set with an Amethyst, you have resistance to poison damage.",
 		dmgres: ["Poison"]
 	},
 	"psychic": {
 		name: "Ring of Psychic Resistance",
-		description: "While wearing this ring set with Jade and attuned to it, you have resistance to psychic damage.",
+		description: "While wearing this ring set with Jade, you have resistance to psychic damage.",
 		dmgres: ["Psychic"]
 	},
 	"radiant": {
 		name: "Ring of Radiant Resistance",
-		description: "While wearing this ring set with a Topaz and attuned to it, you have resistance to radiant damage.",
+		description: "While wearing this ring set with a Topaz, you have resistance to radiant damage.",
 		dmgres: ["Radiant"]
 	},
 	"thunder": {
 		name: "Ring of Thunder Resistance",
-		description: "While wearing this ring set with a Spinel and attuned to it, you have resistance to thunder damage.",
+		description: "While wearing this ring set with a Spinel, you have resistance to thunder damage.",
 		dmgres: ["Thunder"]
 	}
 };
