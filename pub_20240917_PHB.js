@@ -134,6 +134,7 @@ function legacySubClassRefactor(classKey, subClassKey, nSC) {
     archiveSubClass(classKey, prv, newClassName);
     nSC.regExpSearch = newRegex;
   }
+    return nSC;
 }
 function legacyRaceRefactor(raceKey, newRace){
   if(newRace.replaces){
@@ -1808,9 +1809,9 @@ legacyClassRefactor("druid", {
       },
       "warden": {
         name: "Warden",
-        armorProfs: [false, false, true, false],
+        armorProfs: [false, true, false, false],
         weaponProfs: [false, true],
-        description: "Trained for battle, I gain proficiency with Martial weapons and training with Heavy armor."
+        description: "Trained for battle, I gain proficiency with Martial weapons and training with Medium armor."
       },
       description: desc([
         "Use the 'Choose Feature' button to select a Primal Order option.",
@@ -4924,7 +4925,7 @@ legacyClassRefactor("ranger", {
 			source: [["P24", 121]],
 			minlevel: 6,
 			speed: {
-				walk: "+5",
+				walk: "+10",
 				climb: { spd: "walk", enc: "walk" },
 				swim: { spd: "walk", enc: "walk" },
 			},
@@ -5149,12 +5150,9 @@ legacySubClassRefactor("ranger", "gloom stalker", {
 			name: "Dread Ambusher",
 			source: [["P24", 125]],
 			minlevel: 3,
-			addMod: [{
-				type: "skill",
-				field: "Init",
-				mod: "Wis Mod",
-				text: "I can add my Wisdom modifier to my initiative rolls."
-			}],
+			addMod : [
+				{ type : "skill", field : "Init", mod : "Wis", text : "I can add my Wisom modifier to initiative rolls." },
+			],
 			usages: "Wis Mod / ",
 			usagescalc: "event.value = Math.max(1, What('Wis Mod'));",
 			recovery: "LR",
@@ -10306,16 +10304,17 @@ FeatsList["great weapon master"] = {
     "Heavy Weapon Master : When I hit a creature with a weapon that has the Heavy property as part of the Attack action on my turn, I can cause the weapon to deal extra damage to the target. The extra damage equals my Proficiency Bonus.",
     "Hew : Immediately after I score a Critical Hit with a Melee weapon or reduce a creature to 0 Hit Points with one, I can make one attack with the same weapon as a Bonus Action",
   ]),
-  calcChanges: {
-    atkCalc: [
-      function (fields, v, output) {
-        if (v.isMeleeWeapon && (/heavy/i).test(fields.Description) && (/\bgwm\b|power.{0,3}attack|great.{0,3}weapon.{0,3}master/i).test(v.WeaponText)) {
-          output.extraDmg += Math.max(Number(What("Prof")), 1);
-        }
-      },
-      "If I include the words 'Power Attack', 'Great Weapon Master', or just 'GWM' in a heavy melee weapon's name or description, the calculation will put add + Proficiency Bonus on its Damage."
-    ]
-  },
+  action : [["bonus action", " (Hew)"]],
+  calcChanges : {
+		atkCalc : [
+			function (fields, v, output) {
+				if (v.isMeleeWeapon && (/heavy/i).test(fields.Description) && (/\bgwm\b|power.{0,3}attack|great.{0,3}weapon.{0,3}master/i).test(v.WeaponText)) {
+					output.extraDmg += How("Proficiency Bonus");
+				};
+			},
+			"If I include the words 'Power Attack', 'Great Weapon Master', or just 'GWM' in a heavy melee weapon's name or description, the attack's damage will gain a bonus equal to my Proficiency Bonus."
+		]
+	},
   prerequisite: "Level 4 and Strength 13 or higher",
   prereqeval: function (v) {
     return v.characterLevel >= 4 && What('Str') >= 13;
