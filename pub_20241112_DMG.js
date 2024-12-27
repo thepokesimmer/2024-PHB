@@ -6026,10 +6026,10 @@ MagicItemsList["ring of mind shielding"] = {
 	type: "ring",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "This ring makes you immune to magic that allows others to read my thoughts, determine if I'm lying, know my alignment or creature type. Telepathy only works if I allow it. As a Magic action, I can cause it to become imperceptible as long as I wear it and not die, or perceptible again. If I die while wearing it, my soul enters it.",
+	description: "This ring makes you immune to magic that allows others to read my thoughts, determine if lying, know my alignment or creature type. Telepathy only works if I allow it. As a Magic action, I can cause it to become imperceptible as long as I wear it and not die, or perceptible again. If I die while wearing it, my soul enters it.",
 	descriptionFull: "While wearing this ring, you are immune to magic that allows other creatures to read your thoughts, determine whether you are lying, know your alignment, or know your creature type. Creatures can telepathically communicate with you only if you allow it.\n   You can use Magic action to cause the ring to become imperceptible until you use another action to make it perceptible, until you remove the ring, or until you die.\n   If you die while wearing the ring, your soul enters it, unless it already houses a soul. You can remain in the ring or depart for the afterlife. As long as your soul is in the ring, you can telepathically communicate with any creature wearing it. A wearer can't prevent this telepathic communication.",
 	attunement: true,
-	action: [["action", "(im)perceptible"]],
+	action: [["action", " (im)perceptible"]],
 	savetxt: { immune: ["magic reading my thoughts, truthfullness, alignment, or type"] }
 };
 MagicItemsList["ring of protection"] = {
