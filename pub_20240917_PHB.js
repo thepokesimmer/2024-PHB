@@ -20168,7 +20168,7 @@ CompanionList["familiar"] = {
 	source : [["P24", 272]],
 	action : [
 		["action", "Familiar (dismiss/reappear)"],
-		["action", "Use familiar's senses"]
+		["bonus action", "Use familiar's senses"]
 	],
 	notes : [{
 		name : "Summon a spirit that serves as a familiar",
