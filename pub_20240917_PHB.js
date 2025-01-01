@@ -1402,7 +1402,7 @@ legacyClassRefactor("cleric", {
           {type: "skill", field: "Arcana", mod: "Wis", text: "I can add my Wisdom modifier to Arcana rolls."},
 		  {type: "skill", field: "Religion", mod: "Wis", text: "I can add my Wisdom modifier to Religion rolls."},
         ],
-        description: "I know one extra cantrip from the Cleric spell list and can add my Wis mod (min 1) to my Int (Arcana) checks.",
+        description: "I know one extra cantrip from the Cleric spell list and can add my Wis mod (min 1) to my Int (Arcana and Religion) checks.",
       },
       description: desc([
         "I have dedicated myself to a sacred role. Use 'Choose Feature' above to select one.",
@@ -1805,7 +1805,7 @@ legacyClassRefactor("druid", {
           {type: "skill", field: "Arcana", mod: "Wis", text: "I can add my Wisdom modifier to Arcana rolls."},
 		  {type: "skill", field: "Nature", mod: "Wis", text: "I can add my Wisdom modifier to Nature rolls."},
         ],
-        description: "I know one extra cantrip from the Druid spell list. I add my wisdom modifier to my Intelligence (Arcana) checks.",
+        description: "I know one extra cantrip from the Druid spell list. I add my wisdom modifier to my Intelligence (Arcana and Nature) checks.",
       },
       "warden": {
         name: "Warden",
