@@ -4025,7 +4025,7 @@ MagicItemsList["immovable rod"] = {
 };
 MagicItemsList["instrument of illusions"] = { // contains contributions by AelarTheElFRogue
 	name : "Instrument of Illusions",
-	source : [["D24", "-"]],
+	source : [["D24", 271]],
 	magicItemTable : "?",
 	type : "wondrous item (instrument)",
 	rarity : "common",
@@ -4047,7 +4047,7 @@ MagicItemsList["instrument of illusions"] = { // contains contributions by Aelar
 };
 MagicItemsList["instrument of scribing"] = {
 	name : "Instrument of Scribing",
-	source : [["D24", "-"]],
+	source : [["D24", 271]],
 	magicItemTable : "?",
 	type : "wondrous item (instrument)",
 	rarity : "common",
@@ -4071,7 +4071,7 @@ MagicItemsList["instrument of scribing"] = {
 };
 MagicItemsList["instrument of the bards"] = {
 	name : "Instrument of the Bards",
-	source : [["D24", "-"]],
+	source : [["D24", 272]],
 	type : "wondrous item (instrument)",
 	description : "When I play this exquisite magical instrument, I can use it to cast a set of spells, each once per dawn, using my spellcasting ability and spell save DC. If I play without attuning, I must pass a DC 15 Wis save or take 2d4 Psychic damage.",
 	descriptionFull : "An Instrument of the Bards is superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a bard college. The Instruments of the Bards table lists the spells common to all instruments, as well as the spells specific to each one and its rarity. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 Psychic damage.\n   You can play the instrument to cast one of its spells. Once the instrument has been used to cast a spell, it can’t be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC.",
@@ -4210,7 +4210,7 @@ MagicItemsList["instrument of the bards"] = {
 };
 MagicItemsList["ioun stone"] = {
 	name : "Ioun Stone",
-	source : [["D24", "-"]],
+	source : [["D24", 273]],
 	type : "wondrous item",
 	attunement : true,
 	description : "As a Magic action, I can make an ioun stone orbit my head at 1d3 ft or retrieve it. Others can catch it as a Utilize action with an attack or Acrobatics check (AC/DC 24). It has 10 HP and resistance to all damage. Different stones grant different benefits.",
@@ -6764,7 +6764,7 @@ MagicItemsList["ruby of the war mage"] = {
 };
 MagicItemsList["saddle of the cavalier"] = {
 	name: "Saddle of the Cavalier",
-	source: [["DMG2024", 302]],
+	source: [["D24", 302]],
 	type: "wondrous item",
 	rarity: "uncommon",
 	magicItemTable: "?",
@@ -6774,7 +6774,7 @@ MagicItemsList["saddle of the cavalier"] = {
 };
 MagicItemsList["scarab of protection"] = {
 	name: "Scarab of Protection",
-	source: [["DMG2024", 302]],
+	source: [["D24", 302]],
 	type: "wondrous item",
 	rarity: "legendary",
 	magicItemTable: "?",
@@ -6789,7 +6789,7 @@ MagicItemsList["scarab of protection"] = {
 };
 MagicItemsList["scimitar of speed"] = {
 	name: "Scimitar of Speed",
-	source: [["DMG2024", 302]],
+	source: [["D24", 302]],
 	type: "weapon (scimitar)",
 	rarity: "very rare",
 	magicItemTable: "?",
@@ -6803,14 +6803,14 @@ MagicItemsList["scimitar of speed"] = {
 		baseWeapon: "scimitar",
 		regExpSearch: /^(?=.*scimitar)(?=.*speed).*$/i,
 		name: "Scimitar of Speed",
-		source: [["DMG2024", "-"]],
+		source: [["D24", "-"]],
 		description: "Finesse, Light, Nick; Extra attack as Bonus Action",
 		modifiers: [2, 2]
 	}
 };
 MagicItemsList["scroll of protection"] = {
 	name: "Scroll of Protection",
-	source: [["DMG2024", 302]],
+	source: [["D24", 302]],
 	type: "scroll",
 	rarity: "rare",
 	magicItemTable: "?",
@@ -6886,7 +6886,7 @@ MagicItemsList["scroll of protection"] = {
 };
 MagicItemsList["scroll of titan summoning"] = {
 	name: "Scroll of Titan Summoning",
-	source: [["DMG2024", 303]],
+	source: [["D24", 303]],
 	type: "scroll",
 	rarity: "legendary",
 	magicItemTable: "?",
@@ -6930,7 +6930,7 @@ MagicItemsList["scroll of titan summoning"] = {
 };
 MagicItemsList["sending stones"] = {
 	name: "Sending Stones",
-	source: [["DMG2024", 303]],
+	source: [["D24", 303]],
 	type: "wondrous item",
 	rarity: "uncommon",
 	magicItemTable: "?",
@@ -6953,7 +6953,7 @@ MagicItemsList["sending stones"] = {
 };
 MagicItemsList["sentinel shield"] = {
 	name: "Sentinel Shield",
-	source: [["DMG2024", 303]],
+	source: [["D24", 303]],
 	type: "shield",
 	rarity: "uncommon",
 	magicItemTable: "?",
@@ -6966,7 +6966,7 @@ MagicItemsList["sentinel shield"] = {
 };
 MagicItemsList["shield, +1, +2, or +3"] = {
 	name: "Shield, +1, +2, or +3",
-	source: [["DMG2024", 303]],
+	source: [["D24", 303]],
 	type: "shield",
 	description: "While holding this Shield, you have a bonus to AC determined by the Shield's rarity, in addition to the Shield's normal bonus to AC.",
 	descriptionFull: "While holding this Shield, you have a bonus to Armor Class determined by the Shield’s rarity, in addition to the Shield’s normal bonus to AC.",
@@ -7002,7 +7002,7 @@ MagicItemsList["shield, +1, +2, or +3"] = {
 };
 MagicItemsList["shield of expression"] = {
 	name: "Shield of Expression",
-	source: [["DMG2024", 303]],
+	source: [["D24", 303]],
 	magicItemTable: "?",
 	type: "shield",
 	rarity: "common",
@@ -7014,7 +7014,7 @@ MagicItemsList["shield of expression"] = {
 };
 MagicItemsList["shield of missile attraction"] = {
 	name: "Shield of Missile Attraction",
-	source: [["DMG2024", 304]],
+	source: [["D24", 304]],
 	type: "shield",
 	rarity: "rare",
 	magicItemTable: "?",
@@ -7028,7 +7028,7 @@ MagicItemsList["shield of missile attraction"] = {
 };
 MagicItemsList["shield of the cavalier"] = {
 	name: "Shield of the Cavalier",
-	source: [["DMG2024", 304]],
+	source: [["D24", 304]],
 	type: "shield",
 	rarity: "very rare",
 	magicItemTable: "?",
@@ -7046,7 +7046,7 @@ MagicItemsList["shield of the cavalier"] = {
 	weaponOptions: [{
 		regExpSearch: /^(?=.*cavalier)(?=.*shield).*$/i,
 		name: "Shield of the Cavalier Bash",
-		source: [["DMG2024", 304]],
+		source: [["D24", 304]],
 		ability: 1,
 		type: 'AlwaysProf',
 		damage: ['2d6 + 2' + What('Str Mod'), '', 'force'],
@@ -7067,7 +7067,7 @@ MagicItemsList["shield of the cavalier"] = {
 };
 MagicItemsList["silvered weapon"] = {
 	name: "Silvered Weapon",
-	source: [["DMG2024", 304]],
+	source: [["D24", 304]],
 	type: "Weapon (simple or martial weapon)",
 	rarity: "common",
 	magicItemTable: "?",
@@ -7093,7 +7093,7 @@ MagicItemsList["silvered weapon"] = {
 };
 MagicItemsList["slippers of spider climbing"] = {
 	name: "Slippers of Spider Climbing",
-	source: [["DMG2024", 304]],
+	source: [["D24", 304]],
 	type: "wondrous item",
 	rarity: "uncommon",
 	magicItemTable: "?",
@@ -7105,7 +7105,7 @@ MagicItemsList["slippers of spider climbing"] = {
 MagicItemsList["smoldering armor"] = {
 	name: "Smoldering Armor",
 	nameTest: "Smoldering",
-	source: [["DMG2024", 305]],
+	source: [["D24", 305]],
 	magicItemTable: "?",
 	type: "armor (light, medium, or heavy)",
 	rarity: "common",
@@ -7119,7 +7119,7 @@ MagicItemsList["smoldering armor"] = {
 };
 MagicItemsList["sovereign glue"] = {
 	name: "Sovereign Glue",
-	source: [["DMG2024", 305]],
+	source: [["D24", 305]],
 	type: "wondrous item",
 	rarity: "legendary",
 	magicItemTable: "?",
@@ -7131,7 +7131,7 @@ MagicItemsList["sovereign glue"] = {
 };
 MagicItemsList["spellguard shield"] = {
 	name: "Spellguard Shield",
-	source: [["DMG2024", 305]],
+	source: [["D24", 305]],
 	type: "shield",
 	rarity: "very rare",
 	magicItemTable: "?",
@@ -7145,7 +7145,7 @@ MagicItemsList["spellguard shield"] = {
 };
 MagicItemsList["spell scroll"] = {
 	name: "Spell Scroll",
-	source: [["DMG2024", 305]],
+	source: [["D24", 305]],
 	type: "scroll",
 	description: "If the spell on this scroll is on your spell list, you can cast it without its Material components using its normal casting time. If the spell is of a higher level than you can cast, you can make an ability check using my spellcasting ability (DC = 10 + spell level). The spell level on the scroll determins saving throw DC, attack bonus, and rarity.",
 	descriptionFull: "A Spell Scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your spell list, you can read the scroll and cast its spell without Material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell’s normal casting time. Once the spell is cast, the scroll crumbles to dust. If the casting is interrupted, the scroll isn’t lost.\n   If the spell is on your spell list but of a higher level than you can normally cast, you make an ability check using your spellcasting ability to determine whether you cast the spell. The DC equals 10 plus the spell’s level. On a failed check, the spell disappears from the scroll with no other effect.\n   The level of the spell on the scroll determines the spell’s saving throw DC and attack bonus, as well as the scroll’s rarity, as shown in the following table.\n\n" + toUni("Spell Level\tRarity\t\tSave DC\tAttack Bonus") + [
@@ -7355,7 +7355,7 @@ MagicItemsList["spell scroll"] = {
 };
 MagicItemsList["sphere of annihilation"] = {
 	name: "Sphere of Annihilation",
-	source: [["DMG2024", 306]],
+	source: [["D24", 306]],
 	type: "wondrous item",
 	rarity: "legendary",
 	magicItemTable: "?",
@@ -7377,7 +7377,7 @@ MagicItemsList["sphere of annihilation"] = {
 };
 MagicItemsList["spirit board"] = {
 	name: "Spirit Board",
-	source: [["DMG2024", 306]],
+	source: [["D24", 306]],
 	type: "wondrous item",
 	rarity: "very rare",
 	magicItemTable: "?",
@@ -7402,7 +7402,7 @@ MagicItemsList["spirit board"] = {
 };
 MagicItemsList["staff of adornment"] = {
 	name: "Staff of Adornment",
-	source: [["DMG2024", 306]],
+	source: [["D24", 306]],
 	magicItemTable: "?",
 	type: "staff",
 	rarity: "common",
@@ -7412,7 +7412,7 @@ MagicItemsList["staff of adornment"] = {
 };
 MagicItemsList["staff of birdcalls"] = {
 	name: "Staff of Birdcalls",
-	source: [["DMG2024", 307]],
+	source: [["D24", 307]],
 	magicItemTable: "?",
 	type: "staff",
 	rarity: "common",
@@ -7426,7 +7426,7 @@ MagicItemsList["staff of birdcalls"] = {
 };
 MagicItemsList["staff of charming"] = {
 	name: "Staff of Charming",
-	source: [["DMG2024", 307]],
+	source: [["D24", 307]],
 	type: "staff",
 	rarity: "rare",
 	magicItemTable: "?",
@@ -7461,7 +7461,7 @@ MagicItemsList["staff of charming"] = {
 };
 MagicItemsList["staff of fire"] = {
 	name: "Staff of Fire",
-	source: [["DMG2024", 307]],
+	source: [["D24", 307]],
 	type: "staff",
 	rarity: "very rare",
 	magicItemTable: "?",
@@ -7496,7 +7496,7 @@ MagicItemsList["staff of fire"] = {
 };
 MagicItemsList["staff of flowers"] = {
 	name: "Staff of Flowers",
-	source: [["DMG2024", 308]],
+	source: [["D24", 308]],
 	type: "staff",
 	rarity: "common",
 	description: "This staff has 10 charges, regaining 1d6+4 at dawn. As a Magic action, you can use 1 charge to cause a flower of my choice to sprout from a patch of earth or soil within 5 ft of yourself or from the staff itself. The flower is nonmagical and grows or withers as a normal flower would.",
@@ -7509,7 +7509,7 @@ MagicItemsList["staff of flowers"] = {
 };
 MagicItemsList["staff of frost"] = {
 	name: "Staff of Frost",
-	source: [["DMG2024", 308]],
+	source: [["D24", 308]],
 	type: "staff",
 	rarity: "very rare",
 	magicItemTable: "?",
@@ -7545,7 +7545,7 @@ MagicItemsList["staff of frost"] = {
 };
 MagicItemsList["staff of healing"] = {
 	name: "Staff of Healing",
-	source: [["DMG2024", 308]],
+	source: [["D24", 308]],
 	type: "staff",
 	rarity: "rare",
 	magicItemTable: "?",
@@ -7587,7 +7587,7 @@ MagicItemsList["staff of healing"] = {
 };
 MagicItemsList["staff of power"] = {
 	name: "Staff of Power",
-	source: [["DMG2024", 308]],
+	source: [["D24", 308]],
 	type: "staff",
 	rarity: "very rare",
 	magicItemTable: "?",
@@ -7666,7 +7666,7 @@ MagicItemsList["staff of power"] = {
 };
 MagicItemsList["staff of striking"] = {
 	name: "Staff of Striking",
-	source: [["DMG2024", 309]],
+	source: [["D24", 309]],
 	type: "staff",
 	rarity: "very rare",
 	magicItemTable: "?",
@@ -7689,7 +7689,7 @@ MagicItemsList["staff of striking"] = {
 };
 MagicItemsList["staff of swarming insects"] = {
 	name: "Staff of Swarming Insects",
-	source: [["DMG2024", 309]],
+	source: [["D24", 309]],
 	type: "staff",
 	rarity: "rare",
 	magicItemTable: "?",
@@ -7719,7 +7719,7 @@ MagicItemsList["staff of swarming insects"] = {
 };
 MagicItemsList["staff of the adder"] = {
 	name: "Staff of the Adder",
-	source: [["DMG2024", 309]],
+	source: [["D24", 309]],
 	type: "staff",
 	rarity: "uncommon",
 	magicItemTable: "?",
@@ -7745,7 +7745,7 @@ MagicItemsList["staff of the adder"] = {
 };
 MagicItemsList["staff of the magi"] = { // contains contributions by Pengsloth
 	name: "Staff of the Magi",
-	source: [["DMG2024", 310]],
+	source: [["D24", 310]],
 	type: "staff",
 	rarity: "legendary",
 	magicItemTable: "?",
@@ -7844,7 +7844,7 @@ MagicItemsList["staff of the magi"] = { // contains contributions by Pengsloth
 };
 MagicItemsList["staff of the python"] = {
 	name: "Staff of the Python",
-	source: [["DMG2024", 311]],
+	source: [["D24", 311]],
 	type: "staff",
 	rarity: "uncommon",
 	magicItemTable: "?",
@@ -7856,7 +7856,7 @@ MagicItemsList["staff of the python"] = {
 };
 MagicItemsList["staff of the woodlands"] = {
 	name: "Staff of the Woodlands",
-	source: [["DMG2024", 311]],
+	source: [["D24", 311]],
 	type: "staff",
 	rarity: "rare",
 	magicItemTable: "?",
@@ -7925,7 +7925,7 @@ MagicItemsList["staff of the woodlands"] = {
 };
 MagicItemsList["staff of thunder and lightning"] = {
 	name: "Staff of Thunder and Lightning",
-	source: [["DMG2024", 311]],
+	source: [["D24", 311]],
 	type: "staff",
 	rarity: "very rare",
 	magicItemTable: "?",
@@ -7983,7 +7983,7 @@ MagicItemsList["staff of thunder and lightning"] = {
 };
 MagicItemsList["staff of withering"] = {
 	name: "Staff of Withering",
-	source: [["DMG2024", 312]],
+	source: [["D24", 312]],
 	type: "staff",
 	rarity: "rare",
 	magicItemTable: "?",
@@ -8005,7 +8005,7 @@ MagicItemsList["staff of withering"] = {
 };
 MagicItemsList["stone of controlling earth elementals"] = {
 	name: "Stone of Controlling Earth Elementals",
-	source: [["DMG2024", 312]],
+	source: [["D24", 312]],
 	type: "wondrous item",
 	rarity: "rare",
 	magicItemTable: "?",
@@ -8032,7 +8032,7 @@ MagicItemsList["stone of controlling earth elementals"] = {
 };
 MagicItemsList["stone of good luck"] = {
 	name: "Stone of Good Luck",
-	source: [["DMG2024", 312]],
+	source: [["D24", 312]],
 	type: "wondrous item",
 	rarity: "uncommon",
 	magicItemTable: "?",
@@ -8047,7 +8047,7 @@ MagicItemsList["stone of good luck"] = {
 };
 MagicItemsList["sun blade"] = {
 	name: "Sun Blade",
-	source: [["DMG2024", 312]],
+	source: [["D24", 312]],
 	type: "weapon (longsword)",
 	rarity: "rare",
 	magicItemTable: "?",
@@ -8078,7 +8078,7 @@ MagicItemsList["sun blade"] = {
 };
 MagicItemsList["sword of answering"] = {
 	name: "Sword of Answering",
-	source: [["DMG2024", 313]],
+	source: [["D24", 313]],
 	type: "weapon (longsword)",
 	rarity: "legendary",
 	magicItemTable: "?",
@@ -8100,7 +8100,7 @@ MagicItemsList["sword of answering"] = {
 MagicItemsList["sword of life stealing"] = {
 	name: "Sword of Life Stealing",
 	nameTest: "of Life Stealing",
-	source: [["DMG2024", 314]],
+	source: [["D24", 314]],
 	type: "weapon (glaive, greatsword, longsword, rapier, scimitar, or shortsword)",
 	rarity: "rare",
 	magicItemTable: "?",
@@ -8132,7 +8132,7 @@ MagicItemsList["sword of life stealing"] = {
 MagicItemsList["sword of sharpness"] = {
 	name: "Sword of Sharpness",
 	nameTest: "of Sharpness",
-	source: [["DMG2024", 314]],
+	source: [["D24", 314]],
 	type: "weapon (glaive, greatsword, longsword, or scimitar)",
 	rarity: "very rare",
 	magicItemTable: "?",
@@ -8164,7 +8164,7 @@ MagicItemsList["sword of sharpness"] = {
 MagicItemsList["sword of vengeance"] = {
 	name: "Sword of Vengeance",
 	nameTest: "of Vengeance",
-	source: [["DMG2024", 314]],
+	source: [["D24", 314]],
 	type: "weapon (glaive, greatsword, longsword, rapier, scimitar, or shortsword)",
 	rarity: "uncommon",
 	magicItemTable: "?",
@@ -8203,7 +8203,7 @@ MagicItemsList["sword of vengeance"] = {
 MagicItemsList["sword of wounding"] = {
 	name: "Sword of Wounding",
 	nameTest: "of Wounding",
-	source: [["DMG2024", 314]],
+	source: [["D24", 314]],
 	type: "weapon (glaive, greatsword, longsword, rapier, scimitar, or shortsword)",
 	rarity: "rare",
 	magicItemTable: "?",
@@ -8234,7 +8234,7 @@ MagicItemsList["sword of wounding"] = {
 };
 MagicItemsList["sylvan talon"] = {
 	name: "Sylvan Talon",
-	source: [["DMG2024", 314]],
+	source: [["D24", 314]],
 	type: "weapon (dagger, rapier, scimitar, shortsword, sickle, or spear)",
 	rarity: "common",
 	magicItemTable: "?",
@@ -8264,7 +8264,7 @@ MagicItemsList["sylvan talon"] = {
 };
 MagicItemsList["talisman of pure good"] = {
 	name: "Talisman of Pure Good",
-	source: [["DMG2024", 314]],
+	source: [["D24", 314]],
 	type: "wondrous item",
 	rarity: "legendary",
 	magicItemTable: "?",
@@ -8292,7 +8292,7 @@ MagicItemsList["talisman of pure good"] = {
 };
 MagicItemsList["talisman of the sphere"] = {
 	name: "Talisman of the Sphere",
-	source: [["DMG2024", 315]],
+	source: [["D24", 315]],
 	type: "wondrous item",
 	rarity: "legendary",
 	magicItemTable: "?",
@@ -8305,7 +8305,7 @@ MagicItemsList["talisman of the sphere"] = {
 };
 MagicItemsList["talisman of ultimate evil"] = {
 	name: "Talisman of Ultimate Evil",
-	source: [["DMG2024", 315]],
+	source: [["D24", 315]],
 	type: "wondrous item",
 	rarity: "legendary",
 	magicItemTable: "?",
@@ -8332,7 +8332,7 @@ MagicItemsList["talisman of ultimate evil"] = {
 };
 MagicItemsList["talking doll"] = {
 	name: "Talking Doll",
-	source: [["DMG2024", 315]],
+	source: [["D24", 315]],
 	magicItemTable: "?",
 	type: "wondrous item",
 	rarity: "common",
@@ -8342,7 +8342,7 @@ MagicItemsList["talking doll"] = {
 };
 MagicItemsList["tankard of sobriety"] = {
 	name: "Tankard of Sobriety",
-	source: [["DMG2024", 315]],
+	source: [["D24", 315]],
 	magicItemTable: "?",
 	type: "wondrous item",
 	rarity: "common",
@@ -8352,7 +8352,7 @@ MagicItemsList["tankard of sobriety"] = {
 };
 MagicItemsList["tentacle rod"] = {
 	name: "Tentacle Rod",
-	source: [["DMG2024", 316]],
+	source: [["D24", 316]],
 	type: "rod",
 	rarity: "rare",
 	magicItemTable: "?",
@@ -8380,7 +8380,7 @@ MagicItemsList["tentacle rod"] = {
 };
 MagicItemsList["thunderous greatclub"] = {
 	name: "Thunderous Greatclub",
-	source: [["DMG2024", 316]],
+	source: [["D24", 316]],
 	type: "weapon (greatclub)",
 	rarity: "very rare",
 	magicItemTable: "?",
@@ -8399,7 +8399,7 @@ MagicItemsList["thunderous greatclub"] = {
 		baseWeapon: "greatclub",
 		regExpSearch: /^(?=.*thunderous)(?=.*greatclub).*$/i,
 		name: "thunderous greatclub",
-		source: [["DMG2024", "-"]],
+		source: [["D24", "-"]],
 		description: "Two-handed, Push; +1d8 Thunder v Crea; +3d8 v Obj;",
 		isMagicWeapon: true,
 		selectNow: true,
@@ -8423,7 +8423,7 @@ MagicItemsList["thunderous greatclub"] = {
 };
 MagicItemsList["tome of clear thought"] = {
 	name: "Tome of Clear Thought",
-	source: [["DMG2024", 317]],
+	source: [["D24", 317]],
 	type: "wondrous item",
 	rarity: "very rare",
 	magicItemTable: "?",
@@ -8437,7 +8437,7 @@ MagicItemsList["tome of clear thought"] = {
 };
 MagicItemsList["tome of leadership and influence"] = {
 	name: "Tome of Leadership and Influence",
-	source: [["DMG2024", 317]],
+	source: [["D24", 317]],
 	type: "wondrous item",
 	rarity: "very rare",
 	magicItemTable: "?",
@@ -8451,7 +8451,7 @@ MagicItemsList["tome of leadership and influence"] = {
 };
 MagicItemsList["tome of the stilled tongue"] = {
 	name: "Tome of the Stilled Tongue",
-	source: [["DMG2024", 317]],
+	source: [["D24", 317]],
 	type: "wondrous item",
 	rarity: "legendary",
 	magicItemTable: "?",
@@ -8467,7 +8467,7 @@ MagicItemsList["tome of the stilled tongue"] = {
 };
 MagicItemsList["tome of understanding"] = {
 	name: "Tome of Understanding",
-	source: [["DMG2024", 317]],
+	source: [["D24", 317]],
 	type: "wondrous item",
 	rarity: "very rare",
 	magicItemTable: "?",
@@ -8481,7 +8481,7 @@ MagicItemsList["tome of understanding"] = {
 };
 MagicItemsList["trident of fish command"] = {
 	name: "Trident of Fish Command",
-	source: [["DMG2024", 317]],
+	source: [["D24", 317]],
 	type: "weapon (trident)",
 	rarity: "uncommon",
 	magicItemTable: "?",
@@ -8516,7 +8516,7 @@ MagicItemsList["trident of fish command"] = {
 };
 MagicItemsList["universal solvent"] = {
 	name: "Universal Solvent",
-	source: [["DMG2024", 318]],
+	source: [["D24", 318]],
 	type: "wondrous item",
 	rarity: "legendary",
 	magicItemTable: "?",
@@ -8526,7 +8526,7 @@ MagicItemsList["universal solvent"] = {
 };
 MagicItemsList["veterans cane"] = {
 	name: "Veteran's Cane",
-	source: [["DMG2024", 318]],
+	source: [["D24", 318]],
 	magicItemTable: "?",
 	type: "wondrous item",
 	rarity: "common",
@@ -8538,14 +8538,14 @@ MagicItemsList["veterans cane"] = {
 		baseWeapon: "longsword",
 		regExpSearch: /^(?=.*veteran)(?=.*cane)(?=.*long)(?=.*sword).*$/i,
 		name: "Veterans Cane (Longsword)",
-		source: ["DMG2024", "-"],
+		source: ["D24", "-"],
 		selectNow: true,
 	}],
 };
 MagicItemsList["vicious weapon"] = {
 	name: "Vicious Weapon",
 	nameTest: "Vicious",
-	source: [["DMG2024", 318]],
+	source: [["D24", 318]],
 	type: "weapon (simple or martial)",
 	rarity: "rare",
 	magicItemTable: "?",
@@ -8572,7 +8572,7 @@ MagicItemsList["vicious weapon"] = {
 MagicItemsList["vorpal sword"] = {
 	name: "Vorpal Sword",
 	nameTest: "Vorpal",
-	source: [["DMG2024", 318]],
+	source: [["D24", 318]],
 	type: "weapon (Glaive, Greatsword, Longsword, Scimitar)",
 	rarity: "legendary",
 	magicItemTable: "?",
@@ -8611,7 +8611,7 @@ MagicItemsList["vorpal sword"] = {
 MagicItemsList["walloping ammunition"] = {
 	name: "Walloping Ammunition",
 	nameTest: "Walloping",
-	source: [["DMG2024", 318]],
+	source: [["D24", 318]],
 	magicItemTable: "armaments",
 	type: "weapon (any ammunition)",
 	rarity: "common",
@@ -9155,7 +9155,7 @@ MagicItemsList["wave"] = {
 };
 MagicItemsList["weapon, +1, +2, or +3"] = {
 	name: "Weapon, +1, +2, or +3",
-	source: [["DMG2024", 324]],
+	source: [["D24", 324]],
 	type: "weapon (any)",
 	description: "You have a bonus to attack and damage rolls made with this magic weapon. The bonus is determined by the rarity of the magic item: uncommon (+1), rare (+2), or very rare (+3).",
 	descriptionFull: "You have a bonus to attack and damage rolls made with this magic weapon. The bonus is determined by the weapon's rarity: uncommon (+1), rare (+2), or very rare (+3).",
@@ -9246,7 +9246,7 @@ var DMG_whelmFullDescription = [
 ];
 MagicItemsList["whelm"] = {
 	name: "Whelm",
-	source: [["DMG2024", 324]],
+	source: [["D24", 324]],
 	type: "weapon (warhammer)",
 	rarity: "artifact",
 	notLegalAL: true,
@@ -9269,7 +9269,7 @@ MagicItemsList["whelm"] = {
 		baseWeapon: "warhammer",
 		regExpSearch: /whelm/i,
 		name: "Whelm",
-		source: [["DMG2024", 324]],
+		source: [["D24", 324]],
 		range: "Melee, 60/180 ft",
 		description: "Versatile (1d10), Thrown, Push; Returning; +1d8 Force dmg when thrown (or +4d8 Force vs. constructs, elementals, or giants)",
 		modifiers: [3, 3],
