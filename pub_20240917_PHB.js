@@ -1006,7 +1006,7 @@ legacyClassRefactor("bard", {
       name: "Jack of All Trades",
       source: [["P24", 60]],
       minlevel: 2,
-	  addMod : [ { type : "skill", field : "Init", mod : "-Prof/2", text : "" } ],
+	  addMod : [ { type : "skill", field : "Init", mod : "Math.ceil(-Prof/2)", text : "", } ],
       eval: function () {
         Checkbox('Jack of All Trades', true);
       },
