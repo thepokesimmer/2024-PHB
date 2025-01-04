@@ -18647,7 +18647,7 @@ legacySpellRefactor("reverse gravity", {
 });
 legacySpellRefactor("revivify", {
 	name : "Revivify",
-	classes : ["artificer","cleric", "paladin", "ranger"],
+	classes : ["artificer","cleric", "druid", "paladin", "ranger"],
 	source : [["P24", 312]],
 	level : 3,
 	school : "Necro",
