@@ -12079,9 +12079,10 @@ FeatsList["boon of skill"] = {
 FeatsList["boon of speed"] = {
   name: "Boon of Speed",
   source: [["P24", 211]],
-  descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Escape Artist. As a Bonus Action, I can take the Disengage action, which also ends the Grappled condition on I.\n \u2022 Quickness. I Speed increases by 30 feet.",
+  descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Escape Artist. As a Bonus Action, I can take the Disengage action, which also ends the Grappled condition on me.\n \u2022 Quickness. My Speed increases by 30 feet.",
   description: "+1 to Any, Speed +30 ft., Bonus Action to Disengage, which also ends the Grappled condition.",
   speed: {walk: "+30"},
+  action : ["bonus action", "Disengage"],
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
     name: "Boon of Speed - STR",
@@ -12459,7 +12460,7 @@ WeaponsList["sling"] = {
   abilitytodamage: true,
   damage: [1, 4, "bludgeoning"],
   range: "30/120",
-  description: "Ammunition (Bullet, Sling); Topple",
+  description: "Ammunition (Bullet, Sling); Slow",
   list: "ranged",
   ammo: "bullets, sling",
   monkweapon: false,
