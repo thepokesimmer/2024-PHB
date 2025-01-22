@@ -13754,9 +13754,9 @@ GearList["backpack"] = {
   amount: "",
   weight: 5
 };
-GearList["ball bearings (bag of 1,000)"] = {
-  infoname: "Ball bearings (bag of 1,000) [1 gp]",
-  name: "Bag of 1000 ball bearings",
+GearList["ball bearings"] = {
+  infoname: "Ball bearings [1 gp]",
+  name: "Bag of ball bearings",
   amount: "",
   weight: 2
 };
@@ -13817,8 +13817,8 @@ GearList["bucket"] = {
 GearList["caltrops"] = {
   infoname: "Caltrops [1 gp]",
   name: "Caltrops",
-  amount: 20,
-  weight: 0.1
+  amount: "",
+  weight: 2
 };
 GearList["candle"] = {
   infoname: "Candle [1 cp]",
@@ -13838,11 +13838,11 @@ GearList["case, map or scroll"] = {
   amount: "",
   weight: 1
 };
-GearList["chain (10 feet)"] = {
-  infoname: "Chain (10 feet) [5 gp]",
-  name: "Chain, feet of",
-  amount: 10,
-  weight: 1
+GearList["chain"]= {
+  infoname: "Chain [5 gp]",
+  name: "Chain",
+  amount: "",
+  weight: 10
 };
 GearList["chest"] = {
   infoname: "Chest [5 gp]",
@@ -14228,7 +14228,7 @@ PacksList["burglar"] = {
   source: [["P24", 224]],
   items: [
     ["Backpack, with:", "", 5],
-    ["Bag of 1000 ball bearings", "", 2],
+    ["Bag of ball bearings", "", 2],
     ["Bell", "", ""],
     ["Candles", 10, ""],
     ["Crowbar", "", 5],
@@ -14262,7 +14262,7 @@ PacksList["dungeoneer"] = {
   source: [["P24", 225]],
   items: [
     ["Backpack, with:", "", 5],
-    ["Caltrops", 20, 0.1],
+    ["Caltrops", "", 2],
     ["Crowbar", "", 5],
     ["Oil, flasks of", 2, 1],
     ["Rations, days of", 10, 2],
