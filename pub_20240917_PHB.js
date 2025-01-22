@@ -13838,7 +13838,7 @@ GearList["case, map or scroll"] = {
   amount: "",
   weight: 1
 };
-GearList["chain"= {
+GearList["chain"]= {
   infoname: "Chain [5 gp]",
   name: "Chain",
   amount: "",
