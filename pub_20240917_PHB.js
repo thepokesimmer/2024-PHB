@@ -17866,7 +17866,7 @@ legacySpellRefactor("mirage arcane", {
 });
 legacySpellRefactor("mirror image", {
 	name : "Mirror Image",
-	classes : ["sorcerer", "sorcerer", "warlock", "wizard"],
+	classes : ["bard", "sorcerer", "warlock", "wizard"],
 	source : [["P24", 299]],
 	level : 2,
 	school : "Illus",
