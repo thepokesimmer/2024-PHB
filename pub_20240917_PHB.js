@@ -5366,6 +5366,18 @@ legacyClassRefactor("rogue", {
       description: desc([
         "Once per turn, I can add damage to a finesse/ranged weapon attack if I have Adv or a conscious ally is within 5 ft of the target & I don't have Disadv.",
       ]),
+	  calcChanges : {
+			atkAdd : [
+				function (fields, v) {
+					if (classes.known.rogue && classes.known.rogue.level && !v.isSpell && !v.isDC && (v.isRangedWeapon || (/\bfinesse\b/i).test(fields.Description))) {
+						v.sneakAtk = Math.ceil(classes.known.rogue.level / 2);
+						fields.Description += (fields.Description ? '; ' : '') + 'Sneak attack ' + v.sneakAtk + 'd6';
+					}
+				},
+				"Once per turn, when I attack with a ranged or finesse weapon while I have advantage or an conscious ally is within 5 ft of the target, I can add my sneak attack damage to the attack.",
+				700
+			]
+		}
     },
     "thieves' cant": {
       name: "Thieves' Cant",
