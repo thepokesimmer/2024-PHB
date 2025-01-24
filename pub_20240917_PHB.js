@@ -543,7 +543,7 @@ legacyClassRefactor("barbarian", {
 		"relentless rage": {
 		  name: "Relentless Rage",
 		  source: [["P24", 53]],
-		  minlevel: 9,
+		  minlevel: 11,
           description: desc([
             "While Raging, if I drop to 0 HP but not killed outright, make a DC 10 Constitution save. On success, set HP to half my Barbarian level.",
             "Each subsequent use raises the DC by 5. DC resets to 10 after a Short or Long Rest."
@@ -1047,9 +1047,17 @@ legacyClassRefactor("bard", {
       name: "Magical Secrets",
       source: [["P24", 61]],
       minlevel: 10,
-      spellcastingList: {
-        class: ["bard", "cleric", "druid", "wizard"],
-      },
+     calcChanges : {
+		spellList : [
+			function(spList, spName, spType) {
+				if (spName !== "bard" || spType.indexOf("bonus") !== -1) return;
+				var MagicalSecrets = CreateSpellList({"class" : ["cleric", "druid", "wizard"],
+					level : [1, 9]});
+				spList.extraspells = spList.extraspells.concat(MagicalSecrets);
+			},
+			'From 10th-level onwards, each Bard level where I gain more prepared spells I can choose from the Bard, Cleric, Druid, and Wizard spell lists. The chosen spells count as Bard spells. When I replace a Prepared Bard spell I can replace it with a spell from those lists."'
+		]
+	},
       description: desc([
         "Each Bard level where I gain more prepared spells I can choose from the Bard, Cleric, Druid, and Wizard spell lists. The chosen spells count as Bard spells. When I replace a Prepared Bard spell I can replace it with a spell from those lists.",
       ]),
@@ -1179,7 +1187,7 @@ legacySubClassRefactor("bard", "glamour", {
       usages: 1,
       recovery: "long rest",
       spellcastingBonus: [{
-        name: "Animal Speaker",
+        name: "Beguiling Magic",
         spells: ["charm person", "mirror image"],
         selection: ["charm person", "mirror image"],
         times: 2,
@@ -9284,7 +9292,7 @@ RaceSubList["gnome-rock"] = {
     times: 2,
     firstCol: "atwill",
   }],
-  trait: "Rock Gnome\nRock Gnome Lineage: I know the Mending & Prestidigitation cantrips. I can create a Tiny clockwork device (AC 5, 1 HP) if I spend 10 min casting Prestidigitation; I choose (one option of) one effect, which the device produces when a creature uses a Bonus Action to activate it via touch. I can have three such devices in existence at a time, and each falls apart after 8 hours or when I dismantle it via touch as a Utilize action.\n\nGnomish Cunning: I have Advantage on Intelligence, Wisdom, and Charisma saving throws.",
+  trait: "Rock Gnome\nRock Gnome Lineage: I know the Mending & Prestidigitation cantrips. I can create a Tiny clockwork device (AC 5, 1 HP) if I spend 10 min casting Prestidigitation; I choose (one option of) one effect, which the device produces when a creature uses a Bonus Action to activate it via touch. I can have three such devices in existence at a time, and each falls apart after 8 hours or when I dismantle it via touch as a Utilize action.\nGnomish Cunning: I have Advantage on Intelligence, Wisdom, and Charisma saving throws.",
   features: {
     "rock gnome lineage": {
       name: "Clockwork Devices",
@@ -9550,7 +9558,7 @@ legacyRaceRefactor("orc", {
   source: [["P24", 195]],
   plural: "Orcs",
   size: 3,
-  speed: {walk: {spd: 35, enc: 25}},
+  speed: {walk: {spd: 30, enc: 20}},
   languageProfs: ["Common", 2],
   vision: [["Darkvision", 120]],
   age: " reach maturity in late teens and live about 80 years",
@@ -13818,7 +13826,7 @@ GearList["caltrops"] = {
   infoname: "Caltrops [1 gp]",
   name: "Caltrops",
   amount: "",
-  weight: 2
+  weight: 2,
 };
 GearList["candle"] = {
   infoname: "Candle [1 cp]",
@@ -13838,11 +13846,11 @@ GearList["case, map or scroll"] = {
   amount: "",
   weight: 1
 };
-GearList["chain"]= {
+GearList["chain"] = {
   infoname: "Chain [5 gp]",
   name: "Chain",
   amount: "",
-  weight: 10
+  weight: 1
 };
 GearList["chest"] = {
   infoname: "Chest [5 gp]",
@@ -14262,7 +14270,7 @@ PacksList["dungeoneer"] = {
   source: [["P24", 225]],
   items: [
     ["Backpack, with:", "", 5],
-    ["Caltrops", "", 2],
+    ["Caltrops", 20, 0.1],
     ["Crowbar", "", 5],
     ["Oil, flasks of", 2, 1],
     ["Rations, days of", 10, 2],
