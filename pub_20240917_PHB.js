@@ -10915,7 +10915,7 @@ FeatsList["skulker"] = {
   regExpSearch: /^(?=.*skulker).*$/i,
   scores: [0, 1, 0, 0, 0, 0],
   descriptionFull: "I gain the following benefits:\n \u2022 Blindsight. I have Blindsight with a range of 10 feet.\n \u2022 Fog of War. I exploit the distractions of battle, gaining Advantage on any Dexterity (Stealth) check I make as part of the Hide action during combat.\n \u2022 Sniper. If I make an attack roll while hidden and the roll misses, making the attack roll doesn't reveal my location.",
-  description: "Adv. to hide in combat. My position is not revealed when I am hidden from a creature and miss it with a ranged weapon attack. Blindsight 10ft.",
+  description: "Adv. to hide in combat. My position is not revealed when I am hidden from a creature and miss it with an attack. Blindsight 10ft.",
   prerequisite: "Level 4 and Dexterity 13 or higher",
   prereqeval: function (v) {
     return v.characterLevel >= 4 && What('Dex') >= 13;
