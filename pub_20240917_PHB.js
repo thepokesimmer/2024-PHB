@@ -3301,7 +3301,7 @@ legacyClassRefactor("monk", {
 			if(n >= 10) {
 				description += desc([
 					"At 10th level, I can expend 1 Focus Point to use Flurry of Blows and make three Unarmed",
-					"Strikes insteas of two."
+					"Strikes instead of two."
 				]);
 			}
 			return description;
@@ -3320,7 +3320,7 @@ legacyClassRefactor("monk", {
 			if(n >= 10) {
 				description += desc([
 					"At 10th level, when I expend a Focus Point to use Patient Defense, I gain a number of",
-					"Temorary Hit Points equal to two rolls of my Martial Arts die."
+					"Temporary Hit Points equal to two rolls of my Martial Arts die."
 				]);
 			}
 			return description;
@@ -3341,7 +3341,7 @@ legacyClassRefactor("monk", {
 				description += desc([
 					"At 10th level, when I expend a Focus Point to use Step of the Wind, I can choose a willing", 
 					"creature within 5 feet of myself that is Large or smaller. I move the creature with me until the", 
-					"end of my turn. The creature's movment doesn't provoke Opportunity Attacks."
+					"end of my turn. The creature's movement doesn't provoke Opportunity Attacks."
 				]);
 			}
 			return description;
@@ -18340,7 +18340,7 @@ legacySpellRefactor("prayer of healing", {
 	range : "30 ft",
 	components : "V",
 	duration : "Instantaneous",
-	description : "5 crea in range while cast heal 2d8+1d8/SL+spell mod HP and gain short rest benefits (once per LR)",
+	description : "5 crea in range while cast heal 2d8+1d8/SL HP and gain short rest benefits (once per LR)",
 	descriptionFull : "Up to five creatures of your choice who remain within range for the spell's entire casting gain the benefits of a Short Rest and also regain 2d8 Hit Points. A creature can't be affected by this spell again until that creature finishes a Long Rest." + AtHigherLevels + "The healing increases by 1d8 for each spell slot level above 2."
 });
 legacySpellRefactor("prestidigitation", {
