@@ -2400,7 +2400,7 @@ legacyClassRefactor("fighter", {
       ]),
       additional: ["3 Weapon Masteries", "3 Weapon Masteries", "3 Weapon Masteries", "4 Weapon Masteries", "4 Weapon Masteries", "4 Weapon Masteries", "4 Weapon Masteries", "4 Weapon Masteries", "4 Weapon Masteries", "5 Weapon Masteries", "5 Weapon Masteries", "5 Weapon Masteries", "5 Weapon Masteries", "5 Weapon Masteries", "5 Weapon Masteries", "6 Weapon Masteries", "6 Weapon Masteries", "6 Weapon Masteries", "6 Weapon Masteries", "6 Weapon Masteries"],
       extraname: "Weapon Mastery",
-      extrachoices: ["Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light Hammer", "Mace", "Quarterstaff", "Sickle", "Spear", "Dart", "Light Crossbow", "Shortbow", "Sling", "Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "Warhammer", "War Pick", "Whip", "Blowgun", "Hand Crossbow", "Heavy Crossbow", "Longbow", "Musket", "pistol"],
+      extrachoices: ["Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light Hammer", "Mace", "Quarterstaff", "Sickle", "Spear", "Dart", "Light Crossbow", "Shortbow", "Sling", "Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "Warhammer", "War Pick", "Whip", "Blowgun", "Hand Crossbow", "Heavy Crossbow", "Longbow", "Musket", "Pistol"],
       extraTimes: [3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6],
       "club": {
         name: "Club",
@@ -3110,9 +3110,11 @@ legacySubClassRefactor("fighter", "psi warrior", {
       source: [["P24", 98]],
       minlevel: 3,
       action: [["reaction", "Protective Field"], ["action", "Telekinetic Movement"]],
-      limfeaname: "Telekinetic Movement",
-      usages: 1,
-      recovery: "short rest",
+      extraLimitedFeatures : [{
+           name: "Telekinetic Movement",
+           usages: 1,
+           recovery: "short rest",
+      }],
       additional: ["", "", "Psionic Energy Die 4 d6", "Psionic Energy Die 4 d6", "Psionic Energy Die 6 d8", "Psionic Energy Die 6 d8", "Psionic Energy Die 6 d8", "Psionic Energy Die 6 d8", "Psionic Energy Die 8 d8", "Psionic Energy Die 8 d8", "Psionic Energy Die 8 d10", "Psionic Energy Die 8 d10", "Psionic Energy Die 10 d10", "Psionic Energy Die 10 d10", "Psionic Energy Die 10 d10", "Psionic Energy Die 10 d10", "Psionic Energy Die 12 d12", "Psionic Energy Die 12 d12", "Psionic Energy Die 12 d12", "Psionic Energy Die 12 d12"],
       description: desc([
         "I gain twice my proficiency bonus of psionic energy dice (PsiD) that fuel my psionics",
