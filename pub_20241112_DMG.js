@@ -7084,7 +7084,7 @@ MagicItemsList["silvered weapon"] = {
 				if (!v.theWea.isMagicWeapon && !v.isSpell && (/silvered/i).test(v.WeaponTextName)) {
 					v.theWea.isMagicWeapon = true;
 					fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
-					fields.Description += (fields.Description ? '; ' : '') + '+1 dmg die vs. shape-shifted';
+					fields.Description += (fields.Description ? '; ' : '') + '+1 dmg die on a crit vs. shape-shifted';
 				}
 			},
 			'If I include the words "Silvered" in the name of a weapon, damage rolls with that weapon add 1 extra damage die to creatures that are shape-shifted.'
