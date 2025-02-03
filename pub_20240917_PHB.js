@@ -183,16 +183,14 @@ legacyClassRefactor("barbarian", {
 	attacks: [1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
 	features: {
 		"rage": {
-		name: "Rage",
-		source: [["P24", 51]],
-		minlevel: 1,
-		action: ["bonus action", "Enter Rage"],
-		usages: [2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6],
-		recovery: "long rest",
-		additional: ["2 Uses, +2 Damage", "2 Uses, +2 Damage", "3 Uses, +2 Damage", "3 Uses, +2 Damage", "3 Uses, +2 Damage", "4 Uses, +2 Damage", "4 Uses, +2 Damage", "4 Uses, +2 Damage", "4 Uses, +3 Damage", "4 Uses, +3 Damage", "4 Uses, +3 Damage", "5 Uses, +3 Damage", "5 Uses, +3 Damage", "5 Uses, +3 Damage", "5 Uses, +3 Damage", "5 Uses, +4 Damage", "6 Uses, +4 Damage", "6 Uses, +4 Damage", "6 Uses, +4 Damage", "6 Uses, +4 Damage"],
-		dmgres: [["Bludgeoning", "Bludgeon. (in rage)"], ["Piercing", "Piercing (in rage)"], ["Slashing", "Slashing (in rage)"]],
-		savetxt: {adv_vs: ["Str checks and saves in rage; "]},
-		calcChanges: {
+		  name: "Rage",
+		  source: [["P24", 51]],
+		  minlevel: 1,
+		  action: ["bonus action", "Enter Rage"],
+		  usages: [2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6],
+		  recovery: "long rest",
+		  additional : ["+2 Damage", "+2 Damage", "+2 Damage", "+2 Damage", "+2 Damage", "+2 Damage", "+2 Damage", "+2 Damage", "+3 Damage", "+3 Damage", "+3 Damage", "+3 Damage", "+3 Damage", "+3 Damage", "+3 Damage", "+4 Damage", "+4 Damage", "+4 Damage", "+4 Damage", "+4 Damage"],
+		  calcChanges: {
 			atkCalc: [
 				function (fields, v, output) {
 					if (v.isMeleeWeapon && fields.Mod === 1 && classes.known.barbarian && classes.known.barbarian.level && /\brage\b/i.test(v.WeaponTextName)) {
@@ -202,7 +200,7 @@ legacyClassRefactor("barbarian", {
 				"If I include the word 'Rage' in a melee weapon's name that uses Strength, the calculation will add my Rage's bonus damage to it. Be aware that if the weapon is used to make a ranged attack, the rage bonus damage shouldn't be added (e.g. when using a thrown weapon)."
 			]
 		},
-        description: desc([
+          description: desc([
             "Bonus damage to melee weapon attacks using Str. Adv. on Strength checks/saves (not attacks); resistance to bludgeoning/piercing/slashing",
             "Rage lasts until the end of my next turn. Extend by attacking, forcing a save, or using a Bonus Action. Max duration: 10 minutes. Recover 1 use during a Short Rest."
         ]),
@@ -407,7 +405,7 @@ legacyClassRefactor("barbarian", {
 		  name: "Danger Sense",
 		  source: [["P24", 52]],
 		  minlevel: 2,
-		  savetxt: {adv_vs: ["Dex saves, when not Incapacitated; "]},
+		  savetxt: "Adv. on Dex saves when not Incapacitated",
 		  description: desc([
 			"I have Advantage on Dexterity saving throws unless I have the Incapacitated condition.",
 		  ]),
@@ -3111,11 +3109,14 @@ legacySubClassRefactor("fighter", "psi warrior", {
       minlevel: 3,
       action: [["reaction", "Protective Field"], ["action", "Telekinetic Movement"]],
       extraLimitedFeatures : [{
-           name: "Telekinetic Movement",
-           usages: 1,
-           recovery: "short rest",
+		name: "Telekinetic Movement",
+		usages: 1,
+		recovery: "short rest",
       }],
-      additional: ["", "", "Psionic Energy Die 4 d6", "Psionic Energy Die 4 d6", "Psionic Energy Die 6 d8", "Psionic Energy Die 6 d8", "Psionic Energy Die 6 d8", "Psionic Energy Die 6 d8", "Psionic Energy Die 8 d8", "Psionic Energy Die 8 d8", "Psionic Energy Die 8 d10", "Psionic Energy Die 8 d10", "Psionic Energy Die 10 d10", "Psionic Energy Die 10 d10", "Psionic Energy Die 10 d10", "Psionic Energy Die 10 d10", "Psionic Energy Die 12 d12", "Psionic Energy Die 12 d12", "Psionic Energy Die 12 d12", "Psionic Energy Die 12 d12"],
+	  limfeaname : "Psionic Energy Die",
+	  usages : ["", "", 4, 4, 6, 6, 6, 6, 8, 8, 8, 8, 10, 10, 10, 10, 12, 12, 12, 12],
+	  recovery : "long rest",
+	  additional : ["", "", "d6", "d6", "d8", "d8", "d8", "d8", "d8", "d8", "d10", "d10", "d10", "d10", "d10", "d10", "d12", "d12", "d12", "d12"],
       description: desc([
         "I gain twice my proficiency bonus of psionic energy dice (PsiD) that fuel my psionics",
 		"I regain one PsiD after a short rest and all after a long rest",
