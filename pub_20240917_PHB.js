@@ -187,6 +187,7 @@ legacyClassRefactor("barbarian", {
 		  source: [["P24", 51]],
 		  minlevel: 1,
 		  action: ["bonus action", "Enter Rage"],
+		  limfeaname : "Rage (Regain 1 SR)",
 		  usages: [2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6],
 		  recovery: "long rest",
 		  additional : ["+2 Damage", "+2 Damage", "+2 Damage", "+2 Damage", "+2 Damage", "+2 Damage", "+2 Damage", "+2 Damage", "+3 Damage", "+3 Damage", "+3 Damage", "+3 Damage", "+3 Damage", "+3 Damage", "+3 Damage", "+4 Damage", "+4 Damage", "+4 Damage", "+4 Damage", "+4 Damage"],
@@ -1418,12 +1419,12 @@ legacyClassRefactor("cleric", {
       name: "Channel Divinity",
       source: [["P24", 70]],
       minlevel: 2,
+	  limfeaname : "Channel Divinity (Regain 1 SR)",
 	  usages: [0, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4],
-	  recovery: "long rest",
-	  additional : ["", "Channel Divinity: Divine Spark 1d8", "Channel Divinity: Divine Spark 1d8", "Channel Divinity: Divine Spark 1d8", "Channel Divinity: Divine Spark 1d8", "Channel Divinity: Divine Spark 1d8", "Channel Divinity: Divine Spark 2d8", "Channel Divinity: Divine Spark 2d8", "Channel Divinity: Divine Spark 2d8", "Channel Divinity: Divine Spark 2d8", "Channel Divinity: Divine Spark 2d8", "Channel Divinity: Divine Spark 2d8", "Channel Divinity: Divine Spark 3d8", "Channel Divinity: Divine Spark 3d8", "Channel Divinity: Divine Spark 3d8", "Channel Divinity: Divine Spark 3d8", "Channel Divinity: Divine Spark 3d8", "Channel Divinity: Divine Spark 4d8", "Channel Divinity: Divine Spark 4d8", "Channel Divinity: Divine Spark 4d8"], 
+	  recovery: "long rest", 
       description: desc([
         "I regain one use on a Short Rest; All return on a Long Rest. If a Channel Divinity effect has a saving throw the DC is my Wis spell save DC.",
-        "Channel Divinity: Divine Spark: As a Magic action I choose a creature I can see w/in 30 ft and roll a number of d8 + my Wis mod. I either heal the creature for that amount or force it make a Con save; On a fail it takes that amount of Necrotic or Radiant dmg; half on a save.",
+        "Channel Divinity: Divine Spark: As a Magic action I choose a creature I can see w/in 30 ft and roll  1d8 + my Wis mod. I either heal the creature for that amount or force it make a Con save; On a fail it takes that amount of Necrotic or Radiant dmg; half on a save. (2d8 at 7th level, 3d8 at 13th level, 4d8 at 18th level)",
         "Channel Divinity: Turn Undead: As a Magic action each Undead I choose w/in 30 ft must make a Wis save; On a fail it is Frightened & Incapacitated for 1 min; It also tries to move as far from me as it can on its turns. This ends early if it takes any damage, I'm Incapacitated, or I die.",
       ]),
     },
@@ -1478,7 +1479,7 @@ legacyClassRefactor("cleric", {
         ]),
       },
       description: desc([
-        "Use 'Choose Feature' above to select a Blessed Strike option (if I get either from a Cleric subclass in an older book, use only that option).",
+        "Use 'Choose Feature' above to select a Blessed Strike option (if I get either from a Cleric subclass in an older book, use only the option you choose for this Feature).",
       ]),
     },
     "divine intervention": {
@@ -1828,6 +1829,7 @@ legacyClassRefactor("druid", {
       source: [["P24", 80]],
       minlevel: 2,
       action: ["bonus action", "Wild Shape (Shift/Revert)"],
+	  limfeaname : "Wild Shape (Regain 1 SR)",
       usages: [0, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4],
       recovery: "long rest",
       additional: levels.map(function (n) {
@@ -2381,6 +2383,7 @@ legacyClassRefactor("fighter", {
       source: [["P24", 91]],
       minlevel: 1,
 	  action: "bonus action",
+	  limfeaname : "Second Wind (Regain 1 SR)",
       usages: [2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
       recovery: "long rest",
 	  additional: ["1d10+1", "1d10+2", "1d10+3", "1d10+4", "1d10+5", "1d10+6", "1d10+7", "1d10+8", "1d10+9", "1d10+10", "1d10+11", "1d10+12", "1d10+13", "1d10+14", "1d10+15", "1d10+16", "1d10+17", "1d10+18", "1d10+19", "1d10+20"],
@@ -4180,6 +4183,7 @@ legacyClassRefactor("paladin", {
 			source: [["P24", 110]],
 			action: ["bonus action", "Divine Sense"],
 			minlevel: 3,
+			limfeaname : "Channel Divinity (Regain 1 SR)",
 			usages: [0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
 			description: desc([
 			"If a Channel Divinity effect has a saving throw the DC is my Cha spell save DC.",
@@ -8890,7 +8894,7 @@ legacyRaceRefactor("aasimar", {
         note: [
           "Heavenly Wings : Two spectral wings sprout from my back temporarily. Until the transformation ends, I have a Fly Speed equal to my Speed.",
           "Inner Radiance : Searing light temporarily radiates from my eyes and mouth. For the duration, I shed Bright Light in a 10-foot radius and Dim Light for an additional 10 feet, and at the end of each of my turns, each creature within 10 feet of me takes Radiant damage equal to my Proficiency Bonus",
-          "Necrotic Shroud : my eyes briefly become pools of darkness, and flightless wings sprout from my back temporarily. Creatures other than my allies within 10 feet of me must succeed on a Charisma saving throw (DC 8 plus my Charisma modifier and Proficiency Bonus) or have the Frightened condition until the end of my next turn",
+          "Necrotic Shroud : My eyes briefly become pools of darkness, and flightless wings sprout from my back temporarily. Creatures other than my allies within 10 feet of me must succeed on a Charisma saving throw (DC 8 plus my Charisma modifier and Proficiency Bonus) or have the Frightened condition until the end of my next turn",
         ],
       }],
     },
@@ -10792,7 +10796,7 @@ FeatsList["sentinel"] = {
     description: "Reac. when crea w/i 5ft takes Disengage action or hits another target other than I, I can make an Opportunity Attack. When I make an Opportunity Attack against a crea. Its Speed becomes 0 for the rest of the current turn. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
   },
-  description: "+1 Str/+1 Dex, Reac. when crea w/i 5ft takes Disengage action or hits another target other than I, I can make an Opportunity Attack. When I make an Opportunity Attack against a crea. 's Speed becomes 0 for the rest of the current turn.",  
+  description: "+1 Str/+1 Dex, Reac. when crea w/i 5ft takes Disengage action or hits another target other than me, I can make an Opportunity Attack. When I make an Opportunity Attack against a crea. it's Speed becomes 0 for the rest of the current turn.",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
@@ -19809,7 +19813,7 @@ legacySpellRefactor("true strike", {
 	duration : "Instantaneous",
 	description : "Atk with prof. weapon using spell ability; deal weapon or Radiant dmg; +1d6 Radiant at CL 5, 11 \u0026 17",
 	descriptionFull : "Guided by a flash of magical insight, you make one attack with the weapon used in the spell's casting. The attack uses your spellcasting ability for the attack and damage rolls instead of using Strength or Dexterity. If the attack deals damage, it can be Radiant damage or the weapon's normal damage type (your choice)." + "\n   " + toUni("Cantrip Upgrade") + ". Whether you deal Radiant damage or the weapon's normal damage type, the attack deals extra Radiant damage when you reach levels 5 (1d6), 11 (2d6), and 17 (3d6).",
-	descriptionCantripDie : "Atk with prof. weapon using spell ability; deal weapon or Radiant dmg, +`CD-1d6` Radiant",
+	descriptionCantripDie : "Atk with prof. weapon using spell ability; deal weapon or Radiant dmg, +`CD-1`d6` Radiant",
 });
 legacySpellRefactor("tsunami", {
 	name : "Tsunami",
