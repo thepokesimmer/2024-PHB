@@ -6745,7 +6745,7 @@ MagicItemsList["rope of mending"] = {
 	magicItemTable: "?",
 	type: "wondrous item",
 	rarity: "common",
-	description: "You can cut this 50-foot coil of rope into any number of smaller pieces, and then use a Magic action to cause the pieces to knit back together. The pieces must be in contact with each other and not otherwise in use. A rope of mending is forever shortened if a section of it is lost.",
+	description: "I can cut this 50-foot coil of rope into any number of smaller pieces, and then use a Magic action to cause the pieces to knit back together. The pieces must be in contact with each other and not otherwise in use. A rope of mending is forever shortened if a section of it is lost.",
 	descriptionFull: "This 50-foot coil of rope can repair itself when cut into any number of smaller pieces. As a Magic action, you can cause all pieces of the rope that are in contact with each other and not otherwise in use to knit back together. A Rope of Mending is forever shortened if a section of it is lost or destroyed.",
 	action: [["action", ""]],
 	weight: 10
