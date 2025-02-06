@@ -1424,7 +1424,7 @@ legacyClassRefactor("cleric", {
 	  recovery: "long rest", 
       description: desc([
         "I regain one use on a Short Rest; All return on a Long Rest. If a Channel Divinity effect has a saving throw the DC is my Wis spell save DC.",
-        "Channel Divinity: Divine Spark: As a Magic action I choose a creature I can see w/in 30 ft and roll  1d8 + my Wis mod. I either heal the creature for that amount or force it make a Con save; On a fail it takes that amount of Necrotic or Radiant dmg; half on a save. (2d8 at 7th level, 3d8 at 13th level, 4d8 at 18th level)",
+        "Channel Divinity: Divine Spark: As a Magic action I choose a creature I can see w/in 30 ft and roll 1d8 + my Wis mod. I either heal the creature for that amount or force it make a Con save; On a fail it takes that amount of Necrotic or Radiant dmg; half on a save. (2d8 at 7th level, 3d8 at 13th level, 4d8 at 18th level)",
         "Channel Divinity: Turn Undead: As a Magic action each Undead I choose w/in 30 ft must make a Wis save; On a fail it is Frightened & Incapacitated for 1 min; It also tries to move as far from me as it can on its turns. This ends early if it takes any damage, I'm Incapacitated, or I die.",
       ]),
     },
@@ -2029,7 +2029,7 @@ legacySubClassRefactor("druid", "land", {
       action: "action",
 	  additional: ["", "", "", "2d6", "2d6", "2d6", "2d6", "2d6", "2d6", "3d6", "3d6", "3d6", "3d6", "4d6", "4d6", "4d6", "4d6", "4d6", "4d6", "4d6"],
       description: desc([
-        "As a Magic action, expend a Wild Shape use to create a 10-foot sphere within 60 feet. Chosen creatures in the sphere make a Constitution save against my spell DC, taking a number of d6s Necrotic damage (half on success). One creature in the area regains, the same number of d6s, HP.",
+        "As a Magic action, expend a Wild Shape use to create a 10-foot sphere within 60 feet. Chosen creatures in the sphere make a Constitution save against my spell DC, taking a number of d6s Necrotic damage (half on success). One creature in the area regains the same number of d6s HP.",
       ]),
     },
     "subclassfeature6": {
@@ -5406,7 +5406,7 @@ legacyClassRefactor("rogue", {
       additional: ["2 Weapon Masteries"],
       extraname: "Weapon Mastery",
       extrachoices: ["Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light Hammer", "Mace", "Quarterstaff", "Sickle", "Spear", "Dart", "Light Crossbow", "Shortbow", "Sling", "Rapier", "Scimitar", "Shortsword", "Whip", "Hand Crossbow"],
-      extraTimes: 2,
+      extraTimes: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
       "club": {
         name: "Club",
         description: desc([
@@ -8926,7 +8926,7 @@ legacyRaceRefactor("dragonborn", {
     type: "Natural",
     damage: [1, 10, "fire"],
     range: "15-ft. cone/30-ft. line",
-    description: "Hits all in area; Dex save, success - half damage; Usable only once per short rest",
+    description: "Hits all in area; Dex save, success - half damage; Usable Prof Bonus per long Rest",
     abilitytodamage: false,
     dc: true,
     dbBreathWeapon: true,
@@ -11120,249 +11120,249 @@ FeatsList["weapon master"] = {
   descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Increase. Increase my Strength or Dexterity score by 1, to a maximum of 20.\n \u2022 Mastery Property. my training with weapons allows me to use the mastery property of one kind of Simple or Martial weapon of my choice, provided I have proficiency with it. Whenever I finish a Long Rest, I can change the kind of weapon to another kind.",
   description: "+1 Str/Dex, Gain Weapon Mastery in one weapon of choice. can change choice during a long rest provided I have the appropriate proficiencies.",
   scorestxt: "My Strength or Dexterity score increases by 1, to a maximum of 20.",
-  choices: ["Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light Hammer", "Mace", "Quarterstaff", "Sickle", "Spear", "Dart", "Light Crossbow", "Shortbow", "Sling", "Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "Warhammer", "War Pick", "Whip", "Blowgun", "Hand Crossbow", "Heavy Crossbow", "Longbow", "Musket", "Pistol"],
-  "club": {
-    name: "Club",
+  choices: ["Weapon Master (Club)", "Weapon Master (Dagger)", "Weapon Master (Greatclub)", "Weapon Master (Handaxe)", "Weapon Master (Javelin)", "Weapon Master (Light Hammer)", "Weapon Master (Mace)", "Weapon Master (Quarterstaff)", "Weapon Master (Sickle)", "Weapon Master (Spear)", "Weapon Master (Dart)", "Weapon Master (Light Crossbow)", "Weapon Master (Shortbow)", "Weapon Master (Sling)", "Weapon Master (Battleaxe)", "Weapon Master (Flail)", "Weapon Master (Glaive)", "Weapon Master (Greataxe)", "Weapon Master (Greatsword)", "Weapon Master (Halberd)", "Weapon Master (Lance)", "Weapon Master (Longsword)", "Weapon Master (Maul)", "Weapon Master (Morningstar)", "Weapon Master (Pike)", "Weapon Master (Rapier)", "Weapon Master (Scimitar)", "Weapon Master (Shortsword)", "Weapon Master (Trident)", "Weapon Master (Warhammer)", "Weapon Master (War Pick)", "Weapon Master (Whip)", "Weapon Master (Blowgun)", "Weapon Master (Hand Crossbow)", "Weapon Master (Heavy Crossbow)", "Weapon Master (Longbow)", "Weapon Master (Musket)", "Weapon Master (Pistol)"],
+  "weapon master (club)": {
+    name: "Weapon Master (Club)",
     description: "I gain access to the Club's 'Slow' Mastery feature. Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",    
     prerequisite: "Club Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("club") !== -1;
     },
   },
-  "dagger": {
-    name: "Dagger",
+  "weapon master (dagger)": {
+    name: "Weapon Master (Dagger)",
     description: "I gain access to the Dagger's 'Nick' Mastery feature. Nick : When I make the extra attack of the Light property, I can make it as part of the Attack action instead of as a Bonus Action. I can make this extra attack only once per turn.",    
     prerequisite: "Dagger Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("dagger") !== -1;
     },
   },
-  "greatclub": {
-    name: "Greatclub",
+  "weapon master (greatclub)": {
+    name: "Weapon Master (Greatclub)",
     description: "I gain access to the Greatclub's 'Push' Mastery feature. Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",    
     prerequisite: "Greatclub Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("greatclub") !== -1;
     },
   },
-  "handaxe": {
-    name: "Handaxe",
+  "weapon master (handaxe)": {
+    name: "Weapon Master (Handaxe)",
     description: "I gain access to the Handaxe's 'Vex' Mastery feature. Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",    
     prerequisite: "Handaxe Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("handaxe") !== -1;
     },
   },
-  "javelin": {
-    name: "Javelin",
+  "weapon master (javelin)": {
+    name: "Weapon Master (Javelin)",
     description: "I gain access to the Javelin's 'Slow' Mastery feature. Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",    
     prerequisite: "Javelin Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("javelin") !== -1;
     },
   },
-  "light hammer": {
-    name: "Light Hammer",
+  "weapon master (light hammer)": {
+    name: "Weapon Master (Light Hammer)",
     description: "I gain access to the Light Hammer's 'Nick' Mastery feature. Nick : When I make the extra attack of the Light property, I can make it as part of the Attack action instead of as a Bonus Action. I can make this extra attack only once per turn.",    
     prerequisite: "Light Hammer Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("light hammer") !== -1;
     },
   },
-  "mace": {
-    name: "Mace",
+  "weapon master (mace)": {
+    name: "Weapon Master (Mace)",
     description: "I gain access to the Mace's 'Sap' Mastery feature. Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",    
     prerequisite: "Mace Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("mace") !== -1;
     },
   },
-  "quarterstaff": {
-    name: "Quarterstaff",
+  "weapon master (quarterstaff)": {
+    name: "Weapon Master (Quarterstaff)",
     description: "I gain access to the Quarterstaff's 'Topple' Mastery feature. Topple : If I hit a creature with this weapon, I can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and my Proficiency Bonus). On a failed save, the creature has the Prone condition.",    
     prerequisite: "Quarterstaff Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("quarterstaff") !== -1;
     },
   },
-  "sickle": {
-    name: "Sickle",
+  "weapon master (sickle)": {
+    name: "Weapon Master (Sickle)",
     description: "I gain access to the Sickle's 'Nick' Mastery feature. Nick : When I make the extra attack of the Light property, I can make it as part of the Attack action instead of as a Bonus Action. I can make this extra attack only once per turn.",    
     prerequisite: "Sickle Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("sickle") !== -1;
     },
   },
-  "spear": {
-    name: "Spear",
+  "weapon master (spear)": {
+    name: "Weapon Master (Spear)",
     description: "I gain access to the Spear's 'Sap' Mastery feature. Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",    
     prerequisite: "Spear Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("spear") !== -1;
     },
   },
-  "dart": {
-    name: "Dart",
+  "weapon master (dart)": {
+    name: "Weapon Master (Dart)",
     description: "I gain access to the Dart's 'Vex' Mastery feature. Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",    
     prerequisite: "Dart Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("dart") !== -1;
     },
   },
-  "light crossbow": {
-    name: "Light Crossbow",
+  "weapon master (light crossbow)": {
+    name: "Weapon Master (Light Crossbow)",
     description: "I gain access to the Light Crossbow's 'Slow' Mastery feature. Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",    
     prerequisite: "Light Crossbow Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("light crossbow") !== -1;
     },
   },
-  "shortbow": {
-    name: "Shortbow",
+  "weapon master (shortbow)": {
+    name: "Weapon Master (Shortbow)",
     description: "I gain access to the Shortbow's 'Vex' Mastery feature. Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",    
     prerequisite: "Shortbow Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("shortbow") !== -1;
     },
   },
-  "sling": {
-    name: "Sling",
+  "weapon master (sling)": {
+    name: "Weapon Master (Sling)",
     description: "I gain access to the Sling's 'Slow' Mastery feature. Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",    
     prerequisite: "Sling Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("sling") !== -1;
     },
   },
-  "battleaxe": {
-    name: "Battleaxe",
+  "weapon master (battleaxe)": {
+    name: "Weapon Master (Battleaxe)",
     description: "I gain access to the Battleaxe's 'Topple' Mastery feature. Topple : If I hit a creature with this weapon, I can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and my Proficiency Bonus). On a failed save, the creature has the Prone condition.",    
     prerequisite: "Battleaxe Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("battleaxe") !== -1;
     },
   },
-  "flail": {
-    name: "Flail",
+  "weapon master (flail)": {
+    name: "Weapon Master (Flail)",
     description: "I gain access to the Flail's 'Sap' Mastery feature. Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",    
     prerequisite: "Flail Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("flail") !== -1;
     },
   },
-  "glaive": {
-    name: "Glaive",
+  "weapon master (glaive)": {
+    name: "Weapon Master (Glaive)",
     description: "I gain access to the Glaive's 'Graze' Mastery feature. Graze : If my attack roll with this weapon misses a creature, I can deal damage to that creature equal to the ability modifier I used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.",    
     prerequisite: "Glaive Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("glaive") !== -1;
     },
   },
-  "greataxe": {
-    name: "Greataxe",
+  "weapon master (greataxe)": {
+    name: "Weapon Master (Greataxe)",
     description: "I gain access to the Greataxe's 'Cleave' Mastery feature. Cleave : If I hit a creature with a melee attack roll using this weapon, I can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within my reach. On a hit, the second creature takes the weapon's damage, but don't add my ability modifier to that damage unless the modifier is negative. I can make this extra attack only once per turn.",    
     prerequisite: "Greataxe Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("greataxe") !== -1;
     },
   },
-  "greatsword": {
-    name: "Greatsword",
+  "weapon master (greatsword)": {
+    name: "Weapon Master (Greatsword)",
     description: "I gain access to the Greatsword's 'Graze' Mastery feature. Graze : If my attack roll with this weapon misses a creature, I can deal damage to that creature equal to the ability modifier I used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.",    
     prerequisite: "Greatsword Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("greatsword") !== -1;
     },
   },
-  "halberd": {
-    name: "Halberd",
+  "weapon master (halberd)": {
+    name: "Weapon Master (Halberd)",
     description: "I gain access to the Halberd's 'Cleave' Mastery feature. Cleave : If I hit a creature with a melee attack roll using this weapon, I can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within my reach. On a hit, the second creature takes the weapon's damage, but don't add my ability modifier to that damage unless the modifier is negative. I can make this extra attack only once per turn.",    
     prerequisite: "Halberd Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("halberd") !== -1;
     },
   },
-  "lance": {
-    name: "Lance",
+  "weapon master (lance)": {
+    name: "Weapon Master (Lance)",
     description: "I gain access to the Lance's 'Topple' Mastery feature. Topple : If I hit a creature with this weapon, I can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and my Proficiency Bonus). On a failed save, the creature has the Prone condition.",    
     prerequisite: "Lance Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("lance") !== -1;
     },
   },
-  "longsword": {
-    name: "Longsword",
+  "weapon master (longsword)": {
+    name: "Weapon Master (Longsword)",
     description: "I gain access to the Longsword's 'Sap' Mastery feature. Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",    
     prerequisite: "Longsword Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("longsword") !== -1;
     },
   },
-  "maul": {
-    name: "Maul",
+  "weapon master (maul)": {
+    name: "Weapon Master (Maul)",
     description: "I gain access to the Maul's 'Topple' Mastery feature. Topple : If I hit a creature with this weapon, I can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and my Proficiency Bonus). On a failed save, the creature has the Prone condition.",    
     prerequisite: "Maul Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("maul") !== -1;
     },
   },
-  "morningstar": {
-    name: "Morningstar",
+  "weapon master (morningstar)": {
+    name: "Weapon Master (Morningstar)",
     description: "I gain access to the Morningstar's 'Sap' Mastery feature. Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",    
     prerequisite: "Morningstar Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("morningstar") !== -1;
     },
   },
-  "pike": {
-    name: "Pike",
+  "weapon master (pike)": {
+    name: "Weapon Master (Pike)",
     description: "I gain access to the Pike's 'Push' Mastery feature. Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",    
     prerequisite: "Pike Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("pike") !== -1;
     },
   },
-  "rapier": {
-    name: "Rapier",
+  "weapon master (rapier)": {
+    name: "Weapon Master (Rapier)",
     description: "I gain access to the Rapier's 'Vex' Mastery feature. Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",    
     prerequisite: "Rapier Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("rapier") !== -1;
     },
   },
-  "scimitar": {
-    name: "Scimitar",
+  "weapon master (scimitar)": {
+    name: "Weapon Master (Scimitar)",
     description: "I gain access to the Scimitar's 'Nick' Mastery feature. Nick : When I make the extra attack of the Light property, I can make it as part of the Attack action instead of as a Bonus Action. I can make this extra attack only once per turn.",    
     prerequisite: "Scimitar Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("scimitar") !== -1;
     },
   },
-  "shortsword": {
-    name: "Shortsword",
+  "weapon master (shortsword)": {
+    name: "Weapon Master (Shortsword)",
     description: "I gain access to the Shortsword's 'Vex' Mastery feature. Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",    
     prerequisite: "Shortsword Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("shortsword") !== -1;
     },
   },
-  "trident": {
-    name: "Trident",
+  "weapon master (trident)": {
+    name: "Weapon Master (Trident)",
     description: "I gain access to the Trident's 'Topple' Mastery feature. Topple : If I hit a creature with this weapon, I can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and my Proficiency Bonus). On a failed save, the creature has the Prone condition.",    
     prerequisite: "Trident Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("trident") !== -1;
     },
   },
-  "warhammer": {
-    name: "Warhammer",
+  "weapon master (warhammer)": {
+    name: "Weapon Master (Warhammer)",
     description: "I gain access to the Warhammer's 'Push' Mastery feature. Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",    
     prerequisite: "Warhammer Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("warhammer") !== -1;
     },
   },
-  "war pick": {
-    name: "War Pick",
+  "weapon master (war pick)": {
+    name: "Weapon Master (War Pick)",
     description: "I gain access to the War Pick's 'Sap' Mastery feature. Sap : If I hit a creature with this weapon that creature has Disadvantage on its next attack roll before the start of my next turn.",
     
     prerequisite: "War Pick Proficiency",
@@ -11370,8 +11370,8 @@ FeatsList["weapon master"] = {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("war pick") !== -1;
     },
   },
-  "whip": {
-    name: "Whip",
+  "weapon master (whip)": {
+    name: "Weapon Master (Whip)",
     description: "I gain access to the Whip's 'Slow' Mastery feature. Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",
     
     prerequisite: "Whip Proficiency",
@@ -11379,48 +11379,48 @@ FeatsList["weapon master"] = {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("whip") !== -1;
     },
   },
-  "blowgun": {
-    name: "Blowgun",
+  "weapon master (blowgun)": {
+    name: "Weapon Master (Blowgun)",
     description: "I gain access to the Blowgun's 'Vex' Mastery feature. Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",    
     prerequisite: "Blowgun Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("blowgun") !== -1;
     },
   },
-  "hand crossbow": {
-    name: "Hand Crossbow",
+  "weapon master (hand crossbow)": {
+    name: "Weapon Master (Hand Crossbow)",
     description: "I gain access to the Hand Crossbow's 'Vex' Mastery feature. Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",    
     prerequisite: "Hand Crossbow Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("hand crossbow") !== -1;
     },
   },
-  "heavy crossbow": {
-    name: "Heavy Crossbow",
+  "weapon master (heavy crossbow)": {
+    name: "Weapon Master (Heavy Crossbow)",
     description: "I gain access to the Heavy Crossbow's 'Push' Mastery feature. Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",    
     prerequisite: "Heavy Crossbow Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("heavy crossbow") !== -1;
     },
   },
-  "longbow": {
-    name: "Longbow",
+  "weapon master (longbow)": {
+    name: "Weapon Master (Longbow)",
     description: "I gain access to the Longbow's 'Slow' Mastery feature. Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",    
     prerequisite: "Longbow Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("longbow") !== -1;
     },
   },
-  "musket": {
-    name: "Musket",
+  "weapon master (musket)": {
+    name: "Weapon Master (Musket)",
     description: "I gain access to the Musket's 'Slow' Mastery feature. Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",    
     prerequisite: "Musket Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("musket") !== -1;
     },
   },
-  "pistol": {
-    name: "Pistol",
+  "weapon master (pistol)": {
+    name: "Weapon Master (Pistol)",
     description: "I gain access to the Pistol's 'Vex' Mastery feature. Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",    
     prerequisite: "Pistol Proficiency",
     prereqeval: function (v) {
