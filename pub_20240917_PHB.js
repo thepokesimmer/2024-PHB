@@ -13071,6 +13071,18 @@ WeaponsList["starry wisp"] = {
   description: "target emit dim light in a 10ft rad. can't benefit from Invis.",
   abilitytodamage: false
 };
+WeaponsList["toll the dead"] = {
+  regExpSearch : /^(?=.*toll)(?=.*dead).*$/i,
+  name : "Toll the Dead",
+  source : [["P24", 334]],
+  list : "spell",
+  ability : 6,
+  type : "Cantrip",
+  damage : ["C", 8, "necrotic"],
+  range : "60 ft",
+  description : "If target has less than full HP, Damage Die becomes d12.",
+  abilitytodamage : false,
+};
 WeaponsList["thorn whip"] = {
   regExpSearch: /^(?=.*thorn)(?=.*whip).*$/i,
   name: "Thorn Whip",
