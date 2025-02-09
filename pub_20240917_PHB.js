@@ -10219,7 +10219,7 @@ FeatsList["elemental adept"] = {
   source: [["P24", 203]],
   regExpSearch: /^(?=.*elemental)(?=.*adept).*$/i,
   scorestxt: "My Intelligence, Wisdom, or Charisma score increases by 1, to a maximum of 20.",
-  description: "+1 Int, Wis, or Cha, Choose one of the damage types: acid, cold, fire, lightning, or thunder. Spells I cast ignore resistance to damage from this damage type. For any spell I cast that deals this damage type, I can treat any 1 on a damage die as a 2.",  
+  description: "+1 Int, Wis, or Cha, Choose one of the damage types: Acid, Cold, Fire, Lightning, or Thunder. Spells I cast ignore resistance to damage from this damage type. For any spell I cast that deals this damage type, I can treat any 1 on a damage die as a 2.",  
   descriptionFull: desc([
     "I gain the following benefits.",
     "Ability Score Increase : Increase my Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
@@ -10231,21 +10231,21 @@ FeatsList["elemental adept"] = {
     return v.characterLevel >= 4 && v.isSpellcaster;
   },
   allowDuplicates: true,
-  choices: ["acid", "cold", "fire", "lightning", "thunder"],
+  choices: ["Acid", "Cold", "Fire", "Lightning", "Thunder"],
   "acid": {
-    description: "+1 Int, Wis, or Cha, Spells I cast ignore resistance to acid damage. For any spell I cast that deals acid damage, I can treat any 1 on a damage die as a 2."
+    description: "+1 Int, Wis, or Cha, Spells I cast ignore resistance to Acid damage. For any spell I cast that deals Acid damage, I can treat any 1 on a damage die as a 2."
   },
   "cold": {
-    description: "+1 Int, Wis, or Cha, Spells I cast ignore resistance to cold damage. For any spell I cast that deals cold damage, I can treat any 1 on a damage die as a 2."
+    description: "+1 Int, Wis, or Cha, Spells I cast ignore resistance to Cold damage. For any spell I cast that deals Cold damage, I can treat any 1 on a damage die as a 2."
   },
   "fire": {
-    description: "+1 Int, Wis, or Cha, Spells I cast ignore resistance to fire damage. For any spell I cast that deals fire damage, I can treat any 1 on a damage die as a 2."
+    description: "+1 Int, Wis, or Cha, Spells I cast ignore resistance to Fire damage. For any spell I cast that deals Fire damage, I can treat any 1 on a damage die as a 2."
   },
   "lightning": {
-    description: "+1 Int, Wis, or Cha, Spells I cast ignore resistance to lightning damage. For any spell I cast that deals lightning damage, I can treat any 1 on a damage die as a 2."
+    description: "+1 Int, Wis, or Cha, Spells I cast ignore resistance to Lightning damage. For any spell I cast that deals Lightning damage, I can treat any 1 on a damage die as a 2."
   },
   "thunder": {
-    description: "+1 Int, Wis, or Cha, Spells I cast ignore resistance to thunder damage. For any spell I cast that deals thunder damage, I can treat any 1 on a damage die as a 2."
+    description: "+1 Int, Wis, or Cha, Spells I cast ignore resistance to Thunder damage. For any spell I cast that deals Thunder damage, I can treat any 1 on a damage die as a 2."
   },
 };
 FeatsList["fey touched"] = {
@@ -20329,7 +20329,7 @@ CompanionList["companion"] = {
 	source : [["P24", 122]],
 	action : [["bonus action", "Ranger's Companion (command)"]],
 	notes : [{
-		name : "If the beast has died within the lasts hour,",
+		name : "If the beast has died within the lasts hour",
 		description : [
 		"I can take a Magic action to touch it and expend a spell slot.",
 		"The beast returns to life after 1 minute with all its Hit Points restored."
