@@ -7,6 +7,8 @@ To gain access to "Legacy" subclasses and spells, please navigate to the 'select
 
 - When adding this source - For the 2024-PHB to properly integrate with other scripts and overwrite the 2014-PHB please make sure to add this script last.
 
+- Spells marked with a * require you to be able to see the point/target within range.
+
 # 2024-PHB-Dunamancy-Companion
 Java Script file, for MorePurpleMoreBetter's D&amp;D 5e Digital Character Sheet.
 This script offers compatibility between the Player's Handbook published 09/17/2024 and Explorer's Guide to Wildmount published 03/17/2020.
