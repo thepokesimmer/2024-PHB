@@ -24,4 +24,17 @@ This script also offers compatibility with other published scripts for MPMB Digi
 This script overwrites outdated magic items that have been republished.
 Currently, this script does not offer "Legacy" compatibility for magic items from the 2014 rules.
 
-- When adding this source - For the 2024-DMG to properly integrate with other scripts and overwrite the 2014-DMG please add this script either before or after the 2024-PHB script.
+- When adding this source - For the 2024-DMG to properly integrate with other scripts and overwrite the 2014-DMG please add this script last
+
+- either before or after the 2024-PHB script.
+
+# 2025-MM
+Java Script file, for MorePurpleMoreBetter's D&amp;D 5e Digital Character Sheet.
+This script offers content introduced in the Wizards of the Coast, Monster Manual published 02/18/2025.
+This script also offers compatibility with other published scripts for MPMB Digital Character Sheets Designed to work with sheet version 13.2.1
+This script overwrites outdated monsters and beasts that have been republished.
+Currently, this script does not offer "Legacy" compatibility for monsters and beasts from the 2014 rules.
+
+- When adding this source - For the 2025-MM to properly integrate with other scripts and overwrite the 2014-MM please add this script last
+- add this script after the 2024-PHB
+- either before or after the 2024-DMG script.
