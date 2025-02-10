@@ -1,3 +1,5 @@
+*These Scripts are designed to use auto-script size for the character sheet.*
+
 # 2024-PHB
 Java Script file, for MorePurpleMoreBetter's D&amp;D 5e Digital Character Sheet.
 This script offers content introduced in the Wizards of the Coast, Player's Handbook published 09/17/2024.
