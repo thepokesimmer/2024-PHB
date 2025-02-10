@@ -10130,7 +10130,7 @@ FeatsList["crusher"] = {
   name: "Crusher",
   source: [["P24", 203]],
   regExpSearch: /^(?=.*crusher).*$/i,
-  description: "+1 Str or Con, 1/turn when I hit a crea. with Blud. dmg, I can push 5ft to unoccupied space if crea. is 1 size larger than I or smaller, when I land a critical hit with Blud. dmg atks against that crea. have Adv. until the start of my next turn.",  
+  description: "+1 Str or Con, 1/turn when I hit a creature with Blud. dmg, I can push it 5 ft to unoccupied space if it's no more than 1 size larger than me. When I score a Critical Hit that deals Blud. dmg to a creature, atks against it have Advantage until the start of my next turn. ",  
   descriptionFull: desc([
     "I gain the following benefits",
     "Ability Score Increase : Increase my Strength or Constitution score by 1 to a maximum of 20.",
@@ -10139,11 +10139,11 @@ FeatsList["crusher"] = {
   ]),
   choices: ["Strength", "Constitution"],
   "strength": {
-    description: "1/turn when I hit a crea. with Blud. dmg, I can push 5ft to unoccupied space if crea. is 1 size larger than I or smaller, when I land a critical hit with Blud. dmg atks against that crea. have Adv. until the start of my next turn. [+1 Strength]",
+    description: "1/turn when I hit a creature with Blud. dmg, I can push it 5 ft to unoccupied space if it's no more than 1 size larger than me. When I score a Critical Hit that deals Blud. dmg to a creature, atks against it have Advantage until the start of my next turn.  [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
   },
   "constitution": {
-    description: "1/turn when I hit a crea. with Blud. dmg, I can push 5ft to unoccupied space if crea. is 1 size larger than I or smaller, when I land a critical hit with Blud. dmg atks against that crea. have Adv. until the start of my next turn. [+1 Constitution]",
+    description: "1/turn when I hit a creature with Blud. dmg, I can push it 5 ft to unoccupied space if it's no more than 1 size larger than me. When I score a Critical Hit that deals Blud. dmg to a creature, atks against it have Advantage until the start of my next turn.  [+1 Constitution]",
     scores: [0, 0, 1, 0, 0, 0],
   },
   prerequisite: "Level 4 or higher",
