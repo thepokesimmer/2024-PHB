@@ -3676,7 +3676,7 @@ CreatureList["scorpion"] = {
 		description : "On a hit, target takes an additional 3 (1d6) Poison damage.",
 	}],
 };
-CreatureList["seahorse"] = { //traits not populating
+CreatureList["seahorse"] = {
 	name : "Seahorse",
 	source : ["M24", 369],
 	size : 5,
@@ -3698,6 +3698,7 @@ CreatureList["seahorse"] = { //traits not populating
 	challengeRating : 0,
 	proficiencyBonus : 2,
 	attacksAction : 1,	
+	attacks : [],
 	traits : [{
 		name : "Water Breathing",
 		description : desc([
@@ -3861,7 +3862,7 @@ CreatureList["vulture"] = {
 	scores : [7, 10, 13, 2, 12, 4],
 	saves : ["", "", "", "", "", ""],
 	skills : {
-		"percertion" : 3,
+		"perception" : 3,
 	},
 	damage_resistances : "",
 	senses : "",
