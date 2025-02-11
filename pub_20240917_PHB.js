@@ -191,6 +191,8 @@ legacyClassRefactor("barbarian", {
 		  usages: [2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6],
 		  recovery: "long rest",
 		  additional : ["+2 Damage", "+2 Damage", "+2 Damage", "+2 Damage", "+2 Damage", "+2 Damage", "+2 Damage", "+2 Damage", "+3 Damage", "+3 Damage", "+3 Damage", "+3 Damage", "+3 Damage", "+3 Damage", "+3 Damage", "+4 Damage", "+4 Damage", "+4 Damage", "+4 Damage", "+4 Damage"],
+		  dmgres : [["Bludgeoning", "Bludgeon. (in rage)"], ["Piercing", "Piercing (in rage)"], ["Slashing", "Slashing (in rage)"]],
+		  savetxt : { text : ["Adv. on Str saves in rage"] },
 		  calcChanges: {
 			atkCalc: [
 				function (fields, v, output) {
