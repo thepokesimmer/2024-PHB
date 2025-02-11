@@ -716,7 +716,7 @@ CreatureList["sphinx of wonder"] = {
 		joinString : "\n   ",
 	}, {
 		name : "Burst of Ingenuity (2/Day)",
-		description : "Reaction. Trigger: he sphinx or another creature within 30 feet makes an ability check or a saving throw. Response: The sphinx adds 2 to the roll.",
+		description : "Reaction. Trigger: The sphinx or another creature within 30 feet makes an ability check or a saving throw. Response: The sphinx adds 2 to the roll.",
 		joinString : "\n   ",
 	}],
 	attacks : [{
