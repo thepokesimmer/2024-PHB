@@ -6546,7 +6546,7 @@ legacyClassRefactor("warlock", {
   die: 8,
   saves: ["Wis", "Cha"],
   skillstxt: {
-    primary: "Choose 2:Arcana, Deception, History, Intimidation, Investigation, Nature, or Religion",
+    primary : "Choose 2: Arcana, Deception, History, Intimidation, Investigation, Nature, or Religion",
   },
   armorProfs: {
     primary: [true, false, false, false],
@@ -8907,6 +8907,7 @@ legacyRaceRefactor("aasimar", {
     times: 1,
   }],
   trait: "Aasimar\nHealing Hands: Once per Long Rest as a Magic action I can touch a creature & restore my Prof Bonus d4s HP.\nLight Bearer: I know the Light cantrip. Charisma is my spellcasting ability for it.\nCelestial Revelation: Once per Long Rest as a Bonus Action I can transform for 1 min or until I end it. (no action) (choose an option each time) (See Notes Page)",
+  replaces: ["fallen aasimar", "protector aasimar", "scourge aasimar", "multiverse aasimar"]
 });
 legacyRaceRefactor("dragonborn", {
   regExpSearch: /dragonborn/i,
@@ -21929,7 +21930,7 @@ CreatureList["sphinx of wonder"] = {
 		joinString : "\n   ",
 	}, {
 		name : "Burst of Ingenuity (2/Day)",
-		description : "Reaction. Trigger: he sphinx or another creature within 30 feet makes an ability check or a saving throw. Response: The sphinx adds 2 to the roll.",
+		description : "Reaction. Trigger: The sphinx or another creature within 30 feet makes an ability check or a saving throw. Response: The sphinx adds 2 to the roll.",
 		joinString : "\n   ",
 	}],
 	attacks : [{
