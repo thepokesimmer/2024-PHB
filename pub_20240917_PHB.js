@@ -8506,6 +8506,7 @@ BackgroundList["guard"] = {
     "my feet ache when I remember the countless hours I spent at my post in the tower. I was trained to keep one eye looking outside the wall watching for marauders sweeping from the nearby forest, and my other eye looking inside the wall searching for cut purses and troublemakers."
   ],
 };
+BackgroundList.outlander.regExpSearch = /^(?=.*(outlander|forester|trapper|homesteader|exile|outcast|tribal nomad|hunter-gatherer|tribal.?marauder)).*$/i;
 BackgroundList["guide"] = {
   regExpSearch: /^(?=.*guide).*$/i,
   name: "Guide",
