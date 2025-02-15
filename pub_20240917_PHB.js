@@ -4204,13 +4204,7 @@ legacyClassRefactor("paladin", {
 			limfeaname : "Divine Smite",
 			usages : 1,
 			recovery : "Long Rest",
-			spellcastingBonus : [{
-				name : "Paladin's Smite",
-				spells : ["divine smite"],
-				selection : ["divine smite"],
-				times : 1,
-				prepared : true,
-			}],
+			spellcastingExtra : ["divine smite"],
 		},
 		"channel divinity": {
 			name: "Channel Divinity",
@@ -4311,7 +4305,7 @@ legacySubClassRefactor("paladin", "devotion", {
 	subname: "Oath of Devotion",
 	source: [["P24", 113]],
 	replaces: "oath of devotion",
-	spellcastingExtra: ["protection from evil and good", "shield of faith", "aid", "zone of truth", "beacon of hope", "dispel magic", "freedom of movement", "guardian of faith", "commune", "flame strike"],
+	spellcastingExtra: ["divine smite", "protection from evil and good", "shield of faith", "aid", "zone of truth", "beacon of hope", "dispel magic", "freedom of movement", "guardian of faith", "commune", "flame strike"],
 	features: {
 		"subclassfeature3": {
 			name: "Channel Divinity: Sacred Weapon",
@@ -4373,7 +4367,7 @@ legacySubClassRefactor("paladin", "glory", {
   subname: "Oath of Glory",
   source: [["P24", 114]],
   replaces: "oath of glory",
-  spellcastingExtra: ["guiding bolt", "heroism", "enhance ability", "magic weapon", "haste", "protection from energy", "compulsion", "freedom of movement", "legend lore", "yolande's regal presence"],
+  spellcastingExtra: ["divine smite", "guiding bolt", "heroism", "enhance ability", "magic weapon", "haste", "protection from energy", "compulsion", "freedom of movement", "legend lore", "yolande's regal presence"],
   features: {
     "subclassfeature3": {
 		name: "Channel Divinity: Inspiring Smite",
@@ -4444,7 +4438,7 @@ legacySubClassRefactor("paladin", "ancients", {
   subname: "Oath of the Ancients",
   source: [["P24", 115]],
   replaces: "oath of the ancients",
-  spellcastingExtra: ["ensnaring strike", "speak with animals", "misty step", "moonbeam", "plant growth", "protection from energy", "ice storm", "stoneskin", "commune with nature", "tree stride"],
+  spellcastingExtra: ["divine smite", "ensnaring strike", "speak with animals", "misty step", "moonbeam", "plant growth", "protection from energy", "ice storm", "stoneskin", "commune with nature", "tree stride"],
   features: {
     "subclassfeature3": {
       name: "Channel Divinity: Nature's Wrath",
@@ -4491,7 +4485,7 @@ legacySubClassRefactor("paladin", "Vengeance", {
   subname: "Oath of Vengeance",
   source: [["P24", 116]],
   replaces: "oath of vengeance",
-  spellcastingExtra: ["bane", "hunter's mark", "hold person", "misty step", "haste", "protection from energy", "banishment", "dimension door", "hold monster", "scrying"],
+  spellcastingExtra: ["divine smite", "bane", "hunter's mark", "hold person", "misty step", "haste", "protection from energy", "banishment", "dimension door", "hold monster", "scrying"],
   features: {
     "subclassfeature3": {
       name: "Channel Divinity: Vow of Enmity",
