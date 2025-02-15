@@ -4207,6 +4207,7 @@ legacyClassRefactor("paladin", {
 		"paladin's smite" : {
 			name : "Paladin's Smite",
 			source : [["P24", 110]],
+			minlevel : 2,
 			limfeaname : "Divine Smite",
 			usages : 1,
 			recovery : "Long Rest",
