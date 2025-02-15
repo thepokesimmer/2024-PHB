@@ -35,6 +35,15 @@ SourceList.LEGACYRACE = {
   date: "2014/01/01",
   defaultExcluded : true,
 };
+SourceList.LEGACYBG = {
+  name: "Backgrounds Deprecated by 2024 Player's Handbook",
+  abbreviation: "LEGACY",
+  abbreviationSpellsheet: "L",
+  group: "Core Sources",
+  url: "https://marketplace.dndbeyond.com/core-rules/3709000?pid=DB3709000",
+  date: "2014/01/01",
+  defaultExcluded : true,
+};
 // Coded By: ThePokésimmer with contributions from morepurplemorebetter (Joost), MasterJedi2014, Shroo, Reading Toskr, TrackAtNite, evanelric, TappyTap, Mente, Rocky, ShadowzAll, and Jeremy
 //Functions
 function escapeRegExp(string) {
@@ -151,7 +160,22 @@ function legacyRaceRefactor(raceKey, newRace){
   }
   RaceList[raceKey] = newRace;
 }
-
+function legacyBackgroundRefactor(bgKey, newBg) {
+  if( bgKey in BackgroundList ) {
+    var oldBg = BackgroundList[bgKey];
+    BackgroundList[bgKey+" (L)"] = oldBg;
+    oldBg.source = [["LEGACYBG", 1]];
+    oldBg.name = oldBg.name+" (L)";
+    for( var i in BackgroundList ) {
+      var bg_i = BackgroundList[i];
+      if( bg_i.regExpSearch.test(newBg.name) ) {
+        var regex = "(?=^.*"+bg_i.regExpSearch.source+".*$)(?!^"+escapeRegExp(newBg.name)+"$)";
+        bg_i.regExpSearch = new RegExp(regex, 'i');
+      }
+    }
+  }
+  BackgroundList[bgKey] = newBg;
+}
 //Classes
 legacyClassRefactor("barbarian", {
 	regExpSearch: /barbarian/i,
@@ -686,7 +710,7 @@ legacySubClassRefactor("barbarian", "wild heart", {
       source: [["P24", 55]],
       minlevel: 3,
       description: desc([
-        "Choose an animal aspect when I enter a Rage (See Third Page).",
+        "Choose a Rage of the Wilds animal aspect when I enter a Rage (See Third Page).",
       ]),
 	  "bear": {
 		name: "Bear",
@@ -767,27 +791,27 @@ legacySubClassRefactor("barbarian", "wild heart", {
       source: [["P24", 55]],
       minlevel: 14,
       description: desc([
-        "I gain 3 new Rage of the Wild options (See Third Page).",
+        "When I enter a Rage, I gain the Benefits of an animal aspect from the Rage of the Wilds Feature and one animal aspect from this Feature (See Third Page).",
       ]),
 	  "falcon": {
 		name: "Falcon",
-		extraname: "Rage of the Wild Option",
+		extraname: "Power of the Wild Option",
 		description: desc([
 			"Fly Speed equals my Speed without armor.",
 		]),
 	  },
 	  "lion": {
 		name: "Lion",
-		extraname: "Rage of the Wild Option",
+		extraname: "Power of the Wild Option",
 		description: desc([
 			"Enemies with in 5 ft of me have Disadvantage on attacks against targets other than me or another Barbarian w/ this feature.",
 		]),
 	  },
 	  "ram": {
 		name: "Ram",
-		extraname: "Rage of the Wild Option",
+		extraname: "Power of the Wild Option",
 		description: desc([
-			"Knock Large or smaller creatures Prone with melee attacks.",
+			"Knock Large or smaller creatures Prone when hit with melee attack.",
 		]),
 	  },
 	  autoSelectExtrachoices: [{
@@ -1836,7 +1860,7 @@ legacyClassRefactor("druid", {
       recovery: "long rest",
       additional: levels.map(function (n) {
         if (n < 2) return "";
-        var cr = n < 4 ? "1/4" : n < 8 ? "1/2" : 1;
+        var cr = n < 4 ? "1/4; 4 Known Forms" : n < 8 ? "1/2; 6 Known Forms" : "1; 8 Known Forms";
         var hr = Math.floor(n / 2);
         var restr = n < 8 ? ", no fly" : "";
         return "CR " + cr + restr + "; " + hr + (restr.length ? " h" : " hours");
@@ -2384,7 +2408,7 @@ legacyClassRefactor("fighter", {
       name: "Second Wind",
       source: [["P24", 91]],
       minlevel: 1,
-	  action: "bonus action",
+	  action: [["bonus action", "Second Wind"]],
 	  limfeaname : "Second Wind (Regain 1 SR)",
       usages: [2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
       recovery: "long rest",
@@ -3871,7 +3895,7 @@ legacyClassRefactor("paladin", {
 			additional: ["2 Weapon Masteries"],
 			extraname: "Weapon Mastery",
 			extrachoices: ["Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light Hammer", "Mace", "Quarterstaff", "Sickle", "Spear", "Dart", "Light Crossbow", "Shortbow", "Sling", "Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "Warhammer", "War Pick", "Whip", "Blowgun", "Hand Crossbow", "Heavy Crossbow", "Longbow", "Musket", "Pistol"],
-			extraTimes: 2,
+			extraTimes: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
 			"club": {
 				name: "Club",
 				description: desc([
@@ -4180,17 +4204,32 @@ legacyClassRefactor("paladin", {
 				]),
 			},
 		},
+		"paladin's smite" : {
+			name : "Paladin's Smite",
+			source : [["P24", 110]],
+			limfeaname : "Divine Smite",
+			usages : 1,
+			recovery : "Long Rest",
+			spellcastingBonus : [{
+				name : "Paladin's Smite",
+				spells : ["divine smite"],
+				selection : ["divine smite"],
+				times : 1,
+				prepared : true,
+			}],
+		},
 		"channel divinity": {
 			name: "Channel Divinity",
 			source: [["P24", 110]],
-			action: ["bonus action", "Divine Sense"],
+			action: ["bonus action", " Divine Sense"],
 			minlevel: 3,
 			limfeaname : "Channel Divinity (Regain 1 SR)",
 			usages: [0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+			recovery : "Long Rest",
 			description: desc([
 			"If a Channel Divinity effect has a saving throw the DC is my Cha spell save DC.",
 			"I get two uses (three at level 11); one returns on a Short Rest; all return on a Long Rest.",
-			"◆ Channel Divinity: Divine Sense As a Bonus Action I sense & locate Celestials/Fiends/Undead & consecrated/desecrated within 60 ft for 10 min while I'm conscious.",
+			"◆ Channel Divinity: Divine Sense As a Bonus Action I sense and locate Celestials, Fiends, Undead and consecrated/desecrated places/obj within 60 ft for 10 min or until Incapacitated",
 			]),
 		},
 		"subclassfeature3": {
@@ -4220,7 +4259,7 @@ legacyClassRefactor("paladin", {
 			addMod : { type : "save", field : "all", mod : "max(Cha|1)", text : "While I'm conscious I can add my Charisma modifier (min 1) to all my saving throws." }
 		},
 		"abjure foes": {
-			name: "Abjure Foes",
+			name: "Channel Divinity : Abjure Foes",
 			source: [["P24", 111]],
 			minlevel: 9,
 			action: "action",
@@ -4285,8 +4324,7 @@ legacySubClassRefactor("paladin", "devotion", {
 			source: [["P24", 113]],
 			minlevel: 3,
 			description : desc([
-				"As an action, for 10 minutes, I add my Cha modifier to hit for one weapon I'm holding",
-				"Choose Radiant or it's normal damage, it emits bright light in a 20-ft radius and equal dim light"
+				"As part of the attack action, I can imbue 1 held melee weapon for 10 minutes or until I use this feature again. While active, I add my Cha modifier to attacks and choose Radiant or normal damage on each hit. It also emits 20-ft radius bright light and 20-ft more dim light."
 			]),
 			action : "action",
 			calcChanges : {
@@ -4596,7 +4634,7 @@ legacyClassRefactor("ranger", {
 			additional: ["2 Weapon Masteries"],
 			extraname: "Weapon Mastery",
 			extrachoices: ["Club", "Dagger", "Greatclub", "Handaxe", "Javelin", "Light Hammer", "Mace", "Quarterstaff", "Sickle", "Spear", "Dart", "Light Crossbow", "Shortbow", "Sling", "Battleaxe", "Flail", "Glaive", "Greataxe", "Greatsword", "Halberd", "Lance", "Longsword", "Maul", "Morningstar", "Pike", "Rapier", "Scimitar", "Shortsword", "Trident", "Warhammer", "War Pick", "Whip", "Blowgun", "Hand Crossbow", "Heavy Crossbow", "Longbow", "Musket", "Pistol"],
-			extraTimes: 2,
+			extraTimes: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
 			"club": {
 				name: "Club",
 				description: desc([
@@ -5243,18 +5281,17 @@ legacySubClassRefactor("ranger", "hunter", {
 			name: "Hunter's Prey",
 			source: [["P24", 127]],
 			minlevel: 3,
-			choices: ["Colossus Slayer", "Hoarde Breaker"],
+			choices: ["Colossus Slayer", "Horde Breaker"],
 			"colossus slayer": {
 				name: "Colossus Slayer",
 				description: desc([
-					"Once per turn, when I hit a creature with a weapon, I deal an extra 1d8 damage to the target if it's missing any Hit Points.",
+					"Once per turn, when I hit a creature with a weapon, I deal an extra 1d8 damage to the target if it's missing any Hit Points. After a Short or Long Rest, I can replace this feature with the 'Horde Breaker' feature.",
 				]),
 			},
-			"hoarde breaker": {
-				name: "Hoarde Breaker",
+			"horde breaker": {
+				name: "Horde Breaker",
 				description: desc([
-					"Once per turn, when I hit a creature, I can make an attack vs. another within 5 ft of it if I" +
-					" haven't hit it during this turn."
+					"Once per turn, when I hit a creature, I can make an attack vs. another within 5 ft of it if I haven't hit it during this turn. After a Short or Long Rest, I can replace this feature with the 'Colossus Slayer' feature."
 				]),
 			},
 			description: desc([
@@ -5265,9 +5302,9 @@ legacySubClassRefactor("ranger", "hunter", {
 			name: "Defensive Tactics",
 			source: [["P24", 127]],
 			minlevel: 7,
-			choices: ["Escape the Hoarde", "Multiattack Defense"],
-			"escape the hoarde": {
-				name: "Escape the Hoarde",
+			choices: ["Escape the Horde", "Multiattack Defense"],
+			"escape the horde": {
+				name: "Escape the Horde",
 				description: desc([
 					"Opportunity Attacks have Disadvantage against me. After a Short or Long Rest, I can replace this feature with the 'Multiattack Defense' feature.",
 				]),
@@ -5275,7 +5312,7 @@ legacySubClassRefactor("ranger", "hunter", {
 			"multiattack defense": {
 				name: "Multiattack Defense",
 				description: desc([
-					"When a creature hits me with an attack roll, that creature has Disadvantage on all other attack rolls against me this turn. After, I can replace this feature with the 'Escape the Hoarde' feature.",
+					"When a creature hits me with an attack roll, that creature has Disadvantage on all other attack rolls against me this turn. After a Short or Long Rest, I can replace this feature with the 'Escape the Horde' feature.",
 				]),
 			},
 			description: desc([
@@ -8351,7 +8388,7 @@ legacySubClassRefactor("wizard", "illusionist", {
   },
 });
 //Backgrounds
-BackgroundList["acolyte"] = {
+legacyBackgroundRefactor("acolyte",{
   regExpSearch: /^(?=.*acolyte).*$/i,
   name: "Acolyte",
   source: [["P24", 178]],
@@ -8372,8 +8409,8 @@ BackgroundList["acolyte"] = {
   trait: [
     "I devoted myself to service in a temple, either nestled in a town or secluded in a sacred grove. There I performed rites in honor of a god or pantheon. I served under a priest and studied religion. Thanks to my priest's instruction and my own devotion, I also learned how to channel a modicum of divine power in service to my place of worship and the people who prayed there."
   ],
-};
-BackgroundList["artisan"] = {
+});
+legacyBackgroundRefactor("artisan",{
   regExpSearch: /^(?=.*artisan).*$/i,
   name: "Artisan",
   source: [["P24", 178]],
@@ -8390,8 +8427,8 @@ BackgroundList["artisan"] = {
   trait: [
     "I began mopping floors and scrubbing counters in an artisan's workshop for a few coppers per day as soon as I was strong enough to carry a bucket. When I was old enough to apprentice, I learned to create basic crafts of my own, as well as how to sweet talk the occasional demanding customer. My trade has also given me a keen eye for detail."
   ],
-};
-BackgroundList["charlatan"] = {
+});
+legacyBackgroundRefactor("charlatan",{
   regExpSearch: /^(?=.*charlatan).*$/i,
   name: "Charlatan",
   source: [["P24", 179]],
@@ -8410,8 +8447,8 @@ BackgroundList["charlatan"] = {
   trait: [
     "Once I was old enough to order an ale, I soon had a favorite stool in every tavern within ten miles of where I was born. As I traveled the circuit from public house to watering hole, I learned to prey on unfortunates who were in the market for a comforting lie or two - perhaps a sham potion or forged ancestry records."
   ],
-};
-BackgroundList["criminal"] = {
+});
+legacyBackgroundRefactor("criminal",{
   regExpSearch: /^(?=.*criminal).*$/i,
   name: "Criminal",
   source: [["P24", 179]],
@@ -8432,8 +8469,8 @@ BackgroundList["criminal"] = {
   trait: [
     "I eked out a living in dark alleyways, cutting purses or burgling shops. Perhaps I were part of a small gang of like-minded wrongdoers who looked out for each other. Or maybe I were a lone wolf, fending for myself against the local thieves' guild and more fearsome lawbreakers."
   ],
-};
-BackgroundList["entertainer"] = {
+});
+legacyBackgroundRefactor("entertainer",{
   regExpSearch: /^(?=.*entertainer).*$/i,
   name: "Entertainer",
   source: [["P24", 180]],
@@ -8455,8 +8492,8 @@ BackgroundList["entertainer"] = {
   trait: [
     "I spent much of my youth following roving fairs and carnivals, performing odd jobs for musicians and acrobats in exchange for lessons. I may have learned how to walk a tightrope, how to play a lute in a distinct style, or how to recite poetry with impeccable diction. To this day, I thrive on applause and long for the stage."
   ],
-};
-BackgroundList["farmer"] = {
+});
+legacyBackgroundRefactor("farmer",{
   regExpSearch: /^(?=.*farmer).*$/i,
   name: "Farmer",
   source: [["P24", 180]],
@@ -8479,8 +8516,8 @@ BackgroundList["farmer"] = {
   trait: [
     "I grew up close to the land. Years tending animals and cultivating the earth rewarded me with patience and good health. I have a keen appreciation for nature's bounty alongside a healthy respect for nature's wrath."
   ],
-};
-BackgroundList["guard"] = {
+});
+legacyBackgroundRefactor("guard",{
   regExpSearch: /^(?=.*guard).*$/i,
   name: "Guard",
   source: [["P24", 181]],
@@ -8505,9 +8542,8 @@ BackgroundList["guard"] = {
   trait: [
     "my feet ache when I remember the countless hours I spent at my post in the tower. I was trained to keep one eye looking outside the wall watching for marauders sweeping from the nearby forest, and my other eye looking inside the wall searching for cut purses and troublemakers."
   ],
-};
-BackgroundList.outlander.regExpSearch = /^(?=.*(outlander|forester|trapper|homesteader|exile|outcast|tribal nomad|hunter-gatherer|tribal.?marauder)).*$/i;
-BackgroundList["guide"] = {
+});
+legacyBackgroundRefactor("guide",{
   regExpSearch: /^(?=.*guide).*$/i,
   name: "Guide",
   source: [["P24", 181]],
@@ -8531,8 +8567,8 @@ BackgroundList["guide"] = {
   trait: [
     "I came of age outdoors, far from settled lands. My home was anywhere I chose to spread my bedroll. There are wonders in the wilderness - strange monsters, pristine forests, streams, overgrown ruins of great halls once trod by giants - and I learned to fend for myself as I explored them. From time to time, I guided friendly nature priests who instructed me in the fundamentals of channeling the magic of the wild."
   ],
-};
-BackgroundList["hermit"] = {
+});
+legacyBackgroundRefactor("hermit",{
   regExpSearch: /^(?=.*hermit).*$/i,
   name: "Hermit",
   source: [["P24", 182]],
@@ -8555,8 +8591,8 @@ BackgroundList["hermit"] = {
   trait: [
     "I spent my early years secluded in a hut or monastery located well beyond the outskirts of the nearest settlement. In those days, my only companions were the creatures of the forest and those who would occasionally visit to bring news of the outside world and supplies. The solitude allowed me to spend many hours pondering the mysteries of creation."
   ],
-};
-BackgroundList["merchant"] = {
+});
+legacyBackgroundRefactor("merchant",{
   regExpSearch: /^(?=.*merchant).*$/i,
   name: "Merchant",
   source: [["P24", 182]],
@@ -8575,8 +8611,8 @@ BackgroundList["merchant"] = {
   trait: [
     "I was apprenticed to a trader, caravan master, or shopkeeper, learning the fundamentals of commerce. I traveled broadly, and I earned a living by buying and selling the raw materials artisans need to practice their craft or finished works from such crafters. I might have transported goods from one place to another (by ship, wagon, or caravan) or bought them from traveling traders and sold them in my own shop."
   ],
-};
-BackgroundList["noble"] = {
+});
+legacyBackgroundRefactor("noble",{
   regExpSearch: /^(?=.*noble).*$/i,
   name: "Noble",
   source: [["P24", 183]],
@@ -8596,8 +8632,8 @@ BackgroundList["noble"] = {
   trait: [
     "I was raised in a castle, surrounded by wealth, power, and privilege. My family of minor aristocrats ensured that I received a first-class education, some of which I appreciated and some of which I resented. My time in the castle, especially the many hours I spent observing my family at court, also taught me a great deal about leadership."
   ],
-};
-BackgroundList["sage"] = {
+});
+legacyBackgroundRefactor("sage",{
   regExpSearch: /^(?=.*sage).*$/i,
   name: "Sage",
   source: [["P24", 183]],
@@ -8619,8 +8655,8 @@ BackgroundList["sage"] = {
   trait: [
     "I spent my formative years traveling between manors and monasteries, performing various odd jobs and services in exchange for access to their libraries. I whiled away many a long evening studying books and scrolls, learning the lore of the multiverse - even the rudiments of magic - and my mind yearns for more."
   ],
-};
-BackgroundList["sailor"] = {
+});
+legacyBackgroundRefactor("sailor",{
   regExpSearch: /^(?=.*sailor).*$/i,
   name: "Sailor",
   source: [["P24", 184]],
@@ -8641,8 +8677,8 @@ BackgroundList["sailor"] = {
   trait: [
     "I lived as a seafarer, wind at my back and decks swaying beneath my feet. I've perched on bar stools in more ports of call than I can remember, faced mighty storms, and swapped stories with folk who live beneath the waves."
   ],
-};
-BackgroundList["scribe"] = {
+});
+legacyBackgroundRefactor("scribe",{
   regExpSearch: /^(?=.*scribe).*$/i,
   name: "Scribe",
   source: [["P24", 184]],
@@ -8663,8 +8699,8 @@ BackgroundList["scribe"] = {
   trait: [
     "I spent formative years in a scriptorium, a monastery dedicated to the preservation of knowledge, or a government agency, where I learned to write with a clear hand and produce finely written texts. Perhaps I scribed government documents or copied tomes of literature, I might have some skill as a writer of poetry, narrative, or scholarly research. Above all, I have a careful attention to detail, helping me avoid introducing mistakes to the documents I copy and create."
   ],
-};
-BackgroundList["soldier"] = {
+});
+legacyBackgroundRefactor("soldier",{
   regExpSearch: /^(?=.*soldier).*$/i,
   name: "Soldier",
   source: [["P24", 185]],
@@ -8688,8 +8724,8 @@ BackgroundList["soldier"] = {
   trait: [
     "I began training for war as soon as I reached adulthood and carry precious few memories of life before I took up arms. Battle is in my blood. Sometimes I catch myself reflexively performing the basic fighting exercises I learned first. Eventually, I put that training to use on the battlefield, protecting the realm by waging war."
   ],
-};
-BackgroundList["wayfarer"] = {
+});
+legacyBackgroundRefactor("wayfarer",{
   regExpSearch: /^(?=.*wayfarer).*$/i,
   name: "Wayfarer",
   source: [["P24", 185]],
@@ -8711,7 +8747,7 @@ BackgroundList["wayfarer"] = {
   trait: [
     "I grew up on the streets surrounded by similarly ill-fated castoffs, a few of them friends and a few of them rivals. I slept where I could and did odd jobs for food. At times, when the hunger became unbearable, I resorted to theft Still, I never lost my pride and never abandoned hope. Fate is not finished with me."
   ],
-};
+});
 BackgroundFeatureList["magic initiate (cleric)"] = {
   description: desc([
     "",
@@ -8927,7 +8963,7 @@ legacyRaceRefactor("dragonborn", {
     name: "Breath weapon",
     source: [["P24", 187]],
     ability: 3,
-    type: "Natural",
+    type: "Special",
     damage: [1, 10, "fire"],
     range: "15-ft cone/30-ft line",
     description: "Hits all in area; Dex save, success - half damage; Usable Prof Bonus per long Rest",
@@ -9309,7 +9345,7 @@ RaceSubList["gnome-rock"] = {
   vision: [["Darkvision", 60]],
   spellcastingAbility: [4, 5, 6],
   spellcastingBonus: [{
-    name: "Forest Gnome Lineage",
+    name: "Rock Gnome Lineage",
     spells: ["mending", "prestidigitation"],
     selection: ["mending", "prestidigitation"],
     times: 2,
@@ -9798,9 +9834,9 @@ FeatsList["alert"] = {
   addMod: [{type: "skill", field: "Init", mod: "prof", text: "I can add my Proficiency Bonus to initiative rolls."}],
   description: "I add my Prof Bonus to Initiative rolls. I may swap Initiative with one willing ally as long as neither of us has the Incapacitated condition.",
   descriptionFull: desc([
-    "I gain the following benefits",
-    "When I roll Initiative, I can add my Proficiency Bonus to the roll.",
-    "Immediately after I roll Initiative, I can swap my Initiative with the Initiative of one willing ally in the same combat. I can't make this swap if I or the ally has the Incapacitated condition.",
+    "You gain the following benefits",
+    "When you roll Initiative, you can add your Proficiency Bonus to the roll.",
+    "Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can't make this swap if you or the ally has the Incapacitated condition.",
   ]),
 };
 FeatsList["crafter"] = {
@@ -9810,10 +9846,10 @@ FeatsList["crafter"] = {
   toolProfs: [["Artisan's tools", 3]],
   description: "I gain proficiency in three Fast Craft Artisan Tools of choice and can use them to Fast Craft during a long rest, (see Notes Page for details), the fast crafted item lasts until my next long rest. I received a 20% discount on non-magical objects.",
   descriptionFull: desc([
-    "I gain the following benefits.",
-    "I gain proficiency with three different Artisan's Tools of my choice from the Fast Crafting table. (See Notes Page for details)",
-    "Whenever I buy a nonmagical item, I receive a 20 percent discount on it.",
-    "When I finish a Long Rest, I can craft one piece of gear from the Fast Crafting table, provided I have the Artisan's Tools associated with that item and have proficiency with those tools. The item lasts until I finish another Long Rest, at which point the item falls apart.",
+    "You gain the following benefits.",
+    "You gain proficiency with three different Artisan's Tools of your choice from the Fast Crafting table. (See Notes Page for details)",
+    "Whenever you buy a nonmagical item, you receive a 20 percent discount on it.",
+    "When you finish a Long Rest, you can craft one piece of gear from the Fast Crafting table, provided you have the Artisan's Tools associated with that item and have proficiency with those tools. The item lasts until you finish another Long Rest, at which point the item falls apart.",
   ]),
   toNotesPage: [{
     name: "Fast Crafting",
@@ -9835,11 +9871,11 @@ FeatsList["healer"] = {
   source: [["P24", 201]],
   regExpSearch: /^(?=.*healer).*$/i,
   action: [["action", "Battle Medic"]],
-  description: "I can use a Healer's Kit as an action to allow 1 creature within 5ft of me to roll a Hit Die and regain HP equal to the roll plus my Prof Bonus, and when I roll a 1 on the die to heal using a spell or this feat I can reroll, but must use the new roll.",
+  description: "I can expend a use of a Healer's Kit as an action to allow 1 creature within 5ft of me to roll a Hit Die and regain HP equal to the roll plus my Prof Bonus, and when I roll a 1 on the die to heal using a spell or this feat I can reroll, but must use the new roll.",
   descriptionFull: desc([
-    "I gain the following benefits.",
-    "Battle Medic : If I have a Healer's Kit, I can expend one use of it and tend to a creature within 5 feet of yourself as a Utilize action. That creature can expend one of its Hit Point Dice, and I then roll that die. The creature regains a number of Hit Points equal to the roll plus my Proficiency Bonus",
-    "Healing Rerolls : Whenever I roll a die to determine the number of Hit Points I restore with a spell or with this feat's Battle Medic benefit, I can reroll the die if it rolls a 1, and I must use the new roll.",
+    "You gain the following benefits.",
+    "Battle Medic : If you have a Healer's Kit, you can expend one use of it and tend to a creature within 5 feet of yourself as a Utilize action. That creature can expend one of its Hit Point Dice, and you then roll that die. The creature regains a number of Hit Points equal to the roll plus your Proficiency Bonus",
+    "Healing Rerolls : Whenever you roll a die to determine the number of Hit Points you restore with a spell or with this feat's Battle Medic benefit, you can reroll the die if it rolls a 1, and you must use the new roll.",
   ]),
 };
 FeatsList["lucky"] = {
@@ -9852,10 +9888,10 @@ FeatsList["lucky"] = {
   recovery: "long rest",
   description: "I gain a number of Luck Points equal to my Prof Bonus and can use them to give myself Advantage on a D20 Test, or to give a creature who rolls a d20 for an attack roll against me Disadvantage on that roll.",
   descriptionFull: desc([
-    "I gain the following benefits.",
-    "Luck Point : I have a number of Luck Points equal to my Proficiency Bonus and can spend the points on the benefits below. I regain my expended Luck Points when I finish a Long Rest.",
-    "Advantage : When I roll a d20 for a D20 Test, I can spend 1 Luck Point to give myself Advantage on the roll.",
-    "Disadvantage : When a creature rolls a d20 for an attack roll against me, I can spend 1 Luck Point to impose Disadvantage on that roll.",
+    "You gain the following benefits.",
+    "Luck Point : You have a number of Luck Points equal to your Proficiency Bonus and can spend the points on the benefits below. You regain my expended Luck Points when you finish a Long Rest.",
+    "Advantage : When you roll a d20 for a D20 Test, you can spend 1 Luck Point to give yourself Advantage on the roll.",
+    "Disadvantage : When a creature rolls a d20 for an attack roll against you, you can spend 1 Luck Point to impose Disadvantage on that roll.",
   ]),
 };
 FeatsList["magic initiate (cleric)"] = {
@@ -9878,11 +9914,11 @@ FeatsList["magic initiate (cleric)"] = {
   }],
   description: "I gain 2 Cantrips and 1 1st-level spell of choice from the Cleric spell list, I may swap any one of these spells with another from the Cleric spell list when I gain a level, I may cast the 1st-level spell once without using a spell slot before a long rest, otherwise I may cast it using any spell slots I have.",
   descriptionFull: desc([
-    "I gain the following benefits.",
-    "Two Cantrips of my choice from the Cleric spell list. Intelligence, Wisdom, or Charisma is my spellcasting ability for this feat's spells (choose when I select this feat.)",
-    "Choose a level 1 spell from the Cleric spell list, I always have that spell prepared. I can cast it once without a spell slot, and I regain the ability to cast it in that way when I finish a Long Rest. I can also cast the spell using any spell slots I have.",
-    "Whenever I gain a new level, I can replace one of the spells I chose from this feat with a different spell of the same level from the Cleric spell list.",
-    "I can take this feat more than once, but must choose either the Druid spell list or Wizard spell list.",
+    "You gain the following benefits.",
+    "Two Cantrips of your choice from the Cleric spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat's spells (choose when you select this feat.)",
+    "Choose a level 1 spell from the Cleric spell list, you always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when I finish a Long Rest. You can also cast the spell using any spell slots you have.",
+    "Whenever you gain a new level, you can replace one of the spells you chose from this feat with a different spell of the same level from the Cleric spell list.",
+    "You can take this feat more than once, but must choose either the Druid spell list or Wizard spell list.",
   ]),
 };
 FeatsList["magic initiate (druid)"] = {
@@ -9905,11 +9941,11 @@ FeatsList["magic initiate (druid)"] = {
   }],
   description: "I gain 2 Cantrips and 1 1st-level spell of choice from the Druid spell list, I may swap any one of these spells with another from the Druid spell list when I gain a level, I may cast the 1st-level spell once without using a spell slot before a long rest, otherwise I may cast it using any spell slots I have.",
   descriptionFull: desc([
-    "I gain the following benefits.",
-    "Two Cantrips of my choice from the Druid spell list. Intelligence, Wisdom, or Charisma is my spellcasting ability for this feat's spells (choose when I select this feat.)",
-    "Choose a level 1 spell from the Druid spell list, I always have that spell prepared. I can cast it once without a spell slot, and I regain the ability to cast it in that way when I finish a Long Rest. I can also cast the spell using any spell slots I have.",
-    "Whenever I gain a new level, I can replace one of the spells I chose from this feat with a different spell of the same level from the Druid spell list.",
-    "I can take this feat more than once, but must choose either the Cleric spell list or Wizard spell list.",
+    "You gain the following benefits.",
+    "Two Cantrips of your choice from the Druid spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat's spells (choose when you select this feat.)",
+    "Choose a level 1 spell from the Druid spell list, you always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have.",
+    "Whenever you gain a new level, you can replace one of the spells you chose from this feat with a different spell of the same level from the Druid spell list.",
+    "You can take this feat more than once, but must choose either the Cleric spell list or Wizard spell list.",
   ]),
 };
 FeatsList["magic initiate (wizard)"] = {
@@ -9932,11 +9968,11 @@ FeatsList["magic initiate (wizard)"] = {
   }],
   description: "I gain 2 Cantrips and 1 1st-level spell of choice from the Wizard spell list, I may swap any one of these spells with another from the Wizard spell list when I gain a level, I may cast the 1st-level spell once without using a spell slot before a long rest, otherwise I may cast it using any spell slots I have.",
   descriptionFull: desc([
-    "I gain the following benefits.",
-    "Two Cantrips of my choice from the Wizard spell list. Intelligence, Wisdom, or Charisma is my spellcasting ability for this feat's spells (choose when I select this feat.)",
-    "Choose a level 1 spell from the Wizard spell list, I always have that spell prepared. I can cast it once without a spell slot, and I regain the ability to cast it in that way when I finish a Long Rest. I can also cast the spell using any spell slots I have.",
-    "Whenever I gain a new level, I can replace one of the spells I chose from this feat with a different spell of the same level from the Wizard spell list.",
-    "I can take this feat more than once, but must choose either the Cleric spell list or Druid spell list.",
+    "You gain the following benefits.",
+    "Two Cantrips of your choice from the Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat's spells (choose when you select this feat.)",
+    "Choose a level 1 spell from the Wizard spell list, you always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have.",
+    "Whenever you gain a new level, you can replace one of the spells you chose from this feat with a different spell of the same level from the Wizard spell list.",
+    "You can take this feat more than once, but must choose either the Cleric spell list or Druid spell list.",
   ]),
 };
 FeatsList["musician"] = {
@@ -9946,9 +9982,9 @@ FeatsList["musician"] = {
   toolProfs: [["Musical Instrument", 3]],
   description: "I gain proficiency in 3 Musical Instruments and at the end of a Short or Long Rest I can play a song to give a number of allies up to my Prof Bonus Heroic Inspiration.",
   descriptionFull: desc([
-    "I gain the following benefits",
-    "I gain proficiency with three Musical Instruments of my choice.",
-    "As I finish a Short or Long Rest, I can play a song on a Musical Instrument with which I have proficiency and give Heroic Inspiration to allies who hear the song. The number of allies I can affect in this way equals my Proficiency Bonus.",
+    "You gain the following benefits",
+    "You gain proficiency with three Musical Instruments of your choice.",
+    "As you finish a Short or Long Rest, you can play a song on a Musical Instrument with which you have proficiency and give Heroic Inspiration to allies who hear the song. The number of allies you can affect in this way equals your Proficiency Bonus.",
   ]),
 };
 FeatsList["savage attacker"] = {
@@ -9957,7 +9993,7 @@ FeatsList["savage attacker"] = {
   regExpSearch: /^(?=.*savage)(?=.*attacker).*$/i,
   description: "I've trained to deal particularly damaging strikes. Once per turn when I hit a target with a weapon, I can roll the weapon's damage dice twice and use either roll against the target.",
   descriptionFull: desc([
-    "I've trained to deal particularly damaging strikes. Once per turn when I hit a target with a weapon, I can roll the weapon's damage dice twice and use either roll against the target.",
+    "you've trained to deal particularly damaging strikes. Once per turn when you hit a target with a weapon, you can roll the weapon's damage dice twice and use either roll against the target.",
   ]),
 };
 FeatsList["skilled"] = {
@@ -9967,9 +10003,10 @@ FeatsList["skilled"] = {
   skillstxt: ["I gain Proficiency in three skills or tools of my choice"],
   description: "I gain Proficiency in three skills or tools of my choice",
   descriptionFull: desc([
-    "I gain proficiency in any combination of three skills or tools of my choice",
-    "I can take this feat more than once.",
+    "You gain proficiency in any combination of three skills or tools of your choice",
+    "You can take this feat more than once.",
   ]),
+  allowDuplicates : true,
 };
 FeatsList["tavern brawler"] = {
   name: "Tavern Brawler [Origin]",
@@ -9992,11 +10029,11 @@ FeatsList["tavern brawler"] = {
   },
   description: "My Unarmed Strikes deal 1d4 instead of normal damage and as part of the attack action, I can push a target 5 feet as well as deal damage. When I roll a 1 on the damage die I can reroll, but must use the new roll.",
   descriptionFull: desc([
-    "I gain the following benefits.",
-    "Enhanced Unarmed Strike : When I hit with my Unarmed Strike and deal damage, I can deal Bludgeoning damage equal to 1d4 plus my Strength modifier instead of the normal damage of an Unarmed Strike.",
-    "Damage Rerolls : Whenever I roll a damage die for my Unarmed Strike, I can reroll the die if it rolls a 1, and I must use the new roll.",
-    "Improvised Weaponry : I have proficiency with improvised weapons.",
-    "Push : When I hit a creature with an Unarmed Strike as part of the Attack action on my turn, I can deal damage to the target and also push it 5 feet away from me. I can use this benefit only once per turn.",
+    "You gain the following benefits.",
+    "Enhanced Unarmed Strike : When you hit with your Unarmed Strike and deal damage, you can deal Bludgeoning damage equal to 1d4 plus your Strength modifier instead of the normal damage of an Unarmed Strike.",
+    "Damage Rerolls : Whenever you roll a damage die for my Unarmed Strike, you can reroll the die if it rolls a 1, and you must use the new roll.",
+    "Improvised Weaponry : You have proficiency with improvised weapons.",
+    "Push : When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can deal damage to the target and also push it 5 feet away from you. You can use this benefit only once per turn.",
   ]),
 };
 FeatsList["tough"] = {
@@ -10010,7 +10047,7 @@ FeatsList["tough"] = {
   },
   description: "My Hit Point maximum increases by an amount equal to twice my character level when I gain this feat. Whenever I gain a character level thereafter, my Hit Point maximum increases by an additional 2 Hit Points.",
   descriptionFull: desc([
-    "My Hit Point maximum increases by an amount equal to twice my character level when I gain this feat. Whenever I gain a character level thereafter, my Hit Point maximum increases by an additional 2 Hit Points.",
+    "Your Hit Point maximum increases by an amount equal to twice your character level when you gain this feat. Whenever you gain a character level thereafter, your Hit Point maximum increases by an additional 2 Hit Points.",
   ]),
 };
 //General Feats
@@ -10021,10 +10058,10 @@ FeatsList["actor"] = {
   scores: [0, 0, 0, 0, 0, 1],
   description: "+1 Cha, Adv Cha (Deception or Performance) checks to impersonate a person real or fiction. able to mimic the sounds of others DC 8 + Cha + PB Insight check to determine mimicry",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Charisma score by 1 to a maximum of 20.",
-    "Impersonation : While I'm disguised as a real or fictional person, I have Advantage on Charisma (Deception or Performance) checks to convince others that I are that person.",
-    "Mimicry : I can mimic sounds of other creatures, including speech. A creature that hears the mimicry must succeed on a Wisdom (Insight) check to determine the effect is faked (DC 8 plus my Charisma modifier and Proficiency Bonus).",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Charisma score by 1 to a maximum of 20.",
+    "Impersonation : While you're disguised as a real or fictional person, you have Advantage on Charisma (Deception or Performance) checks to convince others that you are that person.",
+    "Mimicry : You can mimic sounds of other creatures, including speech. A creature that hears the mimicry must succeed on a Wisdom (Insight) check to determine the effect is faked (DC 8 plus your Charisma modifier and Proficiency Bonus).",
   ]),
   prerequisite: "Level 4 and Charisma 13 or higher",
   prereqeval: function (v) {
@@ -10038,11 +10075,11 @@ FeatsList["athlete"] = {
   speed: {climb: {spd: "walk", enc: "walk"}},
   description: "+1 Str or Dex, gain a climb speed equal to speed, can right self from prone using only 5 ft of movement, can make running long or high jump after only 5 feet of movement.",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
-    "Climb Speed : I gain a Climb Speed equal to my Speed.",
-    "Hop Up : When I have the Prone condition, I can right yourself with only 5 feet of movement.",
-    "Jumping : I can make a running Long or High Jump after moving only 5 feet.",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Strength or Dexterity score by 1 to a maximum of 20.",
+    "Climb Speed : You gain a Climb Speed equal to your Speed.",
+    "Hop Up : When you have the Prone condition, you can right yourself with only 5 feet of movement.",
+    "Jumping : You can make a running Long or High Jump after moving only 5 feet.",
   ]),
   choices: ["Strength", "Dexterity"],
   "strength": {
@@ -10063,20 +10100,20 @@ FeatsList["charger"] = {
   source: [["P24", 202]],
   regExpSearch: /^(?=.*charger).*$/i,
   scorestxt: "My Strength or Dexterity score increases by 1, to a maximum of 20.",
-  description: "+1 Str or Dex, when I take the Dash action my base speed increases by 10 ft for that action, and if I move at least 10 ft in a straight line towards an enemy and attack as part of the Attack action I may either deal an additional 1d8 damage or push the target 10 feet away.",  
+  description: "+1 Str or Dex, When I take the Dash action my base speed increases by 10 ft for that action. If I move at least 10 ft in a straight line towards an enemy and attack as part of the Attack action, I may either deal an additional 1d8 damage or push the target 10 feet away if no more than 1 size larger.",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
-    "Improved Dash : When I take the Dash action, my Speed increases by 10 feet for that action.",
-    "Charge Attack : If I move at least 10 feet in a straight line toward a target immediately before hitting it with a melee attack roll as part of the Attack action, choose one of the following effects: gin a 1d8 bonus to the attack's damage roll, or push the target up to 10 feet away if it is no more than one size larger than I. I can use this benefit only once on each of my turns.",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Strength or Dexterity score by 1 to a maximum of 20.",
+    "Improved Dash : When you take the Dash action, your Speed increases by 10 feet for that action.",
+    "Charge Attack : If you move at least 10 feet in a straight line toward a target immediately before hitting it with a melee attack roll as part of the Attack action, choose one of the following effects: gain a 1d8 bonus to the attack's damage roll, or push the target up to 10 feet away if it is no more than one size larger than you. You can use this benefit only once on each of your turns.",
   ]),
   choices: ["Strength", "Dexterity"],
   "strength": {
-    description: "When I take the Dash action my base speed increases by 10 ft for that action, and if I move at least 10 ft in a straight line towards an enemy and attack as part of the Attack action I may either deal an additional 1d8 damage or push the target 10 feet away. [+1 Strength]",
+    description: "When I take the Dash action my base speed increases by 10 ft for that action. If I move at least 10 ft in a straight line towards an enemy and attack as part of the Attack action, I may either deal an additional 1d8 damage or push the target 10 feet away if no more than 1 size larger. [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
   },
   "dexterity": {
-    description: "When I take the Dash action my base speed increases by 10 ft for that action, and if I move at least 10 ft in a straight line towards an enemy and attack as part of the Attack action I may either deal an additional 1d8 damage or push the target 10 feet away. [+1 Dexterity]",
+    description: "When I take the Dash action my base speed increases by 10 ft for that action. If I move at least 10 ft in a straight line towards an enemy and attack as part of the Attack action, I may either deal an additional 1d8 damage or push the target 10 feet away if no more than 1 size larger. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
   },
   prerequisite: "Level 4 and Strength or Dexterity 13 or higher",
@@ -10092,11 +10129,11 @@ FeatsList["chef"] = {
   toolProfs: [["Cook's Utensils"]],
   description: "+1 Con or Wis, gain proficiency in Cook's Utensils, as part of a short rest, I can cook special food for 4+PB creatures if they eat it and spend at least 1 Hit Die, they regain an additional 1d8 hit points. After an hour or during a long rest, I can make PB special treats that if eaten as a bonus action can grant a number of temp HP equal to my PB.",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Constitution or Wisdom score by 1 to a maximum of 20.",
-    "Cook's Utensils : I gain proficiency with Cook's Utensils if I don't already have it.",
-    "Replenishing Meal : As part of a Short Rest, I can cook special food if I have ingredients and Cook's Utensils on hand, I can prepare enough of this food for a number of creatures equal to 4 plus my Proficiency Bonus. At the end of the Short Rest, any creature who eats the food and spends one or more Hit Dice to regain Hit Points regains an extra 1d8 Hit Points.",
-    "Bolstering Treats : With 1 hour of work or when I finish a Long Rest, I can cook a number of treats equal to my Proficiency Bonus if I have ingredients and Cook's Utensils on hand. These special treats last 8 hours after being made. A creature can use a Bonus Action to eat one of those treats to gain a number of Temporary Hit Points equal to my Proficiency Bonus.",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Constitution or Wisdom score by 1 to a maximum of 20.",
+    "Cook's Utensils : You gain proficiency with Cook's Utensils if you don't already have it.",
+    "Replenishing Meal : As part of a Short Rest, you can cook special food if you have ingredients and Cook's Utensils on hand, you can prepare enough of this food for a number of creatures equal to 4 plus your Proficiency Bonus. At the end of the Short Rest, any creature who eats the food and spends one or more Hit Dice to regain Hit Points regains an extra 1d8 Hit Points.",
+    "Bolstering Treats : With 1 hour of work or when you finish a Long Rest, you can cook a number of treats equal to your Proficiency Bonus if you have ingredients and Cook's Utensils on hand. These special treats last 8 hours after being made. A creature can use a Bonus Action to eat one of those treats to gain a number of Temporary Hit Points equal to your Proficiency Bonus.",
   ]),
   choices: ["Constitution", "Wisdom"],
   "constitution": {
@@ -10119,11 +10156,11 @@ FeatsList["crossbow expert"] = {
   scores: [0, 1, 0, 0, 0, 0],
   description: "+1 Dex, I ignore the Loading property of crossbows, firing at an enemy within 5 feet does not impose disadvantage, and I can make an off-hand attack with a crossbow that has the light property and add my Dex modifier to the damage of the attack.",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Dexterity score by 1 to a maximum of 20.",
-    "Ignore Loading : I ignore the Loading property of the Hand Crossbow, Heavy Crossbow, and Light Crossbow (all called crossbows elsewhere in this feat). If I're holding one of them, I can load a piece of ammunition into it even if I lack a free hand.",
-    "Firing in Melee : Being within 5 feet of an enemy doesn't impose Disadvantage on my attack rolls with crossbows.",
-    "Dual Wielding : When I make the extra attack of the Light property, I can add my ability modifier to the damage of the extra attack if that attack is with a crossbow that has the Light property and I am not already adding that modifier to the damage.",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Dexterity score by 1 to a maximum of 20.",
+    "Ignore Loading : You ignore the Loading property of the Hand Crossbow, Heavy Crossbow, and Light Crossbow (all called crossbows elsewhere in this feat). If you're holding one of them, you can load a piece of ammunition into it even if you lack a free hand.",
+    "Firing in Melee : Being within 5 feet of an enemy doesn't impose Disadvantage on your attack rolls with crossbows.",
+    "Dual Wielding : When you make the extra attack of the Light property, you can add your ability modifier to the damage of the extra attack if that attack is with a crossbow that has the Light property and you are not already adding that modifier to the damage.",
   ]),
   prerequisite: "Level 4 and Dexterity 13 or higher",
   prereqeval: function (v) {
@@ -10136,10 +10173,10 @@ FeatsList["crusher"] = {
   regExpSearch: /^(?=.*crusher).*$/i,
   description: "+1 Str or Con, 1/turn when I hit a creature with Blud. dmg, I can push it 5 ft to unoccupied space if it's no more than 1 size larger than me. When I score a Critical Hit that deals Blud. dmg to a creature, atks against it have Advantage until the start of my next turn. ",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength or Constitution score by 1 to a maximum of 20.",
-    "Push : Once per turn, when I hit a creature with an attack that deals Bludgeoning damage, I can move it 5 feet to an unoccupied space if the target is no more than one size larger than I.",
-    "Enhanced Critical : When I score a Critical Hit that deals Bludgeoning damage to a creature, attack rolls against that creature have Advantage until the start of my next turn.",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Strength or Constitution score by 1 to a maximum of 20.",
+    "Push : Once per turn, when you hit a creature with an attack that deals Bludgeoning damage, you can move it 5 feet to an unoccupied space if the target is no more than one size larger than you.",
+    "Enhanced Critical : When you score a Critical Hit that deals Bludgeoning damage to a creature, attack rolls against that creature have Advantage until the start of your next turn.",
   ]),
   choices: ["Strength", "Constitution"],
   "strength": {
@@ -10161,11 +10198,11 @@ FeatsList["defensive duelist"] = {
   regExpSearch: /^(?=.*defensive)(?=.*duelist).*$/i,
   scores: [0, 1, 0, 0, 0, 0],
   action: ["reaction", "Parry"],
-  description: "+1 Dex, If I'm holding a Finesse weapon and another creature hits me with a melee attack, I can take a Reaction to add my Proficiency Bonus to my Armor Class, potentially causing the attack to miss I. I gain this bonus to my AC against melee attacks until the start of my next turn.",  
+  description: "+1 Dex, If I'm holding a Finesse weapon and another creature hits me with a melee attack, I can take a Reaction to add my Proficiency Bonus to my Armor Class, potentially causing the attack to miss me. I gain this bonus to my AC against melee attacks until the start of my next turn.",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Dexterity score by 1 to a maximum of 20.",
-    "Parry : If I'm holding a Finesse weapon and another creature hits me with a melee attack, I can take a Reaction to add my Proficiency Bonus to my Armor Class, potentially causing the attack to miss I. I gain this bonus to my AC against melee attacks until the start of my next turn.",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Dexterity score by 1 to a maximum of 20.",
+    "Parry : If you're holding a Finesse weapon and another creature hits you with a melee attack, you can take a Reaction to add your Proficiency Bonus to your Armor Class, potentially causing the attack to miss you. You gain this bonus to your AC against melee attacks until the start of your next turn.",
   ]),
   prerequisite: "Level 4 and Dexterity 13 or higher",
   prereqeval: function (v) {
@@ -10177,13 +10214,12 @@ FeatsList["dual wielder"] = {
   source: [["P24", 203]],
   regExpSearch: /^(?=.*dual)(?=.*wielder).*$/i,
   scorestxt: "My Strength or Dexterity score increases by 1, to a maximum of 20.",
-  speed: {climb: {spd: "walk", enc: "walk"}},
   description: "+1 Str or Dex, If I take the attack action with a weapon that has the light property, I can make an off-hand attack with another weapon that doesn't have the Two-Handed property, I do not add the modifier to this atk unless it is negative, I can also draw and stow 2 non-Two-Handed weapons at a time.",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
-    "Enhanced Dual Wielding : When I take the Attack action on my turn and attack with a weapon that has the Light property, I can make one extra attack as a Bonus Action later on the same turn with a different weapon, which must be a Melee weapon that lacks the Two-Handed property. I don't add my ability modifier to the extra attack's damage unless the modifier is negative.",
-    "Quick Draw : I can draw or stow two weapons that lack the Two-Handed property when I would normally be able to draw or stow only one.",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Strength or Dexterity score by 1 to a maximum of 20.",
+    "Enhanced Dual Wielding : When you take the Attack action on your turn and attack with a weapon that has the Light property, you can make one extra attack as a Bonus Action later on the same turn with a different weapon, which must be a Melee weapon that lacks the Two-Handed property. You don't add your ability modifier to the extra attack's damage unless the modifier is negative.",
+    "Quick Draw : You can draw or stow two weapons that lack the Two-Handed property when you would normally be able to draw or stow only one.",
   ]),
   choices: ["Strength", "Dexterity"],
   "strength": {
@@ -10202,16 +10238,16 @@ FeatsList["dual wielder"] = {
 FeatsList["durable"] = {
   name: "Durable",
   source: [["P24", 203]],
-  regExpSearch: /^(?=.*crusher).*$/i,
+  regExpSearch: /^(?=.*durable).*$/i,
   scores: [0, 0, 1, 0, 0, 0],
   savetxt: {adv_vs: ["Death Saving Throws"]},
   action: [["bonus action", "Speedy Recovery"]],
   description: "+1 Con, Adv vs Death Saves, Bonus Action to expend 1 Hit Die to regain HP equal to the roll.",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Constitution score by 1 to a maximum of 20.",
-    "Defy Death : I have Advantage on Death Saving Throws.",
-    "Speedy Recovery : As a Bonus Action, I can expend one of my Hit Point Dice, roll the die, and regain a number of Hit Points equal to the roll.",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Constitution score by 1 to a maximum of 20.",
+    "Defy Death : You have Advantage on Death Saving Throws.",
+    "Speedy Recovery : As a Bonus Action, you can expend one of your Hit Point Dice, roll the die, and regain a number of Hit Points equal to the roll.",
   ]),
   prerequisite: "Level 4 or higher",
   prereqeval: function (v) {
@@ -10225,10 +10261,10 @@ FeatsList["elemental adept"] = {
   scorestxt: "My Intelligence, Wisdom, or Charisma score increases by 1, to a maximum of 20.",
   description: "+1 Int, Wis, or Cha, Choose one of the damage types: Acid, Cold, Fire, Lightning, or Thunder. Spells I cast ignore resistance to damage from this damage type. For any spell I cast that deals this damage type, I can treat any 1 on a damage die as a 2.",  
   descriptionFull: desc([
-    "I gain the following benefits.",
-    "Ability Score Increase : Increase my Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
-    "Energy Mastery : Choose one of the following damage types; Acid, Cold, Fire, Lightning, or Thunder. Spells I cast ignore Resistance to damage of the chosen type. In addition, when I roll damage for a spell I cast that deals damage of that type I can treat any 1 on the damage die as a 2.",
-    "Repeatable : I can take this feat more than once, but I must choose a different damage type each time for Energy Mastery.",
+    "You gain the following benefits.",
+    "Ability Score Increase : Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
+    "Energy Mastery : Choose one of the following damage types; Acid, Cold, Fire, Lightning, or Thunder. Spells you cast ignore Resistance to damage of the chosen type. In addition, when you roll damage for a spell you cast that deals damage of that type you can treat any 1 on the damage die as a 2.",
+    "Repeatable : You can take this feat more than once, but you must choose a different damage type each time for Energy Mastery.",
   ]),
   prerequisite: "Level 4 and The Spellcasting or Pact Magic Feature",
   prereqeval: function (v) {
@@ -10270,9 +10306,15 @@ FeatsList["fey touched"] = {
   }],
   spellcastingAbility: 4,
   allowUpCasting: true,
+  description: "+1 Int, Wis, or Cha, I learn the Misty Step and one other 1st-level spell from the Divination or Enchantment school.",  
+  descriptionFull: desc([
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
+    "Fey Magic : Choose one level 1 spell from the Divination or Enchantment school of magic. You always have that spell and the Misty Step spell prepared. You can cast each of these spells without expending a spell slot. Once you cast either spell in this way, you can't cast that spell in this way again until you finish a Long Rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat.",
+  ]),  
   choices: ["Intelligence", "Wisdom", "Charisma"],
   "intelligence": {
-    description: "I learn Misty Step and one 1st level divination or enchantment spell. I can cast each once per long rest at their lowest level without expending a spell slot and can cast them " + (typePF ? "by expending" : "with") + " a spell slot as normal. Intelligence is my spellcasting ability for these spells. [+1 Intelligence]",
+    description: "I learn Misty Step and one 1st level divination or enchantment spell. I can cast each once per long rest at their lowest level without expending a spell slot and can cast them by expending a spell slot as normal. Intelligence is my spellcasting ability for these spells. [+1 Intelligence]",
     spellcastingAbility: 4,
     scores: [0, 0, 0, 1, 0, 0]
   },
@@ -10286,12 +10328,6 @@ FeatsList["fey touched"] = {
     spellcastingAbility: 6,
     scores: [0, 0, 0, 0, 0, 1]
   },
-  description: "+1 Int, Wis, or Cha, I learn the Misty Step and one other 1st-level spell from the Divination or Enchantment school.",  
-  descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
-    "Fey Magic : Choose one level 1 spell from the Divination or Enchantment school of magic. I always have that spell and the Misty Step spell prepared. I can cast each of these spells without expending a spell slot. Once I cast either spell in this way, I can't cast that spell in this way again until I finish a Long Rest. I can also cast these spells using spell slots I have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat.",
-  ]),
   prerequisite: "Level 4 or higher",
   prereqeval: function (v) {
     return v.characterLevel >= 4;
@@ -10303,11 +10339,11 @@ FeatsList["grappler"] = {
   regExpSearch: /^(?=.*grappler).*$/i,
   description: "+1 Str or Dex, When I make an Unarmed Strike, I may deal damage and grapple the target, I have advantage on attack rolls made to grapple a target and can move my normal speed with a grappled target as long as they are my size or smaller.",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
-    "Punch and Grab : When I hit a creature with an Unarmed Strike as part of the Attack action on my turn, I can use both the Damage and the Grapple option. I can use this benefit only once per turn.",
-    "Attack Advantage : I have Advantage on attack rolls against a creature Grappled by I.",
-    "Fast Wrestler : my Speed isn't halved when I move a creature Grappled by I if the creature is my size or smaller.",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Strength or Dexterity score by 1 to a maximum of 20.",
+    "Punch and Grab : When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can use both the Damage and the Grapple option. You can use this benefit only once per turn.",
+    "Attack Advantage : You have Advantage on attack rolls against a creature Grappled by you.",
+    "Fast Wrestler : Your Speed isn't halved when you move a creature Grappled by you if the creature is your size or smaller.",
   ]),
   choices: ["Strength", "Dexterity"],
   "strength": {
@@ -10330,10 +10366,10 @@ FeatsList["great weapon master"] = {
   scores: [1, 0, 0, 0, 0, 0],
   description: "+1 Str, When I hit with a weapon that has the Heavy property, I can deal extra damage equal to my Prof Bonus, and if I score a Crit. and reduce a creature to 0 HP I may make another attack with the same weapon as a Bonus Action.",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength score by 1 to a maximum of 20.",
-    "Heavy Weapon Master : When I hit a creature with a weapon that has the Heavy property as part of the Attack action on my turn, I can cause the weapon to deal extra damage to the target. The extra damage equals my Proficiency Bonus.",
-    "Hew : Immediately after I score a Critical Hit with a Melee weapon or reduce a creature to 0 Hit Points with one, I can make one attack with the same weapon as a Bonus Action",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Strength score by 1 to a maximum of 20.",
+    "Heavy Weapon Master : When you hit a creature with a weapon that has the Heavy property as part of the Attack action on your turn, you can cause the weapon to deal extra damage to the target. The extra damage equals your Proficiency Bonus.",
+    "Hew : Immediately after you score a Critical Hit with a Melee weapon or reduce a creature to 0 Hit Points with one, you can make one attack with the same weapon as a Bonus Action",
   ]),
   action : [["bonus action", " (Hew)"]],
   calcChanges : {
@@ -10355,6 +10391,13 @@ FeatsList["heavily armored"] = {
   name: "Heavily Armored",
   source: [["P24", 204]],
   regExpSearch: /^(?=.*heavily)(?=.*armored).*$/i,
+  description: "+1 Dex/Con, I gain training with Heavy armor.",  
+  descriptionFull: desc([
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Strength or Constitution score by 1 to a maximum of 20.",
+    "Armor Training : You gain training with Heavy armor.",
+  ]),  
+  armorProfs : [false, false, true, false],
   choices: ["Strength", "Constitution"],
   "strength": {
     description: "I gain training with Heavy armor. [+1 Strength]",
@@ -10364,12 +10407,6 @@ FeatsList["heavily armored"] = {
     description: "I gain training with Heavy armor. [+1 Constitution]",
     scores: [0, 0, 1, 0, 0, 0],
   },
-  description: "+1 Dex/Con, I gain training with Heavy armor.",  
-  descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength or Constitution score by 1 to a maximum of 20.",
-    "Armor Training : I gain training with Heavy armor.",
-  ]),
   prerequisite: "Level 4 and Medium Armor training",
   prereqeval: function (v) {
     return v.characterLevel >= 4 && v.mediumArmorProf;
@@ -10379,6 +10416,12 @@ FeatsList["heavy armor master"] = {
   name: "Heavy Armor Master",
   source: [["P24", 204]],
   regExpSearch: /^(?=.*heavy)(?=.*armor)(?=.*master).*$/i,
+  description: "+1 Dex/Con, I take my Prof Bonus less damage when hit with any Blud./Slash./Pierc. dmg while wearing Heavy armor.",  
+  descriptionFull: desc([
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Strength or Constitution score by 1 to a maximum of 20.",
+    "Damage Reduction : When you're hit by an attack while you're wearing Heavy armor, any Bludgeoning, Piercing, and Slashing damage dealt to you by that attack is reduced by an amount equal to your Proficiency Bonus.",
+  ]),
   choices: ["Strength", "Constitution"],
   "strength": {
     description: "I take my Prof Bonus less damage when hit with any Blud./Slash./Pierc. dmg while wearing Heavy armor. [+1 Strength]",
@@ -10388,12 +10431,6 @@ FeatsList["heavy armor master"] = {
     description: "I take my Prof Bonus less damage when hit with any Blud./Slash./Pierc. dmg while wearing Heavy armor. [+1 Constitution]",
     scores: [0, 0, 1, 0, 0, 0],
   },
-  description: "+1 Dex/Con, I take my Prof Bonus less damage when hit with any Blud./Slash./Pierc. dmg while wearing Heavy armor.",  
-  descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength or Constitution score by 1 to a maximum of 20.",
-    "Damage Reduction : When I'm hit by an attack while I'm wearing Heavy armor, any Bludgeoning, Piercing, and Slashing damage dealt to me by that attack is reduced by an amount equal to my Proficiency Bonus.",
-  ]),
   prerequisite: "Level 4 and Heavy Armor training",
   prereqeval: function (v) {
     return v.characterLevel >= 4 && v.heavyArmorProf;
@@ -10405,9 +10442,9 @@ FeatsList["inspiring leader"] = {
   regExpSearch: /^(?=.*inspiring)(?=.*leader).*$/i,
   description: "+1 Wis or Cha, After a rest I can give a performance that grants up to 6 allies (can include yourself) Temp HP = my Character level + Wis/Cha.",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Wisdom or Charisma score by 1 to a maximum of 20.",
-    "Bolstering Performance : When I finish a Short or Long Rest, I give an inspiring performance; a speech, song, or dance. When I do so, choose up to six allies (which can include yourself) within 30 feet of yourself who witness the performance. The chosen creatures each gain Temporary Hit Points equal to my character level plus the modifier of the ability I increased with this feat.",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Wisdom or Charisma score by 1 to a maximum of 20.",
+    "Bolstering Performance : When you finish a Short or Long Rest, you give an inspiring performance; a speech, song, or dance. When you do so, choose up to six allies (which can include yourself) within 30 feet of yourself who witness the performance. The chosen creatures each gain Temporary Hit Points equal to your character level plus the modifier of the ability you increased with this feat.",
   ]),
   choices: ["Wisdom", "Charisma"],
   "wisdom": {
@@ -10432,10 +10469,10 @@ FeatsList["keen mind"] = {
   skillstxt: "Choose 1 : Arcana, History, Investigation, Nature or Religion. I gain Proficiency in the chosen skill if I am already proficient I gain Expertise.",
   description: "+1 Int, I gain proficiency or expertise (if I already have proficiency) in one of the Intelligence skills, and can take the Study action as a Bonus Action.",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Intelligence score by 1 to a maximum of 20.",
-    "Lore Knowledge : Choose one of the following skills; Arcana, History, Investigation, Nature, or Religion. If I lack proficiency in the chosen skill, I gain proficiency in it, if I already have proficiency in it, I gain Expertise in it.",
-    "Quick Study : I can take the Study action as a Bonus Action",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Intelligence score by 1 to a maximum of 20.",
+    "Lore Knowledge : Choose one of the following skills; Arcana, History, Investigation, Nature, or Religion. If you lack proficiency in the chosen skill, you gain proficiency in it, if you already have proficiency in it, you gain Expertise in it.",
+    "Quick Study : You can take the Study action as a Bonus Action",
   ]),
   prerequisite: "Level 4 and Intelligence 13 or higher",
   prereqeval: function (v) {
@@ -10449,9 +10486,9 @@ FeatsList["lightly armored"] = {
   armorProfs: [true, false, false, true],
   description: "+1 Str/Dex, I gain training with Light armor and Shields.",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
-    "Armor Training : I gain training with Light armor and Shields.",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Strength or Dexterity score by 1 to a maximum of 20.",
+    "Armor Training : You gain training with Light armor and Shields.",
   ]),
   choices: ["Strength", "Dexterity"],
   "strength": {
@@ -10477,10 +10514,10 @@ FeatsList["mage slayer"] = {
   recovery: "short rest",
   description: "+1 Str/Dex, When I deal damage to a creature concentrating on a spell, they have Disadvantage on the saving throw to maintain concentration. Once per rest, when I fail an Int, Wis, or Cha save, I can choose to succeed.",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
-    "Concentration Breaker : When I deal damage to a creature that is concentrating, It has Disadvantage on the saving throw to maintain Concentration.",
-    "Guarded Mind : If I fail an Intelligence, a Wisdom, or a Charisma saving throw, I can cause myself to succeed instead. Once I use this benefit I can't use it again until I finish a Short or Long Rest.",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Strength or Dexterity score by 1 to a maximum of 20.",
+    "Concentration Breaker : When you deal damage to a creature that is concentrating, It has Disadvantage on the saving throw to maintain Concentration.",
+    "Guarded Mind : If you fail an Intelligence, a Wisdom, or a Charisma saving throw, you can cause yourself to succeed instead. Once you use this benefit you can't use it again until you finish a Short or Long Rest.",
   ]),
   choices: ["Strength", "Dexterity"],
   "strength": {
@@ -10500,21 +10537,20 @@ FeatsList["martial weapon training"] = {
   name: "Martial Weapon Training",
   source: [["P24", 205]],
   regExpSearch: /^(?=.*martial)(?=.*weapon)(?=.*training).*$/i,
+  weaponProfs: [false, true],
   description: "+1 Str/Dex, I gain proficiency with Martial weapons.",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
-    "Weapon Proficiency : I gain proficiency with Martial weapons.",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Strength or Dexterity score by 1 to a maximum of 20.",
+    "Weapon Proficiency : You gain proficiency with Martial weapons.",
   ]),
   choices: ["Strength", "Dexterity"],
   "strength": {
     description: "I gain proficiency with Martial weapons. [+1 Strength]",
-    weaponProfs: [false, true],
     scores: [1, 0, 0, 0, 0, 0],
   },
   "dexterity": {
     description: "I gain proficiency with Martial weapons. [+1 Dexterity]",
-    weaponProfs: [false, true],
     scores: [0, 1, 0, 0, 0, 0],
   },
   prerequisite: "Level 4",
@@ -10526,6 +10562,12 @@ FeatsList["medium armor master"] = {
   name: "Medium Armor Master",
   source: [["P24", 205]],
   regExpSearch: /^(?=.*medium)(?=.*armor)(?=.*master).*$/i,
+  description: "+1 Dex/Con, I can add 3 while wearing medium armor if I have a Dex of 16+, instead of 2.",  
+  descriptionFull: desc([
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Strength or Constitution score by 1 to a maximum of 20.",
+    "Dexterous Wearer. While you're wearing Medium armor, you can add 3, rather than 2, to your AC if you have a Dexterity score of 16 or higher.",
+  ]),  
   choices: ["Strength", "Dexterity"],
   "strength": {
     description: "I can add 3 while wearing medium armor if I have a Dex of 16+, instead of 2. [+1 Strength]",
@@ -10535,38 +10577,39 @@ FeatsList["medium armor master"] = {
     description: "I can add 3 while wearing medium armor if I have a Dex of 16+, instead of 2. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
   },
-  description: "+1 Dex/Con, I can add 3 while wearing medium armor if I have a Dex of 16+, instead of 2.",  
-  descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength or Constitution score by 1 to a maximum of 20.",
-    "Dexterous Wearer. While I'm wearing Medium armor, I can add 3, rather than 2, to my AC if I have a Dexterity score of 16 or higher.",
-  ]),
   prerequisite: "Level 4 and Medium Armor training",
   prereqeval: function (v) {
     return v.characterLevel >= 4 && v.mediumArmorProf;
   },
+  eval : function () {
+		Value('Medium Armor Max Mod', 3);
+		ApplyArmor(What("AC Armor Description"));
+	},
+  removeeval : function () {
+		tDoc.resetForm(['Medium Armor Max Mod']);
+		ApplyArmor(What("AC Armor Description"));
+	},
 };
 FeatsList["moderately armored"] = {
   name: "Moderately Armored",
   source: [["P24", 205]],
   regExpSearch: /^(?=.*moderately)(?=.*armored).*$/i,
+  armorProfs: [false, true, false, false],
+  description: "+1 Str/Dex, I gain training with Medium armor.",  
+  descriptionFull: desc([
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Strength or Dexterity score by 1 to a maximum of 20.",
+    "Armor Training : You gain training with Medium armor.",
+  ]),  
   choices: ["Strength", "Dexterity"],
   "strength": {
     description: "I gain training with Medium armor. [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
-    armorProfs: [false, true, false, false],
   },
   "dexterity": {
     description: "I gain training with Medium armor. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
-    armorProfs: [false, true, false, false],
   },
-  description: "+1 Str/Dex, I gain training with Medium armor.",  
-  descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
-    "Armor Training : I gain training with Medium armor.",
-  ]),
   prerequisite: "Level 4 and Medium Armor training",
   prereqeval: function (v) {
     return v.characterLevel >= 4 && v.lightArmorProf;
@@ -10576,27 +10619,27 @@ FeatsList["mounted combatant"] = {
   name: "Mounted Combatant",
   source: [["P24", 205]],
   regExpSearch: /^(?=.*mounted)(?=.*combatant).*$/i,
+  description: "+1 Str/Dex/Wis, I have adv on atk rolls while mounted against non-mounted combatants within 5 feet that are smaller than my mount, Mounts who succeed dex saves take no damage instead of half, when an attack hits my mount I can have the attack hit me instead if I don't have the Incap condition.",  
+  descriptionFull: desc([
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Strength, Dexterity, or Wisdom score by 1 to a maximum of 20.",
+    "Mounted Strike : While mounted, you have Advantage on attack rolls against any unmounted creature within 5 feet of your mount that is at least one size smaller than the mount.",
+    "Leap Aside : If your mount is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw and only half damage if it fails. For your mount to gain this benefit, you must be riding it, and neither of you can have the Incapacitated condition.",
+    "Veer : While mounted, you can force an attack that hits your mount to hit you instead if you don't have the Incapacitated.",
+  ]),  
   choices: ["Strength", "Dexterity", "Wisdom"],
   "strength": {
-    description: "I have adv on atk rolls while mounted against non-mounted combatants within 5 feet that are smaller than my mount, Mounts who succeed dex saves take no damage instead of half, when an attack hits my mount I can have the attack hit I instead if I don't have the Incap condition. [+1 Strength]",
+    description: "I have adv on atk rolls while mounted against non-mounted combatants within 5 feet that are smaller than my mount, Mounts who succeed dex saves take no damage instead of half, when an attack hits my mount I can have the attack hit me instead if I don't have the Incap condition. [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
   },
   "dexterity": {
-    description: "I have adv on atk rolls while mounted against non-mounted combatants within 5 feet that are smaller than my mount, Mounts who succeed dex saves take no damage instead of half, when an attack hits my mount I can have the attack hit I instead if I don't have the Incap condition. [+1 Dexterity]",
+    description: "I have adv on atk rolls while mounted against non-mounted combatants within 5 feet that are smaller than my mount, Mounts who succeed dex saves take no damage instead of half, when an attack hits my mount I can have the attack hit me instead if I don't have the Incap condition. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
   },
   "wisdom": {
-    description: "I have adv on atk rolls while mounted against non-mounted combatants within 5 feet that are smaller than my mount, Mounts who succeed dex saves take no damage instead of half, when an attack hits my mount I can have the attack hit I instead if I don't have the Incap condition. [+1 Wisdom]",
+    description: "I have adv on atk rolls while mounted against non-mounted combatants within 5 feet that are smaller than my mount, Mounts who succeed dex saves take no damage instead of half, when an attack hits my mount I can have the attack hit me instead if I don't have the Incap condition. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
   },
-  description: "+1 Str/Dex/Wis, I have adv on atk rolls while mounted against non-mounted combatants within 5 feet that are smaller than my mount, Mounts who succeed dex saves take no damage instead of half, when an attack hits my mount I can have the attack hit I instead if I don't have the Incap condition.",  
-  descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength, Dexterity, or Wisdom score by 1 to a maximum of 20.",
-    "Mounted Strike : While mounted, I have Advantage on attack rolls against any unmounted creature within 5 feet of my mount that is at least one size smaller than the mount.",
-    "Leap Aside : If I mount is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw and only half damage if it fails. For my mount to gain this benefit, I must be riding it, and neither of I can have the Incapacitated condition.",
-    "Veer : While mounted, I can force an attack that hits my mount to hit my instead if I don't have the Incapacitated.",
-  ]),
   prerequisite: "Level 4",
   prereqeval: function (v) {
     return v.characterLevel >= 4;
@@ -10608,6 +10651,13 @@ FeatsList["observant"] = {
   regExpSearch: /^(?=.*observant).*$/i,
   skillstxt: "Choose 1 : Insight, Investigation, or Perception. I gain Proficiency in the chosen skill, if I am already proficient I gain Expertise.",
   action: ["bonus action", "Search"],
+  description: "+1 Int/Wis, I gain proficiency or expertise (if I already have proficiency) in one of the following skills Insight, Investigation, or Perception, and can take the Search action as a Bonus Action.",  
+  descriptionFull: desc([
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Intelligence or Wisdom score by 1 to a maximum of 20.",
+    "Keen Observer : Choose one of the following skills; Insight, Investigation, or Perception. If you lack proficiency with the chosen skill, you gain proficiency in it, and if you already have proficiency in it, you gain Expertise in it.",
+    "Quick Search : You can take the Search action as a Bonus Action.",
+  ]),  
   choices: ["Intelligence", "Wisdom"],
   "intelligence": {
     description: "I gain proficiency or expertise (if I already have proficiency) in one of the following skills Insight, Investigation, or Perception, and can take the Search action as a Bonus Action. [+1 Intelligence]",
@@ -10617,14 +10667,7 @@ FeatsList["observant"] = {
     description: "I gain proficiency or expertise (if I already have proficiency) in one of the following skills Insight, Investigation, or Perception, and can take the Search action as a Bonus Action. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
   },
-  description: "+1 Int/Wis, I gain proficiency or expertise (if I already have proficiency) in one of the following skills Insight, Investigation, or Perception, and can take the Search action as a Bonus Action.",  
-  descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Intelligence or Wisdom score by 1 to a maximum of 20.",
-    "Keen Observer : Choose one of the following skills; Insight, Investigation, or Perception. If I lack proficiency with the chosen skill, I gain proficiency in it, and if I already have proficiency in it, I gain Expertise in it.",
-    "Quick Search : I can take the Search action as a Bonus Action.",
-  ]),
-  prerequisite: "Level 4 and Medium Armor training",
+  prerequisite: "Level 4 and Intelligence or Wisdom 13+",
   prereqeval: function (v) {
     return v.characterLevel >= 4 && What('Int') >= 13 || What('Wis') >= 13;
   },
@@ -10635,10 +10678,10 @@ FeatsList["piercer"] = {
   regExpSearch: /^(?=.*piercer).*$/i,
   description: "+1 Str/Dex, When I hit a creature with an atk roll with a pierc. dmg weapon I can reroll one of the atk dmg dice, on a Crit I deal one additional dmg die.",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
-    "Puncture : Once per turn, when I hit a creature with an attack that deals Piercing damage, I can reroll one of the attack's damage dice, and I must use the new roll.",
-    "Enhanced Critical : When I score a Critical Hit that deals Piercing damage to a creature, I can roll one additional damage die when determining the extra Piercing damage the target takes.",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Strength or Dexterity score by 1 to a maximum of 20.",
+    "Puncture : Once per turn, when you hit a creature with an attack that deals Piercing damage, you can reroll one of the attack's damage dice, and you must use the new roll.",
+    "Enhanced Critical : When you score a Critical Hit that deals Piercing damage to a creature, you can roll one additional damage die when determining the extra Piercing damage the target takes.",
   ]),
   choices: ["Strength", "Dexterity"],
   "strength": {
@@ -10663,10 +10706,10 @@ FeatsList["poisoner"] = {
   toolProfs: [["Poisoner's Kit"]],
   description: "+1 Dex/Int, my poison ignores Poison Resistance, I gain Prof with the Poisoner's Kit and can apply poison to a weapon or piece of ammo as a Bonus Action when I hit with an atk, the target makes a Con save or takes 2d8 Poison dmg and be Poisoned. DC=8+Dex-or-Int+Prof",  
   descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Dexterity or Intelligence score by 1 to a maximum of 20.",
-    "Potent Poison : When I make a damage roll that deals Poison damage, it ignores Resistance to Poison damage.",
-    "Brew Poison : I gain proficiency with the Poisoner's Kit. With 1 hour of work using such a kit and expending 50 GP worth of materials, I can creature a number of poison doses equal to my Proficiency Bonus. As a Bonus Action, I can apply a poison dose to a weapon or piece of ammunition. Once applied, the poison retains its potency for 1 minute or until I hit with the poisoned item, whichever is shorter. When a creature takes damage from the poisoned item, that creature must succeed on a Constitution saving throw (DC 8 plus the modifier of the ability increased by this feat and my Proficiency Bonus) or take 2d8 Poison damage and have the Poisoned condition until the end of my next turn.",
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Dexterity or Intelligence score by 1 to a maximum of 20.",
+    "Potent Poison : When you make a damage roll that deals Poison damage, it ignores Resistance to Poison damage.",
+    "Brew Poison : You gain proficiency with the Poisoner's Kit. With 1 hour of work using such a kit and expending 50 GP worth of materials, you can creature a number of poison doses equal to my Proficiency Bonus. As a Bonus Action, you can apply a poison dose to a weapon or piece of ammunition. Once applied, the poison retains its potency for 1 minute or until you hit with the poisoned item, whichever is shorter. When a creature takes damage from the poisoned item, that creature must succeed on a Constitution saving throw (DC 8 plus the modifier of the ability increased by this feat and your Proficiency Bonus) or take 2d8 Poison damage and have the Poisoned condition until the end of your next turn.",
   ]),
   choices: ["Dexterity", "Intelligence"],
   "dexterity": {
@@ -10700,6 +10743,13 @@ FeatsList["polearm master"] = {
   }],
   action: [["bonus action", "Butt End Attack (after attack with polearm)"], ["reaction", "Reactive Strike"]],
   weaponProfs: [false, false, ["polearm butt end"]],
+  description: "+1 Str/+1 Dex, As a Bns Action when I take the Atk Action, with a Quarterstaff, Spear, or weapon with the Heavy and Reach properties, I can strike with the opposite end of the weapon dealing 1d4 blud. dmg. As a Rea. While holding a Polearm, I can make a melee atk against a creature that enters my melee range.",  
+  descriptionFull: desc([
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Strength or Dexterity score by 1 to a maximum of 20.",
+    "Pole Strike : Immediately after you take the Attack action and attack with a Quarterstaff, a Spear, or a weapon that has the Heavy and Reach properties, you can use a Bonus Action to make a melee attack with the opposite end of the weapon. The weapon deals Bludgeoning, and the weapon damage die for this is a d4.",
+    "Reactive Strike : While you're holding a Quarterstaff, a Spear, or a weapon that has the Heavy and Reach properties, you can take a Reaction to make one melee attack against a creature that enters the reach you have with that weapon.",
+  ]),  
   choices: ["Strength", "Dexterity"],
   "strength": {
     description: "As a Bns Action when I take the Atk Action, with a Quarterstaff, Spear, or weapon with the Heavy and Reach properties, I can strike with the opposite end of the weapon dealing 1d4 blud. dmg. [+1 Strength]",
@@ -10709,13 +10759,6 @@ FeatsList["polearm master"] = {
     description: "As a Bns Action when I take the Atk Action, with a Quarterstaff, Spear, or weapon with the Heavy and Reach properties, I can strike with the opposite end of the weapon dealing 1d4 blud. dmg. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
   },
-  description: "+1 Str/+1 Dex, As a Bns Action when I take the Atk Action, with a Quarterstaff, Spear, or weapon with the Heavy and Reach properties, I can strike with the opposite end of the weapon dealing 1d4 blud. dmg. As a Rea. While holding a Polearm, I can make a melee atk against a creature that enters my melee range.",  
-  descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
-    "Pole Strike : Immediately after I take the Attack action and attack with a Quarterstaff, a Spear, or a weapon that has the Heavy and Reach properties, I can use a Bonus Action to make a melee attack with the opposite end of the weapon. The weapon deals Bludgeoning, and the weapon damage die for this is a d4.",
-    "Reactive Strike : While I'm holding a Quarterstaff, a Spear, or a weapon that has the Heavy and Reach properties, I can take a Reaction to make one melee attack against a creature that enters the reach I have with that weapon.",
-  ]),
   prerequisite: "Level 4 and Strength 13 or higher",
   prereqeval: function (v) {
     return v.characterLevel >= 4 && What('Str') >= 13 || What('Dex') >= 13;
@@ -10725,8 +10768,8 @@ FeatsList["resilient"] = {
   name: "Resilient",
   source: [["P24", 206]],
   regExpSearch: /^(?=.*resilient).*$/i,
-  descriptionFull: "Choose one ability in which I lack saving throw proficiency. I gain the following benefits:\n \u2022 Increase the chosen ability score by 1, to a maximum of 20.\n \u2022 I gain proficiency in saving throws using the chosen ability.",
-  description: "Select an ability score using the square button on this feat line. I gain proficiency with the saving throw of that ability score and a +1 added to it.",
+  description: "Select an ability score using the square button on this feat line. I gain proficiency with the saving throw of that ability score and a +1 added to it.",  
+  descriptionFull: "Choose one ability in which you lack saving throw proficiency. You gain the following benefits:\n \u2022 Increase the chosen ability score by 1, to a maximum of 20.\n \u2022 you gain proficiency in saving throws using the chosen ability.",
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
     description: "I gain proficiency with Strength saving throws. [+1 Strength]",
@@ -10767,30 +10810,52 @@ FeatsList["ritual caster"] = {
   name: "Ritual Caster",
   source: [["P24", 206]],
   regExpSearch: /^(?=.*ritual)(?=.*caster).*$/i,
-  descriptionFull: "I gain the following benefits.\n Ability Score Increase. Increase my Intelligence, Wisdom, or Charisma by 1, to a maximum of 20.\n Ritual Spells. Choose a number of level 1 spells equal to my Proficiency Bonus that have the Ritual tag. I always have those spells prepared, and I can cast them with any spell slots I have. The spells' spellcasting ability is the ability increased by this feat. Whenever my Proficiency Bonus increases hereafter, I can add an additional level 1 spell with the Ritual tag to the spells always prepared with this feature.\n Quick Ritual. With this benefit, I can cast a Ritual spell that I have prepared using its regular casting time rather than the extended time for a Ritual. Doing so doesn't require a spell slot. Once I cast the spell in this way, I can't use this benefit again until I finish a Long Rest.",
-  description: "Ritual Spells. Prof. Bonus 1st level Ritual spells, do not count against the spells I can have prepared. Quick Ritual. Once per Long Rest can cast a ritual with normal casting time.",
-  prerequisite: "Intelligence, Wisdom, or Charisma 13 or higher",
-  prereqeval: function (v) {
-    return v.characterLevel >= 4 && What('Int') >= 13 || What('Wis') >= 13 || What('Cha') >= 13;
-  },
+  spellcastingBonus: [{
+	name : "1st-level Ritual spells",
+	"class" : "any",
+	ritual : true,
+	level : [1, 1],
+	times : [0, 0, 0, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6],
+  }],
+  description: "Ritual Spells. Prof. Bonus 1st level Ritual spells, do not count against the spells I can have prepared. Quick Ritual. Once per Long Rest can cast a ritual with normal casting time.",  
+  descriptionFull: desc([
+	"You gain the following benefits.", 
+	"Ability Score Increase : Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20.",
+	"Ritual Spells : Choose a number of level 1 spells equal to your Proficiency Bonus that have the Ritual tag. You always have those spells prepared, and you can cast them with any spell slots you have. The spells' spellcasting ability is the ability increased by this feat. Whenever your Proficiency Bonus increases hereafter, you can add an additional level 1 spell with the Ritual tag to the spells always prepared with this feature.",
+	"Quick Ritual : With this benefit, you can cast a Ritual spell that you have prepared using its regular casting time rather than the extended time for a Ritual. Doing so doesn't require a spell slot. Once you cast the spell in this way, you can't use this benefit again until you finish a Long Rest.",
+  ]),
   choices: ["Intelligence", "Wisdom", "Charisma"],
   "intelligence": {
     description: "Ritual Spells. Prof. Bonus 1st level Ritual spells, do not count against the spells I can have prepared. Quick Ritual. Once per Long Rest can cast a ritual with normal casting time. [+1 Intelligence]",
     scores: [0, 0, 0, 1, 0, 0],
+	spellcastingAbility: 4,
   },
   "wisdom": {
     description: "Ritual Spells. Prof. Bonus 1st level Ritual spells, do not count against the spells I can have prepared. Quick Ritual. Once per Long Rest can cast a ritual with normal casting time. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
+	spellcastingAbility: 5,
   },
   "charisma": {
     description: "Ritual Spells. Prof. Bonus 1st level Ritual spells, do not count against the spells I can have prepared. Quick Ritual. Once per Long Rest can cast a ritual with normal casting time. [+1 Charisma]",
     scores: [0, 0, 0, 0, 0, 1],
+	spellcastingAbility: 6,
+  },  
+  prerequisite: "Intelligence, Wisdom, or Charisma 13 or higher",
+  prereqeval: function (v) {
+    return v.characterLevel >= 4 && What('Int') >= 13 || What('Wis') >= 13 || What('Cha') >= 13;
   },
 };
 FeatsList["sentinel"] = {
   name: "Sentinel",
   source: [["P24", 207]],
   regExpSearch: /^(?=.*sentinel).*$/i,
+  description: "+1 Str/+1 Dex, Reac. when crea w/i 5ft takes Disengage action or hits another target other than me, I can make an Opportunity Attack. When I make an Opportunity Attack against a crea. it's Speed becomes 0 for the rest of the current turn.",  
+  descriptionFull: desc([
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Strength or Dexterity score by 1 to a maximum of 20.",
+    "Guardian : Immediately after a creature within 5 feet of you takes the Disengage action or hits a target other than you with an attack, you can make an Opportunity Attack against that creature.",
+    "Halt : When you hit a creature with an Opportunity Attack, the creature's Speed becomes 0 for the rest of the current turn.",
+  ]),
   choices: ["Strength", "Dexterity"],
   "strength": {
     description: "Reac. when crea w/i 5ft takes Disengage action or hits another target other than I, I can make an Opportunity Attack. When I make an Opportunity Attack against a crea. Its Speed becomes 0 for the rest of the current turn. [+1 Strength]",
@@ -10800,13 +10865,6 @@ FeatsList["sentinel"] = {
     description: "Reac. when crea w/i 5ft takes Disengage action or hits another target other than I, I can make an Opportunity Attack. When I make an Opportunity Attack against a crea. Its Speed becomes 0 for the rest of the current turn. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
   },
-  description: "+1 Str/+1 Dex, Reac. when crea w/i 5ft takes Disengage action or hits another target other than me, I can make an Opportunity Attack. When I make an Opportunity Attack against a crea. it's Speed becomes 0 for the rest of the current turn.",  
-  descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Strength or Dexterity score by 1 to a maximum of 20.",
-    "Guardian : Immediately after a creature within 5 feet of I takes the Disengage action or hits a target other than I with an attack, I can make an Opportunity Attack against that creature.",
-    "Halt : When I hit a creature with an Opportunity Attack, the creature's Speed becomes 0 for the rest of the current turn.",
-  ]),
   action: ["reaction", " (after Disengage/attack on ally)"],
   prerequisite: "Level 4 and Strength or Dexterity 13 or higher",
   prereqeval: function (v) {
@@ -10829,8 +10887,12 @@ FeatsList["shadow touched"] = {
     level: [1, 1],
     firstCol: "oncelr"
   }],
-  spellcastingAbility: 4,
-  allowUpCasting: true,
+  description: "+1 Int, Wis, or Cha, I learn the Invisibility and one other 1st-level spell from the Illusion or Necromancy school.",  
+  descriptionFull: desc([
+    "You gain the following benefits",
+    "Ability Score Increase : Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
+    "Shadow Magic : Choose one level 1 spell from the Illusion or Necromancy school of magic. You always have that spell and the Invisibility spell prepared. You can cast each of these spells without expending a spell slot. Once you cast either spell in this way, you can't cast that spell in this way again until you finish a Long Rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat.",
+  ]),
   choices: ["Intelligence", "Wisdom", "Charisma"],
   "intelligence": {
     description: "I learn Invisibility and one 1st level Illusion or Necromancy spell. I can cast each once per long rest at their lowest level without expending a spell slot and can cast them by expending a spell slot as normal. Charisma is my spellcasting ability for these spells. [+1 Intelligence]",
@@ -10847,12 +10909,6 @@ FeatsList["shadow touched"] = {
     spellcastingAbility: 6,
     scores: [0, 0, 0, 0, 0, 1]
   },
-  description: "+1 Int, Wis, or Cha, I learn the Invisibility and one other 1st-level spell from the Illusion or Necromancy school.",  
-  descriptionFull: desc([
-    "I gain the following benefits",
-    "Ability Score Increase : Increase my Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.",
-    "Shadow Magic : Choose one level 1 spell from the Illusion or Necromancy school of magic. I always have that spell and the Invisibility spell prepared. I can cast each of these spells without expending a spell slot. Once I cast either spell in this way, I can't cast that spell in this way again until I finish a Long Rest. I can also cast these spells using spell slots I have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat.",
-  ]),
   prerequisite: "Level 4 or higher",
   prereqeval: function (v) {
     return v.characterLevel >= 4;
@@ -10863,8 +10919,14 @@ FeatsList["sharpshooter"] = {
   source: [["P24", 207]],
   regExpSearch: /^(?=.*sharpshooter).*$/i,
   scores: [0, 1, 0, 0, 0, 0],
-  descriptionFull: "I gain the following benefits.\n Ability Score Increase. Increase my Dexterity score by 1, to a maximum of 20.\n Bypass Cover. My ranged attacks with weapons ignore Half and Three-Quarter Cover.\n   Firing in Melee. Being within 5 feet of an enemy doesn't impose Disadvantage on my attack rolls with Ranged weapons.\n   Long Shots. Attacking at long range doesn't impose Disadvantage on my attack rolls with Ranged weapons.",
-  description: "My ranged weapon attacks don't have disadvantage in melee or on long-range and ignore half cover and three-quarters cover.",
+  description: "My ranged weapon attacks don't have disadvantage in melee or on long-range and ignore half cover and three-quarters cover. [+1 Dexterity]",
+  descriptionFull: desc([
+	"You gain the following benefits.",
+	"Ability Score Increase : Increase your Dexterity score by 1, to a maximum of 20.",
+	"Bypass Cover : Your ranged attacks with weapons ignore Half and Three-Quarter Cover.",
+	"Firing in Melee : Being within 5 feet of an enemy doesn't impose Disadvantage on your attack rolls with Ranged weapons.",
+	"Long Shots : Attacking at long range doesn't impose Disadvantage on your attack rolls with Ranged weapons.",
+  ]),
   calcChanges: {
     atkAdd: [
       function (fields, v) {
@@ -10890,17 +10952,22 @@ FeatsList["shield master"] = {
     name: "Shield Bash",
     source: [["P24", 207]],
     ability: 1,
-    type: "shield bash",
+    type: "special",
     damage: ["", "", ""],
     range: "Melee, 5ft",
-    description: "Once per turn as part of the attack action, use shield to knock an enemy prone or push 5 ft",
+    description: "Once per turn as part of the attack action you take with a Melee weapon, use shield to knock an enemy prone or push 5 ft",
     abilitytodamage: false,
     dc: true,
     selectNow: true,
   }],
   weaponProfs: [false, false, ["shield bash"]],
-  descriptionFull: "I gain the following benefits:\n \u2022 Ability Score Increase. Increase my Strength score by 1, to a maximum of 20.\n \u2022 Shield Bash. If I attack a creature within 5 feet of me as part of the Attack action and hit with a Melee weapon, I can immediately bash the target with my Shield if it's equipped forcing the target to make a Strength saving throw (DC 8 plus my Strength modifier and Proficiency Bonus). On a failed save, I either push the target 5 feet from I or cause it to have the Prone condition (my choice). I can use this benefit only once on each of my turns.\n \u2022 Interpose Shield. If I're subjected to an effect that allows me to make a Dexterity saving throw to take only half damage, I can take a Reaction to take no damage if I succeed on the saving throw and are holding a Shield.",
-  description: "Once per turn when I use the Attack action and Hit, I can cause the creature hit by my attack to make a STR save and if it fails either push the creature 5 feet or knock it Prone (DC 8 + STR + Prof). As a reaction, if I succeed on a Dex save for half damage, I can interpose my shield to avoid the damage. ",
+  description: "Once per turn when I use the Attack action and hit with melee weapon, I can cause the creature I hit to make a STR save (DC 8 + STR + Prof). If it fails I can either push the creature 5 feet or knock it Prone. As a reaction, if I succeed on a Dex save for half damage, I can interpose my shield to avoid the damage. [+1 Str]",
+  descriptionFull: desc([
+	"You gain the following benefits:",
+	"Ability Score Increase : Increase your Strength score by 1, to a maximum of 20.",
+	"Shield Bash : If you attack a creature within 5 feet of you as part of the Attack action and hit with a Melee weapon, you can immediately bash the target with your Shield if it's equipped forcing the target to make a Strength saving throw (DC 8 plus your Strength modifier and Proficiency Bonus). On a failed save, you either push the target 5 feet from you or cause it to have the Prone condition (your choice). You can use this benefit only once on each of your turns.",
+	"Interpose Shield. If you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you can take a Reaction to take no damage if you succeed on the saving throw and are holding a Shield.",
+  ]),
   action: [['reaction', 'Interpose shield (Uncanny Dodge)']],
   prerequisite: "Level 4 and Shield Training",
   prereqeval: function (v) {
@@ -10911,10 +10978,15 @@ FeatsList["skill expert"] = {
   name: "Skill Expert",
   source: [["P24", 207]],
   regExpSearch: /^(?=.*skill)(?=.*expert).*$/i,
-  descriptionFull: "I gain the following benefits:\n \u2022 Ability Score Increase. Increase one ability score of my choice by 1, to a maximum of 20.\n \u2022 Skill Proficiency. I gain proficiency in one skill of my choice.\n \u2022 Expertise. Choose one skill in which I have proficiency but lack Expertise. I gain expertise with that skill.",
-  description: "I gain proficiency in one skill and expertise in that same skill or another skill I'm proficient with. [+1 to one ability score of my choice]",
-  skillstxt: "Proficiency with one skill, and\n Expertise with one skill I'm proficient with",
+  skillstxt: "Proficiency with one skill, and Expertise with one skill I'm proficient with",
   scorestxt: "+1 to one ability score of my choice",
+  description: "I gain proficiency in one skill and expertise in that same skill or another skill I'm proficient with. [+1 to one ability score of my choice]",  
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Increase : Increase one ability score of your choice by 1, to a maximum of 20.",
+	"Skill Proficiency : You gain proficiency in one skill of your choice.",
+	"Expertise : Choose one skill in which you have proficiency but lack Expertise. You gain expertise with that skill.",
+  ]),
   prerequisite: "Level 4",
   prereqeval: function (v) {
     return v.characterLevel >= 4;
@@ -10925,20 +10997,30 @@ FeatsList["skulker"] = {
   source: [["P24", 208]],
   regExpSearch: /^(?=.*skulker).*$/i,
   scores: [0, 1, 0, 0, 0, 0],
-  descriptionFull: "I gain the following benefits:\n \u2022 Blindsight. I have Blindsight with a range of 10 feet.\n \u2022 Fog of War. I exploit the distractions of battle, gaining Advantage on any Dexterity (Stealth) check I make as part of the Hide action during combat.\n \u2022 Sniper. If I make an attack roll while hidden and the roll misses, making the attack roll doesn't reveal my location.",
+  vision: [["Blindsight", 10]],  
   description: "Adv. to hide in combat. My position is not revealed when I am hidden from a creature and miss it with an attack. Blindsight 10ft",
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Blindsight : You have Blindsight with a range of 10 feet.",
+	"Fog of War : You exploit the distractions of battle, gaining Advantage on any Dexterity (Stealth) check you make as part of the Hide action during combat.",
+	"Sniper : If you make an attack roll while hidden and the roll misses, making the attack roll doesn't reveal your location.",
+  ]),
   prerequisite: "Level 4 and Dexterity 13 or higher",
   prereqeval: function (v) {
     return v.characterLevel >= 4 && What('Dex') >= 13;
   },
-  vision: [["Blindsight", 10]],
 };
 FeatsList["slasher"] = {
   name: "Slasher",
   source: [["P24", 208]],
   regExpSearch: /^(?=.*slasher).*$/i,
-  descriptionFull: "I gain the following benefits:\n \u2022 Ability Score Increase. Increase my Strength or Dexterity by 1, to a maximum of 20.\n \u2022 Hamstring. Once per turn, I hit a creature with an attack that deals Slashing damage, I can reduce the speed of that creature by 10 feet until the start of my next turn.\n \u2022 Enhanced Critical. When I score a Critical Hit that deals Slashing damage to a creature, it has Disadvantage on attack rolls until the start of my next turn.",
   description: "+1 Str/Dex, Once per turn when I deal slashing damage to a target, I can reduce its speed by 10 ft until the start of my next turn. When I score a critical hit that deals slashing damage to a creature, the grievous wound causes it to have disadvantage on all attack rolls until the start of my next turn. ",
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Increase : Increase your Strength or Dexterity by 1, to a maximum of 20.",
+	"Hamstring : Once per turn, when you hit a creature with an attack that deals Slashing damage, you can reduce the speed of that creature by 10 feet until the start of your next turn.",
+	"Enhanced Critical : When you score a Critical Hit that deals Slashing damage to a creature, it has Disadvantage on attack rolls until the start of your next turn.",
+  ]),
   choices: ["Strength", "Dexterity"],
   "strength": {
     description: "Once per turn when I deal slashing damage to a target, I can reduce its speed by 10 ft until the start of my next turn. When I score a critical hit that deals slashing damage to a creature, the grievous wound causes it to have disadvantage on all attack rolls until the start of my next turn. [+1 Strength]",
@@ -10958,15 +11040,21 @@ FeatsList["speedy"] = {
   source: [["P24", 208]],
   regExpSearch: /^(?=.*speedy).*$/i,
   speed: {walk: "+10"},
-  descriptionFull: "I gain the following benefits:\n \u2022 Ability Score Increase. Increase my Dexterity or Constitution by 1, to a maximum of 20.\n \u2022 Speed Increase. My Speed increases by 10 feet.\n \u2022 Dash over Difficult Terrain. When I take the Dash action on my turn, Difficult Terrain doesn't cost me extra movement for the rest of that turn.\n \u2022 Agile Movement. Opportunity Attacks have Disadvantage against me.",
-  description: "+1 Dex/Con, +10 Speed, Dash over Difficult Terrain does not cost extra movement, Opportunity Attacks have Disadvantage against me. ",
+  description: "+1 Dex/Con, +10 Speed, Dash over Difficult Terrain does not cost extra movement, Opportunity Attacks have Disadvantage against me.",
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Increase : Increase your Dexterity or Constitution by 1, to a maximum of 20.",
+	"Speed Increase : Your Speed increases by 10 feet.",
+	"Dash over Difficult Terrain : When you take the Dash action on your turn, Difficult Terrain doesn't cost you extra movement for the rest of that turn.",
+	"Agile Movement : Opportunity Attacks have Disadvantage against you.",
+  ]),
   choices: ["Dexterity", "Constitution"],
   "dexterity": {
-    description: "+10 Speed, Dash over Difficult Terrain does not cost extra movement, Opportunity Attacks have Disadvantage against I. [+1 Dexterity]",
+    description: "+10 Speed, Dash over Difficult Terrain does not cost extra movement, Opportunity Attacks have Disadvantage against me. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
   },
   "constitution": {
-    description: "+10 Speed, Dash over Difficult Terrain does not cost extra movement, Opportunity Attacks have Disadvantage against I. [+1 Constitution]",
+    description: "+10 Speed, Dash over Difficult Terrain does not cost extra movement, Opportunity Attacks have Disadvantage against me. [+1 Constitution]",
     scores: [0, 0, 1, 0, 0, 0],
   },
   prerequisite: "Level 4 and Dexterity or Constitution 13 or higher",
@@ -10978,12 +11066,14 @@ FeatsList["spell sniper"] = {
   name: "Spell Sniper",
   source: [["P24", 208]],
   regExpSearch: /^(?=.*spell)(?=.*sniper).*$/i,
-  descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Increase. Increase my Intelligence, Wisdom, or Charisma by 1, to a maximum of 20.\n \u2022 Bypass Cover. My attack rolls for spells ignore Half Cover and Three-quarter Cover.\n \u2022 Casting in Melee. Being within 5 feet of an enemy doesn't impose Disadvantage on my attack rolls with spells.\n \u2022 Increased Range. When I cast a spell that has a range of at least 10 feet and requires me to make an attack roll, I can increase the spell's range by 60 feet.",
   description: "+1 Int/Wis/Cha my spells ignore half and three-quarter cover; casting in melee doesn't impose disadvantage; my ranged spells with a range of 10ft or more have their range increased by 60 ft",
-  prerequisite: "Level 4 and has Spellcasting or Pact Magic Feature",
-  prereqeval: function (v) {
-    return v.characterLevel >= 4 && v.isSpellcaster;
-  },
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Increase : Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20.",
+	"Bypass Cover : Your attack rolls for spells ignore Half Cover and Three-quarter Cover.",
+	"Casting in Melee : Being within 5 feet of an enemy doesn't impose Disadvantage on your attack rolls with spells.",
+	"Increased Range. When you cast a spell that has a range of at least 10 feet and requires you to make an attack roll, you can increase the spell's range by 60 feet.",
+  ]),
   choices: ["Intelligence", "Wisdom", "Charisma"],
   "intelligence": {
     description: "My spells ignore half and three-quarter cover; casting in melee doesn't impose disadvantage; my ranged spells with a range of 10ft or more have their range increased by 60 ft. [+1 Intelligence]",
@@ -10997,13 +11087,22 @@ FeatsList["spell sniper"] = {
     description: "My spells ignore half and three-quarter cover; casting in melee doesn't impose disadvantage; my ranged spells with a range of 10ft or more have their range increased by 60 ft. [+1 Charisma]",
     scores: [0, 0, 0, 0, 0, 1],
   },
+  prerequisite: "Level 4 and has Spellcasting or Pact Magic Feature",
+  prereqeval: function (v) {
+    return v.characterLevel >= 4 && v.isSpellcaster;
+  },
 };
 FeatsList["telekinetic"] = {
   name: "Telekinetic",
   source: [["P24", 208]],
   regExpSearch: /^(?=.*telekinetic).*$/i,
-  descriptionFull: "I gain the following benefits:\n \u2022 Ability Score Increase. Increase my Intelligence, Wisdom, or Charisma by 1, to a maximum of 20.\n \u2022 Minor Telekinesis. I learn the mage hand cantrip. I can cast it without verbal or somatic components, and I can make the spectral hand invisible. If I already know this spell, its range increases by 30 feet when I cast it. Its spellcasting ability is the ability increased by this feat.\n \u2022 Telekinetic Shove. As a bonus action, I can try to telekinetically shove one creature I can see within 30 feet of me. When I do so, the target must succeed on a Strength saving throw (DC 8 + my proficiency bonus + the ability modifier of the score increased by this feat) or be moved 5 feet toward I or away from I. A creature can willingly fail this save.",
   description: "I know the Mage Hand cantrip, can cast it without components, and the spectral hand can be invisible. As a bonus action, I can shove one creature I can see within 30 ft It must make a Str save vs. this feat's spell save DC or be moved 5 ft from or towards me. My spellcasting ability is the ability I choose to increase when I gain this feat. [+1 Int, Wis, or Cha]",
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Increase : Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20.",
+	"Minor Telekinesis : You learn the mage hand cantrip. you can cast it without verbal or somatic components, and you can make the spectral hand invisible. If you already know this spell, its range increases by 30 feet when you cast it. Its spellcasting ability is the ability increased by this feat.",
+	"Telekinetic Shove : As a bonus action, you can try to telekinetically shove one creature you can see within 30 feet of you. When you do so, the target must succeed on a Strength saving throw (DC 8 + your proficiency bonus + the ability modifier of the score increased by this feat) or be moved 5 feet toward you or away from you. A creature can willingly fail this save.",
+  ]),
   action: [["bonus action", " Shove"]],
   spellcastingBonus: {
     name: "Mage Hand",
@@ -11011,7 +11110,6 @@ FeatsList["telekinetic"] = {
     selection: ["mage hand"],
     firstCol: "atwill"
   },
-  spellcastingAbility: 4,
   calcChanges: {
     spellAdd: [
       function (spellKey, spellObj, spName) {
@@ -11054,16 +11152,19 @@ FeatsList["telepathic"] = {
   name: "Telepathic",
   source: [["P24", 208]],
   regExpSearch: /^(?=.*telepathic).*$/i,
-  descriptionFull: "I gain the following benefits:\n \u2022 Ability Score Increase. Increase my Intelligence, Wisdom, or Charisma by 1, to a maximum of 20.\n \u2022 Telepathic Utterance. I can speak telepathically to any creature I can see within 60 feet of me. My telepathic utterances are in a language I know, and the creature understands me only if it knows that language. My communication doesn't give the creature the ability to respond to me telepathically.\n \u2022 Detect thoughts. I can cast the detect thoughts spell, requiring no spell slot or components, and I must finish a long rest before I can cast it this way again. My spellcasting ability for the spell is the ability increased by this feat. If I have spell slots of 2nd level or higher, I can cast this spell with them.",
   description: "I can telepathically speak to a creature I can see within 60 ft in a language I know, but it can't respond telepathically. I can cast Detect Thoughts once per long rest at its lowest level, requiring no spell slot or components, and can cast it using a spell slot as normal. My spellcasting ability is the ability I increase with this feat. [+1 Int, Wis, or Cha]",
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Increase : Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20.",
+	"Telepathic Utterance : You can speak telepathically to any creature you can see within 60 feet of you. Your telepathic utterances are in a language you know, and the creature understands you only if it knows that language. Your communication doesn't give the creature the ability to respond to you telepathically.",
+	"Detect thoughts : You can cast the detect thoughts spell, requiring no spell slot or components, and you must finish a long rest before you can cast it this way again. Your spellcasting ability for the spell is the ability increased by this feat. If you have spell slots of 2nd level or higher, you can cast this spell with them.",
+  ]),
   spellcastingBonus: {
     name: "Detect Thoughts",
     spells: ["detect thoughts"],
     selection: ["detect thoughts"],
     firstCol: "oncelr"
   },
-  spellcastingAbility: 4,
-  allowUpCasting: true,
   spellChanges: {
     "detect thoughts": {
       components: "(V,S,M)",
@@ -11095,14 +11196,16 @@ FeatsList["war caster"] = {
   name: "War Caster",
   source: [["P24", 209]],
   regExpSearch: /^(?=.*war)(?=.*caster).*$/i,
-  descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Increase. Increase my Intelligence, Wisdom, or Charisma by 1, to a maximum of 20.\n \u2022 Concentration. I have Advantage on Constitution saving throws that I make to maintain Concentration.\n \u2022 Reactivate Spell. When a creature provokes an Opportunity Attack from me by leaving my reach, I can take a Reaction to cast a spell at the creature rather than making an Opportunity Attack. The spell must have a casting time of one action and must target only that creature.\n \u2022 Somatic Components. I can perform the Somatic components of spells even when I have Weapons or a Shield in one or both hands.",
-  description: "+1 Int/Wis/Cha Advantage on Con saves to maintain concentration on spells when damaged. Perform somatic components even when holding weapons or shield in one or both hands. Cast spell of 1 action casting time that targets only one creature instead of an opportunity attack.",
-  action: ["reaction", " - Opportunity Spell"],
+  action: ["reaction", " (Opportunity Spell)"],
   savetxt: {text: "Adv. on Con (Concentration) saves when damaged"},
-  prerequisite: "Level 4 and has Spellcasting or Pact Magic Feature",
-  prereqeval: function (v) {
-    return v.characterLevel >= 4 && v.isSpellcaster;
-  },
+  description: "+1 Int/Wis/Cha Advantage on Con saves to maintain concentration on spells when damaged. Perform somatic components even when holding weapons or shield in one or both hands. Cast spell of 1 action casting time that targets only one creature instead of an opportunity attack.",
+  descriptionFull: desc([
+	"You gain the following benefits.",
+	"Ability Score Increase : Increase your Intelligence, Wisdom, or Charisma by 1, to a maximum of 20.",
+	"Concentration : You have Advantage on Constitution saving throws that you make to maintain Concentration.",
+	"Reactivate Spell : When a creature provokes an Opportunity Attack from you by leaving your reach, you can take a Reaction to cast a spell at the creature rather than making an Opportunity Attack. The spell must have a casting time of one action and must target only that creature.",
+	"Somatic Components : You can perform the Somatic components of spells even when you have Weapons or a Shield in one or both hands.",
+  ]),
   choices: ["Intelligence", "Wisdom", "Charisma"],
   "intelligence": {
     description: "Advantage on Con saves to maintain concentration on spells when damaged. Perform somatic components even when holding weapons or shield in one or both hands. Cast spell of 1 action casting time that targets only one creature instead of an opportunity attack. [+1 Intelligence]",
@@ -11116,14 +11219,22 @@ FeatsList["war caster"] = {
     description: "Advantage on Con saves to maintain concentration on spells when damaged. Perform somatic components even when holding weapons or shield in one or both hands. Cast spell of 1 action casting time that targets only one creature instead of an opportunity attack. [+1 Charisma]",
     scores: [0, 0, 0, 0, 0, 1],
   },
+  prerequisite: "Level 4 and has Spellcasting or Pact Magic Feature",
+  prereqeval: function (v) {
+    return v.characterLevel >= 4 && v.isSpellcaster;
+  },
 };
 FeatsList["weapon master"] = {
   name: "Weapon Master",
   source: [["P24", 209]],
   regExpSearch: /^(?=.*weapon)(?=.*master).*$/i,
-  descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Increase. Increase my Strength or Dexterity score by 1, to a maximum of 20.\n \u2022 Mastery Property. my training with weapons allows me to use the mastery property of one kind of Simple or Martial weapon of my choice, provided I have proficiency with it. Whenever I finish a Long Rest, I can change the kind of weapon to another kind.",
-  description: "+1 Str/Dex, Gain Weapon Mastery in one weapon of choice. can change choice during a long rest provided I have the appropriate proficiencies.",
   scorestxt: "My Strength or Dexterity score increases by 1, to a maximum of 20.",
+  description: "+1 Str/Dex, Gain Weapon Mastery in one weapon of choice. can change choice during a long rest provided I have the appropriate proficiencies.",
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Increase : Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+	"Mastery Property : Your training with weapons allows you to use the mastery property of one kind of Simple or Martial weapon of your choice, provided you have proficiency with it. Whenever you finish a Long Rest, you can change the kind of weapon to another kind.",
+  ]),
   choices: ["Weapon Master (Club)", "Weapon Master (Dagger)", "Weapon Master (Greatclub)", "Weapon Master (Handaxe)", "Weapon Master (Javelin)", "Weapon Master (Light Hammer)", "Weapon Master (Mace)", "Weapon Master (Quarterstaff)", "Weapon Master (Sickle)", "Weapon Master (Spear)", "Weapon Master (Dart)", "Weapon Master (Light Crossbow)", "Weapon Master (Shortbow)", "Weapon Master (Sling)", "Weapon Master (Battleaxe)", "Weapon Master (Flail)", "Weapon Master (Glaive)", "Weapon Master (Greataxe)", "Weapon Master (Greatsword)", "Weapon Master (Halberd)", "Weapon Master (Lance)", "Weapon Master (Longsword)", "Weapon Master (Maul)", "Weapon Master (Morningstar)", "Weapon Master (Pike)", "Weapon Master (Rapier)", "Weapon Master (Scimitar)", "Weapon Master (Shortsword)", "Weapon Master (Trident)", "Weapon Master (Warhammer)", "Weapon Master (War Pick)", "Weapon Master (Whip)", "Weapon Master (Blowgun)", "Weapon Master (Hand Crossbow)", "Weapon Master (Heavy Crossbow)", "Weapon Master (Longbow)", "Weapon Master (Musket)", "Weapon Master (Pistol)"],
   "weapon master (club)": {
     name: "Weapon Master (Club)",
@@ -11508,7 +11619,7 @@ FeatsList["fighting style"] = {
   },
   "protection": {
     name: "Protection",
-    description: "When a creature I can see attacks a target other than I that is within 5 feet of I, I can take a Reaction to interpose my Shield if I'm holding one. I impose Disadvantage on the triggering attack roll and all other attack rolls against the target until the start of my next turn if I remain within 5 feet of the target.",    
+    description: "When a creature I can see attacks a target other than me that is within 5 feet of me, I can take a Reaction to interpose my Shield if I'm holding one. I impose Disadvantage on the triggering attack roll and all other attack rolls against the target until the start of my next turn if I remain within 5 feet of the target.",    
     action: "reaction",
   },
   "thrown weapon fighting": {
@@ -11567,8 +11678,12 @@ FeatsList["fighting style"] = {
 FeatsList["boon of combat prowess"] = {
   name: "Boon of Combat Prowess",
   source: [["P24", 210]],
-  descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Peerless Aim. When I miss with an attack roll, I can hit instead. Once I use this benefit, I can't use it again until the start of my next turn.",
   description: "+1 to Any, Once per turn, when I miss with an attack, I can instead hit.",
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Improvement : Increase one ability score of your choice by 1, to a Maximum of 30.",
+	"Peerless Aim : When you miss with an attack roll, You can hit instead. Once you use this benefit, you can't use it again until the start of your next turn.",
+  ]),
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
 	  name: "Boon of Combat Prowess - STR",
@@ -11613,8 +11728,12 @@ FeatsList["boon of combat prowess"] = {
 FeatsList["boon of dimensional travel"] = {
   name: "Boon of Dimensional Travel",
   source: [["P24", 210]],
-  descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Blink Steps. Immediately after I take the Attack action or the Magic action, I can teleport up to 30 feet to an unoccupied space I can see.",
-  description: "+1 to Any, Once per turn, when I miss with an attack, I can instead hit.",
+  description: "+1 to Any, Immediately after I take the Attack action or the Magic action, I can teleport up to 30 feet to an unoccupied space I can see.",
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Improvement : Increase one ability score of your choice by 1, to a Maximum of 30.",
+	"Blink Steps : Immediately after you take the Attack action or the Magic action, you can teleport up to 30 feet to an unoccupied space you can see.",
+  ]),
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
 	  name: "Boon of Dimensional Travel - STR",
@@ -11660,188 +11779,193 @@ FeatsList["boon of energy resistance"] = {
   name: "Boon of Energy Resistance",
   source: [["P24", 210]],
   action: ["reaction", "Energy Redirection"],
-  descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Energy Resistances. I gain Resistance to two of the following damage types of my choice: Acid, Cold, Fire, Lightning, Necrotic, Poison, Psychic, Radiant, or Thunder. Whenever I finish a Long Rest, I can change my choices.\n \u2022 Energy Redirection. When I take damage of one of the types chosen for the Energy Resistances benefit, I can take a Reaction to direct damage of the same type toward another creature I can see within 60 feet of yourself that isn't behind Total Cover. If I do so, that creature must succeed on a Dexterity saving throw (DC 8 plus my Constitution modifier and Proficiency Bonus) or take damage equal to 2d12 plus my Constitution modifier.",
-  description: "+1 to Any, +2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover.",
   scorestxt: ["An ability score of my choice increases by 1, to a Maximum of 30"],
+  description: "+1 to Any, +2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover.",
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Improvement : Increase one ability score of your choice by 1, to a Maximum of 30.",
+	"Energy Resistances : You gain Resistance to two of the following damage types of my choice: Acid, Cold, Fire, Lightning, Necrotic, Poison, Psychic, Radiant, or Thunder. Whenever you finish a Long Rest, you can change your choices.",
+	"Energy Redirection : When you take damage of one of the types chosen for the Energy Resistances benefit, you can take a Reaction to direct damage of the same type toward another creature you can see within 60 feet of yourself that isn't behind Total Cover. If you do so, that creature must succeed on a Dexterity saving throw (DC 8 plus my Constitution modifier and Proficiency Bonus) or take damage equal to 2d12 plus your Constitution modifier.",
+  ]),
    choices: ["Acid & Cold", "Acid & Fire", "Acid & Lightning", "Acid & Necrotic", "Acid & Poison", "Acid & Psychic", "Acid & Radiant", "Acid & Thunder", "Cold & Fire", "Cold & Lightning", "Cold & Necrotic", "Cold & Poison", "Cold & Psychic", "Cold & Radiant", "Cold & Thunder", "Fire & Lightning", "Fire & Necrotic", "Fire & Poison", "Fire & Psychic", "Fire & Radiant", "Fire & Thunder", "Lightning & Necrotic", "Lightning & Poison", "Lightning & Psychic", "Lightning & Radiant", "Lightning & Thunder", "Necrotic & Poison", "Necrotic & Psychic", "Necrotic & Radiant", "Necrotic & Thunder", "Poison & Psychic", "Poison & Radiant", "Poison & Thunder", "Psychic & Radiant", "Psychic & Thunder", "Radiant & Thunder"],
   "acid & cold": {
 	name: "Boon of Energy Res - [Acid+Cold]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Acid", "Cold"],
   },
   "acid & fire": {
 	name: "Boon of Energy Res - [Acid+Fire]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Acid", "Fire"],
   },
   "acid & lightning": {
 	name: "Boon of Energy Res - [Acid+Lightning]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Acid", "Lightning"],
   },
   "acid & necrotic": {
 	name: "Boon of Energy Res - [Acid+Necrotic]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Acid", "Necrotic"],
   },
   "acid & poison": {
 	name: "Boon of Energy Res - [Acid+Poison]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con 2d12 of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Acid", "Poison"],
   },
   "acid & psychic": {
 	name: "Boon of Energy Res - [Acid+Psychic]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Acid", "Psychic"],
   },
   "acid & radiant": {
 	name: "Boon of Energy Res - [Acid+Radiant]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Acid", "Radiant"],
   },
   "acid & thunder": {
 	name: "Boon of Energy Res - [Acid+Thunder]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Acid", "Thunder"],
   },
   "cold & fire": {
 	name: "Boon of Energy Res - [Cold+Fire]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Cold", "Fire"],
   },
   "cold & lightning": {
 	name: "Boon of Energy Res - [Cold+Lightning]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Cold", "Lightning"],
   },
   "cold & necrotic": {
 	name: "Boon of Energy Res - [Cold+Necrotic]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Cold", "Necrotic"],
   },
   "cold & poison": {
 	name: "Boon of Energy Res - [Cold+Poison]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Cold", "Poison"],
   },
   "cold & psychic": {
 	name: "Boon of Energy Res - [Cold+Psychic]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Cold", "Psychic"],
   },
   "cold & radiant": {
 	name: "Boon of Energy Res - [Cold+Radiant]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Cold", "Radiant"],
   },
   "cold & thunder": {
 	name: "Boon of Energy Res - [Cold+Thunder]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Cold", "Thunder"],
   },
   "fire & lightning": {
 	name: "Boon of Energy Res - [Fire+Lightning]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Fire", "Lightning"],
   },
   "fire & necrotic": {
 	name: "Boon of Energy Res - [Fire+Necrotic]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Fire", "Necrotic"],
   },
   "fire & poison": {
 	name: "Boon of Energy Res - [Fire+Poison]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Fire", "Poison"],
   },
   "fire & psychic": {
 	name: "Boon of Energy Res - [Fire+Psychic]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Fire", "Psychic"],
   },
   "fire & radiant": {
 	name: "Boon of Energy Res - [Fire+Radiant]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Fire", "Radiant"],
   },
   "fire & thunder": {
 	name: "Boon of Energy Res - [Fire+Thunder]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Fire", "Thunder"],
   },
   "lightning & necrotic": {
 	name: "Boon of Energy Res - [Lightning+Necrotic]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Lightning", "Necrotic"],
   },
   "lightning & poison": {
 	name: "Boon of Energy Res - [Lightning+Poison]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Lightning", "Poison"],
   },
   "lightning & psychic": {
 	name: "Boon of Energy Res - [Lightning+Psychic]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Lightning", "Psychic"],
   },
   "lightning & radiant": {
 	name: "Boon of Energy Res - [Lightning+Radiant]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Lightning", "Radiant"],
   },
   "lightning & thunder": {
 	name: "Boon of Energy Res - [Lightning+Thunder]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Lightning", "Thunder"],
   },
   "necrotic & poison": {
 	name: "Boon of Energy Res - [Necrotic+Poison]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Necrotic", "Poison"],
   },
   "necrotic & psychic": {
 	name: "Boon of Energy Res - [Necrotic+Psychic]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Necrotic", "Psychic"],
   },
   "necrotic & radiant": {
 	name: "Boon of Energy Res - [Necrotic+Radiant]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Necrotic", "Radiant"],
   },
   "necrotic & thunder": {
 	name: "Boon of Energy Res - [Necrotic+Thunder]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Necrotic", "Thunder"],
   },
   "poison & psychic": {
 	name: "Boon of Energy Res - [Poison+Psychic]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Poison", "Psychic"],
   },
   "poison & radiant": {
 	name: "Boon of Energy Res - [Poison+Radiant]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Poison", "Radiant"],
   },
   "poison & thunder": {
 	name: "Boon of Energy Res - [Poison+Thunder]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Poison", "Thunder"],
   },
   "psychic & radiant": {
 	name: "Boon of Energy Res - [Psychic+Radiant]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Psychic", "Radiant"],
   },
   "psychic & thunder": {
 	name: "Boon of Energy Res - [Psychic+Thunder]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Psychic", "Thunder"],
   },
   "radiant & thunder": {
 	name: "Boon of Energy Res - [Radiant+Thunder]",
-    description: "+2 Energy Resistances which I can change after a Long Rest; When hit with a damage type I have resistance to Reaction to redirect energy I have a resistance to to another crea w/i 60 ft of me 2d12 + Con of energy type as long as they are not behind total cover. [+1 Any Ability Score, up to Max of 30]",
+    description: "+2 Energy Resistances which I can change after a Long Rest. When hit with a damage type I have resistance to, I can use a Reaction to redirect that energy to another creature in 60 ft of me. They take 2d12 + Con of that energy type as long as they aren't behind total cover. [+1 Any Ability Score, up to Max of 30]",
     dmgres: ["Radiant", "Thuder"],
   },
   prereqeval: function (v) {
@@ -11851,8 +11975,12 @@ FeatsList["boon of energy resistance"] = {
 FeatsList["boon of fate"] = {
   name: "Boon of Fate",
   source: [["P24", 210]],
-  descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Improved Fate. When I or another creature within 60 feet of me succeeds or fails a D20 Test I can roll 2d4 and apply the total rolled as a bonus or penalty to the d20 roll. Once I use this benefit, I can't use it again until I roll Initiative or finish a Short or Long Rest.",
   description: "+1 to Any, Once per Initiative/Rest I can roll 2d4 and apply them as a bonus or penalty to a single D20 Test rolled by myself or another creature within 60 feet of me.",
+  descriptionFull: desc([
+	"you gain the following benefits",
+	"Ability Score Improvement : Increase one ability score of your choice by 1, to a Maximum of 30.",
+	"Improved Fate : When you or another creature within 60 feet of you succeeds or fails a D20 Test you can roll 2d4 and apply the total rolled as a bonus or penalty to the d20 roll. Once you use this benefit, you can't use it again until you roll Initiative or finish a Short or Long Rest.",
+  ]),
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
 	  name: "Boon of Fate - STR",
@@ -11897,13 +12025,12 @@ FeatsList["boon of fate"] = {
 FeatsList["boon of fortitude"] = {
   name: "Boon of Fortitude",
   source: [["P24", 210]],
-  calcChanges: {
-    hp: function (totalHD) {
-      return [+40, '\n + ' + totalHD + ' + 40 from the Boon of Fortitude feat ', true];
-    },
-  },
-  descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Fortified Health. My Hit Point maximum increases by 40. In addition, whenever I regain Hit Points, I can regain additional Hit Points equal to my Constitution modifier. Once I've regained these additional Hit Points, I can't do so again until the start of my next turn.",
   description: "+1 to Any, +40 to HP max; Once per turn when I regain HP I can add my Con mod to the HP regained.",
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Improvement : Increase one ability score of your choice by 1, to a Maximum of 30.",
+	"Fortified Health : Your Hit Point maximum increases by 40. In addition, whenever you regain Hit Points, you can regain additional Hit Points equal to your Constitution modifier. Once you've regained these additional Hit Points, you can't do so again until the start of my next turn.",
+  ]),
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
     name: "Boon of Fortitude - STR",
@@ -11941,6 +12068,11 @@ FeatsList["boon of fortitude"] = {
     scores: [0, 0, 0, 0, 0, 1],
     scoresMaximum: [0, 0, 0, 0, 0, 30],
   },
+  calcChanges: {
+    hp: function (totalHD) {
+      return [+40, '\n + ' + totalHD + ' + 40 from the Boon of Fortitude feat ', true];
+    },
+  },
   prereqeval: function (v) {
     return v.characterLevel >= 19;
   },
@@ -11948,8 +12080,13 @@ FeatsList["boon of fortitude"] = {
 FeatsList["boon of irresistible offense"] = {
   name: "Boon of Irresistible Offense",
   source: [["P24", 211]],
-  descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Overcome Defenses. The Bludgeoning, Piercing, and Slashing damage I deal always ignores Resistance.\n \u2022 Overwhelming Strike. When I roll a 20 on the d20 for an attack roll, I can deal extra damage to the target equal to the ability score increased by this feat.",
   description: "+1 to Any, Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to the ability modifier of the score I increased by this feat.",
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Improvement : Increase one ability score of your choice by 1, to a Maximum of 30.",
+	"Overcome Defenses : The Bludgeoning, Piercing, and Slashing damage you deal always ignores Resistance.",
+	"Overwhelming Strike : When you roll a 20 on the d20 for an attack roll, you can deal extra damage to the target equal to the ability score increased by this feat.",
+  ]),
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
 	  name: "Boon of Irresistible Offense - STR",
@@ -11995,11 +12132,22 @@ FeatsList["boon of recovery"] = {
   name: "Boon of Recovery",
   source: [["P24", 211]],
   action: ["bonus action", "Recovery"],
-  limfeaname: "Last Stand",
-  usages: 1,
-  recovery: "Long Rest",
-  descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Last Stand. When I would be reduced to 0 Hit Points, I can drop to 1 Hit Point instead and regain a number of Hit Points equal to half my Hit Point maximum. Once I use this benefit, I can't use it again until I finish a Long Rest.\n \u2022 Recover. I have a pool of ten d10s. As a Bonus Action, I can expend dice from the pool, roll those dice, and regain a number of Hit Points equal to the roll's total. I regain all the expended dice when I finish a Long Rest.",
+  extraLimitedFeatures : [{
+	  name : "Last Stand",
+	  usages : 1,
+	  recovery : "Long Rest",
+  }, {
+	  name : "Recovery (d10)",
+	  usages : 10,
+	  recovery : "Long Rest",
+  }],
   description: "+1 to Any, Once per Long Rest when I would be reduced to 0 HP drop to 1 instead and regain HP equal to 1/2 my max HP; I gain 10 d10s that I can roll as a bns. a. which recover over a Long Rest.",
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Improvement : Increase one ability score of you choice by 1, to a Maximum of 30.",
+	"Last Stand : When you would be reduced to 0 Hit Points, you can drop to 1 Hit Point instead and regain a number of Hit Points equal to half you Hit Point maximum. Once you use this benefit, you can't use it again until you finish a Long Rest.",
+	"Recover : You have a pool of ten d10s. As a Bonus Action, you can expend dice from the pool, roll those dice, and regain a number of Hit Points equal to the roll's total. You regain all the expended dice when you finish a Long Rest.",
+  ]),
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
     name: "Boon of Recovery - STR",
@@ -12064,8 +12212,13 @@ FeatsList["boon of skill"] = {
   source: [["P24", 211]],
   skills: ["Athletics", "Acrobatics", "Sleight of Hand", "Stealth", "Arcana", "History", "Investigation", "Nature", "Religion", "Animal Handling", "Insight", "Medicine", "Perception", "Survival", "Deception", "Intimidation", "Performance", "Persuasion"],
   skillstxt: "I gain expertise in one skill of choice.",
-  descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 All-Around Adept. I gain proficiency in all skills.\n \u2022 Expertise. Choose one skill in which I lack Expertise. I gain Expertise in that skill.",
   description: "+1 to Any, I gain Proficiency in all skills, and Expertise in one skill of choice.",
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Improvement : Increase one ability score of your choice by 1, to a Maximum of 30.",
+	"All-Around Adept : You gain proficiency in all skills.",
+	"Expertise : Choose one skill in which you lack Expertise. You gain Expertise in that skill.",
+  ]),
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
     name: "Boon of Skill - STR",
@@ -12110,8 +12263,13 @@ FeatsList["boon of skill"] = {
 FeatsList["boon of speed"] = {
   name: "Boon of Speed",
   source: [["P24", 211]],
-  descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Escape Artist. As a Bonus Action, I can take the Disengage action, which also ends the Grappled condition on me.\n \u2022 Quickness. My Speed increases by 30 feet.",
   description: "+1 to Any, Speed +30 ft, Bonus Action to Disengage, which also ends the Grappled condition.",
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Improvement : Increase one ability score of your choice by 1, to a Maximum of 30.",
+	"Escape Artist : As a Bonus Action, you can take the Disengage action, which also ends the Grappled condition on you.",
+	"Quickness : Your Speed increases by 30 feet.",
+  ]),
   speed: {walk: "+30"},
   action : ["bonus action", "Disengage"],
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
@@ -12158,8 +12316,12 @@ FeatsList["boon of speed"] = {
 FeatsList["boon of spell recall"] = {
   name: "Boon of Spell Recall",
   source: [["P24", 211]],
-  descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase my Intelligence, Wisdom, or Charisma score by 1, to a Maximum of 30.\n \u2022 Free Casting. Whenever I cast a spell with a level 1-4 spell slot, roll1d4. If the number I roll is the same as the slot's level, the slot isn't expended.",
   description: "+1 Int/Wis/Cha, When I cast a spell level 1-4, roll 1d4 if the number rolled matches the slot's level the spell slot isn't expended.",
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Improvement : Increase your Intelligence, Wisdom, or Charisma score by 1, to a Maximum of 30.",
+	"Free Casting : Whenever you cast a spell with a level 1-4 spell slot, roll 1d4. If the number you roll is the same as the slot's level, the slot isn't expended.",
+  ]),
   choices: ["Intelligence", "Wisdom", "Charisma"],
   "intelligence": {
 	  name: "Boon of Spell Recall - INT",
@@ -12187,8 +12349,13 @@ FeatsList["boon of the night spirit"] = {
   name: "Boon of the Night Spirit",
   source: [["P24", 211]],
   action: [["bonus action", "Merge with Shadows"], ["reaction", "Merge with Shadows"]],
-  descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Merge with Shadows. While within Dim Light or Darkness, I can give yourself the Invisible condition as a Bonus Action, or a Reaction.\n \u2022 Shadowy Form. While within Dim Light or Darkness, I have Resistance to all damage except Psychic and Radiant.",
   description: "+1 to Any, While in Dim Light or Darkness, I have Resistance to all damage except Psychic or Radiant, and as a bns/rea I can turn invisible while in Dim Light or Darkness.",
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Improvement : Increase one ability score of your choice by 1, to a Maximum of 30.",
+	"Merge with Shadows : While within Dim Light or Darkness, you can give yourself the Invisible condition as a Bonus Action, or a Reaction.",
+	"Shadowy Form : While within Dim Light or Darkness, you have Resistance to all damage except Psychic and Radiant.",
+  ]),
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
 	  name: "Boon of the Night Spirit - STR",
@@ -12234,8 +12401,12 @@ FeatsList["boon of truesight"] = {
   name: "Boon of Truesight",
   source: [["P24", 211]],
   vision: [["Truesight", 60]],
-  descriptionFull: "I gain the following benefits.\n \u2022 Ability Score Improvement. Increase one ability score of my choice by 1, to a Maximum of 30.\n \u2022 Truesight. I have Truesight with a range of 60 feet.",
   description: "+1 to Any, I have Truesight with a range of 60 feet.",
+  descriptionFull: desc([
+	"You gain the following benefits",
+	"Ability Score Improvement : Increase one ability score of your choice by 1, to a Maximum of 30.",
+	"Truesight : You have Truesight with a range of 60 feet.",
+  ]),
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
 	name: "Boon of Truesight",
@@ -21052,7 +21223,7 @@ CreatureList["giant goat"] = {
 		ability : 1,
 		damage : [1, 6, "Bludgeoning"],
 		range : "Melee (5 ft)",
-		description : "If the giant goat moved at least 20 feet straight toward the target immediately before the hit, the target takes an extra 5 (2d4) Bludgeoning damage and, if it is Huge or smaller, has the Prone condition.",
+		description : "If moves 20+ ft in straight line before hit, +5 (2d4) Blud. dmg. If target is Huge or smaller, it falls Prone.",
 	}],
 };
 CreatureList["giant seahorse"] = {
