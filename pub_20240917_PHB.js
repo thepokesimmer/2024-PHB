@@ -4170,13 +4170,6 @@ legacyClassRefactor("paladin", {
 			description: desc([
 				"Pick a 'Fighting Style' feat or 'Blessed Warrior'; use Choose Feature above.",
 			]),
-			spellcastingBonus: [{
-				name: "Paladin's Smite",
-				spells: ["divine smite"],
-				selection: ["divine smite"],
-				times: 1,
-				firstCol : "oncelr",
-			}],
 			choices: ["Fighting Style", "Blessed Warrior"],
 			"fighting style": {
 				name: "Fighting Style",
