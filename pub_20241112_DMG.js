@@ -4716,7 +4716,7 @@ MagicItemsList["manual of quickness of action"] = {
 	descriptionFull: "This book contains coordination and balance exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Dexterity score increases by 2, to a maximum of 30. The manual then loses its magic, but regains it in a century.",
 	weight: 5,
 	eval: function () {
-		MagicItemsList["manual of quickness of action"].applyStatBonus("Manual of Quickness of Action", "Dexterity", 2);
+		MagicItemsList["manual of bodily health"].applyStatBonus("Manual of Quickness of Action", "Dexterity", 2);
 	}
 };
 MagicItemsList["mariner's armor"] = {
@@ -5262,7 +5262,7 @@ MagicItemsList["pole of collapsing"] = {
 	description: "This item functions as a Pole.While holding it, you can take a Magic action to collapse it into a 1-foot - long rod for ease of storage(the pole’s weight doesn’t change) or cause the 1-foot - long rod to revert to a Pole.The rod elongates only as far as the surrounding space allows.",
 	descriptionFull: "This item functions as a Pole. While holding it, you can take a Magic action to collapse it into a 1-foot-long rod for ease of storage (the pole’s weight doesn’t change) or cause the 1-foot-long rod to revert to a Pole. The rod elongates only as far as the surrounding space allows.",
 	weight: 7,
-	action: [["action", " transform"]],
+	action: [["action", " (Transform)"]],
 };
 MagicItemsList["portable hole"] = {
 	name: "Portable Hole",
