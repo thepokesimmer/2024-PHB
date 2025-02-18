@@ -1421,7 +1421,9 @@ legacyClassRefactor("cleric", {
         name: "Protector",
         armorProfs: [false, false, true, false],
         weaponProfs: [false, true],
-        description: "I gain proficiency with Martial weapons & Heavy armor training."
+        description: desc([
+			"I gain proficiency with Martial weapons & Heavy armor training.",
+		]),	
       },
       "thaumaturge": {
         name: "Thaumaturge",
@@ -1435,7 +1437,9 @@ legacyClassRefactor("cleric", {
           {type: "skill", field: "Arcana", mod: "Wis", text: "I can add my Wisdom modifier to Arcana rolls."},
 		  {type: "skill", field: "Religion", mod: "Wis", text: "I can add my Wisdom modifier to Religion rolls."},
         ],
-        description: "I know one extra cantrip from the Cleric spell list and can add my Wis mod (min 1) to my Int (Arcana and Religion) checks.",
+        description: desc([
+			"I know one extra cantrip from the Cleric spell list and can add my Wis mod (min 1) to my Int (Arcana and Religion) checks.",
+		]),	
       },
       description: desc([
         "I have dedicated myself to a sacred role. Use 'Choose Feature' above to select one.",
@@ -2942,12 +2946,12 @@ legacySubClassRefactor("fighter", "battle master", {
       ]),
     },
     "subclassfeature7": {
-      name: "Know my Enemy",
+      name: "Know Your Enemy",
       source: [["P24", 94]],
       minlevel: 7,
       description: desc([
-        "As a Bonus Action, observe any Immunities/Resistances/Vulnerabilities of a creature within",
-        "30 ft I have 1 use per long rest unless I spend a SD (no action) to restore this feature",
+        "As a Bonus Action, observe any Immunities/Resistances/Vulnerabilities of a creature within 30 ft", 
+		"I have 1 use per long rest unless I spend a SD (no action) to restore this feature",
       ]),
     },
     "subclassfeature15": {
@@ -4203,8 +4207,18 @@ legacyClassRefactor("paladin", {
 			minlevel : 2,
 			limfeaname : "Divine Smite",
 			usages : 1,
-			recovery : "Long Rest",
-			spellcastingExtra : ["divine smite"],
+			recovery : "long rest",
+			calcChanges : {
+				spellAdd : [
+					function (spellKey, spellObj, spName) {
+					// only change the spell if it's from paladin's CurrentSpells object.
+						if(spellKey === "divine smite" && spName === "paladin") {
+							spellObj.firstCol = "markedbox"; // Always prepared
+
+						}
+					}
+				]
+			},
 		},
 		"channel divinity": {
 			name: "Channel Divinity",
@@ -4235,6 +4249,25 @@ legacyClassRefactor("paladin", {
 				minlevel : 5,
 				firstCol : "oncelr",
 			}],
+		},
+		"faithful steed" : {
+			name : "Faithful Steed",
+			source : [["P24", 111]],
+			minlevel : 5,
+			limfeaname : "Find Steed",
+			usages : 1,
+			recovery : "long rest",
+			calcChanges : {
+				spellAdd : [
+					function (spellKey, spellObj, spName) {
+					// only change the spell if it's from paladin's CurrentSpells object.
+						if(spellKey === "find steed" && spName === "paladin") {
+							spellObj.firstCol = "markedbox"; // Always prepared
+
+						}
+					}
+				]
+			},
 		},
 		"aura of protection": {
 			name: "Aura of Protection",
@@ -4586,7 +4619,7 @@ legacyClassRefactor("ranger", {
 			calcChanges : {
 				spellAdd : [
 					function (spellKey, spellObj, spName) {
-					// only change the spell if it's from druid CurrentSpells object.
+					// only change the spell if it's from ranger's CurrentSpells object.
 						if(spellKey === "hunter's mark" && spName === "ranger") {
 							spellObj.firstCol = "markedbox"; // Always prepared
 
@@ -22701,6 +22734,7 @@ CreatureList["otherworldly steed (2)"] = {
 	hd : [2, 10],
 	speed : "60 ft",
 	scores : [18, 12, 14, 6, 12, 8],
+	senses : "",
 	passivePerception : 11,
 	languages : "Telepathy 1 mile (works only with I)",
 	challengeRating : 0,
@@ -22748,6 +22782,7 @@ CreatureList["otherworldly steed (3)"] = {
 	hd : [3, 10],
 	speed : "60 ft",
 	scores : [18, 12, 14, 6, 12, 8],
+	senses : "",
 	passivePerception : 11,
 	languages : "Telepathy 1 mile (works only with I)",
 	challengeRating : 0,
@@ -22795,6 +22830,7 @@ CreatureList["otherworldly steed (4)"] = {
 	hd : [4, 10],
 	speed : "60 ft, Fly 60 ft",
 	scores : [18, 12, 14, 6, 12, 8],
+	senses : "",
 	passivePerception : 11,
 	languages : "Telepathy 1 mile (works only with I)",
 	challengeRating : 0,
@@ -22842,6 +22878,7 @@ CreatureList["otherworldly steed (5)"] = {
 	hd : [5, 10],
 	speed : "60 ft, Fly 60 ft",
 	scores : [18, 12, 14, 6, 12, 8],
+	senses : "",
 	passivePerception : 11,
 	languages : "Telepathy 1 mile (works only with I)",
 	challengeRating : 0,
