@@ -2356,6 +2356,41 @@ legacySubClassRefactor("druid", "stars", {
     },
   },
 });
+RunFunctionAtEnd(function() {
+  // Ensure fighter and fighting style exists
+  if (!ClassList.fighter || !ClassList.fighter.features["fighting style"]) return;
+  // Get the class object holding the fighting style feature
+  var cObj = ClassList.fighter.features["fighting style"];
+  // The feat from FeatsList
+  var theFea = FeatsList["fighting style"];
+  theFea.choices.forEach(function (cName) {
+      // Choice name lower case
+      var cNameLC = cName.toLowerCase();
+      // If the feat doesn't exist, exit now
+      if(!theFea[cNameLC]) return;
+      // Push the choice, the choices array should be left empty
+      cObj.choices.push(cName);
+      // Create the object in the class feature
+      if(!cObj[cNameLC]) {
+          cObj[cNameLC] = {
+              name : "Fighting Style [" + cName + "]",
+              description :  desc([ //This ensures proper spacing and indexing
+                theFea[cNameLC].description,
+                "When I gain a Fighter Level, I can replace it with another"
+              ]),
+              source : theFea[cNameLC].source ? theFea[cNameLC].source : theFea.source
+          }
+      }
+      // Copy all the attributes except name, desc, or source
+      for(var attr in theFea[cNameLC]) {
+          if ((/\b(name|description|source)\b/i).test(attr)) continue;
+          cObj[cNameLC][attr] = theFea[cNameLC][attr];
+      }
+      // Set eval and removeeval to add and remove the feat using the choose feature drop down menu
+      cObj[cNameLC].eval = function() {AddFeat("Fighting Style [" + cName + "]");};
+      cObj[cNameLC].removeeval = function() {RemoveFeat("Fighting Style [" + cName + "]");};
+  })
+})
 legacyClassRefactor("fighter", {
   regExpSearch: /fighter/i,
   name: "Fighter",
@@ -2385,29 +2420,17 @@ legacyClassRefactor("fighter", {
     "\n\nAlternatively, choose 155 gp worth of starting equipment instead of the class's starting equipment.",
   subclasses: ["Fighter Subclass", []],
   attacks: [1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4],
-  features: {
-    "fighting style": {
-      name: "Fighting Style",
-      source: [["P24", 91]],
-      minlevel: 1,
-      description: desc([
-        "Choose a Fighting Style Feat using the 'Choose Feature' Button",
-        "When I gain a Fighter Level, I can replace it with another",
-      ]),
-      choices: ["Fighting Style"],
-      "fighting style": {
-        name: "Fighting Style",
-        eval: function () {
-          AddString('Feat Note 2', 'Fighting Style feat', '; ');
-        },
-        removeeval: function () {
-          RemoveString('Feat Note 2', 'Fighting Style feat');
-        },
-        description: desc([
-          "I gain a fighting style feat of my choice (see chapter 5 for feats).",
-        ]),
-      },
-    },
+  features : {
+    "fighting style" : {
+		name : "Fighting Style",
+		source : [["P24", 91]],
+		minlevel : 1,
+		description : desc([
+			"Choose a Fighting Style Feat using the 'Choose Feature' Button",
+			"When I gain a Fighter Level, I can replace it with another",
+		]),
+		choices : [] // left empty to be filled by the function above.
+	},
     "second wind": {
       name: "Second Wind",
       source: [["P24", 91]],
