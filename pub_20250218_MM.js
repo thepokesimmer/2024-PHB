@@ -505,7 +505,7 @@ CreatureList["pseudodragon"] = {
 		damage : [2, 4, "poison"],
 		range : "Melee (5 ft)",
 		dc : true,
-		description : "Con save, Fail: Dmg + Poisoned 1 hour, Fail by 5+, Dmg + Poisoned + Unconscious(Until shaken awake)",
+		description : "Con save, Fail: Dmg + Poisoned 1 hour, Fail by 5+, Dmg + Poisoned + Unconscious(Until damaged or shaken awake)",
 	}],
 };
 CreatureList["quasit"] = {
@@ -1301,7 +1301,7 @@ CreatureList["brown bear"] = {
 		name : "Claw",
 		ability : 1,
 		damage : [1, 4, "Slashing"],
-		description : "On a hit, a Huge or smaller target has the Prone condition.",
+		description : "On a hit, a Large or smaller target has the Prone condition.",
 		range : "Melee (5 ft)",
 	}],
 };
@@ -1532,7 +1532,7 @@ CreatureList["dire wolf"] = {
 		ability : 1,
 		damage : [1, 10, "Piercing"],
 		range : "Melee (5 ft)",
-		description : "On a hit, a Huge or smaller target has the Prone condition.",
+		description : "On a hit, a Large or smaller target has the Prone condition.",
 	}],
 	wildshapeString : "Pack Tactics: The wolf has Advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
 };
@@ -1616,7 +1616,7 @@ CreatureList["elephant"] = {
 		ability : 1,
 		damage : [2, 8, "Piercing"],
 		range : "Melee (5 ft)",
-		description : "If moved 20 ft straight toward target before hit, target falls Prone.",
+		description : "If moved 20 ft straight toward a Large or smaller crea. before hit, crea. falls Prone.",
 	}, {
 		name : "Trample",
 		ability : 1,
@@ -1651,7 +1651,7 @@ CreatureList["elk"] = {
 		ability : 1,
 		damage : [1, 6, "Bludgeoning"],
 		range : "Melee (5 ft)",
-		description : "If moved 20 ft straight toward target before hit, +3 (1d6) Bludgeoning. If Huge or smaller, target falls Prone.",
+		description : "If moved 20 ft straight toward target before hit, +3 (1d6) Bludgeoning. If Large or smaller, target falls Prone.",
 	}],
 };
 CreatureList["flying snake"] = {
@@ -2138,7 +2138,7 @@ CreatureList["giant goat"] = {
 		ability : 1,
 		damage : [1, 6, "Bludgeoning"],
 		range : "Melee (5 ft)",
-		description : "If moves 20+ ft in straight line before hit, +5 (2d4) Blud. dmg. If target is Huge or smaller, it falls Prone.",
+		description : "If moves 20+ ft in straight line before hit, +5 (2d4) Blud. dmg. If target is Large or smaller, it falls Prone.",
 	}],
 };
 CreatureList["giant hyena"] = {
@@ -3134,7 +3134,7 @@ CreatureList["mastiff"] = {
 		ability : 1,
 		damage : [1, 6, "Piercing"],
 		range : "Melee (5 ft)",
-		description : "On a hit, a Large or smaller target has the Prone condition.", 
+		description : "On a hit, a Medium or smaller target has the Prone condition.", 
 	}],
 };
 CreatureList["mule"] = {
@@ -3251,15 +3251,15 @@ CreatureList["panther"] = {
 	size : 3,
 	type : "Beast",
 	alignment : "Unaligned",
-	ac : 13,
+	ac : 12,
 	hp : 13,
 	hd : [3, 8],
 	speed : "50 ft, Climb 40 ft",
-	scores : [14, 16, 10, 3, 14, 7],
+	scores : [14, 15, 10, 3, 14, 7],
 	saves : ["", "", "", "", "", ""],
 	skills : {
 		"perception" : 4,
-		"stealth" : 7,
+		"stealth" : 6,
 	},
 	senses : "Darkvision 60 ft",
 	languages : "",
@@ -3267,16 +3267,19 @@ CreatureList["panther"] = {
 	proficiencyBonus : 2,
 	attacksAction : 1,
 	actions : [{
-		name : "Nimble Escape",
-		description : "As a Bonus Action, The Panther takes the Disengage or Hide action.",
+		name : "Prowl",
+		description : "The panther moves up to half its Speed without provoking Opportunity Attacks. At the end of this movement, the panther can take the Hide action.",
 		joinString : "\n   ",
+	}, {
+		name : "Multiattack",
+		description : "The panther makes one Pounce attack and uses Prowl.",
 	}],
 	attacks : [{
-		name : "Rend",
-		ability : 2,
-		damage : [1, 6, "Slashing"],
+		name : "Pounce",
+		ability : 1,
+		damage : [1, 4, "Slashing"],
 		range : "Melee (5 ft)",
-		description : "",
+		description : "Deals 7 (2d4 +2) Slashing damage instead if Advantage on the attack.",
 	}],
 };
 CreatureList["piranha"] = {
@@ -3753,8 +3756,8 @@ CreatureList["tiger"] = {
 	type : "Beast",
 	alignment : "Unaligned",
 	ac : 13,
-	hp : 30,
-	hd : [4, 10],
+	hp : 22,
+	hd : [3, 10],
 	speed : "40 ft",
 	scores : [17, 16, 14, 3, 12, 8],
 	saves : ["", "", "", "", "", ""],
@@ -3768,16 +3771,19 @@ CreatureList["tiger"] = {
 	proficiencyBonus : 2,
 	attacksAction : 1,
 	actions : [{
-		name : "Nimble Escape",
-		description : "As a Bonus Action, The Tiger takes the Disengage or Hide action.",
+		name : "Prowl",
+		description : "The tiger moves up to half its Speed without provoking Opportunity Attacks. At the end of this movement, the tiger can take the Hide action.",
 		joinString : "\n   ",
+	}, {
+		name : "Multiattack",
+		description : "The tiger makes one Pounce attack and uses Prowl.",
 	}],
 	attacks : [{
-		name : "Rend",
+		name : "Pounce",
 		ability : 1,
-		damage : [2, 6, "Slashing"],
+		damage : [1, 6, "Slashing"],
 		range : "Melee (5 ft)",
-		description : "If the target is Large or smaller it has the Prone condition.",
+		description : "Deals an extra 3 (1d6) Slashing damage if Advantage on the attack. If the target is Huge or smaller, it falls Prone. Also uses Prowl.",
 	}],
 };
 CreatureList["triceratops"] = {
@@ -3900,7 +3906,7 @@ CreatureList["warhorse"] = {
 		name : "Hooves",
 		ability : 1,
 		damage : [2, 4, "Bludgeoning"],
-		description : " If moved at least 20 ft straight toward target before hit, +5 (2d4) Bludgeoning damage. If target is Huge or smaller, falls Prone.",
+		description : " If moved at least 20 ft straight toward target before hit, +5 (2d4) Bludgeoning damage. If target is Large or smaller, falls Prone.",
 	}],
 };
 CreatureList["weasel"] = {
