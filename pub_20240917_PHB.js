@@ -2972,6 +2972,10 @@ legacySubClassRefactor("fighter", "battle master", {
       name: "Know Your Enemy",
       source: [["P24", 94]],
       minlevel: 7,
+	  action : [["bonus action", ""]],
+	  usages : 1,
+	  recovery : "long rest",
+	  altResource : "SD",
       description: desc([
         "As a Bonus Action, observe any Immunities/Resistances/Vulnerabilities of a creature within 30 ft", 
 		"I have 1 use per long rest unless I spend a SD (no action) to restore this feature",
@@ -22766,7 +22770,7 @@ CreatureList["otherworldly steed (2)"] = {
 	attacksAction : 1,
 	features : [{
 		name : "Life Bond",
-		description : "When I regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if I're within 5 feet of it.",
+		description : "When I regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if I'm within 5 feet of it.",
 		joinString : "\n   ",
 	}],
 	actions : [{
@@ -22814,7 +22818,7 @@ CreatureList["otherworldly steed (3)"] = {
 	attacksAction : 1,
 	features : [{
 		name : "Life Bond",
-		description : "When I regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if I're within 5 feet of it.",
+		description : "When I regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if I'm within 5 feet of it.",
 		joinString : "\n   ",
 	}],
 	actions : [{
@@ -22862,7 +22866,7 @@ CreatureList["otherworldly steed (4)"] = {
 	attacksAction : 1,
 	features : [{
 		name : "Life Bond",
-		description : "When I regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if I're within 5 feet of it.",
+		description : "When I regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if I'm within 5 feet of it.",
 		joinString : "\n   ",
 	}],
 	actions : [{
@@ -22910,7 +22914,7 @@ CreatureList["otherworldly steed (5)"] = {
 	attacksAction : 1,
 	features : [{
 		name : "Life Bond",
-		description : "When I regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if I're within 5 feet of it.",
+		description : "When I regain Hit Points from a level 1+ spell, the steed regains the same number of Hit Points if I'm within 5 feet of it.",
 		joinString : "\n   ",
 	}],
 	actions : [{
