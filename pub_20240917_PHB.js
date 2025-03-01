@@ -686,7 +686,7 @@ legacySubClassRefactor("barbarian", "berserker", {
 legacySubClassRefactor("barbarian", "wild heart", {
   regExpSearch: /^(?=.*(barbarian))(?=.*(wild))(?=.*(heart)).*$/i,
   subname: "Path of the Wild Heart",
-  replaces: "path of the totem warrior",
+  replaces: "totem warrior",
   source: [["P24", 55]],
   features: {
     "subclassfeature3": {
@@ -2379,7 +2379,7 @@ RunFunctionAtEnd(function() {
                 "When I gain a Fighter Level, I can replace it with another"
               ]),
               source : theFea[cNameLC].source ? theFea[cNameLC].source : theFea.source
-          }
+          };
       }
       // Copy all the attributes except name, desc, or source
       for(var attr in theFea[cNameLC]) {
@@ -2389,8 +2389,8 @@ RunFunctionAtEnd(function() {
       // Set eval and removeeval to add and remove the feat using the choose feature drop down menu
       cObj[cNameLC].eval = function() {AddFeat("Fighting Style [" + cName + "]");};
       cObj[cNameLC].removeeval = function() {RemoveFeat("Fighting Style [" + cName + "]");};
-  })
-})
+  });
+});
 legacyClassRefactor("fighter", {
   regExpSearch: /fighter/i,
   name: "Fighter",
@@ -6834,7 +6834,7 @@ legacyClassRefactor("warlock", {
       },
       "eldritch mind": {
         name: "Eldritch Mind",
-        savetxt: {adv_vs: "Constitution (Concentration) Checks"},
+        savetxt: "Advantage on Constitution (Concentration) Checks",
         description: desc([
           "I have Advantage on Constitution saving throws that I make to maintain Concentration",
         ]),
@@ -8059,7 +8059,7 @@ legacySubClassRefactor("wizard", "abjurer", {
 	  source : [["P24", 173]],
 	  minlevel : 14,
 	  savetxt : {
-		adv_vs : ["saving throws against spells"],
+		adv_vs : ["spells"],
 		text : ["Resistance to the damage of spells"],
 	  },
 	  description : desc([
@@ -10288,7 +10288,7 @@ FeatsList["durable"] = {
   source: [["P24", 203]],
   regExpSearch: /^(?=.*durable).*$/i,
   scores: [0, 0, 1, 0, 0, 0],
-  savetxt: {adv_vs: ["Death Saving Throws"]},
+  savetxt: "Adv. on Death Saving Throws",
   action: [["bonus action", "Speedy Recovery"]],
   description: "+1 Con, Adv vs Death Saves, Bonus Action to expend 1 Hit Die to regain HP equal to the roll.",  
   descriptionFull: desc([
@@ -10412,7 +10412,7 @@ FeatsList["great weapon master"] = {
   source: [["P24", 203]],
   regExpSearch: /^(?=.*great)(?=.*weapon)(?=.*master).*$/i,
   scores: [1, 0, 0, 0, 0, 0],
-  description: "+1 Str, When I hit with a weapon that has the Heavy property, I can deal extra damage equal to my Prof Bonus, and if I score a Crit. and reduce a creature to 0 HP I may make another attack with the same weapon as a Bonus Action.",  
+  description: "+1 Str. When I hit with a weapon that has the Heavy property, I can deal extra damage equal to my Prof Bonus. If I score a Crit or reduce a creature to 0 HP with Melee weapon, I may make another attack with the same weapon as a Bonus Action.",  
   descriptionFull: desc([
     "You gain the following benefits",
     "Ability Score Increase : Increase your Strength score by 1 to a maximum of 20.",
@@ -10424,7 +10424,7 @@ FeatsList["great weapon master"] = {
 		atkCalc : [
 			function (fields, v, output) {
 				if (v.isMeleeWeapon && (/heavy/i).test(fields.Description) && (/\bgwm\b|power.{0,3}attack|great.{0,3}weapon.{0,3}master/i).test(v.WeaponText)) {
-					output.extraDmg += How("Proficiency Bonus");
+					output.extraDmg += What("Proficiency Bonus");
 				}
 			},
 			"If I include the words 'Power Attack', 'Great Weapon Master', or just 'GWM' in a heavy melee weapon's name or description, the attack's damage will gain a bonus equal to my Proficiency Bonus."
@@ -10724,7 +10724,7 @@ FeatsList["piercer"] = {
   name: "Piercer",
   source: [["P24", 206]],
   regExpSearch: /^(?=.*piercer).*$/i,
-  description: "+1 Str/Dex, When I hit a creature with an atk roll with a pierc. dmg weapon I can reroll one of the atk dmg dice, on a Crit I deal one additional dmg die.",  
+  description: "+1 Str/Dex, When I hit a creature with an atk roll with a Piercing weapon I can reroll one of the attack damage dice. On a Crit I deal one additional damage die.",  
   descriptionFull: desc([
     "You gain the following benefits",
     "Ability Score Increase : Increase your Strength or Dexterity score by 1 to a maximum of 20.",
@@ -10733,12 +10733,12 @@ FeatsList["piercer"] = {
   ]),
   choices: ["Strength", "Dexterity"],
   "strength": {
-    description: "When I hit a creature with an atk roll with a pierc. dmg weapon I can reroll one of the atk dmg dice, on a Crit I deal one additional dmg die. [+1 Strength]",
+    description: "When I hit a creature with an atk roll with a Piercing weapon I can reroll one of the attack damage dice. On a Crit I deal one additional damage die. [+1 Strength]",
     weaponProfs: [false, true],
     scores: [1, 0, 0, 0, 0, 0],
   },
   "dexterity": {
-    description: "When I hit a creature with an atk roll with a pierc. dmg weapon I can reroll one of the atk dmg dice, on a Crit I deal one additional dmg die. [+1 Dexterity]",
+    description: "When I hit a creature with an atk roll with a Piercing weapon I can reroll one of the attack damage dice. On a Crit I deal one additional damage die. [+1 Dexterity]",
     weaponProfs: [false, true],
     scores: [0, 1, 0, 0, 0, 0],
   },
@@ -12128,7 +12128,7 @@ FeatsList["boon of fortitude"] = {
 FeatsList["boon of irresistible offense"] = {
   name: "Boon of Irresistible Offense",
   source: [["P24", 211]],
-  description: "+1 to Any, Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to the ability modifier of the score I increased by this feat.",
+  description: "+1 to Any, Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to the ability score I increased by this feat.",
   descriptionFull: desc([
 	"You gain the following benefits",
 	"Ability Score Improvement : Increase one ability score of your choice by 1, to a Maximum of 30.",
@@ -12138,37 +12138,37 @@ FeatsList["boon of irresistible offense"] = {
   choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
   "strength": {
 	  name: "Boon of Irresistible Offense - STR",
-    description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Strength modifier. [+1 Strength]",
+    description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Strength. [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
     scoresMaximum: [30, 0, 0, 0, 0, 0],
   },
   "dexterity": {
 	  name: "Boon of Irresistible Offense - DEX",
-    description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Dexterity modifier. [+1 Dexterity]",
+    description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Dexterity. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
     scoresMaximum: [0, 30, 0, 0, 0, 0],
   },
   "constitution": {
 	  name: "Boon of Irresistible Offense - CON",
-    description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Constitution modifier. [+1 constitution]",
+    description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Constitution. [+1 constitution]",
     scores: [0, 0, 1, 0, 0, 0],
     scoresMaximum: [0, 0, 30, 0, 0, 0],
   },
   "intelligence": {
 	  name: "Boon of Irresistible Offense - INT",
-    description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Intelligence modifier. [+1 Intelligence]",
+    description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Intelligence. [+1 Intelligence]",
     scores: [0, 0, 0, 1, 0, 0],
     scoresMaximum: [0, 0, 0, 30, 0, 0],
   },
   "wisdom": {
 	  name: "Boon of Irresistible Offense - WIS",
-    description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Wisdom modifier. [+1 Wisdom]",
+    description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Wisdom. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
     scoresMaximum: [0, 0, 0, 0, 30, 0],
   },
   "charisma": {
 	  name: "Boon of Irresistible Offense - CHA",
-    description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Charisma modifier. [+1 Charisma]",
+    description: "Blud/Pierc/Slash ignores resistance, I deal extra damage on a crit equal to my Charisma. [+1 Charisma]",
     scores: [0, 0, 0, 0, 0, 1],
     scoresMaximum: [0, 0, 0, 0, 0, 30],
   },
@@ -24899,7 +24899,7 @@ CreatureList["draconic spirit (5)"] = {
 	attacksAction : 2,
 	features : [{
 		name : "Shared Resistances",
-		description : "When I smmon the spirit, choose one of its Resistances. I have Resistane to the chosen damage type until the spell ends.",
+		description : "When I summon the spirit, choose one of its Resistances. I have Resistane to the chosen damage type until the spell ends.",
 		joinString : "\n   ",
 	}],
 	attacks : [{
@@ -24945,7 +24945,7 @@ CreatureList["draconic spirit (6)"] = {
 	attacksAction : 3,
 	features : [{
 		name : "Shared Resistances",
-		description : "When I smmon the spirit, choose one of its Resistances. I have Resistane to the chosen damage type until the spell ends.",
+		description : "When I summon the spirit, choose one of its Resistances. I have Resistane to the chosen damage type until the spell ends.",
 		joinString : "\n   ",
 	}],
 	attacks : [{
@@ -24991,7 +24991,7 @@ CreatureList["draconic spirit (7)"] = {
 	attacksAction : 3,
 	features : [{
 		name : "Shared Resistances",
-		description : "When I smmon the spirit, choose one of its Resistances. I have Resistane to the chosen damage type until the spell ends.",
+		description : "When I summon the spirit, choose one of its Resistances. I have Resistane to the chosen damage type until the spell ends.",
 		joinString : "\n   ",
 	}],
 	attacks : [{
@@ -25037,7 +25037,7 @@ CreatureList["draconic spirit (8)"] = {
 	attacksAction : 4,
 	features : [{
 		name : "Shared Resistances",
-		description : "When I smmon the spirit, choose one of its Resistances. I have Resistane to the chosen damage type until the spell ends.",
+		description : "When I summon the spirit, choose one of its Resistances. I have Resistane to the chosen damage type until the spell ends.",
 		joinString : "\n   ",
 	}],
 	attacks : [{
@@ -25083,7 +25083,7 @@ CreatureList["draconic spirit (9)"] = {
 	attacksAction : 4,
 	features : [{
 		name : "Shared Resistances",
-		description : "When I smmon the spirit, choose one of its Resistances. I have Resistane to the chosen damage type until the spell ends.",
+		description : "When I summon the spirit, choose one of its Resistances. I have Resistane to the chosen damage type until the spell ends.",
 		joinString : "\n   ",
 	}],
 	attacks : [{
