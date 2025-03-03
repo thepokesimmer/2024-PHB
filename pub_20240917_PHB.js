@@ -2374,17 +2374,15 @@ RunFunctionAtEnd(function() {
       // Create the object in the class feature
       if(!cObj[cNameLC]) {
           cObj[cNameLC] = {
-              name : "Fighting Style [" + cName + "]",
-              description :  desc([ //This ensures proper spacing and indexing
-                theFea[cNameLC].description,
-                "When I gain a Fighter Level, I can replace it with another"
-              ]),
+              name : theFea[cNameLC].name,
+              //This ensures proper spacing and indexing
+              description : theFea[cNameLC].description + desc([ "When I gain a Fighter Level, I can replace it with another"]),
               source : theFea[cNameLC].source ? theFea[cNameLC].source : theFea.source
           };
       }
-      // Copy all the attributes except name, desc, or source
+      // Copy all the attributes except name, desc, source, or calcChanges
       for(var attr in theFea[cNameLC]) {
-          if ((/\b(name|description|source)\b/i).test(attr)) continue;
+          if ((/\b(name|description|source|calcchanges)\b/i).test(attr)) continue;
           cObj[cNameLC][attr] = theFea[cNameLC][attr];
       }
       // Set eval and removeeval to add and remove the feat using the choose feature drop down menu
@@ -6954,7 +6952,7 @@ legacyClassRefactor("warlock", {
           firstCol: "atwill",
         }],
         description: desc([
-          "I can cast Disguise Self on yourself without expending a spell slot.",
+          "I can cast Disguise Self on myself without expending a spell slot.",
         ]),
       },
       "master of myriad forms (5+)": {
@@ -9897,7 +9895,7 @@ FeatsList["actor"] = {
   source: [["P24", 202]],
   regExpSearch: /^(?=.*actor).*$/i,
   scores: [0, 0, 0, 0, 0, 1],
-  description: "+1 Cha, Adv Cha (Deception or Performance) checks to impersonate a person real or fiction. able to mimic the sounds of others DC 8 + Cha + PB Insight check to determine mimicry",  
+  description: "+1 Cha. Adv on Cha (Deception or Performance) checks to impersonate a real of fictional person. Able to mimic the sounds of others; DC (8 + Cha + PB) Insight check to determine mimicry.",  
   descriptionFull: desc([
     "You gain the following benefits",
     "Ability Score Increase : Increase your Charisma score by 1 to a maximum of 20.",
@@ -10178,7 +10176,7 @@ FeatsList["grappler"] = {
   name: "Grappler",
   source: [["P24", 202]],
   regExpSearch: /^(?=.*grappler).*$/i,
-  description: "+1 Str or Dex, When I make an Unarmed Strike, I may deal damage and grapple the target, I have advantage on attack rolls made to grapple a target and can move my normal speed with a grappled target as long as they are my size or smaller.",  
+  description: "+1 Str or Dex, Once per turn when I make an Unarmed Strike, as part of the Attack Action, I may deal damage and grapple the target. I have advantage on attack rolls against a target I'm grappling and can move my normal speed with a grappled target as long as they are my size or smaller.",  
   descriptionFull: desc([
     "You gain the following benefits",
     "Ability Score Increase : Increase your Strength or Dexterity score by 1 to a maximum of 20.",
@@ -10188,11 +10186,11 @@ FeatsList["grappler"] = {
   ]),
   choices: ["Strength", "Dexterity"],
   "strength": {
-    description: "When I make an Unarmed Strike, I may deal damage and grapple the target, I have advantage on attack rolls made to grapple a target and can move my normal speed with a grappled target as long as they are my size or smaller. [+1 Strength]",
+    description: "Once per turn when I make an Unarmed Strike, as part of the Attack Action, I may deal damage and grapple the target. I have advantage on attack rolls against a target I'm grappling and can move my normal speed with a grappled target as long as they are my size or smaller. [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
   },
   "dexterity": {
-    description: "When I make an Unarmed Strike, I may deal damage and grapple the target, I have advantage on attack rolls made to grapple a target and can move my normal speed with a grappled target as long as they are my size or smaller. [+1 Dexterity]",
+    description: "Once per turn when I make an Unarmed Strike, as part of the Attack Action, I may deal damage and grapple the target. I have advantage on attack rolls against a target I'm grappling and can move my normal speed with a grappled target as long as they are my size or smaller. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
   },
   prerequisite: "Level 4 and Strength or Dexterity 13 or higher",
