@@ -1216,6 +1216,7 @@ legacySubClassRefactor("bard", "glamour", {
         spells: ["charm person", "mirror image"],
         selection: ["charm person", "mirror image"],
         times: 2,
+		prepared : true,
       }],
       description: desc([
         "I always have Charm Person and Mirror Image prepared.",
@@ -4254,7 +4255,7 @@ legacyClassRefactor("paladin", {
 			minlevel: 3,
 			limfeaname : "Channel Divinity (Regain 1 SR)",
 			usages: [0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
-			recovery : "Long Rest",
+			recovery : "long rest",
 			description: desc([
 			"If a Channel Divinity effect has a saving throw the DC is my Cha spell save DC.",
 			"I get two uses (three at level 11); one returns on a Short Rest; all return on a Long Rest.",
@@ -6225,41 +6226,14 @@ legacySubClassRefactor("sorcerer", "aberrant", {
   subname: "Aberrant Sorcery",
   source: [["P24", 145]],
   replaces: "aberrant mind",
+  spellcastingExtra : ["arms of hadar", "calm emotions", "detect thoughts", "dissonant whispers", "mind sliver", "hunger of hadar", "sending", "evard's black tentacles", "summon aberration", "rary's telepathic bond", "telekinesis"],
+  spellcastingExtraApplyNonconform: true,
   features: {
     "subclassfeature3": {
       name: "Telepathic Speech",
       source: [["P24", 145]],
       minlevel: 3,
       action: "bonus action",
-	  spellcastingBonus: [{
-		name: "Aberrant Sorcery Spells (3)",
-		spells : ["arms of hadar", "calm emotions", "detect thoughts", "dissonant whispers", "mind sliver"],
-		selection : ["arms of hadar", "calm emotions", "detect thoughts", "dissonant whispers", "mind sliver"],
-		times : levels.map( function(n) {
-			return n < 3 ? 0 : 5;
-		}),
-	  }, {
-		name: "Aberrant Sorcery Spells (5)",
-		spells : ["hunger of hadar", "sending"],
-		selection : ["hunger of hadar", "sending"],
-		times : levels.map( function(n) {
-			return n < 5 ? 0 : 2;
-		}),
-	  }, {
-		name: "Aberrant Sorcery Spells (7)",
-		spells : ["evard's black tentacles", "summon aberration"],
-		selection : ["evard's black tentacles", "summon aberration"],
-		times : levels.map( function(n) {
-			return n < 7 ? 0 : 2;
-		}),
-	  }, {
-		name: "Aberrant Sorcery Spells (9)",
-		spells : ["rary's telepathic bond", "telekinesis"],
-		selection : ["rary's telepathic bond", "telekinesis"],
-		times : levels.map( function(n) {
-			return n < 9 ? 0 : 2;
-		}),
-	  }],
       description: desc([
         "As a Bonus Action, one creature I can see within 30 ft of myself & I can speak telepathically with each other while within my Cha mod miles (min 1) for my Sorcerer level minutes as long as we share a language. It lasts until I use it with another creature.",
       ]),
@@ -6347,56 +6321,10 @@ legacySubClassRefactor("sorcerer", "clockwork", {
   subname: "Clockwork Sorcery",
   source: [["P24", 146]],
   replaces: "clockwork soul",
+  spellcastingExtra : ["aid", "alarm", "lesser restoration", "protection from evil and good", "dispel magic", "protection from energy", "freedom of movement", "summon construct", "greater restoration", "wall of force"],
+  spellcastingExtraApplyNonconform: true,
   features: {
     "subclassfeature3": {
-      name: "Clockwork Spells",
-      source: [["P24", 146]],
-      minlevel: 3,
-	  spellcastingBonus: [{
-		name: "Clockwork Sorcery Spells (3)",
-		spells : ["aid", "alarm", "lesser restoration", "protection from evil and good"],
-		selection : ["aid", "alarm", "lesser restoration", "protection from evil and good"],
-		times : levels.map( function(n) {
-			return n < 3 ? 0 : 4;
-		}),
-	  }, {
-		name: "Clockwork Sorcery Spells (5)",
-		spells : ["dispel magic", "protection from energy"],
-		selection : ["dispel magic", "protection from energy"],
-		times : levels.map( function(n) {
-			return n < 5 ? 0 : 2;
-		}),
-	  }, {
-		name: "Clockwork Sorcery Spells (7)",
-		spells : ["freedom of movement", "summon construct"],
-		selection : ["freedom of movement", "summon construct"],
-		times : levels.map( function(n) {
-			return n < 7 ? 0 : 2;
-		}),
-	  }, {
-		name: "Clockwork Sorcery Spells (9)",
-		spells : ["greater restoration", "wall of force"],
-		selection : ["greater restoration", "wall of force"],
-		times : levels.map( function(n) {
-			return n < 9 ? 0 : 2;
-		}),
-	  }],
-      description: desc([
-        "Choose a Manifestation of Order from Page 3; it appears when I cast a Sorcerer spell.",
-      ]),
-      toNotesPage: [{
-        name: "Manifestations of Order",
-        note: [
-          "1: Spectral cog wheels hover behind me.",
-          "2: The hands of a clock spin in my eyes.",
-          "3: my skin glows with a brassy sheen.",
-          "4: Floating equations and geometric objects overlay my body",
-          "5: my Spellcasting Focus temporarily takes the form of a Tiny clockwork mechanism.",
-          "6: The ticking of gears or ringing of a clock can be heard by me and those affected by my magic.",
-        ],
-      }],
-    },
-    "subclassfeature3.1": {
       name: "Restore Balance",
       source: [["P24", 146]],
       minlevel: 3,
@@ -6451,6 +6379,8 @@ legacySubClassRefactor("sorcerer", "draconic", {
   subname: "Draconic Sorcery",
   source: [["P24", 148]],
   replaces: "draconic bloodline",
+  spellcastingExtra : ["alter self", "chromatic orb", "command", "dragon's breath", "fear", "fly", "arcane eye", "charm monster", "legend lore", "summon dragon"],
+  spellcastingExtraApplyNonconform: true,
   features: {
     "subclassfeature3": {
       name: "Draconic Resilience",
@@ -6470,36 +6400,7 @@ legacySubClassRefactor("sorcerer", "draconic", {
             return [classes.known.sorcerer.level, "Draconic Resilience (Sorcerer)"];
           }
         },
-      },
-	  spellcastingBonus: [{
-		name: "Draconic Sorcery Spells (3)",
-		spells : ["alter self", "chromatic orb", "command", "dragon's breath"],
-		selection : ["alter self", "chromatic orb", "command", "dragon's breath"],
-		times : levels.map( function(n) {
-			return n < 3 ? 0 : 4;
-		}),
-	  }, {
-		name: "Draconic Sorcery Spells (5)",
-		spells : ["fear", "fly"],
-		selection : ["fear", "fly"],
-		times : levels.map( function(n) {
-			return n < 5 ? 0 : 2;
-		}),
-	  }, {
-		name: "Draconic Sorcery Spells (7)",
-		spells : ["arcane eye", "charm monster"],
-		selection : ["arcane eye", "charm monster"],
-		times : levels.map( function(n) {
-			return n < 7 ? 0 : 2;
-		}),
-	  }, {
-		name: "Draconic Sorcery Spells (9)",
-		spells : ["legend lore", "summon dragon"],
-		selection : ["legend lore", "summon dragon"],
-		times : levels.map( function(n) {
-			return n < 9 ? 0 : 2;
-		}),
-	  }],      
+      },    
 	  description: desc([
         "My hit point maximum increases by an amount equal to my sorcerer level.",
         "While not wearing armor my base AC is 10 + Dex mod + Cha mod.",
@@ -6566,8 +6467,8 @@ legacySubClassRefactor("sorcerer", "draconic", {
 legacySubClassRefactor("sorcerer", "wild magic", {
   regExpSearch: /^(?=.*(sorcerer))(?=.*(wild ))(?=.*(magic)).*$/i,
   subname: "Wild Magic Sorcery",
-  replaces: "wild magic",
   source: [["P24", 149]],
+  replaces: "wild magic",
   features: {
     "subclassfeature3": {
       name: "Wild Magic Surge",
@@ -7187,7 +7088,7 @@ legacyClassRefactor("warlock", {
           ritual: true,
         }],
         description: desc([
-          "Stitching together strands of shadow, I conjure forth a boo in my hand at the end of a Short or Long Rest. This Book of Shadows (I determine its appearance) contains eldritch magic that only I can access, granting me the benefits below. The book disappears if I conjure another book with this feature or if I die.",
+          "Stitching together strands of shadow, I conjure forth a book in my hand at the end of a Short or Long Rest. This Book of Shadows (I determine its appearance) contains eldritch magic that only I can access, granting me the benefits below. The book disappears if I conjure another book with this feature or if I die.",
           "Cantrips and Rituals : When the book appears, choose three cantrips, and choose two level 1 spells that have the Ritual tag. The spells can be from any class's spell list, and they must be spells I don't already have prepared. While the book is on my person, I have the chosen spells prepared, and they function as Warlock spells for me.",
           "Spellcasting Focus : I can use the book as a Spellcasting Focus.",
         ]),
@@ -7443,6 +7344,8 @@ legacySubClassRefactor("warlock", "the archfey", {
   regExpSearch: /^(?=.*(warlock))(?=.*(archfey)).*$/i,
   subname: "Archfey Patron",
   source: [["P24", 159]],
+  spellcastingExtra : ["calm emotions", "faerie fire", "misty step", "phantasmal force", "sleep", "blink", "plant growth", "dominate beast", "greater invisibility", "dominate person", "seeming"],
+  spellcastingExtraApplyNonconform: true,
   features: {
     "subclassfeature3": {
       name: "Steps of the Fey",
@@ -7450,36 +7353,7 @@ legacySubClassRefactor("warlock", "the archfey", {
       minlevel: 3,
       usages: "Charisma modifier per ",
       usagescalc: "event.value = Math.max(1, What('Cha Mod'));",
-      recovery: "long rest",
-	  spellcastingBonus: [{
-		name: "Archfey Patron Spells (3)",
-		spells : ["calm emotions", "faerie fire", "misty step", "phantasmal force", "sleep"],
-		selection : ["calm emotions", "faerie fire", "misty step", "phantasmal force", "sleep"],
-		times : levels.map( function(n) {
-			return n < 3 ? 0 : 5;
-		}),
-	  }, {
-		name: "Archfey Patron Spells (5)",
-		spells : ["blink", "plant growth"],
-		selection : ["blink", "plant growth"],
-		times : levels.map( function(n) {
-			return n < 5 ? 0 : 2;
-		}),
-	  }, {
-		name: "Archfey Patron Spells (7)",
-		spells : ["dominate beast", "greater invisibility"],
-		selection : ["dominate beast", "greater invisibility"],
-		times : levels.map( function(n) {
-			return n < 7 ? 0 : 2;
-		}),
-	  }, {
-		name: "Archfey Patron Spells (9)",
-		spells : ["dominate person", "seeming"],
-		selection : ["dominate person", "seeming"],
-		times : levels.map( function(n) {
-			return n < 9 ? 0 : 2;
-		}),
-	  }], 	  
+      recovery: "long rest",	  
       description: desc([
         "I can cast Misty Step w/out a spell slot (min once) per Long Rest and can imbue it with one option from the Steps of the Fey feature, (see notes page).",
       ]),
@@ -7553,6 +7427,8 @@ legacySubClassRefactor("warlock", "the celestial", {
   regExpSearch: /^(?=.*(warlock))(?=.*(celestial)).*$/i,
   subname: "Celestial Patron",
   source: [["P24", 160]],
+  spellcastingExtra : ["aid", "cure wounds", "guiding bolt", "lesser restoration", "light", "sacred flame", "daylight", "revivify", "guardian of faith", "wall of fire", "greater restoration", "summon celestial"],
+  spellcastingExtraApplyNonconform: true,
   features: {
     "subclassfeature3": {
       name: "Healing Light",
@@ -7561,36 +7437,7 @@ legacySubClassRefactor("warlock", "the celestial", {
       limfeaname: "Healing Light (d6s)",
       usages: [0, 0, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
       recovery: "long rest",
-      additional: "Max dice per use = Charisma Modifier",
-	  spellcastingBonus: [{
-		name: "Celestial Patron Spells (3)",
-		spells : ["aid", "cure wounds", "guiding bolt", "lesser restoration", "light", "sacred flame"],
-		selection : ["aid", "cure wounds", "guiding bolt", "lesser restoration", "light", "sacred flame"],
-		times : levels.map( function(n) {
-			return n < 3 ? 0 : 6;
-		}),
-	  }, {
-		name: "Celestial Patron Spells (5)",
-		spells : ["daylight", "revivify"],
-		selection : ["daylight", "revivify"],
-		times : levels.map( function(n) {
-			return n < 5 ? 0 : 2;
-		}),
-	  }, {
-		name: "Celestial Patron Spells (7)",
-		spells : ["guardian of faith", "wall of fire"],
-		selection : ["guardian of faith", "wall of fire"],
-		times : levels.map( function(n) {
-			return n < 7 ? 0 : 2;
-		}),
-	  }, {
-		name: "Celestial Patron Spells (9)",
-		spells : ["greater restoration", "summon celestial"],
-		selection : ["greater restoration", "summon celestial"],
-		times : levels.map( function(n) {
-			return n < 9 ? 0 : 2;
-		}),
-	  }], 	  
+      additional: "Max dice per use = Charisma Modifier", 	  
       description: desc([
         "As a bonus action, I can heal a creature I can see within 60 ft or myself by spending dice from my pool (min 1), healing HP equal to the roll.",
       ]),
@@ -7626,41 +7473,14 @@ legacySubClassRefactor("warlock", "the celestial", {
 legacySubClassRefactor("warlock", "the fiend", {
   regExpSearch: /^(?=.*(warlock))(?=.*(fiend)).*$/i,
   subname: "Fiend Patron",
+  spellcastingExtra : ["burning hands", "command", "scorching ray", "suggestion", "fireball", "stinking cloud", "fire shield", "wall of fire", "geas", "insect plague"],
+  spellcastingExtraApplyNonconform: true,
   source: [["P24", 161]],
   features: {
     "subclassfeature3": {
       name: "Dark One's Blessing",
       source: [["P24", 161]],
-      minlevel: 3,
-	  spellcastingBonus: [{
-		name: "Fiend Patron Spells (3)",
-		spells : ["burning hands", "command", "scorching ray", "suggestion"],
-		selection : ["burning hands", "command", "scorching ray", "suggestion"],
-		times : levels.map( function(n) {
-			return n < 3 ? 0 : 4;
-		}),
-	  }, {
-		name: "Fiend Patron Spells (5)",
-		spells : ["fireball", "stinking cloud"],
-		selection : ["fireball", "stinking cloud"],
-		times : levels.map( function(n) {
-			return n < 5 ? 0 : 2;
-		}),
-	  }, {
-		name: "Fiend Patron Spells (7)",
-		spells : ["fire shield", "wall of fire"],
-		selection : ["fire shield", "wall of fire"],
-		times : levels.map( function(n) {
-			return n < 7 ? 0 : 2;
-		}),
-	  }, {
-		name: "Fiend Patron Spells (9)",
-		spells : ["geas", "insect plague"],
-		selection : ["geas", "insect plague"],
-		times : levels.map( function(n) {
-			return n < 9 ? 0 : 2;
-		}),
-	  }], 	  
+      minlevel: 3, 
       description: desc([
         "When I reduce a hostile to 0 HP, I gain Cha mod + Warlock level temp HP (min 1). I also gain this temp HP if an enemy within 10 ft of me is reduced to 0 Hit Points.",
       ]),
@@ -7701,41 +7521,14 @@ legacySubClassRefactor("warlock", "the great old one", {
   regExpSearch: /^(?=.*(warlock))(?=.*(great old one)).*$/i,
   subname: "Great Old One Patron",
   source: [["P24", 162]],
+  spellcastingExtra : ["detect thoughts", "dissonant whispers", "phantasmal force", "tasha's hideous laughter", "clairvoyance", "hunger of hadar", "confusion", "summon aberration", "modify memory", "telekinesis"],
+  spellcastingExtraApplyNonconform: true,
   features: {
     "subclassfeature3": {
       name: "Awakened Mind",
       source: [["P24", 162]],
       minlevel: 3,
-	  action: "bonus action",
-	  spellcastingBonus: [{
-		name: "Great Old One Patron Spells (3)",
-		spells : ["detect thoughts", "dissonant whispers", "phantasmal force", "tasha's hideous laughter"],
-		selection : ["detect thoughts", "dissonant whispers", "phantasmal force", "tasha's hideous laughter"],
-		times : levels.map( function(n) {
-			return n < 3 ? 0 : 4;
-		}),
-	  }, {
-		name: "Great Old One Patron Spells (5)",
-		spells : ["clairvoyance", "hunger of hadar"],
-		selection : ["clairvoyance", "hunger of hadar"],
-		times : levels.map( function(n) {
-			return n < 5 ? 0 : 2;
-		}),
-	  }, {
-		name: "Great Old One Patron Spells (7)",
-		spells : ["confusion", "summon aberration"],
-		selection : ["confusion", "summon aberration"],
-		times : levels.map( function(n) {
-			return n < 7 ? 0 : 2;
-		}),
-	  }, {
-		name: "Great Old One Patron Spells (9)",
-		spells : ["modify memory", "telekinesis"],
-		selection : ["modify memory", "telekinesis"],
-		times : levels.map( function(n) {
-			return n < 9 ? 0 : 2;
-		}),
-	  }], 	  
+	  action: "bonus action", 
       description: desc([
         "As a Bonus Action, one creature I can see within 30 ft & I can speak telepathically with each other while within my Cha mod miles (min 1) for my Warlock level minutes as long as we share a language. It lasts until I use it with another creature.",
       ]),
@@ -9186,7 +8979,7 @@ legacyRaceRefactor("elf", {
   height: " are about 5-6 feet tall",
   trait: "Elf\nElven Lineage: Use 'Racial Options' above to choose a lineage that grants me supernatural abilities. Int, Wis, or Cha is my spellcasting ability for spells I cast with this trait. (Choose the ability with the lineage)\nTrance: I don't need to sleep, and magic can't put me to sleep. I can finish a Long Rest in 4 hours if I spend those hours in a trance-like meditation, during which I retain consciousness",
   variants: ["dark", "high", "wood"],
-  replaces: ["dark elf", "high elf", "wood elf", "half-elf"]
+  replaces: ["dark elf", "high elf", "wood elf"]
 });
 RaceSubList["elf-dark"] = {
   regExpSearch: /^(?=.*elf)(?=.*dark).*$/i,
@@ -9695,7 +9488,7 @@ legacyRaceRefactor("orc", {
       ]),
     },
   },
-  replaces: ["half-orc", "multiverse orc", "orc"]
+  replaces: ["multiverse orc", "orc"]
 });
 legacyRaceRefactor("tiefling", {
   regExpSearch: /^(?=.*tiefling).*$/i,
@@ -10423,7 +10216,7 @@ FeatsList["great weapon master"] = {
   calcChanges : {
 		atkCalc : [
 			function (fields, v, output) {
-				if (v.isMeleeWeapon && (/heavy/i).test(fields.Description) && (/\bgwm\b|power.{0,3}attack|great.{0,3}weapon.{0,3}master/i).test(v.WeaponText)) {
+				if (v.isWeapon && (/heavy/i).test(fields.Description) && (/\bgwm\b|power.{0,3}attack|great.{0,3}weapon.{0,3}master/i).test(v.WeaponText)) {
 					output.extraDmg += What("Proficiency Bonus");
 				}
 			},
@@ -11601,9 +11394,9 @@ FeatsList["fighting style"] = {
   regExpSearch: /^(?=.*fighting)(?=.*style).*$/i,
   descriptionFull: "Choose a Fighting Style.",
   description: "Choose a Fighting Style.",
-  choices: ["Archery", "Blind Fighting", "Defense", "Dueling", "Great Weapon Fighting", "Interception", "Protection", "Thrown Weapon Fighting", "Two-Weapon Fighting", "Unarmed Fighting"],
-  "archery": {
-    name: "Archery",
+  choices: ["Fighting Style [Archery]", "Fighting Style [Blind Fighting]", "Fighting Style [Defense]", "Fighting Style [Dueling]", "Fighting Style [Great Weapon Fighting]", "Fighting Style [Interception]", "Fighting Style [Protection]", "Fighting Style [Thrown Weapon Fighting]", "Fighting Style [Two-Weapon Fighting]", "Fighting Style [Unarmed Fighting]"],
+  "fighting style [archery]": {
+    name: "Fighting Style [Archery]",
     description: "I gain a +2 bonus to attack rolls I make with Ranged weapons.",    
     calcChanges: {
       atkCalc: [
@@ -11614,13 +11407,13 @@ FeatsList["fighting style"] = {
       ]
     }
   },
-  "blind fighting": {
-    name: "Blind Fighting",
+  "fighting style [blind fighting]": {
+    name: "Fighting Style [Blind Fighting]",
     description: "I have Blindsight with a range of 10 feet.",    
     vision: [["Blindsight", 10]],
   },
-  "defense": {
-    name: "Defense",
+  "fighting style [defense]": {
+    name: "Fighting Style [Defense]",
     description: "While I'm wearing Light, Medium, or Heavy armor, I gain a +1 bonus to Armor Class.",    
     extraAC: {
       name: "Defense Fighting Style", // necessary for features referring to fighting style properties directly
@@ -11631,8 +11424,8 @@ FeatsList["fighting style"] = {
       }
     },
   },
-  "dueling": {
-    name: "Dueling",
+  "fighting style [dueling]": {
+    name: "Fighting Style [Dueling]",
     description: "When I'm holding a Melee weapon in one hand and no other weapons, I gain a +2 bonus to damage rolls with that weapon.",    
     calcChanges: {
       atkCalc: [
@@ -11646,8 +11439,8 @@ FeatsList["fighting style"] = {
       ]
     }
   },
-  "great weapon fighting": {
-    name: "Great Weapon Fighting",
+  "fighting style [great weapon fighting]": {
+    name: "Fighting Style [Great Weapon Fighting]",
     description: "When I roll damage for an attack I make with a Melee weapon that I am holding with two hands, I can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile properties to gain this benefit.",    
     calcChanges: {
       atkAdd: [
@@ -11660,18 +11453,18 @@ FeatsList["fighting style"] = {
       ]
     },
   },
-  "interception": {
-    name: "Interception",
+  "fighting style [interception]": {
+    name: "Fighting Style [Interception]",
     description: "When a creature I can see hits another creature within 5 feet of me with an attack roll, I can take a Reaction to reduce the damage dealt to the target by 1d10 plus my Proficiency Bonus. I must be holding a Shield or a Simple or Martial weapon to use this Reaction.",    
     action: "reaction",
   },
-  "protection": {
-    name: "Protection",
+  "fighting style [protection]": {
+    name: "Fighting Style [Protection]",
     description: "When a creature I can see attacks a target other than me that is within 5 feet of me, I can take a Reaction to interpose my Shield if I'm holding one. I impose Disadvantage on the triggering attack roll and all other attack rolls against the target until the start of my next turn if I remain within 5 feet of the target.",    
     action: "reaction",
   },
-  "thrown weapon fighting": {
-    name: "Thrown Weapon Fighting",
+  "fighting style [thrown weapon fighting]": {
+    name: "Fighting Style [Thrown Weapon Fighting]",
     description: "When I hit with a ranged attack roll using a weapon that has the Thrown property, I gain a +2 bonus to the damage roll.",    
     calcChanges: {
       atkAdd: [
@@ -11692,8 +11485,8 @@ FeatsList["fighting style"] = {
       ],
     },
   },
-  "two-weapon fighting": {
-    name: "Two-Weapon Fighting",
+  "fighting style [two-weapon fighting]": {
+    name: "Fighting Style [Two-Weapon Fighting]",
     description: "When I make an extra attack as a result of using a weapon that has the Light property, I can add my ability modifier to the damage to that attack if I am not already adding it to the damage.",    
     calcChanges: {
       atkCalc: [
@@ -11704,8 +11497,8 @@ FeatsList["fighting style"] = {
       ]
     },
   },
-  "unarmed fighting": {
-    name: "Unarmed Fighting",
+  "fighting style [unarmed fighting]": {
+    name: "Fighting Style [Unarmed Fighting]",
     description: "When I hit with my Unarmed Strike and deal damage, I can deal Bludgeoning damage equal to 1d6 plus my Strength modifier instead of the normal damage of an Unarmed Strike. If I am not holding any weapons or a Shield when I make the attack roll, the d6 becomes a d8.\n At the start of each of my turns, I can deal 1d4 Bludgeoning damage to one creature Grappled by me.",    
     calcChanges: {
       atkAdd: [
