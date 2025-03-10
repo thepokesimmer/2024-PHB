@@ -2140,6 +2140,34 @@ legacySubClassRefactor("druid", "moon", {
         "In Wild Shape: My maximum form's Challenge Rating is my Druid level divided by 3. My AC becomes greatest of 13 plus my Wisdom modifier or the Beast's AC. I also gain Temporary Hit Points equal to three times my Druid level.",
       ]),
     },
+	"subclassfeature3.wild shape" : {
+		name : "Wild Shape",
+		source : [["P24", 86]],
+		minlevel : 3,
+		description : desc([
+			"As a bonus action, I assume the shape of a beast I have seen before with these rules:",
+			" \u2022 I gain all its game statistics except Intelligence, Wisdom, or Charisma",
+			" \u2022 I get its skill/saving throw prof. while keeping my own, using whichever is higher",
+			" \u2022 I gain three times my Druid level Temp HP",
+			" \u2022 I can't cast spells in beast form, but transforming doesn't break concentration",
+			" \u2022 I retain features from class, race, etc., but I don't retain special senses",
+			" \u2022 I can choose whether equipment falls to the ground, merges, or stays worn",
+			" \u2022 I revert if out of time or Incapacitated; I die, or I end it as a Bonus Action"
+		]),
+		usages : [0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, "\u221E\xD7 per "],
+		recovery : "short rest",
+		additional : levels.map(function (n) {
+			if (n < 2) return "";
+			var cr = Math.max(1, Math.floor(n/3));
+			var hr = Math.floor(n/2);
+			var restr = n < 8 ? ", no fly" : "";
+			return "CR " + cr + restr + "; " + hr + (restr.length ? " h" : " hours");
+		}),
+		action : [["bonus action", " (start/stop)"]],
+		eval : function() {
+			processActions(false, "Druid: Wild Shape", ClassList.druid.features["subclassfeature3.wild shape"].action, "Wild Shape");
+		}
+	},
     "subclassfeature6": {
       name: "Improved Circle Forms",
       source: [["P24", 87]],
@@ -2357,39 +2385,6 @@ legacySubClassRefactor("druid", "stars", {
     },
   },
 });
-RunFunctionAtEnd(function() {
-  // Ensure fighter and fighting style exists
-  if (!ClassList.fighter || !ClassList.fighter.features["fighting style"]) return;
-  // Get the class object holding the fighting style feature
-  var cObj = ClassList.fighter.features["fighting style"];
-  // The feat from FeatsList
-  var theFea = FeatsList["fighting style"];
-  theFea.choices.forEach(function (cName) {
-      // Choice name lower case
-      var cNameLC = cName.toLowerCase();
-      // If the feat doesn't exist, exit now
-      if(!theFea[cNameLC]) return;
-      // Push the choice, the choices array should be left empty
-      cObj.choices.push(cName);
-      // Create the object in the class feature
-      if(!cObj[cNameLC]) {
-          cObj[cNameLC] = {
-              name : theFea[cNameLC].name,
-              //This ensures proper spacing and indexing
-              description : theFea[cNameLC].description + desc([ "When I gain a Fighter Level, I can replace it with another"]),
-              source : theFea[cNameLC].source ? theFea[cNameLC].source : theFea.source
-          };
-      }
-      // Copy all the attributes except name, desc, source, or calcChanges
-      for(var attr in theFea[cNameLC]) {
-          if ((/\b(name|description|source|calcchanges)\b/i).test(attr)) continue;
-          cObj[cNameLC][attr] = theFea[cNameLC][attr];
-      }
-      // Set eval and removeeval to add and remove the feat using the choose feature drop down menu
-      cObj[cNameLC].eval = function() {AddFeat("Fighting Style [" + cName + "]");};
-      cObj[cNameLC].removeeval = function() {RemoveFeat("Fighting Style [" + cName + "]");};
-  });
-});
 legacyClassRefactor("fighter", {
   regExpSearch: /fighter/i,
   name: "Fighter",
@@ -2428,7 +2423,125 @@ legacyClassRefactor("fighter", {
 			"Choose a Fighting Style Feat using the 'Choose Feature' Button",
 			"When I gain a Fighter Level, I can replace it with another",
 		]),
-		choices : [] // left empty to be filled by the function above.
+		choices: ["Fighting Style [Archery]", "Fighting Style [Blind Fighting]", "Fighting Style [Defense]", "Fighting Style [Dueling]", "Fighting Style [Great Weapon Fighting]", "Fighting Style [Interception]", "Fighting Style [Protection]", "Fighting Style [Thrown Weapon Fighting]", "Fighting Style [Two-Weapon Fighting]", "Fighting Style [Unarmed Fighting]"],
+		  "fighting style [archery]": {
+			name: "Fighting Style [Archery]",
+			description: "I gain a +2 bonus to attack rolls I make with Ranged weapons.",    
+			calcChanges: {
+			  atkCalc: [
+				function (fields, v, output) {
+				  if (v.isRangedWeapon && !v.isNaturalWeapon && !v.isDC) output.extraHit += 2;
+				},
+				"My ranged weapons get a +2 bonus on the To Hit."
+			  ]
+			}
+		  },
+		  "fighting style [blind fighting]": {
+			name: "Fighting Style [Blind Fighting]",
+			description: "I have Blindsight with a range of 10 feet.",    
+			vision: [["Blindsight", 10]],
+		  },
+		  "fighting style [defense]": {
+			name: "Fighting Style [Defense]",
+			description: "While I'm wearing Light, Medium, or Heavy armor, I gain a +1 bonus to Armor Class.",    
+			extraAC: {
+			  name: "Defense Fighting Style", // necessary for features referring to fighting style properties directly
+			  mod: 1,
+			  text: "I gain a +1 bonus to AC while wearing armor.",
+			  stopeval: function (v) {
+				return !v.wearingArmor;
+			  }
+			},
+		  },
+		  "fighting style [dueling]": {
+			name: "Fighting Style [Dueling]",
+			description: "When I'm holding a Melee weapon in one hand and no other weapons, I gain a +2 bonus to damage rolls with that weapon.",    
+			calcChanges: {
+			  atkCalc: [
+				function (fields, v, output) {
+				  for (var i = 1; i <= FieldNumbers.actions; i++) {
+					if ((/off.hand.attack/i).test(What('Bonus Action ' + i))) return;
+				  }
+				  if (v.isMeleeWeapon && !v.isNaturalWeapon && !(/((^|[^+-]\b)2|\btwo).?hand(ed)?s?\b/i).test(fields.Description)) output.extraDmg += 2;
+				},
+				"When I'm wielding a melee weapon in one hand and no weapon in my other hand, I do +2 damage with that melee weapon. This condition will always be false if the bonus action 'Off-hand Attack' exists."
+			  ]
+			}
+		  },
+		  "fighting style [great weapon fighting]": {
+			name: "Fighting Style [Great Weapon Fighting]",
+			description: "When I roll damage for an attack I make with a Melee weapon that I am holding with two hands, I can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile properties to gain this benefit.",    
+			calcChanges: {
+			  atkAdd: [
+				function (fields, v) {
+				  if (v.isMeleeWeapon && (/(\bversatile|((^|[^+-]\b)2|\btwo).?hand(ed)?s?)\b/i).test(fields.Description)) {
+					fields.Description += (fields.Description ? '; ' : '') + 'treat rolls of 1 or 2 on the damage die as a 3' + ((/versatile/i).test(fields.Description) ? ' when two-handed' : '');
+				  }
+				},
+				"While wielding a two-handed or versatile melee weapon in two hands, I can treat a roll of 1 or 2 on any damage die as a 3."
+			  ]
+			},
+		  },
+		  "fighting style [interception]": {
+			name: "Fighting Style [Interception]",
+			description: "When a creature I can see hits another creature within 5 feet of me with an attack roll, I can take a Reaction to reduce the damage dealt to the target by 1d10 plus my Proficiency Bonus. I must be holding a Shield or a Simple or Martial weapon to use this Reaction.",    
+			action: "reaction",
+		  },
+		  "fighting style [protection]": {
+			name: "Fighting Style [Protection]",
+			description: "When a creature I can see attacks a target other than me that is within 5 feet of me, I can take a Reaction to interpose my Shield if I'm holding one. I impose Disadvantage on the triggering attack roll and all other attack rolls against the target until the start of my next turn if I remain within 5 feet of the target.",    
+			action: "reaction",
+		  },
+		  "fighting style [thrown weapon fighting]": {
+			name: "Fighting Style [Thrown Weapon Fighting]",
+			description: "When I hit with a ranged attack roll using a weapon that has the Thrown property, I gain a +2 bonus to the damage roll.",    
+			calcChanges: {
+			  atkAdd: [
+				function (fields, v) {
+				  if (v.isThrownWeapon && v.isMeleeWeapon) {
+					fields.Description += (fields.Description ? '; ' : '') + '+2 damage when thrown';
+				  }
+				},
+				"I deal +2 damage when I hit a ranged attack made with a thrown weapon."
+			  ],
+			  atkCalc: [
+				function (fields, v, output) {
+				  if (v.isThrownWeapon && !v.isMeleeWeapon) {
+					output.extraDmg += 2;
+				  }
+				},
+				""
+			  ],
+			},
+		  },
+		  "fighting style [two-weapon fighting]": {
+			name: "Fighting Style [Two-Weapon Fighting]",
+			description: "When I make an extra attack as a result of using a weapon that has the Light property, I can add my ability modifier to the damage to that attack if I am not already adding it to the damage.",    
+			calcChanges: {
+			  atkCalc: [
+				function (fields, v, output) {
+				  if (v.isOffHand) output.modToDmg = true;
+				},
+				"When engaging in two-weapon fighting, I can add my ability modifier to the damage of my off-hand attacks. If a melee weapon includes 'off-hand' or 'secondary' in its name or description, it is considered an off-hand attack."
+			  ]
+			},
+		  },
+		  "fighting style [unarmed fighting]": {
+			name: "Fighting Style [Unarmed Fighting]",
+			description: "When I hit with my Unarmed Strike and deal damage, I can deal Bludgeoning damage equal to 1d6 plus my Strength modifier instead of the normal damage of an Unarmed Strike. If I am not holding any weapons or a Shield when I make the attack roll, the d6 becomes a d8.\n At the start of each of my turns, I can deal 1d4 Bludgeoning damage to one creature Grappled by me.",    
+			calcChanges: {
+			  atkAdd: [
+				function (fields, v) {
+				  if (v.baseWeaponName == "unarmed strike") {
+					if (fields.Damage_Die == 1 || fields.Damage_Die == "1d4") fields.Damage_Die = '1d6';
+					fields.Description += (fields.Description ? '; ' : '') + 'Versatile (d8)';
+				  }
+				},
+				"My unarmed strikes deal 1d6 damage instead of 1, which increases to 1d8 if I have both hands free to make an unarmed strike with.",
+				1
+			  ]
+			},
+		  },
 	},
     "second wind": {
       name: "Second Wind",
@@ -3028,14 +3141,127 @@ legacySubClassRefactor("fighter", "champion", {
       name: "Additional Fighting Style",
       source: [["P24", 96]],
       minlevel: 7,
-      eval: function () {
-        AddString('Feat Note 1', 'Champion Fighting Style feat', '; ');
-      },
-      removeeval: function () {
-        RemoveString('Feat Note 1', 'Champion Fighting Style feat');
-      },
+     choices: ["Fighting Style [Archery]", "Fighting Style [Blind Fighting]", "Fighting Style [Defense]", "Fighting Style [Dueling]", "Fighting Style [Great Weapon Fighting]", "Fighting Style [Interception]", "Fighting Style [Protection]", "Fighting Style [Thrown Weapon Fighting]", "Fighting Style [Two-Weapon Fighting]", "Fighting Style [Unarmed Fighting]"],
+		  "fighting style [archery]": {
+			name: "Fighting Style [Archery]",
+			description: "I gain a +2 bonus to attack rolls I make with Ranged weapons.",    
+			calcChanges: {
+			  atkCalc: [
+				function (fields, v, output) {
+				  if (v.isRangedWeapon && !v.isNaturalWeapon && !v.isDC) output.extraHit += 2;
+				},
+				"My ranged weapons get a +2 bonus on the To Hit."
+			  ]
+			}
+		  },
+		  "fighting style [blind fighting]": {
+			name: "Fighting Style [Blind Fighting]",
+			description: "I have Blindsight with a range of 10 feet.",    
+			vision: [["Blindsight", 10]],
+		  },
+		  "fighting style [defense]": {
+			name: "Fighting Style [Defense]",
+			description: "While I'm wearing Light, Medium, or Heavy armor, I gain a +1 bonus to Armor Class.",    
+			extraAC: {
+			  name: "Defense Fighting Style", // necessary for features referring to fighting style properties directly
+			  mod: 1,
+			  text: "I gain a +1 bonus to AC while wearing armor.",
+			  stopeval: function (v) {
+				return !v.wearingArmor;
+			  }
+			},
+		  },
+		  "fighting style [dueling]": {
+			name: "Fighting Style [Dueling]",
+			description: "When I'm holding a Melee weapon in one hand and no other weapons, I gain a +2 bonus to damage rolls with that weapon.",    
+			calcChanges: {
+			  atkCalc: [
+				function (fields, v, output) {
+				  for (var i = 1; i <= FieldNumbers.actions; i++) {
+					if ((/off.hand.attack/i).test(What('Bonus Action ' + i))) return;
+				  }
+				  if (v.isMeleeWeapon && !v.isNaturalWeapon && !(/((^|[^+-]\b)2|\btwo).?hand(ed)?s?\b/i).test(fields.Description)) output.extraDmg += 2;
+				},
+				"When I'm wielding a melee weapon in one hand and no weapon in my other hand, I do +2 damage with that melee weapon. This condition will always be false if the bonus action 'Off-hand Attack' exists."
+			  ]
+			}
+		  },
+		  "fighting style [great weapon fighting]": {
+			name: "Fighting Style [Great Weapon Fighting]",
+			description: "When I roll damage for an attack I make with a Melee weapon that I am holding with two hands, I can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile properties to gain this benefit.",    
+			calcChanges: {
+			  atkAdd: [
+				function (fields, v) {
+				  if (v.isMeleeWeapon && (/(\bversatile|((^|[^+-]\b)2|\btwo).?hand(ed)?s?)\b/i).test(fields.Description)) {
+					fields.Description += (fields.Description ? '; ' : '') + 'treat rolls of 1 or 2 on the damage die as a 3' + ((/versatile/i).test(fields.Description) ? ' when two-handed' : '');
+				  }
+				},
+				"While wielding a two-handed or versatile melee weapon in two hands, I can treat a roll of 1 or 2 on any damage die as a 3."
+			  ]
+			},
+		  },
+		  "fighting style [interception]": {
+			name: "Fighting Style [Interception]",
+			description: "When a creature I can see hits another creature within 5 feet of me with an attack roll, I can take a Reaction to reduce the damage dealt to the target by 1d10 plus my Proficiency Bonus. I must be holding a Shield or a Simple or Martial weapon to use this Reaction.",    
+			action: "reaction",
+		  },
+		  "fighting style [protection]": {
+			name: "Fighting Style [Protection]",
+			description: "When a creature I can see attacks a target other than me that is within 5 feet of me, I can take a Reaction to interpose my Shield if I'm holding one. I impose Disadvantage on the triggering attack roll and all other attack rolls against the target until the start of my next turn if I remain within 5 feet of the target.",    
+			action: "reaction",
+		  },
+		  "fighting style [thrown weapon fighting]": {
+			name: "Fighting Style [Thrown Weapon Fighting]",
+			description: "When I hit with a ranged attack roll using a weapon that has the Thrown property, I gain a +2 bonus to the damage roll.",    
+			calcChanges: {
+			  atkAdd: [
+				function (fields, v) {
+				  if (v.isThrownWeapon && v.isMeleeWeapon) {
+					fields.Description += (fields.Description ? '; ' : '') + '+2 damage when thrown';
+				  }
+				},
+				"I deal +2 damage when I hit a ranged attack made with a thrown weapon."
+			  ],
+			  atkCalc: [
+				function (fields, v, output) {
+				  if (v.isThrownWeapon && !v.isMeleeWeapon) {
+					output.extraDmg += 2;
+				  }
+				},
+				""
+			  ],
+			},
+		  },
+		  "fighting style [two-weapon fighting]": {
+			name: "Fighting Style [Two-Weapon Fighting]",
+			description: "When I make an extra attack as a result of using a weapon that has the Light property, I can add my ability modifier to the damage to that attack if I am not already adding it to the damage.",    
+			calcChanges: {
+			  atkCalc: [
+				function (fields, v, output) {
+				  if (v.isOffHand) output.modToDmg = true;
+				},
+				"When engaging in two-weapon fighting, I can add my ability modifier to the damage of my off-hand attacks. If a melee weapon includes 'off-hand' or 'secondary' in its name or description, it is considered an off-hand attack."
+			  ]
+			},
+		  },
+		  "fighting style [unarmed fighting]": {
+			name: "Fighting Style [Unarmed Fighting]",
+			description: "When I hit with my Unarmed Strike and deal damage, I can deal Bludgeoning damage equal to 1d6 plus my Strength modifier instead of the normal damage of an Unarmed Strike. If I am not holding any weapons or a Shield when I make the attack roll, the d6 becomes a d8.\n At the start of each of my turns, I can deal 1d4 Bludgeoning damage to one creature Grappled by me.",    
+			calcChanges: {
+			  atkAdd: [
+				function (fields, v) {
+				  if (v.baseWeaponName == "unarmed strike") {
+					if (fields.Damage_Die == 1 || fields.Damage_Die == "1d4") fields.Damage_Die = '1d6';
+					fields.Description += (fields.Description ? '; ' : '') + 'Versatile (d8)';
+				  }
+				},
+				"My unarmed strikes deal 1d6 damage instead of 1, which increases to 1d8 if I have both hands free to make an unarmed strike with.",
+				1
+			  ]
+			},
+		  },
       description: desc([
-        "I gain another Fighting Style feat of my choice.",
+        "I gain another different Fighting Style feat of my choice.",
       ]),
     },
     "subclassfeature10": {
@@ -3377,7 +3603,7 @@ legacyClassRefactor("monk", {
 			if(n < 2) return "";
 			var description = desc([
 				"As a bonus action, I can disengage.",
-				"1 Focus Point, as a bonus action, I can disengage and dodge.",
+				"1 Focus Point, as a bonus action, I can Disengage and Dodge.",
 			]);
 			if(n >= 10) {
 				description += desc([
@@ -3505,8 +3731,10 @@ legacyClassRefactor("monk", {
       name: "Evasion",
       source: [["P24", 103]],
       minlevel: 7,
-      description : desc("My Dex saves vs. areas of effect negate damage on success and halve it on failure, while not Incapacitated"),
-	savetxt : { text : ["Dex save vs. area effects: fail \u2015 half dmg, success \u2015 no dmg"] }
+      description : desc[(
+		"When not Incapacitated and must make a Dex save to take half damage on an effect I take no damage on a pass & half damage on a fail."
+	  )],
+	  savetxt : { text : ["When not Incapacitated Dex saves: fail \u2015 half dmg, success \u2015 no dmg"] },
     },
     "acrobatic movement": {
       name: "Acrobatic Movement",
@@ -4200,21 +4428,21 @@ legacyClassRefactor("paladin", {
 			description: desc([
 				"Pick a 'Fighting Style' feat or 'Blessed Warrior'; use Choose Feature above.",
 			]),
-			choices: ["Fighting Style", "Blessed Warrior"],
-			"fighting style": {
-				name: "Fighting Style",
-				eval: function () {
-				AddString('Feat Note 2', 'Fighting Style feat', '; ');
+			choices: ["Fighting Style [Archery]", "Fighting Style [Blessed Warrior]", "Fighting Style [Blind Fighting]", "Fighting Style [Defense]", "Fighting Style [Dueling]", "Fighting Style [Great Weapon Fighting]", "Fighting Style [Interception]", "Fighting Style [Protection]", "Fighting Style [Thrown Weapon Fighting]", "Fighting Style [Two-Weapon Fighting]", "Fighting Style [Unarmed Fighting]"],
+		  "fighting style [archery]": {
+			name: "Fighting Style [Archery]",
+			description: "I gain a +2 bonus to attack rolls I make with Ranged weapons.",    
+			calcChanges: {
+			  atkCalc: [
+				function (fields, v, output) {
+				  if (v.isRangedWeapon && !v.isNaturalWeapon && !v.isDC) output.extraHit += 2;
 				},
-				removeeval: function () {
-				RemoveString('Feat Note 2', 'Fighting Style feat');
-				},
-				description: desc([
-				"I gain a 'Fighting Style' feat of my choice; use Choose Feature above.",
-				]),
-			},
-			"blessed warrior": {
-				name: "Blessed Warrior",
+				"My ranged weapons get a +2 bonus on the To Hit."
+			  ]
+			}
+		  },
+		  "fighting style [blessed warrior]": {
+				name: "Fighting Style [Blessed Warrior]",
 				spellcastingBonus: [{
 				name: "Blessed Warrior",
 				"class": "cleric",
@@ -4226,6 +4454,112 @@ legacyClassRefactor("paladin", {
 				"When I gain a Paladin level I can swap one of these for another Cleric cantrip.",
 				]),
 			},
+		  "fighting style [blind fighting]": {
+			name: "Fighting Style [Blind Fighting]",
+			description: "I have Blindsight with a range of 10 feet.",    
+			vision: [["Blindsight", 10]],
+		  },
+		  "fighting style [defense]": {
+			name: "Fighting Style [Defense]",
+			description: "While I'm wearing Light, Medium, or Heavy armor, I gain a +1 bonus to Armor Class.",    
+			extraAC: {
+			  name: "Defense Fighting Style", // necessary for features referring to fighting style properties directly
+			  mod: 1,
+			  text: "I gain a +1 bonus to AC while wearing armor.",
+			  stopeval: function (v) {
+				return !v.wearingArmor;
+			  }
+			},
+		  },
+		  "fighting style [dueling]": {
+			name: "Fighting Style [Dueling]",
+			description: "When I'm holding a Melee weapon in one hand and no other weapons, I gain a +2 bonus to damage rolls with that weapon.",    
+			calcChanges: {
+			  atkCalc: [
+				function (fields, v, output) {
+				  for (var i = 1; i <= FieldNumbers.actions; i++) {
+					if ((/off.hand.attack/i).test(What('Bonus Action ' + i))) return;
+				  }
+				  if (v.isMeleeWeapon && !v.isNaturalWeapon && !(/((^|[^+-]\b)2|\btwo).?hand(ed)?s?\b/i).test(fields.Description)) output.extraDmg += 2;
+				},
+				"When I'm wielding a melee weapon in one hand and no weapon in my other hand, I do +2 damage with that melee weapon. This condition will always be false if the bonus action 'Off-hand Attack' exists."
+			  ]
+			}
+		  },
+		  "fighting style [great weapon fighting]": {
+			name: "Fighting Style [Great Weapon Fighting]",
+			description: "When I roll damage for an attack I make with a Melee weapon that I am holding with two hands, I can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile properties to gain this benefit.",    
+			calcChanges: {
+			  atkAdd: [
+				function (fields, v) {
+				  if (v.isMeleeWeapon && (/(\bversatile|((^|[^+-]\b)2|\btwo).?hand(ed)?s?)\b/i).test(fields.Description)) {
+					fields.Description += (fields.Description ? '; ' : '') + 'treat rolls of 1 or 2 on the damage die as a 3' + ((/versatile/i).test(fields.Description) ? ' when two-handed' : '');
+				  }
+				},
+				"While wielding a two-handed or versatile melee weapon in two hands, I can treat a roll of 1 or 2 on any damage die as a 3."
+			  ]
+			},
+		  },
+		  "fighting style [interception]": {
+			name: "Fighting Style [Interception]",
+			description: "When a creature I can see hits another creature within 5 feet of me with an attack roll, I can take a Reaction to reduce the damage dealt to the target by 1d10 plus my Proficiency Bonus. I must be holding a Shield or a Simple or Martial weapon to use this Reaction.",    
+			action: "reaction",
+		  },
+		  "fighting style [protection]": {
+			name: "Fighting Style [Protection]",
+			description: "When a creature I can see attacks a target other than me that is within 5 feet of me, I can take a Reaction to interpose my Shield if I'm holding one. I impose Disadvantage on the triggering attack roll and all other attack rolls against the target until the start of my next turn if I remain within 5 feet of the target.",    
+			action: "reaction",
+		  },
+		  "fighting style [thrown weapon fighting]": {
+			name: "Fighting Style [Thrown Weapon Fighting]",
+			description: "When I hit with a ranged attack roll using a weapon that has the Thrown property, I gain a +2 bonus to the damage roll.",    
+			calcChanges: {
+			  atkAdd: [
+				function (fields, v) {
+				  if (v.isThrownWeapon && v.isMeleeWeapon) {
+					fields.Description += (fields.Description ? '; ' : '') + '+2 damage when thrown';
+				  }
+				},
+				"I deal +2 damage when I hit a ranged attack made with a thrown weapon."
+			  ],
+			  atkCalc: [
+				function (fields, v, output) {
+				  if (v.isThrownWeapon && !v.isMeleeWeapon) {
+					output.extraDmg += 2;
+				  }
+				},
+				""
+			  ],
+			},
+		  },
+		  "fighting style [two-weapon fighting]": {
+			name: "Fighting Style [Two-Weapon Fighting]",
+			description: "When I make an extra attack as a result of using a weapon that has the Light property, I can add my ability modifier to the damage to that attack if I am not already adding it to the damage.",    
+			calcChanges: {
+			  atkCalc: [
+				function (fields, v, output) {
+				  if (v.isOffHand) output.modToDmg = true;
+				},
+				"When engaging in two-weapon fighting, I can add my ability modifier to the damage of my off-hand attacks. If a melee weapon includes 'off-hand' or 'secondary' in its name or description, it is considered an off-hand attack."
+			  ]
+			},
+		  },
+		  "fighting style [unarmed fighting]": {
+			name: "Fighting Style [Unarmed Fighting]",
+			description: "When I hit with my Unarmed Strike and deal damage, I can deal Bludgeoning damage equal to 1d6 plus my Strength modifier instead of the normal damage of an Unarmed Strike. If I am not holding any weapons or a Shield when I make the attack roll, the d6 becomes a d8.\n At the start of each of my turns, I can deal 1d4 Bludgeoning damage to one creature Grappled by me.",    
+			calcChanges: {
+			  atkAdd: [
+				function (fields, v) {
+				  if (v.baseWeaponName == "unarmed strike") {
+					if (fields.Damage_Die == 1 || fields.Damage_Die == "1d4") fields.Damage_Die = '1d6';
+					fields.Description += (fields.Description ? '; ' : '') + 'Versatile (d8)';
+				  }
+				},
+				"My unarmed strikes deal 1d6 damage instead of 1, which increases to 1d8 if I have both hands free to make an unarmed strike with.",
+				1
+			  ]
+			},
+		  },
 		},
 		"paladin's smite" : {
 			name : "Paladin's Smite",
@@ -4234,6 +4568,9 @@ legacyClassRefactor("paladin", {
 			limfeaname : "Divine Smite",
 			usages : 1,
 			recovery : "long rest",
+			description : desc([
+				"I always have the Divine Smite spell prepared, once per Long Rest, I can cast this spell without expending a spell slot.",
+			]),	
 			calcChanges : {
 				spellAdd : [
 					function (spellKey, spellObj, spName) {
@@ -4283,6 +4620,9 @@ legacyClassRefactor("paladin", {
 			limfeaname : "Find Steed",
 			usages : 1,
 			recovery : "long rest",
+			description : desc([
+				"I always have the Find Steed spell prepared, once per Long Rest, I can cast this spell without expending a spell slot.",
+			]),
 			calcChanges : {
 				spellAdd : [
 					function (spellKey, spellObj, spName) {
@@ -4598,7 +4938,7 @@ legacyClassRefactor("ranger", {
 	name: "Ranger",
 	source: [["P24", 119]],
 	primaryAbility: "Dexterity and Wisdom",
-	prereqs: "Dexterity 13 or Wisdom 13",
+	prereqs: "Dexterity 13 and Wisdom 13",
 	improvements: [0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5],
 	die: 10,
 	saves: ["Str", "Dex"],
@@ -4987,32 +5327,138 @@ legacyClassRefactor("ranger", {
 			description: desc([
 				"I gain either one 'Fighting Style' or 'Druidic Warrior'.",
 			]),
-			choices: ["Fighting Style", "Druidic Warrior"],
-			"fighting style": {
-				name: "Fighting Style",
-				eval: function () {
-					AddString('Feat Note 2', 'Fighting Style feat', '; ');
+			choices: ["Fighting Style [Archery]", "Fighting Style [Druidic Warrior]", "Fighting Style [Blind Fighting]", "Fighting Style [Defense]", "Fighting Style [Dueling]", "Fighting Style [Great Weapon Fighting]", "Fighting Style [Interception]", "Fighting Style [Protection]", "Fighting Style [Thrown Weapon Fighting]", "Fighting Style [Two-Weapon Fighting]", "Fighting Style [Unarmed Fighting]"],
+		  "fighting style [archery]": {
+			name: "Fighting Style [Archery]",
+			description: "I gain a +2 bonus to attack rolls I make with Ranged weapons.",    
+			calcChanges: {
+			  atkCalc: [
+				function (fields, v, output) {
+				  if (v.isRangedWeapon && !v.isNaturalWeapon && !v.isDC) output.extraHit += 2;
 				},
-				removeeval: function () {
-					RemoveString('Feat Note 2', 'Fighting Style feat');
-				},
-				description: desc([
-					"I gain a Fighting Style feat of my choice (see chapter 5 for feats).",
-				]),
-			},
-			"druidic warrior": {
-				name: "Druidic Warrior",
+				"My ranged weapons get a +2 bonus on the To Hit."
+			  ]
+			}
+		  },
+		  "fighting style [druidic warrior]": {
+				name: "Fighting Style [Druidic Warrior]",
 				spellcastingBonus: [{
-					name: "Druidic Warrior",
-					"class": "druid",
-					level: [0, 0],
-					times: 2,
+				name: "Druidic Warrior",
+				"class": "druid",
+				level: [0, 0],
+				times: 2,
 				}],
 				description: desc([
-					"I learn two Druid cantrips of my choice. Wisdom is my spellcasting ability.",
-					"When I gain a Ranger level, I can replace one of these cantrips with another Druid cantrip.",
+				"I learn two Druid cantrips that count as Ranger spells; I use Wis for spellcasting.",
+				"When I gain a Ranger level I can swap one of these for another Druid cantrip.",
 				]),
 			},
+		  "fighting style [blind fighting]": {
+			name: "Fighting Style [Blind Fighting]",
+			description: "I have Blindsight with a range of 10 feet.",    
+			vision: [["Blindsight", 10]],
+		  },
+		  "fighting style [defense]": {
+			name: "Fighting Style [Defense]",
+			description: "While I'm wearing Light, Medium, or Heavy armor, I gain a +1 bonus to Armor Class.",    
+			extraAC: {
+			  name: "Defense Fighting Style", // necessary for features referring to fighting style properties directly
+			  mod: 1,
+			  text: "I gain a +1 bonus to AC while wearing armor.",
+			  stopeval: function (v) {
+				return !v.wearingArmor;
+			  }
+			},
+		  },
+		  "fighting style [dueling]": {
+			name: "Fighting Style [Dueling]",
+			description: "When I'm holding a Melee weapon in one hand and no other weapons, I gain a +2 bonus to damage rolls with that weapon.",    
+			calcChanges: {
+			  atkCalc: [
+				function (fields, v, output) {
+				  for (var i = 1; i <= FieldNumbers.actions; i++) {
+					if ((/off.hand.attack/i).test(What('Bonus Action ' + i))) return;
+				  }
+				  if (v.isMeleeWeapon && !v.isNaturalWeapon && !(/((^|[^+-]\b)2|\btwo).?hand(ed)?s?\b/i).test(fields.Description)) output.extraDmg += 2;
+				},
+				"When I'm wielding a melee weapon in one hand and no weapon in my other hand, I do +2 damage with that melee weapon. This condition will always be false if the bonus action 'Off-hand Attack' exists."
+			  ]
+			}
+		  },
+		  "fighting style [great weapon fighting]": {
+			name: "Fighting Style [Great Weapon Fighting]",
+			description: "When I roll damage for an attack I make with a Melee weapon that I am holding with two hands, I can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile properties to gain this benefit.",    
+			calcChanges: {
+			  atkAdd: [
+				function (fields, v) {
+				  if (v.isMeleeWeapon && (/(\bversatile|((^|[^+-]\b)2|\btwo).?hand(ed)?s?)\b/i).test(fields.Description)) {
+					fields.Description += (fields.Description ? '; ' : '') + 'treat rolls of 1 or 2 on the damage die as a 3' + ((/versatile/i).test(fields.Description) ? ' when two-handed' : '');
+				  }
+				},
+				"While wielding a two-handed or versatile melee weapon in two hands, I can treat a roll of 1 or 2 on any damage die as a 3."
+			  ]
+			},
+		  },
+		  "fighting style [interception]": {
+			name: "Fighting Style [Interception]",
+			description: "When a creature I can see hits another creature within 5 feet of me with an attack roll, I can take a Reaction to reduce the damage dealt to the target by 1d10 plus my Proficiency Bonus. I must be holding a Shield or a Simple or Martial weapon to use this Reaction.",    
+			action: "reaction",
+		  },
+		  "fighting style [protection]": {
+			name: "Fighting Style [Protection]",
+			description: "When a creature I can see attacks a target other than me that is within 5 feet of me, I can take a Reaction to interpose my Shield if I'm holding one. I impose Disadvantage on the triggering attack roll and all other attack rolls against the target until the start of my next turn if I remain within 5 feet of the target.",    
+			action: "reaction",
+		  },
+		  "fighting style [thrown weapon fighting]": {
+			name: "Fighting Style [Thrown Weapon Fighting]",
+			description: "When I hit with a ranged attack roll using a weapon that has the Thrown property, I gain a +2 bonus to the damage roll.",    
+			calcChanges: {
+			  atkAdd: [
+				function (fields, v) {
+				  if (v.isThrownWeapon && v.isMeleeWeapon) {
+					fields.Description += (fields.Description ? '; ' : '') + '+2 damage when thrown';
+				  }
+				},
+				"I deal +2 damage when I hit a ranged attack made with a thrown weapon."
+			  ],
+			  atkCalc: [
+				function (fields, v, output) {
+				  if (v.isThrownWeapon && !v.isMeleeWeapon) {
+					output.extraDmg += 2;
+				  }
+				},
+				""
+			  ],
+			},
+		  },
+		  "fighting style [two-weapon fighting]": {
+			name: "Fighting Style [Two-Weapon Fighting]",
+			description: "When I make an extra attack as a result of using a weapon that has the Light property, I can add my ability modifier to the damage to that attack if I am not already adding it to the damage.",    
+			calcChanges: {
+			  atkCalc: [
+				function (fields, v, output) {
+				  if (v.isOffHand) output.modToDmg = true;
+				},
+				"When engaging in two-weapon fighting, I can add my ability modifier to the damage of my off-hand attacks. If a melee weapon includes 'off-hand' or 'secondary' in its name or description, it is considered an off-hand attack."
+			  ]
+			},
+		  },
+		  "fighting style [unarmed fighting]": {
+			name: "Fighting Style [Unarmed Fighting]",
+			description: "When I hit with my Unarmed Strike and deal damage, I can deal Bludgeoning damage equal to 1d6 plus my Strength modifier instead of the normal damage of an Unarmed Strike. If I am not holding any weapons or a Shield when I make the attack roll, the d6 becomes a d8.\n At the start of each of my turns, I can deal 1d4 Bludgeoning damage to one creature Grappled by me.",    
+			calcChanges: {
+			  atkAdd: [
+				function (fields, v) {
+				  if (v.baseWeaponName == "unarmed strike") {
+					if (fields.Damage_Die == 1 || fields.Damage_Die == "1d4") fields.Damage_Die = '1d6';
+					fields.Description += (fields.Description ? '; ' : '') + 'Versatile (d8)';
+				  }
+				},
+				"My unarmed strikes deal 1d6 damage instead of 1, which increases to 1d8 if I have both hands free to make an unarmed strike with.",
+				1
+			  ]
+			},
+		  },
 		},
 		"subclassfeature3": {
 			name: "Ranger Subclass",
@@ -5114,7 +5560,7 @@ legacySubClassRefactor("ranger", "beast master", {
 			name: "Primal Companion",
 			source: [["P24", 122]],
 			minlevel: 3,
-			action: [["action", "Revive Companion"], ["bonus action", "Command Companion"]],
+			action: [["action", "Revive Companion"]],
 			additional: "Companion Sheet",
 			description: desc([
 				"Choose a primal beast using the \"Companion Options\" button on the Companion Sheet.",
@@ -5127,7 +5573,7 @@ legacySubClassRefactor("ranger", "beast master", {
 			source: [["P24", 123]],
 			minlevel: 7,
 			description: desc([
-				"As a bonus action, I can command it to take the Dash/Disengage/Dodge/Help action.",
+				"When I command my beast to take an action, I can also have it Dash/Disengage/Dodge/Help as a bonus action.",
 				"My Primal Companion's attacks count can deal Force damage or its normal damage type.",]),
 		},
 		"subclassfeature11": {
@@ -5678,9 +6124,10 @@ legacyClassRefactor("rogue", {
       name: "Evasion",
       source: [["P24", 131]],
       minlevel: 7,
-      description: desc([
-        "If I'm conscious and must make a Dex save to take half damage on an effect I take no damage on a pass & half damage on a fail.",
-      ]),
+      description : desc[(
+		"When not Incapacitated and must make a Dex save to take half damage on an effect I take no damage on a pass & half damage on a fail."
+	  )],
+	  savetxt : { text : ["When not Incapacitated Dex saves: fail \u2015 half dmg, success \u2015 no dmg"] },
     },
     "reliable talent": {
       name: "Reliable Talent",
@@ -7435,7 +7882,8 @@ legacySubClassRefactor("warlock", "the celestial", {
       limfeaname: "Healing Light (d6s)",
       usages: [0, 0, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
       recovery: "long rest",
-      additional: "Max dice per use = Charisma Modifier", 	  
+	  action : [["bonus action", ""]],
+      additional: "(Max per use: Cha Mod)", 	  
       description: desc([
         "As a bonus action, I can heal a creature I can see within 60 ft or myself by spending dice from my pool (min 1), healing HP equal to the roll.",
       ]),
@@ -9363,7 +9811,7 @@ RaceSubList["goliath-stone"] = {
       usages: "Proficiency bonus per ",
       usagescalc: "event.value = How('Proficiency Bonus');",
       recovery: "long rest",
-      action: [["reaction", "Stone's Endurance(When I take Dmg)"]],
+      action: [["reaction", "Stone's Endurance (When I take Dmg)"]],
       description: desc([
         "When I take damage, I can take a Reaction to roll 1d12. Add my Constitution modifier to the number rolled and reduce the damage by that total.",
       ]),
@@ -10348,7 +10796,7 @@ FeatsList["mage slayer"] = {
   name: "Mage Slayer",
   source: [["P24", 205]],
   regExpSearch: /^(?=.*mage)(?=.*slayer).*$/i,
-  limfeaname: "Guarded Mind",
+  limfeaname: "Guarded Mind (Mage Slayer)",
   usages: 1,
   recovery: "short rest",
   description: "+1 Str/Dex, When I deal damage to a creature concentrating on a spell, they have Disadvantage on the saving throw to maintain concentration. Once per rest, when I fail an Int, Wis, or Cha save, I can choose to succeed.",  
@@ -10458,7 +10906,7 @@ FeatsList["mounted combatant"] = {
   name: "Mounted Combatant",
   source: [["P24", 205]],
   regExpSearch: /^(?=.*mounted)(?=.*combatant).*$/i,
-  description: "+1 Str/Dex/Wis, I have adv on atk rolls while mounted against non-mounted combatants within 5 feet that are smaller than my mount, Mounts who succeed dex saves take no damage instead of half, when an attack hits my mount I can have the attack hit me instead if I don't have the Incap condition.",  
+  description: "+1 Str/Dex/Wis, While mounted: I have adv on atk rolls against unmounted creatures in 5 ft that are smaller than my mount; if my mount makes a Dex save to take half dmg from an effect, it takes no dmg on a pass and half on a fail; when an atk hits my mount, I can have it hit me instead if I'm not Incapacitated.",  
   descriptionFull: desc([
     "You gain the following benefits",
     "Ability Score Increase : Increase your Strength, Dexterity, or Wisdom score by 1 to a maximum of 20.",
@@ -10468,15 +10916,15 @@ FeatsList["mounted combatant"] = {
   ]),  
   choices: ["Strength", "Dexterity", "Wisdom"],
   "strength": {
-    description: "I have adv on atk rolls while mounted against non-mounted combatants within 5 feet that are smaller than my mount, Mounts who succeed dex saves take no damage instead of half, when an attack hits my mount I can have the attack hit me instead if I don't have the Incap condition. [+1 Strength]",
+    description: "While mounted: I have adv on atk rolls against unmounted creatures in 5 ft that are smaller than my mount; if my mount makes a Dex save to take half dmg from an effect, it takes no dmg on a pass and half on a fail; when an atk hits my mount, I can have it hit me instead if I'm not Incapacitated. [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
   },
   "dexterity": {
-    description: "I have adv on atk rolls while mounted against non-mounted combatants within 5 feet that are smaller than my mount, Mounts who succeed dex saves take no damage instead of half, when an attack hits my mount I can have the attack hit me instead if I don't have the Incap condition. [+1 Dexterity]",
+    description: "While mounted: I have adv on atk rolls against unmounted creatures in 5 ft that are smaller than my mount; if my mount makes a Dex save to take half dmg from an effect, it takes no dmg on a pass and half on a fail; when an atk hits my mount, I can have it hit me instead if I'm not Incapacitated. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
   },
   "wisdom": {
-    description: "I have adv on atk rolls while mounted against non-mounted combatants within 5 feet that are smaller than my mount, Mounts who succeed dex saves take no damage instead of half, when an attack hits my mount I can have the attack hit me instead if I don't have the Incap condition. [+1 Wisdom]",
+    description: "While mounted: I have adv on atk rolls against unmounted creatures in 5 ft that are smaller than my mount; if my mount makes a Dex save to take half dmg from an effect, it takes no dmg on a pass and half on a fail; when an atk hits my mount, I can have it hit me instead if I'm not Incapacitated. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
   },
   prerequisite: "Level 4",
@@ -10688,7 +11136,7 @@ FeatsList["sentinel"] = {
   name: "Sentinel",
   source: [["P24", 207]],
   regExpSearch: /^(?=.*sentinel).*$/i,
-  description: "+1 Str/+1 Dex, Reac. when crea w/i 5ft takes Disengage action or hits another target other than me, I can make an Opportunity Attack. When I make an Opportunity Attack against a crea. it's Speed becomes 0 for the rest of the current turn.",  
+  description: "+1 Str/+1 Dex, Reaction when creature in 5 ft takes Disengage action or hits target other than me, I can make an Opportunity Attack vs them. When I make an Opportunity Attack against a creature, its Speed becomes 0 for the rest of the current turn.",  
   descriptionFull: desc([
     "You gain the following benefits",
     "Ability Score Increase : Increase your Strength or Dexterity score by 1 to a maximum of 20.",
@@ -10697,11 +11145,11 @@ FeatsList["sentinel"] = {
   ]),
   choices: ["Strength", "Dexterity"],
   "strength": {
-    description: "Reac. when crea w/i 5ft takes Disengage action or hits another target other than I, I can make an Opportunity Attack. When I make an Opportunity Attack against a crea. Its Speed becomes 0 for the rest of the current turn. [+1 Strength]",
+    description: "Reaction when creature in 5 ft takes Disengage action or hits target other than me, I can make an Opportunity Attack vs them. When I make an Opportunity Attack against a creature, its Speed becomes 0 for the rest of the current turn. [+1 Strength]",
     scores: [1, 0, 0, 0, 0, 0],
   },
   "dexterity": {
-    description: "Reac. when crea w/i 5ft takes Disengage action or hits another target other than I, I can make an Opportunity Attack. When I make an Opportunity Attack against a crea. Its Speed becomes 0 for the rest of the current turn. [+1 Dexterity]",
+    description: "Reaction when creature in 5 ft takes Disengage action or hits target other than me, I can make an Opportunity Attack vs them. When I make an Opportunity Attack against a creature, its Speed becomes 0 for the rest of the current turn. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
   },
   action: ["reaction", " (after Disengage/attack on ally)"],
@@ -10794,12 +11242,13 @@ FeatsList["shield master"] = {
     type: "special",
     damage: ["", "", ""],
     range: "Melee, 5ft",
-    description: "Once per turn as part of the attack action you take with a Melee weapon, use shield to knock an enemy prone or push 5 ft",
+    description: "Once per turn when hit with Melee weapon during Attack action, use shield to knock an enemy prone or push 5 ft",
     abilitytodamage: false,
     dc: true,
     selectNow: true,
+	isNotWeapon : true,
+	isAlwaysProf : true,
   }],
-  weaponProfs: [false, false, ["shield bash"]],
   description: "Once per turn when I use the Attack action and hit with melee weapon, I can cause the creature I hit to make a STR save (DC 8 + STR + Prof). If it fails I can either push the creature 5 feet or knock it Prone. As a reaction, if I succeed on a Dex save for half damage, I can interpose my shield to avoid the damage. [+1 Str]",
   descriptionFull: desc([
 	"You gain the following benefits:",
@@ -10807,7 +11256,7 @@ FeatsList["shield master"] = {
 	"Shield Bash : If you attack a creature within 5 feet of you as part of the Attack action and hit with a Melee weapon, you can immediately bash the target with your Shield if it's equipped forcing the target to make a Strength saving throw (DC 8 plus your Strength modifier and Proficiency Bonus). On a failed save, you either push the target 5 feet from you or cause it to have the Prone condition (your choice). You can use this benefit only once on each of your turns.",
 	"Interpose Shield. If you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you can take a Reaction to take no damage if you succeed on the saving throw and are holding a Shield.",
   ]),
-  action: [['reaction', 'Interpose shield (Uncanny Dodge)']],
+  action: [['reaction', 'Interpose shield']],
   prerequisite: "Level 4 and Shield Training",
   prereqeval: function (v) {
     return v.characterLevel >= 4 && v.shieldProf;
@@ -11370,7 +11819,7 @@ FeatsList["weapon master"] = {
     description: "I gain access to the Musket's 'Slow' Mastery feature. Slow : If I hit a creature with this weapon and deal damage to it, I can reduce its Speed by 10 feet until the start of my next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn't exceed 10 feet.",    
     prerequisite: "Musket Proficiency",
     prereqeval: function (v) {
-      return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("musket") !== -1;
+      return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("musket" || "firearms") !== -1;
     },
   },
   "weapon master (pistol)": {
@@ -11378,7 +11827,7 @@ FeatsList["weapon master"] = {
     description: "I gain access to the Pistol's 'Vex' Mastery feature. Vex : If I hit a creature with this weapon and deal damage to the creature, I have Advantage on my next attack roll against the creature before the end of my next turn.",    
     prerequisite: "Pistol Proficiency",
     prereqeval: function (v) {
-      return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("pistol") !== -1;
+      return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("pistol" || "firearms") !== -1;
     },
   },
   prerequisite: "Level 4",
@@ -12852,7 +13301,7 @@ WeaponsList["musket"] = {
   damage: [1, 12, "piercing"],
   range: "40/120",
   description: "Ammunition (Bullet, Firearm), Loading, Two-Handed; Slow",
-  list: "ranged",
+  list: ["ranged", "firearm"],
   weight: 10,
   ammo: "bullets, firearm",
   monkweapon: false,
@@ -12868,7 +13317,7 @@ WeaponsList["pistol"] = {
   damage: [1, 10, "piercing"],
   range: "30/90",
   description: "Ammunition (Bullet, Firearm), Loading; Vex",
-  list: "ranged",
+  list: ["ranged", "firearm"],
   weight: 3,
   ammo: "bullets, firearm",
   monkweapon: false,
@@ -13158,7 +13607,7 @@ WeaponsList["net"] = {
 	damage : ["\u2015", "", "Restrained"],
 	range : "5/15 ft",
 	weight : 3,
-	description : "Thrown, only 1 attack, up to large creature hit is restrained",
+	description : "Thrown, replace 1 attack, up to Large creature saves or Restrained",
 	tooltip : "Special: A Large or smaller creature hit by a net is restrained until it is freed. A net has no effect on creatures that are formless, or creatures that are Huge or larger. A creature can use its action to make a DC 10 Strength(Athletics) check, freeing itself or another creature within its reach on a success. Dealing 5 slashing damage to the net (AC 10) also frees the creature without harming it, ending the effect and destroying the net. When I use an action, bonus action, or reaction to attack with a net, I can make only one attack regardless of the number of attacks I can normally make.",
 	special : true,
 	abilitytodamage : false,
@@ -19062,7 +19511,7 @@ legacySpellRefactor("sorcerous burst", {
 	range : "120 ft",
 	components : "V,S",
 	duration : "Instantaneous",
-	description : "Spell atk 1d8 Acid/Cold/Fire/Lightn./Poison/Psych/Thndr; +1d8 per 8 (max spell mod) +1d8 CL 5/11/17",
+	description : "Spell atk 1d8 Acid/Cold/Fire/Lightn./Poison/Psych/Thndr; +1d8 per 8 (max = spell mod) +1d8 CL 5/11/17.",
 	descriptionCantripDie : "Spell atk 1 crea `CD`d8 (Acid/Cold/Fire/Lightn./Poison/Psych/Thndr); +1d8 per 8 (max spell mod)",
 	descriptionFull : "You cast sorcerous energy at one creature or object within range. Make a ranged attack roll against the target. On a hit, the target takes 1d8 damage of a type you choose: Acid, Cold, Fire, Lightning, Poison, Psychic, or Thunder." + "\n   " + "If you roll an 8 on a d8 for this spell, you can roll another d8, and add it to the damage. When you cast this spell, the maximum number of these d8s you can add to the spell's damage equals your spellcasting ability modifier." + "\n   " + toUni("Cantrip Upgrade") + ". The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8)."
 });
@@ -20355,7 +20804,7 @@ CompanionList["companion"] = {
 	source : [["P24", 122]],
 	action : [["bonus action", "Ranger's Companion (command)"]],
 	notes : [{
-		name : "If the beast has died within the lasts hour",
+		name : "If the beast has died within the **last**hour,",
 		description : [
 		"I can take a Magic action to touch it and expend a spell slot.",
 		"The beast returns to life after 1 minute with all its Hit Points restored."
@@ -20372,23 +20821,18 @@ CompanionList["companion"] = {
 	}, {
 		name : "In Combat",
 		description : [
-			"The beast takes its turn on my initiative",
-			"I can verbally command the beast where to move (no action)",
-			"As a bonus action, I can have the beast do a Dash, Disengage, or Help action on its turn",
+			"The beast acts during my turn. It can move and use its Reaction on its own.",
+			"As a Bonus Action, I can command the beast to use an action in its statblock or another standard action ",
 			"I can sacrifice one of my attacks when I take the Attack action to command the beast to take the Beast's Strike action.",
-			"If I don't command it to take an action, it takes the Dodge action instead"
+			"If I don't command it to take another action, it takes the Dodge action instead.", 
+			"If I'm Incapacitated, the beast acts on its own without limits.",
 		].join("\n   "),
 		joinString : typePF ? ": " : ":\n   "
-	}, {
-		name : "Extra Attack (Ranger 5, P24 120)",
-		description : "If the beast takes the Attack action, I can use my Extra Attack feature to attack once myself",
-		joinString : "\n   ",
-		minlevel : 5
 	}, {
 		name : "Exceptional Training (Beast Master 7, P24 123)",
 		description : [
 			"The beast's attacks can deal Force damage or its normal damage type",
-			"As a bonus action, I can command it to take the Dash, Disengage, Dodge, or Help action on its turn"
+			"When I command my beast to take an action, I can also have it Dash/Disengage/Dodge/Help as a bonus action.",
 		].join("\n   "),
 		joinString : "\n   ",
 		minlevel : 7,
@@ -20400,7 +20844,6 @@ CompanionList["companion"] = {
 					AddString(sDescrFld, "Can deal Force damage or its normal damage type", "; ");
 				}
 			}
-			processActions(true, "Beast Master: Ranger's Companion", [["bonus action", "Exceptional Training (Dash/Disengage/Dodge/Help)"]], "Ranger's Companion");
 		},
 		removeeval : function(prefix, lvl) {
 			for (var i = 1; i <= 3; i++) {
@@ -20409,7 +20852,6 @@ CompanionList["companion"] = {
 				var rCaM = /(,|;)? ?counts as magical/i;
 				if (rCaM.test(sDescr)) Value(sDescrFld, sDescr.replace(rCaM, ''));
 			}
-			processActions(false, "Beast Master: Ranger's Companion", [["bonus action", "Exceptional Training (Dash/Disengage/Dodge/Help)"]], "Ranger's Companion");
 		}
 	}, {
 		name : "Bestial Fury (Beast Master 11, P24 123)",
@@ -22240,7 +22682,7 @@ CreatureList["beast of the land"] = {
 	companion : ["companion"],
 	companionApply : "companion",
 	alignment : "Neutral",
-	ac : "11+oWis",
+	ac : "13+oWis",
 	hp : 10,
 	hd : [1, 8],
 	hdLinked : ["ranger"],
@@ -22273,14 +22715,19 @@ CreatureList["beast of the land"] = {
 		damage : [1, 8, "Bludg./Pierc./Slash."],
 		modifiers : ["", "oWis"],
 		range : "Melee (5 ft)",
-		description : "+1d6 damage if hits after moving 20 ft straight in same round, if taget is Large or smaller it falls Prone.",
+		description : "+1d6 dmg if hits after moving 20 ft straight in same rough. Large or smaller target falls Prone.",
 		tooltip : "If the beast moved at least 20 feet straight toward the target before the hit, the target takes an extra 1d6 damageof the same type, and the target has the Prone condition if it is a Large or smaller creature.",
 		useSpellMod : "ranger",
 	}],
 	languages : "understands the languages I speak",
+	traits : [{
+		name : "Beast's Strike",
+		description : "The Primal Companion's Beast's Strike attack deals Bludgeoning, Pircing, or Slashing, which you choose when you summon the companion.",
+		joinString : "\n   ",
+	}],	
 	features : [{
 		name : "Primal Bond",
-		description : "I can add my Proficiency Bonus to any ability check or saving throw that the beast makes.",
+		description : "The primal companion adds my proficiency bonus to all its ability check and saving throws.",
 		joinString : "\n   ",
 	}],
 	header : "Companion",
@@ -22294,7 +22741,7 @@ CreatureList["beast of the sea"] = {
 	companion : ["companion"],
 	companionApply : "companion",
 	alignment : "Neutral",
-	ac : "11+oWis",
+	ac : "13+oWis",
 	hp : 10,
 	hd : [1, 8],
 	hdLinked : ["ranger", "ranger_ua23pt6"],
@@ -22304,6 +22751,7 @@ CreatureList["beast of the sea"] = {
 	challengeRating : 0,
 	scores : [14, 14, 15, 8, 14, 11],
 	attacksAction : 1,
+	senses : "",
 	addMod : [
 			{ type : "skill", field : "all", mod : "Prof", text : "The primal companion adds it proficiency bonus to all its ability check and saving throws." },
 			{ type : "skill", field : "Init", mod : "Prof", text : "The primal companion adds it proficiency bonus to all its ability check and saving throws." },
@@ -22329,13 +22777,18 @@ CreatureList["beast of the sea"] = {
 		useSpellMod : "ranger",
 	}],
 	languages : "understands the languages I speak",
-	features : [{
-		name : "Primal Bond",
-		description : "I can add my Proficiency Bonus to any ability check or saving throw that the beast makes.",
-		joinString : "\n   ",
-	}, {
+	traits : [{
 		name : "Amphibious",
 		description : "The beast can breathe air and water.",
+		joinString : "\n   ",
+	}, {
+		name : "Beast's Strike",
+		description : "The Primal Companion's Beast's Strike attack deals Bludgeoning or Slashing, which you choose when you summon the companion.",
+		joinString : "\n   ",
+	}],
+	features : [{
+		name : "Primal Bond",
+		description : "The primal companion adds my proficiency bonus to all its ability check and saving throws.",
 		joinString : "\n   ",
 	}],
 	header : "Companion",
@@ -22349,7 +22802,7 @@ CreatureList["beast of the sky"] = {
 	companion : ["companion"],
 	companionApply : "companion",
 	alignment : "Neutral",
-	ac : "10+oWis",
+	ac : "13+oWis",
 	hp : 8,
 	hd : [1, 6],
 	hdLinked : ["ranger", "ranger_ua23pt6"],
@@ -22359,6 +22812,7 @@ CreatureList["beast of the sky"] = {
 	challengeRating : 0,
 	scores : [6, 16, 13, 8, 14, 11],
 	attacksAction : 1,
+	senses : "",
 	addMod : [
 			{ type : "skill", field : "all", mod : "Prof", text : "The primal companion adds it proficiency bonus to all its ability check and saving throws." },
 			{ type : "skill", field : "Init", mod : "Prof", text : "The primal companion adds it proficiency bonus to all its ability check and saving throws." },
@@ -22385,13 +22839,14 @@ CreatureList["beast of the sky"] = {
 		useSpellMod : "ranger",
 	}],
 	languages : "understands the languages I speak",
-	features : [{
-		name : "Primal Bond",
-		description : "I can add my Proficiency Bonus to any ability check or saving throw that the beast makes.",
-		joinString : "\n   ",
-	}, {
+	traits : [{
 		name : "Flyby",
 		description : "The beast doesn’t provoke Opportunity Attacks when it flies out of an enemy’s reach.",
+		joinString : "\n   ",
+	}],
+	features : [{
+		name : "Primal Bond",
+		description : "The primal companion adds my proficiency bonus to all its ability check and saving throws.",
 		joinString : "\n   ",
 	}],
 	header : "Companion",
