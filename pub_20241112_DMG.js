@@ -980,7 +980,7 @@ MagicItemsList["boots of the winterlands"] = {
 	rarity : "uncommon",
 	attunement : true,
 	magicItemTable : "?",
-	description : "While wearing these boots, I have resistance to cold damage and I ignore difficult terrain created by ice or snow. I can tolerate temperatures of 0 degrees Fahrenheit or lower without any additional protection. \u00B0F.",
+	description : "While wearing these boots, I have resistance to cold damage and I ignore difficult terrain created by ice or snow. I can tolerate temperatures of 0 degrees Fahrenheit or lower without any additional protection.",
 	descriptionFull : "These furred boots are snug and feel warm. While wearing them, you gain the following benefits.\n \u2022 Cold Resistance. You have Resistance to Cold damage and can tolerate temperatures of 0 degrees Fahrenheit or lower without any additional protection.\n \u2022 Winter Strider. You ignore Difficult Terrain created by ice or snow.",
 	dmgres : ["Cold"]
 };
@@ -8055,13 +8055,13 @@ MagicItemsList["sun blade"] = {
 	description: "As a Bonus Action, you can have this hilt create a blade of radiance. While the blade exists, it acts like a magic Longsword that does +2 to attack and damage rolls, Radiant damage instead of Slashing (+1d8 to undead), has Finesse, emits Bright Light in a 15-ft radius and Dim Light in another 15 ft. You can take a Magic action, I can change the light's radius by 5 ft for each (Bright/Dim) to a maximum of 30 ft each or min of 10ft.",
 	descriptionFull: "This item appears to be a longsword hilt.\n" + toUni("Blade of Radiance") + ". While grasping the hilt, you can take a Bonus Action to cause a blade of pure radiance to spring into existence or make the blade disappear. While the blade exists, this magic weapon functions as a Longsword with the Finesse property. If you are proficient with Longswords or Shortswords, you are proficient with the Sun Blade..\n   You gain a +2 bonus to attack rolls and damage rolls made with this weapon, which deals Radiant damage instead of Slashing damage. When you hit an Undead with it, that target takes an extra 1d8 Radiant damage.\n" + toUni("Sunlight") + ". The sword’s luminous blade emits Bright Light in a 15-foot radius and Dim Light for an additional 15 feet. The light is sunlight. While the blade persists, you can take a Magic action to expand or reduce its radius of Bright Light and Dim Light by 5 feet each, to a maximum of 30 feet each or a minimum of 10 feet each.",
 	weight: 3,
-	action: [["bonus action", "(BladeofRadiance"], ["action", " (change light)"]],
+	action: [["bonus action", " (Blade of Radiance"], ["action", " (change light)"]],
 	weaponsAdd: ["Sun Blade"],
 	weaponOptions: {
 		baseWeapon: "longsword",
 		regExpSearch: /^(?=.*sun)(?=.*blade).*$/i,
 		name: "Sun Blade",
-		source: [["PHN2024", "-"]],
+		source: [["PHB2024", "-"]],
 		damage: [1, 8, "radiant"],
 		description: "Finesse, Versatile (1d10), Sap; +1d8 (Radiant) to undead",
 		modifiers: [2, 2]
