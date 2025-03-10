@@ -1507,6 +1507,7 @@ CreatureList["dire wolf"] = {
 	size : 2,
 	type : "Beast",
 	alignment : "Unaligned",
+	companion : "steed",
 	ac : 14,
 	hp : 22,
 	hd : [3, 10],
@@ -2542,7 +2543,7 @@ CreatureList["giant squid"] = { //need to look at ink cloud action
 		description : "If target is Huge or smaller it is Grappled + Restrained (escape DC 16), the squid can also pull a Grappled target 10 ft closer to it.",
 	}],
 };
-CreatureList["giant toad"] = { //need to look at swallow action
+CreatureList["giant toad"] = { 
 	name : "Giant Toad",
 	source : ["M24", 360],
 	size : 2,
@@ -2576,7 +2577,7 @@ CreatureList["giant toad"] = { //need to look at swallow action
 	actions : [{
 		name : "Swallow",
 		description : desc([
-			"The toad swallows a Medium or smaller target it is grappling. While swallowed, the target isn't Grabbled but hs the Blinded and Restrained conditions, and it has Total Cover against attacks and other effects outside the toad. In addition, the target takes 10(3d6) Acid damage at teh end of each of the toad's turns. The toad can have only one target swallowed at a time, and it can't use Bite while it has a swallowed target. If the toad dies, a swallowed creature is no longer Restraiened and can escape from the corpse using 5 feet of movement, exiting with the Prone condition.",
+			"Grappled Medium or smaller target, is no longer grappled but, blinded, restrained, has total cover, and it takes 10 (3d6) acid damage at end of toad's turn.  Only one target at a time. Cannot bite while creature is swallowed. When toad is dead, target spends 5ft of movement, and exits prone.",
 		]),
 	}],	
 	attacks : [{
@@ -2781,6 +2782,37 @@ CreatureList["goat"] = {
 		damage : [1, "", "Bludgeoning"],
 		range : "Melee (5 ft)",
 		description : "Or if moves 20+ ft in straight line before hit, 2 (1d4) Blud. dmg.",
+	}],
+};
+CreatureList["griffon"] = {
+	name : "Griffon",
+	source : [["M24", 159]],
+	size : 2,
+	type : "Monstrosity",
+	companion : "steed",
+	alignment : "Unaligned",
+	ac : 12,
+	hp : 59,
+	hd : [7, 10],
+	speed : "30 ft, fly 80 ft",
+	scores : [18, 15, 16, 2, 13, 8],
+	skills : {
+		"perception" : 5
+	},
+	senses : "Darkvision 60 ft",
+	challengeRating : 2,
+	proficiencyBonus : 2,
+	attacksAction : 2,
+	attacks : [{
+		name : "Rend",
+		ability : 1,
+		damage : [1, 8, "piercing"],
+		range : "Melee (5 ft)",
+		description : ""
+	}],
+	actions : [{
+		name : "Multiattack",
+		description : "The griffon makes two Rend attacks."
 	}],
 };
 CreatureList["hawk"] = {
@@ -3282,6 +3314,78 @@ CreatureList["panther"] = {
 		description : "Deals 7 (2d4 +2) Slashing damage instead if Advantage on the attack.",
 	}],
 };
+CreatureList["pegasus"] = {
+	name : "Pegasus",
+	source : [["M24", 235]],
+	size : 2,
+	type : "Celestial",
+	companion : "steed",
+	alignment : "Chaotic Good",
+	ac : 12,
+	hp : 59,
+	hd : [7, 10],
+	speed : "60 ft, fly 90 ft",
+	scores : [18, 15, 16, 10, 15, 13],
+	saves : ["", 4, 5, "", 4, 3],
+	skills : {
+		"perception" : 6
+	},
+	senses : "",
+	languages : "understands Celestial, Common, Elvish, and Sylvan but can't speak",
+	challengeRating : 2,
+	proficiencyBonus : 2,
+	attacksAction : 1,
+	attacks : [{
+		name : "Hooves",
+		ability : 1,
+		damage : [1, 6, "bludgeoning"],
+		range : "Melee (5 ft)",
+		description : "Plus 5 (2d4) Radiant damage"
+	}]
+};
+CreatureList["peryton"] = {
+	name : "Peryton",
+	source : [["M24", 238]],
+	size : 3,
+	type : "Monstrosity",
+	companion : "steed",
+	alignment : "Chaotic Evil",
+	ac : 13,
+	hp : 33,
+	hd : [6, 8],
+	speed : "20 ft, fly 60 ft",
+	scores : [16, 12, 13, 9, 12, 10],
+	skills : {
+		"perception" : 5,
+		"stealth" : 3,
+	},
+	senses : "",
+	languages : "understands Common and Elvish, but can't speak",
+	challengeRating : 2,
+	proficiencyBonus : 2,
+	attacksAction : 2,
+	attacks : [{
+		name : "Gore",
+		ability : 1,
+		damage : [1, 8, "piercing"],
+		range : "Melee (5 ft)",
+		description : "+2d8 if moves 30+ ft straight toward target"
+	}, {
+		name : "Talons",
+		ability : 1,
+		damage : [2, 4, "piercing"],
+		range : "Melee (5 ft)",
+		description : "If target dies by attack, peryton removes target's heart",
+	}],
+	actions : [{
+		name : "Multiattack",
+		description : "The peryton makes one gore attack and one talon attack."
+	}],
+	traits : [{
+		name : "Flyby",
+		description : "The peryton doesn't provoke an opportunity attack when it flies out of an enemy's reach."
+	}]
+};
 CreatureList["piranha"] = {
 	name : "Piranha",
 	source : ["M24", 366],
@@ -3557,6 +3661,7 @@ CreatureList["rhinoceros"] = {
 	size : 2,
 	type : "Beast",
 	alignment : "Unaligned",
+	companion : "steed",
 	ac : 13,
 	hp : 45,
 	hd : [6, 10],
@@ -3610,6 +3715,7 @@ CreatureList["saber-toothed tiger"] = {
 	size : 2,
 	type : "Beast",
 	alignment : "Unaligned",
+	companion : "steed",
 	ac : 13,
 	hp : 52,
 	hd : [7, 10],
