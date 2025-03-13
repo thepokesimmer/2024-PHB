@@ -1499,7 +1499,7 @@ CreatureList["deer"] = {
 		range : "Melee (5 ft)",
 		description : "",
 	}],
-	wildshapeString : "Agile: The deer doens't provoke an Opportunity Attack when it moves out of an enemy's reach.",
+	wildshapeString : "Agile: The deer doesn't provoke an Opportunity Attack when it moves out of an enemy's reach.",
 };
 CreatureList["dire wolf"] = {
 	name : "Dire Wolf",
@@ -2201,7 +2201,7 @@ CreatureList["giant lizard"] = {
 	traits : [{
 		name : "Spider Climb",
 		description : desc([
-			"The lizard can climb difficult urfaces, including along ceilings, without needing to make an ability check.",
+			"The lizard can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
 		]),	
 	}],		
 	attacks : [{

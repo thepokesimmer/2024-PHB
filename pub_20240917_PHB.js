@@ -1760,7 +1760,7 @@ legacyClassRefactor("druid", {
   die: 8,
   saves: ["Int", "Wis"],
   skillstxt: {
-    primary: "Choose 2: Arcana, Animal Handling, Insight, Medicine, Nature, Perception, religion, or Survival",
+    primary: "Choose 2: Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, or Survival",
   },
   armorProfs: {
     primary: [true, false, false, true],
@@ -13507,7 +13507,7 @@ WeaponsList["shocking grasp"] = {
   type: "Cantrip",
   damage: ["C", 8, "lightning"],
   range: "Melee",
-  description: "Advantage if target is wearing metal armor, target cannot take reactions until its next turn",
+  description: "Target cannot make opportunity attacks until its next turn",
   abilitytodamage: false
 };
 WeaponsList["sorcerous burst"] = {
@@ -13531,7 +13531,7 @@ WeaponsList["starry wisp"] = {
   type: "Cantrip",
   damage: ["C", 8, "radiant"],
   range: "60 ft",
-  description: "target emit dim light in a 10ft rad. can't benefit from Invis.",
+  description: "target emits dim light in a 10ft rad., can't benefit from Invis.",
   abilitytodamage: false
 };
 WeaponsList["toll the dead"] = {
