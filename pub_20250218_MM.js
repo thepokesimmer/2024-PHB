@@ -2201,7 +2201,7 @@ CreatureList["giant lizard"] = {
 	traits : [{
 		name : "Spider Climb",
 		description : desc([
-			"The lizard can climb difficult urfaces, including along ceilings, without needing to make an ability check.",
+			"The lizard can climb difficult surfaces, including along ceilings, without needing to make an ability check.",
 		]),	
 	}],		
 	attacks : [{
