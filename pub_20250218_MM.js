@@ -2566,7 +2566,7 @@ CreatureList["giant toad"] = {
 	traits : [{
 		name : "Amphibious",
 		description : desc([
-			"The toad can breath air and water.",
+			"The toad can breathe air and water.",
 		]),
 	}, {
 		name : "Standing Leap",
@@ -3283,7 +3283,7 @@ CreatureList["panther"] = {
 	size : 3,
 	type : "Beast",
 	alignment : "Unaligned",
-	ac : 12,
+	ac : 13,
 	hp : 13,
 	hd : [3, 8],
 	speed : "50 ft, Climb 40 ft",
@@ -3291,7 +3291,7 @@ CreatureList["panther"] = {
 	saves : ["", "", "", "", "", ""],
 	skills : {
 		"perception" : 4,
-		"stealth" : 6,
+		"stealth" : 7,
 	},
 	senses : "Darkvision 60 ft",
 	languages : "",
@@ -3299,19 +3299,16 @@ CreatureList["panther"] = {
 	proficiencyBonus : 2,
 	attacksAction : 1,
 	actions : [{
-		name : "Prowl",
-		description : "The panther moves up to half its Speed without provoking Opportunity Attacks. At the end of this movement, the panther can take the Hide action.",
+		name : "Nimble Escape",
+		description : "As a Bonus Action, the panther takes the Disengage or Hide action.",
 		joinString : "\n   ",
-	}, {
-		name : "Multiattack",
-		description : "The panther makes one Pounce attack and uses Prowl.",
 	}],
 	attacks : [{
-		name : "Pounce",
+		name : "Rend",
 		ability : 1,
-		damage : [1, 4, "Slashing"],
+		damage : [1, 6, "Slashing"],
 		range : "Melee (5 ft)",
-		description : "Deals 7 (2d4 +2) Slashing damage instead if Advantage on the attack.",
+		description : "",
 	}],
 };
 CreatureList["pegasus"] = {
@@ -3862,8 +3859,8 @@ CreatureList["tiger"] = {
 	type : "Beast",
 	alignment : "Unaligned",
 	ac : 13,
-	hp : 22,
-	hd : [3, 10],
+	hp : 30,
+	hd : [4, 10],
 	speed : "40 ft",
 	scores : [17, 16, 14, 3, 12, 8],
 	saves : ["", "", "", "", "", ""],
@@ -3877,19 +3874,16 @@ CreatureList["tiger"] = {
 	proficiencyBonus : 2,
 	attacksAction : 1,
 	actions : [{
-		name : "Prowl",
-		description : "The tiger moves up to half its Speed without provoking Opportunity Attacks. At the end of this movement, the tiger can take the Hide action.",
+		name : "Nimble Escape",
+		description : "As a Bonus Action, the tiger takes the Disengage or Hide action.",
 		joinString : "\n   ",
-	}, {
-		name : "Multiattack",
-		description : "The tiger makes one Pounce attack and uses Prowl.",
 	}],
 	attacks : [{
-		name : "Pounce",
+		name : "Rend",
 		ability : 1,
-		damage : [1, 6, "Slashing"],
+		damage : [2, 6, "Slashing"],
 		range : "Melee (5 ft)",
-		description : "Deals an extra 3 (1d6) Slashing damage if Advantage on the attack. If the target is Huge or smaller, it falls Prone. Also uses Prowl.",
+		description : "If the target is a Large or smaller creature, it has the Prone condition.",
 	}],
 };
 CreatureList["triceratops"] = {
