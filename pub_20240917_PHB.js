@@ -2150,11 +2150,11 @@ legacySubClassRefactor("druid", "moon", {
 			" \u2022 I get its skill/saving throw prof. while keeping my own, using whichever is higher",
 			" \u2022 I gain three times my Druid level Temp HP",
 			" \u2022 I can't cast spells in beast form, but transforming doesn't break concentration",
-			" \u2022 I retain features from class, race, etc., but I don't retain special senses",
+			" \u2022 I retain my HP, hit dice, class features, feats and creature type",
 			" \u2022 I can choose whether equipment falls to the ground, merges, or stays worn",
 			" \u2022 I revert if out of time or Incapacitated; I die, or I end it as a Bonus Action"
 		]),
-		usages : [0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, "\u221E\xD7 per "],
+		usages : [0, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4],
 		recovery : "short rest",
 		additional : levels.map(function (n) {
 			if (n < 2) return "";
@@ -2165,7 +2165,7 @@ legacySubClassRefactor("druid", "moon", {
 		}),
 		action : [["bonus action", " (start/stop)"]],
 		eval : function() {
-			processActions(false, "Druid: Wild Shape", ClassList.druid.features["subclassfeature3.wild shape"].action, "Wild Shape");
+			processActions(false, "Druid: Wild Shape", ClassList.druid.features["wild shape"].action, "Wild Shape");
 		}
 	},
     "subclassfeature6": {
@@ -2426,7 +2426,7 @@ legacyClassRefactor("fighter", {
 		choices: ["Fighting Style [Archery]", "Fighting Style [Blind Fighting]", "Fighting Style [Defense]", "Fighting Style [Dueling]", "Fighting Style [Great Weapon Fighting]", "Fighting Style [Interception]", "Fighting Style [Protection]", "Fighting Style [Thrown Weapon Fighting]", "Fighting Style [Two-Weapon Fighting]", "Fighting Style [Unarmed Fighting]"],
 		  "fighting style [archery]": {
 			name: "Fighting Style [Archery]",
-			description: "I gain a +2 bonus to attack rolls I make with Ranged weapons.",    
+			description: " I gain a +2 bonus to attack rolls I make with Ranged weapons.",    
 			calcChanges: {
 			  atkCalc: [
 				function (fields, v, output) {
@@ -2438,12 +2438,12 @@ legacyClassRefactor("fighter", {
 		  },
 		  "fighting style [blind fighting]": {
 			name: "Fighting Style [Blind Fighting]",
-			description: "I have Blindsight with a range of 10 feet.",    
+			description: " I have Blindsight with a range of 10 feet.",    
 			vision: [["Blindsight", 10]],
 		  },
 		  "fighting style [defense]": {
 			name: "Fighting Style [Defense]",
-			description: "While I'm wearing Light, Medium, or Heavy armor, I gain a +1 bonus to Armor Class.",    
+			description: " While I'm wearing Light, Medium, or Heavy armor, I gain a +1 bonus to Armor Class.",    
 			extraAC: {
 			  name: "Defense Fighting Style", // necessary for features referring to fighting style properties directly
 			  mod: 1,
@@ -2455,7 +2455,7 @@ legacyClassRefactor("fighter", {
 		  },
 		  "fighting style [dueling]": {
 			name: "Fighting Style [Dueling]",
-			description: "When I'm holding a Melee weapon in one hand and no other weapons, I gain a +2 bonus to damage rolls with that weapon.",    
+			description: " When I'm holding a Melee weapon in one hand and no other weapons, I gain a +2 bonus to damage rolls with that weapon.",    
 			calcChanges: {
 			  atkCalc: [
 				function (fields, v, output) {
@@ -2470,7 +2470,7 @@ legacyClassRefactor("fighter", {
 		  },
 		  "fighting style [great weapon fighting]": {
 			name: "Fighting Style [Great Weapon Fighting]",
-			description: "When I roll damage for an attack I make with a Melee weapon that I am holding with two hands, I can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile properties to gain this benefit.",    
+			description: " When I roll damage for an attack I make with a Melee weapon that I am holding with two hands, I can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile properties to gain this benefit.",    
 			calcChanges: {
 			  atkAdd: [
 				function (fields, v) {
@@ -2484,17 +2484,17 @@ legacyClassRefactor("fighter", {
 		  },
 		  "fighting style [interception]": {
 			name: "Fighting Style [Interception]",
-			description: "When a creature I can see hits another creature within 5 feet of me with an attack roll, I can take a Reaction to reduce the damage dealt to the target by 1d10 plus my Proficiency Bonus. I must be holding a Shield or a Simple or Martial weapon to use this Reaction.",    
+			description: " When a creature I can see hits another creature within 5 feet of me with an attack roll, I can take a Reaction to reduce the damage dealt to the target by 1d10 plus my Proficiency Bonus. I must be holding a Shield or a Simple or Martial weapon to use this Reaction.",    
 			action: "reaction",
 		  },
 		  "fighting style [protection]": {
 			name: "Fighting Style [Protection]",
-			description: "When a creature I can see attacks a target other than me that is within 5 feet of me, I can take a Reaction to interpose my Shield if I'm holding one. I impose Disadvantage on the triggering attack roll and all other attack rolls against the target until the start of my next turn if I remain within 5 feet of the target.",    
+			description: " When a creature I can see attacks a target other than me that is within 5 feet of me, I can take a Reaction to interpose my Shield if I'm holding one. I impose Disadvantage on the triggering attack roll and all other attack rolls against the target until the start of my next turn if I remain within 5 feet of the target.",    
 			action: "reaction",
 		  },
 		  "fighting style [thrown weapon fighting]": {
 			name: "Fighting Style [Thrown Weapon Fighting]",
-			description: "When I hit with a ranged attack roll using a weapon that has the Thrown property, I gain a +2 bonus to the damage roll.",    
+			description: " When I hit with a ranged attack roll using a weapon that has the Thrown property, I gain a +2 bonus to the damage roll.",    
 			calcChanges: {
 			  atkAdd: [
 				function (fields, v) {
@@ -2516,7 +2516,7 @@ legacyClassRefactor("fighter", {
 		  },
 		  "fighting style [two-weapon fighting]": {
 			name: "Fighting Style [Two-Weapon Fighting]",
-			description: "When I make an extra attack as a result of using a weapon that has the Light property, I can add my ability modifier to the damage to that attack if I am not already adding it to the damage.",    
+			description: " When I make an extra attack as a result of using a weapon that has the Light property, I can add my ability modifier to the damage to that attack if I am not already adding it to the damage.",    
 			calcChanges: {
 			  atkCalc: [
 				function (fields, v, output) {
@@ -2528,7 +2528,7 @@ legacyClassRefactor("fighter", {
 		  },
 		  "fighting style [unarmed fighting]": {
 			name: "Fighting Style [Unarmed Fighting]",
-			description: "When I hit with my Unarmed Strike and deal damage, I can deal Bludgeoning damage equal to 1d6 plus my Strength modifier instead of the normal damage of an Unarmed Strike. If I am not holding any weapons or a Shield when I make the attack roll, the d6 becomes a d8.\n At the start of each of my turns, I can deal 1d4 Bludgeoning damage to one creature Grappled by me.",    
+			description: " When I hit with my Unarmed Strike and deal damage, I can deal Bludgeoning damage equal to 1d6 plus my Strength modifier instead of the normal damage of an Unarmed Strike. If I am not holding any weapons or a Shield when I make the attack roll, the d6 becomes a d8.\n At the start of each of my turns, I can deal 1d4 Bludgeoning damage to one creature Grappled by me.",    
 			calcChanges: {
 			  atkAdd: [
 				function (fields, v) {
@@ -4431,7 +4431,7 @@ legacyClassRefactor("paladin", {
 			choices: ["Fighting Style [Archery]", "Fighting Style [Blessed Warrior]", "Fighting Style [Blind Fighting]", "Fighting Style [Defense]", "Fighting Style [Dueling]", "Fighting Style [Great Weapon Fighting]", "Fighting Style [Interception]", "Fighting Style [Protection]", "Fighting Style [Thrown Weapon Fighting]", "Fighting Style [Two-Weapon Fighting]", "Fighting Style [Unarmed Fighting]"],
 		  "fighting style [archery]": {
 			name: "Fighting Style [Archery]",
-			description: "I gain a +2 bonus to attack rolls I make with Ranged weapons.",    
+			description: " I gain a +2 bonus to attack rolls I make with Ranged weapons.",    
 			calcChanges: {
 			  atkCalc: [
 				function (fields, v, output) {
@@ -4456,12 +4456,12 @@ legacyClassRefactor("paladin", {
 			},
 		  "fighting style [blind fighting]": {
 			name: "Fighting Style [Blind Fighting]",
-			description: "I have Blindsight with a range of 10 feet.",    
+			description: " I have Blindsight with a range of 10 feet.",    
 			vision: [["Blindsight", 10]],
 		  },
 		  "fighting style [defense]": {
 			name: "Fighting Style [Defense]",
-			description: "While I'm wearing Light, Medium, or Heavy armor, I gain a +1 bonus to Armor Class.",    
+			description: " While I'm wearing Light, Medium, or Heavy armor, I gain a +1 bonus to Armor Class.",    
 			extraAC: {
 			  name: "Defense Fighting Style", // necessary for features referring to fighting style properties directly
 			  mod: 1,
@@ -4473,7 +4473,7 @@ legacyClassRefactor("paladin", {
 		  },
 		  "fighting style [dueling]": {
 			name: "Fighting Style [Dueling]",
-			description: "When I'm holding a Melee weapon in one hand and no other weapons, I gain a +2 bonus to damage rolls with that weapon.",    
+			description: " When I'm holding a Melee weapon in one hand and no other weapons, I gain a +2 bonus to damage rolls with that weapon.",    
 			calcChanges: {
 			  atkCalc: [
 				function (fields, v, output) {
@@ -4488,7 +4488,7 @@ legacyClassRefactor("paladin", {
 		  },
 		  "fighting style [great weapon fighting]": {
 			name: "Fighting Style [Great Weapon Fighting]",
-			description: "When I roll damage for an attack I make with a Melee weapon that I am holding with two hands, I can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile properties to gain this benefit.",    
+			description: " When I roll damage for an attack I make with a Melee weapon that I am holding with two hands, I can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile properties to gain this benefit.",    
 			calcChanges: {
 			  atkAdd: [
 				function (fields, v) {
@@ -4502,17 +4502,17 @@ legacyClassRefactor("paladin", {
 		  },
 		  "fighting style [interception]": {
 			name: "Fighting Style [Interception]",
-			description: "When a creature I can see hits another creature within 5 feet of me with an attack roll, I can take a Reaction to reduce the damage dealt to the target by 1d10 plus my Proficiency Bonus. I must be holding a Shield or a Simple or Martial weapon to use this Reaction.",    
+			description: " When a creature I can see hits another creature within 5 feet of me with an attack roll, I can take a Reaction to reduce the damage dealt to the target by 1d10 plus my Proficiency Bonus. I must be holding a Shield or a Simple or Martial weapon to use this Reaction.",    
 			action: "reaction",
 		  },
 		  "fighting style [protection]": {
 			name: "Fighting Style [Protection]",
-			description: "When a creature I can see attacks a target other than me that is within 5 feet of me, I can take a Reaction to interpose my Shield if I'm holding one. I impose Disadvantage on the triggering attack roll and all other attack rolls against the target until the start of my next turn if I remain within 5 feet of the target.",    
+			description: " When a creature I can see attacks a target other than me that is within 5 feet of me, I can take a Reaction to interpose my Shield if I'm holding one. I impose Disadvantage on the triggering attack roll and all other attack rolls against the target until the start of my next turn if I remain within 5 feet of the target.",    
 			action: "reaction",
 		  },
 		  "fighting style [thrown weapon fighting]": {
 			name: "Fighting Style [Thrown Weapon Fighting]",
-			description: "When I hit with a ranged attack roll using a weapon that has the Thrown property, I gain a +2 bonus to the damage roll.",    
+			description: " When I hit with a ranged attack roll using a weapon that has the Thrown property, I gain a +2 bonus to the damage roll.",    
 			calcChanges: {
 			  atkAdd: [
 				function (fields, v) {
@@ -4534,7 +4534,7 @@ legacyClassRefactor("paladin", {
 		  },
 		  "fighting style [two-weapon fighting]": {
 			name: "Fighting Style [Two-Weapon Fighting]",
-			description: "When I make an extra attack as a result of using a weapon that has the Light property, I can add my ability modifier to the damage to that attack if I am not already adding it to the damage.",    
+			description: " When I make an extra attack as a result of using a weapon that has the Light property, I can add my ability modifier to the damage to that attack if I am not already adding it to the damage.",    
 			calcChanges: {
 			  atkCalc: [
 				function (fields, v, output) {
@@ -4546,7 +4546,7 @@ legacyClassRefactor("paladin", {
 		  },
 		  "fighting style [unarmed fighting]": {
 			name: "Fighting Style [Unarmed Fighting]",
-			description: "When I hit with my Unarmed Strike and deal damage, I can deal Bludgeoning damage equal to 1d6 plus my Strength modifier instead of the normal damage of an Unarmed Strike. If I am not holding any weapons or a Shield when I make the attack roll, the d6 becomes a d8.\n At the start of each of my turns, I can deal 1d4 Bludgeoning damage to one creature Grappled by me.",    
+			description: " When I hit with my Unarmed Strike and deal damage, I can deal Bludgeoning damage equal to 1d6 plus my Strength modifier instead of the normal damage of an Unarmed Strike. If I am not holding any weapons or a Shield when I make the attack roll, the d6 becomes a d8.\n At the start of each of my turns, I can deal 1d4 Bludgeoning damage to one creature Grappled by me.",    
 			calcChanges: {
 			  atkAdd: [
 				function (fields, v) {
@@ -5330,7 +5330,7 @@ legacyClassRefactor("ranger", {
 			choices: ["Fighting Style [Archery]", "Fighting Style [Druidic Warrior]", "Fighting Style [Blind Fighting]", "Fighting Style [Defense]", "Fighting Style [Dueling]", "Fighting Style [Great Weapon Fighting]", "Fighting Style [Interception]", "Fighting Style [Protection]", "Fighting Style [Thrown Weapon Fighting]", "Fighting Style [Two-Weapon Fighting]", "Fighting Style [Unarmed Fighting]"],
 		  "fighting style [archery]": {
 			name: "Fighting Style [Archery]",
-			description: "I gain a +2 bonus to attack rolls I make with Ranged weapons.",    
+			description: " I gain a +2 bonus to attack rolls I make with Ranged weapons.",    
 			calcChanges: {
 			  atkCalc: [
 				function (fields, v, output) {
@@ -5355,12 +5355,12 @@ legacyClassRefactor("ranger", {
 			},
 		  "fighting style [blind fighting]": {
 			name: "Fighting Style [Blind Fighting]",
-			description: "I have Blindsight with a range of 10 feet.",    
+			description: " I have Blindsight with a range of 10 feet.",    
 			vision: [["Blindsight", 10]],
 		  },
 		  "fighting style [defense]": {
 			name: "Fighting Style [Defense]",
-			description: "While I'm wearing Light, Medium, or Heavy armor, I gain a +1 bonus to Armor Class.",    
+			description: " While I'm wearing Light, Medium, or Heavy armor, I gain a +1 bonus to Armor Class.",    
 			extraAC: {
 			  name: "Defense Fighting Style", // necessary for features referring to fighting style properties directly
 			  mod: 1,
@@ -5372,7 +5372,7 @@ legacyClassRefactor("ranger", {
 		  },
 		  "fighting style [dueling]": {
 			name: "Fighting Style [Dueling]",
-			description: "When I'm holding a Melee weapon in one hand and no other weapons, I gain a +2 bonus to damage rolls with that weapon.",    
+			description: " When I'm holding a Melee weapon in one hand and no other weapons, I gain a +2 bonus to damage rolls with that weapon.",    
 			calcChanges: {
 			  atkCalc: [
 				function (fields, v, output) {
@@ -5387,7 +5387,7 @@ legacyClassRefactor("ranger", {
 		  },
 		  "fighting style [great weapon fighting]": {
 			name: "Fighting Style [Great Weapon Fighting]",
-			description: "When I roll damage for an attack I make with a Melee weapon that I am holding with two hands, I can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile properties to gain this benefit.",    
+			description: " When I roll damage for an attack I make with a Melee weapon that I am holding with two hands, I can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile properties to gain this benefit.",    
 			calcChanges: {
 			  atkAdd: [
 				function (fields, v) {
@@ -5401,17 +5401,17 @@ legacyClassRefactor("ranger", {
 		  },
 		  "fighting style [interception]": {
 			name: "Fighting Style [Interception]",
-			description: "When a creature I can see hits another creature within 5 feet of me with an attack roll, I can take a Reaction to reduce the damage dealt to the target by 1d10 plus my Proficiency Bonus. I must be holding a Shield or a Simple or Martial weapon to use this Reaction.",    
+			description: " When a creature I can see hits another creature within 5 feet of me with an attack roll, I can take a Reaction to reduce the damage dealt to the target by 1d10 plus my Proficiency Bonus. I must be holding a Shield or a Simple or Martial weapon to use this Reaction.",    
 			action: "reaction",
 		  },
 		  "fighting style [protection]": {
 			name: "Fighting Style [Protection]",
-			description: "When a creature I can see attacks a target other than me that is within 5 feet of me, I can take a Reaction to interpose my Shield if I'm holding one. I impose Disadvantage on the triggering attack roll and all other attack rolls against the target until the start of my next turn if I remain within 5 feet of the target.",    
+			description: " When a creature I can see attacks a target other than me that is within 5 feet of me, I can take a Reaction to interpose my Shield if I'm holding one. I impose Disadvantage on the triggering attack roll and all other attack rolls against the target until the start of my next turn if I remain within 5 feet of the target.",    
 			action: "reaction",
 		  },
 		  "fighting style [thrown weapon fighting]": {
 			name: "Fighting Style [Thrown Weapon Fighting]",
-			description: "When I hit with a ranged attack roll using a weapon that has the Thrown property, I gain a +2 bonus to the damage roll.",    
+			description: " When I hit with a ranged attack roll using a weapon that has the Thrown property, I gain a +2 bonus to the damage roll.",    
 			calcChanges: {
 			  atkAdd: [
 				function (fields, v) {
@@ -5433,7 +5433,7 @@ legacyClassRefactor("ranger", {
 		  },
 		  "fighting style [two-weapon fighting]": {
 			name: "Fighting Style [Two-Weapon Fighting]",
-			description: "When I make an extra attack as a result of using a weapon that has the Light property, I can add my ability modifier to the damage to that attack if I am not already adding it to the damage.",    
+			description: " When I make an extra attack as a result of using a weapon that has the Light property, I can add my ability modifier to the damage to that attack if I am not already adding it to the damage.",    
 			calcChanges: {
 			  atkCalc: [
 				function (fields, v, output) {
@@ -5445,7 +5445,7 @@ legacyClassRefactor("ranger", {
 		  },
 		  "fighting style [unarmed fighting]": {
 			name: "Fighting Style [Unarmed Fighting]",
-			description: "When I hit with my Unarmed Strike and deal damage, I can deal Bludgeoning damage equal to 1d6 plus my Strength modifier instead of the normal damage of an Unarmed Strike. If I am not holding any weapons or a Shield when I make the attack roll, the d6 becomes a d8.\n At the start of each of my turns, I can deal 1d4 Bludgeoning damage to one creature Grappled by me.",    
+			description: " When I hit with my Unarmed Strike and deal damage, I can deal Bludgeoning damage equal to 1d6 plus my Strength modifier instead of the normal damage of an Unarmed Strike. If I am not holding any weapons or a Shield when I make the attack roll, the d6 becomes a d8.\n At the start of each of my turns, I can deal 1d4 Bludgeoning damage to one creature Grappled by me.",    
 			calcChanges: {
 			  atkAdd: [
 				function (fields, v) {
@@ -6539,8 +6539,8 @@ legacyClassRefactor("sorcerer", {
 		"As a bonus action, I can use sorcery points to create spell slots and vice versa",
 		"I can convert spell slots to sorcery points at a rate of 1 point per spell slot level",
 		"I can convert sorcery points to spell slots, which last until I finish a long rest, as follows:",
-		"Level 1 for 2 sorcery points;   level 2 for 3 sorcery points;   level 3 for 5 sorcery points",
-		"Level 4 for 6 sorcery points;   level 5 for 7 sorcery points"
+		"Level 1 for 2 sorcery points; level 2 for 3 sorcery points; level 3 for 5 sorcery points",
+		"Level 4 for 6 sorcery points; level 5 for 7 sorcery points"
 	  ]),
 	  usages : [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
 	  recovery : "long rest",
