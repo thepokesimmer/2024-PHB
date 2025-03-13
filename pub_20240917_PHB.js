@@ -2140,7 +2140,7 @@ legacySubClassRefactor("druid", "moon", {
         "In Wild Shape: My maximum form's Challenge Rating is my Druid level divided by 3. My AC becomes greatest of 13 plus my Wisdom modifier or the Beast's AC. I also gain Temporary Hit Points equal to three times my Druid level.",
       ]),
     },
-	"subclassfeature3.wild shape" : {
+	"wild shape" : {
 		name : "Wild Shape",
 		source : [["P24", 86]],
 		minlevel : 3,
@@ -2163,7 +2163,7 @@ legacySubClassRefactor("druid", "moon", {
 			var restr = n < 8 ? ", no fly" : "";
 			return "CR " + cr + restr + "; " + hr + (restr.length ? " h" : " hours");
 		}),
-		action : [["bonus action", " (start/stop)"]],
+		action : [["bonus action", " (start/revert)"]],
 		eval : function() {
 			processActions(false, "Druid: Wild Shape", ClassList.druid.features["wild shape"].action, "Wild Shape");
 		}
