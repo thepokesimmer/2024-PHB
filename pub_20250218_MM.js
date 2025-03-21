@@ -9,6 +9,192 @@ SourceList.M24 = {
 	date: "2025/02/18",
 };
 //Creatures Created by Spells or Magic Items
+CreatureList["air elemental"] = {
+	name : "Air Elemental",
+	nameAlt : ["Elemental, Air"],
+	source : [["M24", 305]],
+	size : 2, //Large
+	type : "Elemental",
+	alignment : "Neutral",
+	ac : 15,
+	hp : 90,
+	hd : [12, 10],
+	speed : "10 ft, fly 90 ft (hover)",
+	scores : [14, 20, 14, 6, 10, 6],
+	damage_resistances : "lightning, bludgeoning, piercing, and slashing",
+	damage_immunities : "poison, thunder",
+	condition_immunities : "exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious",
+	senses : "Darkvision 60 ft",
+	languages : "Auran",
+	challengeRating : "5",
+	proficiencyBonus : 3,
+	attacksAction : 2,
+	attacks : [{
+		name : "Thunderous Slam",
+		ability : 2,
+		damage : [2, 8, "thunder"],
+		range : "Melee (10 ft)",
+		description : ""
+	}, {
+		name : "Whirlwind (Recharge 4-6)",
+		ability : 1,
+		damage : [4, 10, "thunder"],
+		range : "One in shared area",
+		dc : true,
+		description : "Str save; fail\u2015 flung 20 ft straight away from elemental, prone; success\u2015 half damage",
+		tooltip : "One Medium or smaller creature in the elemental's space that fails its saving throw is flung up to 20 ft straight away from the elemental and knocked prone. If the saving throw is successful, the target takes half the thunder damage and isn't flung away or knocked prone."
+	}],
+	traits : [{
+		name : "Air Form",
+		description : "The elemental can enter a creature's space and stop there. It can move through a space as narrow as 1 inch without expending extra movment to do so."
+	}, {
+		name : "Multiattack",
+		description : "The elemental makes two Thunderous Slam attacks.",
+	}],
+	actions : [{
+		name : "Whirlwind (Recharge 4-6)",
+		description : "Strength Saving Throw: DC 13, one Medium or smaller creature in the elemental's space. Failure: 24 (4d10+2) Thunder damage, and the target is pushed up to 20 feet straight away from the elemental and has the Prone condition. Success: Half damage only."
+	}],
+};
+CreatureList["earth elemental"] = {
+	name : "Earth Elemental",
+	nameAlt : ["Elemental, Earth"],
+	source : [["M24", 306]],
+	size : 2, //Large
+	type : "Elemental",
+	alignment : "Neutral",
+	ac : 17,
+	hp : 147,
+	hd : [14, 10],
+	speed : "30 ft, burrow 30 ft",
+	scores : [20, 8, 20, 5, 10, 5],
+	damage_vulnerabilities : "thunder",
+	damage_immunities : "poison",
+	condition_immunities : "exhaustion, paralyzed, petrified, poisoned, unconscious",
+	senses : "Darkvision 60 ft; Tremorsense 60 ft",
+	languages : "Terran",
+	challengeRating : "5",
+	proficiencyBonus : 3,
+	attacksAction : 2,
+	attacks : [{
+		name : "Slam",
+		ability : 1,
+		damage : [2, 8, "bludgeoning"],
+		range : "Melee (10 ft)",
+		description : "",
+	}, {
+		name : "Rock Launch",
+		ability : 1,
+		damage : [1, 6, "bludgeoning"],
+		range : "60 ft",
+		description : "If target is Large or smaller, it has the prone condition",
+	}],
+	traits : [{
+		name : "Earth Glide",
+		description : "The eleemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through."
+	}, {
+		name : "Multiattack",
+		description : "The elemental makes two attacks, using SLam or Rock Launch in any combination",
+	}, {
+		name : "Siege Monster",
+		description : "The elemental deals double damage to objects and structures."
+	}],
+};
+CreatureList["fire elemental"] = {
+	name : "Fire Elemental",
+	nameAlt : ["Elemental, Fire"],
+	source : [["M24", 306]],
+	size : 2, //Large
+	type : "Elemental",
+	alignment : "Neutral",
+	ac : 13,
+	hp : 93,
+	hd : [11, 10],
+	speed : "50 ft",
+	scores : [10, 17, 16, 6, 10, 7],
+	damage_resistances : "bludgeoning, piercing, and slashing",
+	damage_immunities : "fire, poison",
+	condition_immunities : "exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious",
+	senses : "Darkvision 60 ft",
+	languages : "Ignan",
+	challengeRating : "5",
+	proficiencyBonus : 3,
+	attacksAction : 2,
+	attacks : [{
+		name : "Burn",
+		ability : 2,
+		damage : [2, 6, "fire"],
+		range : "Melee (5 ft)",
+		description : "If a target is a creature or flammable object, it starts burning."
+	}],
+	traits : [{
+		name : "Fire Aura",
+		description : "At the end of each of the elemental's turns, each creature in a 10-foot Emanation originating from the elemental takes 5(1d10) Fire damage. Creatures and flamable objects in the Emanation start burning.",
+	}, {
+		name : "Fire Form",
+		description : "The elemental can move through a space as narrow as 1 inch without expending extra movement to do so, and it can enter a creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 5(1d10) Fire damage.",
+	}, {
+		name : "Illumination",
+		description : "The elemental sheds Bright Light in a 30-foot radius and Dim Light for an additional 30 ft.",
+	}, {
+		name : "Multiattack",
+		description : "The elemental makes two Burn attacks.",
+	}, {
+		name : "Water Susceptibility",
+		description : "The elemental takes 3(1d6) Cold damage for every 5 feet the elemental moves in water or for every gallon of water splashed on it.",
+	}],
+};
+CreatureList["water elemental"] = {
+	name : "Water Elemental",
+	nameAlt : ["Elemental, Water"],
+	source : [["M24", 307]],
+	size : 2, //Large
+	type : "Elemental",
+	alignment : "Neutral",
+	ac : 14,
+	hp : 114,
+	hd : [12, 10],
+	speed : "30 ft, swim 90 ft",
+	scores : [18, 14, 18, 5, 10, 8],
+	damage_resistances : "acid, fire",
+	damage_immunities : "poison",
+	condition_immunities : "exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious",
+	senses : "Darkvision 60 ft",
+	languages : "Aquan",
+	challengeRating : "5",
+	proficiencyBonus : 3,
+	attacksAction : 2,
+	attacks : [{
+		name : "Slam",
+		ability : 1,
+		damage : [2, 8, "bludgeoning"],
+		range : "Melee (5 ft)",
+		description : "If target is Medium or smaller, it has the Prone condition"
+	}, {
+		name : "Whelm (Recharge 4-6)",
+		ability : 1,
+		dc : true,
+		damage : [2, 8, "bludgeoning"],
+		range : "All in shared area",
+		description : "Str save; fail\u2015 dmg/grappled/restrained/can't breathe until grapple ends (escape DC 14); success\u2015 no dmg/pushed out",
+		tooltip : "Each creature in the elemental's space that is Large or smaller, is also grappled (escape DC 14). Until this grapple ends, the target is restrained and unable to breathe unless it can breathe water. If the saving throw is successful, the target is pushed out of the elemental's space.\nThe elemental can grapple one Large creature or up to two Medium or smaller creatures at one time. At the start of each of the elemental's turns, each target grappled by it takes 13 (2d8 + 4) bludgeoning damage. A creature within 5 ft of the elemental can pull a creature or object out of it by taking an action to make a DC 14 Strength check and succeeding."
+	}],
+	features : [{
+		name : "Freeze",
+		description : "If the elemental takes Cold damage,its Speed decreases by 20 feet until the end of its next turn.",
+	}],
+	traits : [{
+		name : "Multiattack",
+		description : "The elemental makes two Slam attacks.",
+	}, {
+		name : "Water Form",
+		description : "The elemental can enter an enemy's space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so."
+	}],
+	actions : [{
+		name : "Whelm (Recharge 4-6)",
+		description : "Strength Saving Throw: DC 15, each creature in the elemental's space. Failure: 22(4d8+4) Bludgeoning damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14). Until the grappled ends, the target has the Restrained condition, s suffocating unless it can breathe water, and takes 9(2d8) Bludgeoning damage at the start of each of the elemental's turns. The elemental can grapple one Large creature or up to two Medium or smaller creatures at a time with Whelm. As an action, a creature within 5 feet of the elemental can pull a creature out of it by succeeding on a DC 14 Strength (Athletics) check. Success: Half damage only."
+	}],
+};
 CreatureList["awakened shrub"] = {
 	name : "Awakened Shrub",
 	source : ["M24", 23],
