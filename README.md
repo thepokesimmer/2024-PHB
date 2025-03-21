@@ -1,6 +1,6 @@
 *These Scripts are designed to use auto-script size for the character sheet.*
-*These Scripts are not designed with Adventure League in mind, for any necessary AL adjustments please see ReadingToskr's AL addon scripts found here.*
-https://github.com/Ratatoskr589/MPMB-Extra-Script-Code
+\n*These Scripts are not designed with Adventure League in mind, for any necessary AL adjustments please see ReadingToskr's AL addon scripts found here.*
+\nhttps://github.com/Ratatoskr589/MPMB-Extra-Script-Code
 
 # 2024-PHB
 Java Script file, for MorePurpleMoreBetter's D&amp;D 5e Digital Character Sheet.
