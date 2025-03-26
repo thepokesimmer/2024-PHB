@@ -5295,8 +5295,19 @@ legacyClassRefactor("ranger", {
 				name: "Deft Explorer",
 				source: [["P24", 120]],
 				minlevel: 2,
-				description: desc("Choose 1 skill proficiency to gain Expertise in that skill."),
-				skillstxt: "Expertise with any one skill proficiency.",
+				description: levels.map(function(n) {
+					if(n < 2) return "";
+					var description = desc([
+						"Choose 1 skill proficiency to gain Expertise in that skill.",
+					]);
+					if(n >= 9) {
+						description += desc([
+							"At 9th level, I gain Expertise in two additional skills of choice."
+						]);
+					}
+					return description;
+				}),
+				skillstxt: "Expertise with any one skill proficiency, additional 2 at 9th level.",
 				languageProfs: 2,
 				additional: levels.map(function (n) {
 					return n < 2 ? "" : "with " + (n < 9 ? 1 : 3) + " skills";
@@ -7489,6 +7500,9 @@ legacyClassRefactor("warlock", {
               if (v.pactWeapon || v.theWea.pactWeapon || ((v.isMeleeWeapon || v.theWea.isMagicWeapon || v.thisWeapon[1]) && (/\bpact\b/i).test(v.WeaponTextName))) {
                 v.pactWeapon = true;
                 fields.Proficiency = true;
+			  if(What('Cha Mod') > What(AbilityScores.abbreviations[fields.Mod - 1] + ' Mod') && (v.pactWeapon || v.theWea.pactWeapon)) {
+				fields.Mod = 6;
+			  };
                 if (!v.theWea.isMagicWeapon && !v.thisWeapon[1] && !(/counts as( a)? magical/i).test(fields.Description)) fields.Description += (fields.Description ? '; ' : '') + 'Counts as magical';
               }
             },
@@ -8831,6 +8845,7 @@ legacyBackgroundRefactor("guard",{
     "my feet ache when I remember the countless hours I spent at my post in the tower. I was trained to keep one eye looking outside the wall watching for marauders sweeping from the nearby forest, and my other eye looking inside the wall searching for cut purses and troublemakers."
   ],
 });
+BackgroundList.outlander.regExpSearch = /^(?=.*(outlander|forester|trapper|homesteader|exile|outcast|tribal nomad|hunter-gatherer|tribal.?marauder)).*$/i;
 legacyBackgroundRefactor("guide",{
   regExpSearch: /^(?=.*guide).*$/i,
   name: "Guide",
