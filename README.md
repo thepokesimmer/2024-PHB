@@ -6,7 +6,7 @@ https://github.com/Ratatoskr589/MPMB-Extra-Script-Code
 # 2024-PHB
 Java Script file, for MorePurpleMoreBetter's D&amp;D 5e Digital Character Sheet.
 This script offers content introduced in the Wizards of the Coast, Player's Handbook published 09/17/2024.
-This script also offers compatibility with other published scripts for MPMB Digital Character Sheets Designed to work with sheet version 13.2.1
+This script also offers compatibility with other published scripts for MPMB Digital Character Sheets Designed to work with sheet version 13.2.3
 This script overwrites outdated backgrounds, classes, races, spells, and subclasses that have been republished.
 To gain access to "Legacy" backgrounds, classes, races, spells, and subclasses, please navigate to the 'select sources' tab on the Java Script Window, They are listed as four separate sources, "Backgrounds Depreciated by 2024 Player's Handbook (Legacy)", "Races Depreciated by 2024 Player's Handbook (Legacy)", "Spells Depreciated by 2024 Player's Handbook (Legacy)", and "Subclasses Depreciated by 2024 Player's Handbook (Legacy)", in the 'Exclude from the Automation' side of the Java Script Window. To enable one or all of the Excluded sources, select the one you wish to enable and click the > button, this will add the source to the sheet and the options within will appear when you choose backgrounds, classes, races, spells, and subclasses.
 
@@ -25,7 +25,7 @@ To gain access to these spells for your spellcasting character, use the 'Choose 
 # 2024-DMG
 Java Script file, for MorePurpleMoreBetter's D&amp;D 5e Digital Character Sheet.
 This script offers content introduced in the Wizards of the Coast, Dungeon Master's Guide published 11/12/2024.
-This script also offers compatibility with other published scripts for MPMB Digital Character Sheets Designed to work with sheet version 13.2.1
+This script also offers compatibility with other published scripts for MPMB Digital Character Sheets Designed to work with sheet version 13.2.3
 This script overwrites outdated magic items that have been republished.
 Currently, this script does not offer "Legacy" compatibility for magic items from the 2014 rules.
 
@@ -36,7 +36,7 @@ Currently, this script does not offer "Legacy" compatibility for magic items fro
 # 2025-MM
 Java Script file, for MorePurpleMoreBetter's D&amp;D 5e Digital Character Sheet.
 This script offers content introduced in the Wizards of the Coast, Monster Manual published 02/18/2025.
-This script also offers compatibility with other published scripts for MPMB Digital Character Sheets Designed to work with sheet version 13.2.1
+This script also offers compatibility with other published scripts for MPMB Digital Character Sheets Designed to work with sheet version 13.2.3
 This script overwrites outdated monsters and beasts that have been republished.
 Currently, this script does not offer "Legacy" compatibility for monsters and beasts from the 2014 rules.
 
