@@ -7495,20 +7495,22 @@ legacyClassRefactor("warlock", {
             }, "",
             90
           ],
-          atkAdd: [
-            function (fields, v) {
-              if (v.pactWeapon || v.theWea.pactWeapon || ((v.isMeleeWeapon || v.theWea.isMagicWeapon || v.thisWeapon[1]) && (/\bpact\b/i).test(v.WeaponTextName))) {
-                v.pactWeapon = true;
-                fields.Proficiency = true;
-			  if(What('Cha Mod') > What(AbilityScores.abbreviations[fields.Mod - 1] + ' Mod') && (v.pactWeapon || v.theWea.pactWeapon)) {
-				fields.Mod = 6;
-			  };
-                if (!v.theWea.isMagicWeapon && !v.thisWeapon[1] && !(/counts as( a)? magical/i).test(fields.Description)) fields.Description += (fields.Description ? '; ' : '') + 'Counts as magical';
-              }
-            },
-            "If I include the word 'Pact' in a melee or magic weapon's name, it gets treated as my Pact Weapon.",
-            290
-          ]
+          atkAdd : [
+			function (fields, v) {
+				// Resuse this statement
+				if (v.pactWeapon || v.theWea.pactWeapon || ((v.isMeleeWeapon || v.theWea.isMagicWeapon || v.thisWeapon[1]) && (/\bpact\b/i).test(v.WeaponTextName))) {
+					v.pactWeapon = true;
+					fields.Proficiency = true;
+					// Grab the current modifier and compare
+					var weaMod = What(AbilityScores.abbreviations[fields.Mod - 1] + ' Mod');
+					// Compare charisma and if it's higher use that instead.
+					fields.Mod = What('Cha Mod') > weaMod ? 6 : fields.Mod;
+					if (!v.theWea.isMagicWeapon && !v.thisWeapon[1] && !(/counts as( a)? magical/i).test(fields.Description)) fields.Description += (fields.Description ? '; ' : '') + 'Counts as magical';
+				};
+			},
+			"If I include the word 'Pact' in a melee or magic weapon's name, it gets treated as my Pact Weapon.",
+			290
+		  ]
         },
         description: desc([
           "As a Bonus Action, I can conjure a pact weapon in my hand - a Simple or Martial Melee weapon of my choice with which I bond - or create a bond with a magic weapon I touch, I can't bond with a magic weapon if someone else is attuned to it or another Warlock is bonded with it. Until the bond ends, I have proficiency with the weapon and I can use it as a Spellcasting Focus.",
@@ -9619,25 +9621,25 @@ RaceSubList["gnome-forest"] = {
     selection: ["minor illusion"],
     times: 1,
     firstCol: "atwill",
+  }, {
+	name : "Forest Gnome Lineage",
+    spells : ["speak with animals"],
+    selection : ["speak with animals"],
+    times : 1,
+    prepared : true,	
   }],
   trait: "Forest Gnome\nForest Gnome Lineage: I know the Minor Illusion cantrip. I always have Speak with Animals Prepared & can cast it without a spell slot my Prof Bonus times per Long Rest or use Spell slots.\n\nGnomish Cunning: I have Advantage on Intelligence, Wisdom, and Charisma saving throws.",
   features: {
     "forest gnome lineage": {
       name: "Forest Gnome Lineage",
-      minlevel: 3,
+      minlevel: 1,
+	  limfeaname : "Speak with Animals",
       usages: "Proficiency bonus per ",
       usagescalc: "event.value = How('Proficiency Bonus');",
       recovery: "long rest",
       description: desc([
         "I always have the Speak with Animals spell prepared. I can cast it without a spell slot a number of times equal to my Proficiency Bonus and I regain all expended uses when I finish a Long Rest.",
       ]),
-      spellcastingBonus: [{
-        name: "Forest Gnome Lineage",
-        spells: ["speak with animals"],
-        selection: ["speak with animals"],
-        times: 1,
-        firstCol: "PB",
-      }],
     },
   },
 };
