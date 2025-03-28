@@ -13563,6 +13563,7 @@ WeaponsList["toll the dead"] = {
   range : "60 ft",
   description : "If target has less than full HP, Damage Die becomes d12.",
   abilitytodamage : false,
+  dc: true
 };
 WeaponsList["thorn whip"] = {
   regExpSearch: /^(?=.*thorn)(?=.*whip).*$/i,
