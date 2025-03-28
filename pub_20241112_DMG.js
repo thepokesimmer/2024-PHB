@@ -1679,13 +1679,12 @@ MagicItemsList["cubic gate"] = { // contains contributions by Larry Hoy
 	type : "wondrous item",
 	rarity : "legendary",
 	magicItemTable : "?",
-	description : "The six sides of this 3-inch cube, which radiates palpable magic energy, are each keyed to a different plane of existence (one is material plane). As an action, I can expend a charge and press a side of the cube once to cast Gate or twice to cast Plane Shift (DC 17). Both spells only link to the plane on the pressed side.",
+	description : "The six sides of this 3-inch cube, which radiates palpable magic energy, are each keyed to a different plane of existence (one is material plane). As a Magic Action, I can expend a charge and press a side of the cube once to cast Gate or twice to cast Plane Shift. Both spells only link to the plane on the pressed side.",
 	descriptionFull : "This cube is 3 inches across and radiates palpable magical energy. The six sides of the cube are each keyed to a different plane of existence, one of which is the Material Plane. The other sides are linked to planes determined by the DM.\n   The cube has 3 charges and regains 1d3 expended charges daily at dawn. As a Magic action, you can expend 1 of the cube’s charges to cast one of the following spells using the cube.\n   Gate. Pressing one side of the cube, you cast Gate, opening a portal to the plane of existence keyed to that side.\n   Plane Shift. Pressing one side of the cube twice, you cast Plane Shift, transporting the targets to the plane of existence keyed to that side.",
 	usages : 3,
 	recovery : "dawn",
 	additional : "regains 1d3",
 	spellFirstColTitle : "Ch",
-	fixedDC : 17,
 	spellcastingBonus : {
 		name : "1 charge",
 		spells : ["gate", "plane shift"],
@@ -7140,8 +7139,10 @@ MagicItemsList["spellguard shield"] = {
 	attunement: true,
 	weight: 6,
 	shieldAdd: "Spellguard Shield",
-	savetxt: { adv_vs: ["spells", "magical effects"] },
-	vision: ["spell attack rolls Disadvantage against me"]
+	savetxt: {
+		adv_vs: ["spells", "magical effects"],
+		text: ["spell attack rolls Disadvantage against me"],
+	},
 };
 MagicItemsList["spell scroll"] = {
 	name: "Spell Scroll",
@@ -8982,7 +8983,7 @@ MagicItemsList["wand of web"] = {
 	recovery: "dawn",
 	additional: "regains 1d6+1",
 	spellFirstColTitle: "Ch",
-	fixedDC: 15,
+	fixedDC: 13,
 	spellcastingBonus: {
 		name: "1 charge",
 		spells: ["web"],
