@@ -7592,7 +7592,7 @@ MagicItemsList["staff of power"] = {
 	type: "staff",
 	rarity: "very rare",
 	magicItemTable: "?",
-	description: "While holding this quarterstaff, you gain a +2 bonus on saves, AC, and spell attacks. The staff has 20 charges, regaining 2d8+4 at dawn. As a Magic action you can break it, causing a 30-ft Emanation originating from itself. You have a 50 percent to travel to a random plane. If you fail to avoid the effect, you take 16 times the number of remaing charges in the staff in Force damage.",
+	description: "While holding this quarterstaff, you gain a +2 bonus on saves, AC, and spell attacks. The staff has 20 charges, regaining 2d8+4 at dawn. As a Magic action you can break it, causing a 30-ft Emanation originating from itself. You have a 50 percent to travel to a random plane. If you fail to avoid the effect, you take 16 times the number of remaining charges in the staff in Force damage.",
 	descriptionFull: "This staff has 20 charges and can be wielded as a magic Quarterstaff that grants a +2 bonus to attack rolls and damage rolls made with it. While holding it, you gain a +2 bonus to Armor Class, saving throws, and spell attack rolls.\n " + toUni("Spells") + ". While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell: Cone of Cold (5 charges), Fireball (5th-level version, 5 charges), Globe of Invulnerability (6 charges), Hold Monster (5 charges), Levitate (2 charges). Lightning Bolt (5th-level version, 5 charges), Magic Missile (1 charge), Ray of Enfeeblement (1 charge), or Wall of Force (5 charges).\n   " + toUni("Retributive Strike") + ". You can take a Magic action to break the staff over your knee or against a solid surface. The staff is destroyed and releases its magic in an explosion that fills a 30-foot Emanation originating from itself. You have a 50 percent chance to instantly travel to a random plane of existence, avoiding the explosion. If you fail to avoid the effect, you take Force damage equal to 16 times the number of charges in the staff. Each other creature in the area makes a DC 17 Dexterity saving throw. On a failed save, a creature takes Force damage equal to 4 times the number of charges in the staff. On a successful save, a creature takes half as much damage.",
 	attunement: true,
 	weight: 4,
@@ -8908,8 +8908,8 @@ MagicItemsList["wand of secrets"] = {
 	additional: "regains 1d3",
 	action: [["action", ""]]
 };
-MagicItemsList["wand of the war mage, +1, +2, or +3"] = {
-	name: "Wand of the War Mage, +1, +2, or +3",
+MagicItemsList["wand of the war mage"] = {
+	name: "Wand of the War Mage",
 	nameTest: /^(?=.*war mage)(?=.*(arcane focus|rod|wand|staff)).*$/i,
 	source: [["D24", 322]],
 	type: "wand",
