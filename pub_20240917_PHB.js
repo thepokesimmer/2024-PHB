@@ -8283,6 +8283,12 @@ legacySubClassRefactor("wizard", "abjurer", {
       name: "Arcane Ward",
       source: [["P24", 172]],
       minlevel: 3,
+	  action : ["bonus action", " (expend spell slot)"],
+	  usages : 1,
+	  recovery : "long rest",
+	  additional : levels.map( function(n) {
+		return n < 3 ? "" : "Ward max HP: " + (n * 2) + "+Int mod";
+	  }),
       description: desc([
         "Once per Long Rest when I cast an Abj spell with a spell slot I can create a magic ward on myself that lasts until the end of my next Long Rest. When I take damage the ward takes it instead; I apply my Resistances & Vulnerabilities before this. If the ward reaches 0 Hit Points I take any remaining damage and the ward can't take any more.",
         "When I cast an Abj spell with a spell slot or spend a slot as a Bonus Action the ward regains HP equal to twice the slot level.",
@@ -8292,6 +8298,7 @@ legacySubClassRefactor("wizard", "abjurer", {
       name: "Projected Ward",
       source: [["P24", 172]],
       minlevel: 6,
+	  action : ["reaction", ""],
       description: desc([
         "When a creature I can see w/in 30 ft of me takes damage, I can take a Reaction for my Arcane Ward to absorb that it after that creature's Resistances & Vulnerabilities. If the ward reaches 0 Hit Points the warded creature takes any remaining damage.",
       ]),
@@ -11435,17 +11442,17 @@ FeatsList["telekinetic"] = {
   },
   choices: ["Intelligence", "Wisdom", "Charisma"],
   "intelligence": {
-    description: "I know the Mage Hand cantrip, can cast it without components, and the spectral hand can be invisible. As a bonus action, I can shove one creature I can see within 30 ft It must make a Str" + (typePF ? "" : "ength") + " save vs. this feat's spell save DC or be moved 5 ft" + (typePF ? "" : " away") + " from or towards me. Intelligence is my spellcasting ability for these. [+1 Intelligence]",
+    description: "I know the Mage Hand cantrip, can cast it without components, and the spectral hand can be invisible. As a bonus action, I can shove one creature I can see within 30 ft. It must make a Str" + (typePF ? "" : "ength") + " save vs. this feat's spell save DC or be moved 5 ft" + (typePF ? "" : " away") + " from or towards me. Intelligence is my spellcasting ability for these. [+1 Intelligence]",
     spellcastingAbility: 4,
     scores: [0, 0, 0, 1, 0, 0]
   },
   "wisdom": {
-    description: "I know the Mage Hand cantrip, can cast it without components, and the spectral hand can be invisible. As a bonus action, I can shove one creature I can see within 30 ft It must make a Str" + (typePF ? "" : "ength") + " save vs. this feat's spell save DC or be moved 5 ft" + (typePF ? "" : " away") + " from or towards me. Wisdom is my spellcasting ability for these. [+1 Wisdom]",
+    description: "I know the Mage Hand cantrip, can cast it without components, and the spectral hand can be invisible. As a bonus action, I can shove one creature I can see within 30 ft. It must make a Str" + (typePF ? "" : "ength") + " save vs. this feat's spell save DC or be moved 5 ft" + (typePF ? "" : " away") + " from or towards me. Wisdom is my spellcasting ability for these. [+1 Wisdom]",
     spellcastingAbility: 5,
     scores: [0, 0, 0, 0, 1, 0]
   },
   "charisma": {
-    description: "I know the Mage Hand cantrip, can cast it without components, and the spectral hand can be invisible. As a bonus action, I can shove one creature I can see within 30 ft It must make a Str" + (typePF ? "" : "ength") + " save vs. this feat's spell save DC or be moved 5 ft" + (typePF ? "" : " away") + " from or towards me. Charisma is my spellcasting ability for these. [+1 Charisma]",
+    description: "I know the Mage Hand cantrip, can cast it without components, and the spectral hand can be invisible. As a bonus action, I can shove one creature I can see within 30 ft. It must make a Str" + (typePF ? "" : "ength") + " save vs. this feat's spell save DC or be moved 5 ft" + (typePF ? "" : " away") + " from or towards me. Charisma is my spellcasting ability for these. [+1 Charisma]",
     spellcastingAbility: 6,
     scores: [0, 0, 0, 0, 0, 1]
   },
