@@ -1887,9 +1887,13 @@ legacyClassRefactor("druid", {
       }],
       spellChanges : {
         "find familiar" : {
+		  name : "Find Familiar",
+		  description : "Gain the services of a fey familiar; bns see thru its eyes; it can deliver touch spells; disappears after a LR",
+		  descriptionFull : "You gain the service of a familiar, a spirit that takes an animal form you choose: Bat, Cat, Frog, Hawk, Lizard, Octopus, Owl, Rat, Raven, Spider, Weasel, or another Beast that has a Challenge Rating of 0. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form (see appendix B), though it is a Fey instead of a Beast. Your familiar acts independently of you, but it obeys your commands." + "\n   " + "Telepathic Connection. While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as a Bonus Action, you can see through the familiar's eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses it has." + "\n   " + "Finally, when you cast a spell with a range of touch, your familiar can deliver the touch. Your familiar must be within 100 feet of you, and it must take a Reaction to deliver the touch when you cast the spell." + "\n   " + "Combat. The familiar is an ally to you and your allies. It rolls its own Initiative and acts on its own turn. A familiar can't attack, but it can take other actions as normal." + "\n   " + "Disappearance of the Familiar. When you complete a Long Rest or when the familiar drops to 0 Hit Points, it disappears. It reappears after you cast this spell again. As a Magic action, you can temporarily dismiss the familiar to a pocket dimension. Alternatively, you can dismiss it forever. As a Magic action while it is temporarily dismissed, you can cause it to reappear in an unoccupied space within 30 feet of you. Whenever the familiar drops to 0 Hit Points or disappears into the pocket dimension, it leaves behind in its space anything it was wearing or carrying." + "\n   " + "One Familiar Only. You can't have more than one familiar at a time. If you cast this spell while you have a familiar, you instead cause it to adopt a new eligible form.",
+		  time : "1 a",
           components : "V,S", // Does not require materials anymore
           compMaterial : "",
-          changes : "\"Gain the services of a familiar; bns see through its eyes; it can deliver touch spells"
+          changes : "removes material components, changes casting time to 1 action, updates description to more closely match the class feature."
         }
       },
       calcChanges : {
@@ -8307,11 +8311,13 @@ legacySubClassRefactor("wizard", "abjurer", {
       name: "Spell Breaker",
       source: [["P24", 173]],
       minlevel: 10,
+	  action : [["bonus action", " (Dispel Magic)"]],
       spellcastingBonus: [{
         name: "Spell Breaker",
         spells: ["counterspell", "dispel magic"],
         selection: ["counterspell", "dispel magic"],
         times: 2,
+		prepared : true,
       }],
       description: desc([
         "I always have Counterspell & Dispel Magic prepared. I can cast Dispel Magic as a Bonus Action & add my Prof Bonus to its ability check. When I cast either spell with a spell slot that slot isn't expended if the spell fails.",
@@ -8323,7 +8329,7 @@ legacySubClassRefactor("wizard", "abjurer", {
 	  minlevel : 14,
 	  savetxt : {
 		adv_vs : ["spells"],
-		text : ["Resistance to the damage of spells"],
+		text : ["& Resistance to the damage of spells"],
 	  },
 	  description : desc([
 		"I have Adv on saving throws against spells  Resistance to the damage of spells.",
@@ -11177,7 +11183,7 @@ FeatsList["sentinel"] = {
     description: "Reaction when creature in 5 ft takes Disengage action or hits target other than me, I can make an Opportunity Attack vs them. When I make an Opportunity Attack against a creature, its Speed becomes 0 for the rest of the current turn. [+1 Dexterity]",
     scores: [0, 1, 0, 0, 0, 0],
   },
-  action: ["reaction", " (after Disengage/attack on ally)"],
+  action: ["reaction", " (after Disengage/hit on other)"],
   prerequisite: "Level 4 and Strength or Dexterity 13 or higher",
   prereqeval: function (v) {
     return v.characterLevel >= 4 && What('Str') >= 13 || What('Dex') >= 13;
