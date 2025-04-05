@@ -62,7 +62,7 @@ FeatsList["blessings"] = {
 	},
 	"weapon enhancement" : {
 		name: "Blessing of Weapon Enhancement [Supernatural Gift]",
-		description : "One nonmagical weapon in my possession becomes a +1 Weapon while you wield it.",
+		description : "One nonmagical weapon in my possession becomes a +1 Weapon while I wield it.",
 		descriptionFull : "One nonmagical weapon in your possession becomes a +1 Weapon while you wield it.",
 	},
 	"wound closure" : {
