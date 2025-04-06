@@ -8329,10 +8329,10 @@ legacySubClassRefactor("wizard", "abjurer", {
 	  minlevel : 14,
 	  savetxt : {
 		adv_vs : ["spells"],
-		text : ["& Resistance to the damage of spells"],
+		text : ["Resistance to the damage of spells"],
 	  },
 	  description : desc([
-		"I have Adv on saving throws against spells  Resistance to the damage of spells.",
+		"I have Adv on saving throws against spells & Resistance to the damage of spells.",
 	  ]),
 	},
   },
