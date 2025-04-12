@@ -9288,7 +9288,8 @@ legacyRaceRefactor("dragonborn", {
     abilitytodamage: false,
     dc: true,
     dbBreathWeapon: true,
-    selectNow: true
+    selectNow: true,
+	isAlwaysProf : true,
   }],
   age: " reach maturity in late teens and live about 80 years",
   height: " are about 5 - 7 feet tall",
