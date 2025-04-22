@@ -2478,7 +2478,7 @@ MagicItemsList["elixir of health"] = {
 	type : "potion",
 	rarity : "rare",
 	magicItemTable : "?",
-	description : "Once as an action, I can drink this potion or administer it to another to cure any disease, and removing the blinded, deafened, paralyzed, and poisoned conditions. The potion's clear red liquid has tiny bubbles of light in it.",
+	description : "When I drink this potion, I am cured of all magical contagions. In addition, the following conditions end on me: Blinded, Deafened, Paralyzed, and Poisoned. The clear, red liquid has tiny bubbles of light in it.",
 	descriptionFull : "When you drink this potion, you are cured of all magical contagions. In addition, the following conditions end on you: Blinded, Deafened, Paralyzed, and Poisoned. The clear, red liquid has tiny bubbles of light in it.",
 	weight : 0.5
 };
