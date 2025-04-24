@@ -938,6 +938,7 @@ legacyClassRefactor("bard", {
   saves: ["Dex", "Cha"],
   skillstxt: {
     primary: "Choose any 3 skills",
+	secondary: "Choose any 1 skill",
   },
   armorProfs: {
     primary: [true, false, false, false],
