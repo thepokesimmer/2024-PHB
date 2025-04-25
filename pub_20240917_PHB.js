@@ -7510,8 +7510,8 @@ legacyClassRefactor("warlock", {
 					var weaMod = What(AbilityScores.abbreviations[fields.Mod - 1] + ' Mod');
 					// Compare charisma and if it's higher use that instead.
 					fields.Mod = What('Cha Mod') > weaMod ? 6 : fields.Mod;
-					if (!v.theWea.isMagicWeapon && !v.thisWeapon[1] && !(/counts as( a)? magical/i).test(fields.Description)) fields.Description += (fields.Description ? '; ' : '') + 'Counts as magical';
-				};
+					if (!v.thisWeapon[1]) fields.Description += (fields.Description ? '; ' : '') + 'can deal Necrotic, Psychic, or Radiant damage; ';
+				}
 			},
 			"If I include the word 'Pact' in a melee or magic weapon's name, it gets treated as my Pact Weapon.",
 			290
@@ -7727,7 +7727,7 @@ legacyClassRefactor("warlock", {
       usages: 1,
       recovery: "long rest",
       description: desc([
-        "I can do a 1 min rite to regain up to half my max Pact Magic spell slots.",
+        "I can do a 1 minute rite to regain up to half my max Pact Magic spell slots (rounded up)",
       ]),
     },
     "subclassfeature3": {
@@ -13427,7 +13427,7 @@ WeaponsList["chill touch"] = {
   type: "Cantrip",
   damage: ["C", 10, "necrotic"],
   range: "Touch",
-  description: "Target can't regain HP; Undead dis. on attacks vs. me until my next turn",
+  description: "Target can't regain HP",
   abilitytodamage: false
 };
 WeaponsList["eldritch blast"] = {
@@ -20708,7 +20708,8 @@ CompanionList["familiar"] = {
 	},
 	action : [
 		["action", "Familiar (dismiss/reappear)"],
-		["bonus action", "Use familiar's senses"]
+		["bonus action", "Use familiar's senses"],
+		["reaction", "Familiar (deliver touch spell)"]
 	],
 	notes : [{
 		name : "Summon a spirit that serves as a familiar",
@@ -20776,7 +20777,8 @@ CompanionList["pact_of_the_chain"] = {
 	},
 	action : [
 		["action", "Familiar (dismiss/reappear)"],
-		["action", "Use familiar's senses"]
+		["bonus action", "Use familiar's senses"],
+		["reaction", "Familiar (deliver touch spell)"]
 	],
 	attributesAdd : {
 		header : "Familiar",
