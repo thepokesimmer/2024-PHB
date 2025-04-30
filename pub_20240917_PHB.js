@@ -5718,16 +5718,15 @@ legacySubClassRefactor("ranger", "gloom stalker", {
 			addMod : [
 				{ type : "skill", field : "Init", mod : "Wis", text : "I can add my Wisom modifier to initiative rolls." },
 			],
-			usages: "Wis Mod / ",
+			usages: "Wisdom modifier per ",
 			usagescalc: "event.value = Math.max(1, What('Wis Mod'));",
-			recovery: "LR",
+			recovery: "long rest",
 			description: desc([
 				"I can add my Wisdom modifier to my initiative rolls, and I get +10 ft speed",
 				"in the first turn of combat.",
 				"Additionally, once per turn when I hit with a weapon, I can deal +2d6 Psychic",
 				"damage to my target. ",
-				"That target must make a Wis save or be Frightened until the start of my next",
-				"turn. I can do this a number equal to my Wis Mod per Long Rest.",
+				"I can do this a number equal to my Wis Mod per Long Rest.",
 			]),
 		},
 		"subclassfeature3.1": {
@@ -7510,8 +7509,8 @@ legacyClassRefactor("warlock", {
 					var weaMod = What(AbilityScores.abbreviations[fields.Mod - 1] + ' Mod');
 					// Compare charisma and if it's higher use that instead.
 					fields.Mod = What('Cha Mod') > weaMod ? 6 : fields.Mod;
-					if (!v.thisWeapon[1]) fields.Description += (fields.Description ? '; ' : '') + 'can deal Necrotic, Psychic, or Radiant damage; ';
-				}
+					if (!v.theWea.isMagicWeapon && !v.thisWeapon[1] && !(/counts as( a)? magical/i).test(fields.Description)) fields.Description += (fields.Description ? '; ' : '') + 'Counts as magical';
+				};
 			},
 			"If I include the word 'Pact' in a melee or magic weapon's name, it gets treated as my Pact Weapon.",
 			290
@@ -7727,7 +7726,7 @@ legacyClassRefactor("warlock", {
       usages: 1,
       recovery: "long rest",
       description: desc([
-        "I can do a 1 minute rite to regain up to half my max Pact Magic spell slots (rounded up)",
+        "I can do a 1 min rite to regain up to half my max Pact Magic spell slots.",
       ]),
     },
     "subclassfeature3": {
@@ -13427,7 +13426,7 @@ WeaponsList["chill touch"] = {
   type: "Cantrip",
   damage: ["C", 10, "necrotic"],
   range: "Touch",
-  description: "Target can't regain HP",
+  description: "Target can't regain HP; Undead dis. on attacks vs. me until my next turn",
   abilitytodamage: false
 };
 WeaponsList["eldritch blast"] = {
@@ -20708,8 +20707,7 @@ CompanionList["familiar"] = {
 	},
 	action : [
 		["action", "Familiar (dismiss/reappear)"],
-		["bonus action", "Use familiar's senses"],
-		["reaction", "Familiar (deliver touch spell)"]
+		["bonus action", "Use familiar's senses"]
 	],
 	notes : [{
 		name : "Summon a spirit that serves as a familiar",
@@ -20777,8 +20775,7 @@ CompanionList["pact_of_the_chain"] = {
 	},
 	action : [
 		["action", "Familiar (dismiss/reappear)"],
-		["bonus action", "Use familiar's senses"],
-		["reaction", "Familiar (deliver touch spell)"]
+		["action", "Use familiar's senses"]
 	],
 	attributesAdd : {
 		header : "Familiar",
