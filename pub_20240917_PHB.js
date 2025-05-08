@@ -13636,7 +13636,7 @@ WeaponsList["net"] = {
 	source : [["P24", 227]],
 	list : "ranged",
 	ability : 2,
-	type : "Martial",
+	type : "Simple",
 	damage : ["\u2015", "", "Restrained"],
 	range : "15 ft",
 	weight : 3,
@@ -13645,6 +13645,7 @@ WeaponsList["net"] = {
 	special : true,
 	abilitytodamage : false,
 	dc : true,
+	isAlwaysProf : true,
 };
 //Ammo
 AmmoList["arrows"] = {
