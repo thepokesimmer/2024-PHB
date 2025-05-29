@@ -6674,7 +6674,7 @@ MagicItemsList["rod of the pact keeper, +1, +2, or +3"] = {
 		name: "Rod of the Pact Keeper +1",
 		rarity: "uncommon",
 		magicItemTable: "?",
-		description: "While holding this rod, you gain a +1 bonus to spell attack rolls and to the saving throw DCs of you Warlock spells. As a Magic action once per long rest, you can regain one warlock spell slot while holding the rod.",
+		description: "While holding this rod, you gain a +1 bonus to spell attack rolls and to the saving throw DCs of your Warlock spells. As a Magic action once per long rest, you can regain one spell slot while holding the rod.",
 		calcChanges: {
 			spellCalc: [
 				function (type, spellcasters, ability) {
@@ -6688,7 +6688,7 @@ MagicItemsList["rod of the pact keeper, +1, +2, or +3"] = {
 		name: "Rod of the Pact Keeper +2",
 		rarity: "rare",
 		magicItemTable: "?",
-		description: "While holding this rod, you gain a +2 bonus to spell attack rolls and to the saving throw DCs of your Warlock spells. As a Magic action once per long rest, you can regain one warlock spell slot while holding the rod.",
+		description: "While holding this rod, you gain a +2 bonus to spell attack rolls and to the saving throw DCs of your Warlock spells. As a Magic action once per long rest, you can regain one spell slot while holding the rod.",
 		calcChanges: {
 			spellCalc: [
 				function (type, spellcasters, ability) {
@@ -6702,7 +6702,7 @@ MagicItemsList["rod of the pact keeper, +1, +2, or +3"] = {
 		name: "Rod of the Pact Keeper +3",
 		rarity: "very rare",
 		magicItemTable: "?",
-		description: "While holding this rod, you gain a +3 bonus to spell attack rolls and to the saving throw DCs of your Warlock spells. As a Magic action once per long rest, you can regain one Warlock spell slot while holding the rod.",
+		description: "While holding this rod, you gain a +3 bonus to spell attack rolls and to the saving throw DCs of your Warlock spells. As a Magic action once per long rest, you can regain one spell slot while holding the rod.",
 		calcChanges: {
 			spellCalc: [
 				function (type, spellcasters, ability) {
