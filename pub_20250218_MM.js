@@ -691,7 +691,7 @@ CreatureList["pseudodragon"] = {
 		damage : [2, 4, "poison"],
 		range : "Melee (5 ft)",
 		dc : true,
-		description : "Con save, Fail: Dmg + Poisoned 1 hour, Fail by 5+, Dmg + Poisoned + Unconscious(Until damaged or shaken awake)",
+		description : "Con save, Fail: Dmg + Poisoned 1 hour. While Poisoned, Unconscious (until damaged or shaken awake).",
 	}],
 };
 CreatureList["quasit"] = {
