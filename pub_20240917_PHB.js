@@ -9277,6 +9277,7 @@ legacyRaceRefactor("dragonborn", {
     walk: {spd: 30, enc: 20}
   },
   languageProfs: ["Common", 2],
+  vision: [["Darkvision", 60]],
   weaponOptions: [{
     regExpSearch: /^(?=.*breath)(?=.*weapon).*$/i,
     name: "Breath weapon",
