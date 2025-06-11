@@ -2999,7 +2999,7 @@ legacySubClassRefactor("fighter", "battle master", {
       "feinting attack": {
         name: "Feinting Attack",
         description: desc([
-          "As a Bonus Action, I can expend one Superiority Die to feint, choosing one creature within 5 feet of yourself as my target. I have Advantage on my next attack roll against that target this turn. If that attack hits, add the Superiority Die to the attack's damage roll.",
+          "As a Bonus Action, I can expend one Superiority Die to feint, choosing one creature within 5 feet of me as my target. I have Advantage on my next attack roll against that target this turn. If that attack hits, add the Superiority Die to the attack's damage roll.",
         ]),
       },
       "goading attack": {
@@ -3920,7 +3920,7 @@ legacySubClassRefactor("monk", "shadow", {
         }],
         spellFirstColTitle: "FP",
         description: desc([
-          "Darkness : I can expend 1 Focus Point to cast the Darkness spell without expending components. I can see within the spell's area when I cast it with this feature. While the spell persists, I can move its area of Darkness to a space within 60 feet of yourself at the start of each of my turns.",
+          "Darkness : I can expend 1 Focus Point to cast the Darkness spell without expending components. I can see within the spell's area when I cast it with this feature. While the spell persists, I can move its area of Darkness to a space within 60 feet of myself at the start of each of my turns.",
         ])
       },
 		autoSelectExtrachoices: [{
@@ -4178,7 +4178,7 @@ legacyClassRefactor("paladin", {
 				name: "Greatclub",
 				description: desc([
 				"I gain access to the Greatclub's 'Push' Mastery feature",
-				"Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
+				"Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from me if it is Large or smaller.",
 				]),
 			},
 			"handaxe": {
@@ -4332,7 +4332,7 @@ legacyClassRefactor("paladin", {
 				name: "Pike",
 				description: desc([
 				"I gain access to the Pike's 'Push' Mastery feature",
-				"Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
+				"Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from me if it is Large or smaller.",
 				]),
 			},
 			"rapier": {
@@ -4367,7 +4367,7 @@ legacyClassRefactor("paladin", {
 				name: "Warhammer",
 				description: desc([
 				"I gain access to the Warhammer's 'Push' Mastery feature",
-				"Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
+				"Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from me if it is Large or smaller.",
 				]),
 			},
 			"war pick": {
@@ -4402,7 +4402,7 @@ legacyClassRefactor("paladin", {
 				name: "Heavy Crossbow",
 				description: desc([
 				"I gain access to the Heavy Crossbow's 'Push' Mastery feature",
-				"Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
+				"Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from me if it is Large or smaller.",
 				]),
 			},
 			"longbow": {
@@ -5047,7 +5047,7 @@ legacyClassRefactor("ranger", {
 				name: "Greatclub",
 				description: desc([
 					"I gain access to the Greatclub's 'Push' Mastery feature",
-					"Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
+					"Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from me if it is Large or smaller.",
 				]),
 			},
 			"handaxe": {
@@ -5201,7 +5201,7 @@ legacyClassRefactor("ranger", {
 				name: "Pike",
 				description: desc([
 					"I gain access to the Pike's 'Push' Mastery feature",
-					"Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
+					"Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from me if it is Large or smaller.",
 				]),
 			},
 			"rapier": {
@@ -5236,7 +5236,7 @@ legacyClassRefactor("ranger", {
 				name: "Warhammer",
 				description: desc([
 					"I gain access to the Warhammer's 'Push' Mastery feature",
-					"Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
+					"Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from me if it is Large or smaller.",
 				]),
 			},
 			"war pick": {
@@ -5271,7 +5271,7 @@ legacyClassRefactor("ranger", {
 				name: "Heavy Crossbow",
 				description: desc([
 					"I gain access to the Heavy Crossbow's 'Push' Mastery feature",
-					"Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
+					"Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from me if it is Large or smaller.",
 				]),
 			},
 			"longbow": {
@@ -5974,7 +5974,7 @@ legacyClassRefactor("rogue", {
         name: "Greatclub",
         description: desc([
           "I gain access to the Greatclub's 'Push' Mastery feature",
-          "Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
+          "Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from me if it is Large or smaller.",
         ]),
       },
       "handaxe": {
@@ -6942,7 +6942,7 @@ legacySubClassRefactor("sorcerer", "wild magic", {
       toNotesPage: [{
         name: "Wild Magic Surge",
         note: [
-          "1d100\tEffect\n01-04\tRoll on this table at the start of each of my turns for the next minute, \n\tignoring this result on subsequent rolls.\n05-08\tA creature that is Friendly toward I appears in a random unoccupied \n\tspace within 60 feet of me. The creature is under the DM's control and \n\tdisappears 1 minute later. Roll 1d4 to determine the creature, on a 1. \n\ta Modrone Duodrone appears, on a 2. a Flumph appears, on a 3. a \n\tModrone Monodrone appears, on a 4. a Unicorn appears. See the \n\tMonster Manual for the creature's stat block.\n09-12\tFor the next minute, I regain 5 Hit Points at the start of each of my \n\tturns.\n13-16\tCreatures have Disadvantage on saving throws against the next spell \n\tI cast in the next minute that involves a saving throw.\n17-20\tI are subjected to an effect that lasts for 1 minute unless its \n\tdescription says otherwise. Roll 1d8 to determine the effect, on a 1. \n\tI'm surrounded by faint, ethereal music only I and creatures within 5 \n\tfeet of me can hear, on a 2. my size increases by one size category, on \n\ta 3. I grow a long beard made of feathers that remains until I sneeze \n\tat which point the feathers explode from my face and vanish, on a 4. I \n\tmust shout when I speak, on a 5. illusory butterflies flutter in the air \n\twithin 10 feet of me, on a 6. An eye appears on my forehead granting \n\tme advantage on Wisdom (Perception) checks, on a 7. Pink bubbles \n\tfloat out of my mouth whenever I speak, on an 8. my skin turns a \n\tvibrant shade of blue for 24 hours or until the effect is ended by a \n\tRemove Curse spell.\n21-24\tFor the next minute, all my spells with a casting time of an action have \n\ta casting time of a Bonus Action.\n25-28\tI am transported to the Astral Plane until the end of my next turn. I \n\tthen return to the space I previously occupied or the nearest \n\tunoccupied space if that space is occupied.\n29-32\tThe next time I cast a spell that deals damage within the next minute, \n\tdon't roll the spell's damage dice for the damage, instead use the \n\thighest number possible for each damage die.\n33-36\tI have Resistance to all damage for the next minute.\n37-40\tI turn into a potted plant until the start of my next turn. While I'm a \n\tplant, I have the Incapacitated condition and have Vulnerability to all \n\tdamage. If I drop to 0 Hit Points, my pot breaks and my form reverts.\n45-48\tI and up to three creatures I choose within 30 feet of I have the \n\tinvisible condition for 1 minute. This invisibility ends on a creature \n\timmediately after it makes an attack roll, deals damage, or casts a \n\tspell.\n49-52\tA spectral shield hovers near me for the next minute, granting me a \n\t+2 bonus to AC and immunity to Magic Missile.\n53-56\tI can take one extra action on this turn.\n57-60\tI cast a random spell, if the spell normally requires Concentration it \n\tdoesn't require Concentration in this case the spell lasts for its full \n\tduration. Roll 1d10 to determine the spell; on a 1. Confusion, on a 2. \n\tFireball, on a 3. Fog Cloud, on a 4. Fly (cast on a random creature \n\twithin 60 feet of I), on a 5 Grease, on a 6. Levitate (cast on yourself), \n\ton a 7. Magic Missile (cast as a level 5 spell), on an 8. Mirror Image, on \n\ta 9. Polymorph (cast on yourself), and if I fail the saving throw I turn \n\tinto a Goat (see appendix B), on a 10. See Invisibility.\n61-64\tFor the next minute, any flammable, non-magical object I touch that \n\tisn't being worn or carried by another creature bursts into flame, takes \n\t1d4 Fire damage, and is burning.\n65-68\tIf I die within the next hour, I immediately revive as if by the \n\tReincarnate spell.\n69-72\tI have the Frightened condition until the end of my next turn. The DM \n\tdetermines the source of my fear.\n73-76\tI teleport up to 60 feet to an unoccupied space I can see.\n77-80\tA random creature within 60 feet of I has the poisoned condition for \n\t1d4 hours.\n81-84\tI radiate Bright Light in a 30-foot radius for the next minute. Any \n\tcreature that ends its turn within 5 feet of I has the Blinded condition \n\tuntil the end of its next turn.\n85-88\tUp to three creatures of my choice that I can see within 30 feet of I \n\ttake 1d10 Necrotic damage, I regain Hit Points equal to the sum of \n\tthe Necrotic damage dealt.\n89-92\tUp to three creatures of my choice I can see within 30 feet of I take \n\t4d10 Lightning damage.\n93-96\tI and all creatures within 30 feet of I have Vulnerability to Piercing \n\tdamage for the next minute.\n97-00\tRoll 1d6; On a 1. I regain 2d10 Hit Points, on a 2. One ally of my \n\tchoice within 300 feet of me regains 2d10 Hit Points, on a 3. I regain \n\tmy lowest-level expended spell slot, on a 4. One ally of my choice \n\twithin 300 feet of me regains their lowest-level expended \n\tspell slot, on a 5. I regain all my expended Sorcery Points, on a 6. All \n\tthe effects of row 17-20 affect I simultaneously.",
+          "1d100\tEffect\n01-04\tRoll on this table at the start of each of my turns for the next minute, \n\tignoring this result on subsequent rolls.\n05-08\tA creature that is Friendly toward me appears in a random unoccupied \n\tspace within 60 feet of me. The creature is under the DM's control and \n\tdisappears 1 minute later. Roll 1d4 to determine the creature, on a 1. \n\ta Modrone Duodrone appears, on a 2. a Flumph appears, on a 3. a \n\tModrone Monodrone appears, on a 4. a Unicorn appears. See the \n\tMonster Manual for the creature's stat block.\n09-12\tFor the next minute, I regain 5 Hit Points at the start of each of my \n\tturns.\n13-16\tCreatures have Disadvantage on saving throws against the next spell \n\tI cast in the next minute that involves a saving throw.\n17-20\tI am subjected to an effect that lasts for 1 minute unless its \n\tdescription says otherwise. Roll 1d8 to determine the effect, on a 1. \n\tI'm surrounded by faint, ethereal music only myself and creatures within 5 \n\tfeet of me can hear, on a 2. my size increases by one size category, on \n\ta 3. I grow a long beard made of feathers that remains until I sneeze \n\tat which point the feathers explode from my face and vanish, on a 4. I \n\tmust shout when I speak, on a 5. illusory butterflies flutter in the air \n\twithin 10 feet of me, on a 6. An eye appears on my forehead granting \n\tme advantage on Wisdom (Perception) checks, on a 7. Pink bubbles \n\tfloat out of my mouth whenever I speak, on an 8. my skin turns a \n\tvibrant shade of blue for 24 hours or until the effect is ended by a \n\tRemove Curse spell.\n21-24\tFor the next minute, all my spells with a casting time of an action have \n\ta casting time of a Bonus Action.\n25-28\tI am transported to the Astral Plane until the end of my next turn. I \n\tthen return to the space I previously occupied or the nearest \n\tunoccupied space if that space is occupied.\n29-32\tThe next time I cast a spell that deals damage within the next minute, \n\tdon't roll the spell's damage dice for the damage, instead use the \n\thighest number possible for each damage die.\n33-36\tI have Resistance to all damage for the next minute.\n37-40\tI turn into a potted plant until the start of my next turn. While I'm a \n\tplant, I have the Incapacitated condition and have Vulnerability to all \n\tdamage. If I drop to 0 Hit Points, my pot breaks and my form reverts.\n45-48\tMyself and up to three creatures I choose within 30 feet of I have the \n\tinvisible condition for 1 minute. This invisibility ends on a creature \n\timmediately after it makes an attack roll, deals damage, or casts a \n\tspell.\n49-52\tA spectral shield hovers near me for the next minute, granting me a \n\t+2 bonus to AC and immunity to Magic Missile.\n53-56\tI can take one extra action on this turn.\n57-60\tI cast a random spell, if the spell normally requires Concentration it \n\tdoesn't require Concentration in this case the spell lasts for its full \n\tduration. Roll 1d10 to determine the spell; on a 1. Confusion, on a 2. \n\tFireball, on a 3. Fog Cloud, on a 4. Fly (cast on a random creature \n\twithin 60 feet of me), on a 5 Grease, on a 6. Levitate (cast on myself), \n\ton a 7. Magic Missile (cast as a level 5 spell), on an 8. Mirror Image, on \n\ta 9. Polymorph (cast on myself), and if I fail the saving throw I turn \n\tinto a Goat (see appendix B), on a 10. See Invisibility.\n61-64\tFor the next minute, any flammable, non-magical object I touch that \n\tisn't being worn or carried by another creature bursts into flame, takes \n\t1d4 Fire damage, and is burning.\n65-68\tIf I die within the next hour, I immediately revive as if by the \n\tReincarnate spell.\n69-72\tI have the Frightened condition until the end of my next turn. The DM \n\tdetermines the source of my fear.\n73-76\tI teleport up to 60 feet to an unoccupied space I can see.\n77-80\tA random creature within 60 feet of me has the poisoned condition for \n\t1d4 hours.\n81-84\tI radiate Bright Light in a 30-foot radius for the next minute. Any \n\tcreature that ends its turn within 5 feet of me has the Blinded condition \n\tuntil the end of its next turn.\n85-88\tUp to three creatures of my choice that I can see within 30 feet of me \n\ttake 1d10 Necrotic damage, I regain Hit Points equal to the sum of \n\tthe Necrotic damage dealt.\n89-92\tUp to three creatures of my choice I can see within 30 feet of me take \n\t4d10 Lightning damage.\n93-96\tMe and all creatures within 30 feet of me have Vulnerability to Piercing \n\tdamage for the next minute.\n97-00\tRoll 1d6; On a 1. I regain 2d10 Hit Points, on a 2. One ally of my \n\tchoice within 300 feet of me regains 2d10 Hit Points, on a 3. I regain \n\tmy lowest-level expended spell slot, on a 4. One ally of my choice \n\twithin 300 feet of me regains their lowest-level expended \n\tspell slot, on a 5. I regain all my expended Sorcery Points, on a 6. All \n\tthe effects of row 17-20 affect I simultaneously.",
         ],
       }],
     },
@@ -7170,7 +7170,7 @@ legacyClassRefactor("warlock", {
           firstCol: "atwill",
         }],
         description: desc([
-          "I can cast Levitate on yourself without expending a spell slot.",
+          "I can cast Levitate on myself without expending a spell slot.",
         ]),
       },
       "devil's sight (2+)": {
@@ -7313,7 +7313,7 @@ legacyClassRefactor("warlock", {
           firstCol: "atwill",
         }],
         description: desc([
-          "I can cast False Life on yourself without expending a spell slot. When I cast the spell with this feature, I don't roll the die for the Temporary Hit Points; I automatically get the highest number on the die.",
+          "I can cast False Life on myself without expending a spell slot. When I cast the spell with this feature, I don't roll the die for the Temporary Hit Points; I automatically get the highest number on the die.",
         ]),
       },
       "gaze of two minds (5+)": {
@@ -7433,7 +7433,7 @@ legacyClassRefactor("warlock", {
           firstCol: "atwill",
         }],
         description: desc([
-          "I can cast Alter Self on yourself without expending a spell slot.",
+          "I can cast Alter Self on myself without expending a spell slot.",
         ]),
       },
       "misty visions (2+)": {
@@ -7467,7 +7467,7 @@ legacyClassRefactor("warlock", {
           firstCol: "atwill",
         }],
         description: desc([
-          "While I'm in an area of Dim Light or Darkness, I can cast Invisibility on yourself without expending a spell slot.",
+          "While I'm in an area of Dim Light or Darkness, I can cast Invisibility on myself without expending a spell slot.",
         ]),
       },
       "otherworldly leap (2+)": {
@@ -7484,7 +7484,7 @@ legacyClassRefactor("warlock", {
           firstCol: "atwill",
         }],
         description: desc([
-          "I can cast Jump on yourself without expending a spell slot.",
+          "I can cast Jump on myself without expending a spell slot.",
         ]),
       },
       "pact of the blade": {
@@ -9332,7 +9332,7 @@ legacyRaceRefactor("dragonborn", {
       usages: 1,
       recovery: "long rest",
       description: desc([
-        "When I reach character level 5, I can channel draconic magic to give yourself temporary flight. As a Bonus Action, I sprout spectral wings on my back that last for 10 minutes or until I retract the wings (no action required) or have the incapacitated condition. During that time I have a Fly Speed equal to my Speed. My wings appear to be made of the same energy as my Breath Weapon. Once I use this trait, I can't use it again until I finish a Long Rest",
+        "When I reach character level 5, I can channel draconic magic to give myself temporary flight. As a Bonus Action, I sprout spectral wings on my back that last for 10 minutes or until I retract the wings (no action required) or have the incapacitated condition. During that time I have a Fly Speed equal to my Speed. My wings appear to be made of the same energy as my Breath Weapon. Once I use this trait, I can't use it again until I finish a Long Rest",
       ]),
     },
   },
@@ -10761,7 +10761,7 @@ FeatsList["inspiring leader"] = {
   name: "Inspiring Leader",
   source: [["P24", 204]],
   regExpSearch: /^(?=.*inspiring)(?=.*leader).*$/i,
-  description: "+1 Wis or Cha, After a rest I can give a performance that grants up to 6 allies (can include yourself) Temp HP = my Character level + Wis/Cha.",  
+  description: "+1 Wis or Cha, After a rest I can give a performance that grants up to 6 allies (can include myself) Temp HP = my Character level + Wis/Cha.",  
   descriptionFull: desc([
     "You gain the following benefits",
     "Ability Score Increase : Increase your Wisdom or Charisma score by 1 to a maximum of 20.",
@@ -10769,11 +10769,11 @@ FeatsList["inspiring leader"] = {
   ]),
   choices: ["Wisdom", "Charisma"],
   "wisdom": {
-    description: "After a rest, I can give a performance that grants up to 6 allies (can include yourself) Temp HP = my Character level + Wis. [+1 Wisdom]",
+    description: "After a rest, I can give a performance that grants up to 6 allies (can include myself) Temp HP = my Character level + Wis. [+1 Wisdom]",
     scores: [0, 0, 0, 0, 1, 0],
   },
   "charisma": {
-    description: "After a rest, I can give a performance that grants up to 6 allies (can include yourself) Temp HP = my Character level + Cha. [+1 Charisma]",
+    description: "After a rest, I can give a performance that grants up to 6 allies (can include myself) Temp HP = my Character level + Cha. [+1 Charisma]",
     scores: [0, 0, 0, 0, 0, 1],
   },
   prerequisite: "Level 4 and Wisdom or Charisma 13 or higher",
@@ -11576,7 +11576,7 @@ FeatsList["weapon master"] = {
   },
   "weapon master (greatclub)": {
     name: "Weapon Master (Greatclub)",
-    description: "I gain access to the Greatclub's 'Push' Mastery feature. Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",    
+    description: "I gain access to the Greatclub's 'Push' Mastery feature. Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from me if it is Large or smaller.",    
     prerequisite: "Greatclub Proficiency",
     prereqeval: function (v) {
       return v.simpleWeaponsProf || v.otherWeaponsProf.indexOf("greatclub") !== -1;
@@ -11752,7 +11752,7 @@ FeatsList["weapon master"] = {
   },
   "weapon master (pike)": {
     name: "Weapon Master (Pike)",
-    description: "I gain access to the Pike's 'Push' Mastery feature. Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",    
+    description: "I gain access to the Pike's 'Push' Mastery feature. Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from me if it is Large or smaller.",    
     prerequisite: "Pike Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("pike") !== -1;
@@ -11792,7 +11792,7 @@ FeatsList["weapon master"] = {
   },
   "weapon master (warhammer)": {
     name: "Weapon Master (Warhammer)",
-    description: "I gain access to the Warhammer's 'Push' Mastery feature. Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",    
+    description: "I gain access to the Warhammer's 'Push' Mastery feature. Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from me if it is Large or smaller.",    
     prerequisite: "Warhammer Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("warhammer") !== -1;
@@ -11834,7 +11834,7 @@ FeatsList["weapon master"] = {
   },
   "weapon master (heavy crossbow)": {
     name: "Weapon Master (Heavy Crossbow)",
-    description: "I gain access to the Heavy Crossbow's 'Push' Mastery feature. Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",    
+    description: "I gain access to the Heavy Crossbow's 'Push' Mastery feature. Push : If I hit a creature with this weapon, I can push the creature up to 10 feet straight away from me if it is Large or smaller.",    
     prerequisite: "Heavy Crossbow Proficiency",
     prereqeval: function (v) {
       return v.martialWeaponsProf || v.otherWeaponsProf.indexOf("heavy crossbow") !== -1;
