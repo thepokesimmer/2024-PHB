@@ -6015,7 +6015,7 @@ MagicItemsList["ring of jumping"] = {
 	type: "ring",
 	rarity: "uncommon",
 	magicItemTable: "?",
-	description: "While wearing this ring, you can cast Jump from it, but can target only yourself when you do so. This causes my Jump distance to triple for 1 minute.",
+	description: "While I am wearing this ring, I can cast Jump on myself from it.",
 	descriptionFull: "While wearing this ring, you can cast Jump from it, but can target only yourself when you do so.",
 	attunement: true,
 	spellcastingBonus: {
@@ -6026,9 +6026,8 @@ MagicItemsList["ring of jumping"] = {
 	},
 	spellChanges: {
 		"jump": {
-			time: "1 bns",
 			range: "Self",
-			changes: "The casting time is only a Bonus action instead of an action and it can only affect the wearer."
+			changes: "it can only affect the wearer."
 		}
 	}
 };
