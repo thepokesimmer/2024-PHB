@@ -4600,7 +4600,7 @@ legacyClassRefactor("paladin", {
 			description: desc([
 			"If a Channel Divinity effect has a saving throw the DC is my Cha spell save DC.",
 			"I get two uses (three at level 11); one returns on a Short Rest; all return on a Long Rest.",
-			"◆ Channel Divinity: Divine Sense As a Bonus Action I sense and locate Celestials, Fiends, Undead and consecrated/desecrated places/obj within 60 ft for 10 min or until Incapacitated",
+			"\u2022 Channel Divinity: Divine Sense As a Bonus Action I sense and locate Celestials, Fiends, Undead and consecrated/desecrated places/obj within 60 ft for 10 min or until Incapacitated",
 			]),
 		},
 		"subclassfeature3": {
@@ -5939,7 +5939,7 @@ legacyClassRefactor("rogue", {
       name: "Thieves' Cant",
       source: [["P24", 129]],
       minlevel: 1,
-      languageProfs: ["Thieves' Cant", 1],
+      languageProfs: [["Thieves' Cant"], ["Additional Language", 1]],
       description: desc([
         "I know Thieves' Cant and one other language of my choice.",
       ]),
@@ -10377,7 +10377,7 @@ FeatsList["actor"] = {
   source: [["P24", 202]],
   regExpSearch: /^(?=.*actor).*$/i,
   scores: [0, 0, 0, 0, 0, 1],
-  description: "+1 Cha. Adv on Cha (Deception or Performance) checks to impersonate a real of fictional person. Able to mimic the sounds of others; DC (8 + Cha + PB) Insight check to determine mimicry.",  
+  description: "+1 Cha. Adv on Cha (Deception or Performance) checks to impersonate a real or fictional person. Able to mimic the sounds of others; DC (8 + Cha + PB) Insight check to determine mimicry.",  
   descriptionFull: desc([
     "You gain the following benefits",
     "Ability Score Increase : Increase your Charisma score by 1 to a maximum of 20.",
@@ -19552,7 +19552,7 @@ legacySpellRefactor("shillelagh", {
 });
 legacySpellRefactor("shining smite", {
 	name : "Shining Smite",
-	replacs : "branding smite",
+	replaces : "branding smite",
 	classes : ["paladin"],
 	source : [["P24", 316]],
 	level : 2,
