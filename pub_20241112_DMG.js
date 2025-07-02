@@ -3918,7 +3918,7 @@ MagicItemsList["holy avenger"] = {
 		description : "I have a +3 bonus to attack and damage rolls made with this magic sword. It does +2d10 radiant damage against fiends and undead. While holding the drawn sword, I have a 10-ft radius aura that grants me and my allies advantage on saving throws against spells and magical effects."
 	},
 	"paladin level 17+ (30-ft emanation)" : {
-		name : "Holy\u200A\u200A Avenger",
+		name : "Holy\u200A Avenger",
 		description : "I have a +3 bonus to attack and damage rolls made with this magic sword. It does +2d10 radiant damage against fiends and undead. While holding the drawn sword, I have a 30-ft radius aura that grants me and my allies advantage on saving throws against spells and magical effects."
 	}
 };
