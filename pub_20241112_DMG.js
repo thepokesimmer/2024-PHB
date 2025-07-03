@@ -2540,6 +2540,7 @@ MagicItemsList["enspelled armor"] = {
 	usages : 6,
 	recovery : "dawn",
 	additional : "regains 1d6",
+	attunement : true,
 	allowDuplicates : true,
 	chooseGear : {
 		type : "armor",
@@ -2709,6 +2710,9 @@ MagicItemsList["enspelled staff"] = {
 		description : "Versatile (1d8); Topple",
 		selectNow : true
 	}],
+	attunement: true,
+	prerequisite: "Requires attunement by a spellcaster",
+	prereqeval: function (v) { return v.isSpellcaster; },
 	allowDuplicates : true,
 	choices : ["Cantrip (Uncommon)", "1st-Level Spell (Uncommon)", "2nd-Level Spell (Rare)", "3rd-Level Spell (Rare)", "4th-Level Spell (Very Rare)", "5th-Level Spell (Very Rare)", "6th-Level Spell (Legendary)", "7th-Level Spell (Legendary)", "8th-Level Spell (Legendary)"],
 	"cantrip (uncommon)" : {
@@ -2857,6 +2861,7 @@ MagicItemsList["enspelled weapon"] = {
 	usages : 6,
 	recovery : "dawn",
 	additional : "regains 1d6",
+	attunement : true,
 	allowDuplicates : true,
 	chooseGear : {
 		type : "weapon",
