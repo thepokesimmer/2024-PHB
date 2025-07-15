@@ -4069,7 +4069,7 @@ MagicItemsList["instrument of scribing"] = {
 		description : "As a Magic action while I'm playing this musical instrument, I can write a magical message on a nonmagical surface that I can see within 30 ft. The message can be up to 13 words in a language I know and I can have it glow faintly. Dispel Magic erases it, otherwise it fades away after 24 hours. This can be used 3 times per dawn."
 	},
 	"not a bard" : {
-		name : "Instrument\u200A\u200A of Scribing",
+		name : "Instrument\u200A of Scribing",
 		description : "As an action while I'm playing this musical instrument, I can write a magical message on a nonmagical surface that I can see within 30 ft. The message can be up to 6 words in a language I know and fades away after 24 hours or when Dispel Magic is cast on it. The instrument can be used like this 3 times per dawn."
 	}
 };
@@ -7917,22 +7917,25 @@ MagicItemsList["staff of the woodlands"] = {
 		spells: ["barkskin", "locate animals or plants", "pass without trace"],
 		selection: ["barkskin", "locate animals or plants", "pass without trace"],
 		firstCol: 2,
-		times: 2
+		times: 3
 	}, {
 		name: "3 charges",
 		spells: ["speak with plants"],
 		selection: ["speak with plants"],
 		firstCol: 3
+		times : 1,
 	}, {
 		name: "5 charges",
 		spells: ["awaken"],
 		selection: ["awaken"],
 		firstCol: 5
+		times : 1,
 	}, {
 		name: "6 charges",
 		spells: ["wall of thorns"],
 		selection: ["wall of thorns"],
-		firstCol: 6
+		firstCol: 6,
+		times : 1,
 	}],
 	spellChanges: {
 		"awaken": {
