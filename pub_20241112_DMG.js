@@ -12,7 +12,7 @@ SourceList.D24 = {
 //Functions
 
 //Supernatural Gifts
-FeatsList["blessings"] = {
+FeatsList.blessings = {
 	name : "Blessings [Supernatural Gifts]",
 	source : [["D24", 98]],
 	regExpSearch : /blessings/i,
@@ -71,7 +71,7 @@ FeatsList["blessings"] = {
 		descriptionFull : "This Blessing grants you the benefits of a Periapt of Wound Closure.",
 	},
 };
-FeatsList["charms"] = {
+FeatsList.charms = {
 	name : "Charms [Supernatural Gifts]",
 	source : [["D24", 99]],
 	regExpSearch : /charms/i,
@@ -860,7 +860,7 @@ var DMG_blackrazorFullDescription = [
 	">>Blackrazor<<’s hunger for souls must be regularly fed. If the sword goes 3 days or more without consuming a soul, a conflict between it and its wielder occurs at the next sunset.",
 	toUni("Destroying Blackrazor") + ". >>Blackrazor<< can be destroyed by crushing it in the great gears of Mechanus. Primus, the creator of the modrons, also knows a series of musical tones that >>Blackrazor<< can’t stand to hear, causing the sword to shatter.",
 ];
-MagicItemsList["blackrazor"] = {
+MagicItemsList.blackrazor = {
 	name : "Blackrazor",
 	source : [["D24", 236]],
 	type : "weapon (greatsword)",
@@ -2035,7 +2035,7 @@ MagicItemsList["deck of many things"] = { // contains contributions by Larry Hoy
 		]
 	}]
 };
-MagicItemsList["defender"] = {
+MagicItemsList.defender = {
 	name : "Defender",
 	source : [["D24", 252]],
 	type : "weapon (any melee weapon)",
@@ -2258,7 +2258,7 @@ MagicItemsList["dread helm"] = {
 	descriptionFull : "While you’re wearing this fearsome steel helm, your eyes glow red and the rest of your face is hidden in shadow.",
 	weight : 1
 };
-MagicItemsList["driftglobe"] = {
+MagicItemsList.driftglobe = {
 	name : "Driftglobe",
 	source : [["D24", 254]],
 	type : "wondrous item",
@@ -4992,7 +4992,7 @@ MagicItemsList["nolzur's marvelous pigments"] = {
 	descriptionFull: "This fine wooden box contains 1d4 pots of pigment and a brush (weighing 1 pound in total).\n Using the brush and expending 1 pot of pigment, you can paint any number of three-dimensional objects and terrain features (such as walls, doors, trees, flowers, weapons, webs, and pits), provided these elements are all confined to a 20-foot Cube. The effort takes 10 minutes (regardless of the number of elements you create), during which time you must remain in the Cube, and requires Concentration. If your Concentration is broken or you leave the Cube before the work is done, all the painted elements vanish, and the pot of pigment is wasted.\n When the work is done, all the painted objects and terrain features become real. Thus, painting a door on a wall creates an actual door, which can be opened to whatever is beyond. Painting a pit creates a real pit, the entire depth of which must lie within the 20-foot Cube.\n No object created by a pot of pigment can have a value greater than 25 GP, and the total value of all objects created by a pot of pigment can’t exceed 500 GP. If you paint objects of greater value (such as a large pile of gold), they look authentic, but close inspection reveals they’re made from paste, cookies, or some other worthless material.\n If you paint a form of energy such as fire or lightning, the energy dissipates as soon as you complete the painting, doing no harm.",
 	weight: 1
 };
-MagicItemsList["oathbow"] = {
+MagicItemsList.oathbow = {
 	name: "Oathbow",
 	source: [["D24", 282]],
 	type: "weapon (shortbow, longbow)",
@@ -7911,24 +7911,24 @@ MagicItemsList["staff of the woodlands"] = {
 		spells: ["animal friendship", "speak with animals"],
 		selection: ["animal friendship", "speak with animals"],
 		firstCol: 1,
-		times: 2
+		times: 2,
 	}, {
 		name: "2 charges",
 		spells: ["barkskin", "locate animals or plants", "pass without trace"],
 		selection: ["barkskin", "locate animals or plants", "pass without trace"],
 		firstCol: 2,
-		times: 3
+		times: 3,
 	}, {
 		name: "3 charges",
 		spells: ["speak with plants"],
 		selection: ["speak with plants"],
-		firstCol: 3
+		firstCol: 3,
 		times : 1,
 	}, {
 		name: "5 charges",
 		spells: ["awaken"],
 		selection: ["awaken"],
-		firstCol: 5
+		firstCol: 5,
 		times : 1,
 	}, {
 		name: "6 charges",
@@ -9114,7 +9114,7 @@ var DMG_waveFullDescription = [
 	"\u2022Personality. Wave zealously encourages mortals to worship sea gods and has a habit of humming sea chanteys. Conflict arises if the wielder fails to further the weapon’s objectives in the world.",
 	"\u2022Destroying Wave. Wave can be destroyed only on the island of Thunderforge, where it was forged. The weapon must be melted down by a storm giant or someone imbued with a storm giant’s strength. Destroying Wave angers a god of the sea, who sends powerful agents to attack the island and punish the destroyers.",
 ];
-MagicItemsList["wave"] = {
+MagicItemsList.wave = {
 	name: "Wave",
 	source: [["D24", 323]],
 	type: "weapon (trident)",
@@ -9265,7 +9265,7 @@ var DMG_whelmFullDescription = [
 	toUni("Personality") + ". Whelm has ties to the dwarf clan that created it, called the Dankil or the Mightyhammer clan. It longs to be returned to that clan. Whelm’s purpose is to protect dwarves. Conflict arises if the wielder doesn’t share this goal.",
 	toUni("Destroying Whelm") + ". Whelm can be dissolved in the acidic bile of a recently slain ancient black dragon. It can also be melted down in the forges of the Mightyhammer dwarf clan, but only by the rightful leader of that clan."
 ];
-MagicItemsList["whelm"] = {
+MagicItemsList.whelm = {
 	name: "Whelm",
 	source: [["D24", 324]],
 	type: "weapon (warhammer)",
