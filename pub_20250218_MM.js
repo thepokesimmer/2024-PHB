@@ -2693,7 +2693,7 @@ CreatureList["giant squid"] = { //need to look at ink cloud action
 		"perception" : 3,
 	},
 	damage_resistances : "",
-	senses : "Blindsight 60 ft",
+	senses : "Darkvision 120 ft",
 	languages : "",
 	challengeRating : 6,
 	proficiencyBonus : 3,
@@ -4091,7 +4091,7 @@ CreatureList["triceratops"] = {
 	senses : "",
 	languages : "",
 	challengeRating : 5,
-	proficiencyBonus : 2,
+	proficiencyBonus : 3,
 	attacksAction : 2,	
 	actions : [{
 		name : "Multiattack",
