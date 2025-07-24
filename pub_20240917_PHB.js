@@ -16046,7 +16046,7 @@ legacySpellRefactor("conjure woodland beings", {
 	time : "1 a",
 	range : "S:10-ft rad",
 	components : "V,S",
-	duration : "Conc, 1 h",
+	duration : "Conc, 10 min",
 	save : "Wis",
 	description : "Disengage as bns; when crea covered/enters/ends in area (1/turn/crea) 5d8+1d8/SL Force; save 1/2",
 	descriptionFull : "You conjure nature spirits that flit around you in a 10-foot Emanation for the duration. Whenever the Emanation enters the space of a creature you can see and whenever a creature you can see enters the Emanation or ends its turn there, you can force that creature to make a Wisdom saving throw. The creature takes 5d8 Force damage on a failed save or half as much damage on a successful one. A creature makes this save only once per turn." + "\n   " + "In addition, you can take the Disengage action as a Bonus Action for the spell's duration." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 4."
