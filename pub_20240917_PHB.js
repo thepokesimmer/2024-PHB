@@ -14011,7 +14011,7 @@ ArmourList["splint"] = {
   invName : "Splint armor",
   infoname: "Splint Armor [200 gp]",
   source: [["P24", 219]],
-  regExpSearch: /^(?=.*splint)(?=.*armor).*$/i,
+  regExpSearch: /^(?=.*splint).*$/i,
   ac: 17,
   type: "heavy",
   stealthdis: true,
