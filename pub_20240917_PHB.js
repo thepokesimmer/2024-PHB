@@ -12910,9 +12910,10 @@ WeaponsList["mace"] = {
 };
 WeaponsList["quarterstaff"] = {
   name: "Quarterstaff",
+  nameAlt : ["Staff"],
   infoname: "Quarterstaff [2 sp]",
   source: [["P24", 215]],
-  regExpSearch: /quarterstaff/i,
+  regExpSearch : /quarterstaff|\bstaffs?\b|\bbos?\b|^gun(.?(\+|-)\d+)?$/i,
   type: "Simple",
   ability: 1,
   abilitytodamage: true,
@@ -22881,12 +22882,12 @@ CreatureList["beast of the land"] = {
 	attacks : [{
 		name : "Beast's Strike",
 		ability : 1,
+		abilitytodamage : true,
 		damage : [1, 8, "Bludg./Pierc./Slash."],
 		modifiers : ["", "oWis"],
 		range : "Melee (5 ft)",
 		description : "+1d6 dmg if hits after moving 20 ft straight in same rough. Large or smaller target falls Prone.",
 		tooltip : "If the beast moved at least 20 feet straight toward the target before the hit, the target takes an extra 1d6 damageof the same type, and the target has the Prone condition if it is a Large or smaller creature.",
-		useSpellMod : "ranger",
 	}],
 	languages : "understands the languages I speak",
 	traits : [{
@@ -22940,11 +22941,11 @@ CreatureList["beast of the sea"] = {
 	attacks : [{
 		name : "Beast's Strike",
 		ability : 1,
+		abilitytodamage : true,
 		damage : [1, 6, "Bludg./Slash."],
 		modifiers : ["", "oWis"],
 		range : "Melee (5 ft)",
 		description : "Target has the Grappled condition (escape DC = my Spell Save DC)",
-		useSpellMod : "ranger",
 	}],
 	languages : "understands the languages I speak",
 	traits : [{
@@ -23002,12 +23003,12 @@ CreatureList["beast of the sky"] = {
 	attacks : [{
 		name : "Beast's Strike",
 		ability : 2,
+		abilitytodamage : true,
 		damage : [1, 4, "Slashing"],
 		modifiers : ["", "oWis"],
 		range : "Melee (5 ft)",
 		description : "",
 		tooltip : "",
-		useSpellMod : "ranger",
 	}],
 	languages : "understands the languages I speak",
 	traits : [{
