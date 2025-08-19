@@ -3493,8 +3493,11 @@ MagicItemsList["hammer of thunderbolts"] = {
 	type : "weapon (maul or warhammer)",
 	rarity : "legendary",
 	magicItemTable : "?",
+	usages : 5,
+	recovery : "dawn",
+	additional : "regains 1d4+1",
 	description : "This magical weapon adds a +1 bonus to attack and damage rolls made with it. It has additional features when I'm attuned to it, which requires me to wear a belt of giant strength or gauntlets of ogre power.",
-	descriptionFull : "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon.\n   The weapon has 5 charges. You can expend 1 charge and make a ranged attack with the weapon, hurling it as if it had the Thrown property with a normal range of 20 feet and a long range of 60 feet. If the attack hits, the weapon unleashes a thunderclap audible out to 300 feet. The target and every creature within 30 feet of it other than you must succeed on a DC 17 Constitution saving throw or have the Stunned condition until the end of your next turn. Immediately after hitting or missing, the weapon flies back to your hand. The weapon regains 1d4 + 1 expended charges daily at dawn.\n   " + toUni("Giant's Bane") + ". While you are attuned to the weapon and wearing either a Belt of Giant Strength or Gauntlets of Ogre Power to which you are also attuned, you gain the following benefits:\n    TGiants’ Bane. When you roll a 20 on the d20 for an attack roll made with this weapon against a Giant, the creature must succeed on a DC 17 Constitution saving throw or die.\n   Might of Giants. The Strength score bestowed by your Belt of Giant Strength or Gauntlets of Ogre Power increases by 4, to a maximum of 30.",
+	descriptionFull : "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon.\n   The weapon has 5 charges. You can expend 1 charge and make a ranged attack with the weapon, hurling it as if it had the Thrown property with a normal range of 20 feet and a long range of 60 feet. If the attack hits, the weapon unleashes a thunderclap audible out to 300 feet. The target and every creature within 30 feet of it other than you must succeed on a DC 17 Constitution saving throw or have the Stunned condition until the end of your next turn. Immediately after hitting or missing, the weapon flies back to your hand. The weapon regains 1d4 + 1 expended charges daily at dawn.\n   " + toUni("Giant's Bane") + ". While you are attuned to the weapon and wearing either a Belt of Giant Strength or Gauntlets of Ogre Power to which you are also attuned, you gain the following benefits:\n    Giants’ Bane. When you roll a 20 on the d20 for an attack roll made with this weapon against a Giant, the creature must succeed on a DC 17 Constitution saving throw or die.\n   Might of Giants. The Strength score bestowed by your Belt of Giant Strength or Gauntlets of Ogre Power increases by 4, to a maximum of 30.",
 	weight : 10,
 	attunement : true,
 	chooseGear : {
@@ -3512,7 +3515,7 @@ MagicItemsList["hammer of thunderbolts"] = {
 	},
 	choices : ["not attuned", "attuned (requires Belt of Giant Strength or Gauntlets of Ogre Power)"],
 	"not attuned" : {
-		description : "This magical weapon adds a +1 bonus to attack and damage rolls made with it. It has additional features when I'm attuned to it, which requires me to wear a belt of giant strength or gauntlets of ogre power.",
+		description : "This magical weapon adds a +1 bonus to attack and damage rolls made with it. I can expend 1 charge to throw it with 20 ft/60 ft range, which, on a hit, causes all within 30 ft to make a DC 17 Con save or be stunned until the end of my next turn. It has additional features when I'm attuned to it, which requires me to wear a belt of giant strength or gauntlets of ogre power.",
 		calcChanges : {
 			atkAdd : [
 				function (fields, v) {
@@ -3521,7 +3524,7 @@ MagicItemsList["hammer of thunderbolts"] = {
 						fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
 					}
 				},
-				'If I include the words "of Thunderbolts" in a the name of an warhammer or maul, it will be treated as the magic weapon Hammer of Thunderbolts. It has +1 to hit and damage.'
+				'If I include the words "of Thunderbolts" in a the name of a warhammer or maul, it will be treated as the magic weapon Hammer of Thunderbolts. It has +1 to hit and damage.'
 			],
 			atkCalc : [
 				function (fields, v, output) {
@@ -3534,16 +3537,12 @@ MagicItemsList["hammer of thunderbolts"] = {
 	},
 	"attuned (requires belt of giant strength or gauntlets of ogre power)" : {
 		name : "Hammer of Thunderbolts [attuned]",
-		description : "This magical maul has a +1 bonus to hit/damage and gives me +4 Strength (max 30). On a roll of 20 to hit vs. a giant, it dies on a failed DC 17 Con save. I can expend 1 charge to throw it with 20 ft/60 ft range, which, on a hit, causes all within 30 ft to make a DC 17 Con save or be stunned until the end of my next turn.",
+		description : "This magical weapon has a +1 bonus to hit/damage and gives me +4 Strength (max 30). On a roll of 20 to hit vs. a giant, it dies on a failed DC 17 Con save. I can expend 1 charge to throw it with 20 ft/60 ft range, which, on a hit, causes all within 30 ft to make a DC 17 Con save or be stunned until the end of my next turn.",
 		descriptionLong : "This magical maul adds a +1 bonus to attack and damage rolls made with it. It gives me a +4 bonus to Strength (max 30). On a roll of 20 to hit vs. a giant, the giant dies on a failed DC 17 Con save. The hammer has 5 charges and regains 1d4+1 charges daily at dawn. I can can expend 1 charge and make a ranged weapon attack with the hammer, hurling it as if it had the thrown property with a normal range of 20 ft and a long range of 60 ft. On a hit, it releases an audible thunderclap in a 300 ft radius and all within 30 ft of the target that was hit must make a DC 17 Con save or be stunned until the end of my next turn.",
 		prerequisite : "Must be wearing a Belt of Giant Strength or Gauntlets of Ogre Power to attune",
 		prereqeval : function () {
-			// don't have to be attuned to the prereqs https://twitter.com/jeremyecrawford/status/948346891296653315
 			return CurrentMagicItems.known.indexOf("belt of giant strength") !== -1 | CurrentMagicItems.known.indexOf("gauntlets of ogre power") !== -1;
 		},
-		usages : 5,
-		recovery : "dawn",
-		additional : "regains 1d4+1",
 		scores : [4, 0, 0, 0, 0, 0],
 		scoresMaximum : [30, 0, 0, 0, 0, 0],
 		calcChanges : {
@@ -3555,7 +3554,7 @@ MagicItemsList["hammer of thunderbolts"] = {
 						fields.Description += (fields.Description ? '; ' : '') + 'On 20 to hit vs. Giant: DC 17 Con save or die; Expend charge to throw';
 					}
 				},
-				'If I include the words "of Thunderbolts" in a the name of an warhammer or maul, it will be treated as the magic weapon Hammer of Thunderbolts. It has +1 to hit and damage.'
+				'If I include the words "of Thunderbolts" in a the name of a warhammer or maul, it will be treated as the magic weapon Hammer of Thunderbolts. It has +1 to hit and damage.'
 			],
 			atkCalc : [
 				function (fields, v, output) {
@@ -5008,7 +5007,7 @@ MagicItemsList.oathbow = {
 			regExpSearch: /oathbow/i,
 			name: "Oathbow",
 			source: [["PHB2024", 215]],
-			description: "Ammunition, heavy, two-handed; Vex; Vs. sworn enemy: adv, +3d6 damage, no cover/range penalties",
+			description: "Ammunition, Two-Handed; Vex; Vs. sworn enemy: adv, +3d6 damage, no cover/range penalties",
 			isMagicWeapon: true,
 			selectNow: true
 		},],
