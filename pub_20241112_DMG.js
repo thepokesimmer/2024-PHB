@@ -5785,68 +5785,64 @@ MagicItemsList["ring of djinni summoning"] = {
 };
 MagicItemsList["ring of elemental command"] = {
 	name: "Ring of Elemental Command",
-	source: [["D24", "-"]],
+	source: [["D24", "292"]],
 	type: "ring",
 	rarity: "legendary",
 	magicItemTable: "?",
-	description: "Select one of the four types of this ring, with each type being linked to one of the four Elemental Planes. Each Ring has Advantage on attack rolls against Elementals and they have Disadvatage on attack rolls against you, you can take a Magic action to try to compel an Elemental within 60 ft/ DC 18 WIS save; Charmed on fail.",
-	descriptionFull: "This ring is linked to one of the four Elemental Planes. The GM chooses or randomly determines the linked plane.\n While wearing this ring, you have advantage on attack rolls against Elementals, and they have disadvantage on attack rolls against you. You can take a Magic action to try to compel an Elemental you see within 60-feet. The Elemental must make a DC18 WIS save or it has the Charmed condition until the start of your next turn. You determine its move and action on its next turn.\n In addition, you have access to properties based on the linked plane. The ring has 5 charges. It regains 1d4 + 1 expended charges daily at dawn. Spells cast from the ring have a save DC of 18.",
+	description: "Select one of the four types of this ring, with each type being linked to one of the four Elemental Planes. Each Ring has Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you, you can take a Magic action to try to compel an Elemental within 60 ft/ DC 18 WIS save; Charmed on fail.",
+	descriptionFull: "This ring is linked to one of the four Elemental Planes. The GM chooses or randomly determines the linked plane.\n While wearing this ring, you have advantage on attack rolls against Elementals, and they have disadvantage on attack rolls against you. You can take a Magic action to try to compel an Elemental you see within 60-feet. The Elemental must make a DC18 WIS save or it has the Charmed condition until the start of your next turn. You determine its move and action on its next turn.\n In addition, you have access to properties based on the linked plane. The ring has 5 charges; regains 1d4+1 expended charges daily at dawn. Spells cast from the ring have a save DC of 18.",
 	attunement: true,
 	allowDuplicates: true,
 	action: ["action", "Compel Elemental"],
 	usages: 5,
 	recovery: "dawn",
 	additional: "regains 1d4+1",
-	choices : ["air", "earth", "fire", "water"],
+	choices: ["air", "earth", "fire", "water"],
 	"air": {
 		name: "Ring of Elemental Command (Air)",
 		sortname: "Ring of Elemental Command, Air",
-		description: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants you Advantage on attacks vs. Elementals and they have Disadvantage vs. you. You can cast Feather Fall, Wind Wall (1 Charge), Gust of Wind (2 Charges), and Chain Lighting (3 Charges). You have Resistance to Lightning damage. My Fly Speed equals my walking Speed and I can hover. I also know Auran.",
-		descriptionFull: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants you Advantage on attacks vs. Elementals and they have Disadvantage vs. you. You can cast Feather Fall, Wind Wall (1 Charge), Gust of Wind (2 Charges), and Chain Lighting (3 Charges). You have Resistance to Lightning damage. My Fly Speed equals my walking Speed and I can hover. I also know Auran.",
+		description: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants you Advantage on attacks vs. Elementals and they have Disadvantage vs. you. You can cast Feather Fall, Wind Wall (1 Charge), Gust of Wind (2 Charges), and Chain Lighting (3 Charges). You have Resistance to Lightning damage. Your Fly Speed equals your walking Speed and you can hover. You also know Auran.",
+		descriptionFull: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants you Advantage on attacks vs. Elementals and they have Disadvantage vs. you. You can cast Feather Fall, Wind Wall (1 Charge), Gust of Wind (2 Charges), and Chain Lighting (3 Charges). You have Resistance to Lightning damage. Your Fly Speed equals your walking Speed and you can hover. You also know Auran.",
 		languageProfs: ["Auran"],
 		dmgres: ["lightning"],
-		speed: { fly: { spd: "walk", enc: "walk" } },
+		speed: { fly: { spd: "walk", enc: "walk" }},
 		fixedDC: 18,
 		spellFirstColTitle: "Ch",
 		spellcastingBonus: [{
 			name: "0 charges",
 			spells: ["feather fall"],
 			selection: ["feather fall"],
-			times : 1,
 			firstCol: 0,
 		}, {
 			name: "1 charge",
 			spells: ["wind wall"],
 			selection: ["wind wall"],
-			times : 1,
 			firstCol: 1,
 		}, {
 			name: "2 charges",
 			spells: ["gust of wind"],
 			selection: ["gust of wind"],
-			times : 1,
 			firstCol: 2,
 		}, {
 			name: "3 charges",
 			spells: ["chain lightning"],
 			selection: ["chain lightning"],
-			times : 1,
 			firstCol: 3,
 		}],
-		toNotesPage: [
-			"Each Ring of Elemental Command is linked to one of the four Elemental Planes. The DM chooses or randomly determines the linked plane. For example, a Ring of Elemental Command (air) is linked to the Elemental Plane of Air.\n" +
-			"Every Ring of Elemental Command has the following two properties:\n" +
-			toUni("Elemental Bane") + ". While wearing the ring, you have Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you.\n" +
-			toUni("Elemental Compulsion") + ". While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the Charmed condition until the start your next turn, and you determine what it does with its move and action on its next turn.\n" +
-			toUni("Elemental Focus") + ". While wearing the ring, you benefit from additional properties corresponding to the ring's linked Elemental Plane:\n" +
-			"\u2022" + toUni("Air") + ". You know Auran, you have Resistance to Lightning damage, and you have a Fly Speed equal to your Speed and can hover.",
-		],
+		toNotesPage: [{
+			page3notes: true,
+			name: "Ring of Elemental Command (Air)",
+			note: desc([
+			"\u2022 Elemental Bane. While wearing the ring, you have Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you.",
+			"\u2022 Elemental Compulsion. While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the Charmed condition until the start your next turn, and you determine what it does with its move and action on its next turn.",
+			"\u2022 Elemental Focus. While wearing the ring, you know Auran, are resistant to Lightning Damage, and you have a Fly Speed equal to your Speed and can hover."]),
+		}],
 	},
 	"earth": {
 		name: "Ring of Elemental Command (Earth)",
 		sortname: "Ring of Elemental Command, Earth",
-		description: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants you Advantage on attacks vs. Elementals and they have Disadvantage vs. you. You can cast Stone Shape (2 Charges), Stone Skin & Wall of Stone (3 Charges), Earthquake (5 Charges). You have Resistance to Acid damage. You can move through solid earth, rock, rocks are not Difficult Terrain for you and without disturbing the areas I pass. I also know Terran.",
-		descriptionFull: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants you Advantage on attacks vs. Elementals and they have Disadvantage vs. you. You can cast Stone Shape (2 Charges), Stone Skin & Wall of Stone (3 Charges), Earthquake (5 Charges). You have Resistance to Acid damage. You can move through solid earth, rock, rocks are not Difficult Terrain for you and without disturbing the areas I pass. I also know Terran.",
+		description: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants you Advantage on attacks vs. Elementals and they have Disadvantage vs. you. You can cast Stone Shape (2 Charges), Stone Skin & Wall of Stone (3 Charges), Earthquake (5 Charges). You have Resistance to Acid damage. You can move through solid earth, rock, rocks are not Difficult Terrain for you and without disturbing the areas you pass. You also know Terran.",
+		descriptionFull: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants you Advantage on attacks vs. Elementals and they have Disadvantage vs. you. You can cast Stone Shape (2 Charges), Stone Skin & Wall of Stone (3 Charges), Earthquake (5 Charges). You have Resistance to Acid damage. You can move through solid earth, rock, rocks are not Difficult Terrain for you and without disturbing the areas you pass. You also know Terran.",
 		languageProfs: ["Terran"],
 		dmgres: ["acid"],
 		fixedDC: 18,
@@ -5855,7 +5851,6 @@ MagicItemsList["ring of elemental command"] = {
 			name: "2 charges",
 			spells: ["stone shape"],
 			selection: ["stone shape"],
-			times : 1,
 			firstCol: 2,
 		}, {
 			name: "3 charges",
@@ -5867,23 +5862,22 @@ MagicItemsList["ring of elemental command"] = {
 			name: "5 charges",
 			spells: ["earthquake"],
 			selection: ["earthquake"],
-			times : 1,
 			firstCol: 5,
 		}],
-		toNotesPage: [
-			"Each Ring of Elemental Command is linked to one of the four Elemental Planes. The DM chooses or randomly determines the linked plane. For example, a Ring of Elemental Command (Air) is linked to the Elemental Plane of Air.\n" +
-			"Every Ring of Elemental Command has the following two properties:\n" +
-			toUni("Elemental Bane") + ". While wearing the ring, you have Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you.\n" +
-			toUni("Elemental Compulsion") + ". While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the Charmed condition until the start your next turn, and you determine what it does with its move and action on its next turn.\n" +
-			toUni("Elemental Focus") + ". While wearing the ring, you benefit from additional properties corresponding to the ring's linked Elemental Plane:\n" +
-			"\u2022" + toUni("Earth") + ". You know Terran, and you have Resistance to Acid damage. Terrain composed of rubble, rocks, or dirt isn’t Difficult Terrain for you. In addition, you can move through solid earth or rock as if those areas were Difficult Terrain without disturbing the matter through which you pass. If you end your turn in solid earth or rock, you are shunted out to the nearest unoccupied space you last occupied.",
-		],
+		toNotesPage: [{
+			page3notes: true,
+			name: "Ring of Elemental Command (Earth)",
+			note: desc([
+			"\u2022 Elemental Bane. While wearing the ring, you have Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you.\n" +
+			"\u2022 Elemental Compulsion. While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the Charmed condition until the start your next turn, and you determine what it does with its move and action on its next turn.\n" +
+			"\u2022 Elemental Focus. While wearing the ring, you know Terran and are resistant to Acid damage. Rubble, Rocks, or dirt isn't Difficult Terrain for you. You can move through solid earth or rock as if it was difficult terrain without disturbing the matter. If you end your turn in solid earth or rock, you are shunted out to the nearest unoccupied space you last occupied."]),
+		}],
 	},
 	"fire": {
 		name: "Ring of Elemental Command (Fire)",
 		sortname: "Ring of Elemental Command, Fire",
-		description: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants me adv. on attacks vs. elementals aand they have disadv. vs. me. I can cast Burning Hands (1 Charge), Fireball (2 Charges), Wall of Fire (3 Charges), and Fire Storm (4 Charges). I have immunity to Fire damage. I also know Ignan.",
-		descriptionFull: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants me adv. on attacks vs. elementals aand they have disadv. vs. me. I can cast Burning Hands (1 Charge), Fireball (2 Charges), Wall of Fire (3 Charges), and Fire Storm (4 Charges). I have immunity to Fire damage. I also know Ignan.",
+		description: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants you adv. on attacks vs. elementals and they have disadv. vs. you. You can cast Burning Hands (1 Charge), Fireball (2 Charges), Wall of Fire (3 Charges), and Fire Storm (4 Charges). You have immunity to Fire damage and know Ignan.",
+		descriptionFull: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants you adv. on attacks vs. elementals and they have disadv. vs. you. You can cast Burning Hands (1 Charge), Fireball (2 Charges), Wall of Fire (3 Charges), and Fire Storm (4 Charges). You have immunity to Fire damage and know Ignan.",
 		languageProfs: ["Ignan"],
 		savetxt: { immune: ["fire"] },
 		fixedDC: 18,
@@ -5892,41 +5886,37 @@ MagicItemsList["ring of elemental command"] = {
 			name: "1 charge",
 			spells: ["burning hands"],
 			selection: ["burning hands"],
-			times : 1,
 			firstCol: 1,
 		}, {
 			name: "2 charges",
 			spells: ["fireball"],
 			selection: ["fireball"],
-			times : 1,
 			firstCol: 2,
 		}, {
 			name: "3 charges",
 			spells: ["wall of fire"],
 			selection: ["wall of fire"],
-			times : 1,
 			firstCol: 3,
 		}, {
 			name: "4 charges",
 			spells: ["fire storm"],
 			selection: ["fire storm"],
-			times : 1,
 			firstCol: 4,
 		}],
-		toNotesPage: [
-			"Each Ring of Elemental Command is linked to one of the four Elemental Planes. The DM chooses or randomly determines the linked plane. For example, a Ring of Elemental Command (air) is linked to the Elemental Plane of Air.\n" +
-			"Every Ring of Elemental Command has the following two properties:\n" +
-			toUni("Elemental Bane") + ". While wearing the ring, you have Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you.\n" +
-			toUni("Elemental Compulsion") + ". While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the Charmed condition until the start your next turn, and you determine what it does with its move and action on its next turn.\n" +
-			toUni("Elemental Focus") + ". While wearing the ring, you benefit from additional properties corresponding to the ring's linked Elemental Plane:\n" +
-			"\u2022" + toUni("Fire") + ". You know Ignan, and you have Immunity to Fire damage.",
-		],
+		toNotesPage: [{
+			name: "Ring of Elemental Command (Fire)",
+			note: desc([
+			"\u2022 Elemental Bane. While wearing the ring, you have Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you.\n" +
+			"\u2022 Elemental Compulsion. While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the Charmed condition until the start your next turn, and you determine what it does with its move and action on its next turn.\n" +
+			"\u2022 Elemental Focus. While wearing the ring, you know Ignan and have Immunity to Fire Damage."]),
+			page3notes: true,
+		}],
 	},
 	"water": {
 		name: "Ring of Elemental Command (Water)",
 		sortname: "Ring of Elemental Command, Water",
-		description: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants me adv. on attacks vs. elementals aand they have disadv. vs. me. I can cast Create or Destroy Water (1 Charge), Ice Storm & Water Walk (2 Charges), Wall of Ice (3 Charges), and Tsunami (5 Charges). I gain a Swim Speed of 60 feet and can breathe underwater. I also know Aquan.",
-		descriptionFull: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants me adv. on attacks vs. elementals aand they have disadv. vs. me. I can cast Burning Hands (1 Charge), Fireball (2 Charges), Wall of Fire (3 Charges), and Fire Storm (4 Charges). I have immunity to Fire damage. I also know Ignan.",
+		description: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants you adv. on attacks vs. elementals and they have disadv. vs. you. You can cast Create or Destroy Water (1 Charge), Ice Storm & Water Walk (2 Charges), Wall of Ice (3 Charges), and Tsunami (5 Charges). You gain a Swim Speed of 60 feet and can breathe underwater. You also know Aquan.",
+		descriptionFull: "This ring has 5 charges and regains 1d4+1 daily at dawn. It grants you adv. on attacks vs. elementals and they have disadv. vs. you. You can cast Create or Destroy Water (1 Charge), Ice Storm & Water Walk (2 Charges), Wall of Ice (3 Charges), and Tsunami (5 Charges). You gain a Swim Speed of 60 feet and can breathe underwater. You also know Aquan.",
 		languageProfs: ["Aquan"],
 		savetxt: { text: 'I can breathe underwater' },
 		speed: { swim: 60 },
@@ -5936,35 +5926,32 @@ MagicItemsList["ring of elemental command"] = {
 			name: "1 charge",
 			spells: ["create or destroy water"],
 			selection: ["create or destroy water"],
-			times : 1,
 			firstCol: 1,
 		}, {
 			name: "2 charges",
-			spells: ["icestorm", "water walk"],
-			selection: ["icestorm", "water walk"],
+			spells: ["ice storm", "water walk"],
+			selection: ["ice storm", "water walk"],
 			times: 2,
 			firstCol: 2,
 		}, {
 			name: "3 charges",
 			spells: ["wall of ice"],
 			selection: ["wall of ice"],
-			times : 1,
 			firstCol: 3,
 		}, {
 			name: "5 charges",
 			spells: ["tsunami"],
 			selection: ["tsunami"],
-			times : 1,
 			firstCol: 5,
 		}],
-		toNotesPage: [
-			"Each Ring of Elemental Command is linked to one of the four Elemental Planes. The DM chooses or randomly determines the linked plane. For example, a Ring of Elemental Command (air) is linked to the Elemental Plane of Air.\n" +
-			"Every Ring of Elemental Command has the following two properties:\n" +
-			toUni("Elemental Bane") + ". While wearing the ring, you have Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you.\n" +
-			toUni("Elemental Compulsion") + ". While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the Charmed condition until the start your next turn, and you determine what it does with its move and action on its next turn.\n" +
-			toUni("Elemental Focus") + ". While wearing the ring, you benefit from additional properties corresponding to the ring's linked Elemental Plane:\n" +
-			"\u2022" + toUni("Water") + ". You know Aquan, you gain a Swim Speed of 60 feet, and you can breathe underwater.",
-		],
+		toNotesPage: [{
+			page3notes: true,
+			name: "Ring of Elemental Command (Water)",
+			note: desc([
+			"\u2022 Elemental Bane. While wearing the ring, you have Advantage on attack rolls against Elementals and they have Disadvantage on attack rolls against you.\n" +
+			"\u2022 Elemental Compulsion. While wearing the ring, you can take a Magic action to try to compel an Elemental you see within 60 feet of yourself. The Elemental makes a DC 18 Wisdom saving throw. On a failed save, the Elemental has the Charmed condition until the start your next turn, and you determine what it does with its move and action on its next turn.\n" +
+			"\u2022 Elemental Focus. While wearing the ring, you know Aquan, gain a Swim speed of 60 feet and can breath underwater."])
+		}],
 	},
 };
 MagicItemsList["ring of evasion"] = {
