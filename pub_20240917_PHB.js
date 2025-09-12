@@ -13718,6 +13718,19 @@ WeaponsList["thunderclap"] = {
   abilitytodamage: false,
   dc: true
 };
+WeaponsList["true strike"] = {
+  regExpSearch: /true strike/i,
+  name: "True Strike",
+  source: [["P24", 333]],
+  list: "spell",
+  ability: 6,
+  type: "Cantrip",
+  damage: ["1", 6, "radiant"],
+  range: "Melee, 5 ft",
+  description: "1 Melee Weapon Atk using Spell mod instead of Str/Dex, Dmg can become Radiant",
+  abilitytodamage: false,
+  dc: false
+};
 WeaponsList["vicious mockery"] = {
   regExpSearch: /^(?=.*vicious)(?=.*mockery).*$/i,
   name: "Vicious Mockery",
@@ -13744,6 +13757,17 @@ WeaponsList["word of radiance"] = {
   abilitytodamage: false,
   dc: true
 };
+// Add weapon die scaling for true strike
+addEvals({ atkAdd : [
+	function (fields, v) {
+		if (v.WeaponName === "true strike") {
+			fields.Damage_Die = function(n){ return n < 5 ? '' : n < 11 ? '1d6' : n < 17 ? '2d6' : '3d6'}(classes.totallevel);
+		}
+	},
+	"", // no description means it doesn't appear in the attack line menu's pop-up dialog
+	1
+] }, "True strike damage progression", true, "items");
+CurrentUpdates.types = []; // don't trigger the changes dialog for this
 // Add weapon die scaling for shillelagh
 addEvals({ atkAdd : [
 	function (fields, v) {
