@@ -13727,7 +13727,7 @@ WeaponsList["true strike"] = {
   type: "Cantrip",
   damage: ["1", 6, "radiant"],
   range: "Melee, 5 ft",
-  description: "1 Melee Weapon Atk using Spell mod instead of Str/Dex, Dmg can become Radiant",
+  description: "As Part of this Spell make one Weapon Atk using your Spell mod instead of Str/Dex, Dmg can become Radiant",
   abilitytodamage: false,
   dc: false
 };
