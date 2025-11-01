@@ -150,8 +150,8 @@ AddSubClass("bard", "moon", {
 			source : [["FRHoF", 0]],
 			minlevel : 3,
 			description : [
-				"**Inspired Eclipse**. When I use a Bns to give a crea BI, I can have the Invisible condition and teleport up to 30 ft to an unoccupied space as part of the same bns. This invisibility lasts until the start of my next turn, and ends early if I make an atk roll, deal dmg, or cast a spell.",
-				"**Lunar Vitality**. Once per turn, when I heal a crea with a spell, I can expend a BI die and increase the HP restored by the number rolled on the BI die. The crea's Speed also increases by 10 ft until the end of its next turn."
+				"**Inspired Eclipse**. When I use a Bns to give a crea BI, I can gain the Invisible condition and teleport up to 30 ft to an unoccupied space. This invisibility lasts until the start of my next turn, and ends early if I make an atk roll, deal dmg, or cast a spell.",
+				"**Lunar Vitality**. Once per turn, when I heal a crea with a spell, I can expend a BI die and increase the HP restored by the number rolled on the die. The crea's Speed also increases by 10 ft until the end of its next turn."
 			],	
 		},
 		"subclassfeature3.1" : {
