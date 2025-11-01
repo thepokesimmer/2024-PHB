@@ -7,7 +7,7 @@ SourceList["FRHoF"] = {
 	group : "Campaign Sourcebooks",
 	campaignSetting : "Forgotten Realms",
 };
-// Coded By: ThePokésimmer with contributions from Shroo and Rocky
+// Coded By: ThePokésimmer with contributions from Shroo
 //Functions
 function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
@@ -186,7 +186,7 @@ AddSubClass("bard", "moon", {
 			recovery : "long rest",
 			description : [
 				"I always have the Moonbeam spell prepared.",
-				"Once per Long Rest, I can modify the casting of Moonbeam to cause me to glow for the duration, while glowing I shed Dim Light in a 5 ft Emanation. When a crea fails its save against the effects of Moonbeam, another crea, of my choice, I can see within 60 ft of me regains 2d4 HP.",
+				"Once per Long Rest, I can modify the casting of Moonbeam to cause me to glow for the duration. While glowing, I shed Dim Light in a 5 ft Emanation. When a crea fails its save against the effects of Moonbeam, another crea, of my choice, I can see within 60 ft of me regains 2d4 HP.",
 			],
 		},
 		"subclassfeature14" : {
@@ -194,7 +194,7 @@ AddSubClass("bard", "moon", {
 			source : [["FRHoF", 0]],
 			minlevel : 14,
 			description : [
-				"**Shadow of the New Moon**. When I use Inspired Eclipse, the crea who recieved my BI can have the Invisible condition and immediately use its Rea to teleport up to 30 ft to an unoccupied space it can see. The crea remains Invisible until the start of its next turn.",
+				"**Shadow of the New Moon**. When I use Inspired Eclipse, the crea who received my BI can have the Invisible condition and immediately use its Rea to teleport up to 30 ft to an unoccupied space it can see. The crea remains Invisible until the start of its next turn.",
 				"**Vibrance of the full Moon**. When I use Lunar Vitality, I can roll 1d6 and use the number rolled in place of expending a BI die.",
 			],
 		},
@@ -214,7 +214,7 @@ legacySubClassRefactor("cleric", "knowledge", {
 			toolProfs : [["Artisan's Tools", 1]],
 			skillstxt : "Choose two: Arcana, History, Nature, or Religion",
 			description : [
-				"I gain Proficiency in one Artisan's Tools of choice. Additionally I gain Proficiency in two of the following skills: Arcana, History, Nature, Religion.",
+				"I gain Proficiency in one Artisan's Tools of choice. Additionally, I gain Proficiency in two of the following skills: Arcana, History, Nature, Religion.",
 			],
 		},
 		"subclassfeature3.1" : {
@@ -223,7 +223,7 @@ legacySubClassRefactor("cleric", "knowledge", {
 			minlevel : 3,
 			action : [["action", ""]],
 			description : [
-				"As a Magic Action, I can expend one use of my CD, choose one of my Domain Spells from the Div school that I have prepared, As part of this action I can cast the spell without expending a Spell Slot or needing Material components.",
+				"As a Magic Action, I can expend one use of my CD, choose one of my Domain Spells from the Div school that I have prepared. As part of this action, I can cast the spell without expending a Spell Slot or needing Material components.",
 			],
 		},
 		"subclassfeature6" : {
@@ -233,7 +233,7 @@ legacySubClassRefactor("cleric", "knowledge", {
 			senses : [["Telepathy", 60]],
 			saves : ["Int", "Wis", "Cha"],
 			description : [
-				"I gain Telepathy out to 60 ft. When I use this Telepathy, I can simultaneously contact a number of crea equal to my Wis mod (min 1). Additionally, I gain proficiency in Intelligence Saving Throws, If I already have this Prof, I instead gain Prof in a save I lack.",
+				"I gain Telepathy out to 60 ft. When I use this Telepathy, I can simultaneously contact a number of crea equal to my Wis mod (min 1). Additionally, I gain proficiency in Intelligence Saving Throws. If I already have this Prof, I instead gain Prof in a save I lack.",
 			],
 		},
 		"subclassfeature17" : {
@@ -300,7 +300,7 @@ legacySubClassRefactor("fighter", "banneret", {
 			additional : ["", "", "", "", "", "", "", "", "", "30-ft Emanation", "30-ft Emanation", "30-ft Emanation", "30-ft Emanation", "30-ft Emanation", "30-ft Emanation", "30-ft Emanation", "30-ft Emanation", "60-ft Emanation", "60-ft Emanation", "60-ft Emanation"],
 			description : [
 				"When I use my Action Surge, I can choose a number of allies, equal to my Cha mod (min 1), within a 30-ft Emanation of me. Each of those allies can immediately take a Rea to use one of the following options.",
-				"**Attack**. The ally makes one attack with a weapon or an Unarmed Strike",
+				"**Attack**. The ally makes one attack with a weapon or an Unarmed Strike.",
 				"**Move**. The ally moves up to half its Speed without provoking Opportunity Attacks.",
 			],
 		},	
@@ -321,7 +321,7 @@ legacySubClassRefactor("fighter", "banneret", {
 				immune : ["charmed", "frightened"],
 			},
 			description : [
-				"**Bolstered Rally**. The area of effect for both Group Recovery and Rallying Surge is now a 60-ft Emanation",
+				"**Bolstered Rally**. The area of effect for both Group Recovery and Rallying Surge is now a 60-ft Emanation.",
 				"**Unshakable Bravery**. I have Immunity to the Charmed and Frightened conditions.",
 			],
 		},
@@ -373,7 +373,7 @@ AddSubClass("paladin", "oath of the noble genies", {
 			source : [["FRHoF", 0]],
 			minlevel : 7,
 			description : [
-				"Choose one of the following dmg types: Acid, Cold, Fire, Lightning, or Thunder. My allies and I have Resistance to that dmg type while in my Aura of Protection. At the start of each of my turns, I can change the dmg type affected by ths feature to one of the other listed options (no action required).",
+				"Choose one of the following dmg types: Acid, Cold, Fire, Lightning, or Thunder. My allies and I have Resistance to that dmg type while in my Aura of Protection. At the start of each of my turns, I can change the dmg type affected by this feature to one of the other listed options (no action required).",
 			],
 		},
 		"subclassfeature15" : {
@@ -418,7 +418,7 @@ AddSubClass("ranger", "winter walker", {
 			additional : ["", "", "1d4 Cold damage", "1d4 Cold damage", "1d4 Cold damage", "1d4 Cold damage", "1d4 Cold damage", "1d4 Cold damage", "1d4 Cold damage", "1d4 Cold damage", "1d6 Cold damage", "1d6 Cold damage", "1d6 Cold damage", "1d6 Cold damage", "1d6 Cold damage", "1d6 Cold damage", "1d6 Cold damage", "1d6 Cold damage", "1d6 Cold damage", "1d6 Cold damage"],
 			description : [
 				"**Biting Cold**. Dmg from my weapon atks, Ranger spells, and Ranger features ignores Resistance to Cold dmg.",
-				"**Frost Resistance**. I have Resistance to Cold damage",
+				"**Frost Resistance**. I have Resistance to Cold damage.",
 				"**Polar Strikes**. When I hit a crea with an atk roll using a weapon, I can deal extra Cold dmg to the target, which can take this extra dmg only once per turn.",
 			],
 		},
@@ -428,7 +428,7 @@ AddSubClass("ranger", "winter walker", {
 			minlevel : 3,
 			additional : "Temp HP: 1d10 + Ranger lvl",
 			description : [
-				"When I cast Hunter's Mark, I gain Temp HP equal 1d10 plus my Ranger level. Additionally, while a crea is marked by my Hunter's Mark, it can't take the Disengage action.",
+				"When I cast Hunter's Mark, I gain Temp HP equal to 1d10 plus my Ranger level. Additionally, while a crea is marked by my Hunter's Mark, it can't take the Disengage action.",
 			],
 		},
 		"subclassfeature7": {
@@ -439,7 +439,7 @@ AddSubClass("ranger", "winter walker", {
 			recovery : "long rest",
 			action : [["action", ""]],
 			description : [
-				"Once per Long Rest, as a Magic Action, choose a number of crea I can see equal to my Wis mod (min 1). Ech chosen crea regains HP equal to 1d10 plus Ranger level, and has Adv on saves to avoid or end the Frightened condition for 1 hr.",
+				"Once per Long Rest, as a Magic Action, choose a number of crea I can see equal to my Wis mod (min 1). Each chosen crea regains HP equal to 1d10 plus Ranger level, and has Adv on saves to avoid or end the Frightened condition for 1 hr.",
 			],
 		},			
 		"subclassfeature11" : {
@@ -450,7 +450,7 @@ AddSubClass("ranger", "winter walker", {
 			usagescalc : "event.value = Math.max(1, What('Wis Mod'));",
 			recovery : "long rest",
 			description : [
-				"When a crea hits me with an attack roll, I can take a Rea to force the crea to make a Wis save against my Spell Save DC. On a failure, the target has the Stunned condiiton until the end of my next turn. While the target is Stunned, its Speed is reduced to 0 ft.",
+				"When a crea hits me with an attack roll, I can take a Rea to force the crea to make a Wis save against my Spell Save DC. On a failure, the target has the Stunned condition until the end of my next turn. While the target is Stunned, its Speed is reduced to 0 ft.",
 			],
 		},
 		"subclassfeature15" : {
@@ -461,9 +461,9 @@ AddSubClass("ranger", "winter walker", {
 			recovery : "long rest", 
 			altResource : "SS 4+",
 			description : [
-				"Once per Long Rest, when I cast Hunters Mark, I can adopt a ghostly, snowy form, which lasts until the spell ends, granting me the following benefits. I can regain my use of this feature by expending a lvl 4+ Spell slot (no action required).",
+				"Once per Long Rest, when I cast Hunter's Mark, I can adopt a ghostly, snowy form, which lasts until the spell ends, granting me the following benefits. I can regain my use of this feature by expending a lvl 4+ Spell slot (no action required).",
 				"**Frozen Soul**. I have Immunity to Cold damage. When I first adopt this form and at the start of each of my subsequent turns, each crea of my choice in a 15-ft Emanation originating from me takes 2d4 Cold damage.",
-				"**Partially Incorporeal**. i have Immunity to the Grappled, Prone, and Restrained conditions. I can move through creatures and objects as if they were Difficult Terrain, but I take 1d10 Force dmg if I end my turn inside a crea or an object. If the form ends while I am inside a crea or object, I am shunted to the nearest unoccupied space.",
+				"**Partially Incorporeal**. I have Immunity to the Grappled, Prone, and Restrained conditions. I can move through creatures and objects as if they were Difficult Terrain, but I take 1d10 Force dmg if I end my turn inside a crea or an object. If the form ends while I am inside a crea or object, I am shunted to the nearest unoccupied space.",
 			],
 		},	
 	},
@@ -491,7 +491,7 @@ AddSubClass("rogue", "scion of the three", {
 			minlevel : 3,
 			choices : ["Bane", "Bhaal", "Myrkul"],
 			description : [
-				"Choose one of the Dead Three using the 'choose features' button I gain one dmg resistance, and one cantrip associated with my choice, When I finish a Long Rest, I can change my choice.",
+				"Choose one of the Dead Three using the 'choose features' button. I gain one dmg resistance, and one cantrip associated with my choice. When I finish a Long Rest, I can change my choice.",
 			],
 			"bane" : {
 				name : "Dread Allegiance : Bane",
@@ -503,7 +503,7 @@ AddSubClass("rogue", "scion of the three", {
 					firstCol : "atwill",
 				}],
 				description : [
-					"I gain Resistance to Psychic dmg, and I learn the Minor Illusion Cantrip, When I finish a Long Rest, I can change my Dread Allegiance using the 'choose features' button.",
+					"I gain Resistance to Psychic dmg, and I learn the Minor Illusion Cantrip. When I finish a Long Rest, I can change my Dread Allegiance using the 'choose features' button.",
 				],
 			},
 			"bhaal" : {
@@ -516,7 +516,7 @@ AddSubClass("rogue", "scion of the three", {
 					firstCol : "atwill",
 				}],
 				description : [
-					"I gain Resistance to Poison dmg, and I learn the Blade Ward Cantrip, When I finish a Long Rest, I can change my Dread Allegiance using the 'choose features' button.",
+					"I gain Resistance to Poison dmg, and I learn the Blade Ward Cantrip. When I finish a Long Rest, I can change my Dread Allegiance using the 'choose features' button.",
 				],
 			},
 			"myrkul" : {
@@ -529,7 +529,7 @@ AddSubClass("rogue", "scion of the three", {
 					firstCol : "atwill",
 				}],
 				description : [
-					"I gain Resistance to Necrotic dmg, and I learn the Chill Touch Cantrip, When I finish a Long Rest, I can change my Dread Allegiance using the 'choose features' button.",
+					"I gain Resistance to Necrotic dmg, and I learn the Chill Touch Cantrip. When I finish a Long Rest, I can change my Dread Allegiance using the 'choose features' button.",
 				],
 			},
 		},	
@@ -539,7 +539,7 @@ AddSubClass("rogue", "scion of the three", {
 			minlevel : 9,
 			description : [
 				"I gain the following Cunning Strike Option.",
-				"**Terrifiy (Cost: 1d6)**. The target must succeed on a Wis save, or it has the Frightened condition for 1 minute. While the target is Frightened in this way, I have Adv on atk rolls against the target. The Frightened target repeats the save at the end of each of its turns, ending theeffect on a success.",
+				"**Terrifiy (Cost: 1d6)**. The target must succeed on a Wis save, or it has the Frightened condition for 1 minute. While the target is Frightened in this way, I have Adv on atk rolls against the target. The Frightened target repeats the save at the end of each of its turns, ending the effect on a success.",
 			],
 		},
 		"subclassfeature13" : {
@@ -591,7 +591,7 @@ AddSubClass("sorcerer", "spellfire sorcery", {
 			}],
 			description : [
 				"I always have the Counterspell spell prepared.",
-				"Additionally, When a target fails the Save against a Counterspell I cast, I regain 1d4 SP.",
+				"Additionally, when a target fails the Save against a Counterspell I cast, I regain 1d4 SP.",
 			],
 		},
 		"subclassfeature14" : {
@@ -599,7 +599,7 @@ AddSubClass("sorcerer", "spellfire sorcery", {
 			source : [["FRHoF", 0]],
 			minlevel : 14,
 			description : [
-				"My Spellfire Burst improves. I add my Sorcerer level to the Temp HP gained from Bolstering FLames, and the dmg of my Radiant Fire increases to 1d8.",
+				"My Spellfire Burst improves. I add my Sorcerer level to the Temp HP gained from Bolstering Flames, and the dmg of my Radiant Fire increases to 1d8.",
 			],
 		},	
 		"subclassfeature18" : {
@@ -611,7 +611,7 @@ AddSubClass("sorcerer", "spellfire sorcery", {
 			altResource : "5 SP",
 			description : [
 				"Once per Long Rest, when I use Innate Sorcery, I can alter it to gain the following benefits. I can regain my use of this feature by expending 5 SP (no action required).",
-				"**Burning Life Force**. Once per turn when I am hit by an attack roll, I can expend a number of HD, up to a max equal to my Cha Mod (min 1). Roll the expended dice, and reduce the amount of damage from that atttack equal to the total rolled.",
+				"**Burning Life Force**. Once per turn, when I am hit by an attack roll, I can expend a number of HD, up to a max equal to my Cha Mod (min 1). Roll the expended dice, and reduce the amount of damage from that attack equal to the total rolled.",
 				"**Flight**. I gain a Fly Speed of 60 ft and can hover.",
 				"**Spell Avoidance**. When I'm subjected to a spell or magical effect that allows me to make a save to take only half damage, I instead take no damage if I succeed on the save and only half dmg if I fail. I can't use this benefit if I have the Incapacitated condition.",
 			],
@@ -660,7 +660,7 @@ legacySubClassRefactor("wizard", "bladesinger", {
 			skillstxt : "Choose one: Acrobatics, Athletics, Performance, or Persuasion",
 			description : [
 				"I gain prof with all Melee Martial weapons that don't have the Two-Handed or Heavy property. I can use a Melee weapon with which I have prof as a Spellcasting focus for my Wizard spells.",
-				"Additionally I gain prof in one of the following skills of choice: Acrobatics, Athletics, Performance, or Persuasion.",
+				"Additionally, I gain prof in one of the following skills of choice: Acrobatics, Athletics, Performance, or Persuasion.",
 			],
 		},	
 		"subclassfeature6" : {
@@ -668,8 +668,8 @@ legacySubClassRefactor("wizard", "bladesinger", {
 			source : [["FRHoF", 0]],
 			minlevel : 6,
 			description : [
-				"I can attack twice instead of once when I take the Attack action on my turn",
-				"Moreover, I can cast one of my cantrips, with a casting time of 1 a, in place of one of those attacks"
+				"I can attack twice instead of once when I take the Attack action on my turn.",
+				"Moreover, I can cast one of my cantrips, with a casting time of 1 a, in place of one of those attacks."
 			],
 		},
 		"subclassfeature10" : {
@@ -713,7 +713,7 @@ BackgroundList["spellfire initiate"] = {
 };
 BackgroundFeatureList["spellfire initiate"] = {
 	description : [
-		"You bear the gift of spellfire: a rare form of magic that channels the raw power of the Weave. wielding spellfire takes a heavy toll on the body. You've trained both mind and body to efficiently wield this sacred power.",
+		"You bear the gift of spellfire: a rare form of magic that channels the raw power of the Weave. Wielding spellfire takes a heavy toll on the body. You've trained both mind and body to efficiently wield this sacred power.",
 	],
 	source : [["FRHoF", 0]],
 	eval : function () {
@@ -750,7 +750,7 @@ BackgroundList["chondathan freebooter"] = {
 };
 BackgroundFeatureList["chondathan freebooter"] = {
 	description : [
-		"Though most youths in Chondath accept their four-year term of compulsory military service, you bristled at that authoritarian attempt to control your life. You forsook your nationhood, discarded your given name, and worked as a freebooter with the first ship that would have you. Since then, you've traveled the Vilhon Reach. Thogh you've never sailed more than a few dozen leagues from land, you make up for it with deep local connections and the breadth of your experiences.",
+		"Though most youths in Chondath accept their four-year term of compulsory military service, you bristled at that authoritarian attempt to control your life. You forsook your nationhood, discarded your given name, and worked as a freebooter with the first ship that would have you. Since then, you've traveled the Vilhon Reach. Though you've never sailed more than a few dozen leagues from land, you make up for it with deep local connections and the breadth of your experiences.",
 	],
 	source : [["FRHoF", 0]],
 	eval : function () {
@@ -788,7 +788,7 @@ BackgroundList["dead magic dweller"] = {
 };
 BackgroundFeatureList["dead magic dweller"] = {
 	description : [
-		"The dead magic zones of the Anauroch desert are anathema to spellcasters and monsters that rely on magic-which is exactly why you made your life there. Perhapse you're on the run from Red Wizards, or you ran afoul of a powerful djinni in Calimshan. Whatever the case, you decided that living in Anauroch was your best option. After long months or years, you're stronger, wiser, and armed with hard-earned knowledge of desert medicine and wasteland survival.",
+		"The dead magic zones of the Anauroch desert are anathema to spellcasters and monsters that rely on magic-which is exactly why you made your life there. Perhaps you're on the run from Red Wizards, or you ran afoul of a powerful djinni in Calimshan. Whatever the case, you decided that living in Anauroch was your best option. After long months or years, you're stronger, wiser, and armed with hard-earned knowledge of desert medicine and wasteland survival.",
 	],
 	source : [["FRHoF", 0]],
 	eval : function () {
@@ -819,7 +819,7 @@ BackgroundList["flaming fist mercenary"] = {
 };
 BackgroundFeatureList["flaming fist mercenary"] = {
 	description : [
-		"The chief law enforcement branch of Baldur's Gate is the Flaming Fist, a brawny mercenary guild led by the city's grand duke. You once served as a Flaming Fist, where yu learned how to preempt trouble with your intimidating stare and, when necessary, absorb deadly blows. Flaming Fist mercenaries, active or retired, are known as some of the toughest, most resilient warriors along the Sword Coast, and you seek to maintain that reputation.",
+		"The chief law enforcement branch of Baldur's Gate is the Flaming Fist, a brawny mercenary guild led by the city's grand duke. You once served as a Flaming Fist, where you learned how to preempt trouble with your intimidating stare and, when necessary, absorb deadly blows. Flaming Fist mercenaries, active or retired, are known as some of the toughest, most resilient warriors along the Sword Coast, and you seek to maintain that reputation.",
 	],
 	source : [["FRHoF", 0]],
 	eval : function () {
@@ -851,7 +851,7 @@ BackgroundList["genie touched"] = {
 };
 BackgroundFeatureList["genie touched"] = {
 	description : [
-		"Although genies no longer rule Calimshan, genie magic is still common in your homeland. Perhaps you inadvertently summoned a djinni from a magic lamp, or maybe you came upon an oasis guarded by a marid. A dao might have saved you from a landslide, or you bargained with an efreeti for fleeting wealth. However your fate intersected with that of a genie, the experience left you with a keen eye, a silver tongue, and more than a touch of magic.",
+		"Although genies no longer rule Calimshan, genie magic is still common in your homeland. Perhaps you inadvertently summoned a djinni from a magic lamp, or maybe you came upon an oasis guarded by a marid. A dao might have saved you from a landslide, or you bargained with an efreeti for fleeting wealth. However, your fate intersected with that of a genie; the experience left you with a keen eye, a silver tongue, and more than a touch of magic.",
 	],
 	source : [["FRHoF", 0]],
 	eval : function () {
@@ -888,7 +888,7 @@ BackgroundList["ice fisher"] = {
 };
 BackgroundFeatureList["ice fisher"] = {
 	description : [
-		"You come from a proud line of ice fishers out of Ten-Towns in Icewind Dale. Catching knucklehead trout isn't the most glorious trade in the North, but it's an honest living. You've trained your senses for the slightest tug on the line, wrestled big trout out of ice-covered laes, and gutted enough knucklehead trout to feed your village many times over. These experiences have toughened your body and mind for a life of adventuring.",
+		"You come from a proud line of ice fishers out of Ten-Towns in Icewind Dale. Catching knucklehead trout isn't the most glorious trade in the North, but it's an honest living. You've trained your senses for the slightest tug on the line, wrestled big trout out of ice-covered lakes, and gutted enough knucklehead trout to feed your village many times over. These experiences have toughened your body and mind for a life of adventuring.",
 	],
 	source : [["FRHoF", 0]],
 	eval : function () {
@@ -923,7 +923,7 @@ BackgroundList["moonwell pilgrim"] = {
 };
 BackgroundFeatureList["moonwell pilgrim"] = {
 	description : [
-		"Like many who hail from the Moonshae Isles, you grew up revering the blessed land, its unique gods, and the mysterious shrines called the moonwells. As a moonwell pilgrim, you undertook a quest to visit and commune with every moonwell on (or off) the map. Along your idyllic journeys, you collected a repertoire of Moonshavian folk songs, painted landscapes of enhanting vistas, and even learned how to wield a bit of primal magic.",
+		"Like many who hail from the Moonshae Isles, you grew up revering the blessed land, its unique gods, and the mysterious shrines called the moonwells. As a moonwell pilgrim, you undertook a quest to visit and commune with every moonwell on (or off) the map. Along your idyllic journeys, you collected a repertoire of Moonshavian folk songs, painted landscapes of enchanting vistas, and even learned how to wield a bit of primal magic.",
 	],
 	source : [["FRHoF", 0]],
 	eval : function () {
@@ -964,7 +964,7 @@ BackgroundList["mulhorandi tomb raider"] = {
 };
 BackgroundFeatureList["mulhorandi tomb raider"] = {
 	description : [
-		"You grew up in a land of living god-kings, and as a child you were told countless stories of ancient empires and buried cities. In these tales, Mulhorand was a land overflowing with forgotten riches-priceless treasures awaiting anyone cunning and brave enough to seek them out. You've taken it upon yourself to explore your homeland's crypts, tombs, and pyramids to reclaim your people's relics.",
+		"You grew up in a land of living god-kings, and as a child, you were told countless stories of ancient empires and buried cities. In these tales, Mulhorand was a land overflowing with forgotten riches-priceless treasures awaiting anyone cunning and brave enough to seek them out. You've taken it upon yourself to explore your homeland's crypts, tombs, and pyramids to reclaim your people's relics.",
 	],
 	source : [["FRHoF", 0]],
 	eval : function () {
@@ -998,7 +998,7 @@ BackgroundList.mythalkeeper = {
 };
 BackgroundFeatureList.mythalkeeper = {
 	description : [
-		"Mythals are sources of great magical power that can alter the Weave or even the very nature of reality. Most were constructed in antiquity, and many have since been damaged or gone dormant. As a mythalkeeper from the Dalelands, your frst experience with a mythal was likely in the ruins of Myth Drannor. You roam Faerûn in search of other ruined places of power, hoping to learn more about the history and powersof mythals-or even restore a manfunctioning one.",
+		"Mythals are sources of great magical power that can alter the Weave or even the very nature of reality. Most were constructed in antiquity, and many have since been damaged or gone dormant. As a mythalkeeper from the Dalelands, your first experience with a mythal was likely in the ruins of Myth Drannor. You roam Faerûn in search of other ruined places of power, hoping to learn more about the history and powers of mythals-or even restore a malfunctioning one.",
 	],
 	source : [["FRHoF", 0]],
 	eval : function () {
@@ -1032,7 +1032,7 @@ BackgroundList["rashemi wanderer"] = {
 };
 BackgroundFeatureList["rashemi wanderer"] = {
 	description : [
-		"You spent years wandering the highlands of Rashemen, a dangerous windswept heath that's dotted with ancient obelisks enchanted to imprison Fiends and home to dragons, gnolls, and other deadly creatures. Friendships are hard to find in such an isolated land, and you've learned to keep strangers at a distance.",
+		"You spent years wandering the highlands of Rashemen, a dangerous, windswept heath that's dotted with ancient obelisks enchanted to imprison Fiends and home to dragons, gnolls, and other deadly creatures. Friendships are hard to find in such an isolated land, and you've learned to keep strangers at a distance.",
 	],
 	source : [["FRHoF", 0]],
 	eval : function () {
@@ -1068,7 +1068,7 @@ BackgroundList["shadowmasters exile"] = {
 };
 BackgroundFeatureList["shadowmasters exile"] = {
 	description : [
-		"You trained your whole life to become a member of the Shadowmasters, the mysterious thieves' guild that controles the realm of Thesk from behind the scenes. Stealth and quick reflexes were just the start of your Shadowmaster education; you also needed to hone your ruthlessness to ensure the safety of the guild's secrets. But one wrong move led to yourexpulsion from the order. Now you must walk your own path.",
+		"You trained your whole life to become a member of the Shadowmasters, the mysterious thieves' guild that controls the realm of Thesk from behind the scenes. Stealth and quick reflexes were just the start of your Shadowmaster education; you also needed to hone your ruthlessness to ensure the safety of the guild's secrets. But one wrong move led to your expulsion from the order. Now you must walk your own path.",
 	],
 	source : [["FRHoF", 0]],
 	eval : function () {
@@ -1104,7 +1104,7 @@ BackgroundList["dragon cultist"] = {
 };
 BackgroundFeatureList["dragon cultist"] = {
 	description : [
-		"You are an initiate of the Cult of the Dragon. You discovered or were brought to a cell cult, where you exemplified the values honored by dragon cultists: duplicity, secrcy, and determination. In exchange for your oath to serve the cult, the cult offered you the company of fellow dragon worshipers, plus access to resources that might help further your studies in the realms of arcana and occultism.",
+		"You are an initiate of the Cult of the Dragon. You discovered or were brought to a cell cult, where you exemplified the values honored by dragon cultists: duplicity, secrecy, and determination. In exchange for your oath to serve the cult, the cult offered you the company of fellow dragon worshipers, plus access to resources that might help further your studies in the realms of arcana and occultism.",
 	],
 	source : [["FRHoF", 0]],
 	eval : function () {
@@ -1170,7 +1170,7 @@ BackgroundList.harper = {
 };
 BackgroundFeatureList.harper = {
 	description : [
-		"You accepted an invitation to join the Harpers, pledging an oath to uphold the Harper code and act in service to the common good. Like all Harpers, you understand the value of teamwork as well as when it's best to go it alone. Harper veterans have taught you the order's secrets-magical mlodies, special watchwords, and legerdemain-and have entrusted you to use such knoledge to surveil and undermine the forces of evil.",
+		"You accepted an invitation to join the Harpers, pledging an oath to uphold the Harper code and act in service to the common good. Like all Harpers, you understand the value of teamwork as well as when it's best to go it alone. Harper veterans have taught you the order's secrets-magical melodies, special watchwords, and legerdemain-and have entrusted you to use such knowledge to surveil and undermine the forces of evil.",
 	],
 	source : [["FRHoF", 0]],
 	eval : function () {
@@ -1204,7 +1204,7 @@ BackgroundList["knights of the gauntlet"] = {
 };
 BackgroundFeatureList["knights of the gauntlet"] = {
 	description : [
-		"Not all who answer the call of a higher power arecontent to pore over scripture in a stuffy temple apse. you chose the path of the holy warrior by joining the Order of the Gauntlet. As a knight of the Gauntlet, you excercise righteous scorn for the forces of evil, unswerving camaraderie for your siblings in arms, and heartfelt compassion for the survivors of war. With weapon and holy symbol in hand, you've sworn not to rest until the light of justice has vanquished the shadow of chaos across Faerûn.",
+		"Not all who answer the call of a higher power are content to pore over scripture in a stuffy temple apse. You chose the path of the holy warrior by joining the Order of the Gauntlet. As a knight of the Gauntlet, you exercise righteous scorn for the forces of evil, unswerving camaraderie for your siblings in arms, and heartfelt compassion for the survivors of war. With weapon and holy symbol in hand, you've sworn not to rest until the light of justice has vanquished the shadow of chaos across Faerûn.",
 	],
 	source : [["FRHoF", 0]],
 	eval : function () {
@@ -1265,7 +1265,7 @@ BackgroundList["purple dragon squire"] = {
 };
 BackgroundFeatureList["purple dragon squire"] = {
 	description : [
-		"You've pledged your life to the safety of Cormyr and sought admission to that realm's order of elite warrior: the Purple Dragon Knights. But before you have the chance to join the ranks officailly, you must first serve as a knights's squire. You've found a liege willing to take you on and teach you the order's ways. Will you uphold the Purple Dragon Knight's ideals of glory, honor, and strength and prove yourself worthy of knighthood?",
+		"You've pledged your life to the safety of Cormyr and sought admission to that realm's order of elite warriors: the Purple Dragon Knights. But before you have the chance to join the ranks officially, you must first serve as a knight's squire. You've found a liege willing to take you on and teach you the order's ways. Will you uphold the Purple Dragon Knight's ideals of glory, honor, and strength and prove yourself worthy of knighthood?",
 	],
 	source : [["FRHoF", 0]],
 	eval : function () {
@@ -1300,7 +1300,7 @@ BackgroundList["zhentarim mercenary"] = {
 };
 BackgroundFeatureList["zhentarim mercenary"] = {
 	description : [
-		"Maybe you needed the money. Maybe you longed for a family, no matter how dubious. Or maybe you're just good at getting the job done by any means necessary. Whatever your reason, you enlisted with the Zhentarim, the most notorious mercenary guild in the Realms. Though the Zhentarim;s leaders insist the organization is more like a family than a shadowy syndicate, few families exhibit as much dishonesty, nepotism, and corruption as this one. You've honed your cunnng, reflexes, and blade to climb the guild's ranks.",
+		"Maybe you needed the money. Maybe you longed for a family, no matter how dubious. Or maybe you're just good at getting the job done by any means necessary. Whatever your reason, you enlisted with the Zhentarim, the most notorious mercenary guild in the Realms. Though the Zhentarim's leaders insist the organization is more like a family than a shadowy syndicate, few families exhibit as much dishonesty, nepotism, and corruption as this one. You've honed your cunnng, reflexes, and blade to climb the guild's ranks.",
 	],
 	source : [["FRHoF", 0]],
 	eval : function () {
@@ -1323,7 +1323,7 @@ FeatsList["cult of the dragon initiate"] = {
 		usages : 1,
 		recovery : "short rest",
 	}],
-	description : "I know Draconic, or one other language of choice if Draconic is already known. As a Magic action, I can cause a crea w/i 30 ft of me to make a Wis save (DC=8+Wis+Prof) or be Frightened until the end of my next turn, on a success/end of the effect the target is immune to this effect for 24 hours. When I cause a crea to become Frightened I can gain Heroic Inspiration if I lack it, I can only do this once before a Short or Long Rest.",
+	description : "I know Draconic, or one other language of choice if Draconic is already known. As a Magic action, I can cause a crea w/i 30 ft of me to make a Wis save (DC=8+Wis+Prof) or be Frightened until the end of my next turn. On a success/end of the effect, the target is immune to this effect for 24 hours. When I cause a crea to become Frightened, I can gain Heroic Inspiration if I lack it. I can only do this once before a Short or Long Rest.",
 	descriptionFull : [
 		"You gain the following benefits",
 		"***Dragon's Tongue***. You know Draconic. If you already know Draconic when you select this feat, you instead learn one language of your choice from the languages tables in the Player's Handbook or chapter 2 of this book.",
@@ -1343,10 +1343,10 @@ FeatsList["emerald enclave fledgling"] = {
 		selection : ["speak with animals"],
 		prepared : true,
 	}],
-	description : "I always have the Speak with Animals spell prepared, and can cast it with any spell slots I have, if I ritually cast the spell it has a duration of 8 hours. Additionally, when I take the Help action, I can switch places with a willing ally w/i 5 ft as part of that action, this movement doesn't provoke Opportunity Attacks, this action can not be taken if the ally has the Incapacitated condition.",
+	description : "I always have the Speak with Animals spell prepared, and can cast it with any spell slots I have. If I ritually cast the spell, it has a duration of 8 hours. Additionally, when I take the Help action, I can switch places with a willing ally w/i 5 ft as part of that action; this movement doesn't provoke Opportunity Attacks, this action can not be taken if the ally has the Incapacitated condition.",
 	descriptionFull : [
 		"You gain the following benefits",
-		"***Speak with Animals***. You always have the Speak with Animals spell prepared and can cast it with any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (chose when you select this feat). When you cast this spell as a Ritual, its duration is 8 hours.",
+		"***Speak with Animals***. You always have the Speak with Animals spell prepared and can cast it with any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat). When you cast this spell as a Ritual, its duration is 8 hours.",
 		"***Tag Team***. When you take the Help action, you can switch places with a willing ally within 5 feet of yourself as part of that same action. This movement doesn't provoke Opportunity Attack action. You can't use this benefit if the ally has the Incapacitated condition.",
 	],
 };
@@ -1371,7 +1371,7 @@ FeatsList["lords' alliance agent"] = {
 	description : "Once per turn, when I score a Critical Hit, I can choose an ally within 30 ft and grant them Heroic Inspiration if they lack it. Additionally, when an enemy deals dmg to an ally w/i 5 ft of me, I gain Adv on my next atk roll against that enemy before the end of my next turn.",
 	descriptionFull : [
 		"You gain the following benefits",
-		"***Inspiring Strike***. Once per turn when you score a Critical Hit against a creature, you can choose an ally within 30 feet of yourself who can see or hear you and who lacks Heroic Inspiration. That ally gains Heroic Inspiration.",
+		"***Inspiring Strike***. Once per turn, when you score a Critical Hit against a creature, you can choose an ally within 30 feet of yourself who can see or hear you and who lacks Heroic Inspiration. That ally gains Heroic Inspiration.",
 		"***Reassert Honor***. When an enemy you can see deals damage to an ally of yours that is within 5 feet of you, you have Advantage on your next attack roll against that enemy before the end of your next turn.",
 	],
 };
@@ -1385,7 +1385,7 @@ FeatsList["purple dragon rook"] = {
 		usages : 1,
 		recovery : "long rest",
 	}],
-	description : "I gain proficiency in one of the following skills: Insight, Performance, or Persuasion. Additionally, once per long rest, when I roll for Initiative I can give a number of crea up to my Prof bonus that I can see w/i 30 ft of myself Heroic Inspiration.",
+	description : "I gain proficiency in one of the following skills: Insight, Performance, or Persuasion. Additionally, once per long rest, when I roll for Initiative, I can give a number of crea up to my Prof bonus that I can see w/i 30 ft of myself Heroic Inspiration.",
 	descriptionFull : [
 		"You gain the following benefits",
 		"***Entreat***. You gain proficiency in one of the following skills: Insight, Performance, or Persuasion.",
@@ -1411,7 +1411,7 @@ FeatsList["spellfire spark"] = {
 		firstCol : "atwill",
 	}],
 	action : [["bonus action", "Cast Sacred Flame"]],
-	description : "Once per turn, when I take dmg from a spell or magical effect, I can reduce the dmg by 1d4, I can't do this if I have the Incapacitated condition. I learn the Sacred Flame cantrip, and can cast it a number of times equal to my Prof as a Bns before a Long Rest.",
+	description : "Once per turn, when I take dmg from a spell or magical effect, I can reduce the dmg by 1d4. I can't do this if I have the Incapacitated condition. I learn the Sacred Flame cantrip, and can cast it a number of times equal to my Prof as a Bns before a Long Rest.",
 	descriptionFull : [
 		"You gain the following benefits",
 		"***Magic Absorption***. Once per turn, when you take damage from a spell or magical effect, you reduce the total damage taken by 1d4. You can't use this benefit if you have the Incapacitated condition.",
@@ -1437,7 +1437,7 @@ FeatsList["zhentarim ruffian"] = {
 	description : "When I roll dmg for an Opportunity Atk, I can roll the damage twice and use either roll. If I have Heroic Inspiration when I roll Initiative, I can expend it to give myself and allies Adv on that Initiative roll.",
 	descriptionFull : [
 		"You gain the following benefits",
-		"***Exploit Oppening***. When you roll damage for an Opportunty Attack action, you can roll the damage dice twice and use either roll against the target.",
+		"***Exploit Oppening***. When you roll damage for an Opportunity Attack action, you can roll the damage dice twice and use either roll against the target.",
 		"***Family First***. If you have Heroic Inspiration when you roll Initiative, you can expend it to give yourself and your allies Advantage on that Initiative roll.",
 	],
 };
@@ -1459,7 +1459,7 @@ FeatsList["cold caster"] = {
 		"You gain the following benefits",
 		"***Ability Score Increase***. Increase your Intelligence, Wisdom, or Charsma score by 1, to a maximum of 20.",
 		"***Cantrip***. You learn the Ray of Frost cantrip. If you already know it, you learn a different Wizard cantrip of your choice. The spell's spellcasting ability is the ability increased by this feat.",
-		"***Frostbite***. Once per turn when you hit a creature with an attack roll and deal Cold damage, you can temporarily negate the creature's defenses. The creature subtracts 1d4 from the next saving throw it makes before the end of your next turn.",
+		"***Frostbite***. Once per turn, when you hit a creature with an attack roll and deal Cold damage, you can temporarily negate the creature's defenses. The creature subtracts 1d4 from the next saving throw it makes before the end of your next turn.",
 	],
 	choices: ["Intelligence", "Wisdom", "Charisma"],
 	"intelligence" : {
@@ -1525,7 +1525,7 @@ FeatsList["enclave magic"] = {
 	name : "enclave magic",
 	source : [["FRHoF", 0]],
 	type : "general",
-	description : "I have Adv on ability checks when taking the Influence action with beasts. Additionally, I always have the Beast Sense spell prepared, and can cast it once before a Long Rest without expending a spell slot, when I cast it in this way the spell doesn't require Concentration.",
+	description : "I have Adv on ability checks when taking the Influence action with beasts. Additionally, I always have the Beast Sense spell prepared, and can cast it once before a Long Rest without expending a spell slot. When I cast it in this way, the spell doesn't require Concentration.",
 	extraLimitedFeatures : [{
 		name : "Beast Sense (no conc)",
 		usages : 1,
@@ -1546,17 +1546,17 @@ FeatsList["enclave magic"] = {
 	],
 	choices: ["Intelligence", "Wisdom", "Charisma"],
 	"intelligence" : {
-		description : "I have Adv on ability checks when taking the Influence action with beasts. Additionally, I always have the Beast Sense spell prepared, and can cast it once before a Long Rest without expending a spell slot, when I cast it in this way the spell doesn't require Concentration. [+1 Intelligence]",
+		description : "I have Adv on ability checks when taking the Influence action with beasts. Additionally, I always have the Beast Sense spell prepared, and can cast it once before a Long Rest without expending a spell slot. When I cast it in this way, the spell doesn't require Concentration. [+1 Intelligence]",
 		spellcastingAbility : 4,
 		scores : [0, 0, 0, 1, 0, 0],
 	},
 	"wisdom" : {
-		description : "I have Adv on ability checks when taking the Influence action with beasts. Additionally, I always have the Beast Sense spell prepared, and can cast it once before a Long Rest without expending a spell slot, when I cast it in this way the spell doesn't require Concentration. [+1 Wisdom]",
+		description : "I have Adv on ability checks when taking the Influence action with beasts. Additionally, I always have the Beast Sense spell prepared, and can cast it once before a Long Rest without expending a spell slot. When I cast it in this way, the spell doesn't require Concentration. [+1 Wisdom]",
 		spellcastingAbility : 5,
 		scores : [0, 0, 0, 0, 1, 0],
 	},
 	"charisma" : {
-		description : "I have Adv on ability checks when taking the Influence action with beasts. Additionally, I always have the Beast Sense spell prepared, and can cast it once before a Long Rest without expending a spell slot, when I cast it in this way the spell doesn't require Concentration. [+1 Charisma]",
+		description : "I have Adv on ability checks when taking the Influence action with beasts. Additionally, I always have the Beast Sense spell prepared, and can cast it once before a Long Rest without expending a spell slot. When I cast it in this way, the spell doesn't require Concentration. [+1 Charisma]",
 		spellcastingAbility : 6,
 		scores : [0, 0, 0, 0, 0, 1],
 	},
@@ -1580,7 +1580,7 @@ FeatsList["fairy trickster"] = {
 	descriptionFull : [
 		"You gain the following benefits",
 		"***Ability Score Increase***. Increase your Dexterity or Charsma score by 1, to a maximum of 20.",
-		"***Faerie Trod Trotter***. When you take the Disengage action on your turn, Difficult Terrain doesn't cost you extra movment for the rest of that turn.",
+		"***Faerie Trod Trotter***. When you take the Disengage action on your turn, Difficult Terrain doesn't cost you extra movement for the rest of that turn.",
 		"***Flustering Strike***. When you hit a creature with an attack roll, you can attempt to fluster the target. The target must succeed on a Wisdom saving throw (DC 8 plus the ability modifier of the score increased by this feat and your Proficiency Bonus) or have Disadvantage on saving throws until the end of your next turn.",
 		"You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
 	],
@@ -1598,48 +1598,100 @@ FeatsList["fairy trickster"] = {
 		return v.characterLevel >= 4;
 	},
 };
-//FeatsList["genie magic"] = {
-	//name : "Genie Magic",
-	//source : [["FRHoF", 0]],
-	//type : "general",
-	//extraLimitedFeatures : [{
-		//name : "Wish Magic",
-		//usages : 1,
-		//recovery : "long rest",
-	//}],
-	//description : "Once per Long Rest, As a Magic action, I can cast a 1st-level spell with a casting time of 1 Action from the Sorcerer's spell list. When I reach level 11 the spell I cast with this feat is cast as if using a 2nd-level spell slot, at 17th level as if using a 3rd-level spell slot.",
-	//descriptionFull : [
-		//"You gain the following benefits",
-		//"***Ability Score Increase***. Increase your Intelligence, Wisdom, or Charsma score by 1, to a maximum of 20.",
-		//"***Wish Magic***. As a Magic action, you can cast a level 1 spell of your choice from the Sorcerer spell list that has a casting time of an action. Once you use this benefit, you can't do so again until you finish a Long Rest. The spell's spellcasting ability is the ability increased by this feat.",
-		//"When you reach level 11, the spell you can cast with this feat is cast as though using a level 2 spell slot. When you reach level 17, the spell is cast as though using a level 3 spell slot.",
-	//],
-	//choices: ["Intelligence", "Wisdom", "Charisma"],
-	//"intelligence" : {
-		//description : "Once per Long Rest, As a Magic action, I can cast a 1st-level spell with a casting time of 1 Action from the Sorcerer's spell list. When I reach level 11 the spell I cast with this feat is cast as if using a 2nd-level spell slot, at 17th level as if using a 3rd-level spell slot. [+1 Intelligence]",
-		//spellcastingAbility : 4,
-		//scores : [0, 0, 0, 1, 0, 0],
-	//},
-	//"wisdom" : {
-		//description : "Once per Long Rest, As a Magic action, I can cast a 1st-level spell with a casting time of 1 Action from the Sorcerer's spell list. When I reach level 11 the spell I cast with this feat is cast as if using a 2nd-level spell slot, at 17th level as if using a 3rd-level spell slot. [+1 Wisdom]",
-		//spellcastingAbility : 5,
-		//scores : [0, 0, 0, 0, 1, 0],
-	//},
-	//"charisma" : {
-		//description : "Once per Long Rest, As a Magic action, I can cast a 1st-level spell with a casting time of 1 Action from the Sorcerer's spell list. When I reach level 11 the spell I cast with this feat is cast as if using a 2nd-level spell slot, at 17th level as if using a 3rd-level spell slot. [+1 Charisma]",
-		//spellcastingAbility : 6,
-		//scores : [0, 0, 0, 0, 0, 1],
-	//},
-	//prerequisite : "Level 4+",
-	//prereqeval : function (v) {
-		//return v.characterLevel >= 4;
-	//},
-//};
+FeatsList["genie magic"] = {
+	name : "Genie Magic",
+	source : [["FRHoF", 0]],
+	type : "general",
+	extraLimitedFeatures : [{
+		name : "Wish Magic",
+		usages : 1,
+		recovery : "long rest",
+	}],
+	eval : function () {
+		CurrentSpells['genie magic'] = {
+			name : 'Genie Magic (feat)',
+			list : { 'class' : 'sorcerer', level : [1, 1] },
+			known : { cantrips : 0, spells : 'list' },
+			bonus : {
+				bon1 : {
+					name : 'Just select "Full List"',
+					spells : []
+				},
+				bon2 : {
+					name : 'on the bottom left',
+					spells : []
+				}
+			},
+			typeList : 4,
+			refType : "feat",
+			allowUpCasting : true,
+			firstCol : ""
+		};
+		SetStringifieds('spells'); CurrentUpdates.types.push('spells');
+	},
+	removeeval : function () {
+		delete CurrentSpells['genie magic'];
+		SetStringifieds('spells'); CurrentUpdates.types.push('spells');
+	},
+	calcChanges : {
+		spellList : [
+			function(spList, spName, spType) {
+				// Remove the already known cantrips, from any source except magic items
+				if (spName === 'genie magic') {
+					var allSpellsKnown = [];
+					for (var sCast in CurrentSpells) {
+						if (sCast.refType === "item") continue;
+						var oCast = CurrentSpells[sCast];
+						if (oCast.selectCa) allSpellsKnown = allSpellsKnown.concat(oCast.selectCa);
+						if (oCast.selectBo) allSpellsKnown = allSpellsKnown.concat(oCast.selectBo);
+					}
+					var knownSpells = OrderSpells(allSpellsKnown, "single", false, false, 0);
+					if (!spList.notspells) spList.notspells = [];
+					spList.notspells = spList.notspells.concat(knownSpells);
+				}
+			}
+		],
+		spellAdd : [
+			function (spellKey, spellObj, spName, isDuplicate) {
+				if (spName === 'genie magic') {
+					spellObj.firstCol = "";
+				}
+			}
+		]
+	},
+	description : "Once per Long Rest, as a Magic action, I can cast a 1st-level spell with a casting time of 1 Action from the Sorcerer's spell list. When I reach level 11, the spell I cast with this feat is cast as if using a 2nd-level spell slot, at 17th level as if using a 3rd-level spell slot.",
+	descriptionFull : [
+		"You gain the following benefits",
+		"***Ability Score Increase***. Increase your Intelligence, Wisdom, or Charsma score by 1, to a maximum of 20.",
+		"***Wish Magic***. As a Magic action, you can cast a level 1 spell of your choice from the Sorcerer spell list that has a casting time of an action. Once you use this benefit, you can't do so again until you finish a Long Rest. The spell's spellcasting ability is the ability increased by this feat.",
+		"When you reach level 11, the spell you can cast with this feat is cast as though using a level 2 spell slot. When you reach level 17, the spell is cast as though using a level 3 spell slot.",
+	],
+	choices: ["Intelligence", "Wisdom", "Charisma"],
+	"intelligence" : {
+		description : "Once per Long Rest, as a Magic action, I can cast a 1st-level spell with a casting time of 1 Action from the Sorcerer's spell list. When I reach level 11, the spell I cast with this feat is cast as if using a 2nd-level spell slot, at 17th level as if using a 3rd-level spell slot. [+1 Intelligence]",
+		spellcastingAbility : 4,
+		scores : [0, 0, 0, 1, 0, 0],
+	},
+	"wisdom" : {
+		description : "Once per Long Rest, as a Magic action, I can cast a 1st-level spell with a casting time of 1 Action from the Sorcerer's spell list. When I reach level 11, the spell I cast with this feat is cast as if using a 2nd-level spell slot, at 17th level as if using a 3rd-level spell slot. [+1 Wisdom]",
+		spellcastingAbility : 5,
+		scores : [0, 0, 0, 0, 1, 0],
+	},
+	"charisma" : {
+		description : "Once per Long Rest, as a Magic action, I can cast a 1st-level spell with a casting time of 1 Action from the Sorcerer's spell list. When I reach level 11, the spell I cast with this feat is cast as if using a 2nd-level spell slot, at 17th level as if using a 3rd-level spell slot. [+1 Charisma]",
+		spellcastingAbility : 6,
+		scores : [0, 0, 0, 0, 0, 1],
+	},
+	prerequisite : "Level 4+",
+	prereqeval : function (v) {
+		return v.characterLevel >= 4;
+	},
+};
 FeatsList["harper teamwork"] = {
 	name : "Harper Teamwork",
 	source : [["FRHoF", 0]],
 	type : "general",
-	description : "When I take the Help action to assist an ally's atk roll against an enemy, the enemy has Disadv on its first saving throw before the start of my next turn. Additionally, If I succeed on a save to end the Frightened or Paralyzed condition on myself, one ally I can see within 30 ft of me that has the same condition has it end immediately.",
+	description : "When I take the Help action to assist an ally's atk roll against an enemy, the enemy has Disadv on its first saving throw before the start of my next turn. Additionally, if I succeed on a save to end the Frightened or Paralyzed condition on myself, one ally I can see within 30 ft of me that has the same condition has it end immediately.",
 	descriptionFull : [
 		"You gain the following benefits",
 		"***Ability Score Increase***. Increase your Dexterity or Charisma score by 1, to a maximum of 20.",
@@ -1648,11 +1700,11 @@ FeatsList["harper teamwork"] = {
 	],
 	choices: ["Dexterity", "Charisma"],
 	"dexterity" : {
-		description : "When I take the Help action to assist an ally's atk roll against an enemy, the enemy has Disadv on its first saving throw before the start of my next turn. Additionally, If I succeed on a save to end the Frightened or Paralyzed condition on myself, one ally I can see within 30 ft of me that has the same condition has it end immediately. [+1 Dexterity]",
+		description : "When I take the Help action to assist an ally's atk roll against an enemy, the enemy has Disadv on its first saving throw before the start of my next turn. Additionally, if I succeed on a save to end the Frightened or Paralyzed condition on myself, one ally I can see within 30 ft of me that has the same condition has it end immediately. [+1 Dexterity]",
 		scores : [0, 1, 0, 0, 0, 0],
 	},
 	"charisma" : {
-		description : "When I take the Help action to assist an ally's atk roll against an enemy, the enemy has Disadv on its first saving throw before the start of my next turn. Additionally, If I succeed on a save to end the Frightened or Paralyzed condition on myself, one ally I can see within 30 ft of me that has the same condition has it end immediately. [+1 Charisma]",
+		description : "When I take the Help action to assist an ally's atk roll against an enemy, the enemy has Disadv on its first saving throw before the start of my next turn. Additionally, if I succeed on a save to end the Frightened or Paralyzed condition on myself, one ally I can see within 30 ft of me that has the same condition has it end immediately. [+1 Charisma]",
 		scores : [0, 0, 0, 0, 0, 1],
 	},
 	prerequisite : "Level 4+, Harper Agent feat",
@@ -1675,7 +1727,7 @@ FeatsList["lordly resolve"] = {
 		"You gain the following benefits",
 		"***Ability Score Increase***. Increase your Strength or Charisma score by 1, to a maximum of 20.",
 		"***Standard Bearer***. As a Bonus Action, choose up to three creatures within 60 feet of yourself that can see you. Each target can immediately take a Reaction to right itself and end the Prone condition, provided its Speed isn't 0.",
-		"Additionally, you bolster the targets' resolve, which lasts for 1 minute or until you have the Incapacitated condition. While bolstered, a target can't be possessed or gain the Charmed or Frightened conditions; if a targe is allready possessed, Charmed, or Frightened, the target has Advantage on any new saving throw against the relevant effect.",
+		"Additionally, you bolster the targets' resolve, which lasts for 1 minute or until you have the Incapacitated condition. While bolstered, a target can't be possessed or gain the Charmed or Frightened conditions; if a target is already possessed, Charmed, or Frightened, the target has Advantage on any new saving throw against the relevant effect.",
 		"Once you use this benefit, you can't do so again until you finish a Long Rest.",
 	],
 	choices: ["Strength", "Charisma"],
@@ -1704,7 +1756,7 @@ FeatsList["mythal touched"] = {
 		recovery : "long rest",
 	}],
 	action : [["reaction", "Mythal Ward (1d20)"]],
-	description : "As a Rea, when I am hit by a spell attack or I fail a save against a spell, I can roll on the Mythal-Touched Magic Table (See Notes Page) to create a magical effect. If the effect requires a save the DC=8+ASI+Prof. I can use this Rea a number of times equal to my Prof.",
+	description : "As a Rea, when I am hit by a spell attack or I fail a save against a spell, I can roll on the Mythal-Touched Magic Table (See Notes Page) to create a magical effect. If the effect requires a save, the DC=8+ASI+Prof. I can use this Rea a number of times equal to my Prof.",
 	descriptionFull : [
 		"You gain the following benefits",
 		"***Ability Score Increase***. Increase your Intelligence, Wisdom, or Charsma score by 1, to a maximum of 20.",
@@ -1715,26 +1767,26 @@ FeatsList["mythal touched"] = {
 		  name : "Mythal-Touched Magic table",
 		  note : [
 			"##1d20##. Effect",
-			"##- 1-2##. Me and each creature within 15 ft of me make a Dex save, taking Force dmg equal to 1d8 times the level of the triggering spell on a failed save or half as much damage on a successful one.",
+			"##- 1-2##. Me and each creature within 15 ft of me makes a Dex save, taking Force dmg equal to 1d8 times the level of the triggering spell on a failed save or half as much damage on a successful one.",
 			"##- 3-7##. Me and the triggering spell's caster form a telepathic link for 1 hour.",
 			"##- 8-10##. Gravity is reversed in a 15-foot-radius, 60-foot-tall Cylinder centered on me for 1 minute, per the Reverse Gravity spell.",
 			"##- 11-13##. Me and the triggering spell's caster each make a Constitution saving throw. On a failed save, the creature has the Stunned condition until the end of its next turn.",
 			"##- 14-17##. I gain a +2 to AC for 1 minute, potentially turning the triggering spell into a miss if it was a spell attack.",
-			"##- 18-19##. Any flammable, nonmagical object within 10 feet of the triggering spell's caster that isn't being worn or carried by another creature bursts ito flame, takes 1d4 Fire damage, and is burning.",
-			"##- 20##. The triggering spell dissipate with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn't expended.",
+			"##- 18-19##. Any flammable, nonmagical object within 10 feet of the triggering spell's caster that isn't being worn or carried by another creature bursts into flame, takes 1d4 Fire damage, and is burning.",
+			"##- 20##. The triggering spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn't expended.",
 		  ],
 	  }],
 	choices: ["Intelligence", "Wisdom", "Charisma"],
 	"intelligence" : {
-		description : "As a Rea, when I am hit by a spell attack or I fail a save against a spell, I can roll on the Mythal-Touched Magic Table (See Notes Page) to create a magical effect. If the effect requires a save the DC=8+Int+Prof. I can use this Rea a number of times equal to my Prof. [+1 Intelligence]",
+		description : "As a Rea, when I am hit by a spell attack or I fail a save against a spell, I can roll on the Mythal-Touched Magic Table (See Notes Page) to create a magical effect. If the effect requires a save, the DC=8+Int+Prof. I can use this Rea a number of times equal to my Prof. [+1 Intelligence]",
 		scores : [0, 0, 0, 1, 0, 0],
 	},
 	"wisdom" : {
-		description : "As a Rea, when I am hit by a spell attack or I fail a save against a spell, I can roll on the Mythal-Touched Magic Table (See Notes Page) to create a magical effect. If the effect requires a save the DC=8+Wis+Prof. I can use this Rea a number of times equal to my Prof. [+1 Wisdom]",
+		description : "As a Rea, when I am hit by a spell attack or I fail a save against a spell, I can roll on the Mythal-Touched Magic Table (See Notes Page) to create a magical effect. If the effect requires a save, the DC=8+Wis+Prof. I can use this Rea a number of times equal to my Prof. [+1 Wisdom]",
 		scores : [0, 0, 0, 0, 1, 0],
 	},
 	"charisma" : {
-		description : "As a Rea, when I am hit by a spell attack or I fail a save against a spell, I can roll on the Mythal-Touched Magic Table (See Notes Page) to create a magical effect. If the effect requires a save the DC=8+Cha+Prof. I can use this Rea a number of times equal to my Prof. [+1 Charisma]",
+		description : "As a Rea, when I am hit by a spell attack or I fail a save against a spell, I can roll on the Mythal-Touched Magic Table (See Notes Page) to create a magical effect. If the effect requires a save, the DC=8+Cha+Prof. I can use this Rea a number of times equal to my Prof. [+1 Charisma]",
 		scores : [0, 0, 0, 0, 0, 1],
 	},
 	prerequisite : "Level 4+",
@@ -1751,24 +1803,24 @@ FeatsList["order's reslience"] = {
 		usages : 1,
 		recovery : "long rest",
 	}],
-	description : "When I have the Prone condition, I can end it by expending 5 ft of movement. Additionally, While within 5 ft of an ally, and neither of us has the Incapacitated condition, me and that ally have Adv on Str saves.",
+	description : "When I have the Prone condition, I can end it by expending 5 ft of movement. Additionally, while within 5 ft of an ally, and neither of us has the Incapacitated condition, me and that ally have Adv on Str saves.",
 	descriptionFull : [
 		"You gain the following benefits",
 		"***Ability Score Increase***. Increase your Strength, Wisdom, or Charisma score by 1, to a maximum of 20.",
 		"***Resurge***. When you have the Prone condition, you can right yourself with only 5 feet of movement.",
-		"***Stronger Together***. If you are within 5 feet of an ally that doesn't have the Incapacitated condition, you and that ally have Advantage on Strenth saving throws. You can't use this benefit while you have the Incapacitated condition.",
+		"***Stronger Together***. If you are within 5 feet of an ally that doesn't have the Incapacitated condition, you and that ally have Advantage on Strength saving throws. You can't use this benefit while you have the Incapacitated condition.",
 	],
 	choices: ["Strength", "Wisdom", "Charisma"],
 	"strength" : {
-		description : "When I have the Prone condition, I can end it by expending 5 ft of movement. Additionally, While within 5 ft of an ally, and neither of us has the Incapacitated condition, me and that ally have Adv on Str saves. [+1 Strength]",
+		description : "When I have the Prone condition, I can end it by expending 5 ft of movement. Additionally, while within 5 ft of an ally, and neither of us has the Incapacitated condition, me and that ally have Adv on Str saves. [+1 Strength]",
 		scores : [1, 0, 0, 0, 0, 0],
 	},
 	"wisdom" : {
-		description : "When I have the Prone condition, I can end it by expending 5 ft of movement. Additionally, While within 5 ft of an ally, and neither of us has the Incapacitated condition, me and that ally have Adv on Str saves. [+1 Wisdom]",
+		description : "When I have the Prone condition, I can end it by expending 5 ft of movement. Additionally, while within 5 ft of an ally, and neither of us has the Incapacitated condition, me and that ally have Adv on Str saves. [+1 Wisdom]",
 		scores : [0, 0, 0, 0, 1, 0],
 	},
 	"charisma" : {
-		description : "When I have the Prone condition, I can end it by expending 5 ft of movement. Additionally, While within 5 ft of an ally, and neither of us has the Incapacitated condition, me and that ally have Adv on Str saves. [+1 Charisma]",
+		description : "When I have the Prone condition, I can end it by expending 5 ft of movement. Additionally, while within 5 ft of an ally, and neither of us has the Incapacitated condition, me and that ally have Adv on Str saves. [+1 Charisma]",
 		scores : [0, 0, 0, 0, 0, 1],
 	},
 	prerequisite : "Level 4+, Tyro of the Gauntlet feat",
@@ -1797,11 +1849,11 @@ FeatsList["purple dragon commandant"] = {
 	],
 	choices: ["Strength", "Dexterity"],
 	"strength" : {
-		description : "As a Bns, I can grant an ally w/i 30 ft Temp HP equal to 2d6+Str, I can use this Bns a number of times equal to my Prof. Additionally, while Bloodied, I gain Adv on atk rolls. [+1 Strength]",
+		description : "As a Bns, I can grant an ally w/i 30 ft Temp HP equal to 2d6+Str. I can use this Bns a number of times equal to my Prof. Additionally, while Bloodied, I gain Adv on atk rolls. [+1 Strength]",
 		scores : [1, 0, 0, 0, 0, 0],
 	},
 	"dexterity" : {
-		description : "As a Bns, I can grant an ally w/i 30 ft Temp HP equal to 2d6+Dex, I can use this Bns a number of times equal to my Prof. Additionally, while Bloodied, I gain Adv on atk rolls. [+1 Dexterity]",
+		description : "As a Bns, I can grant an ally w/i 30 ft Temp HP equal to 2d6+Dex. I can use this Bns a number of times equal to my Prof. Additionally, while Bloodied, I gain Adv on atk rolls. [+1 Dexterity]",
 		scores : [0, 1, 0, 0, 0, 0],
 	},
 	prerequisite : "Level 4+, Purple Dragon Rook feat or Martial Weapon Proficiency",
@@ -1844,7 +1896,7 @@ FeatsList["street justice"] = {
 	name : "Street Justice",
 	source : [["FRHoF", 0]],
 	type : "general",
-	description : "My allies have Adv on atk rolls against a crea Grappled by me. Whenever I bind a crea with Chain, Manacles, or Rope I can add my Prof to the DC to escape or burst the binds. A crea's Hostile attitude doesn't impose Disadv on my Cha (Intimidation) checks to infuence that crea.",
+	description : "My allies have Adv on atk rolls against a crea Grappled by me. Whenever I bind a crea with Chain, Manacles, or Rope, I can add my Prof to the DC to escape or burst the binds. A crea's Hostile attitude doesn't impose Disadv on my Cha (Intimidation) checks to influence that crea.",
 	descriptionFull : [
 		"You gain the following benefits",
 		"***Ability Score Increase***. Increase your Strength or Dexterity score by 1, to a maximum of 20.",
@@ -1854,11 +1906,11 @@ FeatsList["street justice"] = {
 	],
 	choices: ["Strength", "Dexterity"],
 	"strength" : {
-		description : "My allies have Adv on atk rolls against a crea Grappled by me. Whenever I bind a crea with Chain, Manacles, or Rope I can add my Prof to the DC to escape or burst the binds. A crea's Hostile attitude doesn't impose Disadv on my Cha (Intimidation) checks to infuence that crea. [+1 Strength]",
+		description : "My allies have Adv on atk rolls against a crea Grappled by me. Whenever I bind a crea with Chain, Manacles, or Rope, I can add my Prof to the DC to escape or burst the binds. A crea's Hostile attitude doesn't impose Disadv on my Cha (Intimidation) checks to influence that crea. [+1 Strength]",
 		scores : [1, 0, 0, 0, 0, 0],
 	},
 	"dexterity" : {
-		description : "My allies have Adv on atk rolls against a crea Grappled by me. Whenever I bind a crea with Chain, Manacles, or Rope I can add my Prof to the DC to escape or burst the binds. A crea's Hostile attitude doesn't impose Disadv on my Cha (Intimidation) checks to infuence that crea. [+1 Dexterity]",
+		description : "My allies have Adv on atk rolls against a crea Grappled by me. Whenever I bind a crea with Chain, Manacles, or Rope, I can add my Prof to the DC to escape or burst the binds. A crea's Hostile attitude doesn't impose Disadv on my Cha (Intimidation) checks to influence that crea. [+1 Dexterity]",
 		scores : [0, 1, 0, 0, 0, 0],
 	},
 	prerequisite : "Level 4+",
@@ -1898,7 +1950,7 @@ FeatsList["boon of bloodshed"] = {
 	name : "Boon of Bloodshed",
 	source : [["FRHoF", 0]],
 	type : "epic boon",
-	description : "+1 to Any, When an enemy I can see is reduced to 0 HP, I gain Adv on my next atk roll I make before the end of my next turn. Additionally, Once per turn when I make an atk roll while Bloodied, I deal extra dmg equal to my Prof, this extra dmg is the same type as the atk's type.",
+	description : "+1 to Any, When an enemy I can see is reduced to 0 HP, I gain Adv on my next atk roll I make before the end of my next turn. Additionally, once per turn, when I make an atk roll while Bloodied, I deal extra dmg equal to my Prof; this extra dmg is the same type as the atk's type.",
 	descriptionFull : [
 		"You gain the following benefits",
 		"***Ability Score Improvement***. Increase one ability score of your choice by 1, to a Maximum of 30.",
@@ -1908,37 +1960,37 @@ FeatsList["boon of bloodshed"] = {
 	choices : ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
 	"strength" : {
 		name : "Boon of Bloodshed - STR",
-		description : "When an enemy I can see is reduced to 0 HP, I gain Adv on my next atk roll I make before the end of my next turn. Additionally, Once per turn when I make an atk roll while Bloodied, I deal extra dmg equal to my Prof, this extra dmg is the same type as the atk's type. [+1 Strength]",
+		description : "When an enemy I can see is reduced to 0 HP, I gain Adv on my next atk roll I make before the end of my next turn. Additionally, once per turn, when I make an atk roll while Bloodied, I deal extra dmg equal to my Prof; this extra dmg is the same type as the atk's type. [+1 Strength]",
 		scores : [1, 0, 0, 0, 0, 0],
 		scoresMaximum : [30, 0, 0, 0, 0, 0],
 	},
 	"dexterity" : {
 		name : "Boon of Bloodshed - DEX",
-		description : "When an enemy I can see is reduced to 0 HP, I gain Adv on my next atk roll I make before the end of my next turn. Additionally, Once per turn when I make an atk roll while Bloodied, I deal extra dmg equal to my Prof, this extra dmg is the same type as the atk's type. [+1 Dexterity]",
+		description : "When an enemy I can see is reduced to 0 HP, I gain Adv on my next atk roll I make before the end of my next turn. Additionally, once per turn, when I make an atk roll while Bloodied, I deal extra dmg equal to my Prof; this extra dmg is the same type as the atk's type. [+1 Dexterity]",
 		scores : [0, 1, 0, 0, 0, 0],
 		scoresMaximum : [0, 30, 0, 0, 0, 0],
 	},
 	"constitution" : {
 		name : "Boon of Bloodshed - CON",
-		description : "When an enemy I can see is reduced to 0 HP, I gain Adv on my next atk roll I make before the end of my next turn. Additionally, Once per turn when I make an atk roll while Bloodied, I deal extra dmg equal to my Prof, this extra dmg is the same type as the atk's type. [+1 Constitution]",
+		description : "When an enemy I can see is reduced to 0 HP, I gain Adv on my next atk roll I make before the end of my next turn. Additionally, once per turn, when I make an atk roll while Bloodied, I deal extra dmg equal to my Prof; this extra dmg is the same type as the atk's type. [+1 Constitution]",
 		scores : [0, 0, 1, 0, 0, 0],
 		scoresMaximum : [0, 0, 30, 0, 0, 0],
 	},
 	"intelligence" : {
 		name : "Boon of Bloodshed - INT",
-		description : "When an enemy I can see is reduced to 0 HP, I gain Adv on my next atk roll I make before the end of my next turn. Additionally, Once per turn when I make an atk roll while Bloodied, I deal extra dmg equal to my Prof, this extra dmg is the same type as the atk's type. [+1 Intelligence]",
+		description : "When an enemy I can see is reduced to 0 HP, I gain Adv on my next atk roll I make before the end of my next turn. Additionally, once per turn, when I make an atk roll while Bloodied, I deal extra dmg equal to my Prof; this extra dmg is the same type as the atk's type. [+1 Intelligence]",
 		scores : [0, 0, 0, 1, 0, 0],
 		scoresMaximum : [0, 0, 0, 30, 0, 0],
 	},
 	"wisdom" : {
 		name : "Boon of Bloodshed - WIS",
-		description : "When an enemy I can see is reduced to 0 HP, I gain Adv on my next atk roll I make before the end of my next turn. Additionally, Once per turn when I make an atk roll while Bloodied, I deal extra dmg equal to my Prof, this extra dmg is the same type as the atk's type. [+1 Wisdom]",
+		description : "When an enemy I can see is reduced to 0 HP, I gain Adv on my next atk roll I make before the end of my next turn. Additionally, once per turn, when I make an atk roll while Bloodied, I deal extra dmg equal to my Prof; this extra dmg is the same type as the atk's type. [+1 Wisdom]",
 		scores : [0, 0, 0, 0, 1, 0],
 		scoresMaximum : [0, 0, 0, 0, 30, 0],
 	},
 	"charisma" : {
 		name : "Boon of Bloodshed - CHA",
-		description : "When an enemy I can see is reduced to 0 HP, I gain Adv on my next atk roll I make before the end of my next turn. Additionally, Once per turn when I make an atk roll while Bloodied, I deal extra dmg equal to my Prof, this extra dmg is the same type as the atk's type. [+1 Charisma]",
+		description : "When an enemy I can see is reduced to 0 HP, I gain Adv on my next atk roll I make before the end of my next turn. Additionally, once per turn, when I make an atk roll while Bloodied, I deal extra dmg equal to my Prof; this extra dmg is the same type as the atk's type. [+1 Charisma]",
 		scores : [0, 0, 0, 0, 0, 1],
 		scoresMaximum : [0, 0, 0, 0, 0, 30],
 	},
@@ -2074,7 +2126,7 @@ FeatsList["boon of exquisite radiance"] = {
 		usages : 1,
 		recovery : "long rest",
 	}],
-	description : "+1 to Any, Crea I reduce to 0 HP can't become Undead. Once per Long Rest, when I make a dmg roll that deals Radiant dmg I can instead use the highest number possible for each damage die.",
+	description : "+1 to Any, Crea I reduce to 0 HP can't become Undead. Once per Long Rest, when I make a dmg roll that deals Radiant dmg, I can instead use the highest number possible for each damage die.",
 	descriptionFull : [
 		"You gain the following benefits",
 		"***Ability Score Improvement***. Increase one ability score of your choice by 1, to a Maximum of 30.",
@@ -2084,37 +2136,37 @@ FeatsList["boon of exquisite radiance"] = {
 	choices : ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
 	"strength" : {
 		name : "Boon of Exquisite Radiance - STR",
-		description : "Crea I reduce to 0 HP can't become Undead. Once per Long Rest, when I make a dmg roll that deals Radiant dmg I can instead use the highest number possible for each damage die. [+1 Strength]",
+		description : "Crea I reduce to 0 HP can't become Undead. Once per Long Rest, when I make a dmg roll that deals Radiant dmg, I can instead use the highest number possible for each damage die. [+1 Strength]",
 		scores : [1, 0, 0, 0, 0, 0],
 		scoresMaximum : [30, 0, 0, 0, 0, 0],
 	},
 	"dexterity" : {
 		name : "Boon of Exquisite Radiance - DEX",
-		description : "Crea I reduce to 0 HP can't become Undead. Once per Long Rest, when I make a dmg roll that deals Radiant dmg I can instead use the highest number possible for each damage die. [+1 Dexterity]",
+		description : "Crea I reduce to 0 HP can't become Undead. Once per Long Rest, when I make a dmg roll that deals Radiant dmg, I can instead use the highest number possible for each damage die. [+1 Dexterity]",
 		scores : [0, 1, 0, 0, 0, 0],
 		scoresMaximum : [0, 30, 0, 0, 0, 0],
 	},
 	"constitution" : {
 		name : "Boon of Exquisite Radiance - CON",
-		description : "Crea I reduce to 0 HP can't become Undead. Once per Long Rest, when I make a dmg roll that deals Radiant dmg I can instead use the highest number possible for each damage die. [+1 Constitution]",
+		description : "Crea I reduce to 0 HP can't become Undead. Once per Long Rest, when I make a dmg roll that deals Radiant dmg, I can instead use the highest number possible for each damage die. [+1 Constitution]",
 		scores : [0, 0, 1, 0, 0, 0],
 		scoresMaximum : [0, 0, 30, 0, 0, 0],
 	},
 	"intelligence" : {
 		name : "Boon of Exquisite Radiance - INT",
-		description : "Crea I reduce to 0 HP can't become Undead. Once per Long Rest, when I make a dmg roll that deals Radiant dmg I can instead use the highest number possible for each damage die. [+1 Intelligence]",
+		description : "Crea I reduce to 0 HP can't become Undead. Once per Long Rest, when I make a dmg roll that deals Radiant dmg, I can instead use the highest number possible for each damage die. [+1 Intelligence]",
 		scores : [0, 0, 0, 1, 0, 0],
 		scoresMaximum : [0, 0, 0, 30, 0, 0],
 	},
 	"wisdom" : {
 		name : "Boon of Exquisite Radiance - WIS",
-		description : "Crea I reduce to 0 HP can't become Undead. Once per Long Rest, when I make a dmg roll that deals Radiant dmg I can instead use the highest number possible for each damage die. [+1 Wisdom]",
+		description : "Crea I reduce to 0 HP can't become Undead. Once per Long Rest, when I make a dmg roll that deals Radiant dm,g I can instead use the highest number possible for each damage die. [+1 Wisdom]",
 		scores : [0, 0, 0, 0, 1, 0],
 		scoresMaximum : [0, 0, 0, 0, 30, 0],
 	},
 	"charisma" : {
 		name : "Boon of Exquisite Radiance - CHA",
-		description : "Crea I reduce to 0 HP can't become Undead. Once per Long Rest, when I make a dmg roll that deals Radiant dmg I can instead use the highest number possible for each damage die. [+1 Charisma]",
+		description : "Crea I reduce to 0 HP can't become Undead. Once per Long Rest, when I make a dmg roll that deals Radiant dmg, I can instead use the highest number possible for each damage die. [+1 Charisma]",
 		scores : [0, 0, 0, 0, 0, 1],
 		scoresMaximum : [0, 0, 0, 0, 0, 30],
 	},
@@ -2133,7 +2185,7 @@ FeatsList["boon of fluid forms"] = {
 		usages : 1,
 		recovery : "long rest",
 	}],
-	description : "+1 to Int, Wis, or Cha, Once per Long Rest as a Magic action, I can shape-shift into a Beast, Humanoid, or Monstrosity of CR 10 or lower, gaining Temp HP equal to new forms HP + 20. This form lasts for up to an hour or until I no longer have Temp HP, I can end this effect early by taking the Magic action to revert to my true form. (See Full Description for Statistic Details).",
+	description : "+1 to Int, Wis, or Cha, Once per Long Rest as a Magic action, I can shape-shift into a Beast, Humanoid, or Monstrosity of CR 10 or lower, gaining Temp HP equal to the new form's HP + 20. This form lasts for up to an hour or until I no longer have Temp HP, I can end this effect early by taking the Magic action to revert to my true form. (See Full Description for Statistic Details).",
 	descriptionFull : [
 		"You gain the following benefits",
 		"***Ability Score Improvement***. Increase your Intelligence, Wisdom, or Charisma score by 1, to a Maximum of 30.",
@@ -2145,19 +2197,19 @@ FeatsList["boon of fluid forms"] = {
 	choices : ["Intelligence", "Wisdom", "Charisma"],
 	"intelligence" : {
 		name : "Boon of Fluid Forms - INT",
-		description : "Once per Long Rest as a Magic action, I can shape-shift into a Beast, Humanoid, or Monstrosity of CR 10 or lower, gaining Temp HP equal to new forms HP + 20. This form lasts for up to an hour or until I no longer have Temp HP, I can end this effect early by taking the Magic action to revert to my true form. (See Full Description for Statistic Details). [+1 Intelligence]",
+		description : "Once per Long Rest as a Magic action, I can shape-shift into a Beast, Humanoid, or Monstrosity of CR 10 or lower, gaining Temp HP equal to the new form's HP + 20. This form lasts for up to an hour or until I no longer have Temp HP, I can end this effect early by taking the Magic action to revert to my true form. (See Full Description for Statistic Details). [+1 Intelligence]",
 		scores : [0, 0, 0, 1, 0, 0],
 		scoresMaximum : [0, 0, 0, 30, 0, 0],
 	},
 	"wisdom" : {
 		name : "Boon of Fluid Forms - WIS",
-		description : "Once per Long Rest as a Magic action, I can shape-shift into a Beast, Humanoid, or Monstrosity of CR 10 or lower, gaining Temp HP equal to new forms HP + 20. This form lasts for up to an hour or until I no longer have Temp HP, I can end this effect early by taking the Magic action to revert to my true form. (See Full Description for Statistic Details). [+1 Wisdom]",
+		description : "Once per Long Rest as a Magic action, I can shape-shift into a Beast, Humanoid, or Monstrosity of CR 10 or lower, gaining Temp HP equal to the new form's HP + 20. This form lasts for up to an hour or until I no longer have Temp HP, I can end this effect early by taking the Magic action to revert to my true form. (See Full Description for Statistic Details). [+1 Wisdom]",
 		scores : [0, 0, 0, 0, 1, 0],
 		scoresMaximum : [0, 0, 0, 0, 30, 0],
 	},
 	"charisma" : {
 		name : "Boon of Fluid Forms - CHA",
-		description : "Once per Long Rest as a Magic action, I can shape-shift into a Beast, Humanoid, or Monstrosity of CR 10 or lower, gaining Temp HP equal to new forms HP + 20. This form lasts for up to an hour or until I no longer have Temp HP, I can end this effect early by taking the Magic action to revert to my true form. (See Full Description for Statistic Details). [+1 Charisma]",
+		description : "Once per Long Rest as a Magic action, I can shape-shift into a Beast, Humanoid, or Monstrosity of CR 10 or lower, gaining Temp HP equal to the new form's HP + 20. This form lasts for up to an hour or until I no longer have Temp HP, I can end this effect early by taking the Magic action to revert to my true form. (See Full Description for Statistic Details). [+1 Charisma]",
 		scores : [0, 0, 0, 0, 0, 1],
 		scoresMaximum : [0, 0, 0, 0, 0, 30],
 	},
@@ -2222,7 +2274,7 @@ FeatsList["boon of poison mastery"] = {
 	name : "Boon of Poison Mastery",
 	source : [["FRHoF", 0]],
 	type : "epic boon",
-	description : "+1 to Any, I am Immune to Poison dmg and the Poisoned condition, Once per turn when I roll dice to determine Poison dmg, I can use the highest number possible for each die.",
+	description : "+1 to Any, I am Immune to Poison dmg and the Poisoned condition. Once per turn when I roll dice to determine Poison dmg, I can use the highest number possible for each die.",
 	savetxt : {
 		immune : ["Poison", "Poisoned"],
 	},
@@ -2235,37 +2287,37 @@ FeatsList["boon of poison mastery"] = {
 	choices : ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
 	"strength" : {
 		name : "Boon of Poison Mastery - STR",
-		description : "I am Immune to Poison dmg and the Poisoned condition, Once per turn when I roll dice to determine Poison dmg, I can use the highest number possible for each die. [+1 Strength]",
+		description : "I am Immune to Poison dmg and the Poisoned condition. Once per turn when I roll dice to determine Poison dmg, I can use the highest number possible for each die. [+1 Strength]",
 		scores : [1, 0, 0, 0, 0, 0],
 		scoresMaximum : [30, 0, 0, 0, 0, 0],
 	},
 	"dexterity" : {
 		name : "Boon of Poison Mastery - DEX",
-		description : "I am Immune to Poison dmg and the Poisoned condition, Once per turn when I roll dice to determine Poison dmg, I can use the highest number possible for each die. [+1 Dexterity]",
+		description : "I am Immune to Poison dmg and the Poisoned condition. Once per turn when I roll dice to determine Poison dmg, I can use the highest number possible for each die. [+1 Dexterity]",
 		scores : [0, 1, 0, 0, 0, 0],
 		scoresMaximum : [0, 30, 0, 0, 0, 0],
 	},
 	"constitution" : {
 		name : "Boon of Poison Mastery - CON",
-		description : "I am Immune to Poison dmg and the Poisoned condition, Once per turn when I roll dice to determine Poison dmg, I can use the highest number possible for each die. [+1 Constitution]",
+		description : "I am Immune to Poison dmg and the Poisoned condition. Once per turn when I roll dice to determine Poison dmg, I can use the highest number possible for each die. [+1 Constitution]",
 		scores : [0, 0, 1, 0, 0, 0],
 		scoresMaximum : [0, 0, 30, 0, 0, 0],
 	},
 	"intelligence" : {
 		name : "Boon of Poison Mastery - INT",
-		description : "I am Immune to Poison dmg and the Poisoned condition, Once per turn when I roll dice to determine Poison dmg, I can use the highest number possible for each die. [+1 Intelligence]",
+		description : "I am Immune to Poison dmg and the Poisoned condition. Once per turn when I roll dice to determine Poison dmg, I can use the highest number possible for each die. [+1 Intelligence]",
 		scores : [0, 0, 0, 1, 0, 0],
 		scoresMaximum : [0, 0, 0, 30, 0, 0],
 	},
 	"wisdom" : {
 		name : "Boon of Poison Mastery - WIS",
-		description : "I am Immune to Poison dmg and the Poisoned condition, Once per turn when I roll dice to determine Poison dmg, I can use the highest number possible for each die. [+1 Wisdom]",
+		description : "I am Immune to Poison dmg and the Poisoned condition. Once per turn when I roll dice to determine Poison dmg, I can use the highest number possible for each die. [+1 Wisdom]",
 		scores : [0, 0, 0, 0, 1, 0],
 		scoresMaximum : [0, 0, 0, 0, 30, 0],
 	},
 	"charisma" : {
 		name : "Boon of Poison Mastery - CHA",
-		description : "I am Immune to Poison dmg and the Poisoned condition, Once per turn when I roll dice to determine Poison dmg, I can use the highest number possible for each die. [+1 Charisma]",
+		description : "I am Immune to Poison dmg and the Poisoned condition. Once per turn when I roll dice to determine Poison dmg, I can use the highest number possible for each die. [+1 Charisma]",
 		scores : [0, 0, 0, 0, 0, 1],
 		scoresMaximum : [0, 0, 0, 0, 0, 30],
 	},
@@ -2290,7 +2342,7 @@ FeatsList["boon of revelry"] = {
 		selection : ["otto's irresistible dance"],
 		firstCol : "checkbox",
 	}],
-	description : "+1 to Int, Wis, or Cha, I always have the Otto's Irresistible Dance spell prepared and can cast it Once per Long Rest without a spell slot. While a crea is Charmed by Otto's Irresistible Dance they can't cast spells with a Verbal component as they are forced to sing delightful nonsense if it has the capacity to sing.",
+	description : "+1 to Int, Wis, or Cha, I always have the Otto's Irresistible Dance spell prepared and can cast it once per Long Rest without a spell slot. While a crea is Charmed by Otto's Irresistible Dance, they can't cast spells with a Verbal component as they are forced to sing delightful nonsense if it has the capacity to sing.",
 	descriptionFull : [
 		"You gain the following benefits",
 		"***Ability Score Improvement***. Increase your Intelligence, Wisdom, or Charisma score by 1, to a Maximum of 30.",
@@ -2301,19 +2353,19 @@ FeatsList["boon of revelry"] = {
 	choices : ["Intelligence", "Wisdom", "Charisma"],
 	"intelligence" : {
 		name : "Boon of Revelry - INT",
-		description : "I always have the Otto's Irresistible Dance spell prepared and can cast it Once per Long Rest without a spell slot. While a crea is Charmed by Otto's Irresistible Dance they can't cast spells with a Verbal component as they are forced to sing delightful nonsense if it has the capacity to sing. [+1 Intelligence]",
+		description : "I always have the Otto's Irresistible Dance spell prepared and can cast it once per Long Rest without a spell slot. While a crea is Charmed by Otto's Irresistible Dance, they can't cast spells with a Verbal component as they are forced to sing delightful nonsense if it has the capacity to sing. [+1 Intelligence]",
 		scores : [0, 0, 0, 1, 0, 0],
 		scoresMaximum : [0, 0, 0, 30, 0, 0],
 	},
 	"wisdom" : {
 		name : "Boon of Revelry - WIS",
-		description : "I always have the Otto's Irresistible Dance spell prepared and can cast it Once per Long Rest without a spell slot. While a crea is Charmed by Otto's Irresistible Dance they can't cast spells with a Verbal component as they are forced to sing delightful nonsense if it has the capacity to sing. [+1 Wisdom]",
+		description : "I always have the Otto's Irresistible Dance spell prepared and can cast it once per Long Rest without a spell slot. While a crea is Charmed by Otto's Irresistible Dance, they can't cast spells with a Verbal component as they are forced to sing delightful nonsense if it has the capacity to sing. [+1 Wisdom]",
 		scores : [0, 0, 0, 0, 1, 0],
 		scoresMaximum : [0, 0, 0, 0, 30, 0],
 	},
 	"charisma" : {
 		name : "Boon of Revelry - CHA",
-		description : "I always have the Otto's Irresistible Dance spell prepared and can cast it Once per Long Rest without a spell slot. While a crea is Charmed by Otto's Irresistible Dance they can't cast spells with a Verbal component as they are forced to sing delightful nonsense if it has the capacity to sing. [+1 Charisma]",
+		description : "I always have the Otto's Irresistible Dance spell prepared and can cast it once per Long Rest without a spell slot. While a crea is Charmed by Otto's Irresistible Dance, they can't cast spells with a Verbal component as they are forced to sing delightful nonsense if it has the capacity to sing. [+1 Charisma]",
 		scores : [0, 0, 0, 0, 0, 1],
 		scoresMaximum : [0, 0, 0, 0, 0, 30],
 	},
@@ -2338,12 +2390,12 @@ FeatsList["boon of terror"] = {
 	skills : [
 		["Intimidation", "full"],
 	],
-	description : "I am Immune to the Frightened condition and gain Proficiency and Expertise in the Intimidation skill. Once per Short or Long Rest, When a crea with the Frightened condition starts its turn w/i 60 ft of me, I can take a Rea to cause it to make a Wis save (DC=8+Cha+Prof) or spend its turn moving away from me by the fastest available means. [+1 Charisma]",
+	description : "I am Immune to the Frightened condition and gain Proficiency and Expertise in the Intimidation skill. Once per Short or Long Rest, when a crea with the Frightened condition starts its turn w/i 60 ft of me, I can take a Rea to cause it to make a Wis save (DC=8+Cha+Prof) or spend its turn moving away from me by the fastest available means. [+1 Charisma]",
 	descriptionFull : [
 		"You gain the following benefits",
 		"***Ability Score Improvement***. Increase your Charisma score by 1, to a Maximum of 30.",
 		"***Fearless***. You have Immunity to the Frightened condition.",
-		"***Flee, Fools!***. When a creature with the Frightened condition starts its turn within 60 feet of you, you can take a Reaction to stoke its terror, provided you can seethe creature and it isn't behind Total Cover. If you do so, the creature must succeed on a Wisdom saving throw (DC 8 plus your Charisma modifier and your Proficiency Bonus) or spend its turn moving away from you by the fastest available means. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.",
+		"***Flee, Fools!***. When a creature with the Frightened condition starts its turn within 60 feet of you, you can take a Reaction to stoke its terror, provided you can see the creature and it isn't behind Total Cover. If you do so, the creature must succeed on a Wisdom saving throw (DC 8 plus your Charisma modifier and your Proficiency Bonus) or spend its turn moving away from you by the fastest available means. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.",
 		"***Intimidating***. You gain Proficiency in the Intimidation skill if you don't already have it. You also gain Expertise in Intimidation.",
 	],
 	scores : [0, 0, 0, 0, 0, 1],
@@ -2358,7 +2410,7 @@ FeatsList["boon of the bright sun"] = {
 	source : [["FRHoF", 0]],
 	type : "epic boon",
 	action : [["bonus action", "Daylight Presence"]],
-	description : "+1 to Con, Wis, or Cha, As a Bns, I radiate a 30-ft Emanation of Bright Light that is sunlight, If this Emanation overlaps with an area of Darkness created by a spell, the spell is dispelled. This Emanation lasts until I dismiss it (no action required), I die, or have the Incapacitated condition. While this Emanation is active, at the start of each of my turns, me and allies I can see in the Emanation gain 10 Temp HP.",
+	description : "+1 to Con, Wis, or Cha, As a Bns, I radiate a 30-ft Emanation of Bright Light that is sunlight. If this Emanation overlaps with an area of Darkness created by a spell, the spell is dispelled. This Emanation lasts until I dismiss it (no action required), I die, or have the Incapacitated condition. While this Emanation is active, at the start of each of my turns, me and allies I can see in the Emanation gain 10 Temp HP.",
 	descriptionFull : [
 		"You gain the following benefits",
 		"***Ability Score Improvement***. Increase your Constitution, Wisdom, or Charisma score by 1, to a Maximum of 30.",
@@ -2368,19 +2420,19 @@ FeatsList["boon of the bright sun"] = {
 	choices : ["Constitution", "Wisdom", "Charisma"],
 	"constitution" : {
 		name : "Boon of the Bright Sun - INT",
-		description : "As a Bns, I radiate a 30-ft Emanation of Bright Light that is sunlight, If this Emanation overlaps with an area of Darkness created by a spell, the spell is dispelled. This Emanation lasts until I dismiss it (no action required), I die, or have the Incapacitated condition. While this Emanation is active, at the start of each of my turns, me and allies I can see in the Emanation gain 10 Temp HP. [+1 Constitution]",
+		description : "As a Bns, I radiate a 30-ft Emanation of Bright Light that is sunlight. If this Emanation overlaps with an area of Darkness created by a spell, the spell is dispelled. This Emanation lasts until I dismiss it (no action required), I die, or have the Incapacitated condition. While this Emanation is active, at the start of each of my turns, me and allies I can see in the Emanation gain 10 Temp HP. [+1 Constitution]",
 		scores : [0, 0, 1, 1, 0, 0],
 		scoresMaximum : [0, 0, 30, 0, 0, 0],
 	},
 	"wisdom" : {
 		name : "Boon of the Bright Sun - WIS",
-		description : "As a Bns, I radiate a 30-ft Emanation of Bright Light that is sunlight, If this Emanation overlaps with an area of Darkness created by a spell, the spell is dispelled. This Emanation lasts until I dismiss it (no action required), I die, or have the Incapacitated condition. While this Emanation is active, at the start of each of my turns, me and allies I can see in the Emanation gain 10 Temp HP. [+1 Wisdom]",
+		description : "As a Bns, I radiate a 30-ft Emanation of Bright Light that is sunlight. If this Emanation overlaps with an area of Darkness created by a spell, the spell is dispelled. This Emanation lasts until I dismiss it (no action required), I die, or have the Incapacitated condition. While this Emanation is active, at the start of each of my turns, me and allies I can see in the Emanation gain 10 Temp HP. [+1 Wisdom]",
 		scores : [0, 0, 0, 0, 1, 0],
 		scoresMaximum : [0, 0, 0, 0, 30, 0],
 	},
 	"charisma" : {
 		name : "Boon of the Bright Sun - CHA",
-		description : "As a Bns, I radiate a 30-ft Emanation of Bright Light that is sunlight, If this Emanation overlaps with an area of Darkness created by a spell, the spell is dispelled. This Emanation lasts until I dismiss it (no action required), I die, or have the Incapacitated condition. While this Emanation is active, at the start of each of my turns, me and allies I can see in the Emanation gain 10 Temp HP. [+1 Charisma]",
+		description : "As a Bns, I radiate a 30-ft Emanation of Bright Light that is sunlight. If this Emanation overlaps with an area of Darkness created by a spell, the spell is dispelled. This Emanation lasts until I dismiss it (no action required), I die, or have the Incapacitated condition. While this Emanation is active, at the start of each of my turns, me and allies I can see in the Emanation gain 10 Temp HP. [+1 Charisma]",
 		scores : [0, 0, 0, 0, 0, 1],
 		scoresMaximum : [0, 0, 0, 0, 0, 30],
 	},
@@ -2397,7 +2449,7 @@ FeatsList["boon of the furious storm"] = {
 	savetxt : {
 		immune : ["Lightning while Bloodied; ", "Thunder while Bloodied; "],
 	},
-	description : "+1 to Int, Wis, or Cha, I have Resistance to Lightning and Thunder dmg, while Bloodied I am Immune. Additionally, crea have Disadv on saves against my spells that deal Lightning or Thunder dmg.",
+	description : "+1 to Int, Wis, or Cha, I have Resistance to Lightning and Thunder dmg, while Bloodied, I am Immune. Additionally, crea have Disadv on saves against my spells that deal Lightning or Thunder dmg.",
 	descriptionFull : [
 		"You gain the following benefits",
 		"***Ability Score Improvement***. Increase your Intelligence, Wisdom, or Charisma score by 1, to a Maximum of 30.",
@@ -2407,19 +2459,19 @@ FeatsList["boon of the furious storm"] = {
 	choices : ["Intelligence", "Wisdom", "Charisma"],
 	"intelligence" : {
 		name : "Boon of the Furious Storm - INT",
-		description : "I have Resistance to Lightning and Thunder dmg, while Bloodied I am Immune. Additionally, crea have Disadv on saves against my spells that deal Lightning or Thunder dmg. [+1 Intelligence]",
+		description : "I have Resistance to Lightning and Thunder dmg, while Bloodied, I am Immune. Additionally, crea have Disadv on saves against my spells that deal Lightning or Thunder dmg. [+1 Intelligence]",
 		scores : [0, 0, 0, 1, 0, 0],
 		scoresMaximum : [0, 0, 0, 30, 0, 0],
 	},
 	"wisdom" : {
 		name : "Boon of the Furious Storm - WIS",
-		description : "I have Resistance to Lightning and Thunder dmg, while Bloodied I am Immune. Additionally, crea have Disadv on saves against my spells that deal Lightning or Thunder dmg. [+1 Wisdom]",
+		description : "I have Resistance to Lightning and Thunder dmg, while Bloodied, I am Immune. Additionally, crea have Disadv on saves against my spells that deal Lightning or Thunder dmg. [+1 Wisdom]",
 		scores : [0, 0, 0, 0, 1, 0],
 		scoresMaximum : [0, 0, 0, 0, 30, 0],
 	},
 	"charisma" : {
 		name : "Boon of the Furious Storm - CHA",
-		description : "I have Resistance to Lightning and Thunder dmg, while Bloodied I am Immune. Additionally, crea have Disadv on saves against my spells that deal Lightning or Thunder dmg. [+1 Charisma]",
+		description : "I have Resistance to Lightning and Thunder dmg, while Bloodied, I am Immune. Additionally, crea have Disadv on saves against my spells that deal Lightning or Thunder dmg. [+1 Charisma]",
 		scores : [0, 0, 0, 0, 0, 1],
 		scoresMaximum : [0, 0, 0, 0, 0, 30],
 	},
@@ -2432,7 +2484,7 @@ FeatsList["boon of the soul drinker"] = {
 	name : "Boon of the Soul Drinker",
 	source : [["FRHoF", 0]],
 	type : "epic boon",
-	description : "+1 to Any, I gain Resistance to Cold and Necrotic dmg. Additionally, Once per Short or Long Rest, as a Rea when an enemy w/i 120 ft of me is reduced to 0 HP, I can regain 50 HP.",
+	description : "+1 to Any, I gain Resistance to Cold and Necrotic dmg. Additionally, once per Short or Long Rest, as a Rea when an enemy w/i 120 ft of me is reduced to 0 HP, I can regain 50 HP.",
 	dmgres : ["Cold", "Necrotic"],
 	extraLimitedFeatures : [{
 		name : "Siphon Life",
@@ -2444,42 +2496,42 @@ FeatsList["boon of the soul drinker"] = {
 		"You gain the following benefits",
 		"***Ability Score Improvement***. Increase one ability score of your choice by 1, to a Maximum of 30.",
 		"***Grave Resistance***. You have Resistance to Cold damage and Necrotic damage.",
-		"***Siphon Life***. When an enemy within 120 feet of you is reduced to 0 Hit Points, you can take a Reaction to regain 50 Hit Points. Once you use this benefit you can't use it again until you finish a Short or Long Rest.",
+		"***Siphon Life***. When an enemy within 120 feet of you is reduced to 0 Hit Points, you can take a Reaction to regain 50 Hit Points. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.",
 	],
 	choices : ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
 	"strength" : {
 		name : "Boon of the Soul Drinker - STR",
-		description : "I gain Resistance to Cold and Necrotic dmg. Additionally, Once per Short or Long Rest, as a Rea when an enemy w/i 120 ft of me is reduced to 0 HP, I can regain 50 HP. [+1 Strength]",
+		description : "I gain Resistance to Cold and Necrotic dmg. Additionally, once per Short or Long Rest, as a Rea when an enemy w/i 120 ft of me is reduced to 0 HP, I can regain 50 HP. [+1 Strength]",
 		scores : [1, 0, 0, 0, 0, 0],
 		scoresMaximum : [30, 0, 0, 0, 0, 0],
 	},
 	"dexterity" : {
 		name : "Boon of the Soul Drinker - DEX",
-		description : "I gain Resistance to Cold and Necrotic dmg. Additionally, Once per Short or Long Rest, as a Rea when an enemy w/i 120 ft of me is reduced to 0 HP, I can regain 50 HP. [+1 Dexterity]",
+		description : "I gain Resistance to Cold and Necrotic dmg. Additionally, once per Short or Long Rest, as a Rea when an enemy w/i 120 ft of me is reduced to 0 HP, I can regain 50 HP. [+1 Dexterity]",
 		scores : [0, 1, 0, 0, 0, 0],
 		scoresMaximum : [0, 30, 0, 0, 0, 0],
 	},
 	"constitution" : {
 		name : "Boon of the Soul Drinker - CON",
-		description : "I gain Resistance to Cold and Necrotic dmg. Additionally, Once per Short or Long Rest, as a Rea when an enemy w/i 120 ft of me is reduced to 0 HP, I can regain 50 HP. [+1 Constitution]",
+		description : "I gain Resistance to Cold and Necrotic dmg. Additionally, once per Short or Long Rest, as a Rea when an enemy w/i 120 ft of me is reduced to 0 HP, I can regain 50 HP. [+1 Constitution]",
 		scores : [0, 0, 1, 0, 0, 0],
 		scoresMaximum : [0, 0, 30, 0, 0, 0],
 	},
 	"intelligence" : {
 		name : "Boon of the Soul Drinker - INT",
-		description : "I gain Resistance to Cold and Necrotic dmg. Additionally, Once per Short or Long Rest, as a Rea when an enemy w/i 120 ft of me is reduced to 0 HP, I can regain 50 HP. [+1 Intelligence]",
+		description : "I gain Resistance to Cold and Necrotic dmg. Additionally, once per Short or Long Rest, as a Rea when an enemy w/i 120 ft of me is reduced to 0 HP, I can regain 50 HP. [+1 Intelligence]",
 		scores : [0, 0, 0, 1, 0, 0],
 		scoresMaximum : [0, 0, 0, 30, 0, 0],
 	},
 	"wisdom" : {
 		name : "Boon of the Soul Drinker - WIS",
-		description : "I gain Resistance to Cold and Necrotic dmg. Additionally, Once per Short or Long Rest, as a Rea when an enemy w/i 120 ft of me is reduced to 0 HP, I can regain 50 HP. [+1 Wisdom]",
+		description : "I gain Resistance to Cold and Necrotic dmg. Additionally, once per Short or Long Rest, as a Rea when an enemy w/i 120 ft of me is reduced to 0 HP, I can regain 50 HP. [+1 Wisdom]",
 		scores : [0, 0, 0, 0, 1, 0],
 		scoresMaximum : [0, 0, 0, 0, 30, 0],
 	},
 	"charisma" : {
 		name : "Boon of the Soul Drinker - CHA",
-		description : "I gain Resistance to Cold and Necrotic dmg. Additionally, Once per Short or Long Rest, as a Rea when an enemy w/i 120 ft of me is reduced to 0 HP, I can regain 50 HP. [+1 Charisma]",
+		description : "I gain Resistance to Cold and Necrotic dmg. Additionally, once per Short or Long Rest, as a Rea when an enemy w/i 120 ft of me is reduced to 0 HP, I can regain 50 HP. [+1 Charisma]",
 		scores : [0, 0, 0, 0, 0, 1],
 		scoresMaximum : [0, 0, 0, 0, 0, 30],
 	},
@@ -2487,4 +2539,454 @@ FeatsList["boon of the soul drinker"] = {
 	prereqeval: function (v) {
 		return v.characterLevel >= 19;
 	},
+};
+//Equipment
+//Adventuring Gear
+GearList["adventurer's ring"] = {
+	infoname : "Adventurer's Ring [250 gp]",
+	name : "Adventurer's Ring",
+	amount : "",
+	weight : "",
+};
+MagicItemsList["adventurer's ring"] = {
+	name : "Adventurer's Ring",
+	source : [["FRHoF", 132]],
+	type : "ring",
+	rarity : "common",
+	magicItemTable : "?",
+	description : "While the cover of this ring is open, the ring produces a flame that creates no heat and consumes no fuel. It sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. As a Bonus Action, I can close the cover, smothering the flame, or open it again.",
+	descriptionFull : "While the cover of this ring is open, the ring produces a flame that creates no heat and consumes no fuel. It sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. As a Bonus Action, you can close the cover, smothering the flame, or open it again.",
+	action: [["bonus action", " (Open/Close)"]]
+};
+GearList["bright fungal cloak"] = {
+	infoname : "Bright Fungal Cloak [25 gp]",
+	name : "Bright Fungal Cloak",
+	amount : "",
+	weight : 4,
+};
+GearList["desert clothing"] = {
+	infoname : "Desert Clothing [10 gp]",
+	name : "Desert Clothing",
+	amount : "",
+	weight : 4,
+};
+GearList["devil mask"] = {
+	infoname : "Devil Mask [25 gp]",
+	name : "Devil Mask",
+	amount : "",
+	weight : "",
+};
+GearList["garb of light and shadow"] = {
+	infoname : "Garb of Light and Shadow [50 gp]",
+	name : "Garb of Light and Shadow",
+	amount : "",
+	weight : 6,
+};
+GearList["genie robe"] = {
+	infoname : "Genie Robe [50 gp]",
+	name : "Genie Robe",
+	amount : "",
+	weight : 6,
+};
+GearList["locking spellbook"] = {
+	infoname : "Locking Spellbook [35 gp]",
+	name : "Locking Spellbook",
+	amount : "",
+	weight : 3,
+};
+GearList["monster camouflage"] = {
+	infoname : "Monster Camouflage [50 gp]",
+	name : "Monster Camouflage",
+	amount : "",
+	weight : 6,
+};
+GearList["warm fungal cloak"] = {
+	infoname : "Warm Fungal Cloak [15 gp]",
+	name : "Warm Fungal Cloak",
+	amount : "",
+	weight : 4,
+};
+GearList.windskiff = {
+	infoname : "Windskiff [4000 gp]",
+	name : "Windskiff",
+	amount : "",
+	weight : "",
+};
+MagicItemsList.windskiff = {
+	name : "Windskiff",
+	source : [["FRHoF", 133]],
+	type : "wonderous item",
+	rarity : "rare",
+	magicItemTable : "?",
+	description : "As an action, I transform this item into a Medium-size personal vehicle AC 12, HP 30, Speed 40 ft. This vehicle hovers a few inches off whatever surface it's on and can glide; it moves 5 ft horizontally for every 1 foot it descends in the air. The Windskiff and its riders take no damage from falling.",
+	descriptionFull : [
+		"This small piece of jewelry has 3 charges and regains all expended charges daily at dawn. While you are holding it, you can take a Magic action to expend 1 charge, which causes the jewelry to transform into a sail-powered personal vehicle. The vehicle is roughly the size and shape of a household door with a 10-foot-tall sail extending from one side. After 1 hour or until you use the item's command word (no action required), the transformation ends and the Windskiff reverts to its jewelry form.",
+		"In vehicle form, a Windskiff is a Medium object with the following statistics: AC 12, HP 30, and Speed 40 ft. The windskiff hovers a few inches above whatever surface it's on and can glide; it moves 5 feet horizontally for every 1 foot it descends in the air. A Windskiff and its riders take no damage from falling.",
+	],	
+	action: [["action", " (Transform)"]],
+};
+GearList["winter camouflage"] = {
+	infoname : "Winter Camouflage [50 gp]",
+	name : "Winter Camouflage",
+	amount : "",
+	weight : 4,
+};
+//Mechanical Wonders
+GearList["mechanical wonder (domestic)"] = {
+	infoname : "Mechanical Wonder (domestic) [400 gp]",
+	name : "Mechanical Wonder (domestic)",
+	amount : "",
+	weight : "",
+};
+CreatureList["domestic wonder"] = {
+	name : "Domestic Wonder",
+	regExpSearch : /^(?=.*domestic)(?=.*wonder).*$/i,
+	source : [["FRHoF", 134]],
+	size : 3,
+	type : "Construct",
+	alignment : "Unaligned",
+	ac : 9,
+	hp : 5,
+	hd : [1, 8],
+	speed : "30 ft",
+	scores : [13, 8, 13, 3, 8, 1],
+	saves : ["", "", "", "", 0, ""],
+	damage_immunities : "Poison",
+	condition_immunities : "Exhausted; Poisoned",
+	languages : "Understands Common but can't speak",
+	challengeRating : "None",
+	proficiencyBonus : 2,
+	Traits : [{
+		name : "Mechanical Determination",
+		description : "If damage reduces the wonder to 0 Hit Points, it must make a Constitution saving throw with a DC of 5 plus the damage taken unless the damage is Lightning or from a Critical Hit. On a successful save, the wonder drops to 1 Hit Point instead.",
+		joinString : "\n   ",
+	}, {
+		name : "Wind-Up Operation",
+		description : "The wonder has the Unconscious condition until another creature winds it with the wonder's unique key for 1 minute. Once wound, the wonder operates for 10 days or until a creature touches the wonder with its key as a Utilize action to deactivate it, after which the wonder has the Unconscious condition until it is wound again.",
+		joinString : "\n   ",
+	}],
+};
+//Tools
+ToolsList.bandore = {
+	infoname : "Bandore [65 gp]",
+	name : "Bandore",
+	amount : "",
+	weight : 3,
+	type : "musical instrument",
+	source : [["FRHoF", 0]],
+};
+ToolsList.cittern = {
+	infoname : "Cittern [65 gp]",
+	name : "Cittern",
+	amount : "",
+	weight : 2,
+	type : "musical instrument",
+	source : [["FRHoF", 0]],
+};
+ToolsList.yarting = {
+	infoname : "Yarting [40 gp]",
+	name : "Yarting",
+	amount : "",
+	weight : 2,
+	type : "musical instrument",
+	source : [["FRHoF", 0]],
+};
+//Spells
+SpellsList["alustriel's mooncloak"] = {
+	name : "Alustriel's Mooncloak",
+	classes : ["bard", "druid", "ranger", "wizard"],
+	source : [["FRHoF", 142]],
+	level : 5,
+	school : "Abjur",
+	time : "1 a",
+	range : "Self",
+	components : "V,S,M\u0192",
+	compMaterial : "a moonstone worth 50+ GP",
+	duration : "Conc, 1 min",
+	description : "20-ft Emanation of Dim Light centered on me, while in area, me and allies have Half Cover and Resist Cold, Ligh, and Rad dmg (See full description)",
+	descriptionFull : [
+		"For the duration, moonlight fills a 20-foot Emanation originating from you with Dim Light. While in that area, you and your allies have Half Cover and Resistance to Cold, Lightning, and Radiant damage." + "\n   " + "While the spell lasts, you can use one of the following options, ending the spell immediately:" + "\n   " + "***Liberation***. When you fail a saving throw to avoid or end the Frightened, Grappled, or Restrained condition, you can take a Reaction to succeed on the save instead." + "\n   " + "***Respite***. As a Magic action, you or an ally within the area regains Hit Points equal to 4d10 plus your spellcasting ability modifier.",
+	],
+};
+SpellsList.backlash = {
+	name : "Backlash",
+	classes : ["bard", "sorcerer", "warlock", "wizard"],
+	source : [["FRHoF", 142]],
+	level : 4,
+	school : "Abjur",
+	time : "1 rea",
+	timeFull : "Reaction, which you take in response to taking damage",
+	range : "60 ft",
+	components : "V",
+	duration : "Instantaneous",
+	description : "When I take dmg, reduce by 4d6+1d6/SL + spell mod, if crea who dealt dmg is w/i range Con save or 4d6+1d6/SL Force dmg or half on success",
+	descriptionFull : [
+		"You ward yourself against destructive energy, reducing the damage taken by 4d6 plus your spellcasting ability modifier." + "\n   " + "If the triggering damage was from a creature within range, you can force the creature to make a Constitution saving throw. The creature takes 4d6 Force damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage reduced and Fore damage from this spell both increase by 1d6 for every spell slot level above 4.",
+	],
+};
+SpellsList["blade of disaster"] = {
+	name : "Blade of Disaster",
+	classes : ["sorcerer", "warlock", "wizard"],
+	source : [["FRHoF", 143]],
+	level : 9,
+	school : "Conj",
+	time : "1 bns",
+	range : "60 ft",
+	components : "V,S",
+	duration : "Conc, 1 min",
+	description : "Create weapon; 2 spell atks 10d6 Force dmg; crit on 18+; bns a to move 60 ft \u0026 do 2 atks",
+	descriptionShorter : "Create wea; 2 spell atks 10d6 Force dmg; crit 18+; bns a to move 60 ft \u0026 2 atks",
+	descriptionFull : [
+		"You create a 3-foot-long blade-shaped planar rift that lasts for the duration. The rift appears within range in a space of your choice, and you can immediately make up to two melee spell attacks, each one against a creature or object within 5 feet of the rift. On a hit, the target takes 10d6 Force damage. This attack scores a Critical Hit if the number on the d20 is 18 or higher." + "\n   As a Bonus Action on your later turns, you can move the rift up to 60 feet and repeat the two attacks against a creature or an object within 5 feet of it. You can direct the attacks at the same target or at different ones." + "\n   The blade can harmlessly pass through any barrier, including ones created by spells like Wall of Force.",
+	],	
+};
+SpellsList["cacophonic shield"] = {
+	name : "Cacophonic Shied",
+	classes : ["bard", "sorcerer", "wizard"],
+	source : [["FRHoF", 143]],
+	level : 3,
+	school : "Evoc",
+	time : "1 a",
+	range : "Self",
+	components : "V,S",
+	duration : "Conc, 10 min",
+	description : "10-ft Emanation from me, when a crea enters/ends turn Con save, fail 3d6+1d6/SL Thunder dmg + Deafened, success half dmg only",
+	descriptionFull : [
+		"Thunderous reverberations fill a 10-foot Emanation originating from you for the duration. Whenever the Emanation enters a creature's space and whenever a creature enters the Emanation or ends its turn there, the creature makes a Constitution saving throw. On a failed save, the creature takes 3d6 Thunder damage and has the Deafened condition until the start of your next turn. On a successful save, the creature takes half as much damage only. A creature makes this save only once per turn. When you cast this spell, you can designate creatures to be unaffected by it." + "\n   " + "In addition, you have Resistance to Thunder damage, and ranged attack rolls against you are made with Disadvantage." + AtHigherLevels + "The damage increases by 1d6 for each spell slot above 3.",
+	],
+};
+SpellsList["conjure constructs"] = {
+	name : "Conjure Constructs",
+	classes : ["wizard"],
+	source : [["FRHoF", 143]],
+	level : 3,
+	school : "Conj",
+	time : "1 a",
+	range : "60 ft",
+	components : "V,S,M",
+	compMaterial : "a brass cog",
+	duration : "Conc, 10 min",
+	description : "Construct spirit to unoccupied space w/i range, when cast and as a Magic action on subsequent turns, 1 crea w/i 5 ft of spirit (See full description)",
+	descriptionFull : [
+		"You conjure a group of intangible, orderly spirits that appear as a Medium group of modrons or other Constructs in an unoccupied space you can see within range. The spirits last for the duration." + "\n   " + "When you cast this spell and as a Magic action on subsequent turns, you can command the spirits to target one creature or object you can see within 5 feet of the spirits and create one of the following effects:" + "\n   " + "***Clockwork Force***. The target makes a Dexterity saving throw, taking 3d6 Force damage on a failed save or half as much damage on a successful one." + "\n   " + "***Orderly Ward***. The target gains Temporary Hit Points equal to 1d6 plus your spellcasting ability modifier." + "\n   " + "When you move on your turn, you can also move the spirits up to 30 feet to an unoccupied space you can see." + AtHigherLevels + "The damage and Temporary Hit Points both increase by 1d6 for each spell slot level above 3.",
+	],
+};
+SpellsList["death armor"] = {
+	name : "Death Armor",
+	classes : ["sorcerer", "wizard"],
+	source : [["FRHoF", 143]],
+	level : 2,
+	school : "Necro",
+	time : "1 a",
+	range : "Touch",
+	components : "V,S,M\u2020",
+	compMaterial : "an onyx worth 50+ GP, which the spell consumes",
+	duration : "1 hr",
+	description : "1 crea, touch gains Adv on Death saves, once per turn, when enemy w/i 5ft of crea hits with melee atk roll, deal 2d4 Necro dmg to enemy",
+	descriptionFull : [
+		"For the duration, an inky aura surrounds one creature you touch. The target has Advantage on Death Saving Throws, and once per turn, when a creature within 5 feet of the target hits it with a melee attack roll, the attacker takes 2d4 Necrotic damage.",
+	],
+};
+SpellsList["deryan's helpful homunculi"] = {
+	name : "Deryan's helpful homunculi",
+	classes : ["cleric", "wizard"],
+	source : [["FRHoF", 143]],
+	ritual : true,
+	level : 2,
+	school : "Conj",
+	time : "1 a",
+	range : "Self",
+	components : "V,S,M\u2020",
+	compMaterial : "powdered gemstones worth 100+ GP, which he spell consumes, and one set of Artisan's Tools with which you have proficiency",
+	duration : "8 hr",
+	description : "construct spirits that have Prof in Arcana and with Artisan's Tool used in casting, help with crafting, halving crafting time",
+	descriptionFull : [
+		"You summon a group of helpful spirits, which last for the duration. The spirits appear as homunculi or as another Construct of choice but are intangible and invulnerable, and they are considered to have proficiency in the Arcana skill and with the set of Artisan's Tools used in the spell's casting." + "\n   " + "If you are crafting an item, the spirits function as a single assistant for your crafting, halving the crafting time.",
+	],
+};
+SpellsList.dirge = {
+	name : "Dirge",
+	classes : ["bard", "cleric"],
+	source : [["FRHoF", 144]],
+	level : 6,
+	school : "Ench",
+	time : "1 a",
+	range : "Self",
+	components : "V",
+	duration : "Conc, 1 min",
+	description : "60-ft Emanation, each undesignated crea w/i range can't regain HP, Con save fail, 3d10 Necro dmg and Prone, success half dmg and half Speed",
+	descriptionFull : [
+		"Deathly power fills a 60-foot Emanation originating from you for the duration." + "\n   " + "When you cast this spell, you can designate creatures to be unaffected by it. Any other creature can't regain Hit Points while in the Emanation. Whenever the Emanation enters a creature's space and whenever a creature enters the Emanation or ends its turn there, the creature makes a Constitution saving throw. On a failed save, the creature takes 3d10 Necrotic damage and has the Prone condition. On a successful save, the creature takes half as much damage and its Speed is halved. A creature makes this save only once per turn." + "\n   " + toUni("Casting as a Circle Spell") + ": " + "Casting this as a Circle spell requires a minimum of two secondary casters. If the spell is cast as a Cicle spell, its duration becomes Concentration up to 10 minutes." + "\n   " + "A creature that fails its save against the spell's effect also gains 1 Exhaustion level. While the creature has Exhaustion levels, finishing a Long Rest neither restores lost Hit Points nor reduces the creature's Exhaustion level." + "\n   " + "When the spell is cast, each secondary caster must expend a level 4+ spell slot; otherwise, the spell fails.",
+	],
+};
+SpellsList.doomtide = {
+	name : "Doomtide",
+	classes : ["bard", "cleric", "warlock"],
+	source : [["FRHoF", 144]],
+	level : 4,
+	school : "Conj",
+	time : "1 a",
+	range : "120 ft",
+	components : "V,S,M",
+	compMaterial : "soot and a dried eel",
+	duration : "Conc, 1 min",
+	description : "20-ft-rad Sphere w/i range magical darkness fog, ea crea w/i area Wis save, fail 5d6 Psy dmg and -1d6 from saves till end of its next turn, success half dmg only",
+	descriptionFull : [
+		"You create a 20-foot-radius Sphere of inky fog within range. The fog is magical, Darkness and lasts for the duration or until a strong wind (such as the one created by the Gust of Wind spell) disperses it, ending the spell." + "\n   " + "Each creature in the Sphere when it appears makes a Wisdom saving throw. On a failed save, a creature takes 5d6 Psychic damage and subtracts 1d6 from its saving throws until the end of its next turn. On a successful save, a creature takes half as much damage only. A creature also makes this save when the Sphere moves into its space, when it enters the Sphere, or when it ends its turn inside the Sphere. A creature makes tis save only once per turn." + "\n   " + "The Sphere moves 10 feet away from you at the start of each of your turns." + "\n   " + toUni("Casting as a Circle Spell") + ": " + "Casting this as a Circle spell requires a minimum of five secondary casters. In addition to the spell's usual components, you must provide a special component (a string of three black pearls from Pandemonium), which the spell consumes. The spell's range increases to 1 mile, and its duration increases to until dispelled (no Concentration required). The spell ends early if any caster who participated in this casting contributes to another casting of Doomtide as a Circle Spell." + "\n   " + "When the spell is cast, each secondary caster must expend a level 3+ spell slot; otherwise, the spell fails.",
+	],
+};
+SpellsList["elminster's effulgent spheres"] = {
+	name : "Elminster's Effulgent Spheres",
+	classes : ["druid", "sorcerer", "wizard"],
+	source : [["FRHoF", 144]],
+	level : 6,
+	school : "Evoc",
+	time : "1 a",
+	range : "Self",
+	components : "V,S,M\u0192",
+	compMaterial : "an opal worth 1000+ GP",
+	duration : "1 hr",
+	description : "6+1/SL spheres orbit me, which I can use to create effects (See full description)",
+	descriptionFull : [
+		"Six hromatic spheres orbit you for the duration." + "\n   " + "While the spheres are present, you can expend spheres to create the following effects:" + "\n   " + "***Absorb Energy***. When you take Acid, Cold, Fire, Lightning, or Thunder damage, you can take a Reaction to expend one sphere and give yourself Resistance to the triggering damage type until the start of your next turn." + "\n   " + "***Energy Blast***. As a Bonus Action, you send one sphere hurtling toward a target within 120 feet of yourself. Make a ranged spell attack. On a hit, the target takes 3d6 Acid, Cold, Fire, Lightning, or Thunder damage (your choice). Regardless of whether you hit, the sphere is expended." + "\n   " + "The spell ends early if you have no more spheres remaining." + AtHigherLevels + "The number of spheres increases by 1 for every spell slot level above 6.",
+	],
+};
+SpellsList["elminster's elusion"] = {
+	name : "Elminster's Elusion",
+	classes : ["wizard"],
+	source : [["FRHoF", 144]],
+	level : 2,
+	school : "Abjur",
+	time : "1 bns",
+	range : "Self",
+	components : "V,S",
+	duration : "Conc, 10 min",
+	description : "I have Adv on saves against spells and magical effects, if on a successful save, I would take half dmg, I instead take none.",
+	descriptionFull : [
+		"Arcane wards protect you against magic for the duration. You have Advantage on saving throws against spells and magical effects. Additionally, if you succeed on a saving throw against a spell or magical effect and would normally take half as much damage, you instead take no damage.",
+	],
+};
+SpellsList["holy star of mystra"] = {
+	name : "Holy Star of Mystra",
+	classes : ["cleric", "wizard"],
+	source : [["FRHoF", 145]],
+	level : 8,
+	school : "Evoc",
+	time : "1 bns",
+	range : "Self",
+	components : "V,S",
+	duration : "Conc, 1 min",
+	description : "I create a glowing mote of energy above myself, granting me benefits (see full description).",
+	descriptionFull : [
+		"You create a glowing mote of energy that hovers above you for the duration. The mote sheds Bright Light in a 5-foot radius and Dim Light for an additional 5 feet." + "\n   " + "When you cast this spell as a Bonus Action on later turns, you can unleash a shining bolt from the mote, targeting one creature within 120 feet of yourself. Make a ranged spell attack. On a hit, the target takes Force or Radiant damage (your choice) equal to 4d10 plus your spellcasting ability modifier." + "\n   " + "In addition, while the mote is present, you have Three-Quarters Cover, and if you succeed on a saving throw against a spell f level 7 or lower that targeted only you and didn't create an area of effect, you can take a Reaction to deflect that spell back at the spell's caster; th caster makes a saving throw against that spell using that caster's own spell save DC.",
+	],
+};
+SpellsList["laeral's silver lance"] = {
+	name : "Laeral's Silver Lance",
+	classes : ["cleric", "sorcerer", "wizard"],
+	source : [["FRHoF", 145]],
+	level : 3,
+	school : "Evoc",
+	time : "1 a",
+	range : "Self",
+	components : "V,S,M\u0192",
+	compMaterial : "a silver pin worth 250+ GP",
+	duration : "Instantaneous",
+	description : "120-ft long, 5-ft wide Line, ea crea of choice Str save, fail 3d10+1d10/SL Force dmg and Prone, success half dmg only",
+	descriptionFull : [
+		"Silver energy bursts out from you in a 120-foot-long, 5-foot-wide Line. Each creature of your choice in the line makes a Strength saving throw. On a failed save, a creature takes 3d10 Force damage and has the Prone condition. On a successful save, a creature takes half as much damage only." + AtHigherLevels + "The damage increases by d10 for every spell slot above 3.",
+	],
+};
+SpellsList["simbul's Synostodweomer"] = {
+	name : "Simbul's Synostodweomer",
+	classes : ["sorcerer", "wizard"],
+	source : [["FRHoF", 145]],
+	level : 7,
+	school : "Trans",
+	time : "1 a",
+	range : "Touch",
+	components : "V,S",
+	duration : "1 hr",
+	description : "When 1 crea I touch casts a spell using a spell slot they can expend a number of unused HD equal to the slot level and regain HP equal to roll + my spell modifier.",
+	descriptionFull : [
+		"You imbue one creature you touch with magical healing energy for the duration. Whenever the target casts a spell using a spell slot, the target can immediately roll a number of expended Hit Point Dice equal to the spell slot's level and regain Hit Points equal to the roll's total plus your spellcasting ability modifier; those dice are then expended.",
+	],
+};
+SpellsList["songal's elemental suffusion"] = {
+	name : "Songal's Elemental Suffusion",
+	classes : ["druid", "sorcerer", "warlock"],
+	source : [["FRHoF", 145]],
+	level : 5,
+	school : "Trans",
+	time : "1 a",
+	range : "Self",
+	components : "V,S,M\u0192",
+	compMaterial : "a pearl worth 100+ GP",
+	duration : "Conc, 1 min",
+	description : "I imbue myself with elemental power (see full description)",
+	descriptionFull : [
+		"You imbue yourself with the elemental power of genies. You gain the following benefits until the spell ends:" + "\n   " + "***Elemental Immunity***. When you cast this spell, choose one of the following damage types: Acid, Cold, Fire, Lightning, or Thunder. You have Resistance to the chosen damage type." + "\n   " + "***Elemental Pulse***. When you cast this spell and at the start of each of your subsequent turns, you release a burst of elemental energy in a 15-foot Emanation originating from yourself. Each creature of your choice in that area makes a Dexterity saving throw. On a failed save, a creature takes 2d6 Acid, Cold, Fire, Lightning, or Thunder damage (your choice) and has the Prone condition. On a successful save, a creature takes half as much damage only." + "\n   " + "***Flight***. You gain a Fly Speed of 30 feet and can hover." + "\n   " + toUni("Casting as a Circle Spell") + ": " + "If the spell is cast as a Circle spell, its casting time increases to 1 minute, and its duration increases to Concentration, up to 10 minutes. For each secondary caster who participates in the casting, you can choose one additional creature, to a maximum of nine additional creatures. The chosen creatures also gain the benefits of the spell for its duration." + "\n   " + "When the spell is cast, each secondary caster must expenda level 2+ spell slot; otherwise, the spell fails.",
+	],
+};
+SpellsList["spellfire flare"] = {
+	name : "spellfire flare",
+	classes : ["sorcerer", "wizard"],
+	source : [["FRHoF", 146]],
+	level : 1,
+	school : "Evoc",
+	time : "1 a",
+	range : "60 ft",
+	components : "V,S",
+	duration : "Instantaneous",
+	description : "Ranged spell atk, 1+1/SL bolt, Ignore Half and Three-Quarter Cover, on hit 2d10 Rad dmg, bolts can hit the same target or different one",
+	descriptionFull : [
+		"You unleash a blast of brilliant fire. Make a ranged spell attack against a target within range; a target gains no benefit from Half Cover or Three-Quarters Cover from this attack roll. On a hit, the target takes 2d10 Radiant damage." + AtHigherLevels + "You create an additional blast for each spell slot level above 1. You can direct the blasts at the same target or at different ones. Make a separate attack roll for each blast.",
+	],
+};
+SpellsList["spellfire storm"] = {
+	name : "Spellfire Storm",
+	classes : ["sorcerer", "warlock"],
+	source : [["FRHoF", 146]],
+	level : 4,
+	school : "Evoc",
+	time : "1 a",
+	range : "60 ft",
+	components : "V,S",
+	duration : "Conc, 1 min",
+	description : "I conjure a 20-ft-radius, 20-ft-high Cylinder of light w/i range (see full description)",
+	descriptionFull : [
+		"You conjure a pillar of spellfire in a 20-foot-radius, 20-foot-high Cylinder centered on a point within range. The area of the Cylinder is Bright Light, and each creature in it, when it appears, makes a Constitution saving throw, taking 4d10 Radiant damage on a failed save or half as much damage on a successful one. A creature also makes this save when it enters the spell's area for the first time on a turn or ends its turn there. A creature makes this save only once per turn." + "\n   " + "In addition, whenever a creature in the Cylinder casts a spell, that creature makes a Constitution saving throw. On a failed save, th spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn't expended." + "\n   " + "When you cast this spell, you can designate creatures to be unaffected by it." + "\n   " + toUni("Casting as a Circle Spell") + ": " + "In addition to the spell's usual components, you must provide a special component (a blue star sapphire worth 25000+ GP), which the spell consumes. The spell's range increases to 1 mile, and it no longer requires Concentration. When the spell is cast, each secondary caster must expend a level 3+ spell slot; otherwise, the spell fails." + AtHigherLevels + "The damage increases by 1d10 for every spell slot level above 4." + "\n   " + "The number of secondary casters determines the spell's area of effect and duration, as shown in the table below. The spell ends early if any caster who participated in this casting contributes to another casting of Spellfire Storm as a Circle spell." + "\n   " + "1-3 Secondary Casters, 40-foot-radius, 40-foot-high Cylinder, 1 Hour duration." + "\n   " + "4-6 Secondary Casters, 60-foot-radius, 60-foot-high Cylinder, 8 Hour duration." + "\n   " + "7+ Secondary Casters, 100-foot-radius, 100-foot-high Cylinder, 24 Hour duration.",
+	],
+};
+SpellsList["syluné's viper"] = {
+	name : "Syluné's Viper",
+	classes : ["druid", "wizard"],
+	source : [["FRHoF", 147]],
+	level : 3,
+	school : "Conj",
+	time : "1 bns",
+	range : "Self",
+	components : "V,S,M",
+	compMaterial : "a snake fang",
+	duration : "1 hr",
+	description : "I gain 15+5/SL Temp HP, While I have Temp HP, I have a Climb Speed equal to my Speed, as a Magic action, Ranged spell atk (see full description)",
+	descriptionFull : [
+		"A shimmering, spectral snake encircles your body for the duration. You gain 15 Temporary Hit Points; the spell ends early if you have no Temporary Hit Points left." + "\n   " + "While the spell is active, you gain the following benefits:" + "\n   " + "***Climbing***. You gain a Climb Speed equal to your Speed." + "\n   " + "***Venomous Bite***. As a Magic Action, you can make a ranged spell attack using the snake against one creature within 50 feet. On a hit, the target takes 1d6 Force damage and has the Poisoned condition until the start of your next turn. While Poisoned, the target has the Incapacitated condition." + AtHigherLevels + "For each spell slot level above 3, the number of Temporary Hit Points you gain from this spell increases by 5, and the damage of the Venomous Bite increases by 1d6.",
+	],
+};
+SpellsList.wardaway = {
+	name : "Wardaway",
+	classes : ["bard", "cleric", "paladin", "wizard"],
+	source : [["FRHoF", 147]],
+	level : 1,
+	school : "Abjur",
+	time : "1 a",
+	range : "60 ft",
+	components : "V,S,M",
+	compMaterial : "a miniature clay hand",
+	duration : "Instantaneous",
+	description : "1 crea w/i range, Con save, fail 2d4+2d4/SL Force dmg, Speed halved till start of my next turn, and can only take Action or Bns on turn, success half dmg only.",
+	descriptionFull : [
+		"You hurl a disorienting magical force toward one creature within range. The target makes a Constitution saving throw; Constructs and Undead automatically succeed on this save." + "\n   " + "On a failed save, the target takes 2d4 Force damage, its Speed is halved until the start of your next turn, and on its next turn, it can take only an action or a Bonus Action (but not both). On a successful save, the target takes half as much damage only." + AtHigherLevels + "The damage increases by 2d4 for every spell slot level above 1.",
+	],
 };
