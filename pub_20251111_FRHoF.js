@@ -7,7 +7,7 @@ SourceList["FRHoF"] = {
 	group : "Campaign Sourcebooks",
 	campaignSetting : "Forgotten Realms",
 };
-// Coded By: ThePokésimmer with contributions from Shroo
+// Coded By: ThePokésimmer with contributions from Shroo, Rocky, and Reading Toskr
 //Functions
 function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
