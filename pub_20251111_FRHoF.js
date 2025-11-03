@@ -339,7 +339,7 @@ AddSubClass("paladin", "oath of the noble genies", {
 			source : [["FRHoF", 20]],
 			minlevel : 3,
 			description : [
-				"Immediately after I cast Divine Smite, I can expend a use of my CD to invoke one of the following effects (See Notes Page).",
+				"Immediately after I cast Divine Smite, I can expend a use of my CD to invoke one of the following effects (See Third Page).",
 			],
 			toNotesPage : [{
 				name : "Elemental Smite",
@@ -349,6 +349,7 @@ AddSubClass("paladin", "oath of the noble genies", {
 					"##Efreeti's Fury##. The target of my Divine Smite takes an extra 2d4 Fire dmg, and fire jumps from the target to another visible crea within 30 ft of me. The second crea also takes 2d4 Fire dmg.",
 					"##Marid's Surge##. The target of my Divine Smite and each crea I choose in a 10-ft Emanation from me make a Strength save vs my Spell Save DC. On a failed save, a crea is pushed 15 ft away from me and has the Prone Condition.",
 				],
+				page3notes: true,
 			}],				
 		},
 		"subclassfeature3.1" : {
@@ -445,7 +446,7 @@ AddSubClass("ranger", "winter walker", {
 		},			
 		"subclassfeature11" : {
 			name : "Chilling Retribution",
-			source : [["FRHoF", 0]],
+			source : [["FRHoF", 22]],
 			minlevel : 11,
 			usages : "Wisdom modifier per ",
 			usagescalc : "event.value = Math.max(1, What('Wis Mod'));",
@@ -456,7 +457,7 @@ AddSubClass("ranger", "winter walker", {
 		},
 		"subclassfeature15" : {
 			name : "Frozen Haunt", 
-			source : [["FRHoF", 22]],
+			source : [["FRHoF", 2]],
 			minlevel : 15,
 			usages : 1,
 			recovery : "long rest", 
@@ -565,7 +566,7 @@ AddSubClass("rogue", "scion of the three", {
 AddSubClass("sorcerer", "spellfire sorcery", {
 	regExpSearch : /^(?=.*(sorcerer|witch))(?=.*(spellfire)).*$/i,
 	subname : "Spellfire Sorcery",
-	source : [["FRHoF", 0]],
+	source : [["FRHoF", 24]],
 	spellcastingExtra : ["cure wounds", "guiding bolt", "lesser restoration", "scorching ray", "aura of vitality", "dispel magic", "fire shield", "wall of fire", "greater restoration", "flame strike"],
 	spellcastingExtraApplyNonconform : true,
 	features : {
@@ -605,7 +606,7 @@ AddSubClass("sorcerer", "spellfire sorcery", {
 		},	
 		"subclassfeature18" : {
 			name : "Crown of Spellfire",
-			source : [["FRHoF", 25]],
+			source : [["FRHoF", 0]],
 			minlevel : 18,
 			usages : 1,
 			recovery : "long rest",
@@ -628,9 +629,9 @@ legacySubClassRefactor("wizard", "bladesinger", {
 	features : {
 		"subclassfeature3" : {
 			name : "Bladesong",
-			source : [["FRHoF", 26]], 
+			source : [["FRHoF", 0]], 
 			minlevel : 3,
-			usages : "Int mod per ",
+			usages : "Intelligence modifier per ",
 			usagescalc : "event.value = Math.max(1, What('Int Mod'));",
 			recovery : "long rest",
 			action : [["bonus action", " (Start)"]],
@@ -728,7 +729,7 @@ BackgroundFeatureList["spellfire initiate"] = {
 BackgroundList["chondathan freebooter"] = {
 	regExpSearch : /^(?=.*chondathan)(?=.*freebooter).*$/i,
 	name : "Chondathan Freebooter",
-	source : [["FRHoF", 28]],
+	source : [["FRHoF", 25]],
 	scorestxt : ["+2 and +1 -or- +1 to each from Strength, Dexterity, and Wisdom"],
 	skills : ["Athletics", "Sleight of Hand"],
 	toolProfs : ["Weaver's tools"],
@@ -738,15 +739,15 @@ BackgroundList["chondathan freebooter"] = {
 		["Basket", "", 2],
 		["Bedroll", "", 7],
 		["Bucket", "", 2],
-		["Weaver's Tools", "", 5],
-		["Signal Whistle", "", ""],
+		["Weaver's tools", "", 5],
+		["Signal whistle", "", ""],
 		["Rope", "", 5],
 		["Bag of ball bearings", "", 2],
 		["Rations, days of", 3, 2],
 	],
 	equipright : [
 		["Dagger", "", 1],
-		["Traveler's Clothes", "", 4],
+		["Traveler's clothes", "", 4],
 	],
 	feature : "Chondathan Freebooter",
 };
@@ -773,8 +774,8 @@ BackgroundList["dead magic dweller"] = {
 	equipleft : [
 		["Bedroll", "", 7],
 		["Blanket", "", 3],
-		["Healer's Kit", "", 3],
-		["Leatherworker's Tools", "", 5],
+		["Healer's kit", "", 3],
+		["Leatherworker's tools", "", 5],
 		["Pole", "", 7],
 		["Tent", "", 20],
 		["Tinderbox", "", 1],
@@ -784,7 +785,7 @@ BackgroundList["dead magic dweller"] = {
 	],
 	equipright : [
 		["Greatclub", "", 10],
-		["Traveler's Clothes", "", 4],
+		["Traveler's clothes", "", 4],
 	],
 	feature : "Dead Magic Dweller",
 };
@@ -806,16 +807,16 @@ BackgroundList["flaming fist mercenary"] = {
 	source : [["FRHoF", 30]],
 	scorestxt : ["+2 and +1 -or- +1 to each from Strength, Constitution, and Charisma"],
 	skills : ["Intimidation", "Perception"],
-	toolProfs : ["Smith's Tools"],
+	toolProfs : ["Smith's tools"],
 	gold : 4,
 	equipleft : [
-		["Smith's Tools", "", 8],
+		["Smith's tools", "", 8],
 		["Manacles", "", 6],
 		["Ram, portable", "", 35],
 	],
 	equipright : [
 		["Mace", "", 4],
-		["Fine Clothes", "", 6],
+		["Fine clothes", "", 6],
 	],
 	feature : "Flaming Fist Mercenary",
 };
@@ -837,23 +838,23 @@ BackgroundList["genie touched"] = {
 	source : [["FRHoF", 30]],
 	scorestxt : ["+2 and +1 -or- +1 to each from Dexterity, Wisdom, and Charisma"],
 	skills : ["Perception", "Persuasion"],
-	toolProfs : ["Glassblower's Tools"],
+	toolProfs : ["Glassblower's tools"],
 	gold : 2,
 	equipleft : [
-		["Glassblower's Tools", "", 5],
+		["Glassblower's tools", "", 5],
 		["Lamp", "", 1],
 		["Oil, flasks of", 3, 1],
 		["Waterskin", "", 5],
 	],
 	equipright : [
-		["Light Hammer", "", 2],
-		["Fine Clothes", "", 6],
+		["Light hammer", "", 2],
+		["Fine clothes", "", 6],
 	],
 	feature : "Genie Touched",
 };
 BackgroundFeatureList["genie touched"] = {
 	description : [
-		"Although genies no longer rule Calimshan, genie magic is still common in your homeland. Perhaps you inadvertently summoned a djinni from a magic lamp, or maybe you came upon an oasis guarded by a marid. A dao might have saved you from a landslide, or you bargained with an efreeti for fleeting wealth. However your fate intersected with that of a genie, the experience left you with a keen eye, a silver tongue, and more than a touch of magic.",
+		"Although genies no longer rule Calimshan, genie magic is still common in your homeland. Perhaps you inadvertently summoned a djinni from a magic lamp, or maybe you came upon an oasis guarded by a marid. A dao might have saved you from a landslide, or you bargained with an efreeti for fleeting wealth. However, your fate intersected with that of a genie; the experience left you with a keen eye, a silver tongue, and more than a touch of magic.",
 	],
 	source : [["FRHoF", 30]],
 	eval : function () {
@@ -869,22 +870,22 @@ BackgroundList["ice fisher"] = {
 	source : [["FRHoF", 31]],
 	scorestxt : ["+2 and +1 -or- +1 to each from Strength, Dexterity, and Constitution"],
 	skills : ["Animal Handling", "Athletics"],
-	toolProfs : ["Woodcarver's Tools"],
+	toolProfs : ["Woodcarver's tools"],
 	gold : 32,
 	equipleft : [
-		["Woodcarver's Tools", "", 5],
+		["Woodcarver's tools", "", 5],
 		["Basket", "", 2],
-		["Block and Tackle", "", 5],
+		["Block and tackle", "", 5],
 		["Bucket", "", 2],
 		["Chain", "", 10],
-		["Hunting Trap", "", 25],
+		["Hunting trap", "", 25],
 		["Pole", "", 7],
 		["Rations, days of", 3, 2],
 		["Rope", "", 5],
 	],
 	equipright : [
 		["Net", "", 3],
-		["Traveler's Clothes", "", 4],
+		["Traveler's clothes", "", 4],
 	],
 	feature : "Ice Fisher",
 };
@@ -906,10 +907,10 @@ BackgroundList["moonwell pilgrim"] = {
 	source : [["FRHoF", 33]],
 	scorestxt : ["+2 and +1 -or- +1 to each from Constitution, Wisdom, and Charisma"],
 	skills : ["Nature", "Performance"],
-	toolProfs : ["Painter's Supplies"],
-	gold : 34,
+	toolProfs : ["Painter's supplies"],
+	gold : 13,
 	equipleft : [
-		["Painter's Supplies", "", 5],
+		["Painter's supplies", "", 5],
 		["Bedroll", "", 7],
 		["Bell", "", ""],
 		["String", "", ""],
@@ -919,7 +920,7 @@ BackgroundList["moonwell pilgrim"] = {
 		["Quarterstaff", "", 4],
 		["Pouch", "", 1],
 		["Robe", "", 4],
-		["Traveler's Clothes", "", 4],
+		["Traveler's clothes", "", 4],
 	],
 	feature : "Moonwell Pilgrim",
 };
@@ -941,10 +942,10 @@ BackgroundList["mulhorandi tomb raider"] = {
 	source : [["FRHoF", 33]],
 	scorestxt : ["+2 and +1 -or- +1 to each from Dexterity, Constitution, and Intelligence"],
 	skills : ["Investigation", "Religion"],
-	toolProfs : ["Mason's Tools"],
+	toolProfs : ["Mason's tools"],
 	gold : 26,
 	equipleft : [
-		["Mason's Tools", "", 5],
+		["Mason's tools", "", 5],
 		["Backpack", "", 5],
 		["Bedroll", "", 7],
 		["Crowbar", "", 5],
@@ -958,15 +959,15 @@ BackgroundList["mulhorandi tomb raider"] = {
 	],
 	equipright : [
 		["Dagger", "", 1],
-		["Light Hammer", "", 2],
-		["Pouch", 2, 1],
-		["Traveler's Clothes", "", 4],
+		["Light hammer", "", 2],
+		["Pouches", 2, 1],
+		["Traveler's clothes", "", 4],
 	],
 	feature : "Mulhorandi Tomb Raider",
 };
 BackgroundFeatureList["mulhorandi tomb raider"] = {
 	description : [
-		"You grew up in a land of living god-kings, and as a child you were told countless stories of ancient empires and buried cities. In these tales, Mulhorand was a land overflowing with forgotten riches - priceless treasures awaiting anyone cunning and brave enough to seek them out. You've taken it upon yourself to explore your homeland's crypts, tombs, and pyramids to reclaim your people's relics.",
+		"You grew up in a land of living god-kings, and as a child, you were told countless stories of ancient empires and buried cities. In these tales, Mulhorand was a land overflowing with forgotten riches - priceless treasures awaiting anyone cunning and brave enough to seek them out. You've taken it upon yourself to explore your homeland's crypts, tombs, and pyramids to reclaim your people's relics.",
 	],
 	source : [["FRHoF", 33]],
 	eval : function () {
@@ -982,10 +983,10 @@ BackgroundList.mythalkeeper = {
 	source : [["FRHoF", 34]],
 	scorestxt : ["+2 and +1 -or- +1 to each from Intelligence, Wisdom, and Charisma"],
 	skills : ["Arcana", "History"],
-	toolProfs : ["Jeweler's Tools"],
+	toolProfs : ["Jeweler's tools"],
 	gold : 16,
 	equipleft : [
-		["Jeweler's Tools", "", 2],
+		["Jeweler's tools", "", 2],
 		["Perfume", "", ""],
 		["Shovel", "", 5],
 		["String", "", ""],
@@ -1016,26 +1017,25 @@ BackgroundList["rashemi wanderer"] = {
 	source : [["FRHoF", 35]],
 	scorestxt : ["+2 and +1 -or- +1 to each from Strength, Constitution, and Charisma"],
 	skills : ["Intimidation", "Perception"],
-	toolProfs : ["Cartographer's Tools"],
+	toolProfs : ["Cartographer's tools"],
 	gold : 23,
 	equipleft : [
-		["Cartographer's Tools", "", 6],
+		["Cartographer's tools", "", 6],
 		["Backpack", "", 5],
 		["Bedroll", "", 7],
-		["Hooded Lantern", "", 2],
+		["Hooded lantern", "", 2],
 		["Oil, flasks of", 3, 1],
 		["Rope", "", 5],
 		["Tinderbox", "", 1],
-		["Waterskin", "", 5],
 	],
 	equipright : [
-		["Traveler's Clothes", "", 4],
+		["Traveler's clothes", "", 4],
 	],
 	feature : "Rashemi Wanderer",
 };
 BackgroundFeatureList["rashemi wanderer"] = {
 	description : [
-		"You spent years wandering the highlands of Rashemen, a dangerous windswept heath that's dotted with ancient obelisks enchanted to imprison Fiends and home to dragons, gnolls, and other deadly creatures. Friendships are hard to find in such an isolated land, and you've learned to keep strangers at a distance.",
+		"You spent years wandering the highlands of Rashemen, a dangerous, windswept heath that's dotted with ancient obelisks enchanted to imprison Fiends and home to dragons, gnolls, and other deadly creatures. Friendships are hard to find in such an isolated land, and you've learned to keep strangers at a distance.",
 	],
 	source : [["FRHoF", 35]],
 	eval : function () {
@@ -1051,21 +1051,21 @@ BackgroundList["shadowmasters exile"] = {
 	source : [["FRHoF", 35]],
 	scorestxt : ["+2 and +1 -or- +1 to each from Dexterity, Intelligence, and Charisma"],
 	skills : ["Acrobatics", "Stealth"],
-	toolProfs : ["Thieves' Tools"],
+	toolProfs : ["Thieves' tools"],
 	gold : 3,
 	equipleft : [
-		["Thieves' Tools", "", 1],
+		["Thieves' tools", "", 1],
 		["Caltrops", 20, 0.1],
-		["Grappling Hook", "", 4],
-		["Iron Spikes", 10, 0.5],
+		["Grappling hook", "", 4],
+		["Iron spikes", 10, 0.5],
 		["Mirror", "", 0.5],
 		["Rope", "", 5],
 	],
 	equipright : [
 		["Dagger", 2, 1],
 		["Costume", "", 4],
-		["Pouch", 2, 1],
-		["Traveler's Clothes", "", 4],
+		["Pouches", 2, 1],
+		["Traveler's clothes", "", 4],
 	],
 	feature : "Shadowmasters Exile",
 };
@@ -1088,10 +1088,10 @@ BackgroundList["dragon cultist"] = {
 	source : [["FRHoF", 29]],
 	scorestxt : ["+2 and +1 -or- +1 to each from Dexterity, Constitution, and Intelligence"],
 	skills : ["Deception", "Stealth"],
-	toolProfs : ["Calligrapher's Supplies"],
+	toolProfs : ["Calligrapher's supplies"],
 	gold : 30,
 	equipleft : [
-		["Calligrapher's Supplies", "", 5],
+		["Calligrapher's supplies", "", 5],
 		["Bottle, glass", "", 2],
 		["Lamp", "", 1],
 		["Manacles", "", 6],
@@ -1123,10 +1123,10 @@ BackgroundList["emerald enclave caretaker"] = {
 	source : [["FRHoF", 29]],
 	scorestxt : ["+2 and +1 -or- +1 to each from Constitution, Intelligence, and Wisdom"],
 	skills : ["Nature", "Survival"],
-	toolProfs : ["Herbalism Kit"],
+	toolProfs : ["Herbalism kit"],
 	gold : 13,
 	equipleft : [
-		["Herbalism Kit", "", 3],
+		["Herbalism kit", "", 3],
 		["Bedroll", "", 7],
 		["Blanket", "", 3],
 		["Tent", "", 20],
@@ -1135,7 +1135,7 @@ BackgroundList["emerald enclave caretaker"] = {
 		["Shortbow", "", 1],
 		["Arrows", 20, 0.05],
 		["Pouch", "", 1],
-		["Traveler's Clothes", "", 4],
+		["Traveler's clothes", "", 4],
 	],
 	feature : "Emerald Enclave Caretaker",
 };
@@ -1157,12 +1157,12 @@ BackgroundList.harper = {
 	source : [["FRHoF", 31]],
 	scorestxt : ["+2 and +1 -or- +1 to each from Dexterity, Intelligence, and Charisma"],
 	skills : ["Performance", "Sleight of Hand"],
-	toolProfs : ["Disguise Kit"],
+	toolProfs : ["Disguise kit"],
 	gold : 14,
 	equipleft : [
-		["Disguise Kit", "", 3],
+		["Disguise kit", "", 3],
 		["Bedroll", "", 7],
-		["Grappling Hook", "", 4],
+		["Grappling hook", "", 4],
 		["Rope", "", 5],
 	],
 	equipright : [
@@ -1189,19 +1189,19 @@ BackgroundList["knight of the gauntlet"] = {
 	source : [["FRHoF", 32]],
 	scorestxt : ["+2 and +1 -or- +1 to each from Strength, Intelligence, and Wisdom"],
 	skills : ["Athletics", "Medicine"],
-	toolProfs : ["Smith's Tools"],
+	toolProfs : ["Smith's tools"],
 	gold : 9,
 	equipleft : [
-		["Smith's Tools", "", 8],
-		["Bullseye Lantern", "", 2],
-		["Holy Symbol", "", 1],
+		["Smith's tools", "", 8],
+		["Bullseye lantern", "", 2],
+		["Holy symbol", "", 1],
 		["Manacles", "", 6],
 		["Oil, flasks of", 5, 1],
 		["Tinderbox", "", 1],
 	],
 	equipright : [
 		["Spear", "", 3],
-		["Traveler's Clothes", "", 4],
+		["Traveler's clothes", "", 4],
 	],
 	feature : "Knight of the Gauntlet",
 };
@@ -1223,17 +1223,17 @@ BackgroundList["lords' alliance vassal"] = {
 	source : [["FRHoF", 32]],
 	scorestxt : ["+2 and +1 -or- +1 to each from Strength, Intelligence, and Charisma"],
 	skills : ["Insight", "Persuasion"],
-	toolProfs : ["Calligrapher's Supplies"],
+	toolProfs : ["Calligrapher's supplies"],
 	gold : 13,
 	equipleft : [
-		["Calligrapher's Supplies", "", 5],
+		["Calligrapher's supplies", "", 5],
 		["Ink", "", ""],
-		["Ink Pen", 5, ""],
+		["Ink pen", 5, ""],
 		["Parchment, sheets of", 9, ""],
 	],
 	equipright : [
 		["Javelin", 2, 2],
-		["Fine Clothes", "", 6],
+		["Fine clothes", "", 6],
 	],
 	feature : "Lords' Alliance Vassal",
 };
@@ -1255,14 +1255,14 @@ BackgroundList["purple dragon squire"] = {
 	source : [["FRHoF", 34]],
 	scorestxt : ["+2 and +1 -or- +1 to each from Strength, Wisdom, and Charisma"],
 	skills : ["Animal Handling", "Insight"],
-	toolProfs : ["Navigator's Tools"],
+	toolProfs : ["Navigator's tools"],
 	gold : 9,
 	equipleft : [
-		["Navigator's Tools", "", 2],
+		["Navigator's tools", "", 2],
 	],
 	equipright : [
 		["Spear", "", 3],
-		["Fine Clothes", "", 6],
+		["Fine clothes", "", 6],
 	],
 	feature : "Purple Dragon Squire",
 };
@@ -1284,11 +1284,11 @@ BackgroundList["zhentarim mercenary"] = {
 	source : [["FRHoF", 36]],
 	scorestxt : ["+2 and +1 -or- +1 to each from Strength, Dexterity, and Charisma"],
 	skills : ["Intimidation", "Perception"],
-	toolProfs : ["Forgery Kit"],
+	toolProfs : ["Forgery kit"],
 	gold : 11,
 	equipleft : [
-		["Forgery Kit", "", 5],
-		["Hooded Lantern", "", 2],
+		["Forgery kit", "", 5],
+		["Hooded lantern", "", 2],
 		["Oil, flasks of", 3, 1],
 		["String", "", ""],
 		["Tinderbox", "", 1],
@@ -1297,7 +1297,7 @@ BackgroundList["zhentarim mercenary"] = {
 		["Club", "", 2],
 		["Dagger", "", 1],
 		["Pouch", 2, 1],
-		["Fine Clothes", "", 6],
+		["Fine clothes", "", 6],
 	],
 	feature : "Zhentarim Mercenary",
 };
@@ -1350,7 +1350,7 @@ FeatsList["emerald enclave fledgling"] = {
 	descriptionFull : [
 		"You gain the following benefits",
 		"***Speak with Animals***. You always have the Speak with Animals spell prepared and can cast it with any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat). When you cast this spell as a Ritual, its duration is 8 hours.",
-		"***Tag Team***. When you take the Help action, you can switch places with a willing ally within 5 feet of yourself as part of that same action. This movement doesn't provoke Opportunity Attacks. You can't use this benefit if the ally has the Incapacitated condition.",
+		"***Tag Team***. When you take the Help action, you can switch places with a willing ally within 5 feet of yourself as part of that same action. This movement doesn't provoke Opportunity Attack action. You can't use this benefit if the ally has the Incapacitated condition.",
 	],
 };
 FeatsList["harper agent"] = {
@@ -1402,7 +1402,7 @@ FeatsList["spellfire spark"] = {
 	type : "origin",
 	extraLimitedFeatures : [{
 		name : "Sacred Flame (Bns)",
-		usages : "Prof Bonus per ",
+		usages : "Proficiency bonus per ",
 		usagescalc : "event.value = How('Proficiency Bonus');",
 		recovery : "long rest",
 	}],
@@ -1440,7 +1440,7 @@ FeatsList["zhentarim ruffian"] = {
 	description : "When I roll dmg for an Opportunity Atk, I can roll the damage twice and use either roll. If I have Heroic Inspiration when I roll Initiative, I can expend it to give myself and allies Adv on that Initiative roll.",
 	descriptionFull : [
 		"You gain the following benefits",
-		"***Exploit Opening***. When you roll damage for an Opportunity Attack, you can roll the damage dice twice and use either roll against the target.",
+		"***Exploit Opening***. When you roll damage for an Opportunity Attack action, you can roll the damage dice twice and use either roll against the target.",
 		"***Family First***. If you have Heroic Inspiration when you roll Initiative, you can expend it to give yourself and your allies Advantage on that Initiative roll.",
 	],
 };
@@ -1575,7 +1575,7 @@ FeatsList["fairy trickster"] = {
 	type : "general",
 	extraLimitedFeatures : [{
 		name : "Flustering Strike",
-		usages : "Prof bonus per ",
+		usages : "Proficiency bonus per ",
 		usagescalc : "event.value = How('Proficiency Bonus');",
 		recovery : "long rest",
 	}],
@@ -1636,32 +1636,28 @@ FeatsList["genie magic"] = {
 		delete CurrentSpells['genie magic'];
 		SetStringifieds('spells'); CurrentUpdates.types.push('spells');
 	},
-	calcChanges : {
-		spellList : [
-			function(spList, spName, spType) {
-				// Remove the already known cantrips, from any source except magic items
-				if (spName === 'genie magic') {
-					var allSpellsKnown = [];
-					for (var sCast in CurrentSpells) {
-						if (sCast.refType === "item") continue;
-						var oCast = CurrentSpells[sCast];
-						if (oCast.selectCa) allSpellsKnown = allSpellsKnown.concat(oCast.selectCa);
-						if (oCast.selectBo) allSpellsKnown = allSpellsKnown.concat(oCast.selectBo);
-					}
-					var knownSpells = OrderSpells(allSpellsKnown, "single", false, false, 0);
-					if (!spList.notspells) spList.notspells = [];
-					spList.notspells = spList.notspells.concat(knownSpells);
-				}
-			}
-		],
-		spellAdd : [
-			function (spellKey, spellObj, spName, isDuplicate) {
-				if (spName === 'genie magic') {
-					spellObj.firstCol = "";
-				}
-			}
-		]
-	},
+    calcChanges : {
+        spellList : [
+            function(spList, spName, spType) {
+                // Only do this for the above defined CurrentSpells object
+                if (spName === 'genie magic') {
+                    // Make sure the array is empty
+                    spList.spells = [];
+                    // First get all 1st level 
+                    var firstLvlSpells = CreateSpellList({ "class" : "sorcerer", level : [1, 1] });
+                    /*  loop through these spells and push the ones that meet the criteria
+                        of being the casting time of 1 a (action)
+                    */
+                    for (var i = 0; i < firstLvlSpells.length; i++) {
+                        var oSpell = SpellsList[firstLvlSpells[i]];
+                        if ((/1 a/i).test(oSpell.time)) {
+                            spList.spells.push( firstLvlSpells[i] );
+                        }
+                    }
+                }
+            }
+        ]
+    },
 	description : "Once per Long Rest, as a Magic action, I can cast a 1st-level spell with a casting time of 1 Action from the Sorcerer's spell list. When I reach level 11, the spell I cast with this feat is cast as if using a 2nd-level spell slot, at 17th level as if using a 3rd-level spell slot.",
 	descriptionFull : [
 		"You gain the following benefits",
@@ -1692,7 +1688,7 @@ FeatsList["genie magic"] = {
 };
 FeatsList["harper teamwork"] = {
 	name : "Harper Teamwork",
-	source : [["FRHoF", 39]],
+	source : [["FRHoF", 0]],
 	type : "general",
 	description : "When I take the Help action to aid an ally's atk roll against an enemy, that enemy has Disadv on its first saving throw before my next turn starts. If I succeed on a save to end the Frightened or Paralyzed condition on myself, I can end the same condition on one visible ally within 30 ft.",
 	descriptionFull : [
@@ -1755,7 +1751,7 @@ FeatsList["mythal touched"] = {
 	type : "general",
 	extraLimitedFeatures : [{
 		name : "Mythal Ward",
-		usages : "Prof bonus per ",
+		usages : "Proficiency bonus per ",
 		usagescalc : "event.value = How('Proficiency Bonus');",
 		recovery : "long rest",
 	}],
@@ -1834,7 +1830,7 @@ FeatsList["purple dragon commandant"] = {
 	type : "general",
 	extraLimitedFeatures : [{
 		name : "Encourage Ally",
-		usages : "Prof bonus per ",
+		usages : "Proficiency bonus per ",
 		usagescalc : "event.value = How('Proficiency Bonus');",
 		recovery : "long rest",
 	}],
@@ -1888,7 +1884,7 @@ FeatsList["spellfire adept"] = {
 	prerequisite : "Level 4+, Spellfire Spark feat or the Spellcasting or Pact Magic Feature",
 	prereqeval : function(v) {
 		var SpfSpk = CurrentFeats.known.indexOf("spellfire spark [origin]");
-		return v.characterLevel >= 4 && SpfSpk !== -1 || v.isSpellcaster;
+		return v.characterLevel >= 4 && SpfSpk !== -1 || v.isSpellcastingClass;
 	},
 };
 FeatsList["street justice"] = {
@@ -2007,7 +2003,7 @@ FeatsList["boon of bountiful health"] = {
 		"You gain the following benefits",
 		"***Ability Score Improvement***. Increase one ability score of your choice by 1, to a Maximum of 30.",
 		"***Augmented Health***. When you gain Temporary Hit Points, increase the number of Temporary Hit Points you gain by 5.",
-		"***Superior Recuperation***. When you spend one or more Hit Point Dice to regain Hit Points, you can instead use the maximum number for each die.",
+		"***Superior Recuperation***. When you spend one or more Hit Point Dice to regain Hit Points, you can instead use the highest number possible for each die.",
 	],
 	choices : ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
 	"strength" : {
@@ -2413,7 +2409,7 @@ FeatsList["boon of the bright sun"] = {
 	descriptionFull : [
 		"You gain the following benefits",
 		"***Ability Score Improvement***. Increase your Constitution, Wisdom, or Charisma score by 1, to a Maximum of 30.",
-		"***Daylight Presence***. As a Bonus Action, you radiate a 30-foot Emanation of Bright Light that is sunlight. If any of the Emanation's area overlaps with an area of Darkness created by a spell, that spell is dispelled. The Emanation lasts until you dismiss it (no action needed), die, or have the Incapacitated condition.",
+		"***Daylight Presence***. As a Bonus Action, you radiate a 30-foot Emanation of Bright Light that is sunlight. If any of the Emanation's area overlaps with an area of Darkness created by a spell, that spell is dispelled. The Emanation lasts until you dismiss it (no action required), die, or have the Incapacitated condition.",
 		"***Fortifying Light***. When your Daylight Presence is active, at the start of each of your turns, you and allies you can see in your Daylight Presence gain 10 Temporary Hit Points.",
 	],
 	choices : ["Constitution", "Wisdom", "Charisma"],
@@ -2464,7 +2460,7 @@ FeatsList["boon of the furious storm"] = {
 	},
 	"wisdom" : {
 		name : "Boon of the Furious Storm - WIS",
-		description : "I have Resistance to Lightning and Thunder dmg. While Bloodied, I'm Immune. Creatures also have Disadv on saves against my spells that deal Lightning or Thunder dmg. [+1 Wisdom]",
+			description : "I have Resistance to Lightning and Thunder dmg. While Bloodied, I'm Immune. Creatures also have Disadv on saves against my spells that deal Lightning or Thunder dmg. [+1 Wisdom]",
 		scores : [0, 0, 0, 0, 1, 0],
 		scoresMaximum : [0, 0, 0, 0, 30, 0],
 	},
@@ -2476,12 +2472,12 @@ FeatsList["boon of the furious storm"] = {
 	},
 	prerequisite : "Level 19+, Spellcasting or Pact Magic Feature",
 	prereqeval: function (v) {
-		return v.characterLevel >= 19 && v.isSpellcaster;
+		return v.characterLevel >= 19 && v.isSpellcastingClass;
 	},
 };
 FeatsList["boon of the soul drinker"] = {
 	name : "Boon of the Soul Drinker",
-	source : [["FRHoF", 0]],
+	source : [["FRHoF", 43]],
 	type : "epic boon",
 	description : "+1 to Any. I gain Resistance to Cold and Necrotic dmg. Once per rest, when an enemy in 120 ft is reduced to 0 HP, I can regain 50 HP as a Reaction.",
 	dmgres : ["Cold", "Necrotic"],
@@ -2619,7 +2615,7 @@ MagicItemsList.windskiff = {
 	magicItemTable : "?",
 	description : "This jewelry has 3 charges, regained at dawn. As Magic action, 1 charge to transform into a Medium-size personal vehicle: AC 12, HP 30, Speed 40 ft. The vehicle hovers a few inches off the surface and can glide, moving 5 ft horizontally for every 1 ft it descends. The Windskiff and its riders take no falling damage.",
 	descriptionFull : [
-		"This small piece of jewelry has 3 charges and regains all expended charges daily at dawn. While you are holding it, you can take a Magic action to expend 1 charge, which causes the jewelry to transform into a sail-powered personal vehicle. The vehicle is roughly the size and shape of a household door with a 10-foot-tall sail extending from one side. After 1 hour or until you use the item's command word (no action needed), the transformation ends and the Windskiff reverts to its jewelry form.",
+		"This small piece of jewelry has 3 charges and regains all expended charges daily at dawn. While you are holding it, you can take a Magic action to expend 1 charge, which causes the jewelry to transform into a sail-powered personal vehicle. The vehicle is roughly the size and shape of a household door with a 10-foot-tall sail extending from one side. After 1 hour or until you use the item's command word (no action required), the transformation ends and the Windskiff reverts to its jewelry form.",
 		"In vehicle form, a Windskiff is a Medium object with the following statistics: AC 12, HP 30, and Speed 40 ft. The Windskiff hovers a few inches above whatever surface it's on and can glide; it moves 5 feet horizontally for every 1 foot it descends in the air. A Windskiff and its riders take no damage from falling.",
 	],	
 	action: [["action", " (Transform)"]],
@@ -2639,6 +2635,17 @@ GearList["mechanical wonder (domestic)"] = {
 	name : "Mechanical Wonder (domestic)",
 	amount : "",
 	weight : "",
+};
+MagicItemsList["mechanical wonder (domestic)"] = {
+	name : "Mechanical Wonder (Domestic)",
+	source : [["FRHoF", 134]],
+	type : "wonderous item",
+	rarity : "uncommon",
+	magicItemTable : "?",
+	description : "Bipedal construct that uses the Domestic Wonder stat block. It is an ally to me and my allies. In combat it shares my Initiative count, but takes its turn immediately after mine. It obeys my verbal command (no action needed). It takes the Dodge action if I don't issue a command. The wonder is destroyed when reduced to 0 HP.",
+	descriptionFull : [
+		"This bipedal wonder is designed to assist with household duties. It vaguely resembles whatever species its creator used as inspiration. An activated domestic wonder uses the Domestic Wonder stat block. The wonder is an ally to you and your allies. In combat, the wonder shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger. The domestic wonder is destroyed if it drops to 0 Hit Points.",
+	],
 };
 CreatureList["domestic wonder"] = {
 	name : "Domestic Wonder",
@@ -2705,7 +2712,7 @@ SpellsList["alustriel's mooncloak"] = {
 	components : "V,S,M\u0192",
 	compMaterial : "a moonstone worth 50+ GP",
 	duration : "Conc, 1 min",
-	description : "20-ft rad Dim Light. In area, get Half Cover and Resist Cold, Lghtn, and Rad. Extra effects that end spell. See book. ",
+	description : "20-ft rad Dim Light. In area, get Half Cover and Resist Cold, Lghtn, and Rad. Extra effects that end spell. See book.",
 	descriptionFull : [
 		"For the duration, moonlight fills a 20-foot Emanation originating from you with Dim Light. While in that area, you and your allies have Half Cover and Resistance to Cold, Lightning, and Radiant damage." + "\n   " + "While the spell lasts, you can use one of the following options, ending the spell immediately:" + "\n   " + "***Liberation***. When you fail a saving throw to avoid or end the Frightened, Grappled, or Restrained condition, you can take a Reaction to succeed on the save instead." + "\n   " + "***Respite***. As a Magic action, you or an ally within the area regains Hit Points equal to 4d10 plus your spellcasting ability modifier.",
 	],
@@ -2753,8 +2760,7 @@ SpellsList["cacophonic shield"] = {
 	range : "S:10-ft rad",
 	components : "V,S",
 	duration : "Conc, 10 min",
-	save : "Con",
-	description : "Resist Thunder; Rgnd vs me Disadv; Undesignated cover/enter/end 3d6+1d6/SL Thunder dmg + Deafened to my turn; 1/t/c; save 1/2 only",
+	description : "10-ft Emanation from me, when a crea enters/ends turn Con save, fail 3d6+1d6/SL Thunder dmg + Deafened, success half dmg only",
 	descriptionFull : [
 		"Thunderous reverberations fill a 10-foot Emanation originating from you for the duration. Whenever the Emanation enters a creature's space and whenever a creature enters the Emanation or ends its turn there, the creature makes a Constitution saving throw. On a failed save, the creature takes 3d6 Thunder damage and has the Deafened condition until the start of your next turn. On a successful save, the creature takes half as much damage only. A creature makes this save only once per turn. When you cast this spell, you can designate creatures to be unaffected by it." + "\n   " + "In addition, you have Resistance to Thunder damage, and ranged attack rolls against you are made with Disadvantage." + AtHigherLevels + "The damage increases by 1d6 for each spell slot above 3.",
 	],
@@ -2931,8 +2937,7 @@ SpellsList["songal's elemental suffusion"] = {
 	components : "V,S,M\u0192",
 	compMaterial : "a pearl worth 100+ GP",
 	duration : "Conc, 1 min",
-	save : "Dex",
-	description : "Fly 30ft + hover; Resist Acid/Cold/Fire/Lghtn/Thdr; Now/turn start 15ft Em. any 2d6 Acid/Cold/Fire/Lghtn/Thdr + Prone (s: 1/2)",
+	description : "When crea casts spell with slot, can expend unused HD equal to slot lvl and regain roll + my spell mod HP.",
 	descriptionFull : [
 		"You imbue yourself with the elemental power of genies. You gain the following benefits until the spell ends:" + "\n   " + "***Elemental Immunity***. When you cast this spell, choose one of the following damage types: Acid, Cold, Fire, Lightning, or Thunder. You have Resistance to the chosen damage type." + "\n   " + "***Elemental Pulse***. When you cast this spell and at the start of each of your subsequent turns, you release a burst of elemental energy in a 15-foot Emanation originating from yourself. Each creature of your choice in that area makes a Dexterity saving throw. On a failed save, a creature takes 2d6 Acid, Cold, Fire, Lightning, or Thunder damage (your choice) and has the Prone condition. On a successful save, a creature takes half as much damage only." + "\n   " + "***Flight***. You gain a Fly Speed of 30 feet and can hover." + "\n   " + toUni("Casting as a Circle Spell") + ": " + "If the spell is cast as a Circle spell, its casting time increases to 1 minute, and its duration increases to Concentration, up to 10 minutes. For each secondary caster who participates in the casting, you can choose one additional creature, to a maximum of nine additional creatures. The chosen creatures also gain the benefits of the spell for its duration." + "\n   " + "When the spell is cast, each secondary caster must expenda level 2+ spell slot; otherwise, the spell fails.",
 	],
