@@ -2189,6 +2189,12 @@ FeatsList["boon of fluid forms"] = {
 		"Once you use this benefit, you can't do so again until you finish a Long Rest.",
 		"***Hardy Transformation***. When you gain Temporary Hit Points when you shape-shift, increase that number of Temporary Hit Points by 20.",
 	],
+	toNotesPage : {
+		name : "Boon of Fluid Forms",
+		note : [
+			"Your game statistics are replaced by the stat block of the chosen form, but you retain your creature type; alignment; personality; Intelligence, Wisdom, and Charisma scores; Hit Points; Hit Point Dice; proficiencies; and ability to communicate. If you have the Spellcasting or Pact Magic feature, you retain it too. Upon shape-shifting, you determine whether your equipment drops to the ground or changes in size and shape to fit the new form while you're in it.",
+		],
+	},		
 	choices : ["Intelligence", "Wisdom", "Charisma"],
 	"intelligence" : {
 		name : "Boon of Fluid Forms - INT",
@@ -2734,7 +2740,7 @@ SpellsList.backlash = {
 		"You ward yourself against destructive energy, reducing the damage taken by 4d6 plus your spellcasting ability modifier." + "\n   " + "If the triggering damage was from a creature within range, you can force the creature to make a Constitution saving throw. The creature takes 4d6 Force damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage reduced and Fore damage from this spell both increase by 1d6 for every spell slot level above 4.",
 	],
 };
-SpellsList["blade of disaster"] = {
+legacySpellRefactor("blade of disaster", {
 	name : "Blade of Disaster",
 	classes : ["sorcerer", "warlock", "wizard"],
 	source : [["FRHoF", 143]],
@@ -2749,7 +2755,7 @@ SpellsList["blade of disaster"] = {
 	descriptionFull : [
 		"You create a 3-foot-long blade-shaped planar rift that lasts for the duration. The rift appears within range in a space of your choice, and you can immediately make up to two melee spell attacks, each one against a creature or object within 5 feet of the rift. On a hit, the target takes 10d6 Force damage. This attack scores a Critical Hit if the number on the d20 is 18 or higher." + "\n   As a Bonus Action on your later turns, you can move the rift up to 60 feet and repeat the two attacks against a creature or an object within 5 feet of it. You can direct the attacks at the same target or at different ones." + "\n   The blade can harmlessly pass through any barrier, including ones created by spells like Wall of Force.",
 	],	
-};
+});
 SpellsList["cacophonic shield"] = {
 	name : "Cacophonic Shied",
 	classes : ["bard", "sorcerer", "wizard"],
@@ -2943,7 +2949,7 @@ SpellsList["songal's elemental suffusion"] = {
 	],
 };
 SpellsList["spellfire flare"] = {
-	name : "spellfire flare",
+	name : "Spellfire Flare",
 	classes : ["sorcerer", "wizard"],
 	source : [["FRHoF", 146]],
 	level : 1,
