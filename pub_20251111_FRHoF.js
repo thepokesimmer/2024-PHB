@@ -149,10 +149,10 @@ AddSubClass("bard", "moon", {
 			name : "Moon's Inspiration",
 			source : [["FRHoF", 17]],
 			minlevel : 3,
-			description : [
+			description : desc([
 				"**Inspired Eclipse**. When I use a Bns to give a crea BI, I can gain the Invisible condition and teleport up to 30 ft to an empty visible space. This condition lasts until the start of my next turn, and ends early if I make an atk roll, deal dmg, or cast a spell.",
 				"**Lunar Vitality**. Once per turn, when I heal a crea with a spell, I can expend a BI die and increase the HP restored by the number rolled on the die. The crea's Speed also increases by 10 ft until the end of its next turn."
-			],	
+			]),	
 		},
 		"subclassfeature3.1" : {
 			name : "Primal Lore",
@@ -167,10 +167,10 @@ AddSubClass("bard", "moon", {
 				level: [0, 0],
 				firstCol : "atwill",
 			}],
-			description : [
+			description : desc([
 				"I learn Druidic and a cantrip from the Druid spell list. It counts as a Bard spell and can be replaced with another Druid cantrip when I gain a Bard level.",
 				"I also gain Proficiency in one of the following skills: Animal Handling, Insight, Medicine, Nature, Perception, or Survival",
-			],
+			]),
 		},	
 		"subclassfeature6" : {
 			name : "Blessing of Moonlight",
@@ -184,19 +184,19 @@ AddSubClass("bard", "moon", {
 			}],
 			usages : 1,
 			recovery : "long rest",
-			description : [
+			description : desc([
 				"I always have the Moonbeam spell prepared.",
 				"Once per Long Rest, I can modify a casting of Moonbeam so I glow for the duration. While glowing, I shed Dim Light in a 5-ft Emanation. When a crea fails its save against this Moonbeam's effects, another visible crea of my choice in 60 ft of me regains 2d4 HP.",
-			],
+			]),
 		},
 		"subclassfeature14" : {
 			name : "Eventide's Splendor",
 			source : [["FRHoF", 17]],
 			minlevel : 14,
-			description : [
+			description : desc([
 				"**Shadow of the New Moon**. When I use Inspired Eclipse, the crea who received my BI can also have the Invisible condition and immediately use its Rea to teleport up to 30 ft to an empty visible space. The crea is Invisible until the start of its next turn.",
 				"**Vibrance of the full Moon**. When I use Lunar Vitality, I can roll 1d6 and use that number instead of expending a BI die.",
-			],
+			]),
 		},
 	},
 });
@@ -213,18 +213,18 @@ legacySubClassRefactor("cleric", "knowledge", {
 			minlevel : 3,
 			toolProfs : [["Artisan's Tools", 1]],
 			skillstxt : "Choose two: Arcana, History, Nature, or Religion. You also gain expertise with these skills.",
-			description : [
+			description : desc([
 				"I gain Proficiency with one Artisan's Tools set. I also gain Proficiency and Expertise in two of the following skills: Arcana, History, Nature, Religion.",
-			],
+			]),
 		},
 		"subclassfeature3.1" : {
 			name : "Mind Magic",
 			source : [["FRHoF", 18]],
 			minlevel : 3,
 			action : [["action", ""]],
-			description : [
+			description : desc([
 				"As a Magic Action, I can spend a use of my CD and choose one of my Domain Spells from the Div school. As part of this action, I cast that spell without a Spell Slot or Material components.",
-			],
+			]),
 		},
 		"subclassfeature6" : {
 			name : "Unfettered Mind",
@@ -232,9 +232,9 @@ legacySubClassRefactor("cleric", "knowledge", {
 			minlevel : 6,
 			senses : [["Telepathy", 60]],
 			saves : ["Int"],
-			description : [
+			description : desc([
 				"I gain Telepathy out to 60 ft. When I use this Telepathy, I can simultaneously contact a number of crea equal to my Wis mod (min 1). I also gain proficiency in Intelligence Saving Throws. If I already have this Prof, I gain Prof in a save I lack instead.",
-			],
+			]),
 		},
 		"subclassfeature17" : {
 			name : "Divine Foreknowledge",
@@ -244,9 +244,9 @@ legacySubClassRefactor("cleric", "knowledge", {
 			usages : 1,
 			recovery : "long rest",
 			altResource : "SS 6+",
-			description : [
+			description : desc([
 				"Once per Long Rest as a Bns, I give myself Adv on all D20 Tests for 1 hr. I can also restore my use of this feature by expending a level 6+ spell slot (no action needed).",
-			],
+			]),
 		},
 	},
 });
@@ -269,11 +269,11 @@ legacySubClassRefactor("fighter", "banneret", {
 			}],
 			languageProfs : [["Polyglot", 1]],
 			skillstxt : "Choose one: Insight, Intimidation, Persuasion, or Performance",
-			description : [
+			description : desc([
 				"**Comprehension**. I can cast Comprehend Languages as a Ritual. Cha is my spellcasting ability for it.",
 				"**Polyglot**. I learn one language from the language tables in the PHB'24 or chapter 2 of FRHoF. When I finish a Long Rest, I can replace the language from this benefit with another language I've heard, seen signed, or read in the past 24 hours.",
 				"**Well Spoken**. I gain Prof in one of the following skills: Insight, Intimidation, Persuasion, or Performance.",
-			],
+			]),
 		},
 		"subclassfeature3.1" : {
 			name : "Group Recovery",
@@ -282,37 +282,37 @@ legacySubClassRefactor("fighter", "banneret", {
 			usages : 1,
 			recovery : "short rest",
 			additional : ["", "", "1d4 + 3; 30-ft Emanation", "1d4 + 4; 30-ft Emanation", "1d4 + 5; 30-ft Emanation", "1d4 + 6; 30-ft Emanation", "1d4 + 7; 30-ft Emanation", "1d4 + 8; 30-ft Emanation", "1d4 + 9; 30-ft Emanation", "1d4 + 10; 30-ft Emanation", "1d4 + 11; 30-ft Emanation", "1d4 + 12; 30-ft Emanation", "1d4 + 13; 30-ft Emanation", "1d4 + 14; 30-ft Emanation", "1d4 + 15; 30-ft Emanation", "1d4 + 16; 30-ft Emanation", "1d4 + 17; 30-ft Emanation", "1d4 + 18; 60-ft Emanation", "1d4 + 19; 60-ft Emanation", "1d4 + 20; 60-ft Emanation"],
-			description : [
+			description : desc([
 				"Once per rest, when I use my Second Wind to regain HP, I can choose a number of allies equal to my Cha mod (min 1), within a 30-ft Emanation of me. Each ally regains HP equal to 1d4 plus my Fighter level.",
-			],
+			]),
 		},
 		"subclassfeature7" : {
 			name : "Team Tactics",
 			source : [["FRHoF", 19]],
 			minlevel : 7,
-			description : [
+			description : desc([
 				"When I use Group Recovery, each chosen ally has Adv on D20 Tests until the start of my next turn.",
-			],
+			]),
 		},	
 		"subclassfeature10" : {
 			name : "Rallying Surge",
 			source : [["FRHoF", 19]],
 			minlevel : 10,
 			additional : ["", "", "", "", "", "", "", "", "", "30-ft Emanation", "30-ft Emanation", "30-ft Emanation", "30-ft Emanation", "30-ft Emanation", "30-ft Emanation", "30-ft Emanation", "30-ft Emanation", "60-ft Emanation", "60-ft Emanation", "60-ft Emanation"],
-			description : [
+			description : desc([
 				"When I use my Action Surge, I can choose a number of allies equal to my Cha mod (min 1), within a 30-ft Emanation of me. Each ally can immediately use its Rea to do one of the following:",
 				"**Attack**. Make one attack with a weapon or an Unarmed Strike.",
 				"**Move**. Move up to half its Speed without provoking Opportunity Attacks.",
-			],
+			]),
 		},	
 		"subclassfeature15" : {
 			name : "Shared Resilience",
 			source : [["FRHoF", 20]],
 			minlevel : 15,
 			action : [["reaction", " (Ally in 60 ft fails save)"]],
-			description : [
+			description : desc([
 				"When a visible ally within 60 ft fails a save, I can take a Rea to expend a use of my Indomitable feature. The ally can immediately reroll the save with a bonus equal to my Fighter level and must use the new roll.",
-			],
+			]),
 		},
 		"subclassfeature18" : {
 			name : "Inspiring Commander",
@@ -321,10 +321,10 @@ legacySubClassRefactor("fighter", "banneret", {
 			savetxt : {
 				immune : ["charmed", "frightened"],
 			},
-			description : [
+			description : desc([
 				"**Bolstered Rally**. The area of effect for both Group Recovery and Rallying Surge is now a 60-ft Emanation.",
 				"**Unshakable Bravery**. I have Immunity to the Charmed and Frightened conditions.",
-			],
+			]),
 		},
 	},
 });	
@@ -338,9 +338,9 @@ AddSubClass("paladin", "oath of the noble genies", {
 			name : "Elemental Smite",
 			source : [["FRHoF", 20]],
 			minlevel : 3,
-			description : [
+			description : desc([
 				"Immediately after I cast Divine Smite, I can expend a use of my CD to invoke one of the following effects (See Third Page).",
-			],
+			]),
 			toNotesPage : [{
 				name : "Elemental Smite",
 				note : [
@@ -365,18 +365,18 @@ AddSubClass("paladin", "oath of the noble genies", {
 				affectsWildShape: true,
 				selectNow: true,
 			}],
-			description : [
+			description : desc([
 				"When I'm not wearing armor, my base AC equals 10 plus my Dexterity and Charisma modifiers. I can use a Shield and still gain this benefit.",
 				"I also gain proficiency in one of the following skills: Acrobatics, Intimidation, Performance, or Persuasion",
-			],
+			]),
 		},
 		"subclassfeature7" : {
 			name : "Aura of Elemental Shielding",
 			source : [["FRHoF", 21]],
 			minlevel : 7,
-			description : [
+			description : desc([
 				"Choose one of the following dmg types: Acid, Cold, Fire, Lightning, or Thunder. My allies and I have Resistance to that dmg type while in my Aura of Protection. At my turn start, I can change the dmg type for this feature to another listed option (no action needed).",
-			],
+			]),
 		},
 		"subclassfeature15" : {
 			name : "Elemental Rebuke",
@@ -386,9 +386,9 @@ AddSubClass("paladin", "oath of the noble genies", {
 			usagescalc : "event.value = Math.max(1, What('Cha Mod'));",
 			recovery : "long rest",
 			action : [["reaction", ""]],
-			description : [
+			description : desc([
 				"When I'm hit by an atk roll, I can use a Rea to halve the attack's dmg and force the attacker to make a Dex save vs my Spell Save DC. On a failed save, the target takes 2d10+Cha dmg of (my choice) Acid, Cold, Fire, Lightning, or Thunder. Half dmg on a success.",
-			],
+			]),
 		},	
 		"subclassfeature20" : {
 			name : "Noble Scion",
@@ -398,11 +398,11 @@ AddSubClass("paladin", "oath of the noble genies", {
 			recovery : "long rest",
 			altResource : "SS 5",
 			action : [["bonus action", " (Activate)"], ["reaction", " (Minor Wish)"]],
-			description : [
+			description : desc([
 				"Once per Long Rest as a Bns, I gain the following benefits for 10 min or until I end them (no action needed). I can restore my use of this feature by expending a level 5 spell slot (no action needed).",
 				"**Flight**. I have a Fly Speed of 60 ft and can hover.",
 				"**Minor Wish**. When I or an ally in my Aura of Protection fails a D20 Test, I can use a Rea to make me or that ally succeed instead.",
-			],
+			]),
 		},
 	},
 });	
@@ -418,20 +418,20 @@ AddSubClass("ranger", "winter walker", {
 			minlevel : 3,
 			dmgres : ["Cold"],
 			additional : ["", "", "1d4 Cold damage", "1d4 Cold damage", "1d4 Cold damage", "1d4 Cold damage", "1d4 Cold damage", "1d4 Cold damage", "1d4 Cold damage", "1d4 Cold damage", "1d6 Cold damage", "1d6 Cold damage", "1d6 Cold damage", "1d6 Cold damage", "1d6 Cold damage", "1d6 Cold damage", "1d6 Cold damage", "1d6 Cold damage", "1d6 Cold damage", "1d6 Cold damage"],
-			description : [
+			description : desc([
 				"**Biting Cold**. Dmg from my weapon atks, Ranger spells, and Ranger features ignores Resistance to Cold dmg.",
 				"**Frost Resistance**. I have Resistance to Cold damage.",
 				"**Polar Strikes**. When I hit a crea with an atk roll using a weapon, I can deal extra Cold dmg to the target, which can take this extra dmg once per turn.",
-			],
+			]),
 		},
 		"subclassfeature3.1" : {
 			name : "Hunter's Rime",
 			source : [["FRHoF", 21]],
 			minlevel : 3,
 			additional : "Temp HP: 1d10 + Ranger lvl",
-			description : [
+			description : desc([
 				"When I cast Hunter's Mark, I gain Temp HP equal to 1d10 plus my Ranger level. While a crea is marked by my Hunter's Mark, it can't take the Disengage action.",
-			],
+			]),
 		},
 		"subclassfeature7": {
 			name : "Fortifying Soul",
@@ -440,9 +440,9 @@ AddSubClass("ranger", "winter walker", {
 			usages : 1,
 			recovery : "long rest",
 			action : [["action", ""]],
-			description : [
+			description : desc([
 				"Once per Long Rest as a Magic Action, choose a number of visible crea equal to my Wis mod (min 1). Each crea regains HP equal to 1d10 plus my Ranger level, and has Adv on saves to avoid or end the Frightened condition for 1 hr.",
-			],
+			]),
 		},			
 		"subclassfeature11" : {
 			name : "Chilling Retribution",
@@ -451,9 +451,9 @@ AddSubClass("ranger", "winter walker", {
 			usages : "Wisdom modifier per ",
 			usagescalc : "event.value = Math.max(1, What('Wis Mod'));",
 			recovery : "long rest",
-			description : [
+			description : desc([
 				"When a crea hits me with an attack roll, I can use a Rea to force the crea to make a Wis save vs my Spell Save DC. On a fail, the target has the Stunned condition until my next turn ends. While the target is Stunned, its Speed is reduced to 0 ft.",
-			],
+			]),
 		},
 		"subclassfeature15" : {
 			name : "Frozen Haunt", 
@@ -462,11 +462,11 @@ AddSubClass("ranger", "winter walker", {
 			usages : 1,
 			recovery : "long rest", 
 			altResource : "SS 4+",
-			description : [
+			description : desc([
 				"Once per Long Rest when I cast Hunter's Mark, I can adopt a ghostly, snowy form. It lasts until the spell ends, giving me the following benefits. I can regain my use of this feature by expending a lvl 4+ Spell slot (no action needed).",
 				"**Frozen Soul**. I have Immunity to Cold damage. When I adopt this form and at the start of each of my turns, each crea I choose in a 15-ft Emanation from me takes 2d4 Cold dmg.",
 				"**Partially Incorporeal**. I have Immunity to the Grappled, Prone, and Restrained conditions. I can move through creatures and objects as if Difficult Terrain, but take 1d10 Force dmg if I end my turn inside them. If the form ends when I'm inside a crea or object, I move to the nearest empty space.",
-			],
+			]),
 		},	
 	},
 });	
@@ -483,18 +483,18 @@ AddSubClass("rogue", "scion of the three", {
 			usagescalc : "event.value = Math.max(1, What('Int Mod'));",
 			recovery : "long rest",
 			action : [["reaction", " (Teleport and Attack)"]],
-			description : [
+			description : desc([
 				"When a visible enemy within 30 ft takes damage that leaves them Bloodied but not dead, I can use a Rea to teleport to a visible empty space within 5 ft of that enemy and make one melee attack.",
-			],
+			]),
 		},
 		"subclassfeature3.1" : {
 			name : "Dread Allegiance",
 			source : [["FRHoF", 23]],
 			minlevel : 3,
 			choices : ["Bane", "Bhaal", "Myrkul"],
-			description : [
+			description : desc([
 				"Choose one of the Dead Three using the 'Choose Features' button. I gain one dmg resistance and one cantrip associated with my choice. When I finish a Long Rest, I can change my choice.",
-			],
+			]),
 			"bane" : {
 				name : "Dread Allegiance : Bane",
 				dmgres : ["Psychic"],
@@ -504,9 +504,9 @@ AddSubClass("rogue", "scion of the three", {
 					selection : ["minor illusion"],
 					firstCol : "atwill",
 				}],
-				description : [
+				description : desc([
 					"I gain Resistance to Psychic dmg, and know the Minor Illusion Cantrip. When I finish a Long Rest, I can change my Dread Allegiance using the 'Choose Features' button.",
-				],
+				]),
 			},
 			"bhaal" : {
 				name : "Dread Allegiance : Bhaal",
@@ -517,9 +517,9 @@ AddSubClass("rogue", "scion of the three", {
 					selection : ["blade ward"],
 					firstCol : "atwill",
 				}],
-				description : [
+				description : desc([
 					"I gain Resistance to Poison dmg and know the Blade Ward Cantrip. When I finish a Long Rest, I can change my Dread Allegiance using the 'Choose Features' button.",
-				],
+				]),
 			},
 			"myrkul" : {
 				name : "Dread Allegiance : Myrkul",
@@ -530,36 +530,36 @@ AddSubClass("rogue", "scion of the three", {
 					selection : ["chill touch"],
 					firstCol : "atwill",
 				}],
-				description : [
+				description : desc([
 					"I gain Resistance to Necrotic dmg and know the Chill Touch Cantrip. When I finish a Long Rest, I can change my Dread Allegiance using the 'Choose Features' button.",
-				],
+				]),
 			},
 		},	
 		"subclassfeature9" : {
 			name : "Strike Fear",
 			source : [["FRHoF", 23]],
 			minlevel : 9,
-			description : [
+			description : desc([
 				"I gain the following Cunning Strike Option.",
 				"**Terrifiy (Cost: 1d6)**. The target must pass a Wis save or have the Frightened condition for 1 min. While the target is Frightened in this way, I have Adv on atk rolls against it. The Frightened target repeats the save when its turn ends, ending the effect on a success.",
-			],
+			]),
 		},
 		"subclassfeature13" : {
 			name : "Aura of Malevolence",
 			source : [["FRHoF", 24]],
 			minlevel : 13,
-			description : [
+			description : desc([
 				"When I use Bloodthirst and teleport, each chosen crea in 10 ft of the space I left or my destination (my choice) takes dmg equal to my Int mod; the dmg type is the same as the Resistance granted by my Dread Allegiance feature. Damage dealt by this feature ignores Resistance.",
-			],
+			]),
 		},			
 		"sublassfeature17" : {
 			name : "Dread Incarnate",
 			source : [["FRHoF", 24]],
 			minlevel : 17,
-			description : [	
+			description : desc([	
 				"**Cutthroat**. I regain one expended use of Bloodthirst when I finish a Short Rest.",
 				"**Murderous Intent**. When I roll my Sneak Attack damage, I can treat a roll of 1 or 2 on the die as a 3.",
-			],
+			]),
 		},	
 	},
 });
@@ -575,11 +575,11 @@ AddSubClass("sorcerer", "spellfire sorcery", {
 			source : [["FRHoF", 24]],
 			minlevel : 3,
 			additional : ["", "", "Bolstering Flames 1d4 + Cha Mod; Radiant Fire 1d4 Fire or Radiant", "Bolstering Flames 1d4 + Cha Mod; Radiant Fire 1d4 Fire or Radiant", "Bolstering Flames 1d4 + Cha Mod; Radiant Fire 1d4 Fire or Radiant", "Bolstering Flames 1d4 + Cha Mod; Radiant Fire 1d4 Fire or Radiant", "Bolstering Flames 1d4 + Cha Mod; Radiant Fire 1d4 Fire or Radiant", "Bolstering Flames 1d4 + Cha Mod; Radiant Fire 1d4 Fire or Radiant", "Bolstering Flames 1d4 + Cha Mod; Radiant Fire 1d4 Fire or Radiant", "Bolstering Flames 1d4 + Cha Mod; Radiant Fire 1d4 Fire or Radiant", "Bolstering Flames 1d4 + Cha Mod; Radiant Fire 1d4 Fire or Radiant", "Bolstering Flames 1d4 + Cha Mod; Radiant Fire 1d4 Fire or Radiant", "Bolstering Flames 1d4 + Cha Mod; Radiant Fire 1d4 Fire or Radiant", "Bolstering Flames 1d4 + Cha Mod + Sorcerer Lvl; Radiant Fire 1d8 Fire or Radiant", "Bolstering Flames 1d4 + Cha Mod + Sorcerer Lvl; Radiant Fire 1d8 Fire or Radiant", "Bolstering Flames 1d4 + Cha Mod + Sorcerer Lvl; Radiant Fire 1d8 Fire or Radiant", "Bolstering Flames 1d4 + Cha Mod + Sorcerer Lvl; Radiant Fire 1d8 Fire or Radiant", "Bolstering Flames 1d4 + Cha Mod + Sorcerer Lvl; Radiant Fire 1d8 Fire or Radiant", "Bolstering Flames 1d4 + Cha Mod + Sorcerer Lvl; Radiant Fire 1d8 Fire or Radiant", "Bolstering Flames 1d4 + Cha Mod + Sorcerer Lvl; Radiant Fire 1d8 Fire or Radiant"],
-			description : [
+			description : desc([
 				"When I spend at least 1 SP as part of a Magic Action or Bns on my turn, I can unleash one of the following effects.",
 				"**Bolstering Flames**. Me or a visible crea within 30 ft gains 1d4 + Cha Mod Temp HP.",
 				"**Radiant Fire**. One visible crea within 30 ft takes 1d4 Fire or Radiant dmg (my choice).",
-			],
+			]),
 		},	
 		"subclassfeature6" : {
 			name : "Absorb Spells",
@@ -591,18 +591,18 @@ AddSubClass("sorcerer", "spellfire sorcery", {
 				selection : ["counterspell"],
 				prepared: true,
 			}],
-			description : [
+			description : desc([
 				"I always have Counterspell prepared.",
 				"When a target fails the Save against a Counterspell I cast, I regain 1d4 SP.",
-			],
+			]),
 		},
 		"subclassfeature14" : {
 			name : "Honed Spellfire",
 			source : [["FRHoF", 25]],
 			minlevel : 14,
-			description : [
+			description : desc([
 				"My Spellfire Burst improves. I add my Sorcerer level to the Temp HP from Bolstering Flames and the dmg of my Radiant Fire increases to 1d8.",
-			],
+			]),
 		},	
 		"subclassfeature18" : {
 			name : "Crown of Spellfire",
@@ -611,12 +611,12 @@ AddSubClass("sorcerer", "spellfire sorcery", {
 			usages : 1,
 			recovery : "long rest",
 			altResource : "5 SP",
-			description : [
+			description : desc([
 				"Once per Long Rest when I use Innate Sorcery, I can alter it to gain the following benefits. I can regain my use of this feature by expending 5 SP (no action needed).",
 				"**Burning Life Force**. Once per turn when hit by an attack roll, I can expend a number of HD up to my Cha Mod (min 1). Roll the expended dice and reduce the attack's damage by the total rolled.",
 				"**Flight**. I gain a Fly Speed of 60 ft and can hover.",
 				"**Spell Avoidance**. When subjected to a spell or magical effect that allows a save to take only half damage, I take no damage if I succeed and only half dmg if I fail. I can't use this benefit if I have the Incapacitated condition.",
-			],
+			]),
 		},
 	},
 });	
@@ -645,52 +645,52 @@ legacySubClassRefactor("wizard", "bladesinger", {
 					"If I include the word 'Bladesong' in the name of a weapon that is not two-handed or heavy, it will use Intelligence for its attack and damage rolls."
 				]
 			},
-			description : [
+			description : desc([
 				"As a Bns, I can begin a Bladesong as long as I'm not wearing armor or using a Shield.",
 				"The Bladesong lasts for 1 min. It ends early if I'm Incapacitated, don armor or a Shield, or use two hands to attack with a weapon. I can dismiss the Bladesong at any time (no action needed).",
 				"While the Bladesong is active, I gain the following benefits.",
 				"**Agility**. Int mod (min 1) bonus to AC, Speed increases by 10 ft, Advantage on Dexterity (Acrobatics) checks.",
 				"**Bladework**. When I attack with a weapon I'm proficient with, I can use my Int mod for the atk and dmg rolls instead of Str or Dex.",
 				"**Focus**. Add Int mod (min 1) to Con saves for maintaining conc. on a spell",
-			],
-		},	
+			]),
+		},
 		"subclassfeature3.1" : {
 			name : "Training in War and Song",
 			source : [["FRHoF", 27]],
 			minlevel : 3,
 			weaponProfs : [false, false, ["battleaxe", "flail", "longsword", "morningstar", "rapier", "scimitar", "shortsword", "trident", "warhammer", "war pick", "whip"]],
 			skillstxt : "Choose one: Acrobatics, Athletics, Performance, or Persuasion",
-			description : [
+			description : desc([
 				"I gain prof with all Melee Martial weapons that don't have the Two-Handed or Heavy property. I can use a Melee weapon I have prof with as a Spellcasting Focus for my Wizard spells.",
 				"I also gain proficiency in one of the following skills: Acrobatics, Athletics, Performance, or Persuasion.",
-			],
+			]),
 		},	
 		"subclassfeature6" : {
 			name : "Extra Attack",
 			source : [["FRHoF", 27]],
 			minlevel : 6,
-			description : [
+			description : desc([
 				"I can attack twice instead of once when I take the Attack action on my turn.",
 				"In place of one attack, I can cast one of my Wizard cantrips with a casting time of 1 a."
-			],
+			]),
 		},
 		"subclassfeature10" : {
 			name : "Song of Defense",
 			source : [["FRHoF", 27]],
 			minlevel : 10,
 			action : [["reaction", " (in Bladesong)"]],
-			description : [
+			description : desc([
 				"When I take dmg while my Bladesong is active, I can use a Rea to expend 1 spell slot and reduce the dmg taken by 5 times that spell slot's level.",
-			],
+			]),
 		},	
 		"subclassfeature14" : {
 			name : "Song of Victory",
 			source : [["FRHoF", 27]],
 			minlevel : 14,
 			action : [["bonus action", ""]],
-			description : [
+			description : desc([
 				"After I cast a spell with a casting time of 1 a, I can make one attack with a weapon as a Bns.",
-			],
+			]),
 		},
 	},
 });	
@@ -714,9 +714,9 @@ BackgroundList["spellfire initiate"] = {
 	feature : "Spellfire Initiate",
 };
 BackgroundFeatureList["spellfire initiate"] = {
-	description : [
+	description : desc([
 		"You bear the gift of spellfire: a rare form of magic that channels the raw power of the Weave. Wielding spellfire takes a heavy toll on the body. You've trained both mind and body to efficiently wield this sacred power.",
-	],
+	]),
 	source : [["FRHoF", 36]],
 	eval : function () {
 		AddFeat("Spellfire Spark [Origin]");
@@ -752,9 +752,9 @@ BackgroundList["chondathan freebooter"] = {
 	feature : "Chondathan Freebooter",
 };
 BackgroundFeatureList["chondathan freebooter"] = {
-	description : [
+	description : desc([
 		"Though most youths in Chondath accept their four-year term of compulsory military service, you bristled at that authoritarian attempt to control your life. You forsook your nationhood, discarded your given name, and worked as a freebooter with the first ship that would have you. Since then, you've traveled the Vilhon Reach. Though you've never sailed more than a few dozen leagues from land, you make up for it with deep local connections and the breadth of your experiences.",
-	],
+	]),
 	source : [["FRHoF", 28]],
 	eval : function () {
 		AddFeat("Skilled [Origin]");
@@ -790,9 +790,9 @@ BackgroundList["dead magic dweller"] = {
 	feature : "Dead Magic Dweller",
 };
 BackgroundFeatureList["dead magic dweller"] = {
-	description : [
+	description : desc([
 		"The dead magic zones of the Anauroch desert are anathema to spellcasters and monsters that rely on magic - which is exactly why you made your life there. Perhaps you're on the run from Red Wizards, or you ran afoul of a powerful djinni in Calimshan. Whatever the case, you decided that living in Anauroch was your best option. After long months or years, you're stronger, wiser, and armed with hard-earned knowledge of desert medicine and wasteland survival.",
-	],
+	]),
 	source : [["FRHoF", 28]],
 	eval : function () {
 		AddFeat("Healer [Origin]");
@@ -821,9 +821,9 @@ BackgroundList["flaming fist mercenary"] = {
 	feature : "Flaming Fist Mercenary",
 };
 BackgroundFeatureList["flaming fist mercenary"] = {
-	description : [
+	description : desc([
 		"The chief law enforcement branch of Baldur's Gate is the Flaming Fist, a brawny mercenary guild led by the city's grand duke. You once served as a Flaming Fist, where you learned how to preempt trouble with your intimidating stare and, when necessary, absorb deadly blows. Flaming Fist mercenaries, active or retired, are known as some of the toughest, most resilient warriors along the Sword Coast, and you seek to maintain that reputation.",
-	],
+	]),
 	source : [["FRHoF", 30]],
 	eval : function () {
 		AddFeat("Tough [Origin]");
@@ -853,9 +853,9 @@ BackgroundList["genie touched"] = {
 	feature : "Genie Touched",
 };
 BackgroundFeatureList["genie touched"] = {
-	description : [
+	description : desc([
 		"Although genies no longer rule Calimshan, genie magic is still common in your homeland. Perhaps you inadvertently summoned a djinni from a magic lamp, or maybe you came upon an oasis guarded by a marid. A dao might have saved you from a landslide, or you bargained with an efreeti for fleeting wealth. However, your fate intersected with that of a genie; the experience left you with a keen eye, a silver tongue, and more than a touch of magic.",
-	],
+	]),
 	source : [["FRHoF", 30]],
 	eval : function () {
 		AddFeat("Magic Initiate (Wizard) [Origin]");
@@ -890,9 +890,9 @@ BackgroundList["ice fisher"] = {
 	feature : "Ice Fisher",
 };
 BackgroundFeatureList["ice fisher"] = {
-	description : [
+	description : desc([
 		"You come from a proud line of ice fishers out of Ten-Towns in Icewind Dale. Catching knucklehead trout isn't the most glorious trade in the North, but it's an honest living. You've trained your senses for the slightest tug on the line, wrestled big trout out of ice-covered lakes, and gutted enough knucklehead trout to feed your village many times over. These experiences have toughened your body and mind for a life of adventuring.",
-	],
+	]),
 	source : [["FRHoF", 31]],
 	eval : function () {
 		AddFeat("Alert [Origin]");
@@ -925,9 +925,9 @@ BackgroundList["moonwell pilgrim"] = {
 	feature : "Moonwell Pilgrim",
 };
 BackgroundFeatureList["moonwell pilgrim"] = {
-	description : [
+	description : desc([
 		"Like many who hail from the Moonshae Isles, you grew up revering the blessed land, its unique gods, and the mysterious shrines called the moonwells. As a moonwell pilgrim, you undertook a quest to visit and commune with every moonwell on (or off) the map. Along your idyllic journeys, you collected a repertoire of Moonshavian folk songs, painted landscapes of enchanting vistas, and even learned how to wield a bit of primal magic.",
-	],
+	]),
 	source : [["FRHoF", 33]],
 	eval : function () {
 		AddFeat("Magic Initiate (Druid) [Origin]");
@@ -966,9 +966,9 @@ BackgroundList["mulhorandi tomb raider"] = {
 	feature : "Mulhorandi Tomb Raider",
 };
 BackgroundFeatureList["mulhorandi tomb raider"] = {
-	description : [
+	description : desc([
 		"You grew up in a land of living god-kings, and as a child, you were told countless stories of ancient empires and buried cities. In these tales, Mulhorand was a land overflowing with forgotten riches - priceless treasures awaiting anyone cunning and brave enough to seek them out. You've taken it upon yourself to explore your homeland's crypts, tombs, and pyramids to reclaim your people's relics.",
-	],
+	]),
 	source : [["FRHoF", 33]],
 	eval : function () {
 		AddFeat("Lucky [Origin]");
@@ -1000,9 +1000,9 @@ BackgroundList.mythalkeeper = {
 	feature : "Mythalkeeper",
 };
 BackgroundFeatureList.mythalkeeper = {
-	description : [
+	description : desc([
 		"Mythals are sources of great magical power that can alter the Weave or even the very nature of reality. Most were constructed in antiquity, and many have since been damaged or gone dormant. As a mythalkeeper from the Dalelands, your first experience with a mythal was likely in the ruins of Myth Drannor. You roam Faerûn in search of other ruined places of power, hoping to learn more about the history and powers of mythals - or even restore a malfunctioning one.",
-	],
+	]),
 	source : [["FRHoF", 34]],
 	eval : function () {
 		AddFeat("Crafter [Origin]");
@@ -1034,9 +1034,9 @@ BackgroundList["rashemi wanderer"] = {
 	feature : "Rashemi Wanderer",
 };
 BackgroundFeatureList["rashemi wanderer"] = {
-	description : [
+	description : desc([
 		"You spent years wandering the highlands of Rashemen, a dangerous, windswept heath that's dotted with ancient obelisks enchanted to imprison Fiends and home to dragons, gnolls, and other deadly creatures. Friendships are hard to find in such an isolated land, and you've learned to keep strangers at a distance.",
-	],
+	]),
 	source : [["FRHoF", 35]],
 	eval : function () {
 		AddFeat("Tough [Origin]");
@@ -1070,9 +1070,9 @@ BackgroundList["shadowmasters exile"] = {
 	feature : "Shadowmasters Exile",
 };
 BackgroundFeatureList["shadowmasters exile"] = {
-	description : [
+	description : desc([
 		"You trained your whole life to become a member of the Shadowmasters, the mysterious thieves' guild that controls the realm of Thesk from behind the scenes. Stealth and quick reflexes were just the start of your Shadowmaster education; you also needed to hone your ruthlessness to ensure the safety of the guild's secrets. But one wrong move led to your expulsion from the order. Now you must walk your own path.",
-	],
+	]),
 	source : [["FRHoF", 35]],
 	eval : function () {
 		AddFeat("Savage Attacker [Origin]");
@@ -1106,9 +1106,9 @@ BackgroundList["dragon cultist"] = {
 	feature : "Dragon Cultist",
 };
 BackgroundFeatureList["dragon cultist"] = {
-	description : [
+	description : desc([
 		"You are an initiate of the Cult of the Dragon. You discovered or were brought to a cell cult, where you exemplified the values honored by dragon cultists: duplicity, secrecy, and determination. In exchange for your oath to serve the cult, the cult offered you the company of fellow dragon worshipers, plus access to resources that might help further your studies in the realms of arcana and occultism.",
-	],
+	]),
 	source : [["FRHoF", 29]],
 	eval : function () {
 		AddFeat("Cult of the Dragon Initiate [Origin]");
@@ -1140,9 +1140,9 @@ BackgroundList["emerald enclave caretaker"] = {
 	feature : "Emerald Enclave Caretaker",
 };
 BackgroundFeatureList["emerald enclave caretaker"] = {
-	description : [
+	description : desc([
 		"As a Caretaker with the Emerald Enclave, you take care of those who care for the world. Either alongside your fellow Emerald Enclave members or by yourself, you've learned essential skills for living with the land: how to track game, where to forage for useful herbs, and even how to forecast the weather. You use these talents to maintain the balance between civilization and the wilds and to rid the world of unnatural creatures.",
-	],
+	]),
 	source : [["FRHoF", 29]],
 	eval : function () {
 		AddFeat("Emerald Enclave Fledgling [Origin]");
@@ -1172,9 +1172,9 @@ BackgroundList.harper = {
 	feature : "Harper",
 };
 BackgroundFeatureList.harper = {
-	description : [
+	description : desc([
 		"You accepted an invitation to join the Harpers, pledging an oath to uphold the Harper code and act in service to the common good. Like all Harpers, you understand the value of teamwork as well as when it's best to go it alone. Harper veterans have taught you the order's secrets - magical melodies, special watchwords, and legerdemain - and have entrusted you to use such knowledge to surveil and undermine the forces of evil.",
-	],
+	]),
 	source : [["FRHoF", 31]],
 	eval : function () {
 		AddFeat("Harper Agent [Origin]");
@@ -1206,9 +1206,9 @@ BackgroundList["knight of the gauntlet"] = {
 	feature : "Knight of the Gauntlet",
 };
 BackgroundFeatureList["knight of the gauntlet"] = {
-	description : [
+	description : desc([
 		"Not all who answer the call of a higher power are content to pore over scripture in a stuffy temple apse. You chose the path of the holy warrior by joining the Order of the Gauntlet. As a knight of the Gauntlet, you exercise righteous scorn for the forces of evil, unswerving camaraderie for your siblings in arms, and heartfelt compassion for the survivors of war. With weapon and holy symbol in hand, you've sworn not to rest until the light of justice has vanquished the shadow of chaos across Faerûn.",
-	],
+	]),
 	source : [["FRHoF", 32]],
 	eval : function () {
 		AddFeat("Tyro of the Gauntlet [Origin]");
@@ -1238,9 +1238,9 @@ BackgroundList["lords' alliance vassal"] = {
 	feature : "Lords' Alliance Vassal",
 };
 BackgroundFeatureList["lords' alliance vassal"] = {
-	description : [
+	description : desc([
 		"You've pledged your loyalty to a member-city of the Lords' Alliance. As an Alliance agent, you must uphold the tenets of the Alliance and seek to increase safety and prosperity along the Sword Coast. You're sworn to bring honor and glory to your lord's house, whether that means securing trade roads for a merchant-lord of Waterdeep or vanquishing monsters upriver of Daggerford. You've trained in the arts of swordplay and statecraft and are as deft with a blade as you are with a quill.",
-	],
+	]),
 	source : [["FRHoF", 32]],
 	eval : function () {
 		AddFeat("Lords' Alliance Agent [Origin]");
@@ -1267,9 +1267,9 @@ BackgroundList["purple dragon squire"] = {
 	feature : "Purple Dragon Squire",
 };
 BackgroundFeatureList["purple dragon squire"] = {
-	description : [
+	description : desc([
 		"You've pledged your life to the safety of Cormyr and sought admission to that realm's order of elite warriors: the Purple Dragon Knights. But before you have the chance to join the ranks officially, you must first serve as a knight's squire. You've found a liege willing to take you on and teach you the order's ways. Will you uphold the Purple Dragon Knight's ideals of glory, honor, and strength and prove yourself worthy of knighthood?",
-	],
+	]),
 	source : [["FRHoF", 34]],
 	eval : function () {
 		AddFeat("Purple Dragon Rook [Origin]");
@@ -1302,9 +1302,9 @@ BackgroundList["zhentarim mercenary"] = {
 	feature : "Zhentarim Mercenary",
 };
 BackgroundFeatureList["zhentarim mercenary"] = {
-	description : [
+	description : desc([
 		"Maybe you needed the money. Maybe you longed for a family, no matter how dubious. Or maybe you're just good at getting the job done by any means necessary. Whatever your reason, you enlisted with the Zhentarim, the most notorious mercenary guild in the Realms. Though the Zhentarim's leaders insist the organization is more like a family than a shadowy syndicate, few families exhibit as much dishonesty, nepotism, and corruption as this one. You've honed your cunnng, reflexes, and blade to climb the guild's ranks.",
-	],
+	]),
 	source : [["FRHoF", 36]],
 	eval : function () {
 		AddFeat("Zhentarim Ruffian [Origin]");
