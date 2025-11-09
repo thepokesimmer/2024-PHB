@@ -8124,7 +8124,7 @@ legacyClassRefactor("wizard", {
       source: [["P24", 166]],
       minlevel: 1,
 	  usages: 1,
-	  recovery: "short rest",
+	  recovery: "long rest",
       additional: levels.map(function (n) {
         var lvls = Math.ceil(n / 2);
         return lvls + " level" + (lvls > 1 ? "s" : "") + " of spell slots";
@@ -13369,7 +13369,7 @@ WeaponsList["musket"] = {
   description: "Ammunition (Bullet, Firearm), Loading, Two-Handed; Slow",
   list: ["ranged", "firearm"],
   weight: 10,
-  ammo: "bullets, firearm",
+  ammo: "renaissance bullet",
   monkweapon: false,
 };
 WeaponsList["pistol"] = {
@@ -13385,7 +13385,7 @@ WeaponsList["pistol"] = {
   description: "Ammunition (Bullet, Firearm), Loading; Vex",
   list: ["ranged", "firearm"],
   weight: 3,
-  ammo: "bullets, firearm",
+  ammo: "renaissance bullet",
   monkweapon: false,
 };
 //Adventuring Gear That Functions as a Weapon
@@ -13797,13 +13797,13 @@ AmmoList["bolts"] = {
   invName: "Crossbow bolts",
   weight: 0.075,
 };
-AmmoList["bullets, firearm"] = {
-  name: "Bullets, Firearm",
-  infoname: "Bullets, Firearm [3 gp]",
-  source: [["P24", 222]],
-  icon: "Bullets",
-  invName: "Firearm bullets",
-  weight: 0.1,
+AmmoList["renaissance bullet"] = {
+	name : "Bullets, Renaissance",
+	source : [["P24", 222]],
+	weight : 0.1,
+	icon : "Bullets",
+	invName : "Bullets, renaissance",
+	alternatives : [/^(?=.*bullet)(?=.*renaissance).*$/i],
 };
 AmmoList["bullets, sling"] = {
   name: "Bullets, Sling",
@@ -16749,7 +16749,7 @@ legacySpellRefactor("eldritch blast", {
 	descriptionFull : "You hurl a beam of crackling energy. Make a ranged spell attack against one creature or object in range. On a hit, the target takes 1d10 Force damage." + "\n   " + toUni("Cantrip Upgrade") + ". The spell creates two beams at level 5, three beams at level 11, and four beams at level 17. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.",
 	dynamicDamageBonus : { multipleDmgMoments : true }
 });
-legacySpellRefactor("elementalism", {
+SpellsList.elementalism = {
 	name : "Elementalism",
 	classes : ["druid", "sorcerer", "wizard"],
 	source : [["P24", 167]],
@@ -16761,7 +16761,7 @@ legacySpellRefactor("elementalism", {
 	duration : "Instantaneous",
 	description : "Create minor effect: strong breeze; dust/sand/word; embers/smoke; mist/water; sculpt element; see B",
 	descriptionFull : "You exert control over the elements, creating one of the following effects within range." + "\n   " + "Beckon Air. You create a breeze strong enough to ripple cloth, stir dust, rustle leaves, and close open doors and shutters, all in a 5-foot Cube. Doors and shutters being held open by someone or something aren't affected." + "\n   " + "Beckon Earth. You create a thin shroud of dirt or sand that covers surfaces in a 5-foot-square area, or you cause a single word to appear in your handwriting in a patch of dirt or sand." + "\n   " + "Beckon Fire. You create a thin cloud of harmless embers and colored, scented smoke in a 5-foot Cube. You choose the color and scent, and the embers can light candles, torches, or lamps in the area. The smoke's scent lingers for 1 minute." + "\n   " + "Beckon Water. You create a spray of cool mist that lightly dampens creatures and objects in a 5-foot Cube. Alternatively, you create 1 cup of clean water either in an open container or on a surface, and the water evaporates in 1 minute." + "\n   " + "Sculpt Element. You cause dirt, sand, fire, smoke, mist, or water that can fit in a 1-foot cube to assume a crude shape (such as that of a creature or an object) for 1 hour."
-});
+};
 legacySpellRefactor("elemental weapon", {
 	name : "Elemental Weapon",
 	classes : ["artificer","druid", "paladin", "ranger"],
