@@ -3007,7 +3007,7 @@ SpellsList.wardaway = {
 	compMaterial : "a miniature clay hand",
 	duration : "Instantaneous",
 	save : "Con",
-	description : "1 crea 2d4+2d4/SL Force dmg, 1/2 Speed to my next turn, can only take Action or Bns on next turn; save half dmg only.",
+	description : "1 crea 2d4+2d4/SL Force dmg, 1/2 Speed to my next turn, only Action or Bns next turn; save 1/2 dmg only.",
 	descriptionFull : [
 		"You hurl a disorienting magical force toward one creature within range. The target makes a Constitution saving throw; Constructs and Undead automatically succeed on this save." + "\n   " + "On a failed save, the target takes 2d4 Force damage, its Speed is halved until the start of your next turn, and on its next turn, it can take only an action or a Bonus Action (but not both). On a successful save, the target takes half as much damage only." + AtHigherLevels + "The damage increases by 2d4 for every spell slot level above 1.",
 	],
