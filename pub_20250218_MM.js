@@ -3477,7 +3477,7 @@ CreatureList["panther"] = {
 	saves : ["", "", "", "", "", ""],
 	skills : {
 		"perception" : 4,
-		"stealth" : 7,
+		"stealth" : 6,
 	},
 	senses : "Darkvision 60 ft",
 	languages : "",
