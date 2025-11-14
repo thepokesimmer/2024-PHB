@@ -3473,7 +3473,7 @@ CreatureList["panther"] = {
 	hp : 13,
 	hd : [3, 8],
 	speed : "50 ft, Climb 40 ft",
-	scores : [14, 15, 10, 3, 14, 7],
+	scores : [14, 16, 10, 3, 14, 7],
 	saves : ["", "", "", "", "", ""],
 	skills : {
 		"perception" : 4,
