@@ -977,7 +977,7 @@ BackgroundFeatureList["mulhorandi tomb raider"] = {
 		RemoveFeat("Lucky [Origin]");
 	},
 };
-BackgroundList.mythalkeeper = {
+BackgroundList["mythalkeeper"] = {
 	regExpSearch : /^(?=.*mythalkeeper).*$/i,
 	name : "Mythalkeeper",
 	source : [["FRHoF", 34]],
@@ -999,7 +999,7 @@ BackgroundList.mythalkeeper = {
 	],
 	feature : "Mythalkeeper",
 };
-BackgroundFeatureList.mythalkeeper = {
+BackgroundFeatureList["mythalkeeper"] = {
 	description : desc([
 		"Mythals are sources of great magical power that can alter the Weave or even the very nature of reality. Most were constructed in antiquity, and many have since been damaged or gone dormant. As a mythalkeeper from the Dalelands, your first experience with a mythal was likely in the ruins of Myth Drannor. You roam Faerûn in search of other ruined places of power, hoping to learn more about the history and powers of mythals - or even restore a malfunctioning one.",
 	]),
@@ -1151,7 +1151,7 @@ BackgroundFeatureList["emerald enclave caretaker"] = {
 		RemoveFeat("Emerald Enclave Fledgling [Origin]");
 	},
 };
-BackgroundList.harper = {
+BackgroundList["harper"] = {
 	regExpSearch : /^(?=.*harper).*$/i,
 	name : "Harper",
 	source : [["FRHoF", 31]],
@@ -1171,7 +1171,7 @@ BackgroundList.harper = {
 	],
 	feature : "Harper",
 };
-BackgroundFeatureList.harper = {
+BackgroundFeatureList["harper"] = {
 	description : desc([
 		"You accepted an invitation to join the Harpers, pledging an oath to uphold the Harper code and act in service to the common good. Like all Harpers, you understand the value of teamwork as well as when it's best to go it alone. Harper veterans have taught you the order's secrets - magical melodies, special watchwords, and legerdemain - and have entrusted you to use such knowledge to surveil and undermine the forces of evil.",
 	]),
@@ -1485,7 +1485,7 @@ FeatsList["cold caster"] = {
 		return v.characterLevel >= 4;
 	},
 };
-FeatsList.dragonscarred = {
+FeatsList["dragonscarred"] = {
 	name : "Dragonscarred",
 	source : [["FRHoF", 39]],
 	type : "general",
@@ -2607,13 +2607,13 @@ GearList["warm fungal cloak"] = {
 	amount : "",
 	weight : 4,
 };
-GearList.windskiff = {
+GearList["windskiff"] = {
 	infoname : "Windskiff [4000 gp]",
 	name : "Windskiff",
 	amount : "",
 	weight : "",
 };
-MagicItemsList.windskiff = {
+MagicItemsList["windskiff"] = {
 	name : "Windskiff",
 	source : [["FRHoF", 133]],
 	type : "wonderous item",
@@ -2655,7 +2655,6 @@ MagicItemsList["mechanical wonder (domestic)"] = {
 };
 CreatureList["domestic wonder"] = {
 	name : "Domestic Wonder",
-	regExpSearch : /^(?=.*domestic)(?=.*wonder).*$/i,
 	source : [["FRHoF", 134]],
 	size : 3,
 	type : "Construct",
@@ -2665,13 +2664,14 @@ CreatureList["domestic wonder"] = {
 	hd : [1, 8],
 	speed : "30 ft",
 	scores : [13, 8, 13, 3, 8, 1],
-	saves : ["", "", "", "", 0, ""],
+	senses : "",
 	damage_immunities : "Poison",
 	condition_immunities : "Exhausted; Poisoned",
 	languages : "Understands Common but can't speak",
-	challengeRating : "None",
+	challengeRating : "",
 	proficiencyBonus : 2,
-	Traits : [{
+	attacksAction : 0,
+	traits : [{
 		name : "Mechanical Determination",
 		description : "If damage reduces the wonder to 0 Hit Points, it must make a Constitution saving throw with a DC of 5 plus the damage taken unless the damage is Lightning or from a Critical Hit. On a successful save, the wonder drops to 1 Hit Point instead.",
 		joinString : "\n   ",
@@ -2680,9 +2680,16 @@ CreatureList["domestic wonder"] = {
 		description : "The wonder has the Unconscious condition until another creature winds it with the wonder's unique key for 1 minute. Once wound, the wonder operates for 10 days or until a creature touches the wonder with its key as a Utilize action to deactivate it, after which the wonder has the Unconscious condition until it is wound again.",
 		joinString : "\n   ",
 	}],
+	attacks : [{
+		name : "",
+		ability : "",
+		damage : ["", "", ""],
+		range : "",
+		description : "",
+	}],
 };
 //Tools
-ToolsList.bandore = {
+ToolsList["bandore"] = {
 	infoname : "Bandore [65 gp]",
 	name : "Bandore",
 	amount : "",
@@ -2690,7 +2697,7 @@ ToolsList.bandore = {
 	type : "musical instrument",
 	source : [["FRHoF", 135]],
 };
-ToolsList.cittern = {
+ToolsList["cittern"] = {
 	infoname : "Cittern [65 gp]",
 	name : "Cittern",
 	amount : "",
@@ -2698,7 +2705,7 @@ ToolsList.cittern = {
 	type : "musical instrument",
 	source : [["FRHoF", 135]],
 };
-ToolsList.yarting = {
+ToolsList["yarting"] = {
 	infoname : "Yarting [40 gp]",
 	name : "Yarting",
 	amount : "",
@@ -2723,7 +2730,7 @@ SpellsList["alustriel's mooncloak"] = {
 		"For the duration, moonlight fills a 20-foot Emanation originating from you with Dim Light. While in that area, you and your allies have Half Cover and Resistance to Cold, Lightning, and Radiant damage." + "\n   " + "While the spell lasts, you can use one of the following options, ending the spell immediately:" + "\n   " + "***Liberation***. When you fail a saving throw to avoid or end the Frightened, Grappled, or Restrained condition, you can take a Reaction to succeed on the save instead." + "\n   " + "***Respite***. As a Magic action, you or an ally within the area regains Hit Points equal to 4d10 plus your spellcasting ability modifier.",
 	],
 };
-SpellsList.backlash = {
+SpellsList["backlash"] = {
 	name : "Backlash",
 	classes : ["bard", "sorcerer", "warlock", "wizard"],
 	source : [["FRHoF", 142]],
@@ -2821,7 +2828,7 @@ SpellsList["deryan's helpful homunculi"] = {
 		"You summon a group of helpful spirits, which last for the duration. The spirits appear as homunculi or as another Construct of choice but are intangible and invulnerable, and they are considered to have proficiency in the Arcana skill and with the set of Artisan's Tools used in the spell's casting." + "\n   " + "If you are crafting an item, the spirits function as a single assistant for your crafting, halving the crafting time.",
 	],
 };
-SpellsList.dirge = {
+SpellsList["dirge"] = {
 	name : "Dirge",
 	classes : ["bard", "cleric"],
 	source : [["FRHoF", 144]],
@@ -2837,7 +2844,7 @@ SpellsList.dirge = {
 		"Deathly power fills a 60-foot Emanation originating from you for the duration." + "\n   " + "When you cast this spell, you can designate creatures to be unaffected by it. Any other creature can't regain Hit Points while in the Emanation. Whenever the Emanation enters a creature's space and whenever a creature enters the Emanation or ends its turn there, the creature makes a Constitution saving throw. On a failed save, the creature takes 3d10 Necrotic damage and has the Prone condition. On a successful save, the creature takes half as much damage and its Speed is halved. A creature makes this save only once per turn." + "\n   " + toUni("Casting as a Circle Spell") + ": " + "Casting this as a Circle spell requires a minimum of two secondary casters. If the spell is cast as a Circle spell, its duration becomes Concentration up to 10 minutes." + "\n   " + "A creature that fails its save against the spell's effect also gains 1 Exhaustion level. While the creature has Exhaustion levels, finishing a Long Rest neither restores lost Hit Points nor reduces the creature's Exhaustion level." + "\n   " + "When the spell is cast, each secondary caster must expend a level 4+ spell slot; otherwise, the spell fails.",
 	],
 };
-SpellsList.doomtide = {
+SpellsList["doomtide"] = {
 	name : "Doomtide",
 	classes : ["bard", "cleric", "warlock"],
 	source : [["FRHoF", 144]],
@@ -2965,7 +2972,7 @@ SpellsList["spellfire flare"] = {
 };
 SpellsList["spellfire storm"] = {
 	name : "Spellfire Storm",
-	classes : ["sorcerer", "warlock"],
+	classes : ["sorcerer", "wizard"],
 	source : [["FRHoF", 146]],
 	level : 4,
 	school : "Evoc",
@@ -2995,7 +3002,7 @@ SpellsList["syluné's viper"] = {
 		"A shimmering, spectral snake encircles your body for the duration. You gain 15 Temporary Hit Points; the spell ends early if you have no Temporary Hit Points left." + "\n   " + "While the spell is active, you gain the following benefits:" + "\n   " + "***Climbing***. You gain a Climb Speed equal to your Speed." + "\n   " + "***Venomous Bite***. As a Magic Action, you can make a ranged spell attack using the snake against one creature within 50 feet. On a hit, the target takes 1d6 Force damage and has the Poisoned condition until the start of your next turn. While Poisoned, the target has the Incapacitated condition." + AtHigherLevels + "For each spell slot level above 3, the number of Temporary Hit Points you gain from this spell increases by 5, and the damage of the Venomous Bite increases by 1d6.",
 	],
 };
-SpellsList.wardaway = {
+SpellsList["wardaway"] = {
 	name : "Wardaway",
 	classes : ["bard", "cleric", "paladin", "wizard"],
 	source : [["FRHoF", 147]],
@@ -3007,7 +3014,7 @@ SpellsList.wardaway = {
 	compMaterial : "a miniature clay hand",
 	duration : "Instantaneous",
 	save : "Con",
-	description : "1 crea 2d4+2d4/SL Force dmg, 1/2 Speed to my next turn, only Action or Bns next turn; save 1/2 dmg only.",
+	description : "1 crea 2d4+2d4/SL Force dmg, 1/2 Speed to my next turn, can only take Action or Bns on next turn; save half dmg only.",
 	descriptionFull : [
 		"You hurl a disorienting magical force toward one creature within range. The target makes a Constitution saving throw; Constructs and Undead automatically succeed on this save." + "\n   " + "On a failed save, the target takes 2d4 Force damage, its Speed is halved until the start of your next turn, and on its next turn, it can take only an action or a Bonus Action (but not both). On a successful save, the target takes half as much damage only." + AtHigherLevels + "The damage increases by 2d4 for every spell slot level above 1.",
 	],
