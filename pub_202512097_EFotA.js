@@ -221,9 +221,6 @@ legacyClassRefactor("artificer", {
 		spells: "list",
 		prepared: true,
 	},
-	spellcastingList : {
-		spells : ["acid splash", "dancing lights", "elementalism", "fire bolt", "guidance", "light", "mage hand", "message", "poison spray", "prestidigitation", "ray of frost", "resistance", "shocking grasp", "spare the dying", "thorn whip","thunderclap", "true strike", "alarm", "cure wounds", "detect magic", "disguise self", "expeditious retreat", "faerie fire", "false life", "feather fall", "grease", "identify", "jump", "longstrider", "purify food and drink", "sanctuary", "aid", "alter self", "arcane lock", "arcane vigor", "blur", "continual flame", "darkvision", "dragon's breath", "enhance ability", "enlarge/reduce", "heat metal", "homunculus servant", "invisibility", "lesser restoration", "levitate", "magic mouth", "magic weapon", "protection from poison", "rope trick", "see invisibility", "spider climb", "web", "blink", "create food and water", "dispel magic", "elemental weapon", "fly", "glyph of warding", "haste", "protection from energy", "revivify", "water breathing", "water walk", "arcane eye", "fabricate", "freedom of movement", "leomund's secret chest", "mordenkainen's private sanctum", "otiluke's resilient sphere", "stone shape", "stoneskin", "summon construct", "animate objects", "bigby's hand", "circle of power", "creation", "greater restoration", "wall of stone"],
-	},
 	features: {
 		"spellcasting": {
 			name: "Spellcasting",
