@@ -15143,7 +15143,7 @@ legacySpellRefactor("animate dead", {
 });
 legacySpellRefactor("animate objects", {
 	name : "Animate Objects",
-	classes : ["artificer","bard", "sorcerer", "wizard"],
+	classes : ["artificer", "bard", "sorcerer", "wizard"],
 	source : [["P24", 240]],
 	level : 5,
 	school : "Trans",
@@ -15198,7 +15198,7 @@ legacySpellRefactor("antipathy/sympathy", {
 });
 legacySpellRefactor("arcane eye", {
 	name : "Arcane Eye",
-	classes : ["artificer","wizard"],
+	classes : ["artificer", "wizard"],
 	source : [["P24", 242]],
 	level : 4,
 	school : "Div",
@@ -15240,7 +15240,7 @@ legacySpellRefactor("arcane lock", {
 });
 legacySpellRefactor("arcane vigor", {
 	name : "Arcane Vigor",
-	classes : ["sorcerer", "wizard"],
+	classes : ["artificer", "sorcerer", "wizard"],
 	source : [["P24", 242]],
 	level : 2,
 	school : "Abjur",
@@ -15483,7 +15483,7 @@ legacySpellRefactor("bigby's hand", {
 	name : "Bigby's Hand",
 	nameShort : "Bigby's Hand*",
 	nameAlt : "Arcane Hand",
-	classes : ["artificer","sorcerer", "wizard"],
+	classes : ["artificer", "sorcerer", "wizard"],
 	source : [["P24", 246]],
 	level : 5,
 	school : "Evoc",
@@ -15586,7 +15586,7 @@ legacySpellRefactor("blindness/deafness", {
 });
 legacySpellRefactor("blink", {
 	name : "Blink",
-	classes : ["artificer","sorcerer", "wizard"],
+	classes : ["artificer", "sorcerer", "wizard"],
 	source : [["P24", 248]],
 	level : 3,
 	school : "Trans",
@@ -15599,7 +15599,7 @@ legacySpellRefactor("blink", {
 });
 legacySpellRefactor("blur", {
 	name : "Blur",
-	classes : ["artificer","sorcerer", "wizard"],
+	classes : ["artificer", "sorcerer", "wizard"],
 	source : [["P24", 248]],
 	level : 2,
 	school : "Illus",
@@ -15754,7 +15754,7 @@ legacySpellRefactor("circle of death", {
 });
 legacySpellRefactor("circle of power", {
 	name : "Circle of Power",
-	classes : ["cleric", "paladin", "wizard"],
+	classes : ["artificer", "cleric", "paladin", "wizard"],
 	source : [["P24", 250]],
 	level : 5,
 	school : "Abjur",
@@ -16121,7 +16121,7 @@ legacySpellRefactor("contingency", {
 });
 legacySpellRefactor("continual flame", {
 	name : "Continual Flame",
-	classes : ["artificer","cleric", "druid", "wizard"],
+	classes : ["artificer", "cleric", "druid", "wizard"],
 	source : [["P24", 256]],
 	level : 2,
 	school : "Evoc",
@@ -16194,7 +16194,7 @@ legacySpellRefactor("counterspell", {
 });
 legacySpellRefactor("create food and water", {
 	name : "Create Food and Water",
-	classes : ["artificer","cleric", "paladin"],
+	classes : ["artificer", "cleric", "paladin"],
 	source : [["P24", 258]],
 	level : 3,
 	school : "Conj",
@@ -16235,7 +16235,7 @@ legacySpellRefactor("create undead", {
 });
 legacySpellRefactor("creation", {
 	name : "Creation",
-	classes : ["artificer","sorcerer", "wizard"],
+	classes : ["artificer", "sorcerer", "wizard"],
 	source : [["P24", 259]],
 	level : 5,
 	school : "Illus",
@@ -16277,7 +16277,7 @@ legacySpellRefactor("crusader's mantle", {
 });
 legacySpellRefactor("cure wounds", {
 	name : "Cure Wounds",
-	classes : ["artificer","bard", "cleric", "druid", "paladin", "ranger"],
+	classes : ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
 	source : [["P24", 259]],
 	level : 1,
 	school : "Abjur",
@@ -16290,7 +16290,7 @@ legacySpellRefactor("cure wounds", {
 });
 legacySpellRefactor("dancing lights", {
 	name : "Dancing Lights",
-	classes : ["artificer","bard", "sorcerer", "wizard"],
+	classes : ["artificer", "bard", "sorcerer", "wizard"],
 	source : [["P24", 259]],
 	level : 0,
 	school : "Illus",
@@ -16318,7 +16318,7 @@ legacySpellRefactor("darkness", {
 });
 legacySpellRefactor("darkvision", {
 	name : "Darkvision",
-	classes : ["artificer","druid", "ranger", "sorcerer", "wizard"],
+	classes : ["artificer", "druid", "ranger", "sorcerer", "wizard"],
 	source : [["P24", 260]],
 	level : 2,
 	school : "Trans",
@@ -16423,7 +16423,7 @@ legacySpellRefactor("detect evil and good", {
 });
 legacySpellRefactor("detect magic", {
 	name : "Detect Magic",
-	classes : ["artificer","bard", "cleric", "druid", "paladin", "ranger", "sorcerer", "sorcerer", "warlock","wizard"],
+	classes : ["artificer", "bard", "cleric", "druid", "paladin", "ranger", "sorcerer", "sorcerer", "warlock","wizard"],
 	source : [["P24", 262]],
 	ritual : true,
 	level : 1,
@@ -16481,7 +16481,7 @@ legacySpellRefactor("dimension door", {
 });
 legacySpellRefactor("disguise self", {
 	name : "Disguise Self",
-	classes : ["artificer","bard", "sorcerer", "wizard"],
+	classes : ["artificer", "bard", "sorcerer", "wizard"],
 	source : [["P24", 262]],
 	level : 1,
 	school : "Illus",
@@ -16524,7 +16524,7 @@ legacySpellRefactor("dispel evil and good", {
 });
 legacySpellRefactor("dispel magic", {
 	name : "Dispel Magic",
-	classes : ["artificer","bard", "cleric", "druid", "paladin", "ranger", "sorcerer", "warlock", "wizard"],
+	classes : ["artificer", "bard", "cleric", "druid", "paladin", "ranger", "sorcerer", "warlock", "wizard"],
 	source : [["P24", 264]],
 	level : 3,
 	school : "Abjur",
@@ -16653,7 +16653,7 @@ legacySpellRefactor("dominate person", {
 });
 legacySpellRefactor("dragon's breath", {
 	name : "Dragon's Breath",
-	classes : ["sorcerer", "wizard"],
+	classes : ["artificer", "sorcerer", "wizard"],
 	source : [["P24", 266]],
 	level : 2,
 	school : "Trans",
@@ -16751,7 +16751,7 @@ legacySpellRefactor("eldritch blast", {
 });
 SpellsList.elementalism = {
 	name : "Elementalism",
-	classes : ["druid", "sorcerer", "wizard"],
+	classes : ["artificer", "druid", "sorcerer", "wizard"],
 	source : [["P24", 167]],
 	level : 0,
 	school : "Trans",
@@ -16764,7 +16764,7 @@ SpellsList.elementalism = {
 };
 legacySpellRefactor("elemental weapon", {
 	name : "Elemental Weapon",
-	classes : ["artificer","druid", "paladin", "ranger"],
+	classes : ["artificer", "druid", "paladin", "ranger"],
 	source : [["P24", 268]],
 	level : 3,
 	school : "Trans",
@@ -16784,7 +16784,7 @@ legacySpellRefactor("elemental weapon", {
 });
 legacySpellRefactor("enhance ability", {
 	name : "Enhance Ability",
-	classes : ["artificer","bard", "cleric", "druid", "ranger", "sorcerer", "wizard"],
+	classes : ["artificer", "bard", "cleric", "druid", "ranger", "sorcerer", "wizard"],
 	source : [["P24", 268]],
 	level : 2,
 	school : "Trans",
@@ -16799,7 +16799,7 @@ legacySpellRefactor("enhance ability", {
 legacySpellRefactor("enlarge/reduce", {
 	name : "Enlarge/Reduce",
 	nameShort : "Enlarge/Reduce*",
-	classes : ["artificer","bard", "druid", "sorcerer", "wizard"],
+	classes : ["artificer", "bard", "druid", "sorcerer", "wizard"],
 	source : [["P24", 268]],
 	level : 2,
 	school : "Trans",
@@ -16891,7 +16891,7 @@ legacySpellRefactor("evard's black tentacles", {
 });
 legacySpellRefactor("expeditious retreat", {
 	name : "Expeditious Retreat",
-	classes : ["artificer","sorcerer", "warlock", "wizard"],
+	classes : ["artificer", "sorcerer", "warlock", "wizard"],
 	source : [["P24", 270]],
 	level : 1,
 	school : "Trans",
@@ -16919,7 +16919,7 @@ legacySpellRefactor("eyebite", {
 });
 legacySpellRefactor("fabricate", {
 	name : "Fabricate",
-	classes : ["artificer","wizard"],
+	classes : ["artificer", "wizard"],
 	source : [["P24", 271]],
 	level : 4,
 	school : "Trans",
@@ -16932,7 +16932,7 @@ legacySpellRefactor("fabricate", {
 });
 legacySpellRefactor("faerie fire", {
 	name : "Faerie Fire",
-	classes : ["artificer","bard", "druid"],
+	classes : ["artificer", "bard", "druid"],
 	source : [["P24", 271]],
 	level : 1,
 	school : "Evoc",
@@ -16946,7 +16946,7 @@ legacySpellRefactor("faerie fire", {
 });
 legacySpellRefactor("false life", {
 	name : "False Life",
-	classes : ["artificer","sorcerer", "wizard"],
+	classes : ["artificer", "sorcerer", "wizard"],
 	source : [["P24", 271]],
 	level : 1,
 	school : "Necro",
@@ -16975,7 +16975,7 @@ legacySpellRefactor("fear", {
 });
 legacySpellRefactor("feather fall", {
 	name : "Feather Fall",
-	classes : ["artificer","bard", "sorcerer", "wizard"],
+	classes : ["artificer", "bard", "sorcerer", "wizard"],
 	source : [["P24", 271]],
 	level : 1,
 	school : "Trans",
@@ -17090,7 +17090,7 @@ legacySpellRefactor("fireball", {
 });
 legacySpellRefactor("fire bolt", {
 	name : "Fire Bolt",
-	classes : ["artificer","sorcerer", "wizard"],
+	classes : ["artificer", "sorcerer", "wizard"],
 	source : [["P24", 274]],
 	level : 0,
 	school : "Evoc",
@@ -17203,7 +17203,7 @@ legacySpellRefactor("flesh to stone", {
 });
 legacySpellRefactor("fly", {
 	name : "Fly",
-	classes : ["artificer","sorcerer", "warlock", "wizard"],
+	classes : ["artificer", "sorcerer", "warlock", "wizard"],
 	source : [["P24", 276]],
 	level : 3,
 	school : "Trans",
@@ -17297,7 +17297,7 @@ legacySpellRefactor("fount of moonlight", {
 });
 legacySpellRefactor("freedom of movement", {
 	name : "Freedom of Movement",
-	classes : ["artificer","bard", "cleric", "druid", "ranger"],
+	classes : ["artificer", "bard", "cleric", "druid", "ranger"],
 	source : [["P24", 277]],
 	level : 4,
 	school : "Abjur",
@@ -17427,7 +17427,7 @@ legacySpellRefactor("globe of invulnerability", {
 });
 legacySpellRefactor("glyph of warding", {
 	name : "Glyph of Warding",
-	classes : ["artificer","bard", "cleric", "wizard"],
+	classes : ["artificer", "bard", "cleric", "wizard"],
 	source : [["P24", 279]],
 	level : 3,
 	school : "Abjur",
@@ -17470,7 +17470,7 @@ legacySpellRefactor("grasping vine", {
 });
 legacySpellRefactor("grease", {
 	name : "Grease",
-	classes : ["artificer","sorcerer", "wizard"],
+	classes : ["artificer", "sorcerer", "wizard"],
 	source : [["P24", 280]],
 	level : 1,
 	school : "Conj",
@@ -17498,7 +17498,7 @@ legacySpellRefactor("greater invisibility", {
 });
 legacySpellRefactor("greater restoration", {
 	name : "Greater Restoration",
-	classes : ["artificer","bard", "cleric", "druid", "paladin", "ranger"],
+	classes : ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
 	source : [["P24", 281]],
 	level : 5,
 	school : "Abjur",
@@ -17542,7 +17542,7 @@ legacySpellRefactor("guards and wards", {
 });
 legacySpellRefactor("guidance", {
 	name : "Guidance",
-	classes : ["artificer","cleric", "druid"],
+	classes : ["artificer", "cleric", "druid"],
 	source : [["P24", 282]],
 	level : 0,
 	school : "Div",
@@ -17643,7 +17643,7 @@ legacySpellRefactor("harm", {
 legacySpellRefactor("haste", {
 	name : "Haste",
 	nameShort : "Haste*",
-	classes : ["artificer","sorcerer", "wizard"],
+	classes : ["artificer", "sorcerer", "wizard"],
 	source : [["P24", 284]],
 	level : 3,
 	school : "Trans",
@@ -17687,7 +17687,7 @@ legacySpellRefactor("healing word", {
 legacySpellRefactor("heat metal", {
 	name : "Heat Metal",
 	nameShort : "Heat Metal*",
-	classes : ["artificer","bard", "druid"],
+	classes : ["artificer", "bard", "druid"],
 	source : [["P24", 284]],
 	level : 2,
 	school : "Trans",
@@ -17888,7 +17888,7 @@ legacySpellRefactor("ice storm", {
 });
 legacySpellRefactor("identify", {
 	name : "Identify",
-	classes : ["artificer","bard", "wizard"],
+	classes : ["artificer", "bard", "wizard"],
 	source : [["P24", 287]],
 	ritual : true,
 	level : 1,
@@ -17979,7 +17979,7 @@ legacySpellRefactor("insect plague", {
 });
 legacySpellRefactor("invisibility", {
 	name : "Invisibility",
-	classes : ["artificer","bard", "sorcerer", "warlock", "wizard"],
+	classes : ["artificer", "bard", "sorcerer", "warlock", "wizard"],
 	source : [["P24", 289]],
 	level : 2,
 	school : "Illus",
@@ -18009,7 +18009,7 @@ legacySpellRefactor("jallarzi's storm of radiance", {
 });
 legacySpellRefactor("jump", {
 	name : "Jump",
-	classes : ["artificer","druid", "ranger", "sorcerer", "wizard"],
+	classes : ["artificer", "druid", "ranger", "sorcerer", "wizard"],
 	source : [["P24", 290]],
 	level : 1,
 	school : "Trans",
@@ -18052,7 +18052,7 @@ legacySpellRefactor("legend lore", {
 legacySpellRefactor("leomund's secret chest", {
 	name : "Leomund's Secret Chest",
 	nameAlt : "Secret Chest",
-	classes : ["artificer","wizard"],
+	classes : ["artificer", "wizard"],
 	source : [["P24", 290]],
 	level : 4,
 	school : "Conj",
@@ -18082,7 +18082,7 @@ legacySpellRefactor("leomund's tiny hut", {
 });
 legacySpellRefactor("lesser restoration", {
 	name : "Lesser Restoration",
-	classes : ["artificer","bard", "cleric", "druid", "paladin", "ranger"],
+	classes : ["artificer", "bard", "cleric", "druid", "paladin", "ranger"],
 	source : [["P24", 291]],
 	level : 2,
 	school : "Abjur",
@@ -18096,7 +18096,7 @@ legacySpellRefactor("lesser restoration", {
 legacySpellRefactor("levitate", {
 	name : "Levitate",
 	nameShort : "Levitate*",
-	classes : ["artificer","sorcerer", "wizard"],
+	classes : ["artificer", "sorcerer", "wizard"],
 	source : [["P24", 291]],
 	level : 2,
 	school : "Trans",
@@ -18111,7 +18111,7 @@ legacySpellRefactor("levitate", {
 });
 legacySpellRefactor("light", {
 	name : "Light",
-	classes : ["artificer","bard", "cleric", "sorcerer", "wizard"],
+	classes : ["artificer", "bard", "cleric", "sorcerer", "wizard"],
 	source : [["P24", 292]],
 	level : 0,
 	school : "Evoc",
@@ -18204,7 +18204,7 @@ legacySpellRefactor("locate object", {
 });
 legacySpellRefactor("longstrider", {
 	name : "Longstrider",
-	classes : ["artificer","bard", "druid", "ranger", "wizard"],
+	classes : ["artificer", "bard", "druid", "ranger", "wizard"],
 	source : [["P24", 293]],
 	level : 1,
 	school : "Trans",
@@ -18232,7 +18232,7 @@ legacySpellRefactor("mage armor", {
 });
 legacySpellRefactor("mage hand", {
 	name : "Mage Hand",
-	classes : ["artificer","bard", "sorcerer", "warlock", "wizard"],
+	classes : ["artificer", "bard", "sorcerer", "warlock", "wizard"],
 	source : [["P24", 293]],
 	level : 0,
 	school : "Conj",
@@ -18291,7 +18291,7 @@ legacySpellRefactor("magic missile", {
 legacySpellRefactor("magic mouth", {
 	name : "Magic Mouth",
 	nameShort : "Magic Mouth*",
-	classes : ["artificer","bard", "wizard"],
+	classes : ["artificer", "bard", "wizard"],
 	source : [["P24", 295]],
 	ritual : true,
 	level : 2,
@@ -18306,7 +18306,7 @@ legacySpellRefactor("magic mouth", {
 });
 legacySpellRefactor("magic weapon", {
 	name : "Magic Weapon",
-	classes : ["paladin", "ranger", "sorcerer", "wizard"],
+	classes : ["artificer", "paladin", "ranger", "sorcerer", "wizard"],
 	source : [["P24", 295]],
 	level : 2,
 	school : "Trans",
@@ -18440,7 +18440,7 @@ legacySpellRefactor("melf's acid arrow", {
 });
 legacySpellRefactor("mending", {
 	name : "Mending",
-	classes : ["artificer","bard", "cleric", "druid", "sorcerer", "wizard"],
+	classes : ["artificer", "bard", "cleric", "druid", "sorcerer", "wizard"],
 	source : [["P24", 297]],
 	level : 0,
 	school : "Trans",
@@ -18454,7 +18454,7 @@ legacySpellRefactor("mending", {
 });
 legacySpellRefactor("message", {
 	name : "Message",
-	classes : ["artificer","bard", "druid", "sorcerer", "wizard"],
+	classes : ["artificer", "bard", "druid", "sorcerer", "wizard"],
 	source : [["P24", 298]],
 	level : 0,
 	school : "Trans",
@@ -18631,7 +18631,7 @@ legacySpellRefactor("mordenkainen's faithful hound", {
 	name : "Mordenkainen's Faithful Hound",
 	nameShort : "Mor. Faithful Hound*",
 	nameAlt : "Faithful Hound",
-	classes : ["artificer","wizard"],
+	classes : ["artificer", "wizard"],
 	source : [["P24", 300]],
 	level : 4,
 	school : "Conj",
@@ -18665,7 +18665,7 @@ legacySpellRefactor("mordenkainen's private sanctum", {
 	name : "Mordenkainen's Private Sanctum",
 	nameShort : "Mor. Private Sanctum",
 	nameAlt : "Private Sanctum",
-	classes : ["artificer","wizard"],
+	classes : ["artificer", "wizard"],
 	source : [["P24", 301]],
 	level : 4,
 	school : "Abjur",
@@ -18755,7 +18755,7 @@ legacySpellRefactor("otiluke's freezing sphere", {
 legacySpellRefactor("otiluke's resilient sphere", {
 	name : "Otiluke's Resilient Sphere",
 	nameAlt : "Resilient Sphere",
-	classes : ["artificer","wizard"],
+	classes : ["artificer", "wizard"],
 	source : [["P24", 303]],
 	level : 4,
 	school : "Abjur",
@@ -18916,7 +18916,7 @@ legacySpellRefactor("plant growth", {
 });
 legacySpellRefactor("poison spray", {
 	name : "Poison Spray",
-	classes : ["artificer","druid", "sorcerer", "warlock", "wizard"],
+	classes : ["artificer", "druid", "sorcerer", "warlock", "wizard"],
 	source : [["P24", 306]],
 	level : 0,
 	school : "Necro",
@@ -19017,7 +19017,7 @@ legacySpellRefactor("prayer of healing", {
 });
 legacySpellRefactor("prestidigitation", {
 	name : "Prestidigitation",
-	classes : ["artificer","bard", "sorcerer", "warlock", "wizard"],
+	classes : ["artificer", "bard", "sorcerer", "warlock", "wizard"],
 	source : [["P24", 307]],
 	level : 0,
 	school : "Trans",
@@ -19125,7 +19125,7 @@ legacySpellRefactor("project image", {
 });
 legacySpellRefactor("protection from energy", {
 	name : "Protection from Energy",
-	classes : ["artificer","cleric", "druid", "ranger", "sorcerer", "wizard"],
+	classes : ["artificer", "cleric", "druid", "ranger", "sorcerer", "wizard"],
 	source : [["P24", 309]],
 	level : 3,
 	school : "Abjur",
@@ -19153,7 +19153,7 @@ legacySpellRefactor("protection from evil and good", {
 });
 legacySpellRefactor("protection from poison", {
 	name : "Protection from Poison",
-	classes : ["artificer","cleric", "druid", "paladin", "ranger"],
+	classes : ["artificer", "cleric", "druid", "paladin", "ranger"],
 	source : [["P24", 310]],
 	level : 2,
 	school : "Abjur",
@@ -19166,7 +19166,7 @@ legacySpellRefactor("protection from poison", {
 });
 legacySpellRefactor("purify food and drink", {
 	name : "Purify Food and Drink",
-	classes : ["artificer","cleric", "druid", "paladin"],
+	classes : ["artificer", "cleric", "druid", "paladin"],
 	source : [["P24", 310]],
 	ritual : true,
 	level : 1,
@@ -19225,7 +19225,7 @@ legacySpellRefactor("ray of enfeeblement", {
 });
 legacySpellRefactor("ray of frost", {
 	name : "Ray of Frost",
-	classes : ["artificer","sorcerer", "wizard"],
+	classes : ["artificer", "sorcerer", "wizard"],
 	source : [["P24", 311]],
 	level : 0,
 	school : "Evoc",
@@ -19298,7 +19298,7 @@ legacySpellRefactor("remove curse", {
 });
 legacySpellRefactor("resistance", {
 	name : "Resistance",
-	classes : ["artificer","cleric", "druid"],
+	classes : ["artificer", "cleric", "druid"],
 	source : [["P24", 312]],
 	level : 0,
 	school : "Abjur",
@@ -19340,7 +19340,7 @@ legacySpellRefactor("reverse gravity", {
 });
 legacySpellRefactor("revivify", {
 	name : "Revivify",
-	classes : ["artificer","cleric", "druid", "paladin", "ranger"],
+	classes : ["artificer", "cleric", "druid", "paladin", "ranger"],
 	source : [["P24", 312]],
 	level : 3,
 	school : "Necro",
@@ -19354,7 +19354,7 @@ legacySpellRefactor("revivify", {
 });
 legacySpellRefactor("rope trick", {
 	name : "Rope Trick",
-	classes : ["artificer","wizard"],
+	classes : ["artificer", "wizard"],
 	source : [["P24", 312]],
 	level : 2,
 	school : "Trans",
@@ -19385,7 +19385,7 @@ legacySpellRefactor("sacred flame", {
 });
 legacySpellRefactor("sanctuary", {
 	name : "Sanctuary",
-	classes : ["artificer","cleric"],
+	classes : ["artificer", "cleric"],
 	source : [["P24", 313]],
 	level : 1,
 	school : "Abjur",
@@ -19448,7 +19448,7 @@ legacySpellRefactor("searing smite", {
 });
 legacySpellRefactor("see invisibility", {
 	name : "See Invisibility",
-	classes : ["artificer","bard", "sorcerer", "wizard"],
+	classes : ["artificer", "bard", "sorcerer", "wizard"],
 	source : [["P24", 314]],
 	level : 2,
 	school : "Div",
@@ -19592,7 +19592,7 @@ legacySpellRefactor("shining smite", {
 });
 legacySpellRefactor("shocking grasp", {
 	name : "Shocking Grasp",
-	classes : ["artificer","sorcerer", "wizard"],
+	classes : ["artificer", "sorcerer", "wizard"],
 	source : [["P24", 316]],
 	level : 0,
 	school : "Evoc",
@@ -19707,7 +19707,7 @@ legacySpellRefactor("sorcerous burst", {
 });
 legacySpellRefactor("spare the dying", {
 	name : "Spare the Dying",
-	classes : ["artificer","cleric", "druid"],
+	classes : ["artificer", "cleric", "druid"],
 	source : [["P24", 318]],
 	level : 0,
 	school : "Necro",
@@ -19761,7 +19761,7 @@ legacySpellRefactor("speak with plants", {
 });
 legacySpellRefactor("spider climb", {
 	name : "Spider Climb",
-	classes : ["artificer","sorcerer", "warlock", "wizard"],
+	classes : ["artificer", "sorcerer", "warlock", "wizard"],
 	source : [["P24", 319]],
 	level : 2,
 	school : "Trans",
@@ -19885,7 +19885,7 @@ legacySpellRefactor("stinking cloud", {
 });
 legacySpellRefactor("stone shape", {
 	name : "Stone Shape",
-	classes : ["artificer","cleric", "druid", "wizard"],
+	classes : ["artificer", "cleric", "druid", "wizard"],
 	source : [["P24", 321]],
 	level : 4,
 	school : "Trans",
@@ -19990,7 +19990,7 @@ legacySpellRefactor("summon celestial", {
 legacySpellRefactor("summon construct", {
 	name : "Summon Construct",
 	nameShort : "Summon Construct*",
-	classes : ["artificer","wizard"],
+	classes : ["artificer", "wizard"],
 	source : [["P24", 324]],
 	level : 4,
 	school : "Conj",
@@ -20295,7 +20295,7 @@ legacySpellRefactor("thaumaturgy", {
 });
 legacySpellRefactor("thorn whip", {
 	name : "Thorn Whip",
-	classes : ["artificer","druid"],
+	classes : ["artificer", "druid"],
 	source : [["P24", 333]],
 	level : 0,
 	school : "Trans",
@@ -20310,7 +20310,7 @@ legacySpellRefactor("thorn whip", {
 });
 legacySpellRefactor("thunderclap", {
 	name : "Thunderclap",
-	classes : ["artificer","bard", "druid", "sorcerer", "warlock", "wizard"],
+	classes : ["artificer", "bard", "druid", "sorcerer", "warlock", "wizard"],
 	source : [["P24", 333]],
 	level : 0,
 	school : "Evoc",
@@ -20467,7 +20467,7 @@ legacySpellRefactor("true seeing", {
 });
 legacySpellRefactor("true strike", {
 	name : "True Strike",
-	classes : ["bard", "sorcerer", "warlock", "wizard"],
+	classes : ["artificer", "bard", "sorcerer", "warlock", "wizard"],
 	source : [["P24", 336]],
 	level : 0,
 	school : "Div",
@@ -20610,7 +20610,7 @@ legacySpellRefactor("wall of ice", {
 });
 legacySpellRefactor("wall of stone", {
 	name : "Wall of Stone",
-	classes : ["artificer","druid", "sorcerer", "wizard"],
+	classes : ["artificer", "druid", "sorcerer", "wizard"],
 	source : [["P24", 339]],
 	level : 5,
 	school : "Evoc",
@@ -20656,7 +20656,7 @@ legacySpellRefactor("warding bond", {
 });
 legacySpellRefactor("water breathing", {
 	name : "Water Breathing",
-	classes : ["artificer","druid", "ranger", "sorcerer", "wizard"],
+	classes : ["artificer", "druid", "ranger", "sorcerer", "wizard"],
 	source : [["P24", 340]],
 	ritual : true,
 	level : 3,
@@ -20671,7 +20671,7 @@ legacySpellRefactor("water breathing", {
 });
 legacySpellRefactor("water walk", {
 	name : "Water Walk",
-	classes : ["artificer","cleric", "druid", "ranger", "sorcerer"],
+	classes : ["artificer", "cleric", "druid", "ranger", "sorcerer"],
 	source : [["P24", 340]],
 	ritual : true,
 	level : 3,
@@ -20686,7 +20686,7 @@ legacySpellRefactor("water walk", {
 });
 legacySpellRefactor("web", {
 	name : "Web",
-	classes : ["artificer","sorcerer", "wizard"],
+	classes : ["artificer", "sorcerer", "wizard"],
 	source : [["P24", 340]],
 	level : 2,
 	school : "Conj",
