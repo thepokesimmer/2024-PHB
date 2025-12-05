@@ -19455,7 +19455,7 @@ legacySpellRefactor("fount of moonlight", {
     duration: "Conc, 10 mins",
     save: "Con",
     description: "20/20 light; resist Rad.; melee atk +2d6 Rad.; 60ft rea if vis. crea dmgs me, save or Blind to my next EoT",
-    descriptionFull: "A cool light wreathes your body for the duration, emitting Bright Light in a 20-foot radius and Dim Light for an additional 20 feet." + "\n   " + "Until the spell ends, you have Resistance to Radiant damage, and your melee attacks deal and extra 2d6 Radiant damage on a hit." + "\n   " + "In addition, immediately after you take damage from a creature you can see within 60 feet of yourself, you can take a Reaction to force the creature to make a Constitution saving throw. On a failed save, the creature has the Blinded condition until the end of your turn."
+    descriptionFull: "A cool light wreathes your body for the duration, emitting Bright Light in a 20-foot radius and Dim Light for an additional 20 feet." + "\n   " + "Until the spell ends, you have Resistance to Radiant damage, and your melee attacks deal an extra 2d6 Radiant damage on a hit." + "\n   " + "In addition, immediately after you take damage from a creature you can see within 60 feet of yourself, you can take a Reaction to force the creature to make a Constitution saving throw. On a failed save, the creature has the Blinded condition until the end of your turn."
 });
 legacySpellRefactor("freedom of movement", {
     name: "Freedom of Movement",
@@ -30178,3 +30178,4 @@ CreatureList["undead spirit (putrid/ghostly)(9)"] = {
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
     }],
 };
+
