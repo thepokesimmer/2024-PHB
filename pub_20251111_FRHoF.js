@@ -3122,7 +3122,7 @@ SpellsList["cacophonic shield"] = {
     components: "V,S",
     save: "Con",
     duration: "Conc, 10 min",
-    description: "Covers/enter/end 3d6+1d6/SL Thunder dmg + Deaf to my next turn (1/turn/crea); save 1/2 dmg only",
+    description: "Resist Thdr; Rgd vs me Dis. Cover/enter/end 3d6+1d6/SL Thunder dmg + Deaf to my turn (1/t/c); s: 1/2",
     descriptionFull: [
         "Thunderous reverberations fill a 10-foot Emanation originating from you for the duration. Whenever the Emanation enters a creature's space and whenever a creature enters the Emanation or ends its turn there, the creature makes a Constitution saving throw. On a failed save, the creature takes 3d6 Thunder damage and has the Deafened condition until the start of your next turn. On a successful save, the creature takes half as much damage only. A creature makes this save only once per turn. When you cast this spell, you can designate creatures to be unaffected by it." + "\n   " + "In addition, you have Resistance to Thunder damage, and ranged attack rolls against you are made with Disadvantage." + AtHigherLevels + "The damage increases by 1d6 for each spell slot above 3.",
     ],
