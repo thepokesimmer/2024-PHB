@@ -3067,7 +3067,7 @@ SpellsList["alustriel's mooncloak"] = {
     components: "V,S,M\u0192",
     compMaterial: "a moonstone worth 50+ GP",
     duration: "Conc, 1 min",
-    description: "20-ft rad Dim Light. In area, get Half Cover and Resist Cold, Lghtn, and Rad. Extra effects that end spell. See book.",
+    description: "20-ft rad Dim. Me + ally 1/2 Cover + Resist Cold, Lghtng + Rad dmg. Extra effects that end spell. See B",
     descriptionFull: [
         "For the duration, moonlight fills a 20-foot Emanation originating from you with Dim Light. While in that area, you and your allies have Half Cover and Resistance to Cold, Lightning, and Radiant damage." + "\n   " + "While the spell lasts, you can use one of the following options, ending the spell immediately:" + "\n   " + "***Liberation***. When you fail a saving throw to avoid or end the Frightened, Grappled, or Restrained condition, you can take a Reaction to succeed on the save instead." + "\n   " + "***Respite***. As a Magic action, you or an ally within the area regains Hit Points equal to 4d10 plus your spellcasting ability modifier.",
     ],
@@ -3086,9 +3086,9 @@ SpellsList["backlash"] = {
     components: "V",
     duration: "Instantaneous",
     save: "Con",
-    description: "When I take dmg, reduce by 4d6+1d6/SL + spell mod. If dmg from crea in range, take 4d6+1d6/SL Force dmg. Save for half.",
+    description: "When dmged, subtract 4d6+1d6/SL + spell mod. If from crea in 60ft, 4d6+1d6/SL Force dmg; 1/2 on save.",
     descriptionFull: [
-        "You ward yourself against destructive energy, reducing the damage taken by 4d6 plus your spellcasting ability modifier." + "\n   " + "If the triggering damage was from a creature within range, you can force the creature to make a Constitution saving throw. The creature takes 4d6 Force damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage reduced and Fore damage from this spell both increase by 1d6 for every spell slot level above 4.",
+        "You ward yourself against destructive energy, reducing the damage taken by 4d6 plus your spellcasting ability modifier." + "\n   " + "If the triggering damage was from a creature within range, you can force the creature to make a Constitution saving throw. The creature takes 4d6 Force damage on a failed save or half as much damage on a successful one." + AtHigherLevels + "The damage reduced and Force damage from this spell both increase by 1d6 for every spell slot level above 4.",
     ],
 };
 legacySpellRefactor("blade of disaster", {
@@ -3103,7 +3103,7 @@ legacySpellRefactor("blade of disaster", {
     range: "60 ft",
     components: "V,S",
     duration: "Conc, 1 min",
-    description: "Create blade; 2 spell atks 10d6 Force dmg; crit on 18+; bns a move 60 ft \u0026 do 2 atks. Moves through barriers.",
+    description: "Create blade; 2 spell atks 10d6 Force dmg; crit on 18+; bns a move 60 ft & 2 atks; barriers don't block it",
     descriptionShorter: "Create wea; 2 spell atks 10d6 Force dmg; crit 18+; bns a move 60 ft \u0026 2 atks",
     descriptionFull: [
         "You create a 3-foot-long blade-shaped planar rift that lasts for the duration. The rift appears within range in a space of your choice, and you can immediately make up to two melee spell attacks, each one against a creature or object within 5 feet of the rift. On a hit, the target takes 10d6 Force damage. This attack scores a Critical Hit if the number on the d20 is 18 or higher." + "\n   As a Bonus Action on your later turns, you can move the rift up to 60 feet and repeat the two attacks against a creature or an object within 5 feet of it. You can direct the attacks at the same target or at different ones." + "\n   The blade can harmlessly pass through any barrier, including ones created by spells like Wall of Force.",
@@ -3120,8 +3120,9 @@ SpellsList["cacophonic shield"] = {
     time: "1 a",
     range: "S:10-ft rad",
     components: "V,S",
+    save: "Con",
     duration: "Conc, 10 min",
-    description: "10-ft Emanation from me, when a crea enters/ends turn Con save, fail 3d6+1d6/SL Thunder dmg + Deafened, success half dmg only",
+    description: "Covers/enter/end 3d6+1d6/SL Thunder dmg + Deaf to my next turn (1/turn/crea); save 1/2 dmg only",
     descriptionFull: [
         "Thunderous reverberations fill a 10-foot Emanation originating from you for the duration. Whenever the Emanation enters a creature's space and whenever a creature enters the Emanation or ends its turn there, the creature makes a Constitution saving throw. On a failed save, the creature takes 3d6 Thunder damage and has the Deafened condition until the start of your next turn. On a successful save, the creature takes half as much damage only. A creature makes this save only once per turn. When you cast this spell, you can designate creatures to be unaffected by it." + "\n   " + "In addition, you have Resistance to Thunder damage, and ranged attack rolls against you are made with Disadvantage." + AtHigherLevels + "The damage increases by 1d6 for each spell slot above 3.",
     ],
@@ -3140,7 +3141,7 @@ SpellsList["conjure constructs"] = {
     compMaterial: "a brass cog",
     duration: "Conc, 10 min",
     save: "Dex",
-    description: "Spirit in empty space. 1 crea in 5 ft: 3d6+1d6/SL Force dmg, save 1/2, or 1d6+Mod+1d6/SL Temp HP; a to redo; 30 ft move.",
+    description: "1 targ. in 5 ft of spirit: 3d6+1d6/SL Force dmg, s: 1/2, or 1d6+Mod+1d6/SL THP; a to redo; 30 ft move.",
     descriptionFull: [
         "You conjure a group of intangible, orderly spirits that appear as a Medium group of modrons or other Constructs in an unoccupied space you can see within range. The spirits last for the duration." + "\n   " + "When you cast this spell and as a Magic action on subsequent turns, you can command the spirits to target one creature or object you can see within 5 feet of the spirits and create one of the following effects:" + "\n   " + "***Clockwork Force***. The target makes a Dexterity saving throw, taking 3d6 Force damage on a failed save or half as much damage on a successful one." + "\n   " + "***Orderly Ward***. The target gains Temporary Hit Points equal to 1d6 plus your spellcasting ability modifier." + "\n   " + "When you move on your turn, you can also move the spirits up to 30 feet to an unoccupied space you can see." + AtHigherLevels + "The damage and Temporary Hit Points both increase by 1d6 for each spell slot level above 3.",
     ],
@@ -3158,7 +3159,7 @@ SpellsList["death armor"] = {
     components: "V,S,M\u2020",
     compMaterial: "an onyx worth 50+ GP, which the spell consumes",
     duration: "1 hr",
-    description: "1 crea has Adv on Death saves. 1/turn, when crea in 5-ft hits them with melee atk, deal 2d4 Necrotic dmg to atkr",
+    description: "1 crea: Adv on Death saves. 1/turn, if hit by crea in 5-ft with melee atk, deal 2d4 Necrotic dmg to atkr",
     descriptionFull: [
         "For the duration, an inky aura surrounds one creature you touch. The target has Advantage on Death Saving Throws, and once per turn, when a creature within 5 feet of the target hits it with a melee attack roll, the attacker takes 2d4 Necrotic damage.",
     ],
@@ -3177,7 +3178,7 @@ SpellsList["deryan's helpful homunculi"] = {
     components: "V,S,M\u2020",
     compMaterial: "powdered gemstones worth 100+ GP, which the spell consumes, and one set of Artisan's Tools with which you have proficiency",
     duration: "8 hr",
-    description: "Summon Construct spirits with Prof in Arcana and Artisan's Tools used to cast. Count as assistant, halving crafting time",
+    description: "Summon Construct spirits w/ Prof in Arcana + Tools used to cast. Count as assistant, 1/2 crafting time",
     descriptionFull: [
         "You summon a group of helpful spirits, which last for the duration. The spirits appear as homunculi or as another Construct of choice but are intangible and invulnerable, and they are considered to have proficiency in the Arcana skill and with the set of Artisan's Tools used in the spell's casting." + "\n   " + "If you are crafting an item, the spirits function as a single assistant for your crafting, halving the crafting time.",
     ],
@@ -3195,7 +3196,7 @@ SpellsList["dirge"] = {
     components: "V",
     duration: "Conc, 1 min",
     save: "Con",
-    description: "Undesignated crea can't regain HP. Cover/enter/end 3d10 Necrotic dmg and Prone (1/t/c). Save 1/2 dmg and half Speed",
+    description: "Any crea can't regain HP. Cover/enter/end 3d10 Necrotic dmg + Prone (1/t/c). S: 1/2 dmg + 1/2 Speed",
     descriptionFull: [
         "Deathly power fills a 60-foot Emanation originating from you for the duration." + "\n   " + "When you cast this spell, you can designate creatures to be unaffected by it. Any other creature can't regain Hit Points while in the Emanation. Whenever the Emanation enters a creature's space and whenever a creature enters the Emanation or ends its turn there, the creature makes a Constitution saving throw. On a failed save, the creature takes 3d10 Necrotic damage and has the Prone condition. On a successful save, the creature takes half as much damage and its Speed is halved. A creature makes this save only once per turn." + "\n   " + toUni("Casting as a Circle Spell") + ": " + "Casting this as a Circle spell requires a minimum of two secondary casters. If the spell is cast as a Circle spell, its duration becomes Concentration up to 10 minutes." + "\n   " + "A creature that fails its save against the spell's effect also gains 1 Exhaustion level. While the creature has Exhaustion levels, finishing a Long Rest neither restores lost Hit Points nor reduces the creature's Exhaustion level." + "\n   " + "When the spell is cast, each secondary caster must expend a level 4+ spell slot; otherwise, the spell fails.",
     ],
@@ -3214,7 +3215,7 @@ SpellsList["doomtide"] = {
     compMaterial: "soot and a dried eel",
     duration: "Conc, 1 min",
     save: "Wis",
-    description: "20ft-rad magic Darkness fog; 10ft away/turn; now/cover/enter/end 5d6 Psychic dmg + -1d6 saves to next turn end (1/t/c); s: 1/2 only",
+    description: "20ft-rad Dark. fog; 10ft away/t; now/cover/enter/end 5d6 Psych. dmg, -1d6 saves next EoT (1/t/c); s: 1/2",
     descriptionFull: [
         "You create a 20-foot-radius Sphere of inky fog within range. The fog is magical, Darkness and lasts for the duration or until a strong wind (such as the one created by the Gust of Wind spell) disperses it, ending the spell." + "\n   " + "Each creature in the Sphere when it appears makes a Wisdom saving throw. On a failed save, a creature takes 5d6 Psychic damage and subtracts 1d6 from its saving throws until the end of its next turn. On a successful save, a creature takes half as much damage only. A creature also makes this save when the Sphere moves into its space, when it enters the Sphere, or when it ends its turn inside the Sphere. A creature makes tis save only once per turn." + "\n   " + "The Sphere moves 10 feet away from you at the start of each of your turns." + "\n   " + toUni("Casting as a Circle Spell") + ": " + "Casting this as a Circle spell requires a minimum of five secondary casters. In addition to the spell's usual components, you must provide a special component (a string of three black pearls from Pandemonium), which the spell consumes. The spell's range increases to 1 mile, and its duration increases to until dispelled (no Concentration required). The spell ends early if any caster who participated in this casting contributes to another casting of Doomtide as a Circle Spell." + "\n   " + "When the spell is cast, each secondary caster must expend a level 3+ spell slot; otherwise, the spell fails.",
     ],
@@ -3232,7 +3233,7 @@ SpellsList["elminster's effulgent spheres"] = {
     components: "V,S,M\u0192",
     compMaterial: "an opal worth 1000+ GP",
     duration: "1 hr",
-    description: "6+1/SL spheres; Use 1: Rgnd spell atk 120 ft, 3d6 Acid/Cold/Fire/Lghtn/Thdr, or Rea Resist 1 of those types to next turn",
+    description: "6+1/SL orbs. Use 1: ba R. spell atk 120 ft 3d6 dmg (A/C/F/L/T) or Rea on elem. dmg Resist to next turn",
     descriptionFull: [
         "Six hromatic spheres orbit you for the duration." + "\n   " + "While the spheres are present, you can expend spheres to create the following effects:" + "\n   " + "***Absorb Energy***. When you take Acid, Cold, Fire, Lightning, or Thunder damage, you can take a Reaction to expend one sphere and give yourself Resistance to the triggering damage type until the start of your next turn." + "\n   " + "***Energy Blast***. As a Bonus Action, you send one sphere hurtling toward a target within 120 feet of yourself. Make a ranged spell attack. On a hit, the target takes 3d6 Acid, Cold, Fire, Lightning, or Thunder damage (your choice). Regardless of whether you hit, the sphere is expended." + "\n   " + "The spell ends early if you have no more spheres remaining." + AtHigherLevels + "The number of spheres increases by 1 for every spell slot level above 6.",
     ],
@@ -3249,7 +3250,7 @@ SpellsList["elminster's elusion"] = {
     range: "Self",
     components: "V,S",
     duration: "Conc, 10 min",
-    description: "I have Adv on saves vs spells and magical effects. If I would take half dmg on successful save, I instead take none.",
+    description: "Adv on saves vs spells and magical effects. If I'd take half dmg on successful save, I instead take none.",
     descriptionFull: [
         "Arcane wards protect you against magic for the duration. You have Advantage on saving throws against spells and magical effects. Additionally, if you succeed on a saving throw against a spell or magical effect and would normally take half as much damage, you instead take no damage.",
     ],
@@ -3266,9 +3267,9 @@ SpellsList["holy star of mystra"] = {
     range: "Self",
     components: "V,S",
     duration: "Conc, 1 min",
-    description: "5ft Bright/Dim; 3/4 Cover; Rgnd atk 120 ft: 4d10+mod Force/Radiant dmg; If save vs 1 target spell \u22647th, Rea deflect at caster",
+    description: "5/5ft Br/Dim; 3/4 Cvr; R. atk 120 ft: 4d10+mod Force/Rad. dmg; If save vs 1 targ. spell \u22647th7th, Rea deflect",
     descriptionFull: [
-        "You create a glowing mote of energy that hovers above you for the duration. The mote sheds Bright Light in a 5-foot radius and Dim Light for an additional 5 feet." + "\n   " + "When you cast this spell as a Bonus Action on later turns, you can unleash a shining bolt from the mote, targeting one creature within 120 feet of yourself. Make a ranged spell attack. On a hit, the target takes Force or Radiant damage (your choice) equal to 4d10 plus your spellcasting ability modifier." + "\n   " + "In addition, while the mote is present, you have Three-Quarters Cover, and if you succeed on a saving throw against a spell f level 7 or lower that targeted only you and didn't create an area of effect, you can take a Reaction to deflect that spell back at the spell's caster; th caster makes a saving throw against that spell using that caster's own spell save DC.",
+        "You create a glowing mote of energy that hovers above you for the duration. The mote sheds Bright Light in a 5-foot radius and Dim Light for an additional 5 feet." + "\n   " + "When you cast this spell as a Bonus Action on later turns, you can unleash a shining bolt from the mote, targeting one creature within 120 feet of yourself. Make a ranged spell attack. On a hit, the target takes Force or Radiant damage (your choice) equal to 4d10 plus your spellcasting ability modifier." + "\n   " + "In addition, while the mote is present, you have Three-Quarters Cover, and if you succeed on a saving throw against a spell of level 7 or lower that targeted only you and didn't create an area of effect, you can take a Reaction to deflect that spell back at the spell's caster; the caster makes a saving throw against that spell using that caster's own spell save DC.",
     ],
 };
 SpellsList["laeral's silver lance"] = {
@@ -3302,7 +3303,7 @@ SpellsList["simbul's Synostodweomer"] = {
     range: "Touch",
     components: "V,S",
     duration: "1 hr",
-    description: "When crea casts spell with slot, can expend unused HD equal to slot lvl and regain roll + my spell mod HP.",
+    description: "1 crea. When they cast with a spell slot, can spend slot level unused HD to heal roll + my spell mod HP",
     descriptionFull: [
         "You imbue one creature you touch with magical healing energy for the duration. Whenever the target casts a spell using a spell slot, the target can immediately roll a number of expended Hit Point Dice equal to the spell slot's level and regain Hit Points equal to the roll's total plus your spellcasting ability modifier; those dice are then expended.",
     ],
@@ -3320,7 +3321,7 @@ SpellsList["songal's elemental suffusion"] = {
     components: "V,S,M\u0192",
     compMaterial: "a pearl worth 100+ GP",
     duration: "Conc, 1 min",
-    description: "When crea casts spell with slot, can expend unused HD equal to slot lvl and regain roll + my spell mod HP.",
+    description: "30ft Fly+hover; Resist 1 elem. dmg type; Cast/each turn any crea in 15-ft rad 2d6 dmg (pick A/C/F/L/T)",
     descriptionFull: [
         "You imbue yourself with the elemental power of genies. You gain the following benefits until the spell ends:" + "\n   " + "***Elemental Immunity***. When you cast this spell, choose one of the following damage types: Acid, Cold, Fire, Lightning, or Thunder. You have Resistance to the chosen damage type." + "\n   " + "***Elemental Pulse***. When you cast this spell and at the start of each of your subsequent turns, you release a burst of elemental energy in a 15-foot Emanation originating from yourself. Each creature of your choice in that area makes a Dexterity saving throw. On a failed save, a creature takes 2d6 Acid, Cold, Fire, Lightning, or Thunder damage (your choice) and has the Prone condition. On a successful save, a creature takes half as much damage only." + "\n   " + "***Flight***. You gain a Fly Speed of 30 feet and can hover." + "\n   " + toUni("Casting as a Circle Spell") + ": " + "If the spell is cast as a Circle spell, its casting time increases to 1 minute, and its duration increases to Concentration, up to 10 minutes. For each secondary caster who participates in the casting, you can choose one additional creature, to a maximum of nine additional creatures. The chosen creatures also gain the benefits of the spell for its duration." + "\n   " + "When the spell is cast, each secondary caster must expenda level 2+ spell slot; otherwise, the spell fails.",
     ],
@@ -3337,7 +3338,7 @@ SpellsList["spellfire flare"] = {
     range: "60 ft",
     components: "V,S",
     duration: "Instantaneous",
-    description: "Ranged spell atk, 2d10 Radiant dmg; 1+1/SL bolt same or different target; ignore Half and Three-Quarter Cover",
+    description: "Ranged spell atk, 2d10 Radiant dmg; 1+1/SL bolt same or different target; ignore 1/2 and 3/4 Cover",
     descriptionFull: [
         "You unleash a blast of brilliant fire. Make a ranged spell attack against a target within range; a target gains no benefit from Half Cover or Three-Quarters Cover from this attack roll. On a hit, the target takes 2d10 Radiant damage." + AtHigherLevels + "You create an additional blast for each spell slot level above 1. You can direct the blasts at the same target or at different ones. Make a separate attack roll for each blast.",
     ],
@@ -3355,9 +3356,9 @@ SpellsList["spellfire storm"] = {
     components: "V,S",
     duration: "Conc, 1 min",
     save: "Con",
-    description: "40\xD720ft Cyl. Bright Light; now/enter/end 4d10+1d10/SL Rad. dmg (1/t/c), save 1/2; If cast save or spell fails (keep slot)",
+    description: "40\xD720ft Cyl. Bright; now/enter/end 4d10+1d10/SL Rad. dmg (1/t/c), s: 1/2; If cast, save or fail (keep slot)",
     descriptionFull: [
-        "You conjure a pillar of spellfire in a 20-foot-radius, 20-foot-high Cylinder centered on a point within range. The area of the Cylinder is Bright Light, and each creature in it, when it appears, makes a Constitution saving throw, taking 4d10 Radiant damage on a failed save or half as much damage on a successful one. A creature also makes this save when it enters the spell's area for the first time on a turn or ends its turn there. A creature makes this save only once per turn." + "\n   " + "In addition, whenever a creature in the Cylinder casts a spell, that creature makes a Constitution saving throw. On a failed save, th spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn't expended." + "\n   " + "When you cast this spell, you can designate creatures to be unaffected by it." + "\n   " + toUni("Casting as a Circle Spell") + ": " + "In addition to the spell's usual components, you must provide a special component (a blue star sapphire worth 25000+ GP), which the spell consumes. The spell's range increases to 1 mile, and it no longer requires Concentration. When the spell is cast, each secondary caster must expend a level 3+ spell slot; otherwise, the spell fails." + AtHigherLevels + "The damage increases by 1d10 for every spell slot level above 4." + "\n   " + "The number of secondary casters determines the spell's area of effect and duration, as shown in the table below. The spell ends early if any caster who participated in this casting contributes to another casting of Spellfire Storm as a Circle spell." + "\n   " + "1-3 Secondary Casters, 40-foot-radius, 40-foot-high Cylinder, 1 Hour duration." + "\n   " + "4-6 Secondary Casters, 60-foot-radius, 60-foot-high Cylinder, 8 Hour duration." + "\n   " + "7+ Secondary Casters, 100-foot-radius, 100-foot-high Cylinder, 24 Hour duration.",
+        "You conjure a pillar of spellfire in a 20-foot-radius, 20-foot-high Cylinder centered on a point within range. The area of the Cylinder is Bright Light, and each creature in it, when it appears, makes a Constitution saving throw, taking 4d10 Radiant damage on a failed save or half as much damage on a successful one. A creature also makes this save when it enters the spell's area for the first time on a turn or ends its turn there. A creature makes this save only once per turn." + "\n   " + "In addition, whenever a creature in the Cylinder casts a spell, that creature makes a Constitution saving throw. On a failed save, the spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn't expended." + "\n   " + "When you cast this spell, you can designate creatures to be unaffected by it." + "\n   " + toUni("Casting as a Circle Spell") + ": " + "In addition to the spell's usual components, you must provide a special component (a blue star sapphire worth 25000+ GP), which the spell consumes. The spell's range increases to 1 mile, and it no longer requires Concentration. When the spell is cast, each secondary caster must expend a level 3+ spell slot; otherwise, the spell fails." + AtHigherLevels + "The damage increases by 1d10 for every spell slot level above 4." + "\n   " + "The number of secondary casters determines the spell's area of effect and duration, as shown in the table below. The spell ends early if any caster who participated in this casting contributes to another casting of Spellfire Storm as a Circle spell." + "\n   " + "1-3 Secondary Casters, 40-foot-radius, 40-foot-high Cylinder, 1 Hour duration." + "\n   " + "4-6 Secondary Casters, 60-foot-radius, 60-foot-high Cylinder, 8 Hour duration." + "\n   " + "7+ Secondary Casters, 100-foot-radius, 100-foot-high Cylinder, 24 Hour duration.",
     ],
 };
 SpellsList["syluné's viper"] = {
@@ -3373,7 +3374,7 @@ SpellsList["syluné's viper"] = {
     components: "V,S,M",
     compMaterial: "a snake fang",
     duration: "1 hr",
-    description: "15+5/SL THP. While THP: Climb Speed; Rngd spell atk 50 ft, 1d6+1d6/SL Force dmg + Poisoned to my next turn. P. makes Incapac.",
+    description: "15+5/SL THP. If THP: Climb Spd; R. spell atk 50 ft, 1d6+1d6/SL Force dmg + Incapac. 1 rnd if Poisonable",
     descriptionFull: [
         "A shimmering, spectral snake encircles your body for the duration. You gain 15 Temporary Hit Points; the spell ends early if you have no Temporary Hit Points left." + "\n   " + "While the spell is active, you gain the following benefits:" + "\n   " + "***Climbing***. You gain a Climb Speed equal to your Speed." + "\n   " + "***Venomous Bite***. As a Magic Action, you can make a ranged spell attack using the snake against one creature within 50 feet. On a hit, the target takes 1d6 Force damage and has the Poisoned condition until the start of your next turn. While Poisoned, the target has the Incapacitated condition." + AtHigherLevels + "For each spell slot level above 3, the number of Temporary Hit Points you gain from this spell increases by 5, and the damage of the Venomous Bite increases by 1d6.",
     ],
@@ -3392,7 +3393,7 @@ SpellsList["wardaway"] = {
     compMaterial: "a miniature clay hand",
     duration: "Instantaneous",
     save: "Con",
-    description: "1 crea 2d4+2d4/SL Force dmg, 1/2 Speed to my next turn, can only take Action or Bns on next turn; save half dmg only.",
+    description: "1 crea 2d4+2d4/SL Force dmg, 1/2 Speed for 1 rnd, can only take Action or Bns on next turn; s: 1/2 only",
     descriptionFull: [
         "You hurl a disorienting magical force toward one creature within range. The target makes a Constitution saving throw; Constructs and Undead automatically succeed on this save." + "\n   " + "On a failed save, the target takes 2d4 Force damage, its Speed is halved until the start of your next turn, and on its next turn, it can take only an action or a Bonus Action (but not both). On a successful save, the target takes half as much damage only." + AtHigherLevels + "The damage increases by 2d4 for every spell slot level above 1.",
     ],
