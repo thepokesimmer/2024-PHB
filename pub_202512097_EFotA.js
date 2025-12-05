@@ -956,7 +956,7 @@ legacySubClassRefactor("artificer", "battle smith", {
                     damage: [1, 8, "force"],
                     range: "Melee (5 ft)",
                     description: "",
-                    modifiers: ["", "Int+2"],
+                    modifiers: ["", "oInt+2"],
                     abilitytodamage: false,
                     useSpellMod: "artificer"
                 }, {
@@ -3509,7 +3509,6 @@ FeatsList["greater mark of sentinel"] = {
     name: "Greater Mark of Sentinel",
     source: [
         ["E:FA", 44],
-		["XUA25EU", 14]
     ],
     type: "general",
     prerequisite: "Character Level 4+, Mark of Sentinel Feat",
@@ -3959,9 +3958,6 @@ MagicItemsList["spell-refueling ring"] = {
     name: "Spell-Refueling Ring",
     source: [
 		["E:FA", 112],
-        ["XUA25EU", 9],
-        ["XUA24A", 14],
-        ["T", 23]
     ],
     type: "ring",
     rarity: "uncommon",
