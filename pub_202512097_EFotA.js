@@ -196,7 +196,7 @@ function legacyBackgroundRefactor(bgKey, newBg) {
 legacyClassRefactor("artificer", {
     regExpSearch: /^(?=.*artificer)(?!.*wizard).*$/i,
     name: "Artificer",
-    source: [["E:FA", 0]],
+    source: [["E:FA", 7]],
     primaryAbility: ["Intelligence"],
     abilitySave: 4,
     prereqs: "Intelligence 13",
@@ -248,7 +248,7 @@ legacyClassRefactor("artificer", {
         "spellcasting": {
             name: "Spellcasting",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 7]
             ],
             minlevel: 1,
             additional: levels.map(function(n, idx) {
@@ -298,7 +298,7 @@ legacyClassRefactor("artificer", {
             "don't change component column on spell sheet": {
                 name: "[Meta] Don't alter spell sheets",
                 source: [
-                    ["E:FA", 3]
+                    ["E:FA", 7]
                 ],
                 description: "\n   The automation will not add M\u0192 to each artificer spell on the generated spell sheets"
             },
@@ -306,7 +306,7 @@ legacyClassRefactor("artificer", {
         "tinker's magic": {
             name: "Tinker's Magic",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 8]
             ],
             minlevel: 1,
             description: desc([
@@ -332,7 +332,7 @@ legacyClassRefactor("artificer", {
                 name: "Replicate Magic Item",
                 extraname: "Artificer 2",
                 source: [
-                    ["E:FA", 0]
+                    ["E:FA", 8]
                 ],
                 description: desc([
                     "When I finish a Long Rest, I can create 1 or 2 different magic items from arcane plans using",
@@ -365,7 +365,7 @@ legacyClassRefactor("artificer", {
         "replicate magic item": {
             name: "Replicate Magic Item",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 9]
             ],
             minlevel: 2,
             description: '\n   Use the "Choose Feature" button above to add Magic Items Replicated to the third page',
@@ -383,7 +383,7 @@ legacyClassRefactor("artificer", {
         "subclassfeature3": {
             name: "Artificer Specialist",
             source: [
-                ["E:FA", 4]
+                ["E:FA", 10]
             ],
             minlevel: 3,
             description: desc([
@@ -394,7 +394,7 @@ legacyClassRefactor("artificer", {
         "magic item tinker": {
             name: "Magic Item Tinker",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 10]
             ],
             minlevel: 6,
             description: desc([
@@ -411,7 +411,7 @@ legacyClassRefactor("artificer", {
         "flash of genius": {
             name: "Flash of Genius",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 10]
             ],
             minlevel: 7,
             description: "\n   As a Reaction when I or another I can see in 30 ft fail a check/save, I can add my Int mod to it",
@@ -425,7 +425,7 @@ legacyClassRefactor("artificer", {
         "magic item adept": {
             name: "Magic Item Adept",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 10]
             ],
             minlevel: 10,
             description: "\n   I can attune to more magic items than others can.",
@@ -436,7 +436,7 @@ legacyClassRefactor("artificer", {
         "spell-storing item": {
             name: "Spell-Storing Item",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 11]
             ],
             minlevel: 11,
             description: desc([
@@ -453,7 +453,7 @@ legacyClassRefactor("artificer", {
         "magic item savant": {
             name: "Magic Item Savant",
             source: [
-                ["E:FA", 5]
+                ["E:FA", 11]
             ],
             minlevel: 14,
             description: "\n   I can attune to even more magic items than others can. Additionally, I regain 1 use of Flash of Genius when I finish a Short Rest.",
@@ -461,7 +461,7 @@ legacyClassRefactor("artificer", {
         "epic boon": {
             name: "Epic Boon",
             source: [
-                ["E:FA", 5]
+                ["E:FA", 11]
             ],
             minlevel: 19,
             description: desc([
@@ -471,7 +471,7 @@ legacyClassRefactor("artificer", {
         "soul of artifice": {
             name: "Soul of Artifice",
             source: [
-                ["E:FA", 5]
+                ["E:FA", 11]
             ],
             minlevel: 20,
             description: desc([
@@ -498,7 +498,7 @@ legacySubClassRefactor("artificer", "alchemist", {
     subname: "Alchemist",
     fullname: "Alchemist",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 12]
     ],
     replaces: "alchemist",
     spellcastingExtra: ["healing word", "ray of sickness", "flaming sphere", "melf's acid arrow", "gaseous form", "mass healing word", "death ward", "vitriolic sphere", "cloudkill", "raise dead"],
@@ -506,7 +506,7 @@ legacySubClassRefactor("artificer", "alchemist", {
         "subclassfeature3": {
             name: "Tools of the Trade",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 12]
             ],
             minlevel: 3,
             description: " [proficient with Alchemist's Supplies and Herbalism Kit]\n   I can brew a potion using the DMG (2024) crafting rules in half the normal time.",
@@ -518,7 +518,7 @@ legacySubClassRefactor("artificer", "alchemist", {
         "subclassfeature3.1": {
             name: "Experimental Elixir",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 13]
             ],
             minlevel: 3,
             description: desc([
@@ -554,7 +554,7 @@ legacySubClassRefactor("artificer", "alchemist", {
         "subclassfeature5": {
             name: "Alchemical Savant",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 14]
             ],
             minlevel: 5,
             description: desc([
@@ -585,7 +585,7 @@ legacySubClassRefactor("artificer", "alchemist", {
         "subclassfeature9": {
             name: "Restorative Reagents",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 14]
             ],
             minlevel: 9,
             description: desc([
@@ -612,7 +612,7 @@ legacySubClassRefactor("artificer", "alchemist", {
         "subclassfeature15": {
             name: "Chemical Mastery",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 14]
             ],
             minlevel: 15,
             description: " [each spell 1\xD7 per long rest]" + desc([
@@ -663,7 +663,7 @@ legacySubClassRefactor("artificer", "artillerist", {
     subname: "Artillerist",
     fullname: "Artillerist",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 16]
     ],
     replaces: "artillerist",
     spellcastingExtra: ["shield", "thunderwave", "scorching ray", "shatter", "fireball", "wind wall", "ice storm", "wall of fire", "cone of cold", "wall of force"],
@@ -671,7 +671,7 @@ legacySubClassRefactor("artificer", "artillerist", {
         "subclassfeature3": {
             name: "Tools of the Trade",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 16]
             ],
             minlevel: 3,
             weaponProf: [false, false, ["blowgun", "hand crossbow", "heavy crossbow", "longbow", "musket", "pistol"]],
@@ -681,7 +681,7 @@ legacySubClassRefactor("artificer", "artillerist", {
         "subclassfeature3.1": {
             name: "Eldritch Cannon",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 16]
             ],
             minlevel: 3,
             description: desc([
@@ -708,7 +708,7 @@ legacySubClassRefactor("artificer", "artillerist", {
             creatureOptions: [{
                 name: "Eldritch Cannon",
                 source: [
-                    ["E:FA", 10]
+                    ["E:FA", 16]
                 ],
                 size: [4, 5],
                 type: "Object",
@@ -813,7 +813,7 @@ legacySubClassRefactor("artificer", "artillerist", {
         "subclassfeature5": {
             name: "Arcane Firearm",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 17]
             ],
             minlevel: 5,
             description: " [lasts until I use this feature again]" + desc([
@@ -854,7 +854,7 @@ legacySubClassRefactor("artificer", "artillerist", {
         "subclassfeature9": {
             name: "Explosive Cannon",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 17]
             ],
             minlevel: 9,
             description: "\n   My eldritch cannons deal +1d8 damage; As an action, I can detonate a cannon in 60 ft",
@@ -865,7 +865,7 @@ legacySubClassRefactor("artificer", "artillerist", {
         "subclassfeature15": {
             name: "Fortified Position",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 17]
             ],
             minlevel: 15,
             description: " [cannons grant half cover in 10 ft to allies]" + desc([
@@ -880,7 +880,7 @@ legacySubClassRefactor("artificer", "battle smith", {
     subname: "Battle Smith",
     fullname: "Battle Smith",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 18]
     ],
     replaces: "battle smith",
     spellcastingExtra: ["heroism", "shield", "shining smite", "warding bond", "aura of vitality", "conjure barrage", "aura of purity", "fire shield", "banishing smite", "mass cure wounds"],
@@ -889,7 +889,7 @@ legacySubClassRefactor("artificer", "battle smith", {
         "subclassfeature3": {
             name: "Battle Ready \u0026 Tools of the Trade",
             source: [
-                ["E:FA", 0]
+                ["E:FA", 18]
             ],
             minlevel: 3,
             description: " [proficient with Martial Weapons and Smith's Tools]\n   I can craft nonmagical & magical weapons in half the normal time.",
@@ -909,7 +909,7 @@ legacySubClassRefactor("artificer", "battle smith", {
         "subclassfeature3.1": {
             name: "Steel Defender",
             source: [
-                ["E:FA", 12]
+                ["E:FA", 18]
             ],
             minlevel: 3,
             description: desc([
@@ -929,7 +929,7 @@ legacySubClassRefactor("artificer", "battle smith", {
             creatureOptions: [{
                 name: "Steel Defender",
                 source: [
-                    ["E:FA", 12]
+                    ["E:FA", 18]
                 ],
                 size: 3,
                 type: "Construct",
@@ -1032,7 +1032,7 @@ legacySubClassRefactor("artificer", "battle smith", {
         "subclassfeature9": {
             name: "Arcane Jolt",
             source: [
-                ["E:FA", 12]
+                ["E:FA", 19]
             ],
             minlevel: 9,
             description: function() {
@@ -1066,7 +1066,7 @@ legacySubClassRefactor("artificer", "battle smith", {
         "subclassfeature15": {
             name: "Improved Defender",
             source: [
-                ["E:FA", 12]
+                ["E:FA", 19]
             ],
             minlevel: 15,
             description: desc([
@@ -1081,14 +1081,14 @@ AddSubClass("artificer", "cartographer", {
     subname: "Cartographer",
     fullname: "Cartographer",
     source: [
-        ["E:FA", 6]
+        ["E:FA", 20]
     ],
     spellcastingExtra: ["faerie fire", "guiding bolt", "healing word", "locate object", "mind spike", "call lightning", "clairvoyance", "banishment", "locate creature", "scrying", "teleportation circle"],
     features: {
         "subclassfeature3": {
             name: "Tool of the Trade",
             source: [
-                ["E:FA", 6]
+                ["E:FA", 20]
             ],
             minlevel: 3,
             description: " [proficient with Calligrapher's Supplies \u0026 Cartographer's Tools]\n   I can scribe a spell scroll using the PHB (2024) crafting rules in half the normal time.",
@@ -1100,7 +1100,7 @@ AddSubClass("artificer", "cartographer", {
         "subclassfeature3.1": {
             name: "Adventurer's Atlas",
             source: [
-                ["E:FA", 7]
+                ["E:FA", 20]
             ],
             minlevel: 3,
             description: desc([
@@ -1116,7 +1116,7 @@ AddSubClass("artificer", "cartographer", {
         "subclassfeature3.2": {
             name: "Mapping Magic",
             source: [
-                ["E:FA", 7]
+                ["E:FA", 21]
             ],
             minlevel: 3,
             description: desc([
@@ -1134,7 +1134,7 @@ AddSubClass("artificer", "cartographer", {
         "subclassfeature5": {
             name: "Guided Precision",
             source: [
-                ["E:FA", 7]
+                ["E:FA", 21]
             ],
             minlevel: 5,
             description: desc([
@@ -1146,7 +1146,7 @@ AddSubClass("artificer", "cartographer", {
         "subclassfeature9": {
             name: "Ingenious Movement",
             source: [
-                ["E:FA", 7]
+                ["E:FA", 21]
             ],
             minlevel: 9,
             description: desc([
@@ -1157,7 +1157,7 @@ AddSubClass("artificer", "cartographer", {
         "subclassfeature15": {
             name: "Superior Atlas",
             source: [
-                ["E:FA", 7]
+                ["E:FA", 21]
             ],
             minlevel: 15,
             description: desc([
@@ -1241,7 +1241,7 @@ CompanionList.homunculusservant = {
     nameTooltip: "the Homunculus Servant spell",
     nameOrigin: "2nd-Level Conjuration [ritual] spell",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 21]
     ],
     action: [
         ["reaction", " command (free)"]
@@ -1829,7 +1829,7 @@ BackgroundList["aberrant heir"] = {
     regExpSearch: /^(?=.*aberrant)(?=.*heir).*$/i,
     name: "Aberrant Heir",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 25]
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Strength, Constitution, and Charisma"],
     skills: ["History", "Intimidation"],
@@ -1852,7 +1852,7 @@ BackgroundFeatureList["aberrant heir"] = {
         "Your aberrant dragonmark has made life challenging since it manifested. You might have hidden it successfully for most of your life or managed to avoid notice. Alternatively, you might have encountered suspicion and fear, perhaps coupled with the outright antagonism of one or more dragonmarked houses. You might have formed an association with the House Tarkanan criminal organization (named for one of the most notorious leaders of the aberrant dragonmarked in the War of the Mark twenty-five centuries ago). Or you might sruggle to find your own way in the world, relying on your wits and the power of your mark.",
     ]),
     source: [
-        ["E:FA", 0]
+        ["E:FA", 25]
     ],
     eval: function() {
         AddFeat("Aberrant Dragonmark");
@@ -1865,7 +1865,7 @@ legacyBackgroundRefactor("archaeologist", {
     regExpSearch: /^(?=.*archaeologist).*$/i,
     name: "Archaeologist",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 26]
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Dexterity, Intelligence, and Wisdom"],
     skills: ["History", "Survival"],
@@ -1890,7 +1890,7 @@ BackgroundFeatureList["archaeologist"] = {
         "You’ve made a lifelong study of the lost and fallen cultures of the past, visiting their ruins, deciphering their written records, and examining their surviving masterworks. Perhaps you studied at Morgrave University or a similar institution, supplementing your time in the library with fieldwork amid ancient ruins in remote locations. Some archaeologists plunder the treasures of the past in search of wealth or fame, but most consider it their calling to learn from the past. In any case, the archaeologists of Eberron combine the qualities of learned historians with the grit of treasure hunters.",
     ]),
     source: [
-        ["E:FA", 0]
+        ["E:FA", 26]
     ],
     eval: function() {
         AddFeat("Skilled [Origin]");
@@ -1904,7 +1904,7 @@ legacyBackgroundRefactor("house agent", {
     name: "House Agent",
     replaces: ["agent of house cannith", "agent of house deneith", "agent of house ghallanda", "agent of house jorasco", "agent of house lyrandar", "agent of house medani", "agent of house orien", "agent of house phiarlan", "agent of house sivis", "agent of house tharashk", "agent of house thuranni", "agent of house vadalis"],
     source: [
-        ["E:FA", 0]
+        ["E:FA", 26]
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Strength, Intelligence, and Charisma"],
     skills: ["Investigation", "Persuasion"],
@@ -1925,7 +1925,7 @@ BackgroundFeatureList["house agent"] = {
         "You are connected to one of the dragonmarked houses, but you haven’t (yet) manifested a dragonmark. You might be a member of the family by birth or an employee of the house with no familial connection. You’ve earned your living by doing the business of the house, serving as the hands, feet, and eyes of house leadership in the world. You might have many old friends, mentors, and rivals in the house you serve, plus allies or enemies in other houses.",
     ]),
     source: [
-        ["E:FA", 0]
+        ["E:FA", 26]
     ],
     eval: function() {
         AddFeat("Lucky [Origin]");
@@ -1938,7 +1938,7 @@ BackgroundList["house cannith heir"] = {
     regExpSearch: /^(?=.*cannith)(?=.*heir).*$/i,
     name: "House Cannith Heir",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 27]
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Strength, Dexterity, and Intelligence"],
     skills: ["Investigation", "Sleight of Hand"],
@@ -1961,7 +1961,7 @@ BackgroundFeatureList["house cannith heir"] = {
         "As a scion of House Cannith, you carry a proud legacy. Cannith creates wonders of the modern world, and you’re expected to contribute to the ongoing success of the house through invention, scholarship, business, or diplomacy. The only thing that can stand in your way is the deep rift within your own house. The sooner the three barons sort out which of them is the true head of the house (and you, no doubt, have your preference), the sooner House Cannith can claim its rightful position of leadership among all the dragonmarked houses.",
     ]),
     source: [
-        ["E:FA", 0]
+        ["E:FA", 27]
     ],
     eval: function() {
         AddFeat("Mark of Making [Dragonmark]");
@@ -1974,7 +1974,7 @@ BackgroundList["house deneith heir"] = {
     regExpSearch: /^(?=.*deneith)(?=.*heir).*$/i,
     name: "House Deneith Heir",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 27]
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Strength, Constitution, and Wisdom"],
     skills: ["Insight", "Perception"],
@@ -2000,7 +2000,7 @@ BackgroundFeatureList["house deneith heir"] = {
         "As an heir of House Deneith, you’ve been trained for combat—not to seek it out, but not to shy from it either. You’ve learned the importance of duty, honor, and the laws used to govern society when duty and honor fail. As you established your name in the house, you might have worked as a bodyguard for some minor dignitary, as a mercenary, or as a marshal hunting fugitives. Now you’re prepared to claim your rightful standing in the mightiest of the dragonmarked houses.",
     ]),
     source: [
-        ["E:FA", 0]
+        ["E:FA", 27]
     ],
     eval: function() {
         AddFeat("Mark of Sentinel [Dragonmark]");
@@ -2013,7 +2013,7 @@ BackgroundList["house ghallanda heir"] = {
     regExpSearch: /^(?=.*ghallanda)(?=.*heir).*$/i,
     name: "House Ghallanda Heir",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 28]
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Dexterity, Wisdom, and Charisma"],
     skills: ["Insight", "Persuasion"],
@@ -2037,7 +2037,7 @@ BackgroundFeatureList["house ghallanda heir"] = {
         "Thanks to your connections to House Ghallanda, you grew up accustomed to creature comforts, lively conversation, good drink, and delicious food. You might be a charming and witty scion of the house who loves nothing more than a pleasant evening beside a warm hearth. Or you could be a schemer who exploits bonds of trust and friendship to bend others to your will. You might pursue an adventuring career to master the cuisines of other cultures and ages, expand your network of useful contacts, or earn enough money to open your own inn.",
     ]),
     source: [
-        ["E:FA", 0]
+        ["E:FA", 28]
     ],
     eval: function() {
         AddFeat("Mark of Hospitality [Dragonmark]");
@@ -2050,7 +2050,7 @@ BackgroundList["house jorasco heir"] = {
     regExpSearch: /^(?=.*jorasco)(?=.*heir).*$/i,
     name: "House Jorasco Heir",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 28]
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Dexterity, Constitution, and Wisdom"],
     skills: ["Medicine", "Stealth"],
@@ -2072,7 +2072,7 @@ BackgroundFeatureList["house jorasco heir"] = {
         "House Jorasco teaches that illness and injury stalk the living like ghosts, robbing people of health and longevity. You’ve been taught ways to combat these scourges, both magically and medically. You’re trained to use those skills in the service of others—and to ascertain that you are always appropriately compensated for this service, ensuring the health and longevity of House Jorasco. You might be a kindly healer with no stomach for combat or a dispassionate specialist who knows exactly how to incapacitate or kill an enemy with precise strikes.",
     ]),
     source: [
-        ["E:FA", 0]
+        ["E:FA", 28]
     ],
     eval: function() {
         AddFeat("Mark of Healing [Dragonmark]");
@@ -2085,7 +2085,7 @@ BackgroundList["house kundarak heir"] = {
     regExpSearch: /^(?=.*kundarak)(?=.*heir).*$/i,
     name: "House Kundarak Heir",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 29]
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Strength, Constitution, and Intelligence"],
     skills: ["Arcana", "Investigation"],
@@ -2106,7 +2106,7 @@ BackgroundFeatureList["house kundarak heir"] = {
         "As an heir of House Kundarak, you take great pride in your family and its work of safeguarding the valuables of Khorvaire. Your house has always been a leader among the clans of the Mror Holds. Though it has never held the crown, it has a reputation for professionalism, honor, and order. You might strive to uphold that reputation, you might place your own sense of honor over your family’s, or you could rebel against the house’s expectations and flout the demands of honor.",
     ]),
     source: [
-        ["E:FA", 0]
+        ["E:FA", 29]
     ],
     eval: function() {
         AddFeat("Mark of Warding [Dragonmark]");
@@ -2119,7 +2119,7 @@ BackgroundList["house lyrandar heir"] = {
     regExpSearch: /^(?=.*lyrandar)(?=.*heir).*$/i,
     name: "House Lyrandar Heir",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 29]
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Strength, Dexterity, and Charisma"],
     skills: ["Acrobatics", "Nature"],
@@ -2140,7 +2140,7 @@ BackgroundFeatureList["house lyrandar heir"] = {
         "As an heir of House Lyrandar, the wind is your ally, the sea and sky your dominion. Despite the devastation of the Last War, your house is on the ascendancy, buoyed by its mastery of the new airship technology. You might have spent your early career on the sea as a sailor or navigator; as a shipwright; or as a member of the Raincallers’ Guild, manipulating the weather and assisting with irrigation and similar public works. Or you might have been among the first in your house to take to the skies as part of an airship crew. Service to the house might call you to hunt pirates in the Lhazaar Sea, to explore ancient ruins in search of magical technology to bind elemental forces, or to salvage a wrecked airship in the Mournland.",
     ]),
     source: [
-        ["E:FA", 0]
+        ["E:FA", 29]
     ],
     eval: function() {
         AddFeat("Mark of Storm [Dragonmark]");
@@ -2153,7 +2153,7 @@ BackgroundList["house medani heir"] = {
     regExpSearch: /^(?=.*medani)(?=.*heir).*$/i,
     name: "House Medani Heir",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 30]
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Dexterity, Intelligence, and Wisdom"],
     skills: ["Insight", "Investigation"],
@@ -2174,7 +2174,7 @@ BackgroundFeatureList["house medani heir"] = {
         "As a member of House Medani, your life revolves around subterfuge—not engaging in it, but preventing others from doing so. You see the world around you as an intricate web of schemes, plots, and counterplots. Assessing the range of possibilities, you use instinct to predict threats to your clients and defend against them well before those threats can turn into danger. Defending against an assassin’s blade is a job any Deneith sellsword or Tharashk enforcer can do—making sure no one ever draws that blade is the Medani way.",
     ]),
     source: [
-        ["E:FA", 0]
+        ["E:FA", 30]
     ],
     eval: function() {
         AddFeat("Mark of Detection [Dragonmark]");
@@ -2187,7 +2187,7 @@ BackgroundList["house orien heir"] = {
     regExpSearch: /^(?=.*orien)(?=.*heir).*$/i,
     name: "House Orien Heir",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 30]
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Dexterity, Constitution, and Intelligence"],
     skills: ["Acrobatics", "Athletics"],
@@ -2210,7 +2210,7 @@ BackgroundFeatureList["house orien heir"] = {
         "Before the Last War, Orien’s influence covered Khorvaire, and its trade roads and lightning rails were the lifeblood of a vibrant kingdom. But the war cut those arteries, leaving Galifar dead and House Orien bloodied. While the house’s couriers and shippers still keep goods moving on both sides of the continent, finding a way to reestablish routes across the Mournland remains the house’s top priority. In the meantime, Orien adventurers can serve their house by investigating missing couriers, recovering goods stolen from caravans, and troubleshooting disruptions to the lightning rail.",
     ]),
     source: [
-        ["E:FA", 0]
+        ["E:FA", 30]
     ],
     eval: function() {
         AddFeat("Mark of Passage [Dragonmark]");
@@ -2223,7 +2223,7 @@ BackgroundList["house phiarlan heir"] = {
     regExpSearch: /^(?=.*phiarlan)(?=.*heir).*$/i,
     name: "House Phiarlan Heir",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 31]
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Dexterity, Wisdom, and Charisma"],
     skills: ["Deception", "Stealth"],
@@ -2244,7 +2244,7 @@ BackgroundFeatureList["house Phiarlan heir"] = {
         "Though you have seen wealth, fame, and beauty as a child of House Phiarlan, you consider knowledge (and the power it brings) the greatest treasure of all. You might pursue that power as an artist or performer, always alert for secrets even as you regale the world with story, song, acrobatics, or art. Or you might foster ties to the secretive espionage arm of your house: the Serpentine Table.",
     ]),
     source: [
-        ["E:FA", 0]
+        ["E:FA", 31]
     ],
     eval: function() {
         AddFeat("Mark of Shadow [Dragonmark]");
@@ -2257,7 +2257,7 @@ BackgroundList["house sivis heir"] = {
     regExpSearch: /^(?=.*sivis)(?=.*heir).*$/i,
     name: "House Sivis Heir",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 31]
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Intelligence, Wisdom, and Charisma"],
     skills: ["History", "Perception"],
@@ -2282,7 +2282,7 @@ BackgroundFeatureList["house sivis heir"] = {
         "For nearly thirty centuries, your family has worked to maintain order. Communication is the cord that binds civilization together, and your ancestors settled the disputes of sovereigns and helped the dragonmarked houses find a place in the world. Few people realize the influence House Sivis has had on the shape of the modern age—just as few know how often a royal adviser holds more power than the actual ruler. While the other dragonmarked houses fight for fame and recognition, House Sivis plays a long game of subtle influence behind the scenes, keeping order amid the chaos of unending intrigue.",
     ]),
     source: [
-        ["E:FA", 0]
+        ["E:FA", 31]
     ],
     eval: function() {
         AddFeat("Mark of Scribing [Dragonmark]");
@@ -2295,7 +2295,7 @@ BackgroundList["house tharashk heir"] = {
     regExpSearch: /^(?=.*tharashk)(?=.*heir).*$/i,
     name: "House Tharashk Heir",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 32]
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Constitution, Intelligence, and Wisdom"],
     skills: ["Perception", "Survival"],
@@ -2319,7 +2319,7 @@ BackgroundFeatureList["house tharashk heir"] = {
         "Heirs of other houses lead lives of luxury, but in House Tharashk you learned self-reliance from an early age. What your young house lacks in resources, it makes up for in spirit and determination. Tharashk has a destiny to fulfill, and you have a part in it. Whether in combat or in social interaction, you have learned to play the role of the hunter: study your enemies, exploit their weaknesses, and do whatever it takes to achieve victory.",
     ]),
     source: [
-        ["E:FA", 0]
+        ["E:FA", 32]
     ],
     eval: function() {
         AddFeat("Mark of Finding [Dragonmark]");
@@ -2332,7 +2332,7 @@ BackgroundList["house thuranni heir"] = {
     regExpSearch: /^(?=.*thuranni)(?=.*heir).*$/i,
     name: "House Thurrani Heir",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 32]
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Dexterity, Intelligence, and Charisma"],
     skills: ["Performance", "Stealth"],
@@ -2357,7 +2357,7 @@ BackgroundFeatureList["house thuranni heir"] = {
         "Given House Thuranni’s short history and focus on espionage, its leaders expect you to further the interests of the house at every opportunity. During the house’s formative years as an independent entity, every move you make has been watched closely. This isn’t to say that every Thuranni heir must actively spy at the behest of house elders. But even the house’s most insular artists and artisans must keep up with current political events and pass on or collect information when asked.",
     ]),
     source: [
-        ["E:FA", 0]
+        ["E:FA", 32]
     ],
     eval: function() {
         AddFeat("Mark of Shadow [Dragonmark]");
@@ -2370,7 +2370,7 @@ BackgroundList["house vadalis heir"] = {
     regExpSearch: /^(?=.*vadalis)(?=.*heir).*$/i,
     name: "House Vadalis Heir",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 33]
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Constitution, Wisdom, and Charisma"],
     skills: ["Animal Handling", "Nature"],
@@ -2392,7 +2392,7 @@ BackgroundFeatureList["house vadalis heir"] = {
         "You have grown up with respect for both family and nature. You understand the culture of the Five Nations, but you don’t get drawn into the games of ambition and status that others play. You know the beauty and power inherent in life, the mysteries of birth and death, and the miracles that happen in between. Your insights into the natural world allow you to see through the lies and deception of city folk—and never let on how much of their subterfuge you recognize.",
     ]),
     source: [
-        ["E:FA", 0]
+        ["E:FA", 33]
     ],
     eval: function() {
         AddFeat("Mark of Handling [Dragonmark]");
@@ -2405,7 +2405,7 @@ BackgroundList["inquisitive"] = {
     regExpSearch: /^(?=.*inquisitive).*$/i,
     name: "Inquisitive",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 33]
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Constitution, Intelligence, and Charisma"],
     skills: ["Insight", "Investigation"],
@@ -2429,7 +2429,7 @@ BackgroundFeatureList["inquisitive"] = {
         "You have honed your talents of investigation and deduction—fueled by a boundless curiosity—to explore mysteries, find missing people, recover stolen goods, unearth corruption and conspiracies, and solve crimes. As an inquisitive, you might have pursued freelance work, signed on with an inquisitive agency (perhaps one licensed by a dragonmarked house such as Medani or Tharashk), reported for a broadsheet, or worked for a police force.",
     ]),
     source: [
-        ["E:FA", 0]
+        ["E:FA", 33]
     ],
     eval: function() {
         AddFeat("Alert [Origin]");
@@ -2444,7 +2444,7 @@ legacyRaceRefactor("changeling", {
     name: "Changeling",
     sortname: "Changeling",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 34]
     ],
     plural: "Changelings",
     size: [3, 4],
@@ -2466,7 +2466,7 @@ legacyRaceRefactor("kalashtar", {
     name: "Kalashtar",
     sortname: "Kalashtar",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 35]
     ],
     plural: "Kalashtar",
     size: [3],
@@ -2492,7 +2492,7 @@ legacyRaceRefactor("half-elf", {
     name: "Half-Elf",
     sortname: "Half-Elf",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 36]
     ],
     plural: "Half-Elves",
     size: [3, 4],
@@ -2533,7 +2533,7 @@ legacyRaceRefactor("shifter", {
     name: "Shifter",
     sortname: "Shifter",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 37]
     ],
     plural: "Shifters",
     size: [3, 4],
@@ -2579,7 +2579,7 @@ RaceSubList["shifter-longtooth"] = {
         regExpSearch: /^(?=.*fangs?)(?=.*long)(?=.*(tooth|teeth)).*$/i,
         name: "Longtooth Fangs",
         source: [
-            ["E:FA", 0]
+            ["E:FA", 37]
         ],
         damage: [1, 6, "piercing"],
         description: "Only while shifted; One attack as bonus action",
@@ -2607,7 +2607,7 @@ legacyRaceRefactor("warforged", {
     name: "Warforged",
     sortname: "Warforged",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 38]
     ],
     plural: "Warforged",
     size: [3, 4],
@@ -2638,7 +2638,7 @@ legacyRaceRefactor("warforged", {
 FeatsList["aberrant dragonmark"] = {
     name: "Aberrant Dragonmark",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 39]
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
@@ -2669,7 +2669,7 @@ FeatsList["aberrant dragonmark"] = {
 FeatsList["mark of detection"] = {
     name: "Mark of Detection",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 39]
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
@@ -2704,7 +2704,7 @@ FeatsList["mark of detection"] = {
 FeatsList["mark of finding"] = {
     name: "Mark of Finding",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 39]
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
@@ -2739,7 +2739,7 @@ FeatsList["mark of finding"] = {
 FeatsList["mark of handling"] = {
     name: "Mark of Handling",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 39]
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
@@ -2782,7 +2782,7 @@ FeatsList["mark of handling"] = {
 FeatsList["mark of healing"] = {
     name: "Mark of Healing",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 40]
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
@@ -2817,7 +2817,7 @@ FeatsList["mark of healing"] = {
 FeatsList["mark of hospitality"] = {
     name: "Mark of Hospitality",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 40]
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
@@ -2852,7 +2852,7 @@ FeatsList["mark of hospitality"] = {
 FeatsList["mark of making"] = {
     name: "Mark of Making",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 40]
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
@@ -2890,7 +2890,7 @@ FeatsList["mark of making"] = {
 FeatsList["mark of passage"] = {
     name: "Mark of Passage",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 41]
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
@@ -2928,7 +2928,7 @@ FeatsList["mark of passage"] = {
 FeatsList["mark of scribing"] = {
     name: "Mark of Scribing",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 41]
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
@@ -2968,7 +2968,7 @@ FeatsList["mark of scribing"] = {
 FeatsList["mark of sentinel"] = {
     name: "Mark of Sentinel",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 41]
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
@@ -3001,7 +3001,7 @@ FeatsList["mark of sentinel"] = {
 FeatsList["mark of shadow"] = {
     name: "Mark of Shadow",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 42]
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
@@ -3039,7 +3039,7 @@ FeatsList["mark of shadow"] = {
 FeatsList["mark of storm"] = {
     name: "Mark of Storm",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 42]
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
@@ -3078,7 +3078,7 @@ FeatsList["mark of storm"] = {
 FeatsList["mark of warding"] = {
     name: "Mark of Warding",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 42]
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
@@ -3114,7 +3114,7 @@ FeatsList["mark of warding"] = {
 FeatsList["greater aberrant mark"] = {
     name: "Greater Aberrant Mark",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 43]
     ],
     type: "general",
     prerequisite: "Character Level 4+, Aberrant Dragonmark Feat",
@@ -3134,7 +3134,7 @@ FeatsList["greater aberrant mark"] = {
 FeatsList["greater mark of detection"] = {
     name: "Greater Mark of Detection",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 43]
     ],
     type: "general",
     prerequisite: "Character Level 4+, Mark of Detection Feat",
@@ -3172,7 +3172,7 @@ FeatsList["greater mark of detection"] = {
 FeatsList["greater mark of finding"] = {
     name: "Greater Mark of Finding",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 43]
     ],
     type: "general",
     prerequisite: "Character Level 4+, Mark of Finding Feat",
@@ -3210,7 +3210,7 @@ FeatsList["greater mark of finding"] = {
 FeatsList["greater mark of handling"] = {
     name: "Greater Mark of Handling",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 43]
     ],
     type: "general",
     prerequisite: "Character Level 4+, Mark of Handling Feat",
@@ -3254,7 +3254,7 @@ FeatsList["greater mark of handling"] = {
 FeatsList["greater mark of healing"] = {
     name: "Greater Mark of Healing",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 44]
     ],
     type: "general",
     prerequisite: "Character Level 4+, Mark of Healing Feat",
@@ -3298,7 +3298,7 @@ FeatsList["greater mark of healing"] = {
 FeatsList["greater mark of hospitality"] = {
     name: "Greater Mark of Hospitality",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 44]
     ],
     type: "general",
     prerequisite: "Character Level 4+, Mark of Hospitality Feat",
@@ -3389,7 +3389,7 @@ FeatsList["greater mark of hospitality"] = {
 FeatsList["greater mark of making"] = {
     name: "Greater Mark of Making",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 44]
     ],
     type: "general",
     prerequisite: "Character Level 4+, Mark of Making Feat",
@@ -3427,7 +3427,7 @@ FeatsList["greater mark of making"] = {
 FeatsList["greater mark of passage"] = {
     name: "Greater Mark of Passage",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 44]
     ],
     type: "general",
     prerequisite: "Character Level 4+, Mark of Passage Feat",
@@ -3465,7 +3465,7 @@ FeatsList["greater mark of passage"] = {
 FeatsList["greater mark of scribing"] = {
     name: "Greater Mark of Scribing",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 44]
     ],
     type: "general",
     prerequisite: "Character Level 4+, Mark of Scribing Feat",
@@ -3508,7 +3508,8 @@ FeatsList["greater mark of scribing"] = {
 FeatsList["greater mark of sentinel"] = {
     name: "Greater Mark of Sentinel",
     source: [
-        ["XUA25EU", 14]
+        ["E:FA", 44],
+		["XUA25EU", 14]
     ],
     type: "general",
     prerequisite: "Character Level 4+, Mark of Sentinel Feat",
@@ -3546,7 +3547,7 @@ FeatsList["greater mark of sentinel"] = {
 FeatsList["greater mark of shadow"] = {
     name: "Greater Mark of Shadow",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 45]
     ],
     type: "general",
     prerequisite: "Character Level 4+, Mark of Shadow Feat",
@@ -3584,7 +3585,7 @@ FeatsList["greater mark of shadow"] = {
 FeatsList["greater mark of storm"] = {
     name: "Greater Mark of Storm",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 45]
     ],
     type: "general",
     prerequisite: "Character Level 4+, Mark of Storm Feat",
@@ -3622,7 +3623,7 @@ FeatsList["greater mark of storm"] = {
 FeatsList["greater mark of warding"] = {
     name: "Greater Mark of Warding",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 45]
     ],
     type: "general",
     prerequisite: "Character Level 4+, Mark of Warding Feat",
@@ -3669,7 +3670,7 @@ FeatsList["greater mark of warding"] = {
 FeatsList["potent dragonmark"] = {
     name: "Potent Dragonmark",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 45]
     ],
     prerequisite: "Character Level 4+, Any Dragonmark Feat",
     prereqeval: function(v) {
@@ -3704,7 +3705,7 @@ FeatsList["potent dragonmark"] = {
 FeatsList["boon of siberys"] = {
     name: "Boon of Siberys",
     source: [
-        ["E:FA", 0]
+        ["E:FA", 45]
     ],
     type: "epic boon",
     prerequisite: "Eberron Campaign Setting, Level 19+",
@@ -3957,6 +3958,7 @@ MagicItemsList["returning weapon"] = {
 MagicItemsList["spell-refueling ring"] = {
     name: "Spell-Refueling Ring",
     source: [
+		["E:FA", 112],
         ["XUA25EU", 9],
         ["XUA24A", 14],
         ["T", 23]
@@ -4197,7 +4199,7 @@ RunFunctionAtEnd(function() {
         subname: "Armorer",
         fullname: "Armorer",
         source: [
-            ["E:FA", 0]
+            ["E:FA", 14]
         ],
         replaces: "armorer",
         spellcastingExtra: ["magic missile", "thunderwave", "mirror image", "shatter", "hypnotic pattern", "lightning bolt", "fire shield", "greater invisibility", "passwall", "wall of force"],
@@ -4206,7 +4208,7 @@ RunFunctionAtEnd(function() {
             "subclassfeature3": {
                 name: "Tools of the Trade",
                 source: [
-                    ["E:FA", 0]
+                    ["E:FA", 14]
                 ],
                 minlevel: 3,
                 description: " [proficient with Heavy Armor & Smith's Tools]\n   I can craft nonmagical & magical armor in half the normal time.",
@@ -4216,7 +4218,7 @@ RunFunctionAtEnd(function() {
             "subclassfeature3.1": {
                 name: "Arcane Armor",
                 source: [
-                    ["E:FA", 0]
+                    ["E:FA", 15]
                 ],
                 minlevel: 3,
                 description: " [reverts back if I die or don another armor]" + desc([
@@ -4231,7 +4233,7 @@ RunFunctionAtEnd(function() {
             "subclassfeature3.2": {
                 name: "Armor Model",
                 source: [
-                    ["E:FA", 0]
+                    ["E:FA", 15]
                 ],
                 minlevel: 3,
                 description: desc([
@@ -4280,7 +4282,7 @@ RunFunctionAtEnd(function() {
                     regExpSearch: /^(?=.*force)(?=.*demolisher).*$/i,
                     name: "Force Demolisher",
                     source: [
-                        ["E:FA", 8]
+                        ["E:FA", 15]
                     ],
                     ability: 4,
                     type: "Simple",
@@ -4293,7 +4295,7 @@ RunFunctionAtEnd(function() {
                     regExpSearch: /^(?=.*thunder)(?=.*pulse).*$/i,
                     name: "Thunder Pulse",
                     source: [
-                        ["E:FA", 8]
+                        ["E:FA", 15]
                     ],
                     ability: 4,
                     type: "Simple",
@@ -4306,7 +4308,7 @@ RunFunctionAtEnd(function() {
                     regExpSearch: /^(?=.*lightning)(?=.*launcher).*$/i,
                     name: "Lightning Launcher",
                     source: [
-                        ["E:FA", 8]
+                        ["E:FA", 15]
                     ],
                     ability: 4,
                     type: "Simple",
@@ -4331,7 +4333,7 @@ RunFunctionAtEnd(function() {
             "subclassfeature9": {
                 name: "Improved Armorer",
                 source: [
-                    ["E:FA", 0]
+                    ["E:FA", 15]
                 ],
                 minlevel: 9,
                 description: desc([
@@ -4345,7 +4347,7 @@ RunFunctionAtEnd(function() {
             "subclassfeature15": {
                 name: "Perfected Armor",
                 source: [
-                    ["E:FA", 0]
+                    ["E:FA", 16]
                 ],
                 minlevel: 15,
                 description: desc([
