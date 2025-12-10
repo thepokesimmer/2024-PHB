@@ -2,7 +2,7 @@
 
 *These Scripts are designed to use auto-script size for the character sheet.*
 
-*These Scripts are not designed with Adventure League in mind, for any necessary AL adjustments please see ReadingToskr's AL addon scripts found here.*
+*These Scripts are not designed with Adventure League in mind, for any necessary AL adjustments please see ReadingToskr's AL addon scripts found here. These scripts get added after any of the scripts in this repository as the augment/change these scripts.*
 https://github.com/Ratatoskr589/MPMB-Extra-Script-Code
 
 # 2024-PHB
