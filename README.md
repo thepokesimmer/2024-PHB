@@ -1,4 +1,4 @@
-*To properly add any of the scripts in this repository you must import the all_WotC_pub or all_WotC_pub+UA script to the character sheet first, if you do not have a character sheet with these scripts already included. Once this is done you can add any other auxiliary scripts you wish, adding the scripts in this repository last*
+**To properly add any of the scripts in this repository you must import the all_WotC_pub or all_WotC_pub+UA script to the character sheet first, if you do not have a character sheet with these scripts already included. Once this is done you can add any other auxiliary scripts you wish, adding the scripts in this repository last**
 
 *These Scripts are designed to use auto-script size for the character sheet.*
 
