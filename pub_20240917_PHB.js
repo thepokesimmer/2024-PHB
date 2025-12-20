@@ -8002,7 +8002,7 @@ legacyClassRefactor("warlock", {
                 "Use the 'Choose Feature' button above to add Eldritch Invocations (EI) to the third page. I must meet all prereqs. When I gain a Warlock level I can replace one EI with another unless it's a prereq for another EI I have.",
             ]),
             extraname: "Eldritch Invocation Options",
-            extrachoices: ["Agonizing Blast [Chill Touch] (2+)", "Agonizing Blast [Eldritch Blast] (2+)", "Agonizing Blast [Mind Sliver] (2+)", "Agonizing Blast [Poison Spray] (2+)", "Armor of Shadows", "Ascendant Step (5+)", "Devil's Sight (2+)", "Devouring Blade (PoB, 12+)", "Eldritch Mind", "Eldritch Smite (PoB, 5+)", "Eldritch Spear [Eldritch Blast] (2+)", "Eldritch Spear [Mind Sliver] (2+)", "Eldritch Spear [Poison Spray] (2+)", "Fiendish Vigor (2+)", "Gaze of Two Minds (5+)", "Gift of the Depths (5+)", "Gift of the Protectors (PoT, 9+)", "Investment of the Chain Master (PoC, 5+)", "Lessons of the First Ones (2+)", "Lifedrinker (PoB, 9+)", "Mask of Many Faces (2+)", "Master of Myriad Forms (5+)", "Misty Visions (2+)", "One with Shadows (5+)", "Otherworldly Leap (2+)", "Pact of the Blade", "Pact of the Chain", "Pact of the Tome", "Repelling Blast [Chill Touch] (2+)", "Repelling Blast [Eldritch Blast] (2+)", "Repelling Blast [Poison Spray] (2+)", "Thirsting Blade (PoB, 5+)", "Visions of Distant Realms (9+)", "Whispers of the Grave (7+)", "Witch Sight (15+)"],
+            extrachoices: ["Agonizing Blast [Chill Touch] (2+)", "Agonizing Blast [Eldritch Blast] (2+)", "Agonizing Blast [Mind Sliver] (2+)", "Agonizing Blast [Poison Spray] (2+)", "Agonizing Blast [True Strike] (2+)", "Armor of Shadows", "Ascendant Step (5+)", "Devil's Sight (2+)", "Devouring Blade (PoB, 12+)", "Eldritch Mind", "Eldritch Smite (PoB, 5+)", "Eldritch Spear [Eldritch Blast] (2+)", "Eldritch Spear [Mind Sliver] (2+)", "Eldritch Spear [Poison Spray] (2+)", "Fiendish Vigor (2+)", "Gaze of Two Minds (5+)", "Gift of the Depths (5+)", "Gift of the Protectors (PoT, 9+)", "Investment of the Chain Master (PoC, 5+)", "Lessons of the First Ones (2+)", "Lifedrinker (PoB, 9+)", "Mask of Many Faces (2+)", "Master of Myriad Forms (5+)", "Misty Visions (2+)", "One with Shadows (5+)", "Otherworldly Leap (2+)", "Pact of the Blade", "Pact of the Chain", "Pact of the Tome", "Repelling Blast [Chill Touch] (2+)", "Repelling Blast [Eldritch Blast] (2+)", "Repelling Blast [Poison Spray] (2+)", "Repelling Blast [True Strike] (2+)", "Thirsting Blade (PoB, 5+)", "Visions of Distant Realms (9+)", "Whispers of the Grave (7+)", "Witch Sight (15+)"],
             extraTimes: [1, 3, 3, 3, 5, 5, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 9, 10, 10, 10],
 
             "agonizing blast [chill touch] (2+)": {
@@ -8021,7 +8021,7 @@ legacyClassRefactor("warlock", {
                     spellAdd: [
                         function(spellKey, spellObj, spName) {
                             if (spellKey == "chill touch") {
-                                spellObj.description = spellObj.description.replace("1d10 Necrotic dmg", "1d10+" + What("Cha Mod") + " Necrotic dmg");
+                                spellObj.description = spellObj.description.replace(" Necrotic", "+" + What("Cha Mod") + " Necrotic");
                                 return true;
                             }
                         },
@@ -8075,7 +8075,7 @@ legacyClassRefactor("warlock", {
                     spellAdd: [
                         function(spellKey, spellObj, spName) {
                             if (spellKey == "mind sliver") {
-                                spellObj.description = spellObj.description.replace("1d6 Psychic dmg", "1d6+" + What("Cha Mod") + " Psychic dmg");
+                                spellObj.description = spellObj.description.replace(" Psychic", "+" + What("Cha Mod") + " Psychic");
                                 return true;
                             }
                         },
@@ -8102,7 +8102,7 @@ legacyClassRefactor("warlock", {
                     spellAdd: [
                         function(spellKey, spellObj, spName) {
                             if (spellKey == "poison spray") {
-                                spellObj.description = spellObj.description.replace("1d12 Poison dmg", "1d12+" + What("Cha Mod") + " Poison dmg");
+                                spellObj.description = spellObj.description.replace(" Poison", "+" + What("Cha Mod") + " Poison");
                                 return true;
                             }
                         },
@@ -8111,6 +8111,33 @@ legacyClassRefactor("warlock", {
                 },
                 description: desc([
                     "I add my Charisma modifier to the damage of my Poison Spray Cantrip.",
+                ]),
+            },
+			"agonizing blast [true strike] (2+)": {
+                name: "Agonizing Blast [True Strike] (2+)",
+                prereqeval: function(v) {
+                    return classes.known.warlock.level >= 2 && isSpellUsed('true strike', true);
+                },
+                submenu: "[improves Damaging Cantrips]",
+                calcChanges: {
+                    atkCalc: [
+                        function(fields, v, output) {
+                            if (v.baseWeaponName == 'true strike') output.extraDmg += What('Cha Mod');
+                        },
+                        "I add my Charisma modifier to the damage of my True Strike cantrip."
+                    ],
+                    spellAdd: [
+                        function(spellKey, spellObj, spName) {
+                            if (spellKey == "true strike") {
+                                spellObj.description = spellObj.description.replace(" Radiant.", "+" + What("Cha Mod") + " Radiant.");
+                                return true;
+                            }
+                        },
+                        "I add my Charisma modifier to the damage of my True Strike cantrip."
+                    ]
+                },
+                description: desc([
+                    "I add my Charisma modifier to the damage of my True Strike Cantrip.",
                 ]),
             },
             "armor of shadows": {
@@ -8553,14 +8580,12 @@ legacyClassRefactor("warlock", {
                     ],
                     spellAdd: [
                         function(spellKey, spellObj, spName) {
-                            if (spellKey == 'chill touch') {
-                                spellObj.description = "Melee spell attack for 1d10 Necrotic dmg \u0026 push 10 ft; can't regain HP; +1d10 at CL 5, 11, and 17";
-                                spellObj.descriptionShorter = "Melee spell attack for 1d10 Necrotic dmg \u0026 push 10 ft; can't regain HP; +1d10 at CL 5/11/17";
-                                spellObj.descriptionCantripDie = "Melee spell attack for `CD`d10 Necrotic dmg \u0026 push 10 ft; can't regain HP";
+                            if (spellKey == "chill touch") {
+                                spellObj.description = spellObj.description.replace("Necrotic;", "Necrotic \u0026 push 10 ft;");
+                                return true;
                             }
                         },
-                        "When I hit a Large or smaller creature with Chill Touch, I can push the creature up to 10 feet straight away from me.",
-                        51
+                        "I add my Charisma modifier to the damage of my Chill Touch cantrip."
                     ]
                 },
                 description: desc([
@@ -8613,17 +8638,44 @@ legacyClassRefactor("warlock", {
                     ],
                     spellAdd: [
                         function(spellKey, spellObj, spName) {
-                            if (spellKey == 'poison spray') {
-                                spellObj.description = "Spell attack for 1d12 Poison dmg \u0026 push 10 ft; +1d12 at CL 5, 11, and 17";
-                                spellObj.descriptionCantripDie = "Spell attack for `CD`d12 Poison dmg \u0026 push 10 ft";
+                            if (spellKey == "poison spray") {
+                                spellObj.description = spellObj.description.replace("Poison damage", "Poison damage \u0026 push 10 ft");
+                                return true;
                             }
                         },
-                        "When I hit a Large or smaller creature with Poison Spray, I can push the creature up to 10 feet straight away from me.",
-                        51
+                        "I add my Charisma modifier to the damage of my Poison Spray cantrip."
                     ]
                 },
                 description: desc([
                     "When I hit a Large or smaller creature with Poison Spray, I can push the creature up to 10 feet straight away from me.",
+                ]),
+            },
+			"repelling blast [true strike] (2+)": {
+                name: "Repelling Blast [True Strike] (2+)",
+                prereqeval: function(v) {
+                    return classes.known.warlock.level >= 2 && isSpellUsed('true strike', true);
+                },
+                submenu: "[improves Damaging Cantrips]",
+                calcChanges: {
+                    atkAdd: [
+                        function(fields, v) {
+                            if (v.baseWeaponName == 'true strike') fields.Description += '; Target pushed back 10 ft';
+                        },
+                        "When I hit a Large or smaller creature with True Strike, I can push the creature up to 10 feet straight away from me.",
+                        51
+                    ],
+					spellAdd: [
+                        function(spellKey, spellObj, spName) {
+                            if (spellKey == "true strike") {
+                                spellObj.description = spellObj.description.replace("Radiant dmg,", "Radiant dmg \u0026 push 10 ft,");
+                                return true;
+                            }
+                        },
+                        "I add my Charisma modifier to the damage of my True Strike cantrip."
+                    ]
+                },
+                description: desc([
+                    "When I hit a Large or smaller creature with True Strike, I can push the creature up to 10 feet straight away from me.",
                 ]),
             },
             "thirsting blade (pob, 5+)": {
@@ -23082,7 +23134,7 @@ legacySpellRefactor("true strike", {
     duration: "Instantaneous",
     description: "Atk with prof. weapon using spell ability; deal weapon or Radiant dmg; +1d6 Radiant at CL 5, 11 \u0026 17",
     descriptionFull: "Guided by a flash of magical insight, you make one attack with the weapon used in the spell's casting. The attack uses your spellcasting ability for the attack and damage rolls instead of using Strength or Dexterity. If the attack deals damage, it can be Radiant damage or the weapon's normal damage type (your choice)." + "\n   " + toUni("Cantrip Upgrade") + ". Whether you deal Radiant damage or the weapon's normal damage type, the attack deals extra Radiant damage when you reach levels 5 (1d6), 11 (2d6), and 17 (3d6).",
-    descriptionCantripDie: "Atk with prof. weapon using spell ability; deal weapon or Radiant dmg, +`CD-1`d6 Radiant",
+    descriptionCantripDie: "Atk with prof. weapon using spell ability; deal weapon or Radiant dmg, +`CD-1`d6 Radiant.",
 });
 legacySpellRefactor("tsunami", {
     name: "Tsunami",
