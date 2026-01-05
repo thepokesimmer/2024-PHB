@@ -8314,6 +8314,17 @@ legacyClassRefactor("warlock", {
                 description: desc([
                     "I can cast False Life on myself without expending a spell slot. When I cast the spell with this feature, I don't roll the die for the Temporary Hit Points; I automatically get the highest number on the die.",
                 ]),
+				calcChanges: {
+                    spellAdd: [
+                        function(spellKey, spellObj, spName) {
+                            if (spellKey == 'false life') {
+                                spellObj.description = "I gain 8+4+5/SL temporary hit points.";
+                            }
+                        },
+                        "I can cast False Life on myself I don't roll the die for the Temporary Hit Points; I automatically get the highest number on the die.",
+                        51
+                    ]
+                },
             },
             "gaze of two minds (5+)": {
                 name: "Gaze of Two Minds (5+)",
