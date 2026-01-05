@@ -1848,9 +1848,7 @@ BackgroundList["aberrant heir"] = {
     feature: "Aberrant Heir",
 };
 BackgroundFeatureList["aberrant heir"] = {
-    description: desc([
-        "Your aberrant dragonmark has made life challenging since it manifested. You might have hidden it successfully for most of your life or managed to avoid notice. Alternatively, you might have encountered suspicion and fear, perhaps coupled with the outright antagonism of one or more dragonmarked houses. You might have formed an association with the House Tarkanan criminal organization (named for one of the most notorious leaders of the aberrant dragonmarked in the War of the Mark twenty-five centuries ago). Or you might sruggle to find your own way in the world, relying on your wits and the power of your mark.",
-    ]),
+    description: "Your aberrant dragonmark has made life challenging since it manifested. You might have hidden it successfully for most of your life or managed to avoid notice. Alternatively, you might have encountered suspicion and fear, perhaps coupled with the outright antagonism of one or more dragonmarked houses. You might have formed an association with the House Tarkanan criminal organization (named for one of the most notorious leaders of the aberrant dragonmarked in the War of the Mark twenty-five centuries ago). Or you might sruggle to find your own way in the world, relying on your wits and the power of your mark.",
     source: [
         ["E:FA", 0]
     ],
@@ -1886,9 +1884,7 @@ legacyBackgroundRefactor("archaeologist", {
     feature: "Archaeologist",
 });
 BackgroundFeatureList["archaeologist"] = {
-    description: desc([
-        "You’ve made a lifelong study of the lost and fallen cultures of the past, visiting their ruins, deciphering their written records, and examining their surviving masterworks. Perhaps you studied at Morgrave University or a similar institution, supplementing your time in the library with fieldwork amid ancient ruins in remote locations. Some archaeologists plunder the treasures of the past in search of wealth or fame, but most consider it their calling to learn from the past. In any case, the archaeologists of Eberron combine the qualities of learned historians with the grit of treasure hunters.",
-    ]),
+    description: "You’ve made a lifelong study of the lost and fallen cultures of the past, visiting their ruins, deciphering their written records, and examining their surviving masterworks. Perhaps you studied at Morgrave University or a similar institution, supplementing your time in the library with fieldwork amid ancient ruins in remote locations. Some archaeologists plunder the treasures of the past in search of wealth or fame, but most consider it their calling to learn from the past. In any case, the archaeologists of Eberron combine the qualities of learned historians with the grit of treasure hunters.",
     source: [
         ["E:FA", 0]
     ],
@@ -1921,9 +1917,7 @@ legacyBackgroundRefactor("house agent", {
     feature: "house Agent",
 });
 BackgroundFeatureList["house agent"] = {
-    description: desc([
-        "You are connected to one of the dragonmarked houses, but you haven’t (yet) manifested a dragonmark. You might be a member of the family by birth or an employee of the house with no familial connection. You’ve earned your living by doing the business of the house, serving as the hands, feet, and eyes of house leadership in the world. You might have many old friends, mentors, and rivals in the house you serve, plus allies or enemies in other houses.",
-    ]),
+    description: "You are connected to one of the dragonmarked houses, but you haven’t (yet) manifested a dragonmark. You might be a member of the family by birth or an employee of the house with no familial connection. You’ve earned your living by doing the business of the house, serving as the hands, feet, and eyes of house leadership in the world. You might have many old friends, mentors, and rivals in the house you serve, plus allies or enemies in other houses.",
     source: [
         ["E:FA", 0]
     ],
@@ -1957,14 +1951,12 @@ BackgroundList["house cannith heir"] = {
     feature: "House Cannith Heir",
 };
 BackgroundFeatureList["house cannith heir"] = {
-    description: desc([
-        "As a scion of House Cannith, you carry a proud legacy. Cannith creates wonders of the modern world, and you’re expected to contribute to the ongoing success of the house through invention, scholarship, business, or diplomacy. The only thing that can stand in your way is the deep rift within your own house. The sooner the three barons sort out which of them is the true head of the house (and you, no doubt, have your preference), the sooner House Cannith can claim its rightful position of leadership among all the dragonmarked houses.",
-    ]),
+    description: "As a scion of House Cannith, you carry a proud legacy. Cannith creates wonders of the modern world, and you’re expected to contribute to the ongoing success of the house through invention, scholarship, business, or diplomacy. The only thing that can stand in your way is the deep rift within your own house. The sooner the three barons sort out which of them is the true head of the house (and you, no doubt, have your preference), the sooner House Cannith can claim its rightful position of leadership among all the dragonmarked houses.",
     source: [
         ["E:FA", 0]
     ],
     eval: function() {
-        AddFeat("Mark of Making [Dragonmark]");
+        AddFeat("Mark of Making");
     },
     removeeval: function() {
         RemoveFeat("Mark of Making [Dragonmark]");
@@ -1996,14 +1988,12 @@ BackgroundList["house deneith heir"] = {
     feature: "House Deneith Heir",
 };
 BackgroundFeatureList["house deneith heir"] = {
-    description: desc([
-        "As an heir of House Deneith, you’ve been trained for combat—not to seek it out, but not to shy from it either. You’ve learned the importance of duty, honor, and the laws used to govern society when duty and honor fail. As you established your name in the house, you might have worked as a bodyguard for some minor dignitary, as a mercenary, or as a marshal hunting fugitives. Now you’re prepared to claim your rightful standing in the mightiest of the dragonmarked houses.",
-    ]),
+    description: "As an heir of House Deneith, you’ve been trained for combat—not to seek it out, but not to shy from it either. You’ve learned the importance of duty, honor, and the laws used to govern society when duty and honor fail. As you established your name in the house, you might have worked as a bodyguard for some minor dignitary, as a mercenary, or as a marshal hunting fugitives. Now you’re prepared to claim your rightful standing in the mightiest of the dragonmarked houses.",
     source: [
         ["E:FA", 0]
     ],
     eval: function() {
-        AddFeat("Mark of Sentinel [Dragonmark]");
+        AddFeat("Mark of Sentinel");
     },
     removeeval: function() {
         RemoveFeat("Mark of Sentinel [Dragonmark]");
@@ -2033,14 +2023,12 @@ BackgroundList["house ghallanda heir"] = {
     feature: "House Ghallanda Heir",
 };
 BackgroundFeatureList["house ghallanda heir"] = {
-    description: desc([
-        "Thanks to your connections to House Ghallanda, you grew up accustomed to creature comforts, lively conversation, good drink, and delicious food. You might be a charming and witty scion of the house who loves nothing more than a pleasant evening beside a warm hearth. Or you could be a schemer who exploits bonds of trust and friendship to bend others to your will. You might pursue an adventuring career to master the cuisines of other cultures and ages, expand your network of useful contacts, or earn enough money to open your own inn.",
-    ]),
+    description: "Thanks to your connections to House Ghallanda, you grew up accustomed to creature comforts, lively conversation, good drink, and delicious food. You might be a charming and witty scion of the house who loves nothing more than a pleasant evening beside a warm hearth. Or you could be a schemer who exploits bonds of trust and friendship to bend others to your will. You might pursue an adventuring career to master the cuisines of other cultures and ages, expand your network of useful contacts, or earn enough money to open your own inn.",
     source: [
         ["E:FA", 0]
     ],
     eval: function() {
-        AddFeat("Mark of Hospitality [Dragonmark]");
+        AddFeat("Mark of Hospitality");
     },
     removeeval: function() {
         RemoveFeat("Mark of Hospitality [Dragonmark]");
@@ -2068,14 +2056,12 @@ BackgroundList["house jorasco heir"] = {
     feature: "House Jorasco Heir",
 };
 BackgroundFeatureList["house jorasco heir"] = {
-    description: desc([
-        "House Jorasco teaches that illness and injury stalk the living like ghosts, robbing people of health and longevity. You’ve been taught ways to combat these scourges, both magically and medically. You’re trained to use those skills in the service of others—and to ascertain that you are always appropriately compensated for this service, ensuring the health and longevity of House Jorasco. You might be a kindly healer with no stomach for combat or a dispassionate specialist who knows exactly how to incapacitate or kill an enemy with precise strikes.",
-    ]),
+    description: "House Jorasco teaches that illness and injury stalk the living like ghosts, robbing people of health and longevity. You’ve been taught ways to combat these scourges, both magically and medically. You’re trained to use those skills in the service of others—and to ascertain that you are always appropriately compensated for this service, ensuring the health and longevity of House Jorasco. You might be a kindly healer with no stomach for combat or a dispassionate specialist who knows exactly how to incapacitate or kill an enemy with precise strikes.",
     source: [
         ["E:FA", 0]
     ],
     eval: function() {
-        AddFeat("Mark of Healing [Dragonmark]");
+        AddFeat("Mark of Healing");
     },
     removeeval: function() {
         RemoveFeat("Mark of Healing [Dragonmark]");
@@ -2102,14 +2088,12 @@ BackgroundList["house kundarak heir"] = {
     feature: "House Kundarak Heir",
 };
 BackgroundFeatureList["house kundarak heir"] = {
-    description: desc([
-        "As an heir of House Kundarak, you take great pride in your family and its work of safeguarding the valuables of Khorvaire. Your house has always been a leader among the clans of the Mror Holds. Though it has never held the crown, it has a reputation for professionalism, honor, and order. You might strive to uphold that reputation, you might place your own sense of honor over your family’s, or you could rebel against the house’s expectations and flout the demands of honor.",
-    ]),
+    description: "As an heir of House Kundarak, you take great pride in your family and its work of safeguarding the valuables of Khorvaire. Your house has always been a leader among the clans of the Mror Holds. Though it has never held the crown, it has a reputation for professionalism, honor, and order. You might strive to uphold that reputation, you might place your own sense of honor over your family’s, or you could rebel against the house’s expectations and flout the demands of honor.",
     source: [
         ["E:FA", 0]
     ],
     eval: function() {
-        AddFeat("Mark of Warding [Dragonmark]");
+        AddFeat("Mark of Warding");
     },
     removeeval: function() {
         RemoveFeat("Mark of Warding [Dragonmark]");
@@ -2136,14 +2120,12 @@ BackgroundList["house lyrandar heir"] = {
     feature: "House Lyrandar Heir",
 };
 BackgroundFeatureList["house lyrandar heir"] = {
-    description: desc([
-        "As an heir of House Lyrandar, the wind is your ally, the sea and sky your dominion. Despite the devastation of the Last War, your house is on the ascendancy, buoyed by its mastery of the new airship technology. You might have spent your early career on the sea as a sailor or navigator; as a shipwright; or as a member of the Raincallers’ Guild, manipulating the weather and assisting with irrigation and similar public works. Or you might have been among the first in your house to take to the skies as part of an airship crew. Service to the house might call you to hunt pirates in the Lhazaar Sea, to explore ancient ruins in search of magical technology to bind elemental forces, or to salvage a wrecked airship in the Mournland.",
-    ]),
+    description: "As an heir of House Lyrandar, the wind is your ally, the sea and sky your dominion. Despite the devastation of the Last War, your house is on the ascendancy, buoyed by its mastery of the new airship technology. You might have spent your early career on the sea as a sailor or navigator; as a shipwright; or as a member of the Raincallers’ Guild, manipulating the weather and assisting with irrigation and similar public works. Or you might have been among the first in your house to take to the skies as part of an airship crew. Service to the house might call you to hunt pirates in the Lhazaar Sea, to explore ancient ruins in search of magical technology to bind elemental forces, or to salvage a wrecked airship in the Mournland.",
     source: [
         ["E:FA", 0]
     ],
     eval: function() {
-        AddFeat("Mark of Storm [Dragonmark]");
+        AddFeat("Mark of Storm");
     },
     removeeval: function() {
         RemoveFeat("Mark of Storm [Dragonmark]");
@@ -2170,14 +2152,12 @@ BackgroundList["house medani heir"] = {
     feature: "House Medani Heir",
 };
 BackgroundFeatureList["house medani heir"] = {
-    description: desc([
-        "As a member of House Medani, your life revolves around subterfuge—not engaging in it, but preventing others from doing so. You see the world around you as an intricate web of schemes, plots, and counterplots. Assessing the range of possibilities, you use instinct to predict threats to your clients and defend against them well before those threats can turn into danger. Defending against an assassin’s blade is a job any Deneith sellsword or Tharashk enforcer can do—making sure no one ever draws that blade is the Medani way.",
-    ]),
+    description: "As a member of House Medani, your life revolves around subterfuge—not engaging in it, but preventing others from doing so. You see the world around you as an intricate web of schemes, plots, and counterplots. Assessing the range of possibilities, you use instinct to predict threats to your clients and defend against them well before those threats can turn into danger. Defending against an assassin’s blade is a job any Deneith sellsword or Tharashk enforcer can do—making sure no one ever draws that blade is the Medani way.",
     source: [
         ["E:FA", 0]
     ],
     eval: function() {
-        AddFeat("Mark of Detection [Dragonmark]");
+        AddFeat("Mark of Detection");
     },
     removeeval: function() {
         RemoveFeat("Mark of Detection [Dragonmark]");
@@ -2206,14 +2186,12 @@ BackgroundList["house orien heir"] = {
     feature: "House Orien Heir",
 };
 BackgroundFeatureList["house orien heir"] = {
-    description: desc([
-        "Before the Last War, Orien’s influence covered Khorvaire, and its trade roads and lightning rails were the lifeblood of a vibrant kingdom. But the war cut those arteries, leaving Galifar dead and House Orien bloodied. While the house’s couriers and shippers still keep goods moving on both sides of the continent, finding a way to reestablish routes across the Mournland remains the house’s top priority. In the meantime, Orien adventurers can serve their house by investigating missing couriers, recovering goods stolen from caravans, and troubleshooting disruptions to the lightning rail.",
-    ]),
+    description: "Before the Last War, Orien’s influence covered Khorvaire, and its trade roads and lightning rails were the lifeblood of a vibrant kingdom. But the war cut those arteries, leaving Galifar dead and House Orien bloodied. While the house’s couriers and shippers still keep goods moving on both sides of the continent, finding a way to reestablish routes across the Mournland remains the house’s top priority. In the meantime, Orien adventurers can serve their house by investigating missing couriers, recovering goods stolen from caravans, and troubleshooting disruptions to the lightning rail.",
     source: [
         ["E:FA", 0]
     ],
     eval: function() {
-        AddFeat("Mark of Passage [Dragonmark]");
+        AddFeat("Mark of Passage");
     },
     removeeval: function() {
         RemoveFeat("Mark of Passage [Dragonmark]");
@@ -2240,14 +2218,12 @@ BackgroundList["house phiarlan heir"] = {
     feature: "House Phiarlan Heir",
 };
 BackgroundFeatureList["house Phiarlan heir"] = {
-    description: desc([
-        "Though you have seen wealth, fame, and beauty as a child of House Phiarlan, you consider knowledge (and the power it brings) the greatest treasure of all. You might pursue that power as an artist or performer, always alert for secrets even as you regale the world with story, song, acrobatics, or art. Or you might foster ties to the secretive espionage arm of your house: the Serpentine Table.",
-    ]),
+    description: "Though you have seen wealth, fame, and beauty as a child of House Phiarlan, you consider knowledge (and the power it brings) the greatest treasure of all. You might pursue that power as an artist or performer, always alert for secrets even as you regale the world with story, song, acrobatics, or art. Or you might foster ties to the secretive espionage arm of your house: the Serpentine Table.",
     source: [
         ["E:FA", 0]
     ],
     eval: function() {
-        AddFeat("Mark of Shadow [Dragonmark]");
+        AddFeat("Mark of Shadow");
     },
     removeeval: function() {
         RemoveFeat("Mark of Shadow [Dragonmark]");
@@ -2278,14 +2254,12 @@ BackgroundList["house sivis heir"] = {
     feature: "House Sivis Heir",
 };
 BackgroundFeatureList["house sivis heir"] = {
-    description: desc([
-        "For nearly thirty centuries, your family has worked to maintain order. Communication is the cord that binds civilization together, and your ancestors settled the disputes of sovereigns and helped the dragonmarked houses find a place in the world. Few people realize the influence House Sivis has had on the shape of the modern age—just as few know how often a royal adviser holds more power than the actual ruler. While the other dragonmarked houses fight for fame and recognition, House Sivis plays a long game of subtle influence behind the scenes, keeping order amid the chaos of unending intrigue.",
-    ]),
+    description: "For nearly thirty centuries, your family has worked to maintain order. Communication is the cord that binds civilization together, and your ancestors settled the disputes of sovereigns and helped the dragonmarked houses find a place in the world. Few people realize the influence House Sivis has had on the shape of the modern age—just as few know how often a royal adviser holds more power than the actual ruler. While the other dragonmarked houses fight for fame and recognition, House Sivis plays a long game of subtle influence behind the scenes, keeping order amid the chaos of unending intrigue.",
     source: [
         ["E:FA", 0]
     ],
     eval: function() {
-        AddFeat("Mark of Scribing [Dragonmark]");
+        AddFeat("Mark of Scribing");
     },
     removeeval: function() {
         RemoveFeat("Mark of Scribing [Dragonmark]");
@@ -2315,14 +2289,12 @@ BackgroundList["house tharashk heir"] = {
     feature: "House Tharashk Heir",
 };
 BackgroundFeatureList["house tharashk heir"] = {
-    description: desc([
-        "Heirs of other houses lead lives of luxury, but in House Tharashk you learned self-reliance from an early age. What your young house lacks in resources, it makes up for in spirit and determination. Tharashk has a destiny to fulfill, and you have a part in it. Whether in combat or in social interaction, you have learned to play the role of the hunter: study your enemies, exploit their weaknesses, and do whatever it takes to achieve victory.",
-    ]),
+    description: "Heirs of other houses lead lives of luxury, but in House Tharashk you learned self-reliance from an early age. What your young house lacks in resources, it makes up for in spirit and determination. Tharashk has a destiny to fulfill, and you have a part in it. Whether in combat or in social interaction, you have learned to play the role of the hunter: study your enemies, exploit their weaknesses, and do whatever it takes to achieve victory.",
     source: [
         ["E:FA", 0]
     ],
     eval: function() {
-        AddFeat("Mark of Finding [Dragonmark]");
+        AddFeat("Mark of Finding");
     },
     removeeval: function() {
         RemoveFeat("Mark of Finding [Dragonmark]");
@@ -2353,14 +2325,12 @@ BackgroundList["house thuranni heir"] = {
     feature: "House Thuranni Heir",
 };
 BackgroundFeatureList["house thuranni heir"] = {
-    description: desc([
-        "Given House Thuranni’s short history and focus on espionage, its leaders expect you to further the interests of the house at every opportunity. During the house’s formative years as an independent entity, every move you make has been watched closely. This isn’t to say that every Thuranni heir must actively spy at the behest of house elders. But even the house’s most insular artists and artisans must keep up with current political events and pass on or collect information when asked.",
-    ]),
+    description: "Given House Thuranni’s short history and focus on espionage, its leaders expect you to further the interests of the house at every opportunity. During the house’s formative years as an independent entity, every move you make has been watched closely. This isn’t to say that every Thuranni heir must actively spy at the behest of house elders. But even the house’s most insular artists and artisans must keep up with current political events and pass on or collect information when asked.",
     source: [
         ["E:FA", 0]
     ],
     eval: function() {
-        AddFeat("Mark of Shadow [Dragonmark]");
+        AddFeat("Mark of Shadow");
     },
     removeeval: function() {
         RemoveFeat("Mark of Shadow [Dragonmark]");
@@ -2388,14 +2358,12 @@ BackgroundList["house vadalis heir"] = {
     feature: "House Vadalis Heir",
 };
 BackgroundFeatureList["house vadalis heir"] = {
-    description: desc([
-        "You have grown up with respect for both family and nature. You understand the culture of the Five Nations, but you don’t get drawn into the games of ambition and status that others play. You know the beauty and power inherent in life, the mysteries of birth and death, and the miracles that happen in between. Your insights into the natural world allow you to see through the lies and deception of city folk—and never let on how much of their subterfuge you recognize.",
-    ]),
+    description: "You have grown up with respect for both family and nature. You understand the culture of the Five Nations, but you don’t get drawn into the games of ambition and status that others play. You know the beauty and power inherent in life, the mysteries of birth and death, and the miracles that happen in between. Your insights into the natural world allow you to see through the lies and deception of city folk—and never let on how much of their subterfuge you recognize.",
     source: [
         ["E:FA", 0]
     ],
     eval: function() {
-        AddFeat("Mark of Handling [Dragonmark]");
+        AddFeat("Mark of Handling");
     },
     removeeval: function() {
         RemoveFeat("Mark of Handling [Dragonmark]");
@@ -2425,9 +2393,7 @@ BackgroundList["inquisitive"] = {
     feature: "Inquisitive",
 };
 BackgroundFeatureList["inquisitive"] = {
-    description: desc([
-        "You have honed your talents of investigation and deduction—fueled by a boundless curiosity—to explore mysteries, find missing people, recover stolen goods, unearth corruption and conspiracies, and solve crimes. As an inquisitive, you might have pursued freelance work, signed on with an inquisitive agency (perhaps one licensed by a dragonmarked house such as Medani or Tharashk), reported for a broadsheet, or worked for a police force.",
-    ]),
+    description: "You have honed your talents of investigation and deduction—fueled by a boundless curiosity—to explore mysteries, find missing people, recover stolen goods, unearth corruption and conspiracies, and solve crimes. As an inquisitive, you might have pursued freelance work, signed on with an inquisitive agency (perhaps one licensed by a dragonmarked house such as Medani or Tharashk), reported for a broadsheet, or worked for a police force.",
     source: [
         ["E:FA", 0]
     ],
@@ -2642,9 +2608,6 @@ FeatsList["aberrant dragonmark"] = {
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
-    prereqeval: function(v) {
-        return !(/dragonmark|mark/i).test(CurrentFeat.known);
-    },
     descriptionFull: "You have manifested an Aberrant Dragonmark; determine its appearance. You gain the following benefits:\n \u2022 Aberrant Fortitude. When you fail a Constitution saving throw, you can take a Reaction to roll 1d4 and add the number rolled to the save, potentially turning the failure into a success. Once you’ve used this benefit, you can’t use it again until you finish a Long Rest.\n \u2022 Aberrant Magic. You know one cantrip of your choice from the Sorcerer spell list. Also, choose a level 1 spell from that spell list. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Short or Long Rest. You can also cast this spell using any spell slots you have. Constitution is your spellcasting ability for this spell.\n \u2022 Aberrant Surge. When you cast the level 1 spell from this feat, you can expend one of your Hit Point Dice and roll it. If you roll an even number, you gain a number of Temporary Hit Points equal to the number rolled. If you roll an odd number, one creature within 30 feet of you (not including you) takes Force damage equal to the number rolled. If no other creatures are in range, you take the damage.",
     description: "I can add 1d4 to a failed Constitution saving throw once per Long Rest. I learn a Sorcerer cantrip, and a 1st-level Sorcerer spell that I can cast once per Short Rest. They use Con as spellcasting ability. I can expend and roll a HD when I cast the level 1 spell. If even, I gain it in Temp HP. If odd, a random target in 30 ft takes it in force damage.",
     usages: 1,
@@ -2673,9 +2636,6 @@ FeatsList["mark of detection"] = {
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
-    prereqeval: function(v) {
-        return !(/dragonmark|mark/i).test(CurrentFeat.known);
-    },
     descriptionFull: "You have manifested a Dragonmark of Detection; determine its appearance. You gain the following benefits:\n \u2022 Deductive Intuition. When you make an Intelligence (Investigation) or Wisdom (Insight) check, you can roll 1d4 and add the number rolled to the ability check.\n \u2022 Magical Detection. You always have the Detect Magic \u0026 Detect Poison and Disease spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast these spells using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this feat).\n When you reach character level 3, you also always have the See Invisibility spell prepared and can cast it the same way.\n \u2022 Spells of the Mark. If you have the Spellcasting or Pact Magic feature, the following spells are added to that feature's spell list: Detect Evil and Good, Identify, Detect Thoughts, Find Traps, Clairvoyance, Nondetection, Arcane Eye, Divination, \u0026 Legend Lore.",
     description: "I can add 1d4 to any Intelligence (Investigation) or Wisdom (Insight) checks. At character level 1, I always have the Detect Magic \u0026 Detect Poison and Disease spells prepared, and can cast each once without a spell slot per Long Rest. I can also cast these spells with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for these spells (chosen when I select this feat). At character level 3, I also always have the See Invisibility spell prepared and can cast it the same way. Additionally, if I am a spellcasting class/subclass, I gain additional spells I can cast.",
     spellcastingBonus: [{
@@ -2708,9 +2668,6 @@ FeatsList["mark of finding"] = {
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
-    prereqeval: function(v) {
-        return !(/dragonmark|mark/i).test(CurrentFeat.known);
-    },
     descriptionFull: "You have manifested a Dragonmark of Finding; determine its appearance. You gain the following benefits:\n \u2022 Hunter's Intuition. When you make a Wisdom (Perception or Survival) check, you can roll 1d4 and add the number rolled to the ability check.\n \u2022 Finder's Magic. You always have the Hunter's Mark spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).\n When you reach character level 3, you also always have the Locate Object spell prepared and can cast it the same way.\n \u2022 Spells of the Mark. If you have the Spellcasting or Pact Magic feature, the following spells are added to that feature's spell list: Faerie Fire, Longstrider, Locate Animals or Plants, Mind Spike, Clairvoyance, Speak with Plants, Divination, Locate Creature, \u0026 Commune with Nature.",
     description: "I can add 1d4 to any Wisdom (Perception or Survival) checks. At character level 1, I always have the Hunter's Mark spell prepared, and can cast it once without a spell slot per Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat). At character level 3, I also always have the Locate Object spell prepared and can cast it the same way. Additionally, if I am a spellcasting class/subclass, I gain additional spells I can cast.",
     spellcastingBonus: [{
@@ -2743,9 +2700,6 @@ FeatsList["mark of handling"] = {
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
-    prereqeval: function(v) {
-        return !(/dragonmark|mark/i).test(CurrentFeat.known);
-    },
     descriptionFull: "You have manifested a Dragonmark of Handling; determine its appearance. You gain the following benefits:\n \u2022 Wild Intuition. When you make an Intelligence (Nature) or Wisdom (Animal Handling) check, you can roll 1d4 and add the number rolled to the ability check.\n \u2022 Finder's Magic. You always have the Animal Friendship \u0026 Speak with Animals spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast these using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).\n \u2022 Monstrous Connection. When you reach character level 3, you can target a Monstrosity when you cast Animal Friendship or Speak with Animals if the creature's Intelligence score is 3 or lower.\n \u2022 Spells of the Mark. If you have the Spellcasting or Pact Magic feature, the following spells are added to that feature's spell list: Command, Find Familiar, Beast Sense, Calm Emotions, Beacon of Hope, Conjure Animals, Aura of Life, Dominate Beast, \u0026 Awaken.",
     description: "I can add 1d4 to any Intelligence (Nature) or Wisdom (Animal Handling) checks. At character level 1, I always have the Animal Friendship \u0026 Speak with Animals spells prepared, and can cast each once without a spell slot per Long Rest. I can also cast these with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat). At character level 3, I can target a Monstrosity when I cast Animal Friendship or Speak with Animals if the creature's Intelligence score is 3 or lower. Additionally, if I am a spellcasting class/subclass, I gain additional spells I can cast.",
     spellcastingBonus: [{
@@ -2786,9 +2740,6 @@ FeatsList["mark of healing"] = {
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
-    prereqeval: function(v) {
-        return !(/dragonmark|mark/i).test(CurrentFeat.known);
-    },
     descriptionFull: "You have manifested a Dragonmark of Healing; determine its appearance. You gain the following benefits:\n \u2022 Medical Intuition. When you make an Intelligence (Herbalism Kit) or Wisdom (Medicine) check, you can roll 1d4 and add the number rolled to the ability check.\n \u2022 Healing Touch. You always have the Cure Wounds spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).\n When you reach character level 3, you also always have the Lesser Restoration spell prepared and can cast it the same way.\n \u2022 Spells of the Mark. If you have the Spellcasting or Pact Magic feature, the following spells are added to that feature's spell list: False Life, Healing Word, Arcane Vigor, Prayer of Healing, Aura of Vitality, Mass Healing Word, Aura of Life, Aura of Purity, \u0026 Greater Restoration.",
     description: "I can add 1d4 to any Intelligence (Herbalism Kit) or Wisdom (Medicine) checks. At character level 1, I always have the Cure Wounds spell prepared, and can cast it once without a spell slot per Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat). At character level 3, I also always have the Lesser Restoration spell prepared and can cast it the same way. Additionally, if I am a spellcasting class/subclass, I gain additional spells I can cast.",
     spellcastingBonus: [{
@@ -2821,9 +2772,6 @@ FeatsList["mark of hospitality"] = {
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
-    prereqeval: function(v) {
-        return !(/dragonmark|mark/i).test(CurrentFeat.known);
-    },
     descriptionFull: "You have manifested a Dragonmark of Hospitality; determine its appearance. You gain the following benefits:\n \u2022 Ever Hospitable. When you make a Charisma (Persuasion) check or an ability check using Brewer's Supplies or Cook's Utensils, you can roll 1d4 and add the number rolled to the ability check.\n \u2022 Innkeeper's Magic. You always have the Purify Food and Drink \u0026 Unseen Servant spells prepared. You can cast each once without a spell slot, and you regain the ability to cast these in that way when you finish a Long Rest. You can also cast these using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).\n When you reach character level 3, you also always have the Calm Emotions spell prepared and can cast it the same way.\n \u2022 Spells of the Mark. If you have the Spellcasting or Pact Magic feature, the following spells are added to that feature's spell list: Goodberry, Sleep, Aid, Enhance Ability, Create Food and Water, Leomund's Tiny Hut, Aura of Purity, Mordenkainen's Private Sanctum, \u0026 Hallow.",
     description: "I can add 1d4 to any Charisma (Persuasion) checks or any ability checks using Brewer's Supplies or Cook's Utensils. I always have the Purify Food and Drink \u0026 Unseen Servant spells prepared, and can cast each once without a spell slot per Long Rest. I can also cast these with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for these spells (chosen when I select this feat). Additionally, if I am a spellcasting class/subclass, I gain additional spells I can cast.",
     spellcastingBonus: [{
@@ -2856,9 +2804,6 @@ FeatsList["mark of making"] = {
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
-    prereqeval: function(v) {
-        return !(/dragonmark|mark/i).test(CurrentFeat.known);
-    },
     descriptionFull: "You have manifested a Dragonmark of Making; determine its appearance. You gain the following benefits:\n \u2022 Artisan's Intuition. When you make an Intelligence (Arcana) check or an ability check using Artisan's Tools, you can roll 1d4 and add the number rolled to the ability check.\n \u2022 Spellsmith. You know the Mending cantrip and you always have the Magic Weapon spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).\n \u2022 Spells of the Mark. If you have the Spellcasting or Pact Magic feature, the following spells are added to that feature's spell list: Identify, Tenser's Floating Disk, Continual Flame, Spiritual Weapon, Conjure Barrage, Elemental Weapon, Fabricate, Stone Shape, \u0026 Creation.",
     description: "I can add 1d4 to any Intelligence (Arcana) checks or any ability checks using Artisan's Tools. I know the Mending cantrip and always have the Magic Weapon spell prepared, and can cast it once without a spell slot per Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat). Additionally, if I am a spellcasting class/subclass, I gain additional spells I can cast.",
     spellcastingBonus: [{
@@ -2894,9 +2839,6 @@ FeatsList["mark of passage"] = {
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
-    prereqeval: function(v) {
-        return !(/dragonmark|mark/i).test(CurrentFeat.known);
-    },
     descriptionFull: "You have manifested a Dragonmark of Passage; determine its appearance. You gain the following benefits:\n \u2022 Courier's Speed. Your Speed increases by 5 ft. \n \u2022 Intuitive Motion. When you make a Strength (Althetics) or Dexterity (Acrobatics) check, you can roll 1d4 and add the number rolled to the ability check.\n \u2022 Magical Passage. You always have the Misty Step spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).\n \u2022 Spells of the Mark. If you have the Spellcasting or Pact Magic feature, the following spells are added to that feature's spell list: Expeditious Retreat, Jump, Pass without Trace, Find Steed, Blink, Phantom Steed, Dimension Door, Freedom of Movement, \u0026 Teleportation Circle.",
     description: "My Speed increases by 5 ft. I can add 1d4 to any Strength (Althetics) or Dexterity (Acrobatics) checks. At character level 1, I always have the Hunter's Mark spell prepared, and can cast it once without a spell slot per Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat). At character level 3, I also always have the Locate Object spell prepared and can cast it the same way. Additionally, if I am a spellcasting class/subclass, I gain additional spells I can cast.",
     speed: {
@@ -2932,9 +2874,6 @@ FeatsList["mark of scribing"] = {
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
-    prereqeval: function(v) {
-        return !(/dragonmark|mark/i).test(CurrentFeat.known);
-    },
     descriptionFull: "You have manifested a Dragonmark of Scribing; determine its appearance. You gain the following benefits:\n \u2022 Gifted Scribe. When you make an Intelligence (History) check or an ability check using Calligrapher's Supplies, you can roll 1d4 and add the number rolled to the ability check.\n \u2022 Scribe's Insight. You know the Message cantrip and you always have the Comprehend Languages spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).\n When you reach character level 3, you also always have the Magic Mouth spell prepared and can cast it the same way.\n \u2022 Spells of the Mark. If you have the Spellcasting or Pact Magic feature, the following spells are added to that feature's spell list: Command, Illusory Script, Animal Messenger, Silence, Sending, Tongues, Arcane Eye, Confusion, \u0026 Dream.",
     description: "I can add 1d4 to any an Intelligence (History) checks or any ability checks using Calligrapher's Supplies. At character level 1, I know the Message cantrip and always have the Comprehend Languages spell prepared, and can cast it once without a spell slot per Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat). At character level 3, I also always have the Magic Mouth spell prepared and can cast it the same way. Additionally, if I am a spellcasting class/subclass, I gain additional spells I can cast.",
     spellcastingBonus: [{
@@ -2972,9 +2911,6 @@ FeatsList["mark of sentinel"] = {
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
-    prereqeval: function(v) {
-        return !(/dragonmark|mark/i).test(CurrentFeat.known);
-    },
     descriptionFull: "You have manifested a Dragonmark of Sentinel; determine its appearance. You gain the following benefits:\n \u2022 Sentinel's Intuition. When you make a Wisdom (Insight or Perception) check, you can roll 1d4 and add the number rolled to the ability check.\n \u2022 Guardian's Shield. You always have the Shield spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).\n \u2022 Vigilant Guardian. When a creature you can see within 5 feet of you is hit by an attack roll, you can take a Reaction to swap places with that creature, and you are hit by the attack instead. Once you use this feature, you can't do so again until you finish a Long Rest.\n \u2022 Spells of the Mark. If you have the Spellcasting or Pact Magic feature, the following spells are added to that feature's spell list: Compelled Duel, Shield of Faith, Warding Bond, Zone of Truth, Counterspell, Protection from Energy, Death Ward, Guardian of Faith, \u0026 Bigby's Hand.",
     description: "I can add 1d4 to any Wisdom (Insight or Perception) checks. At character level 1, I always have the Hunter's Mark spell prepared, and can cast it once without a spell slot per Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat). At character level 3, I also always have the Locate Object spell prepared and can cast it the same way. Additionally, if I am a spellcasting class/subclass, I gain additional spells I can cast.",
     spellcastingBonus: [{
@@ -3005,9 +2941,6 @@ FeatsList["mark of shadow"] = {
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
-    prereqeval: function(v) {
-        return !(/dragonmark|mark/i).test(CurrentFeat.known);
-    },
     descriptionFull: "You have manifested a Dragonmark of Shadow; determine its appearance. You gain the following benefits:\n \u2022 Cunning Intuition. When you make a Dexterity (Stealth) or Charisma (Performance) check, you can roll 1d4 and add the number rolled to the ability check.\n \u2022 Shape Shadows. You know the Minor Illusion cantrip and you always have the Invisibility spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).\n \u2022 Spells of the Mark. If you have the Spellcasting or Pact Magic feature, the following spells are added to that feature's spell list: Disguise Self, Silent Image, Darkness, Pass without Trace, Clairvoyance, Major Image, Greater Invisibility, Hallucinatory Terrain, \u0026 Mislead.",
     description: "I can add 1d4 to any Dexterity (Stealth) or Charisma (Performance) checks. At character level 1, I always have the Hunter's Mark spell prepared, and can cast it once without a spell slot per Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat). At character level 3, I also always have the Locate Object spell prepared and can cast it the same way. Additionally, if I am a spellcasting class/subclass, I gain additional spells I can cast.",
     spellcastingBonus: [{
@@ -3043,11 +2976,8 @@ FeatsList["mark of storm"] = {
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
-    prereqeval: function(v) {
-        return !(/dragonmark|mark/i).test(CurrentFeat.known);
-    },
     descriptionFull: "You have manifested a Dragonmark of Storm; determine its appearance. You gain the following benefits:\n \u2022 Windwright's Intuition. When you make a Dexterity (Acrobatics) check or an ability check using Navigator's Tools, you can roll 1d4 and add the number rolled to the ability check.\n \u2022 Storm's Boon. You have Resistance to Lightning damage.\n \u2022 Storm Magic. You know the Thunderclap cantrip and you always have the Gust of Wind spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).\n \u2022 Spells of the Mark. If you have the Spellcasting or Pact Magic feature, the following spells are added to that feature's spell list: Feather Fall, Fog Cloud, Levitate, Shatter, Sleet Storm, Wind Wall, Conjure Minor Elemental, Control Water, \u0026 Conjure Elemental.",
-    description: "I can add 1d4 to any Dexterity (Acrobatics) check or any ability checks using Navigator's Tools. I am Resistant to Lightning dmg. At character level 1, I always have the Hunter's Mark spell prepared, and can cast it once without a spell slot per Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat). At character level 3, I also always have the Locate Object spell prepared and can cast it the same way. Additionally, if I am a spellcasting class/subclass, I gain additional spells I can cast.",
+    description: "I can add 1d4 to any Dexterity (Acrobatics) check or any ability checks using Navigator's Tools. I am Resistant to Lightning dmg. At character level 1, I know the Thunderclap cantrip and always have the Gust of Wind spell prepared, and can cast it once without a spell slot per Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat). Additionally, if I am a spellcasting class/subclass, I gain additional spells I can cast.",
     dmgres: ["Lightning"],
     spellcastingBonus: [{
         name: "Storm Magic Cantrip",
@@ -3082,9 +3012,6 @@ FeatsList["mark of warding"] = {
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
-    prereqeval: function(v) {
-        return !(/dragonmark|mark/i).test(CurrentFeat.known);
-    },
     descriptionFull: "You have manifested a Dragonmark of Warding; determine its appearance. You gain the following benefits:\n \u2022 Warder's Intuition. When you make an Intelligence (Investigation) check or an ability check using Thieves' Tools, you can roll 1d4 and add the number rolled to the ability check.\n \u2022 Wards and Seals. You always have the Alarm and Mage Armor spells prepared. You can cast each once without a spell slot, and you regain the ability to cast these in that way when you finish a Long Rest. You can also cast these using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this feat).\n When you reach character level 3, you also always have the Arcane Lock spell prepared and can cast it the same way.\n \u2022 Spells of the Mark. If you have the Spellcasting or Pact Magic feature, the following spells are added to that feature's spell list: Armor of Agathys, Sanctuary, Knock, Nystul's Magic Aura, Glyph of Warding, Magic Circle, Leomund's Secret Chest, Mordenkainen's Faithful Hound, \u0026 Antilife Shell.",
     description: "I can add 1d4 to any Intelligence (Investigation) checks or any ability checks using Thieves' Tools. At character level 1, I always have the Alarm and Mage Armor spells prepared, and can cast each once without a spell slot per Long Rest. I can also cast these with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for these spells (chosen when I select this feat). At character level 3, I also always have the Arcane Lock spell prepared and can cast it the same way. Additionally, if I am a spellcasting class/subclass, I gain additional spells I can cast.",
     spellcastingBonus: [{
@@ -4004,7 +3931,6 @@ function AddArtificerMI() {
         ];
 
         var uE6 = [
-            ["armor, +1, +2, or +3", "+1 ac bonus (rare)"],
             "boots of elvenkind", "boots of the winding path", "cloak of elvenkind",
             "cloak of the manta ray", "eyes of charming", "eyes of minute seeing",
             "gloves of thievery", "lantern of revealing", "mind sharpener", "necklace of adaptation",
@@ -4014,6 +3940,7 @@ function AddArtificerMI() {
         ];
 		
 		var rE6 = [
+			["armor, +1, +2, or +3", "+1 ac bonus (rare)"],
 			"dazzling weapon",
 		];
 		
