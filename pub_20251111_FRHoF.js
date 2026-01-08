@@ -3110,7 +3110,7 @@ legacySpellRefactor("blade of disaster", {
     ],
 });
 SpellsList["cacophonic shield"] = {
-    name: "Cacophonic Shied",
+    name: "Cacophonic Shield",
     classes: ["bard", "sorcerer", "wizard"],
     source: [
         ["FRHoF", 143]
