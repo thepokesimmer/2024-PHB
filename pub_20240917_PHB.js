@@ -4421,7 +4421,7 @@ legacySubClassRefactor("monk", "mercy", {
                 name: "Hand of Ultimate Mercy",
                 extraname: "Way of Mercy 17",
                 source: [
-                    ["T", 50]
+                    ["P24", 104]
                 ],
                 description: desc([
                     "As an action, I can spend 5 FP and touch a creature that died in the last 24 hours",
@@ -30241,4 +30241,5 @@ CreatureList["undead spirit (putrid/ghostly)(9)"] = {
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
     }],
 };
+
 
