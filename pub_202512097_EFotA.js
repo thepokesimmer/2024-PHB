@@ -1104,14 +1104,13 @@ AddSubClass("artificer", "cartographer", {
             ],
             minlevel: 3,
             description: desc([
-                "When I finish a Long Rest holding Cartographer's Tools \u0026 touching at least 2 creatures (1 of whom can be myself), I can create a number of magical maps for each target, up to a max equal to my Int mod (min 2).",
+                "When I finish a Long Rest holding Cartographer's Tools \u0026 touching at least 2 creatures (1 of whom can be myself), I can create a number of magical maps for each target, up to a max equal to my 1 + Int mod (min 2).",
                 "These magical maps are illegible to all others \u0026 last until I die, or until I use this feature again, which causes existing maps to immediately vanish",
                 "While carrying the map, a target gains the following benefits:",
                 " \u2022 Awareness. Targets add 1d4 to their Initiative rolls.",
                 " \u2022 Positioning. Targets know the locations of all other map holders on the same plane of existence. When casting a spell or creating an effect that requires line of sight to a target, the map holder can target another map holder regardless of sight, so long as the other map holder is still within the spell's/effect's range.",
             ]),
-            usages: "Intelligence modifier per ",
-            usagescalc: "event.value = Math.max(2, What('Int Mod'));",
+            additional : "Number of Maps 1 + Int Mod, Min of 2",
         },
         "subclassfeature3.2": {
             name: "Mapping Magic",
@@ -4451,4 +4450,4 @@ RunFunctionAtEnd(function() {
     }
     // moved to the outside loop, always add artificer MI
     AddArtificerMI(); // persists after reload
-})
+});
