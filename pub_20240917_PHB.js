@@ -6355,7 +6355,7 @@ legacySubClassRefactor("ranger", "fey wanderer", {
         "subclassfeature3": {
             name: "Dreadful Strikes",
             source: [
-                ["T", 58]
+                ["P24", 124]
             ],
             minlevel: 3,
             description: desc([
@@ -6379,7 +6379,7 @@ legacySubClassRefactor("ranger", "fey wanderer", {
         "subclassfeature3.2": {
             name: "Otherworldly Glamour",
             source: [
-                ["T", 59]
+                ["P24", 124]
             ],
             minlevel: 3,
             description: desc([
@@ -30241,5 +30241,6 @@ CreatureList["undead spirit (putrid/ghostly)(9)"] = {
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
     }],
 };
+
 
 
