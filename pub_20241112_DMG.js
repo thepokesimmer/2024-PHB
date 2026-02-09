@@ -3342,15 +3342,46 @@ MagicItemsList["energy bow"] = {
     descriptionLong: "This +1 magic bow has no string. When I pull back my arm, a golden arrow appears nocked and ready to fire, emitting a 20-ft radius of Bright Light and 20-ft Dim Light. It disappears on a hit or miss and deals Force damage. The bow also has additional properties. Arrow of Restraint: instead of damage, the target makes a DC 15 STR save or is Restrained for 1 minute (DC 20 STR Athletics to escape). Arrow of Transport: as a Magic action, 1 visible willing creature (up to Medium) or unattended object (up to 5-ft cube) in 60 ft is teleported to a visible space in 10 ft. Energy Ladder: as a Magic action, fire arrows at a wall within 60 ft. The arrows create a 60 ft magical ladder that lasts for 1 minute.",
     descriptionFull: 'You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon, which has no string. Each time you pull your arm back in a firing motion, a magical arrow made of golden energy appears nocked and ready to fire. An arrow produced by this weapon deals Force damage instead of Piercing damage on a hit, and it disappears after it hits or misses its target. Until it disappears, the arrow emits Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.\n   This weapon has the following additional properties.\n   Arrow of Restraint. Whenever you use this weapon to make a ranged attack against a creature, you can try to restrain the target instead of dealing damage to it. If the arrow hits, the target must succeed on a DC 15 Strength saving throw or have the Restrained condition for 1 minute. As an action, a creature Restrained by an arrow can make a DC 20 Strength (Athletics) check to try to break the restraint, ending the effect on itself on a successful check.\n   Arrow of Transport. As a Magic action, you can fire one energy arrow from this weapon at a target you can see within 60 feet of yourself. The target can be either a willing Medium or smaller creature or an object that isn’t being worn or carried, provided the object is small enough to fit inside a 5-foot Cube. The arrow teleports the target to an unoccupied space you can see within 10 feet of you.\n   Energy Ladder. As a Magic action, you can loose a flurry of energy arrows from this weapon at a wall up to 60 feet away from yourself. The arrows become glowing rungs that stick out of the wall, forming a magical ladder up to 60 feet long on the wall. This ladder lasts for 1 minute before disappearing.',
     attunement: true,
-    chooseGear: {
-        type: "weapon",
-        prefixOrSuffix: "suffix",
-        descriptionChange: ["replace", "bow"],
-        excludeCheck: function(inObjKey, inObj) {
-            var testRegex = /shortbow|longbow/i;
-            return !(testRegex).test(inObjKey) && (!inObj.baseWeapon || !(testRegex).test(inObj.baseWeapon));
-        }
-    },
+	action: [["action", " (Arrow of Transport)"], ["action", " (Energy Ladder)"]],
+	choices: ["longbow", "shortbow"],
+	"longbow" : {
+		name : "Energy Longbow",
+		description: "When I pull back my arm to fire this +1 magic bow, a golden arrow appears, emitting 20-ft Bright Light and 20-ft Dim. On a hit, the target takes Force dmg or makes a DC 15 STR save vs Restrained for 1 min (DC 20 STR Athletics to escape). Magic actions: 1 visible willing creature (up to Med) or unattended obj (5ft cube) in 60ft teleported to visible space in 10ft; arrows create magical 60ft ladder for 1 min on wall in 60ft.",
+		descriptionLong: "This +1 magic bow has no string. When I pull back my arm, a golden arrow appears nocked and ready to fire, emitting a 20-ft radius of Bright Light and 20-ft Dim Light. It disappears on a hit or miss and deals Force damage. The bow also has additional properties. Arrow of Restraint: instead of damage, the target makes a DC 15 STR save or is Restrained for 1 minute (DC 20 STR Athletics to escape). Arrow of Transport: as a Magic action, 1 visible willing creature (up to Medium) or unattended object (up to 5-ft cube) in 60 ft is teleported to a visible space in 10 ft. Energy Ladder: as a Magic action, fire arrows at a wall within 60 ft. The arrows create a 60 ft magical ladder that lasts for 1 minute.",
+		descriptionFull: 'You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon, which has no string. Each time you pull your arm back in a firing motion, a magical arrow made of golden energy appears nocked and ready to fire. An arrow produced by this weapon deals Force damage instead of Piercing damage on a hit, and it disappears after it hits or misses its target. Until it disappears, the arrow emits Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.\n   This weapon has the following additional properties.\n   Arrow of Restraint. Whenever you use this weapon to make a ranged attack against a creature, you can try to restrain the target instead of dealing damage to it. If the arrow hits, the target must succeed on a DC 15 Strength saving throw or have the Restrained condition for 1 minute. As an action, a creature Restrained by an arrow can make a DC 20 Strength (Athletics) check to try to break the restraint, ending the effect on itself on a successful check.\n   Arrow of Transport. As a Magic action, you can fire one energy arrow from this weapon at a target you can see within 60 feet of yourself. The target can be either a willing Medium or smaller creature or an object that isn’t being worn or carried, provided the object is small enough to fit inside a 5-foot Cube. The arrow teleports the target to an unoccupied space you can see within 10 feet of you.\n   Energy Ladder. As a Magic action, you can loose a flurry of energy arrows from this weapon at a wall up to 60 feet away from yourself. The arrows become glowing rungs that stick out of the wall, forming a magical ladder up to 60 feet long on the wall. This ladder lasts for 1 minute before disappearing.',
+		weaponOptions: [{
+			baseWeapon: "longbow",
+			regExpSearch: /^(?=.*energy)(?=.*longbow).*$/i,
+			name: "Energy Longbow",
+			source: [
+				["PHB2024", "-"]
+			],
+			damage: [1, 8, "force"],
+			range: "150/600 ft",
+			description: "Ammunition (Arrow), Two-Handed, Heavy; Slow",
+			modifiers: [1, 1],
+			selectNow: true,
+		}],
+	},
+	"shortbow" : {
+		name : "Energy Shortbow",
+		description: "When I pull back my arm to fire this +1 magic bow, a golden arrow appears, emitting 20-ft Bright Light and 20-ft Dim. On a hit, the target takes Force dmg or makes a DC 15 STR save vs Restrained for 1 min (DC 20 STR Athletics to escape). Magic actions: 1 visible willing creature (up to Med) or unattended obj (5ft cube) in 60ft teleported to visible space in 10ft; arrows create magical 60ft ladder for 1 min on wall in 60ft.",
+		descriptionLong: "This +1 magic bow has no string. When I pull back my arm, a golden arrow appears nocked and ready to fire, emitting a 20-ft radius of Bright Light and 20-ft Dim Light. It disappears on a hit or miss and deals Force damage. The bow also has additional properties. Arrow of Restraint: instead of damage, the target makes a DC 15 STR save or is Restrained for 1 minute (DC 20 STR Athletics to escape). Arrow of Transport: as a Magic action, 1 visible willing creature (up to Medium) or unattended object (up to 5-ft cube) in 60 ft is teleported to a visible space in 10 ft. Energy Ladder: as a Magic action, fire arrows at a wall within 60 ft. The arrows create a 60 ft magical ladder that lasts for 1 minute.",
+		descriptionFull: 'You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon, which has no string. Each time you pull your arm back in a firing motion, a magical arrow made of golden energy appears nocked and ready to fire. An arrow produced by this weapon deals Force damage instead of Piercing damage on a hit, and it disappears after it hits or misses its target. Until it disappears, the arrow emits Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.\n   This weapon has the following additional properties.\n   Arrow of Restraint. Whenever you use this weapon to make a ranged attack against a creature, you can try to restrain the target instead of dealing damage to it. If the arrow hits, the target must succeed on a DC 15 Strength saving throw or have the Restrained condition for 1 minute. As an action, a creature Restrained by an arrow can make a DC 20 Strength (Athletics) check to try to break the restraint, ending the effect on itself on a successful check.\n   Arrow of Transport. As a Magic action, you can fire one energy arrow from this weapon at a target you can see within 60 feet of yourself. The target can be either a willing Medium or smaller creature or an object that isn’t being worn or carried, provided the object is small enough to fit inside a 5-foot Cube. The arrow teleports the target to an unoccupied space you can see within 10 feet of you.\n   Energy Ladder. As a Magic action, you can loose a flurry of energy arrows from this weapon at a wall up to 60 feet away from yourself. The arrows become glowing rungs that stick out of the wall, forming a magical ladder up to 60 feet long on the wall. This ladder lasts for 1 minute before disappearing.',
+		weaponOptions: [{
+			baseWeapon: "shortbow",
+			regExpSearch: /^(?=.*energy)(?=.*shortbow).*$/i,
+			name: "Energy Shortbow",
+			source: [
+				["D24", 257]
+			],
+			damage: [1, 6, "force"],
+			range: "80/320 ft",
+			description: "Ammunition (Arrow), Two-Handed; Vex",
+			modifiers: [1, 1],
+			selectNow: true,
+		}],
+	},
 };
 MagicItemsList["enspelled armor"] = {
     name: "Enspelled Armor",
@@ -8540,7 +8571,7 @@ MagicItemsList["shield of the cavalier"] = {
         type: 'AlwaysProf',
         damage: ['2d6 + 2' + What('Str Mod'), '', 'force'],
         range: "Melee",
-        description: "if target = crea push 10ft; if crea => your size, knock prone; substitute one attack roll on attack action.",
+        description: "if target = crea push 10ft; if crea <= your size, knock prone; substitute one attack roll on attack action.",
         isNotWeapon: true,
         modifiers: [What('Str Mod') + Number(How('Proficiency Bonus')), ],
         selectNow: true
@@ -9721,7 +9752,7 @@ MagicItemsList["sword of answering"] = {
     type: "weapon (longsword)",
     rarity: "legendary",
     magicItemTable: "?",
-    description: "You gain a +3 bonus to attack and damage rolls made with this sword. You can take a Reaction againt any creature within your reach damages me, and you can make one melee attack with this sword with Advantage. This attack ignores damage Immunities and Resistances of the target.",
+    description: "I gain a +3 bonus to attack and damage rolls made with this sword. When a creature within my reach damages me, I can use a Reaction to make one melee attack against them, I make this attack roll with Advantage. This attack ignores damage Immunities and Resistances of the target.",
     descriptionFull: "You gain a +3 bonus to attack and damage rolls made with this sword. In addition, while you hold the sword, you can take a Reaction to make one melee attack with it against any creature in your reach that deals damage to you. You have Advantage on the attack roll, and any damage dealt with this special attack ignores any damage Immunity or Resistance the target has to that damage.",
     attunement: true,
     weight: 3,
@@ -9737,7 +9768,7 @@ MagicItemsList["sword of answering"] = {
         ],
         modifiers: [3, 3],
         selectNow: true,
-        description: "Verstaile (1d10), Sap; Adv on Reaction attack & Ignore Immune/Resist."
+        description: "Verstatile (1d10), Sap; Adv on Reaction attack & Ignore Immune/Resist."
     }],
 };
 MagicItemsList["sword of life stealing"] = {
@@ -10036,7 +10067,7 @@ MagicItemsList["tentacle rod"] = {
     attunement: true,
     weight: 2,
     action: [
-        ["action", "Tentacles"], "bonus action", "Release"
+        [["action", " Tentacles"], ["bonus action", " Release"]],
     ],
     weaponOptions: [{
         regExpSearch: /^(?=.*tentacle)(?=.*rod).*$/i,
