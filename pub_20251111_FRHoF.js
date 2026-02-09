@@ -1206,6 +1206,7 @@ BackgroundList["rashemi wanderer"] = {
         ["Oil, flasks of", 3, 1],
         ["Rope", "", 5],
         ["Tinderbox", "", 1],
+		["Waterskin", "", 5],
     ],
     equipright: [
         ["Traveler's clothes", "", 4],
@@ -3110,7 +3111,7 @@ legacySpellRefactor("blade of disaster", {
     ],
 });
 SpellsList["cacophonic shield"] = {
-    name: "Cacophonic Shield",
+    name: "Cacophonic Shied",
     classes: ["bard", "sorcerer", "wizard"],
     source: [
         ["FRHoF", 143]
