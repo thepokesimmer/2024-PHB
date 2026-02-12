@@ -4533,7 +4533,7 @@ MagicItemsList["hat of disguise"] = { // contributed by Larry Hoy
     spellcastingAbility: "class" // https://www.sageadvice.eu/2015/11/27/hat-of-disguise-dc/
 };
 MagicItemsList["hat of many spells"] = {
-    name: "Hat of Disguise",
+    name: "Hat of Many Spells",
     source: [
         ["D24", 266]
     ],
@@ -11269,7 +11269,7 @@ MagicItemsList["wraps of unarmed power"] = {
         name: "Wraps of Unarmed Power +3",
         nameTest: "+3 Wraps of Unarmed Power",
         rarity: "very rare",
-        description: "While wearing these wraps, you gain a +3 bonus to the attack and damage rolls of your Unarmed Strikes. You Unarmed Strikes can deal your choice of Force or their normal damage.",
+        description: "While wearing these wraps, you gain a +3 bonus to the attack and damage rolls of your Unarmed Strikes. Your Unarmed Strikes can deal your choice of Force or their normal damage.",
         calcChanges: {
             atkAdd: [
                 function(fields, v) {
