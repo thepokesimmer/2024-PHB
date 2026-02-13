@@ -1773,7 +1773,7 @@ FeatsList["dragonscarred"] = {
     },
 };
 FeatsList["enclave magic"] = {
-    name: "enclave magic",
+    name: "Enclave Magic",
     source: [
         ["FRHoF", 39]
     ],
