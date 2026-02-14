@@ -1773,7 +1773,7 @@ FeatsList["dragonscarred"] = {
     },
 };
 FeatsList["enclave magic"] = {
-    name: "enclave magic",
+    name: "Enclave Magic",
     source: [
         ["FRHoF", 39]
     ],
@@ -3166,7 +3166,8 @@ SpellsList["death armor"] = {
     ],
 };
 SpellsList["deryan's helpful homunculi"] = {
-    name: "Deryan's Helpful Homunculi",
+    name: "Deryan's Helpful Homunculi
+	nameShort: "D's Helpful Homunculi",
     classes: ["cleric", "wizard"],
     source: [
         ["FRHoF", 143]
