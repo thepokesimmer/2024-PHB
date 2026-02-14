@@ -3166,7 +3166,7 @@ SpellsList["death armor"] = {
     ],
 };
 SpellsList["deryan's helpful homunculi"] = {
-    name: "Deryan's Helpful Homunculi
+    name: "Deryan's Helpful Homunculi",
 	nameShort: "D's Helpful Homunculi",
     classes: ["cleric", "wizard"],
     source: [
