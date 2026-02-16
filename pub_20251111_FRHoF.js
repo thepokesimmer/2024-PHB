@@ -3159,7 +3159,7 @@ SpellsList["death armor"] = {
     range: "Touch",
     components: "V,S,M\u2020",
     compMaterial: "an onyx worth 50+ GP, which the spell consumes",
-    duration: "1 hr",
+    duration: "1 h",
     description: "1 crea: Adv on Death saves. 1/turn, if hit by crea in 5-ft with melee atk, deal 2d4 Necrotic dmg to atkr",
     descriptionFull: [
         "For the duration, an inky aura surrounds one creature you touch. The target has Advantage on Death Saving Throws, and once per turn, when a creature within 5 feet of the target hits it with a melee attack roll, the attacker takes 2d4 Necrotic damage.",
@@ -3224,6 +3224,7 @@ SpellsList["doomtide"] = {
 };
 SpellsList["elminster's effulgent spheres"] = {
     name: "Elminster's Effulgent Spheres",
+	nameShort: "E's Effulgent Spheres",
     classes: ["druid", "sorcerer", "wizard"],
     source: [
         ["FRHoF", 144]
@@ -3234,10 +3235,10 @@ SpellsList["elminster's effulgent spheres"] = {
     range: "Self",
     components: "V,S,M\u0192",
     compMaterial: "an opal worth 1000+ GP",
-    duration: "1 hr",
+    duration: "1 h",
     description: "6+1/SL orbs. Use 1: ba R. spell atk 120 ft 3d6 dmg (A/C/F/L/T) or Rea on elem. dmg Resist to next turn",
     descriptionFull: [
-        "Six hromatic spheres orbit you for the duration." + "\n   " + "While the spheres are present, you can expend spheres to create the following effects:" + "\n   " + "***Absorb Energy***. When you take Acid, Cold, Fire, Lightning, or Thunder damage, you can take a Reaction to expend one sphere and give yourself Resistance to the triggering damage type until the start of your next turn." + "\n   " + "***Energy Blast***. As a Bonus Action, you send one sphere hurtling toward a target within 120 feet of yourself. Make a ranged spell attack. On a hit, the target takes 3d6 Acid, Cold, Fire, Lightning, or Thunder damage (your choice). Regardless of whether you hit, the sphere is expended." + "\n   " + "The spell ends early if you have no more spheres remaining." + AtHigherLevels + "The number of spheres increases by 1 for every spell slot level above 6.",
+        "Six chromatic spheres orbit you for the duration." + "\n   " + "While the spheres are present, you can expend spheres to create the following effects:" + "\n   " + "***Absorb Energy***. When you take Acid, Cold, Fire, Lightning, or Thunder damage, you can take a Reaction to expend one sphere and give yourself Resistance to the triggering damage type until the start of your next turn." + "\n   " + "***Energy Blast***. As a Bonus Action, you send one sphere hurtling toward a target within 120 feet of yourself. Make a ranged spell attack. On a hit, the target takes 3d6 Acid, Cold, Fire, Lightning, or Thunder damage (your choice). Regardless of whether you hit, the sphere is expended." + "\n   " + "The spell ends early if you have no more spheres remaining." + AtHigherLevels + "The number of spheres increases by 1 for every spell slot level above 6.",
     ],
 };
 SpellsList["elminster's elusion"] = {
@@ -3269,7 +3270,7 @@ SpellsList["holy star of mystra"] = {
     range: "Self",
     components: "V,S",
     duration: "Conc, 1 min",
-    description: "5/5ft Br/Dim; 3/4 Cvr; R. atk 120 ft: 4d10+mod Force/Rad. dmg; If save vs 1 targ. spell \u22647th7th, Rea deflect",
+    description: "5/5ft Br/Dim; 3/4 Cvr; R. atk 120 ft: 4d10+mod Force/Rad. dmg; If save vs 1 targ. spell \u22647th, Rea deflect",
     descriptionFull: [
         "You create a glowing mote of energy that hovers above you for the duration. The mote sheds Bright Light in a 5-foot radius and Dim Light for an additional 5 feet." + "\n   " + "When you cast this spell as a Bonus Action on later turns, you can unleash a shining bolt from the mote, targeting one creature within 120 feet of yourself. Make a ranged spell attack. On a hit, the target takes Force or Radiant damage (your choice) equal to 4d10 plus your spellcasting ability modifier." + "\n   " + "In addition, while the mote is present, you have Three-Quarters Cover, and if you succeed on a saving throw against a spell of level 7 or lower that targeted only you and didn't create an area of effect, you can take a Reaction to deflect that spell back at the spell's caster; the caster makes a saving throw against that spell using that caster's own spell save DC.",
     ],
@@ -3295,6 +3296,7 @@ SpellsList["laeral's silver lance"] = {
 };
 SpellsList["simbul's Synostodweomer"] = {
     name: "Simbul's Synostodweomer",
+	nameShort: "Simbul Synostodweomer",
     classes: ["sorcerer", "wizard"],
     source: [
         ["FRHoF", 145]
@@ -3304,7 +3306,7 @@ SpellsList["simbul's Synostodweomer"] = {
     time: "1 a",
     range: "Touch",
     components: "V,S",
-    duration: "1 hr",
+    duration: "1 h",
     description: "1 crea. When they cast with a spell slot, can spend slot level unused HD to heal roll + my spell mod HP",
     descriptionFull: [
         "You imbue one creature you touch with magical healing energy for the duration. Whenever the target casts a spell using a spell slot, the target can immediately roll a number of expended Hit Point Dice equal to the spell slot's level and regain Hit Points equal to the roll's total plus your spellcasting ability modifier; those dice are then expended.",
@@ -3312,6 +3314,7 @@ SpellsList["simbul's Synostodweomer"] = {
 };
 SpellsList["songal's elemental suffusion"] = {
     name: "Songal's Elemental Suffusion",
+	nameShort: "Songal's Elem. Suffusion",
     classes: ["druid", "sorcerer", "warlock"],
     source: [
         ["FRHoF", 146]
@@ -3363,8 +3366,8 @@ SpellsList["spellfire storm"] = {
         "You conjure a pillar of spellfire in a 20-foot-radius, 20-foot-high Cylinder centered on a point within range. The area of the Cylinder is Bright Light, and each creature in it, when it appears, makes a Constitution saving throw, taking 4d10 Radiant damage on a failed save or half as much damage on a successful one. A creature also makes this save when it enters the spell's area for the first time on a turn or ends its turn there. A creature makes this save only once per turn." + "\n   " + "In addition, whenever a creature in the Cylinder casts a spell, that creature makes a Constitution saving throw. On a failed save, the spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn't expended." + "\n   " + "When you cast this spell, you can designate creatures to be unaffected by it." + "\n   " + toUni("Casting as a Circle Spell") + ": " + "In addition to the spell's usual components, you must provide a special component (a blue star sapphire worth 25000+ GP), which the spell consumes. The spell's range increases to 1 mile, and it no longer requires Concentration. When the spell is cast, each secondary caster must expend a level 3+ spell slot; otherwise, the spell fails." + AtHigherLevels + "The damage increases by 1d10 for every spell slot level above 4." + "\n   " + "The number of secondary casters determines the spell's area of effect and duration, as shown in the table below. The spell ends early if any caster who participated in this casting contributes to another casting of Spellfire Storm as a Circle spell." + "\n   " + "1-3 Secondary Casters, 40-foot-radius, 40-foot-high Cylinder, 1 Hour duration." + "\n   " + "4-6 Secondary Casters, 60-foot-radius, 60-foot-high Cylinder, 8 Hour duration." + "\n   " + "7+ Secondary Casters, 100-foot-radius, 100-foot-high Cylinder, 24 Hour duration.",
     ],
 };
-SpellsList["syluné's viper"] = {
-    name: "Syluné's Viper",
+SpellsList["sylune's viper"] = {
+    name: "Sylune's Viper",
     classes: ["druid", "wizard"],
     source: [
         ["FRHoF", 147]
@@ -3375,7 +3378,7 @@ SpellsList["syluné's viper"] = {
     range: "Self",
     components: "V,S,M",
     compMaterial: "a snake fang",
-    duration: "1 hr",
+    duration: "1 h",
     description: "15+5/SL THP. If THP: Climb Spd; R. spell atk 50 ft, 1d6+1d6/SL Force dmg + Incapac. 1 rnd if Poisonable",
     descriptionFull: [
         "A shimmering, spectral snake encircles your body for the duration. You gain 15 Temporary Hit Points; the spell ends early if you have no Temporary Hit Points left." + "\n   " + "While the spell is active, you gain the following benefits:" + "\n   " + "***Climbing***. You gain a Climb Speed equal to your Speed." + "\n   " + "***Venomous Bite***. As a Magic Action, you can make a ranged spell attack using the snake against one creature within 50 feet. On a hit, the target takes 1d6 Force damage and has the Poisoned condition until the start of your next turn. While Poisoned, the target has the Incapacitated condition." + AtHigherLevels + "For each spell slot level above 3, the number of Temporary Hit Points you gain from this spell increases by 5, and the damage of the Venomous Bite increases by 1d6.",
