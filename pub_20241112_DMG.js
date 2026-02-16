@@ -8556,7 +8556,7 @@ MagicItemsList["shield of the cavalier"] = {
         "\n   " + toUni("Protective Field") + ". As a Reaction, when you or an ally you can see within 5 feet of you is targeted by an attack or makes a saving throw against an area of effect, you can use the Shield to create an immobile 5-foot Emanation originating from you. When the Emanation appears, any creatures or objects not fully contained within it are pushed into the nearest unoccupied spaces outside it. The attack or area of effect that triggered the Reaction has no effect on creatures and objects inside the Emanation, which lasts as long as you maintain Concentration, up to 1 minute. Nothing can pass into or out of the Emanation. A creature or object inside the Emanation can’t be damaged by attacks or effects originating from outside, nor can a creature inside the Emanation damage anything outside it. Once this property is used, it can’t be used again until the next dawn.",
     attunement: true,
     weight: 6,
-    shieldAdd: "Shield of the Cavalier",
+    shieldAdd : ["Shield of the Cavalier", 4, 6],
     action: ["reaction", " Protective Field"],
     usages: 1,
     recovery: "dawn",
