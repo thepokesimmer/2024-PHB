@@ -777,7 +777,7 @@ legacySubClassRefactor("artificer", "artillerist", {
                         Value(prefix + "Comp.Use.Attack.3.Weapon Selection", "Detonate");
                         // Upgrade the damage for the attacks
                         for (var i = 1; i <= 2; i++) {
-                            Value(prefix + "BlueText.Comp.Use.Attack." + i + ".Damage Die", "3d10");
+                            Value(prefix + "BlueText.Comp.Use.Attack." + i + ".Damage Die", "3d8");
                         }
                     },
                     removeeval: function(prefix, lvl) {
