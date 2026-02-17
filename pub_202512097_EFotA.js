@@ -2827,7 +2827,7 @@ FeatsList["mark of making"] = {
                 if (spType.indexOf("bonus") !== -1 && (spList.school || !spList["class"] || (spList["class"].indexOf(spName) === -1 && spName !== "fighter"))) return;
                 spList.extraspells = spList.extraspells.concat(["identify", "tenser's floating disk", "continual flame", "spiritual weapon", "conjure barrage", "elemental weapon", "fabricate", "stone shape", "creation"]);
             },
-            "The Mark of Finding Feat adds extra spells to the spell list(s) of my spellcasting class(es): Identify, Tenser's Floating Disk, Continual Flame, Spiritual Weapon, Conjure Barrage, Elemental Weapon, Fabricate, Stone Shape, \u0026 Creation."
+            "The Mark of Making Feat adds extra spells to the spell list(s) of my spellcasting class(es): Identify, Tenser's Floating Disk, Continual Flame, Spiritual Weapon, Conjure Barrage, Elemental Weapon, Fabricate, Stone Shape, \u0026 Creation."
         ]
     }
 };
