@@ -4412,7 +4412,7 @@ RunFunctionAtEnd(function() {
             description: guardianTxt,
             additional: guardianAdditional,
             armorAdd: gArmName,
-            weaponsAdd: ["Thunder Gauntlets"],
+            weaponsAdd: ["Thunder Pulse"],
             prereqeval: prereqFunc,
             dependentChoices: "guardian"
         };
