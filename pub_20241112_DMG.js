@@ -4307,7 +4307,7 @@ MagicItemsList["giant slayer"] = {
         ],
         atkCalc: [
             function(fields, v, output) {
-                if (v.isMeleeWeapon | v.isRangedWeapon && (/^(?=.*giant)(?=.*slayer).*$/i).test(v.WeaponTextName)) {
+                if (v.isMeleeWeapon || v.isRangedWeapon && (/^(?=.*giant)(?=.*slayer).*$/i).test(v.WeaponTextName)) {
                     output.magic = v.thisWeapon[1] + 1;
                 }
             }, ''
@@ -4458,7 +4458,7 @@ MagicItemsList["hammer of thunderbolts"] = {
     },
     selfChoosing: function() {
         // don't have to be attuned to the prereqs https://twitter.com/jeremyecrawford/status/948346891296653315
-        return CurrentMagicItems.known.indexOf("belt of giant strength") !== -1 | CurrentMagicItems.known.indexOf("gauntlets of ogre power") !== -1 ? "attuned (requires Belt of Giant Strength or Gauntlets of Ogre Power)" : "not attuned";
+        return CurrentMagicItems.known.indexOf("belt of giant strength") !== -1 || CurrentMagicItems.known.indexOf("gauntlets of ogre power") !== -1 ? "attuned (requires Belt of Giant Strength or Gauntlets of Ogre Power)" : "not attuned";
     },
     choices: ["not attuned", "attuned (requires Belt of Giant Strength or Gauntlets of Ogre Power)"],
     "not attuned": {
@@ -4488,7 +4488,7 @@ MagicItemsList["hammer of thunderbolts"] = {
         descriptionLong: "This magical maul adds a +1 bonus to attack and damage rolls made with it. It gives me a +4 bonus to Strength (max 30). On a roll of 20 to hit vs. a giant, the giant dies on a failed DC 17 Con save. The hammer has 5 charges and regains 1d4+1 charges daily at dawn. I can can expend 1 charge and make a ranged weapon attack with the hammer, hurling it as if it had the thrown property with a normal range of 20 ft and a long range of 60 ft. On a hit, it releases an audible thunderclap in a 300 ft radius and all within 30 ft of the target that was hit must make a DC 17 Con save or be stunned until the end of my next turn.",
         prerequisite: "Must be wearing a Belt of Giant Strength or Gauntlets of Ogre Power to attune",
         prereqeval: function() {
-            return CurrentMagicItems.known.indexOf("belt of giant strength") !== -1 | CurrentMagicItems.known.indexOf("gauntlets of ogre power") !== -1;
+            return CurrentMagicItems.known.indexOf("belt of giant strength") !== -1 || CurrentMagicItems.known.indexOf("gauntlets of ogre power") !== -1;
         },
         scores: [4, 0, 0, 0, 0, 0],
         scoresMaximum: [30, 0, 0, 0, 0, 0],
