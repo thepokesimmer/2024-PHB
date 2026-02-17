@@ -1760,9 +1760,9 @@ CreatureList["eagle"] = {
 	speed : "10 ft, Fly 60 ft",
 	scores : [6, 15, 12, 2, 14, 7],
 	saves : ["", "", "", "", "", ""],
-	skills : [{
+	skills : {
 		"perception" : 6,
-	}],
+	},
 	senses : "",
 	languages : "",
 	challengeRating : 0,
@@ -2581,7 +2581,7 @@ CreatureList["giant seahorse"] = {
 		description : "The giant seahorse can breathe only underwater.",
 		joinString : "\n   "
 	}],
-	action : [{
+	actions : [{
 		name : "Bubble Dash",
 		description : "As a Bonus Action, while underwater, the giant seahorse moves up to half its Swim Speed without provoking Opportunity Attacks.",
 		joinString : "\n   "
@@ -3086,8 +3086,8 @@ CreatureList["hunter shark"] = {
 		"perception" : 2,
 	},
 	damage_resistances : "",
-	senses : "",
-	languages : "Blindsight 60 ft",
+	languages : "",
+	senses : "Blindsight 60 ft",
 	challengeRating : 2,
 	proficiencyBonus : 2,
 	attacksAction : 1,	
@@ -3121,8 +3121,8 @@ CreatureList["hyena"] = {
 		"perception" : 3,
 	},
 	damage_resistances : "",
-	senses : "",
-	languages : "Darkvision 60 ft",
+	languages : "",
+	senses : "Darkvision 60 ft",
 	challengeRating : 0,
 	proficiencyBonus : 2,
 	attacksAction : 1,	
@@ -3157,8 +3157,8 @@ CreatureList["jackal"] = {
 		"stealth" : 4,
 	},
 	damage_resistances : "",
-	senses : "",
-	languages : "Darkvision 90 ft",
+	languages : "",
+	senses : "Darkvision 90 ft",
 	challengeRating : 0,
 	proficiencyBonus : 2,
 	attacksAction : 1,
@@ -3187,8 +3187,8 @@ CreatureList["killer whale"] = {
 		"stealth" : 4,
 	},
 	damage_resistances : "",
-	senses : "",
-	languages : "Blindsight 120 ft",
+	languages : "",
+	senses : "Blindsight 120 ft",
 	challengeRating : 3,
 	proficiencyBonus : 2,
 	attacksAction : 1,	
@@ -4193,6 +4193,7 @@ CreatureList["warhorse"] = {
 		ability : 1,
 		damage : [2, 4, "Bludgeoning"],
 		description : " If moved at least 20 ft straight toward target before hit, +5 (2d4) Bludgeoning damage. If target is Large or smaller, falls Prone.",
+		range : "Melee (5 ft)",
 	}],
 };
 CreatureList["weasel"] = {
