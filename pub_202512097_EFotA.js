@@ -2897,7 +2897,7 @@ FeatsList["mark of scribing"] = {
                 if (!ClassList[spName] || spList.spells || spList.psionic) return;
                 // if this is an 'extra spell', also test if it uses the class' spell list or not
                 if (spType.indexOf("bonus") !== -1 && (spList.school || !spList["class"] || (spList["class"].indexOf(spName) === -1 && spName !== "fighter"))) return;
-                spList.extraspells = spList.extraspells.concat(["faerie fire", "longstrider", "locate animals or plants", "mind spike", "clairvoyance", "speak with plants", "divination", "locate creature", "commune with nature"]);
+                spList.extraspells = spList.extraspells.concat(["command", "illusory script", "animal messenger", "silence", "sending", "tongues", "arcane eye", "confusion", "dream"]);
             },
             "The Mark of Scribing Feat adds extra spells to the spell list(s) of my spellcasting class(es): Command, Illusory Script, Animal Messenger, Silence, Sending, Tongues, Arcane Eye, Confusion, \u0026 Dream."
         ]
