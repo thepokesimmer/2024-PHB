@@ -4244,7 +4244,7 @@ RunFunctionAtEnd(function() {
                     type: "Simple",
                     damage: [1, 6, "lightning"],
                     range: "90/300 ft",
-                    description: "Thrown; Once per turn on hit, +1d6 Lightning damage",
+                    description: "Once per turn on hit, +1d6 Lightning damage",
                     abilitytodamage: true
                 }],
                 // Do this in the parent object, so that it is always visible and people printing the sheet can more easily switch between the three models
