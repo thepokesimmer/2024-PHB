@@ -1166,8 +1166,8 @@ AddSubClass("artificer", "cartographer", {
             ]),
             spellcastingBonus: [{
                 name: "Unerring Path",
-                spells: "find the path",
-                selection: "find the path",
+                spells: ["find the path"],
+                selection: ["find the path"],
                 firstCol: "oncelr",
             }],
             extraLimitedFeatures: [{
