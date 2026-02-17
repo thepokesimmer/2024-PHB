@@ -3234,7 +3234,7 @@ FeatsList["greater mark of hospitality"] = {
     descriptionFull: "You gain the following benefits:\n \u2022 Ability Score Increase. Increase ability score of your choice by 1, to a maximum of 20.\n \u2022 Improved Intuition. When you use the Ever Hospitable benefit of your Mark of Hospitality feat, you can roll 1d6 instead of 1d4.\n \u2022 Inspired Hospitality. When you cast Purify Food and Drink, you can modify the spell so that instead of its normal effect, each creature of your choice within 30 feet of you is refreshed. Each affected creature’s Exhaustion level is reduced by 1, and the creature gains Temporary Hit Points equal to your Proficiency Bonus plus your Intelligence, Wisdom, or Charisma modifier (choose when you select this feat). Once you modify the spell with this benefit, you can’t do so again until you finish a Long Rest.",
     description: "An ability score of my choice is increased by 1, to a max of 20. When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Int, Wis, or Cha mod (choose when I select this Feat).",
     extraLimitedFeatures: [{
-        name: " Inspired Hospitality",
+        name: "Inspired Hospitality",
         usages: 1,
         recovery: "long rest",
     }],
@@ -3558,7 +3558,7 @@ FeatsList["greater mark of warding"] = {
     descriptionFull: "You gain the following benefits:\n \u2022 Ability Score Increase. Increase ability score of your choice by 1, to a maximum of 20.\n \u2022 Improved Intuition. When you use the Warder's Intuition benefit of your Mark of Warding feat, you can roll 1d6 instead of 1d4.\n \u2022 Improved Warding. When a creature makes an attack roll against you or a creature you can see within 30 feet of yourself, you can take a Reaction to impose Disadvantage on that roll. You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
     description: "An ability score of my choice is increased by 1, to a max of 20. When I use the Warder's Intuition benefit of my Mark of Warding feat, I can roll 1d6 instead of 1d4. Prof per Long Rest, When a creature makes an atk roll against me or a creature I can see w/i 30 ft of me I can take my Rea to impose Disadvantage on the roll.",
     extraLimitedFeatures: [{
-        name: " Improved Warding",
+        name: "Improved Warding",
         action: [
             ["reaction", "Improved Warding"]
         ],
@@ -3604,7 +3604,7 @@ FeatsList["potent dragonmark"] = {
     descriptionFull: "You gain the following benefits:\n \u2022 Ability Score Increase. Increase the spellcasting ability score used by your Dragonmark Feat by 1, to a maximum of 20.\n \u2022 Dragonmark Preparation. You always have the spells on your Dragonmark feat's Spells of the Mark list (if any) prepared.\n \u2022 Dragonmark Spellcasting. You have one spell slot to cast the spells granted by your Dragonmark feat. The spell slot's level is one-half your level (round up), to a maximum of level 5. You regain the expended slot when you finish a Short or Long Rest. You can use this spell slot to cast only a spell that you have prepared because of your Dragonmark feat or the Dragonmark Preparation benefit of this feat.",
     description: "The spellcasting ability score of my Dragonmark Feat increases by 1, to a max of 20. I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted \u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest.",
     extraLimitedFeatures: [{
-        name: " Dragonmark Spell Slot",
+        name: "Dragonmark Spell Slot",
         usages: 1,
         recovery: "short rest",
     }],
