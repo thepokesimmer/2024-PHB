@@ -76,7 +76,7 @@ function legacySpellRefactor(spellKey, newSpell) {
                                 ["LEGACYSPELLS", 1]
                             ],
                             minlevel: 1,
-                            description: "\n I can choose to access to the legacy version of spells",
+                            description: "\n I can choose to access the legacy version of spells",
                             choices: ["Show Legacy", "Hide Legacy"],
                             "show legacy": {
                                 name: "Show legacy spells",
@@ -226,7 +226,7 @@ legacyClassRefactor("artificer", {
         "\n \u2022 Studded Leather;" +
         "\n \u2022 Dagger;" +
         "\n \u2022 Thieves' Tools;" +
-        "\n \u2022 Tinker's Tools,;" +
+        "\n \u2022 Tinker's Tools;" +
         "\n \u2022 A Dungeoneer's Pack, and 16 gp." +
         "\n\nAlternatively, choose 150 gp worth of starting equipment instead of the class' starting equipment.",
     subclasses: ["Artificer Specialist", []],
@@ -414,7 +414,7 @@ legacyClassRefactor("artificer", {
                 ["E:FA", 0]
             ],
             minlevel: 7,
-            description: "\n   As a Reaction when I or another I can see in 30 ft fail a check/save, I can add my Int mod to it",
+            description: "\n   As a Reaction when I or another creature I can see in 30 ft fail a check/save, I can add my Int mod to it",
             action: [
                 ["reaction", ""]
             ],
@@ -777,7 +777,7 @@ legacySubClassRefactor("artificer", "artillerist", {
                         Value(prefix + "Comp.Use.Attack.3.Weapon Selection", "Detonate");
                         // Upgrade the damage for the attacks
                         for (var i = 1; i <= 2; i++) {
-                            Value(prefix + "BlueText.Comp.Use.Attack." + i + ".Damage Die", "3d10");
+                            Value(prefix + "BlueText.Comp.Use.Attack." + i + ".Damage Die", "3d8");
                         }
                     },
                     removeeval: function(prefix, lvl) {
@@ -1104,7 +1104,7 @@ AddSubClass("artificer", "cartographer", {
             ],
             minlevel: 3,
             description: desc([
-                "When I finish a Long Rest holding Cartographer's Tools \u0026 touching at least 2 creatures (1 of whom can be myself), I can create a number of magical maps for each target, up to a max equal to my 1 + Int mod (min 2).",
+                "When I finish a Long Rest holding Cartographer's Tools \u0026 touching at least 2 creatures (1 of whom can be myself), I can create a number of magical maps for each target, up to a max equal to 1 + my Int mod (min 2).",
                 "These magical maps are illegible to all others \u0026 last until I die, or until I use this feature again, which causes existing maps to immediately vanish",
                 "While carrying the map, a target gains the following benefits:",
                 " \u2022 Awareness. Targets add 1d4 to their Initiative rolls.",
@@ -1121,7 +1121,7 @@ AddSubClass("artificer", "cartographer", {
             description: desc([
                 "On my turn \u0026 so long as my Speed isn't 0, I can expend half of my movement to teleport.",
                 "I can teleport as such to an unoccupied space I can see within 10 ft, or to within 5 feet of a creature that is within 30 ft of me.",
-                "I can cast Faerie Fire a number of times equal to my Int mod per Long Rest without expeding a spell slot.",
+                "I can cast Faerie Fire a number of times equal to my Int mod per Long Rest without expending a spell slot.",
             ]),
             extraLimitedFeatures: [{
                 name: "Mapping Magic: Faerie Fire",
@@ -1137,7 +1137,7 @@ AddSubClass("artificer", "cartographer", {
             ],
             minlevel: 5,
             description: desc([
-                "Once per turn, When I cast a Cartographer Spell or hit a creature affected by Faerie Fire with an attack roll,",
+                "Once per turn, when I cast a Cartographer Spell or hit a creature affected by Faerie Fire with an attack roll,",
                 "I can add my Int modifier to one damage roll of the spell or attack.",
                 "In addition, taking damage does not cause me to lose Concentration on Faerie Fire.",
             ]),
@@ -1149,7 +1149,7 @@ AddSubClass("artificer", "cartographer", {
             ],
             minlevel: 9,
             description: desc([
-                "When I use my Flash of Genious, a willing creature of my choice (or myself) can teleport as part of the same Reaction.",
+                "When I use my Flash of Genius, a willing creature of my choice (or myself) can teleport as part of the same Reaction.",
                 "The target creature can teleport up to 30 ft to an unoccupied space I can see."
             ]),
         },
@@ -1161,13 +1161,13 @@ AddSubClass("artificer", "cartographer", {
             minlevel: 15,
             description: desc([
                 "My Adventurer's Atlas improves, gaining the following benefits:",
-                " \u2022 Safe Haven. When a map holder is reduced to 0 HP but not killed outright, that creature can destory its map. The creature is then teleported to an unoccupied space within 5 feet of myself or another map holder of its choice and its HP changes to a number equal to twice my Artificer level.",
+                " \u2022 Safe Haven. When a map holder is reduced to 0 HP but not killed outright, that creature can destroy its map. The creature is then teleported to an unoccupied space within 5 feet of myself or another map holder of its choice and its HP changes to a number equal to twice my Artificer level.",
                 " \u2022 Unerring Path. Once per Long Rest \u0026 if I am one of the map holders for my Adventurer’s Atlas, I can cast Find the Path without expending a spell slot, without preparing the spell, and without needing spell components.",
             ]),
             spellcastingBonus: [{
                 name: "Unerring Path",
-                spells: "find the path",
-                selection: "find the path",
+                spells: ["find the path"],
+                selection: ["find the path"],
                 firstCol: "oncelr",
             }],
             extraLimitedFeatures: [{
@@ -1847,7 +1847,7 @@ BackgroundList["aberrant heir"] = {
     feature: "Aberrant Heir",
 };
 BackgroundFeatureList["aberrant heir"] = {
-    description: "Your aberrant dragonmark has made life challenging since it manifested. You might have hidden it successfully for most of your life or managed to avoid notice. Alternatively, you might have encountered suspicion and fear, perhaps coupled with the outright antagonism of one or more dragonmarked houses. You might have formed an association with the House Tarkanan criminal organization (named for one of the most notorious leaders of the aberrant dragonmarked in the War of the Mark twenty-five centuries ago). Or you might sruggle to find your own way in the world, relying on your wits and the power of your mark.",
+    description: "Your aberrant dragonmark has made life challenging since it manifested. You might have hidden it successfully for most of your life or managed to avoid notice. Alternatively, you might have encountered suspicion and fear, perhaps coupled with the outright antagonism of one or more dragonmarked houses. You might have formed an association with the House Tarkanan criminal organization (named for one of the most notorious leaders of the aberrant dragonmarked in the War of the Mark twenty-five centuries ago). Or you might struggle to find your own way in the world, relying on your wits and the power of your mark.",
     source: [
         ["E:FA", 0]
     ],
@@ -1904,7 +1904,7 @@ legacyBackgroundRefactor("house agent", {
     scorestxt: ["+2 and +1 -or- +1 to each from Strength, Intelligence, and Charisma"],
     skills: ["Investigation", "Persuasion"],
     toolProfs: [
-        ["Artian's Tools", 1]
+        ["Artisan's Tools", 1]
     ],
     gold: 20,
     equipleft: [
@@ -2216,7 +2216,7 @@ BackgroundList["house phiarlan heir"] = {
     ],
     feature: "House Phiarlan Heir",
 };
-BackgroundFeatureList["house Phiarlan heir"] = {
+BackgroundFeatureList["house phiarlan heir"] = {
     description: "Though you have seen wealth, fame, and beauty as a child of House Phiarlan, you consider knowledge (and the power it brings) the greatest treasure of all. You might pursue that power as an artist or performer, always alert for secrets even as you regale the world with story, song, acrobatics, or art. Or you might foster ties to the secretive espionage arm of your house: the Serpentine Table.",
     source: [
         ["E:FA", 0]
@@ -2301,7 +2301,7 @@ BackgroundFeatureList["house tharashk heir"] = {
 };
 BackgroundList["house thuranni heir"] = {
     regExpSearch: /^(?=.*thuranni)(?=.*heir).*$/i,
-    name: "House Thurrani Heir",
+    name: "House Thuranni Heir",
     source: [
         ["E:FA", 0]
     ],
@@ -2377,7 +2377,7 @@ BackgroundList["inquisitive"] = {
     scorestxt: ["+2 and +1 -or- +1 to each from Constitution, Intelligence, and Charisma"],
     skills: ["Insight", "Investigation"],
     toolProfs: [
-        ["Thieve's Tools"]
+        ["Thieves' Tools"]
     ],
     gold: 10,
     equipleft: [
@@ -2420,7 +2420,7 @@ legacyRaceRefactor("changeling", {
         }
     },
     languageProfs: ["Common", 2],
-    skillstxt: ["Choose 2 : Deception, Insight, Intimidation, Performance, or Perusasion"],
+    skillstxt: ["Choose 2 : Deception, Insight, Intimidation, Performance, or Persuasion"],
     age: "",
     height: " are about 4-7 feet tall, when medium size, or 2-4 feet tall, when small size",
     trait: "Changeling\n\u2022 Creature Type : Fey\n\u2022 Changeling Instincts: I gain proficiency in two of the following skills of my choice: Deception, Insight, Intimidation, Performance, or Persuasion.\n\u2022 Shape-Shifter: As an action, I can shape-shift to change my appearance and my voice. I determine the specifics of the changes, including my coloration, hair length, and sex. I can also adjust my height and weight and can change my size between Medium and Small. I can make myself appear as a member of another playable species, though none of my game statistics change. I can’t duplicate the appearance of an individual I’ve never seen, and I must adopt a form that has the same basic arrangement of limbs that I have. This trait doesn’t change my clothing and equipment. While shape-shifted with this trait, I have Advantage on Charisma checks. I stay in the new form until I take an action to revert to my true form.",
@@ -2490,7 +2490,7 @@ legacyRaceRefactor("half-elf", {
     recovery: "long rest",
     additional: "Recover after 1d4 Long Rests",
     height: " are about 4-6 feet tall, when medium size, or 2-4 feet tall, when small size",
-    trait: "Half-Elf\n\u2022 Fey Gift: I know the Friends cantrip. Whenever I finish a Long Rest, I can replace it with a different cantrip from the Cleric, Druid, or Wizard spell list Int, Wis, or Cha is my spellcasting ability for spells I cast with this trait. (Choosen when I select this species).\n\u2022 Lethargic Resilience: When I fail a saving throw to avoid or end the Uncoscious condition, I can succeed instead. Once I use this rait, I can't do so again until I finish 1d4 Long Rests.",
+    trait: "Half-Elf\n\u2022 Fey Gift: I know the Friends cantrip. Whenever I finish a Long Rest, I can replace it with a different cantrip from the Cleric, Druid, or Wizard spell list Int, Wis, or Cha is my spellcasting ability for spells I cast with this trait. (Choosen when I select this species).\n\u2022 Lethargic Resilience: When I fail a saving throw to avoid or end the Unconscious condition, I can succeed instead. Once I use this trait, I can't do so again until I finish 1d4 Long Rests.",
     replaces: ["half-elf"],
 });
 legacyRaceRefactor("shifter", {
@@ -2512,7 +2512,7 @@ legacyRaceRefactor("shifter", {
     vision: [
         ["Darkvision", 60]
     ],
-    skillstxt: "Choose one between Acrobatics, Athletics, Intimdation, or Survival",
+    skillstxt: "Choose one between Acrobatics, Athletics, Intimidation, or Survival",
     age: "",
     height: " are about 4-7 feet tall, when medium size, or 2-4 feet tall, when small size",
     action: [
@@ -2595,7 +2595,7 @@ legacyRaceRefactor("warforged", {
         text: "I gain a +1 bonus to AC."
     },
     height: " are about 6-8 feet tall, when medium size, or 3-4 feet tall, when small size",
-    trait: "Warforged\n\u2022 Creature Type : Construct\n\u2022 Sentry's Rest: I don't need to sleep, and magic can't put me to sleep. I can finish a Long Rest in 6 hours if I spend those hours in an inactive, motionless state. During this time, I appear nert but remain conscious.\n\u2022 Tireless: I don't gain Exhaustion levels from dehydration, malnutrition, or suffocation.",
+    trait: "Warforged\n\u2022 Creature Type : Construct\n\u2022 Sentry's Rest: I don't need to sleep, and magic can't put me to sleep. I can finish a Long Rest in 6 hours if I spend those hours in an inactive, motionless state. During this time, I appear inert but remain conscious.\n\u2022 Tireless: I don't gain Exhaustion levels from dehydration, malnutrition, or suffocation.",
     replaces: ["warforged"],
 });
 // Feats
@@ -2758,7 +2758,7 @@ FeatsList["mark of healing"] = {
                 if (!ClassList[spName] || spList.spells || spList.psionic) return;
                 // if this is an 'extra spell', also test if it uses the class' spell list or not
                 if (spType.indexOf("bonus") !== -1 && (spList.school || !spList["class"] || (spList["class"].indexOf(spName) === -1 && spName !== "fighter"))) return;
-                spList.extraspells = spList.extraspells.concat(["false life", "healing word", "arcane vigor", "prayer of healing", "aura of vatality", "mass healing word", "aura of life", "aura of purity", "greater restoration"]);
+                spList.extraspells = spList.extraspells.concat(["false life", "healing word", "arcane vigor", "prayer of healing", "aura of vitality", "mass healing word", "aura of life", "aura of purity", "greater restoration"]);
             },
             "The Mark of Healing Feat adds extra spells to the spell list(s) of my spellcasting class(es): False Life, Healing Word, Arcane Vigor, Prayer of Healing, Aura of Vitality, Mass Healing Word, Aura of Life, Aura of Purity, \u0026 Greater Restoration."
         ]
@@ -2827,7 +2827,7 @@ FeatsList["mark of making"] = {
                 if (spType.indexOf("bonus") !== -1 && (spList.school || !spList["class"] || (spList["class"].indexOf(spName) === -1 && spName !== "fighter"))) return;
                 spList.extraspells = spList.extraspells.concat(["identify", "tenser's floating disk", "continual flame", "spiritual weapon", "conjure barrage", "elemental weapon", "fabricate", "stone shape", "creation"]);
             },
-            "The Mark of Finding Feat adds extra spells to the spell list(s) of my spellcasting class(es): Identify, Tenser's Floating Disk, Continual Flame, Spiritual Weapon, Conjure Barrage, Elemental Weapon, Fabricate, Stone Shape, \u0026 Creation."
+            "The Mark of Making Feat adds extra spells to the spell list(s) of my spellcasting class(es): Identify, Tenser's Floating Disk, Continual Flame, Spiritual Weapon, Conjure Barrage, Elemental Weapon, Fabricate, Stone Shape, \u0026 Creation."
         ]
     }
 };
@@ -2838,8 +2838,8 @@ FeatsList["mark of passage"] = {
     ],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
-    descriptionFull: "You have manifested a Dragonmark of Passage; determine its appearance. You gain the following benefits:\n \u2022 Courier's Speed. Your Speed increases by 5 ft. \n \u2022 Intuitive Motion. When you make a Strength (Althetics) or Dexterity (Acrobatics) check, you can roll 1d4 and add the number rolled to the ability check.\n \u2022 Magical Passage. You always have the Misty Step spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).\n \u2022 Spells of the Mark. If you have the Spellcasting or Pact Magic feature, the following spells are added to that feature's spell list: Expeditious Retreat, Jump, Pass without Trace, Find Steed, Blink, Phantom Steed, Dimension Door, Freedom of Movement, \u0026 Teleportation Circle.",
-    description: "My Speed increases by 5 ft. I can add 1d4 to any Strength (Althetics) or Dexterity (Acrobatics) checks. At character level 1, I always have the Misty Step spell prepared, and can cast it once without a spell slot per Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat). At character level 3, I also always have the Locate Object spell prepared and can cast it the same way. Additionally, if I am a spellcasting class/subclass, I gain additional spells I can cast.",
+    descriptionFull: "You have manifested a Dragonmark of Passage; determine its appearance. You gain the following benefits:\n \u2022 Courier's Speed. Your Speed increases by 5 ft. \n \u2022 Intuitive Motion. When you make a Strength (Athletics) or Dexterity (Acrobatics) check, you can roll 1d4 and add the number rolled to the ability check.\n \u2022 Magical Passage. You always have the Misty Step spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).\n \u2022 Spells of the Mark. If you have the Spellcasting or Pact Magic feature, the following spells are added to that feature's spell list: Expeditious Retreat, Jump, Pass without Trace, Find Steed, Blink, Phantom Steed, Dimension Door, Freedom of Movement, \u0026 Teleportation Circle.",
+    description: "My Speed increases by 5 ft. I can add 1d4 to any Strength (Athletics) or Dexterity (Acrobatics) checks. At character level 1, I always have the Misty Step spell prepared, and can cast it once without a spell slot per Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat). At character level 3, I also always have the Locate Object spell prepared and can cast it the same way. Additionally, if I am a spellcasting class/subclass, I gain additional spells I can cast.",
     speed: {
         allModes: {
             bonus: "+5"
@@ -2897,7 +2897,7 @@ FeatsList["mark of scribing"] = {
                 if (!ClassList[spName] || spList.spells || spList.psionic) return;
                 // if this is an 'extra spell', also test if it uses the class' spell list or not
                 if (spType.indexOf("bonus") !== -1 && (spList.school || !spList["class"] || (spList["class"].indexOf(spName) === -1 && spName !== "fighter"))) return;
-                spList.extraspells = spList.extraspells.concat(["faerie fire", "longstrider", "locate animals or plants", "mind spike", "clairvoyance", "speak with plants", "divination", "locate creature", "commune with nature"]);
+                spList.extraspells = spList.extraspells.concat(["command", "illusory script", "animal messenger", "silence", "sending", "tongues", "arcane eye", "confusion", "dream"]);
             },
             "The Mark of Scribing Feat adds extra spells to the spell list(s) of my spellcasting class(es): Command, Illusory Script, Animal Messenger, Silence, Sending, Tongues, Arcane Eye, Confusion, \u0026 Dream."
         ]
@@ -3188,7 +3188,7 @@ FeatsList["greater mark of healing"] = {
         return v.characterLevel >= 4 && (/mark of healing/i).test(CurrentFeat.known);
     },
     descriptionFull: "You gain the following benefits:\n \u2022 Ability Score Increase. Increase ability score of your choice by 1, to a maximum of 20.\n \u2022 Improved Intuition. When you use the Medical Intuition benefit of your Mark of Healing feat, you can roll 1d6 instead of 1d4.\n \u2022 Improved Healing. You can now use the Healing Touch benefit of your Mark of Healing feat to cast Cure Wounds without using a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.\nAdditionally, when you cast Cure Wounds and roll dice to determine the number of Hit Points restored, you can treat any 1 or 2 on a roll as a 3.",
-    description: "An ability score of my choice is increased by 1, to a max of 20. When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds /u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3.",
+    description: "An ability score of my choice is increased by 1, to a max of 20. When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot, regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds \u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3.",
     extraLimitedFeatures: [{
         name: "Improved Healing",
         usages: "Proficiency bonus per ",
@@ -3197,27 +3197,27 @@ FeatsList["greater mark of healing"] = {
     }],
     choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
     "strength": {
-        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds /u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Strength]",
+        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot, regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds \u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Strength]",
         scores: [1, 0, 0, 0, 0, 0]
     },
     "dexterity": {
-        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds /u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Dexterity]",
+        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot, regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds \u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Dexterity]",
         scores: [0, 1, 0, 0, 0, 0]
     },
     "constitution": {
-        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds /u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Constitution]",
+        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot, regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds \u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Constitution]",
         scores: [0, 0, 1, 0, 0, 0]
     },
     "intelligence": {
-        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds /u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Intelligence]",
+        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot, regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds \u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Intelligence]",
         scores: [0, 0, 0, 1, 0, 0]
     },
     "wisdom": {
-        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds /u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Wisdom]",
+        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot, regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds \u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Wisdom]",
         scores: [0, 0, 0, 0, 1, 0]
     },
     "charisma": {
-        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds /u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Charisma]",
+        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot, regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds \u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Charisma]",
         scores: [0, 0, 0, 0, 0, 1]
     }
 };
@@ -3232,83 +3232,83 @@ FeatsList["greater mark of hospitality"] = {
         return v.characterLevel >= 4 && (/mark of hospitality/i).test(CurrentFeat.known);
     },
     descriptionFull: "You gain the following benefits:\n \u2022 Ability Score Increase. Increase ability score of your choice by 1, to a maximum of 20.\n \u2022 Improved Intuition. When you use the Ever Hospitable benefit of your Mark of Hospitality feat, you can roll 1d6 instead of 1d4.\n \u2022 Inspired Hospitality. When you cast Purify Food and Drink, you can modify the spell so that instead of its normal effect, each creature of your choice within 30 feet of you is refreshed. Each affected creature’s Exhaustion level is reduced by 1, and the creature gains Temporary Hit Points equal to your Proficiency Bonus plus your Intelligence, Wisdom, or Charisma modifier (choose when you select this feat). Once you modify the spell with this benefit, you can’t do so again until you finish a Long Rest.",
-    description: "An ability score of my choice is increased by 1, to a max of 20. When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Int, Wis, or Cha mod (choose when I select this Feat).",
+    description: "An ability score of my choice is increased by 1, to a max of 20. When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Int, Wis, or Cha mod (choose when I select this Feat).",
     extraLimitedFeatures: [{
-        name: " Inspired Hospitality",
+        name: "Inspired Hospitality",
         usages: 1,
         recovery: "long rest",
     }],
     choices: ["ASI Str, Temp HP Int", "ASI Str, Temp HP Wis", "ASI Str, Temp HP Cha", "ASI Dex, Temp HP Int", "ASI Dex, Temp HP Wis", "ASI Dex, Temp HP Cha", "ASI Con, Temp HP Int", "ASI Con, Temp HP Wis", "ASI Con, Temp HP Cha", "ASI Int, Temp HP Int", "ASI Int, Temp HP Wis", "ASI Int, Temp HP Cha", "ASI Wis, Temp HP Int", "ASI Wis, Temp HP Wis", "ASI Wis, Temp HP Cha", "ASI Cha, Temp HP Int", "ASI Cha, Temp HP Wis", "ASI Cha, Temp HP Cha"],
     "asi str, temp hp int": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Strength]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Strength]",
         scores: [1, 0, 0, 0, 0, 0]
     },
     "asi str, temp hp wis": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Strength]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Strength]",
         scores: [1, 0, 0, 0, 0, 0]
     },
     "asi str, temp hp cha": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Strength]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Strength]",
         scores: [1, 0, 0, 0, 0, 0]
     },
     "asi dex, temp hp int": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Dexterity]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Dexterity]",
         scores: [0, 1, 0, 0, 0, 0]
     },
     "asi dex, temp hp wis": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Dexterity]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Dexterity]",
         scores: [0, 1, 0, 0, 0, 0]
     },
     "asi dex, temp hp cha": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Dexterity]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Dexterity]",
         scores: [0, 1, 0, 0, 0, 0]
     },
     "asi con, temp hp int": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Constitution]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Constitution]",
         scores: [0, 0, 1, 0, 0, 0]
     },
     "asi con, temp hp wis": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Constitution]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Constitution]",
         scores: [0, 0, 1, 0, 0, 0]
     },
     "asi con, temp hp cha": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Constitution]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Constitution]",
         scores: [0, 0, 1, 0, 0, 0]
     },
     "asi int, temp hp int": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Intelligence]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Intelligence]",
         scores: [0, 0, 0, 1, 0, 0]
     },
     "asi int, temp hp wis": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Intelligence]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Intelligence]",
         scores: [0, 0, 0, 1, 0, 0]
     },
     "asi int, temp hp cha": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Intelligence]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Intelligence]",
         scores: [0, 0, 0, 1, 0, 0]
     },
     "asi wis, temp hp int": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Wisdom]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Wisdom]",
         scores: [0, 0, 0, 0, 1, 0]
     },
     "asi wis, temp hp wis": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Wisdom]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Wisdom]",
         scores: [0, 0, 0, 0, 1, 0]
     },
     "asi wis, temp hp cha": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Wisdom]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Wisdom]",
         scores: [0, 0, 0, 0, 1, 0]
     },
     "asi cha, temp hp int": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Charisma]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Charisma]",
         scores: [0, 0, 0, 0, 0, 1]
     },
     "asi cha, temp hp wis": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Charisma]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Charisma]",
         scores: [0, 0, 0, 0, 0, 1]
     },
     "asi cha, temp hp cha": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Charisma]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Charisma]",
         scores: [0, 0, 0, 0, 0, 1]
     }
 };
@@ -3558,7 +3558,7 @@ FeatsList["greater mark of warding"] = {
     descriptionFull: "You gain the following benefits:\n \u2022 Ability Score Increase. Increase ability score of your choice by 1, to a maximum of 20.\n \u2022 Improved Intuition. When you use the Warder's Intuition benefit of your Mark of Warding feat, you can roll 1d6 instead of 1d4.\n \u2022 Improved Warding. When a creature makes an attack roll against you or a creature you can see within 30 feet of yourself, you can take a Reaction to impose Disadvantage on that roll. You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
     description: "An ability score of my choice is increased by 1, to a max of 20. When I use the Warder's Intuition benefit of my Mark of Warding feat, I can roll 1d6 instead of 1d4. Prof per Long Rest, When a creature makes an atk roll against me or a creature I can see w/i 30 ft of me I can take my Rea to impose Disadvantage on the roll.",
     extraLimitedFeatures: [{
-        name: " Improved Warding",
+        name: "Improved Warding",
         action: [
             ["reaction", "Improved Warding"]
         ],
@@ -3602,27 +3602,27 @@ FeatsList["potent dragonmark"] = {
         return v.characterLevel >= 4 && (/dragonmark|mark/i).test(CurrentFeat.known);
     },
     descriptionFull: "You gain the following benefits:\n \u2022 Ability Score Increase. Increase the spellcasting ability score used by your Dragonmark Feat by 1, to a maximum of 20.\n \u2022 Dragonmark Preparation. You always have the spells on your Dragonmark feat's Spells of the Mark list (if any) prepared.\n \u2022 Dragonmark Spellcasting. You have one spell slot to cast the spells granted by your Dragonmark feat. The spell slot's level is one-half your level (round up), to a maximum of level 5. You regain the expended slot when you finish a Short or Long Rest. You can use this spell slot to cast only a spell that you have prepared because of your Dragonmark feat or the Dragonmark Preparation benefit of this feat.",
-    description: "The spellcasting ability score of my Dragonmark Feat increases by 1, to a max of 20. I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted /u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest.",
+    description: "The spellcasting ability score of my Dragonmark Feat increases by 1, to a max of 20. I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted \u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest.",
     extraLimitedFeatures: [{
-        name: " Dragonmark Spell Slot",
+        name: "Dragonmark Spell Slot",
         usages: 1,
         recovery: "short rest",
     }],
     choices: ["Constitution", "Intelligence", "Wisdom", "Charisma"], //Check with MPMB Discord to see if there is a way to hook into an Origin Dragonmark Feat's choice.
     "constitution": {
-        description: "I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted /u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest. [+1 Constitution]",
+        description: "I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted \u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest. [+1 Constitution]",
         scores: [0, 0, 1, 0, 0, 0]
     },
     "intelligence": {
-        description: "I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted /u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest. [+1 Intelligence]",
+        description: "I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted \u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest. [+1 Intelligence]",
         scores: [0, 0, 0, 1, 0, 0]
     },
     "wisdom": {
-        description: "I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted /u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest. [+1 Wisdom]",
+        description: "I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted \u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest. [+1 Wisdom]",
         scores: [0, 0, 0, 0, 1, 0]
     },
     "charisma": {
-        description: "I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted /u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest. [+1 Charisma]",
+        description: "I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted \u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest. [+1 Charisma]",
         scores: [0, 0, 0, 0, 0, 1]
     }
 };
@@ -3640,9 +3640,9 @@ FeatsList["boon of siberys"] = {
     descriptionFull: desc([
         "You gain the following benefits",
         "Ability Score Improvement. Increase one ability score of your choice by 1, to a Maximum of 30.",
-        "Aberrant Magic. Choose a level 8 or lower spell from the Sorcerer spell list or a spell from the Siberys Dragonmarks table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Short or Long Rest. You can also cast this spell using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you gain this feat)." + toUni("d8\tSiberys Dragonmarks") + "\n  1\tDetection: True Seeing\n  2\tFinding: Teleport\n  3\tHandling: Animal Shapes\n  4\tHealing: Regenerate\n  5\tHospitality: Heroe's Feast\n  6\tMaking: Demiplane\n  7\tPassage: Plane Shift\n  8\tScribing: Symbol\n  9\tSentinel: Mind Blank\n  10\tShadow: Project Image\n  11\tStorm: Control Weather\n  12\tWarding: Maze",
+        "Aberrant Magic. Choose a level 8 or lower spell from the Sorcerer spell list or a spell from the Siberys Dragonmarks table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Short or Long Rest. You can also cast this spell using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you gain this feat)." + toUni("d8\tSiberys Dragonmarks") + "\n  1\tDetection: True Seeing\n  2\tFinding: Teleport\n  3\tHandling: Animal Shapes\n  4\tHealing: Regenerate\n  5\tHospitality: Heroes' Feast\n  6\tMaking: Demiplane\n  7\tPassage: Plane Shift\n  8\tScribing: Symbol\n  9\tSentinel: Mind Blank\n  10\tShadow: Project Image\n  11\tStorm: Control Weather\n  12\tWarding: Maze",
     ]),
-    description: "An ability score of my choice is increased by 1, to a max of 30. I always have the either 1 spell of lvl 8 or lower from the Sorcerer spell list or a spell from the Siberys Dragonmarks table (see book) prepared, and can cast it once without a spell slot per Short or Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat).",
+    description: "An ability score of my choice is increased by 1, to a max of 30. I always have either 1 spell of lvl 8 or lower from the Sorcerer spell list or a spell from the Siberys Dragonmarks table (see book) prepared, and can cast it once without a spell slot per Short or Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat).",
     spellcastingBonus: [{
         name: "Boon of Siberys",
         'class': 'sorcerer',
@@ -3653,32 +3653,32 @@ FeatsList["boon of siberys"] = {
     }],
     choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
     "strength": {
-        description: "I always have the either 1 spell of lvl 8 or lower from the Sorcerer spell list or a spell from the Siberys Dragonmarks table (see book) prepared, and can cast it once without a spell slot per Short or Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat) [+1 Strength]",
+        description: "I always have either 1 spell of lvl 8 or lower from the Sorcerer spell list or a spell from the Siberys Dragonmarks table (see book) prepared, and can cast it once without a spell slot per Short or Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat) [+1 Strength]",
         scores: [1, 0, 0, 0, 0, 0],
         scoresMaximum: [30, 0, 0, 0, 0, 0],
     },
     "dexterity": {
-        description: "I always have the either 1 spell of lvl 8 or lower from the Sorcerer spell list or a spell from the Siberys Dragonmarks table (see book) prepared, and can cast it once without a spell slot per Short or Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat) [+1 Dexterity]",
+        description: "I always have either 1 spell of lvl 8 or lower from the Sorcerer spell list or a spell from the Siberys Dragonmarks table (see book) prepared, and can cast it once without a spell slot per Short or Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat) [+1 Dexterity]",
         scores: [0, 1, 0, 0, 0, 0],
         scoresMaximum: [0, 30, 0, 0, 0, 0],
     },
     "constitution": {
-        description: "I always have the either 1 spell of lvl 8 or lower from the Sorcerer spell list or a spell from the Siberys Dragonmarks table (see book) prepared, and can cast it once without a spell slot per Short or Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat) [+1 Constitution]",
+        description: "I always have either 1 spell of lvl 8 or lower from the Sorcerer spell list or a spell from the Siberys Dragonmarks table (see book) prepared, and can cast it once without a spell slot per Short or Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat) [+1 Constitution]",
         scores: [0, 0, 1, 0, 0, 0],
         scoresMaximum: [0, 0, 30, 0, 0, 0],
     },
     "intelligence": {
-        description: "I always have the either 1 spell of lvl 8 or lower from the Sorcerer spell list or a spell from the Siberys Dragonmarks table (see book) prepared, and can cast it once without a spell slot per Short or Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat) [+1 Intelligence]",
+        description: "I always have either 1 spell of lvl 8 or lower from the Sorcerer spell list or a spell from the Siberys Dragonmarks table (see book) prepared, and can cast it once without a spell slot per Short or Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat) [+1 Intelligence]",
         scores: [0, 0, 0, 1, 0, 0],
         scoresMaximum: [0, 0, 0, 30, 0, 0],
     },
     "wisdom": {
-        description: "I always have the either 1 spell of lvl 8 or lower from the Sorcerer spell list or a spell from the Siberys Dragonmarks table (see book) prepared, and can cast it once without a spell slot per Short or Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat) [+1 Wisdom]",
+        description: "I always have either 1 spell of lvl 8 or lower from the Sorcerer spell list or a spell from the Siberys Dragonmarks table (see book) prepared, and can cast it once without a spell slot per Short or Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat) [+1 Wisdom]",
         scores: [0, 0, 0, 0, 1, 0],
         scoresMaximum: [0, 0, 0, 0, 30, 0],
     },
     "charisma": {
-        description: "I always have the either 1 spell of lvl 8 or lower from the Sorcerer spell list or a spell from the Siberys Dragonmarks table (see book) prepared, and can cast it once without a spell slot per Short or Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat) [+1 Charisma]",
+        description: "I always have either 1 spell of lvl 8 or lower from the Sorcerer spell list or a spell from the Siberys Dragonmarks table (see book) prepared, and can cast it once without a spell slot per Short or Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat) [+1 Charisma]",
         scores: [0, 0, 0, 0, 0, 1],
         scoresMaximum: [0, 0, 0, 0, 0, 30],
     },
@@ -4152,8 +4152,8 @@ RunFunctionAtEnd(function() {
                 ],
                 minlevel: 3,
                 description: " [reverts back if I die or don another armor]" + desc([
-                    "As an Magic action, I can use Smith's Tools to turn an armor I'm wearing into Arcane Armor",
-                    "As an Utilize action, I can don or doff it; It can't be removed against my will",
+                    "As a Magic action, I can use Smith's Tools to turn an armor I'm wearing into Arcane Armor",
+                    "As a Utilize action, I can don or doff it; It can't be removed against my will",
                     "I ignore the Strength requirement of Arcane Armor and can use it as a Spellcasting Focus"
                 ]),
                 action: [
@@ -4244,7 +4244,7 @@ RunFunctionAtEnd(function() {
                     type: "Simple",
                     damage: [1, 6, "lightning"],
                     range: "90/300 ft",
-                    description: "Thrown; Once per turn on hit, +1d6 Lightning damage",
+                    description: "Once per turn on hit, +1d6 Lightning damage",
                     abilitytodamage: true
                 }],
                 // Do this in the parent object, so that it is always visible and people printing the sheet can more easily switch between the three models
@@ -4320,8 +4320,8 @@ RunFunctionAtEnd(function() {
                 }, {
                     name: "Infiltrator Perfected Armor Features",
                     note: desc([
-                        "The damage die of my Lightning Launcer increases to 2d6 Lightning damage. Any creature that takes Lightning damage from my Lightning Launcher glmmers with magical light until the start of my next turn. The glimmering creature sheds Dim Light in a 5-foot radius, and it has Disadvantage on attack rolls against me, as the light jolts it if it attacks me.",
-                        "Additionally, as a Bonus Action, I can gain a Fly Speed equal to twice my Speed until the end of the curren turn. I can take this BOnus Action a number of times equal to my Inteligence modifier (minimum of once), and you regain all expended uses when I finish a Long Rest."
+                        "The damage die of my Lightning Launcher increases to 2d6 Lightning damage. Any creature that takes Lightning damage from my Lightning Launcher glimmers with magical light until the start of my next turn. The glimmering creature sheds Dim Light in a 5-foot radius, and it has Disadvantage on attack rolls against me, as the light jolts it if it attacks me.",
+                        "Additionally, as a Bonus Action, I can gain a Fly Speed equal to twice my Speed until the end of the current turn. I can take this Bonus Action a number of times equal to my Intelligence modifier (minimum of once), and you regain all expended uses when I finish a Long Rest."
                     ]),
                     amendTo: "Arcane Armor Model Features"
                 }],
@@ -4344,7 +4344,7 @@ RunFunctionAtEnd(function() {
                     name: "Perfected Armor: Infiltrator",
                     description: " [Intelligence modifier per Long Rest]" + desc([
                         "Those hit by my Lightning Launcher shed 5-ft radius dim light until my next turn starts",
-                        "The light gives the target Disadvantage on attacks rolls made against me",
+                        "The light gives the target Disadvantage on attack rolls made against me",
                         "As Bns gain Fly Speed equal to twice Speed till end of turn",
                     ])
                 },
@@ -4373,7 +4373,7 @@ RunFunctionAtEnd(function() {
         "An arcane wrecking ball or sledgehammer projects from my armor that can push/pull a target at least 1 size",
         "smaller than me up to 10 ft. This Armor Flail is a Simple Melee weapon with Reach. Int mod",
         "times per Long Rest, as a Bonus Action, I can enlarge my armor for 1 minute. My reach increases",
-        "by 5 ft and I become Large if I am currently smaller than Large /u0026 there is enough room."
+        "by 5 ft and I become Large if I am currently smaller than Large \u0026 there is enough room."
     ]);
     var guardianTxt = desc([
         "I can discharge concussive blasts, Simple Melee weapons that distract those hit by it.",
@@ -4412,7 +4412,7 @@ RunFunctionAtEnd(function() {
             description: guardianTxt,
             additional: guardianAdditional,
             armorAdd: gArmName,
-            weaponsAdd: ["Thunder Gauntlets"],
+            weaponsAdd: ["Thunder Pulse"],
             prereqeval: prereqFunc,
             dependentChoices: "guardian"
         };
