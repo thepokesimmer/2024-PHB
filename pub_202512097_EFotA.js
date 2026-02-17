@@ -2216,7 +2216,7 @@ BackgroundList["house phiarlan heir"] = {
     ],
     feature: "House Phiarlan Heir",
 };
-BackgroundFeatureList["house Phiarlan heir"] = {
+BackgroundFeatureList["house phiarlan heir"] = {
     description: "Though you have seen wealth, fame, and beauty as a child of House Phiarlan, you consider knowledge (and the power it brings) the greatest treasure of all. You might pursue that power as an artist or performer, always alert for secrets even as you regale the world with story, song, acrobatics, or art. Or you might foster ties to the secretive espionage arm of your house: the Serpentine Table.",
     source: [
         ["E:FA", 0]
