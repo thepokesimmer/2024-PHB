@@ -46,7 +46,7 @@ CreatureList["air elemental"] = {
 	}],
 	traits : [{
 		name : "Air Form",
-		description : "The elemental can enter a creature's space and stop there. It can move through a space as narrow as 1 inch without expending extra movment to do so."
+		description : "The elemental can enter a creature's space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so."
 	}, {
 		name : "Multiattack",
 		description : "The elemental makes two Thunderous Slam attacks.",
@@ -91,10 +91,10 @@ CreatureList["earth elemental"] = {
 	}],
 	traits : [{
 		name : "Earth Glide",
-		description : "The eleemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through."
+		description : "The elemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through."
 	}, {
 		name : "Multiattack",
-		description : "The elemental makes two attacks, using SLam or Rock Launch in any combination",
+		description : "The elemental makes two attacks, using Slam or Rock Launch in any combination",
 	}, {
 		name : "Siege Monster",
 		description : "The elemental deals double damage to objects and structures."
@@ -129,7 +129,7 @@ CreatureList["fire elemental"] = {
 	}],
 	traits : [{
 		name : "Fire Aura",
-		description : "At the end of each of the elemental's turns, each creature in a 10-foot Emanation originating from the elemental takes 5(1d10) Fire damage. Creatures and flamable objects in the Emanation start burning.",
+		description : "At the end of each of the elemental's turns, each creature in a 10-foot Emanation originating from the elemental takes 5(1d10) Fire damage. Creatures and flammable objects in the Emanation start burning.",
 	}, {
 		name : "Fire Form",
 		description : "The elemental can move through a space as narrow as 1 inch without expending extra movement to do so, and it can enter a creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 5(1d10) Fire damage.",
@@ -181,7 +181,7 @@ CreatureList["water elemental"] = {
 	}],
 	features : [{
 		name : "Freeze",
-		description : "If the elemental takes Cold damage,its Speed decreases by 20 feet until the end of its next turn.",
+		description : "If the elemental takes Cold damage, its Speed decreases by 20 feet until the end of its next turn.",
 	}],
 	traits : [{
 		name : "Multiattack",
@@ -192,7 +192,7 @@ CreatureList["water elemental"] = {
 	}],
 	actions : [{
 		name : "Whelm (Recharge 4-6)",
-		description : "Strength Saving Throw: DC 15, each creature in the elemental's space. Failure: 22(4d8+4) Bludgeoning damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14). Until the grappled ends, the target has the Restrained condition, s suffocating unless it can breathe water, and takes 9(2d8) Bludgeoning damage at the start of each of the elemental's turns. The elemental can grapple one Large creature or up to two Medium or smaller creatures at a time with Whelm. As an action, a creature within 5 feet of the elemental can pull a creature out of it by succeeding on a DC 14 Strength (Athletics) check. Success: Half damage only."
+		description : "Strength Saving Throw: DC 15, each creature in the elemental's space. Failure: 22(4d8+4) Bludgeoning damage. If the target is a Large or smaller creature, it has the Grappled condition (escape DC 14). Until the grapple ends, the target has the Restrained condition, is suffocating unless it can breathe water, and takes 9(2d8) Bludgeoning damage at the start of each of the elemental's turns. The elemental can grapple one Large creature or up to two Medium or smaller creatures at a time with Whelm. As an action, a creature within 5 feet of the elemental can pull a creature out of it by succeeding on a DC 14 Strength (Athletics) check. Success: Half damage only."
 	}],
 };
 CreatureList["awakened shrub"] = {
@@ -320,13 +320,13 @@ CreatureList["clay golem"] = {
 	}, {
 		name : "Magic Resistance",
 		description : desc([
-			"The golem has Advantage on saving throws against spells and ohter magical effects.",
+			"The golem has Advantage on saving throws against spells and other magical effects.",
 		]),	
 	}],
 	notes : [{
 		name : "Berserk",
 		description : desc([
-			"Whenever the golem starts its turn Bloodied, roll 1d6. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object. Once the golem goes berserk, it continutes to be berserk until it is destroyed or it is no longer Bloodied.",
+			"Whenever the golem starts its turn Bloodied, roll 1d6. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object. Once the golem goes berserk, it continues to be berserk until it is destroyed or it is no longer Bloodied.",
 		]),	
 	}],
 };
@@ -367,7 +367,7 @@ CreatureList["flesh golem"] = {
 	traits : [{
 		name : "Aversion to Fire",
 		description : desc([
-			"If the golem takes fire damage,it has Disadvantage on attack rolls and ability checks until teh end of its next turn.",
+			"If the golem takes fire damage, it has Disadvantage on attack rolls and ability checks until the end of its next turn.",
 		]),
 	}, {
 		name : "Immutable Form",
@@ -382,14 +382,14 @@ CreatureList["flesh golem"] = {
 	}, {
 		name : "Magic Resistance",
 		description : desc([
-			"The golem has Advantage on saving throws against spells and ohter magical effects.",
+			"The golem has Advantage on saving throws against spells and other magical effects.",
 		]),	
 	}],
 	notes : [{
 		name : "Berserk",
 		description : desc([
-			"Whenever the golem starts its turn Bloodied, roll 1d6. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object. Once the golem goes berserk, it continutes to be berserk until it is destroyed or it is no longer Bloodied.",
-			"The golem's creator, if within 60 feet of the berserk golem, can try to calm it by taking an action to make a DC 15 Charisma (Persuasion) check; the golem must be able to hear its creator. if thsi check succeeds, the golem ceases being berserk until the start of its next turn, at which poit it resurmes rolling for the Berserk trait again if it is still Bloodied.",
+			"Whenever the golem starts its turn Bloodied, roll 1d6. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object. Once the golem goes berserk, it continues to be berserk until it is destroyed or it is no longer Bloodied.",
+			"The golem's creator, if within 60 feet of the berserk golem, can try to calm it by taking an action to make a DC 15 Charisma (Persuasion) check; the golem must be able to hear its creator. if this check succeeds, the golem ceases being berserk until the start of its next turn, at which point it resumes rolling for the Berserk trait again if it is still Bloodied.",
 		]),	
 	}],
 };
@@ -597,7 +597,7 @@ CreatureList["iron golem"] = {
 	}, {
 		name : "Magic Resistance",
 		description : desc([
-			"The golem has Advantage on saving throws against spells and ohter magical effects.",
+			"The golem has Advantage on saving throws against spells and other magical effects.",
 		]),	
 	}],
 };
@@ -631,7 +631,7 @@ CreatureList["mummy"] = {
 		dc : true,
 		damage : ["", "", ""],
 		range : "60 ft",
-		description : "One crea the Mummy can see w/i range Wis save, Fail: crea has Frightned condition until end of Mummy's next turn. Success: crea is Immune to Mummy's Dreadful Glare for 24 hours.",
+		description : "One crea the Mummy can see w/i range Wis save, Fail: crea has Frightened condition until end of Mummy's next turn. Success: crea is Immune to Mummy's Dreadful Glare for 24 hours.",
 	}],
 	skills : {},
 	damage_vulnerabilities : "Fire",
@@ -787,18 +787,18 @@ CreatureList["shield guardian"] = {
 	traits : [{
 		name : "Regeneration",
 		description : desc([
-			"The guardian regains 10 Hit Points at the start fo each of its turns if it has at least 1 Hit Point.",
+			"The guardian regains 10 Hit Points at the start of each of its turns if it has at least 1 Hit Point.",
 		]),	
 	}, {
 		name : "Spell Storing",
 		description : desc([
-			"A spellcaster who wears the guardian's amulet can cause the guardian to store on spell of level 4 or lower. To do so, the wearer must cast the spell on the guardian while within 5 feet of it. The spell has no effect but is stored within the guardian. Any previously stored spell is lost when a new spell is stored. The guardian can cast the spell stored with any parameters set by the original caster, requiring no spell components and using the caster's spellcasting ability. The stored spell is then lost.",
+			"A spellcaster who wears the guardian's amulet can cause the guardian to store one spell of level 4 or lower. To do so, the wearer must cast the spell on the guardian while within 5 feet of it. The spell has no effect but is stored within the guardian. Any previously stored spell is lost when a new spell is stored. The guardian can cast the spell stored with any parameters set by the original caster, requiring no spell components and using the caster's spellcasting ability. The stored spell is then lost.",
 		]),	
 	}],
 	notes : [{
 		name : "Bound",
 		description : desc([
-			"The guardian is magically bound to an amulet. While the guardian and its amulet are on the same plane of existence, the amulet's wearer can telepathically call the guardian to travel to it, and the guardian knows the distance and direction to the amulet. If the guardian is within 60 feet of the amulet's wearer, half of any damage th wearer takes (round up) is transferred to the guardian.",
+			"The guardian is magically bound to an amulet. While the guardian and its amulet are on the same plane of existence, the amulet's wearer can telepathically call the guardian to travel to it, and the guardian knows the distance and direction to the amulet. If the guardian is within 60 feet of the amulet's wearer, half of any damage the wearer takes (round up) is transferred to the guardian.",
 		]),	
 	}],
 };
@@ -1000,7 +1000,7 @@ CreatureList["stone golem"] = {
 	}, {
 		name : "Slow (Recharge 5-6)",
 		description : desc([
-			"The golem casts the Slow spel, requiring no spell components and using Constitution as the spellcasting abiity (Spell Save DC 17).",
+			"The golem casts the Slow spell, requiring no spell components and using Constitution as the spellcasting ability (Spell Save DC 17).",
 		]),
 	}],
 	traits : [{
@@ -1011,7 +1011,7 @@ CreatureList["stone golem"] = {
 	}, {
 		name : "Magic Resistance",
 		description : desc([
-			"The golem has Advantage on saving throws against spells and ohter magical effects.",
+			"The golem has Advantage on saving throws against spells and other magical effects.",
 		]),	
 	}],
 };
@@ -1072,7 +1072,7 @@ CreatureList["wight"] = {
 	traits : [{
 		name : "Sunlight Sensitivity",
 		description : desc([
-			"While in sunlight, theWight has Disadvantage on ability checks and attack rolls.",
+			"While in sunlight, the Wight has Disadvantage on ability checks and attack rolls.",
 		]),	
 	}],
 	notes : [{
@@ -1155,7 +1155,7 @@ CreatureList["allosaurus"] = {
 	traits : [{
 		name : "Claws",
 		description : desc([
-			"if the target is a Large or smaller creature andd the allosaurus moved 30+ feet straight toward it immediately before teh hit, the target has the Prone condition, and the allosaurus can make one Bite attack against it.",
+			"if the target is a Large or smaller creature and the allosaurus moved 30+ feet straight toward it immediately before the hit, the target has the Prone condition, and the allosaurus can make one Bite attack against it.",
 		]),
 	}],		
 };
@@ -1193,7 +1193,7 @@ CreatureList["ankylosaurus"] = {
 	actions : [{
 		name : "Multiattack",
 		description : desc([
-			"The ankylosaurs makes two Tail attacks.",
+			"The ankylosaurus makes two Tail attacks.",
 		]),	
 	}],
 };
@@ -1540,7 +1540,7 @@ CreatureList["cat"] = {
 	attacksAction : 1,
 	traits : [{
 	name : "Jumper",
-	description : "The cat's jump distances is determined using its Dexterity rather than its Strength.",
+	description : "The cat's jump distance is determined using its Dexterity rather than its Strength.",
 	joinString : "\n   "
 	}],
 	attacks : [{
@@ -1550,7 +1550,7 @@ CreatureList["cat"] = {
 		range : "Melee (5 ft)",
 		abilitytodamage : false,
 	}],
-	wildshapeString : "Jumper: The cat's jump distances is determined using its Dexterity rather than its Strength.",
+	wildshapeString : "Jumper: The cat's jump distance is determined using its Dexterity rather than its Strength.",
 };
 CreatureList["constrictor snake"] = {
 	name : "Constrictor Snake",
@@ -1760,9 +1760,9 @@ CreatureList["eagle"] = {
 	speed : "10 ft, Fly 60 ft",
 	scores : [6, 15, 12, 2, 14, 7],
 	saves : ["", "", "", "", "", ""],
-	skills : [{
+	skills : {
 		"perception" : 6,
-	}],
+	},
 	senses : "",
 	languages : "",
 	challengeRating : 0,
@@ -2289,7 +2289,7 @@ CreatureList["giant frog"] = { //need to look at swallow action
 	actions : [{
 		name : "Swallow",
 		description : desc([
-			"The frog swallows a Small or smaller target it is grappling. While swallowed, the target isn't Grappled but has the Blinded and Restrained conditions, and it has Total Cover against attacks and other effects outside the frog. While swallowing the target, the frog can't use Bite, and if the frog dies, the swallowed target is no longer Restrained and can escape from the corpse using 5 feeet of movement, exiting with the Prone condition. At the end of the frog's next turn, the swallowed target takes 5 (2d4) Acid damage. If that damage doesn' kill it, the frog disgorges it, causing it to exit Prone.",
+			"The frog swallows a Small or smaller target it is grappling. While swallowed, the target isn't Grappled but has the Blinded and Restrained conditions, and it has Total Cover against attacks and other effects outside the frog. While swallowing the target, the frog can't use Bite, and if the frog dies, the swallowed target is no longer Restrained and can escape from the corpse using 5 feet of movement, exiting with the Prone condition. At the end of the frog's next turn, the swallowed target takes 5 (2d4) Acid damage. If that damage doesn't kill it, the frog disgorges it, causing it to exit Prone.",
 		]),
 	}],		
 	attacks : [{
@@ -2429,7 +2429,7 @@ CreatureList["giant octopus"] = { //need to look at ink cloud action
 	actions : [{
 		name : "Ink Cloud (1/Day)",
 		description : desc([
-			"As a Reaction, If the octopus takes damage while underwater it releases a cloud of ink that fills a 10-foot Cube centered on itself, and the octopus can move up to its Swim Speed. The Cube is Heavily Obscurred for 1 minute or until a strong current or similar effect disperses the ink.",
+			"As a Reaction, If the octopus takes damage while underwater it releases a cloud of ink that fills a 10-foot Cube centered on itself, and the octopus can move up to its Swim Speed. The Cube is Heavily Obscured for 1 minute or until a strong current or similar effect disperses the ink.",
 		]),	
 	}],		
 	attacks : [{
@@ -2508,7 +2508,7 @@ CreatureList["giant rat"] = {
 	traits : [{
 		name : "Pack Tactics",
 		description : desc([
-			"The rat has Advantage on an attck roll against a creture if at least one of the rat's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+			"The rat has Advantage on an attack roll against a creature if at least one of the rat's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
 		]),	
 	}],	
 	attacks : [{
@@ -2581,7 +2581,7 @@ CreatureList["giant seahorse"] = {
 		description : "The giant seahorse can breathe only underwater.",
 		joinString : "\n   "
 	}],
-	action : [{
+	actions : [{
 		name : "Bubble Dash",
 		description : "As a Bonus Action, while underwater, the giant seahorse moves up to half its Swim Speed without provoking Opportunity Attacks.",
 		joinString : "\n   "
@@ -2666,7 +2666,7 @@ CreatureList["giant spider"] = { //need to look at web action
 		joinString : "\n   "
 	}, {
 		name : "Web (Recharge 5-6)",
-		description : "Dexterity Saving Throw: DC 13, one creature the spider can see within 60 feet. Failure: The target has the Restrained condition condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Poison and Psychic damage).",
+		description : "Dexterity Saving Throw: DC 13, one creature the spider can see within 60 feet. Failure: The target has the Restrained condition until the web is destroyed (AC 10; HP 5; Vulnerability to Fire damage; Immunity to Poison and Psychic damage).",
 		joinString : "\n   "
 	}],
 	attacks : [{
@@ -2712,7 +2712,7 @@ CreatureList["giant squid"] = { //need to look at ink cloud action
 	}, {
 		name : "Ink Cloud (1/Day)",
 		description : desc([
-			"As a Reaction, If the squid takes damage while underwater it releases a cloud of ink that fills a 15-foot Cube centered on itself, and the squid can move up to its Swim Speed. The Cube is Heavily Obscurred for 1 minute or until a strong current or similar effect disperses the ink.",
+			"As a Reaction, If the squid takes damage while underwater it releases a cloud of ink that fills a 15-foot Cube centered on itself, and the squid can move up to its Swim Speed. The Cube is Heavily Obscured for 1 minute or until a strong current or similar effect disperses the ink.",
 		]),
 	}],	
 	attacks : [{
@@ -2827,7 +2827,7 @@ CreatureList["giant vulture"] = {
 	traits : [{
 		name : "Pack Tactics",
 		description : desc([
-			"The vulture has Advantage on an attack roll against a creaure if at least one of the vulture's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
+			"The vulture has Advantage on an attack roll against a creature if at least one of the vulture's allies is within 5 feet of the creature and the ally doesn't have the Incapacitated condition.",
 		]),	
 	}],
 	actions : [{
@@ -3053,13 +3053,13 @@ CreatureList["hippopotamus"] = {
 	traits : [{
 		name : "Hold Breath",
 		description : desc([
-			"The hippopatamus can hold its breath for 10 minutes.",
+			"The hippopotamus can hold its breath for 10 minutes.",
 		]),	
 	}],
 	actions : [{
 		name : "Multiattack",
 		description : desc([
-			"The hippopatamus makes two Bite attacks.",
+			"The hippopotamus makes two Bite attacks.",
 		]),	
 	}],	
 	attacks : [{
@@ -3086,8 +3086,8 @@ CreatureList["hunter shark"] = {
 		"perception" : 2,
 	},
 	damage_resistances : "",
-	senses : "",
-	languages : "Blindsight 60 ft",
+	languages : "",
+	senses : "Blindsight 60 ft",
 	challengeRating : 2,
 	proficiencyBonus : 2,
 	attacksAction : 1,	
@@ -3121,8 +3121,8 @@ CreatureList["hyena"] = {
 		"perception" : 3,
 	},
 	damage_resistances : "",
-	senses : "",
-	languages : "Darkvision 60 ft",
+	languages : "",
+	senses : "Darkvision 60 ft",
 	challengeRating : 0,
 	proficiencyBonus : 2,
 	attacksAction : 1,	
@@ -3157,8 +3157,8 @@ CreatureList["jackal"] = {
 		"stealth" : 4,
 	},
 	damage_resistances : "",
-	senses : "",
-	languages : "Darkvision 90 ft",
+	languages : "",
+	senses : "Darkvision 90 ft",
 	challengeRating : 0,
 	proficiencyBonus : 2,
 	attacksAction : 1,
@@ -3187,8 +3187,8 @@ CreatureList["killer whale"] = {
 		"stealth" : 4,
 	},
 	damage_resistances : "",
-	senses : "",
-	languages : "Blindsight 120 ft",
+	languages : "",
+	senses : "Blindsight 120 ft",
 	challengeRating : 3,
 	proficiencyBonus : 2,
 	attacksAction : 1,	
@@ -4100,7 +4100,7 @@ CreatureList["triceratops"] = {
 		]),	
 	}],	
 	attacks : [{
-		name : "Rend",
+		name : "Gore",
 		ability : 1,
 		damage : [2, 12, "slashing"],
 		range : "Melee (5 ft)",
@@ -4193,6 +4193,7 @@ CreatureList["warhorse"] = {
 		ability : 1,
 		damage : [2, 4, "Bludgeoning"],
 		description : " If moved at least 20 ft straight toward target before hit, +5 (2d4) Bludgeoning damage. If target is Large or smaller, falls Prone.",
+		range : "Melee (5 ft)",
 	}],
 };
 CreatureList["weasel"] = {
