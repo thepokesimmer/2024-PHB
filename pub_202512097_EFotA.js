@@ -3188,7 +3188,7 @@ FeatsList["greater mark of healing"] = {
         return v.characterLevel >= 4 && (/mark of healing/i).test(CurrentFeat.known);
     },
     descriptionFull: "You gain the following benefits:\n \u2022 Ability Score Increase. Increase ability score of your choice by 1, to a maximum of 20.\n \u2022 Improved Intuition. When you use the Medical Intuition benefit of your Mark of Healing feat, you can roll 1d6 instead of 1d4.\n \u2022 Improved Healing. You can now use the Healing Touch benefit of your Mark of Healing feat to cast Cure Wounds without using a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.\nAdditionally, when you cast Cure Wounds and roll dice to determine the number of Hit Points restored, you can treat any 1 or 2 on a roll as a 3.",
-    description: "An ability score of my choice is increased by 1, to a max of 20. When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds /u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3.",
+    description: "An ability score of my choice is increased by 1, to a max of 20. When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds \u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3.",
     extraLimitedFeatures: [{
         name: "Improved Healing",
         usages: "Proficiency bonus per ",
@@ -3197,27 +3197,27 @@ FeatsList["greater mark of healing"] = {
     }],
     choices: ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"],
     "strength": {
-        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds /u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Strength]",
+        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds \u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Strength]",
         scores: [1, 0, 0, 0, 0, 0]
     },
     "dexterity": {
-        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds /u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Dexterity]",
+        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds \u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Dexterity]",
         scores: [0, 1, 0, 0, 0, 0]
     },
     "constitution": {
-        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds /u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Constitution]",
+        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds \u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Constitution]",
         scores: [0, 0, 1, 0, 0, 0]
     },
     "intelligence": {
-        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds /u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Intelligence]",
+        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds \u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Intelligence]",
         scores: [0, 0, 0, 1, 0, 0]
     },
     "wisdom": {
-        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds /u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Wisdom]",
+        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds \u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Wisdom]",
         scores: [0, 0, 0, 0, 1, 0]
     },
     "charisma": {
-        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds /u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Charisma]",
+        description: "When I use the Medical Intuition benefit of my Mark of Healing feat, I can roll 1d6 instead of 1d4. I can cast Cure Wounds a number of times equal to my Prof without expending a spell slot regaining all expended uses when I finish a Long Rest. When I cast Cure Wounds \u0026 roll dice to determine the number of HP restored, I can treat any 1 or 2 on a roll as a 3. [+1 Charisma]",
         scores: [0, 0, 0, 0, 0, 1]
     }
 };
@@ -3232,7 +3232,7 @@ FeatsList["greater mark of hospitality"] = {
         return v.characterLevel >= 4 && (/mark of hospitality/i).test(CurrentFeat.known);
     },
     descriptionFull: "You gain the following benefits:\n \u2022 Ability Score Increase. Increase ability score of your choice by 1, to a maximum of 20.\n \u2022 Improved Intuition. When you use the Ever Hospitable benefit of your Mark of Hospitality feat, you can roll 1d6 instead of 1d4.\n \u2022 Inspired Hospitality. When you cast Purify Food and Drink, you can modify the spell so that instead of its normal effect, each creature of your choice within 30 feet of you is refreshed. Each affected creature’s Exhaustion level is reduced by 1, and the creature gains Temporary Hit Points equal to your Proficiency Bonus plus your Intelligence, Wisdom, or Charisma modifier (choose when you select this feat). Once you modify the spell with this benefit, you can’t do so again until you finish a Long Rest.",
-    description: "An ability score of my choice is increased by 1, to a max of 20. When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Int, Wis, or Cha mod (choose when I select this Feat).",
+    description: "An ability score of my choice is increased by 1, to a max of 20. When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Int, Wis, or Cha mod (choose when I select this Feat).",
     extraLimitedFeatures: [{
         name: " Inspired Hospitality",
         usages: 1,
@@ -3240,75 +3240,75 @@ FeatsList["greater mark of hospitality"] = {
     }],
     choices: ["ASI Str, Temp HP Int", "ASI Str, Temp HP Wis", "ASI Str, Temp HP Cha", "ASI Dex, Temp HP Int", "ASI Dex, Temp HP Wis", "ASI Dex, Temp HP Cha", "ASI Con, Temp HP Int", "ASI Con, Temp HP Wis", "ASI Con, Temp HP Cha", "ASI Int, Temp HP Int", "ASI Int, Temp HP Wis", "ASI Int, Temp HP Cha", "ASI Wis, Temp HP Int", "ASI Wis, Temp HP Wis", "ASI Wis, Temp HP Cha", "ASI Cha, Temp HP Int", "ASI Cha, Temp HP Wis", "ASI Cha, Temp HP Cha"],
     "asi str, temp hp int": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Strength]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Strength]",
         scores: [1, 0, 0, 0, 0, 0]
     },
     "asi str, temp hp wis": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Strength]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Strength]",
         scores: [1, 0, 0, 0, 0, 0]
     },
     "asi str, temp hp cha": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Strength]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Strength]",
         scores: [1, 0, 0, 0, 0, 0]
     },
     "asi dex, temp hp int": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Dexterity]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Dexterity]",
         scores: [0, 1, 0, 0, 0, 0]
     },
     "asi dex, temp hp wis": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Dexterity]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Dexterity]",
         scores: [0, 1, 0, 0, 0, 0]
     },
     "asi dex, temp hp cha": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Dexterity]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Dexterity]",
         scores: [0, 1, 0, 0, 0, 0]
     },
     "asi con, temp hp int": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Constitution]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Constitution]",
         scores: [0, 0, 1, 0, 0, 0]
     },
     "asi con, temp hp wis": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Constitution]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Constitution]",
         scores: [0, 0, 1, 0, 0, 0]
     },
     "asi con, temp hp cha": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Constitution]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Constitution]",
         scores: [0, 0, 1, 0, 0, 0]
     },
     "asi int, temp hp int": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Intelligence]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Intelligence]",
         scores: [0, 0, 0, 1, 0, 0]
     },
     "asi int, temp hp wis": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Intelligence]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Intelligence]",
         scores: [0, 0, 0, 1, 0, 0]
     },
     "asi int, temp hp cha": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Intelligence]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Intelligence]",
         scores: [0, 0, 0, 1, 0, 0]
     },
     "asi wis, temp hp int": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Wisdom]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Wisdom]",
         scores: [0, 0, 0, 0, 1, 0]
     },
     "asi wis, temp hp wis": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Wisdom]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Wisdom]",
         scores: [0, 0, 0, 0, 1, 0]
     },
     "asi wis, temp hp cha": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Wisdom]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Wisdom]",
         scores: [0, 0, 0, 0, 1, 0]
     },
     "asi cha, temp hp int": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Charisma]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Int mod. [+1 Charisma]",
         scores: [0, 0, 0, 0, 0, 1]
     },
     "asi cha, temp hp wis": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Charisma]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Wis mod. [+1 Charisma]",
         scores: [0, 0, 0, 0, 0, 1]
     },
     "asi cha, temp hp cha": {
-        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level /u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Charisma]",
+        description: "When I use the Ever Hospitable benefit of my Mark of Hospitality feat, I can roll 1d6 instead of 1d4. Once per Long Rest, I can modify Purify Food and Drink such that each creature of my choice within 30 ft loses 1 Exhaustion level \u0026 gains Temp HP equal to my Prof Bonus + my Cha mod. [+1 Charisma]",
         scores: [0, 0, 0, 0, 0, 1]
     }
 };
@@ -3602,7 +3602,7 @@ FeatsList["potent dragonmark"] = {
         return v.characterLevel >= 4 && (/dragonmark|mark/i).test(CurrentFeat.known);
     },
     descriptionFull: "You gain the following benefits:\n \u2022 Ability Score Increase. Increase the spellcasting ability score used by your Dragonmark Feat by 1, to a maximum of 20.\n \u2022 Dragonmark Preparation. You always have the spells on your Dragonmark feat's Spells of the Mark list (if any) prepared.\n \u2022 Dragonmark Spellcasting. You have one spell slot to cast the spells granted by your Dragonmark feat. The spell slot's level is one-half your level (round up), to a maximum of level 5. You regain the expended slot when you finish a Short or Long Rest. You can use this spell slot to cast only a spell that you have prepared because of your Dragonmark feat or the Dragonmark Preparation benefit of this feat.",
-    description: "The spellcasting ability score of my Dragonmark Feat increases by 1, to a max of 20. I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted /u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest.",
+    description: "The spellcasting ability score of my Dragonmark Feat increases by 1, to a max of 20. I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted \u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest.",
     extraLimitedFeatures: [{
         name: " Dragonmark Spell Slot",
         usages: 1,
@@ -3610,19 +3610,19 @@ FeatsList["potent dragonmark"] = {
     }],
     choices: ["Constitution", "Intelligence", "Wisdom", "Charisma"], //Check with MPMB Discord to see if there is a way to hook into an Origin Dragonmark Feat's choice.
     "constitution": {
-        description: "I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted /u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest. [+1 Constitution]",
+        description: "I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted \u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest. [+1 Constitution]",
         scores: [0, 0, 1, 0, 0, 0]
     },
     "intelligence": {
-        description: "I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted /u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest. [+1 Intelligence]",
+        description: "I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted \u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest. [+1 Intelligence]",
         scores: [0, 0, 0, 1, 0, 0]
     },
     "wisdom": {
-        description: "I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted /u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest. [+1 Wisdom]",
+        description: "I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted \u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest. [+1 Wisdom]",
         scores: [0, 0, 0, 0, 1, 0]
     },
     "charisma": {
-        description: "I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted /u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest. [+1 Charisma]",
+        description: "I always have the spells on my Dragonmark Feat's Spells of the Mark list (if any) prepared (automation not included). I have 1 spell slot of a spell lvl 1/2 of my character lvl (round up, max of lvl 5), which I can use to cast spells granted \u0026 prepared by my Dragonmark Feat. I regain the expended spell slot after a Short/Long Rest. [+1 Charisma]",
         scores: [0, 0, 0, 0, 0, 1]
     }
 };
@@ -4373,7 +4373,7 @@ RunFunctionAtEnd(function() {
         "An arcane wrecking ball or sledgehammer projects from my armor that can push/pull a target at least 1 size",
         "smaller than me up to 10 ft. This Armor Flail is a Simple Melee weapon with Reach. Int mod",
         "times per Long Rest, as a Bonus Action, I can enlarge my armor for 1 minute. My reach increases",
-        "by 5 ft and I become Large if I am currently smaller than Large /u0026 there is enough room."
+        "by 5 ft and I become Large if I am currently smaller than Large \u0026 there is enough room."
     ]);
     var guardianTxt = desc([
         "I can discharge concussive blasts, Simple Melee weapons that distract those hit by it.",
