@@ -615,7 +615,7 @@ MagicItemsList.grenade = {
     rarity: "",
     defaultExcluded: true,
     description: "As an action, a character can throw a grenade at a point up to 60 feet away. With a grenade launcher, the character can propel the grenade up to 1000 feet away.",
-    descriptionFull: "As an action, you can either throw a grenade at a point up to 60 feet away or use a Grenade Launcher to propel the grenade to a point up to 1000 feet away. The grenade explodes at that point, creatign a particular effect in a 20-foot-radius Sphere.",
+    descriptionFull: "As an action, you can either throw a grenade at a point up to 60 feet away or use a Grenade Launcher to propel the grenade to a point up to 1000 feet away. The grenade explodes at that point, creating a particular effect in a 20-foot-radius Sphere.",
     action: [
         ["action", "Throw Explosive"]
     ],
@@ -1688,9 +1688,9 @@ MagicItemsList["candle of invocation"] = {
     type: "wondrous item",
     rarity: "very rare",
     magicItemTable: "?",
-    description: "This slender taper is Connected to a plane of existance. Lit, it sheds dim light in a 30-ft radius for up to 4 hours and grants me Advantage on d20 Tests, Clerics and Druids in it's light can cast level 1 spells they have prepared without expending a spell slot. I can destroy an unlit candle to cast Gate which links to the candle's associated plane of existance.",
+    description: "This slender taper is connected to a plane of existence. Lit, it sheds dim light in a 30-ft radius for up to 4 hours and grants me Advantage on d20 Tests, Clerics and Druids in its light can cast level 1 spells they have prepared without expending a spell slot. I can destroy an unlit candle to cast Gate which links to the candle's associated plane of existence.",
     descriptionFull: "This candle’s magic is activated when the candle is lit, which requires a Magic action. After burning for 4 hours, the candle is destroyed. You can snuff it out early for use at a later time. Deduct the time it burned in increments of 1 minute from its total burn time.\nWhile lit, the candle sheds Dim Light in a 30-foot radius. While you are within that light, you have Advantage on D20 Tests. In addition, a Cleric or Druid in the light can cast level 1 spells they have prepared without expending spell slots.\nAlternatively, when you light the candle for the first time, you can cast Gate with it. Doing so destroys the candle. The portal created by the spell links to a particular Outer Plane chosen by the DM or determined by rolling on the following table.\n\n" +
-        toUni("1d100\tOuter Plane") + "\n01-05\tAbyss\n06-10\tAcheron\n11-17\tArborea\n18-25\tArcadia\n26-33\tBeastlands\n34-41\tBytopia\n42-46\tCarceri\n47-54\tElysium\n55-59\tGehenna\n60-64\tHades\n65-69\tLimbo\n70-77\nMechanus\n78-85\tMount Celestia\n86-90\tNine Hells\n91-95\tPandemonium\n96-00\tYsgard",
+        toUni("1d100\tOuter Plane") + "\n01-05\tAbyss\n06-10\tAcheron\n11-17\tArborea\n18-25\tArcadia\n26-33\tBeastlands\n34-41\tBytopia\n42-46\tCarceri\n47-54\tElysium\n55-59\tGehenna\n60-64\tHades\n65-69\tLimbo\n70-77\tMechanus\n78-85\tMount Celestia\n86-90\tNine Hells\n91-95\tPandemonium\n96-00\tYsgard",
     attunement: true,
     allowDuplicates: true,
     usages: "240 min",
@@ -2782,7 +2782,7 @@ MagicItemsList.defender = {
     rarity: "legendary",
     magicItemTable: "?",
     attunement: true,
-    description: "I have a +3 bonus to attack and damage rolls made with this magic weapon. The first time I attack with it on each of my turns, I can transfer (part of) the bonus to AC instead. This adjustment remains in affect until the start of my next turn, although I must be holding the weapon to gain its bonus to AC.",
+    description: "I have a +3 bonus to attack and damage rolls made with this magic weapon. The first time I attack with it on each of my turns, I can transfer (part of) the bonus to AC instead. This adjustment remains in effect until the start of my next turn, although I must be holding the weapon to gain its bonus to AC.",
     descriptionFull: "You gain a +3 bonus to attack rolls and damage rolls made with this magic weapon.\n   The first time you attack with the weapon on each of your turns, you can transfer some or all of the weapon’s bonus to your Armor Class. For example, you could reduce the bonus to your attack rolls and damage rolls to +1 and gain a +2 bonus to Armor Class. The adjusted bonuses remain in effect until the start of your next turn, although you must hold the weapon to gain a bonus to AC from it.",
     chooseGear: {
         type: "weapon",
@@ -3469,7 +3469,7 @@ MagicItemsList["enspelled armor"] = {
     },
     "4th-level spell (very rare)": {
         name: "Enspelled Armor (4th-Level)",
-        rarity: " very rare",
+        rarity: "very rare",
         description: "This armor is imbued with a Abjuration or Illusion spell of 4th-Level, which has 6 charges, each cast costing 1 charge, I regain 1d6 charges at dawn.",
         spellFirstColTitle: "CH",
         spellcastingBonus: [{
@@ -3582,7 +3582,7 @@ MagicItemsList["enspelled staff"] = {
         description: "This staff is imbued with a cantrip, which has 6 charges, each cast costing a charge, I regain 1d6 charges at dawn. If I expend the last charge roll 1d20 or a 1 the staff becomes nonmagical.",
         spellFirstColTitle: "CH",
         spellcastingBonus: [{
-            name: "Enspelled Armor",
+            name: "Enspelled Staff",
             "class": "any",
             level: [0, 0],
             times: 1,
@@ -3638,7 +3638,7 @@ MagicItemsList["enspelled staff"] = {
     },
     "4th-level spell (very rare)": {
         name: "Enspelled Staff (4th-Level)",
-        rarity: " very rare",
+        rarity: "very rare",
         description: "This staff is imbued with a spell of 4th-Level, which has 6 charges, each cast costing 1 charge, I regain 1d6 charges at dawn. If I expend the last charge roll 1d20 or a 1 the staff becomes nonmagical.",
         spellFirstColTitle: "CH",
         spellcastingBonus: [{
@@ -3798,7 +3798,7 @@ MagicItemsList["enspelled weapon"] = {
     },
     "4th-level spell (very rare)": {
         name: "Enspelled Weapon (4th-Level)",
-        rarity: " very rare",
+        rarity: "very rare",
         description: "This weapon is imbued with a Conjuration, Divination, Evocation, Necromancy, or Transmutation spell of 4th-Level, which has 6 charges, each cast costing 1 charge, I regain 1d6 charges at dawn.",
         spellFirstColTitle: "CH",
         spellcastingBonus: [{
@@ -4424,7 +4424,7 @@ MagicItemsList["hag eye"] = {
     spellFirstColTitle: "CH",
     spellcastingBonus: [{
         name: "Hag Eye",
-        spell: ["darkvision", "see invisibility"],
+        spells: ["darkvision", "see invisibility"],
         selection: ["darkvision", "see invisibility"],
         times: 2,
         firstCol: 1,
@@ -5434,10 +5434,10 @@ MagicItemsList["iron flask"] = { // contains contributions by Larry Hoy
             "64-65\tErinyes\t\t90-91\tRed Slaad",
             "66-67\tFomorian\t\t92-93\tSalamander",
             "  68\tGithyanki Knight\t94\tSolar",
-            "  69\tGitzerai Zerth\t95\tSuccubus",
+            "  69\tGithzerai Zerth\t95\tSuccubus",
             "70-71\tGlabrezu\t\t96\tUltroloth",
             "72-74\tHezrou\t\t97-99\tVrock",
-            "  75\tIncubys\t\t00\tXorn",
+            "  75\tIncubus\t\t00\tXorn",
         ]
     }],
 };
@@ -5613,7 +5613,7 @@ MagicItemsList["mace of disruption"] = {
     type: "weapon (mace)",
     rarity: "rare",
     magicItemTable: "?",
-    description: "This magic mace sheds Bright Light in a 20-ft radius and Dim Light for another 20 ft while held. Fiends and undead hit with it take +2d6 Radiant damage. If the target has less than 25 or fewer HP after taking the damage, it must make a DC 15 Wisdom save or be destroyed.  On a successful save, the creature becomes frightened of me until my next turn ends.",
+    description: "This magic mace sheds Bright Light in a 20-ft radius and Dim Light for another 20 ft while held. Fiends and undead hit with it take +2d6 Radiant damage. If the target has 25 HP or fewer after taking the damage, it must make a DC 15 Wisdom save or be destroyed.  On a successful save, the creature becomes frightened of me until my next turn ends.",
     descriptionFull: "When you hit a fiend or an undead with this magic weapon, that creature takes an extra 2d6 Radiant damage. If the target has 25 hit points or fewer after taking this damage, it must succeed on a DC 15 Wisdom saving throw or be destroyed. On a successful save, the creature becomes frightened of you until the end of your next turn.\n   While you hold this weapon, it sheds Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.",
     attunement: true,
     weight: 4,
@@ -6033,7 +6033,7 @@ MagicItemsList["necklace of fireballs"] = {
             description: "20-ft rad all crea 8d6+1d6/extra bead Fire dmg (max 12d6); save halves; unattended flammable objects ignite",
             components: "M\u2020",
             compMaterial: "Using the Necklace of Fireballs to cast Fireball requires removing and destroying one or more of the beads from it.",
-            changes: "Using the Necklace of Fireballs to cast Fireball requires removing and destroing one or more of the beads from it. The damage is that of a Fireball cast a 3rd-level, +1 level per bead thrown as part of the same action beyond the first."
+            changes: "Using the Necklace of Fireballs to cast Fireball requires removing and destroying one or more of the beads from it. The damage is that of a Fireball cast a 3rd-level, +1 level per bead thrown as part of the same action beyond the first."
         }
     }
 };
@@ -6046,7 +6046,7 @@ MagicItemsList["necklace of prayer beads"] = {
     rarity: "rare",
     magicItemTable: "?",
     description: "This necklace has many beads, 1d4+2 are magical and can each be used to cast a spell once per dawn as a Bonus action. The DM selects the spells from: Bless, Cure Wounds, Greater Restoration, Shining Smite, Guardian of Faith, and Wind Walk. Multiple beads of the same type can be on one necklace.",
-    descriptionLong: "This necklace has many beads, 1d4+2 are magical aquamarine, black pearl, or topaz beads and can each be used to cast a spell once per dawn as a Bonus action. The DM selects the bead from: blessing bead (Bless), curing bead (Cure Wounds), favor bead (Greater Restoration), smiting bead (Shining Smite), summons bead (Guardian Bead), and wind walking bead (Wind Walk). Multiple beads of the same type can be on one necklace.",
+    descriptionLong: "This necklace has many beads, 1d4+2 are magical aquamarine, black pearl, or topaz beads and can each be used to cast a spell once per dawn as a Bonus action. The DM selects the bead from: blessing bead (Bless), curing bead (Cure Wounds), favor bead (Greater Restoration), smiting bead (Shining Smite), summons bead (Guardian of Faith), and wind walking bead (Wind Walk). Multiple beads of the same type can be on one necklace.",
     descriptionFull: "This necklace has 1d4+2 magic beads made from aquamarine, black pearl, or topaz. It also has many nonmagical beads made from stones such as amber, bloodstone, citrine, coral, jade, pearl, or quartz. If a magic bead is removed from the necklace, that bead loses its magic.\n   Six types of magic beads exist. The DM decides the type of each bead on the necklace or determines it randomly. A necklace can have more than one bead of the same type. To use one, you must be wearing the necklace. Each bead contains a spell that you can cast from it as a Bonus action (using your spell save DC if a save is necessary). Once a magic bead's spell is cast, that bead can't be used again until the next dawn.\n\n" + toUni("d20\tBead of ...\tSpell") + "\n1-6\tBlessing\t\tBless\n7-12\tCuring\t\tCure Wounds (2nd level)\n13-16\tFavor\t\tGreater Restoration\n17-18\tSmiting\t\tShining Smite\n19\tSummons   \tGuardian of Faith\n20\tWind walking\tWind Walk",
     attunement: true,
     prerequisite: "Requires attunement by a cleric, druid, or paladin",
@@ -6143,7 +6143,7 @@ MagicItemsList.oathbow = {
     attunement: true,
     choices: ["Shortbow", "Longbow"],
     "shortbow": {
-        description: "When I attack with this longbow and say its command phrase, I make the target my sworn enemy if I don't have one already for 7 days or until it dies. Attacks with this bow vs. it get adv, +3d6 damage, ignore cover (not full), and suffer no disadv. from long range. While it lives, I have disadv. when I use other weapons.",
+        description: "When I attack with this shortbow and say its command phrase, I make the target my sworn enemy if I don't have one already for 7 days or until it dies. Attacks with this bow vs. it get adv, +3d6 damage, ignore cover (not full), and suffer no disadv. from long range. While it lives, I have disadv. when I use other weapons.",
         descriptionFull: 'When you nock an arrow on this bow, it whispers in Elvish, "Swift defeat to my enemies." When you use this weapon to make a ranged attack, you can, as a command phrase, say, "Swift death to you who have wronged me." The target of your attack becomes your sworn enemy until it dies or until dawn seven days later. You can have only one such sworn enemy at a time. When your sworn enemy dies, you can choose a new one after the next dawn.\n   When you make a ranged attack roll with this weapon against your sworn enemy, you have Advantage on the roll. In addition, your target gains no benefit from Half Cover or Three-Quarters Cover, and you suffer no Disadvantage due to long range. If the attack hits, your sworn enemy takes an extra 3d6 piercing damage.\n   While your sworn enemy lives, you have Disadvantage on attack rolls with all other weapons.',
         weaponOptions: [{
             baseWeapon: "shortbow",
@@ -6350,7 +6350,7 @@ MagicItemsList["pipes of haunting"] = { // contains contributions by Soilentbrad
     type: "wondrous item (instrument)",
     rarity: "uncommon",
     magicItemTable: "?",
-    description: "These pipes have 3 charges and regain 1d3 expended charges daily at dawn. As a Magic action, I can use 1 charge to play them and have each creature in 30 ft that can hear them make a DC 15 Wisdome saving throw or be frightened of me for 1 minute. A target can repeat the save at the end of each of their turns.",
+    description: "These pipes have 3 charges and regain 1d3 expended charges daily at dawn. As a Magic action, I can use 1 charge to play them and have each creature in 30 ft that can hear them make a DC 15 Wisdom saving throw or be frightened of me for 1 minute. A target can repeat the save at the end of each of their turns.",
     descriptionFull: "These pipes have 3 charges and regain 1d3 expended charges daily at dawn. You can take a Magic action to play them and expend 1 charge to create an eerie, spellbinding tune. Each creature of your choice within 30 feet of you must succeed on a DC 15 Wisdom saving throw or have the Frightened condition for 1 minute. A creature that fails the save repeats it at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on its save is immune to the effect of these pipes for 24 hours.",
     weight: 2,
     action: [
@@ -6392,7 +6392,7 @@ MagicItemsList["plate armor of etherealness"] = {
     choices: ["Half Plate", "Plate"],
     "half plate": {
         description: "While you’re wearing this half plate armor, you can take a Magic action and use a command word to gain the effect of the Etherealness spell. The spell ends immediately if you remove the armor or take a Magic action to repeat the command word.",
-        descriptionFull: "While you’re wearing this half platearmor, you can take a Magic action and use a command word to gain the effect of the Etherealness spell. The spell ends immediately if you remove the armor or take a Magic action to repeat the command word. This property of the armor can’t be used again until the next dawn.\n Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body.",
+        descriptionFull: "While you’re wearing this half plate armor, you can take a Magic action and use a command word to gain the effect of the Etherealness spell. The spell ends immediately if you remove the armor or take a Magic action to repeat the command word. This property of the armor can’t be used again until the next dawn.\n Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body.",
         armorOptions: {
             regExpSearch: /^(?=.*half)(?=.*plate)(?=.*etherealness).*$/i,
             name: "Half Plate Armor of Etherealness",
@@ -6499,7 +6499,7 @@ MagicItemsList["potion of animal friendship"] = {
     descriptionFull: "When you drink this potion, you can cast the level 3 version of the Animal Friendship spell (save DC 13). Agitating this potion’s muddy liquid brings little bits into view: a fish scale, a hummingbird feather, a cat claw, or a squirrel hair.",
     weight: 0.5,
     spellChanges: {
-        "Animal Friendship": {
+        "animal friendship": {
             description: "Target up to 3 beasts you can see within 30-ft. Target must succeed on a Wisdom saving throw or be Charmed for duration or until damage is taken.",
             changes: "When using the Potion to cast Animal Friendship, it is cast at 3rd-level."
         },
@@ -6537,7 +6537,7 @@ MagicItemsList["potion of comprehension"] = {
     type: "potion",
     rarity: "common",
     magicItemTable: "?",
-    description: "When you drink this potion, you gain the effect of the Comprehend Languages spell for 1 hour.. This potion’s liquid is a clear concoction with bits of salt and soot swirling in it.",
+    description: "When you drink this potion, you gain the effect of the Comprehend Languages spell for 1 hour. This potion's liquid is a clear concoction with bits of salt and soot swirling in it.",
     descriptionFull: "When you drink this potion, you gain the effect of the Comprehend Languages spell for 1 hour. This potion’s liquid is a clear concoction with bits of salt and soot swirling in it.",
     weight: 0.5,
 };
@@ -6549,7 +6549,7 @@ MagicItemsList["potion of diminution"] = {
     type: "potion",
     rarity: "rare",
     magicItemTable: "?",
-    description: "When you drink this potion, you gain the \“reduce\” effect of the Enlarge/Reduce spell for 1d4 hours (no Concentration required).. The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it.",
+    description: "When you drink this potion, you gain the \“reduce\” effect of the Enlarge/Reduce spell for 1d4 hours (no Concentration required). The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it.",
     descriptionFull: "When you drink this potion, you gain the \"reduce\" effect of the Enlarge/Reduce spell for 1d4 hours (no concentration required). The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it. Shaking the bottle fails to interrupt this process.",
     weight: 0.5
 };
@@ -6586,7 +6586,7 @@ MagicItemsList["potion of gaseous form"] = {
     rarity: "rare",
     magicItemTable: "?",
     description: "When you drink this potion, you gain the effect of the Gaseous Form spell for 1 hour (no Concentration required) or until you end the effect as a Bonus Action.This potion's container seems to hold fog that moves and pours like water.",
-    descriptionFull: "When you drink this potion, you gain the effect of the Gaseous Form spell for 1 hour (no Concentration required) or until you end the effect as a Bonus Action.. This potion's container seems to hold fog that moves and pours like water.",
+    descriptionFull: "When you drink this potion, you gain the effect of the Gaseous Form spell for 1 hour (no Concentration required) or until you end the effect as a Bonus Action. This potion's container seems to hold fog that moves and pours like water.",
     weight: 0.5
 };
 MagicItemsList["potion of giant strength"] = {
@@ -6836,23 +6836,23 @@ MagicItemsList["potion of resistance"] = {
     },
     "necrotic": {
         name: "Potion of Necrotic Resistance",
-        description: "When you drink this potion, you gain resistance tonecrotic damage for 1 hour."
+        description: "When you drink this potion, you gain resistance to necrotic damage for 1 hour."
     },
     "poison": {
         name: "Potion of Poison Resistance",
-        description: "When you drink this potion, you gain resistance topoison damage for 1 hour."
+        description: "When you drink this potion, you gain resistance to poison damage for 1 hour."
     },
     "psychic": {
         name: "Potion of Psychic Resistance",
-        description: "When you drink this potion, you gain resistance topsychic damage for 1 hour."
+        description: "When you drink this potion, you gain resistance to psychic damage for 1 hour."
     },
     "radiant": {
         name: "Potion of Radiant Resistance",
-        description: "When you drink this potion, you gain resistance toradiant damage for 1 hour."
+        description: "When you drink this potion, you gain resistance to radiant damage for 1 hour."
     },
     "thunder": {
         name: "Potion of Thunder Resistance",
-        description: "When you drink this potion, you gain resistance tothunder damage for 1 hour."
+        description: "When you drink this potion, you gain resistance to thunder damage for 1 hour."
     }
 };
 MagicItemsList["potion of speed"] = {
@@ -6925,7 +6925,7 @@ MagicItemsList["quaal's feather token"] = {
     ],
     type: "wondrous item",
     magicItemTable: "?",
-    descriptionFull: "This tiny object looks like a feather. Different types of feather tokens exist, each with a different single-use effect. The DM chooses the kind of token or determines it randomly.\n\n" + toUni("d100\tToken\tRarity\td100\tToken\Rarity") +
+    descriptionFull: "This tiny object looks like a feather. Different types of feather tokens exist, each with a different single-use effect. The DM chooses the kind of token or determines it randomly.\n\n" + toUni("d100\tToken\tRarity\td100\tToken\tRarity") +
         "\n01-20\tAnchor\tUncommon\t51-65\tSwan boat\tRare" +
         "\n21-35\tBird\tRare   \t66-90\tTree\tUncommon" +
         "\n36-50\tFan\tUncommon   \t91-00\tWhip\tRare",
@@ -6984,13 +6984,13 @@ MagicItemsList["quarterstaff of the acrobat"] = {
     type: "weapon (quarterstaff)",
     rarity: "very rare",
     magicItemTable: "?",
-    description: "This magic quarterstaff adds a +2 bonus to attack and damage rolls made with it. While holding this weapon, I can emit a dim green light (10ft) as a Bonus Action or after you roll Initiative and can extinguish the light as a Bonus Action. You can take a Bonus Action to alter its form, tunring it into a 6-inch rod or 10-foot pole, or revert it back to its Quarterstaff form.",
+    description: "This magic quarterstaff adds a +2 bonus to attack and damage rolls made with it. While holding this weapon, I can emit a dim green light (10ft) as a Bonus Action or after you roll Initiative and can extinguish the light as a Bonus Action. You can take a Bonus Action to alter its form, turning it into a 6-inch rod or 10-foot pole, or revert it back to its Quarterstaff form.",
     descriptionFull: "This magic weapon adds a +2 bonus to attack and damage rolls made with it. While holding this weapon, I can emit a dim green light (10ft) as a Bonus Action or after initiative and can extinguish the light as a Bonus Action.\n" +
         "\n While holding this weapon, you can take a Bonus Action to alter its form, turning it into a 6-inch rod (for ease of storage) or a 10-foot pole, or reverting it a Quarterstaff; the weapon will elongate only as far as the surrounding space allows." +
         "\n In certain forms, the weapon has the following additional properties." + toUni("Acrobatic Assist - Quarterstaff or 10ft Pole") + "While holding this weapon, you have Advantage on Dex (Acrobatics) checks." + toUni("Attack Deflection - Quarterstaff") + "When you are hit by an attack while holding the weapon, you can take a Reaction to twirl the weapon around you, gaining +5 bonus to your AC against a triggering attack, potentially causing the attack to miss you. You can't use this propety again until you finish a Short or Long Rest." + toUni("Ranged Weapon - Quarterstaff") + "This weapon has the Thrown property with a normal range of 30 feet and a long range of 120 feet. Immediately after you make a ranged attack with the weapon, it flies back to your hand.",
     attunement: true,
     weight: 4,
-    modifers: [2, 2],
+    modifiers: [2, 2],
     action: [
         ["bonus action", "Dim Light/Extinguish Light"],
         ["bonus action", "Transform Staff"],
@@ -7011,7 +7011,7 @@ MagicItemsList["quarterstaff of the acrobat"] = {
         selectNow: true,
     }],
     toNotesPage: [{
-        name: "Quartstaff of the Acrobat",
+        name: "Quarterstaff of the Acrobat",
         note: [
             "You gain a +2 bonus to attack rolls and damage rolls with this magic weapon. While holding this weapon, you an cause it to emit green Dim Light out to 10 feet, either as a Bonus Action or after you roll initiative, or you can extinguish the light as a Bonus Action.",
             "\n While holding this weapon, you can take a Bonus Action to alter its form, turning it into a 6-inch rod (for storage) or a 10-foot pole, or reverting it to a Quarterstaff; the weapon will elongate only as far as surrounding space allows.",
@@ -7596,7 +7596,7 @@ MagicItemsList["ring of spell turning"] = {
     type: "ring",
     rarity: "legendary",
     magicItemTable: "?",
-    description: "While wearing this ring, you have Advantage on saving throws against spells. If I succeed on the save of a spell level 7 or lower, the spell has no effect on me. If you were the only target, and it didn't create an area of affect, I can take a Reaction to deflect the spell back to the caster; against their own spell save DC.",
+    description: "While wearing this ring, you have Advantage on saving throws against spells. If I succeed on the save of a spell level 7 or lower, the spell has no effect on me. If you were the only target, and it didn't create an area of effect, I can take a Reaction to deflect the spell back to the caster; against their own spell save DC.",
     descriptionFull: "While wearing this ring, you have Advantage on saving throws against spells. If you succeed on the save for a spell of level 7 or lower, the spell has no effect on you. If that spell targeted only you and didn’t create an area of effect, you can take a Reaction to deflect the spell back at the spell’s caster; the caster must make a saving throw against the spell using their own spell save DC.",
     attunement: true,
     savetxt: {
@@ -7767,7 +7767,7 @@ MagicItemsList["robe of eyes"] = { // contains contributions by SoilentBrad
     type: "wondrous item",
     rarity: "rare",
     magicItemTable: "?",
-    description: "This robe gives you the following benefits: Advantage on sight-based Perception checks; Darkvision and Truesight up to 120-ft. If Light is cast on it or Daylight within 5 ft of it, you're blinded for 1 min, Con save (DC 11-Light, 15-Daylight) at the end of my each of my turns until succussful.",
+    description: "This robe gives you the following benefits: Advantage on sight-based Perception checks; Darkvision and Truesight up to 120-ft. If Light is cast on it or Daylight within 5 ft of it, you're blinded for 1 min, Con save (DC 11-Light, 15-Daylight) at the end of my each of my turns until successful.",
     descriptionFull: "This robe is adorned with eyelike patterns. While you wear the robe, you gain the following benefits:\n" + toUni("All-Around Vision") + ". The robe gives you Advantage on Wisdom (Perception) checks that rely on sight.\n" + toUni("Special Senses") + ". You have Darkvision and Truesight, both with a range of 120 feet.\n" + toUni("Drawbacks") + ". A Light spell cast on the robe or a Daylight spell cast within 5 feet of the robe gives you the Blinded condition for 1 minute. At the end of each of your turns, you make a Constitution saving throw (DC 11 for Light or DC 15 for Daylight), ending the condition on yourself on a success.",
     attunement: true,
     weight: 4,
@@ -7937,7 +7937,7 @@ MagicItemsList["rod of alertness"] = { // contains contributions by SoilentBrad
         ["action", ""]
     ],
     spellcastingBonus: [{
-        name: "Robe of Alertness",
+        name: "Rod of Alertness",
         spells: ["detect evil and good", "detect magic", "detect poison and disease", "see invisibility"],
         selection: ["detect evil and good", "detect magic", "detect poison and disease", "see invisibility"],
         times: 4
@@ -8083,7 +8083,7 @@ MagicItemsList["rod of security"] = {
     rarity: "very rare",
     magicItemTable: "?",
     description: "As a Magic action once per 10 days, I can transport myself and up to 199 willing others I can see to a demiplane for 200 days divided by the number of creatures or until I end it as a Magic action. Creatures within the demiplane don't age, have enough to eat and drink, and regain HP every hour as if having spent 1 HD.",
-    descriptionFull: "While holding this rod, you can take a Magic action to activate it. The rod then instantly transports you and up to 199 other willing creatures you can see to a demiplane. You choose the form the demiplane takes. It could be a tranquil garden, a cheery tavern, an immense palace, a tropical island, a fantastic carnival, or whatever else you can imagine. Regardless of its nature, the demiplane contains enough water and food to sustain its visitors, and the demiplane’s environment can’t harm its occupants. Everything else that can be interacted with there can exist only there. For example, a flower picked from a garden there disappears if it is taken outside the demiplane.\n   For each hour spent in the demiplane, a visitor regains Hit Points as if it had spent 1 Hit Point Die. Also, creatures don’t age while there, although time passes normally. Visitors can remain there for up to 200 days divided by the number of creatures present (round down).\n   When the time runs out or you take a Magic action to end the effect, all visitors reappear in the location they occupied when you activated the rod or an unoccupied space nearest that location. Once used, this property can’t be used again until 10 days have passed..",
+    descriptionFull: "While holding this rod, you can take a Magic action to activate it. The rod then instantly transports you and up to 199 other willing creatures you can see to a demiplane. You choose the form the demiplane takes. It could be a tranquil garden, a cheery tavern, an immense palace, a tropical island, a fantastic carnival, or whatever else you can imagine. Regardless of its nature, the demiplane contains enough water and food to sustain its visitors, and the demiplane’s environment can’t harm its occupants. Everything else that can be interacted with there can exist only there. For example, a flower picked from a garden there disappears if it is taken outside the demiplane.\n   For each hour spent in the demiplane, a visitor regains Hit Points as if it had spent 1 Hit Point Die. Also, creatures don’t age while there, although time passes normally. Visitors can remain there for up to 200 days divided by the number of creatures present (round down).\n   When the time runs out or you take a Magic action to end the effect, all visitors reappear in the location they occupied when you activated the rod or an unoccupied space nearest that location. Once used, this property can't be used again until 10 days have passed.",
     weight: 2,
     usages: 1,
     recovery: "10 days",
@@ -8321,7 +8321,7 @@ MagicItemsList["scroll of protection"] = {
         "21-25\tConstructs   \t76-80\tMonstrosities",
         "26-35\tDragons\t81-85\tOozes",
         "36-45\tElementals\t86-90\tPlants",
-        "46-50\tHumonoids\t91-00\tUndead",
+        "46-50\tHumanoids\t91-00\tUndead",
     ].join("\n") + "\n Using a Magic action to read the scroll creates a 5-foot Emanation originating from you. For 5 minutes, creatures of the specified type can’t enter or affect anything in the area. However, if you move in such a way that a creature of the specified type would be inside the area, the effect ends.\n As a Magic action, a creature within 5 feet of the Emanation can attempt to overcome it, which forces the creature to make a DC 15 Charisma saving throw. On a successful save, the creature ceases to be affected by the Emanation.\n",
     choices: ["Aberrations", "Beasts", "Celestials", "Constructs", "Dragons", "Elementals", "Humanoids", "Fey", "Fiends", "Giants", "Monstrosities", "Oozes", "Plants", "Undead"],
     "aberrations": {
@@ -9362,7 +9362,7 @@ MagicItemsList["staff of the magi"] = { // contains contributions by Pengsloth
     rarity: "legendary",
     magicItemTable: "?",
     description: "This staff has 50 charges and can be wielded as a magic Quarterstaff that grants a +2 bonus to attack rolls and damage rolls made with it and gives Advantage on saving throws against spells. As a Reaction, you can absorb a spell targeting only you, converting its spell level to charges and cancelling its effect. If this brings it over 50 charges or you break it is as an action, it explodes.",
-    descriptionFull: "This staff has 50 charges and can be wielded as a magic Quarterstaff that grants a +2 bonus to attack rolls and damage rolls made with it. While you hold it, you gain a +2 bonus to spell attack rolls.\n" + toUni("Spell Absorption") + ". While holding the staff, you have Advantage on saving throws against spells. In addition, you can take a Reaction when another creature casts a spell that targets only you. If you do, the staff absorbs the magic of the spell, canceling its effect and gaining a number of charges equal to the absorbed spell’s level. However, if doing so brings the staff’s total number of charges above 50, the staff explodes as if you activated its Retributive Strike (see below)..\n   " + toUni("Spells") + ". While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell: Arcane Lock (0 charges), Conjure Elemental (7 charges), Detect Magic (0 charges), Dispel Magic (3 charges), Enlarge/Reduce (0 charges), Fireball (7th-level version, 7 charges), Flaming Sphere (2 charges), Ice Storm (4 charges), Invisibility (2 charges), Knock (2 charges), Light (0 charges), Lightning Bolt (7th-level version, 7 charges), Mage Hand (0 charges), Passwall (5 charges), Plane Shift (7 charges), Protection from Evil and Good (0 charges), Telekinesis (5 charges), Wall of Fire (4 charges), or Web (2 charges).\n " + toUni("Retributive Strike") + ". You can take a Magic action to break the staff over your knee or against a solid surface. The staff is destroyed and releases its magic in an explosion that fills a 30-foot Emanation originating from itself. You have a 50 percent chance to instantly travel to a random plane of existence, avoiding the explosion. If you fail to avoid the effect, you take Force damage equal to 16 \xD7 the number of charges in the staff. Each other creature in the area makes a DC 17 Dexterity saving throw. On a failed save, a creature takes Force damage equal to 6 \xD7 the number of charges in the staff. On a successful save, a creature takes half as much damage.\n\n" + "The staff regains 4d6 + 2 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 20, the staff regains 1d12 + 1 charges.",
+    descriptionFull: "This staff has 50 charges and can be wielded as a magic Quarterstaff that grants a +2 bonus to attack rolls and damage rolls made with it. While you hold it, you gain a +2 bonus to spell attack rolls.\n" + toUni("Spell Absorption") + ". While holding the staff, you have Advantage on saving throws against spells. In addition, you can take a Reaction when another creature casts a spell that targets only you. If you do, the staff absorbs the magic of the spell, canceling its effect and gaining a number of charges equal to the absorbed spell’s level. However, if doing so brings the staff’s total number of charges above 50, the staff explodes as if you activated its Retributive Strike (see below).\n   " + toUni("Spells") + ". While holding the staff, you can cast one of the spells on the following table from it, using your spell save DC. The table indicates how many charges you must expend to cast the spell: Arcane Lock (0 charges), Conjure Elemental (7 charges), Detect Magic (0 charges), Dispel Magic (3 charges), Enlarge/Reduce (0 charges), Fireball (7th-level version, 7 charges), Flaming Sphere (2 charges), Ice Storm (4 charges), Invisibility (2 charges), Knock (2 charges), Light (0 charges), Lightning Bolt (7th-level version, 7 charges), Mage Hand (0 charges), Passwall (5 charges), Plane Shift (7 charges), Protection from Evil and Good (0 charges), Telekinesis (5 charges), Wall of Fire (4 charges), or Web (2 charges).\n " + toUni("Retributive Strike") + ". You can take a Magic action to break the staff over your knee or against a solid surface. The staff is destroyed and releases its magic in an explosion that fills a 30-foot Emanation originating from itself. You have a 50 percent chance to instantly travel to a random plane of existence, avoiding the explosion. If you fail to avoid the effect, you take Force damage equal to 16 \xD7 the number of charges in the staff. Each other creature in the area makes a DC 17 Dexterity saving throw. On a failed save, a creature takes Force damage equal to 6 \xD7 the number of charges in the staff. On a successful save, a creature takes half as much damage.\n\n" + "The staff regains 4d6 + 2 expended charges daily at dawn. If you expend the last charge, roll 1d20. On a 20, the staff regains 1d12 + 1 charges.",
     attunement: true,
     weight: 4,
     prerequisite: "Requires attunement by a sorcerer, warlock, or wizard",
@@ -9503,7 +9503,7 @@ MagicItemsList["staff of the woodlands"] = {
         regExpSearch: /^(?=.*staff)(?=.*woodlands).*$/i,
         name: "Staff of the Woodlands",
         source: [
-            ["PHB2024", ]
+            ["PHB2024", "-"]
         ],
         modifiers: [2, 2]
     },
@@ -9574,12 +9574,12 @@ MagicItemsList["staff of thunder and lightning"] = {
     weight: 4,
     action: [
         ["action", "Staff of T\u0026L Lightning Strike, Thunderclap"],
-        ["bonus action", "Thunder and Lighting"]
+        ["bonus action", "Thunder and Lightning"]
     ],
     weaponsAdd: ["Staff of Thunder and Lightning"],
     weaponOptions: {
         baseWeapon: "quarterstaff",
-        regExpSearch: /staff of thunder and lighting/i,
+        regExpSearch: /staff of thunder and lightning/i,
         name: "Staff of Thunder and Lightning",
         source: [
             ["SRD", 245],
@@ -9717,7 +9717,7 @@ MagicItemsList["sun blade"] = {
     magicItemTable: "?",
     attunement: true,
     description: "As a Bonus Action, you can have this hilt create a blade of radiance. While the blade exists, it acts like a magic Longsword that does +2 to attack and damage rolls, Radiant damage instead of Slashing (+1d8 to undead), has Finesse, emits Bright Light in a 15-ft radius and Dim Light in another 15 ft. You can take a Magic action, I can change the light's radius by 5 ft for each (Bright/Dim) to a maximum of 30 ft each or min of 10ft.",
-    descriptionFull: "This item appears to be a longsword hilt.\n" + toUni("Blade of Radiance") + ". While grasping the hilt, you can take a Bonus Action to cause a blade of pure radiance to spring into existence or make the blade disappear. While the blade exists, this magic weapon functions as a Longsword with the Finesse property. If you are proficient with Longswords or Shortswords, you are proficient with the Sun Blade..\n   You gain a +2 bonus to attack rolls and damage rolls made with this weapon, which deals Radiant damage instead of Slashing damage. When you hit an Undead with it, that target takes an extra 1d8 Radiant damage.\n" + toUni("Sunlight") + ". The sword’s luminous blade emits Bright Light in a 15-foot radius and Dim Light for an additional 15 feet. The light is sunlight. While the blade persists, you can take a Magic action to expand or reduce its radius of Bright Light and Dim Light by 5 feet each, to a maximum of 30 feet each or a minimum of 10 feet each.",
+    descriptionFull: "This item appears to be a longsword hilt.\n" + toUni("Blade of Radiance") + ". While grasping the hilt, you can take a Bonus Action to cause a blade of pure radiance to spring into existence or make the blade disappear. While the blade exists, this magic weapon functions as a Longsword with the Finesse property. If you are proficient with Longswords or Shortswords, you are proficient with the Sun Blade.\n   You gain a +2 bonus to attack rolls and damage rolls made with this weapon, which deals Radiant damage instead of Slashing damage. When you hit an Undead with it, that target takes an extra 1d8 Radiant damage.\n" + toUni("Sunlight") + ". The sword’s luminous blade emits Bright Light in a 15-foot radius and Dim Light for an additional 15 feet. The light is sunlight. While the blade persists, you can take a Magic action to expand or reduce its radius of Bright Light and Dim Light by 5 feet each, to a maximum of 30 feet each or a minimum of 10 feet each.",
     weight: 3,
     action: [
         ["bonus action", " (Blade of Radiance"],
@@ -9769,7 +9769,7 @@ MagicItemsList["sword of answering"] = {
         ],
         modifiers: [3, 3],
         selectNow: true,
-        description: "Verstatile (1d10), Sap; Adv on Reaction attack & Ignore Immune/Resist."
+        description: "Versatile (1d10), Sap; Adv on Reaction attack & Ignore Immune/Resist."
     }],
 };
 MagicItemsList["sword of life stealing"] = {
@@ -9816,7 +9816,7 @@ MagicItemsList["sword of sharpness"] = {
     rarity: "very rare",
     magicItemTable: "?",
     attunement: true,
-    description: "When I roll a 20 to hit with this magic weapon vs. a creature, it takes +14 slashing damage and gaines 1 exhaustion level. It does maximum damage vs. objects.",
+    description: "When I roll a 20 to hit with this magic weapon vs. a creature, it takes +14 slashing damage and gains 1 exhaustion level. It does maximum damage vs. objects.",
     descriptionFull: "When you attack an object with this magic weapon and hit, maximize your weapon damage dice against the target.\n   When you attack a creature with this weapon and roll a 20 on the d20 for the attack roll, that target takes an extra 14 Slashing damage and gains 1 Exhaustion level.",
     chooseGear: {
         type: "weapon",
@@ -9864,7 +9864,7 @@ MagicItemsList["sword of vengeance"] = {
     calcChanges: {
         atkAdd: [
             function(fields, v) {
-                if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && (/glaive|greatsword|longsword|rapier|scimitar|swordsword/i).test(v.baseWeaponName) && (/of vengeance/i).test(v.WeaponTextName)) {
+                if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && (/glaive|greatsword|longsword|rapier|scimitar|shortsword/i).test(v.baseWeaponName) && (/of vengeance/i).test(v.WeaponTextName)) {
                     v.theWea.isMagicWeapon = true;
                     fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
                     fields.Description += (fields.Description ? '; ' : '') + 'Cursed';
@@ -9874,7 +9874,7 @@ MagicItemsList["sword of vengeance"] = {
         ],
         atkCalc: [
             function(fields, v, output) {
-                if (v.isMeleeWeapon && (/glaive|greatsword|longsword|rapier|scimitar|swordsword/i).test(v.baseWeaponName) && (/of vengeance/i).test(v.WeaponTextName)) {
+                if (v.isMeleeWeapon && (/glaive|greatsword|longsword|rapier|scimitar|shortsword/i).test(v.baseWeaponName) && (/of vengeance/i).test(v.WeaponTextName)) {
                     output.magic = v.thisWeapon[1] + 1;
                 }
             }, ''
@@ -9891,7 +9891,7 @@ MagicItemsList["sword of wounding"] = {
     rarity: "rare",
     magicItemTable: "?",
     attunement: true,
-    description: "When you hit a creature with an attack using this magic weapon, the target takes an extra 2d6 Necrotic damage and must succeed on a DC 15 Constitution saving throw or be unable to regain Hit Points for 1 hour. The target repeats the save at the end of each of its turns, ending the effect on itself on a success..",
+    description: "When you hit a creature with an attack using this magic weapon, the target takes an extra 2d6 Necrotic damage and must succeed on a DC 15 Constitution saving throw or be unable to regain Hit Points for 1 hour. The target repeats the save at the end of each of its turns, ending the effect on itself on a success.",
     descriptionFull: "When you hit a creature with an attack using this magic weapon, the target takes an extra 2d6 Necrotic damage and must succeed on a DC 15 Constitution saving throw or be unable to regain Hit Points for 1 hour. The target repeats the save at the end of each of its turns, ending the effect on itself on a success.",
     chooseGear: {
         type: "weapon",
@@ -9957,7 +9957,7 @@ MagicItemsList["talisman of pure good"] = {
     type: "wondrous item",
     rarity: "legendary",
     magicItemTable: "?",
-    description: "You can use this talisman as a Holy Symbol, and it gives a +2 bonus to your spell attacks while worn or held. Any Fiend or Undead that touches the talisman takes 8d6 Radiant, and again each time it ends its turn holding or carrying the talisman. As a Magic action, you can use 1 of its 7 charges to have one creature within 120 ft make a DC 20 Dex save, if the target is a Fiend or Undead, it has DisAdv on the roll. On succussful save, target takes 4d6 Psychic. On fail, it falls into the fissure and is destroyed. On last charge, the talisman is destroyed.",
+    description: "You can use this talisman as a Holy Symbol, and it gives a +2 bonus to your spell attacks while worn or held. Any Fiend or Undead that touches the talisman takes 8d6 Radiant, and again each time it ends its turn holding or carrying the talisman. As a Magic action, you can use 1 of its 7 charges to have one creature within 120 ft make a DC 20 Dex save, if the target is a Fiend or Undead, it has DisAdv on the roll. On successful save, target takes 4d6 Psychic. On fail, it falls into the fissure and is destroyed. On last charge, the talisman is destroyed.",
     descriptionFull: "This talisman is a mighty symbol of goodness. A Fiend or an Undead that touches the talisman takes 8d6 Radiant damage and takes the damage again each time it ends its turn holding or carrying the talisman.\n" +
         toUni("Holy Symbol") + ". You can use the talisman as a Holy Symbol. You gain a +2 bonus to spell attack rolls while you wear or hold it.\n " +
         toUni("Pure Rebuke") + ". The talisman has 7 charges. While wearing or holding the talisman, you can take a Magic action to expend 1 charge and target one creature you can see on the ground within 120 feet of yourself. A flaming fissure opens under the target, and the target makes a DC 20 Dexterity saving throw. If the target is a Fiend or an Undead, it has Disadvantage on the save. On a failed save, the target falls into the fissure and is destroyed, leaving no remains. On a successful save, the target isn’t cast into the fissure but takes 4d6 Psychic damage from the ordeal. In either case, the fissure then closes, leaving no trace of its existence. When you expend the last charge, the talisman disperses into motes of golden light and is destroyed.",
@@ -10470,7 +10470,7 @@ MagicItemsList["wand of fear"] = {
         selection: ["fear"],
         firstCol: 3,
     }],
-    spellChanges: [{
+    spellChanges: {
         "command": {
             description: '1 creature save or has to follow an one-word command on its next turn, either "flee" or "grovel"',
             changes: 'When casting from the Wand of Fear, I can only use the "flee" or "grovel" command.'
@@ -10480,7 +10480,7 @@ MagicItemsList["wand of fear"] = {
             range: "60-ft Cone",
             changes: 'When casting from the Wand of Fear, the distance changes from 30-foot cone to 60-foot cone.'
         }
-    }],
+    },
 };
 MagicItemsList["wand of fireballs"] = {
     name: "Wand of Fireballs",
@@ -10869,7 +10869,7 @@ MagicItemsList["wand of wonder"] = {
     spellcastingBonus: {
         name: "Random option",
         spells: ["slow", "faerie fire", "gust of wind", "stinking cloud", "lightning bolt", "enlarge/reduce", "darkness", "fireball", "invisibility", "polymorph"],
-        selection: ["slow", "faerie fire", "gust of wind", "stinking cloud", "lightning bolt", "enlarge/reduce", "darkness", "fireball", "invisibility", "polyorph"],
+        selection: ["slow", "faerie fire", "gust of wind", "stinking cloud", "lightning bolt", "enlarge/reduce", "darkness", "fireball", "invisibility", "polymorph"],
         times: 10
     },
     spellChanges: {
@@ -10889,7 +10889,7 @@ MagicItemsList["wand of wonder"] = {
             range: "120 ft",
             changes: "All Wand of Wonder spells have a range of 120 ft."
         },
-        "polymorch": {
+        "polymorph": {
             range: "120 ft",
             changes: "All Wand of Wonder spells have a range of 120 ft."
         },
@@ -11029,7 +11029,7 @@ MagicItemsList["weapon of warning"] = {
     type: "weapon (any simple or martial)",
     rarity: "uncommon",
     magicItemTable: "?",
-    description: "While this weapon is within your reach, and you are attuned to it, you and your allies within 30 ft magically awaken when combat begin, unless a magically induced sleep. You also have Advantage on Inititative rolls.",
+    description: "While this weapon is within your reach, and you are attuned to it, you and your allies within 30 ft magically awaken when combat begin, unless a magically induced sleep. You also have Advantage on Initiative rolls.",
     descriptionFull: "As long as this weapon is within your reach and you are attuned to it, you and allies within 30 feet of you gain the following benefits.\n\n" +
         "\u2022Alarm. The weapon magically awakens each subject who is sleeping naturally when combat begins. This benefit doesn’t wake a subject from magically induced sleep.\n" +
         "\u2022Supernatural Readiness. Each subject has Advantage on its Initiative rolls.",
@@ -11195,7 +11195,7 @@ MagicItemsList["wings of flying"] = {
     type: "wondrous item",
     rarity: "rare",
     magicItemTable: "?",
-    description: "While wearing this cloak, you can take a Magic action to turn the cloak into a pair of wings on your back. The wings last for 1 hour or until you end the affect early as a Magic action. The wings give a flying speed of 60 ft. When they disappear, you can't use them again for 1d12 hours.",
+    description: "While wearing this cloak, you can take a Magic action to turn the cloak into a pair of wings on your back. The wings last for 1 hour or until you end the effect early as a Magic action. The wings give a flying speed of 60 ft. When they disappear, you can't use them again for 1d12 hours.",
     descriptionFull: "While wearing this cloak, you can take a Magic action to turn the cloak into a pair of wings on your back. The wings lasts for 1 hour or until you end the effect early as a Magic action. The wings give you a Fly Speed of 60 feet. If you are aloft when the wings disappear, you fall. When the wings disappear, you can’t use them again for 1d12 hours.",
     attunement: true,
     action: [
