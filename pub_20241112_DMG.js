@@ -1,5 +1,5 @@
 var iFileName = "pub_20241112_DMG.js";
-RequiredSheetVersion("13.2.3");
+RequiredSheetVersion("13.2.3", 15);
 SourceList.D24 = {
     name: "2024 Dungeon Master's Guide",
     abbreviation: "D24",
