@@ -1,5 +1,5 @@
 var iFileName = "pub_20250218_MM.js";
-RequiredSheetVersion("13.2.3");
+RequiredSheetVersion("13.2.3", 15);
 SourceList.M24 = {
 	name: "2025 Monster Manual",
 	abbreviation: "M24",
