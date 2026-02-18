@@ -1,5 +1,5 @@
 var iFileName = "pub_20240917_PHB.js";
-RequiredSheetVersion("13.2.3");
+RequiredSheetVersion("13.2.3", 15);
 SourceList.P24 = {
     name: "2024 Player's Handbook",
     abbreviation: "P24",
@@ -30241,6 +30241,7 @@ CreatureList["undead spirit (putrid/ghostly)(9)"] = {
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
     }],
 };
+
 
 
 
