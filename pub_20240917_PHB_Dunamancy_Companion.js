@@ -1,5 +1,5 @@
 var iFileName = "pub_20240917_PHB_Dunamancy_Companion.js";
-RequiredSheetVersion("13.1.14");
+RequiredSheetVersion("13.2.3", 15);
 
 SourceList.W = {
 	name : "Explorer's Guide to Wildemount",
