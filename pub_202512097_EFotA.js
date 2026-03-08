@@ -3748,7 +3748,6 @@ MagicItemsList["helm of awareness"] = {
     rarity: "uncommon",
     description: "While wearing this helmet, I have Advantage on Initiative rolls.",
     descriptionFull: "While wearing this helmet, you have Advantage on Initiative rolls.",
-    attunement: true,
     advantages: [
         ["Initiative", true]
     ],
@@ -3831,7 +3830,6 @@ MagicItemsList["repulsion shield"] = {
     description: "I gain an additional +1 bonus to Armor Class while wielding this shield. The shield has 4 charges and regains 1d4 expended charges daily at dawn. As a Reaction immediately after being hit by a melee attack, I can expend 1 charge to push the attacker up to 15 ft away.",
     descriptionFull: "You gains a +1 bonus to Armor Class while wielding this shield.\n   The shield has 4 charges. While holding it, when a Large or smaller creature within 5 feet of you hits you with a melee attack roll, you can use a Reaction to expend 1 of the shield's charges and push the attacker up to 15 feet away. The shield regains 1d4 expended charges daily at dawn.",
     weight: 6,
-    attunement: true,
     usages: 4,
     additional: "regains 1d4",
     recovery: "dawn",
