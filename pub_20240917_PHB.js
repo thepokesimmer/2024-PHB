@@ -5248,7 +5248,7 @@ legacyClassRefactor("paladin", {
                 ["P24", 111]
             ],
             minlevel: 6,
-            description: desc("While I'm conscious, allies within range and I can add my Cha mod (min 1) to saves"),
+            description: desc("While I'm not Incapacitated, allies within range and I can add my Cha mod (min 1) to saves"),
             additional: levels.map(function(n) {
                 return n < 6 ? "" : (n < 18 ? 10 : 30) + "-foot aura";
             }),
@@ -5256,7 +5256,7 @@ legacyClassRefactor("paladin", {
                 type: "save",
                 field: "all",
                 mod: "max(Cha|1)",
-                text: "While I'm conscious I can add my Charisma modifier (min 1) to all my saving throws."
+                text: "While I'm not Incapacitated I can add my Charisma modifier (min 1) to all my saving throws."
             }
         },
         "abjure foes": {
@@ -5277,7 +5277,7 @@ legacyClassRefactor("paladin", {
                 ["P24", 111]
             ],
             minlevel: 10,
-            description: desc("While I'm conscious, allies within range and I can't be frightened"),
+            description: desc("While I'm not Incapacitated, allies within range and I can't be frightened"),
             additional: levels.map(function(n) {
                 return n < 10 ? "" : (n < 18 ? 10 : 30) + "-foot aura";
             }),
@@ -5361,7 +5361,7 @@ legacySubClassRefactor("paladin", "devotion", {
                 ["P24", 114]
             ],
             minlevel: 7,
-            description: desc("While I'm conscious, allies within range and I can't be charmed"),
+            description: desc("While I'm not Incapacitated, allies within range and I can't be charmed"),
             additional: levels.map(function(n) {
                 return n < 7 ? "" : (n < 18 ? 10 : 30) + "-foot aura";
             }),
@@ -5515,7 +5515,7 @@ legacySubClassRefactor("paladin", "ancients", {
             minlevel: 7,
             dmgres: ["Psychic", "Radiant", "Necrotic"],
             description: desc([
-                "My allies & I have Resistance to Necrotic, Psychic, & Radiant damage while in range.",
+                "My allies & I have Resistance to Necrotic, Psychic, & Radiant damage while in range of my Aura of Protection.",
             ]),
             additional: levels.map(function(n) {
                 return n < 7 ? "" : (n < 18 ? 10 : 30) + "-foot aura";
@@ -5546,7 +5546,7 @@ legacySubClassRefactor("paladin", "ancients", {
         },
     },
 });
-legacySubClassRefactor("paladin", "Vengeance", {
+legacySubClassRefactor("paladin", "vengeance", {
     regExpSearch: /^(?=.*(paladin))(?=.*(vengeance)).*$/i,
     subname: "Oath of Vengeance",
     source: [
@@ -14042,11 +14042,11 @@ FeatsList["boon of recovery"] = {
     extraLimitedFeatures: [{
         name: "Last Stand",
         usages: 1,
-        recovery: "Long Rest",
+        recovery: "long rest",
     }, {
         name: "Recovery (d10)",
         usages: 10,
-        recovery: "Long Rest",
+        recovery: "long rest",
     }],
     description: "+1 to Any, Once per Long Rest when I would be reduced to 0 HP drop to 1 instead and regain HP equal to 1/2 my max HP; I gain 10 d10s that I can roll as a bns. a. which recover over a Long Rest.",
     descriptionFull: desc([
@@ -26121,8 +26121,8 @@ CreatureList["otherworldly steed (2)"] = {
         name: "Otherworldly Slam",
         ability: 1,
         damage: [1, 8, "Rad(C)/Psy(Fy)/Nec(Fd)"],
-        modifiers: ["", 2],
-        modToDmg: false,
+        modifiers: ["oCha-Str", 2],
+        abilitytodamage : false,
         range: "Melee (5 ft)",
     }],
 };
@@ -26137,7 +26137,7 @@ CreatureList["otherworldly steed (3)"] = {
     alignment: "Neutral",
     companion: "mount",
     companionApply: "mount",
-    ac: 12,
+    ac: 13,
     hp: 35,
     hd: [3, 10],
     speed: "60 ft",
@@ -26171,8 +26171,8 @@ CreatureList["otherworldly steed (3)"] = {
         name: "Otherworldly Slam",
         ability: 1,
         damage: [1, 8, "Rad(C)/Psy(Fy)/Nec(Fd)"],
-        modifiers: ["", 3],
-        modToDmg: false,
+        modifiers: ["oCha-Str", 3],
+        abilitytodamage : false,
         range: "Melee (5 ft)",
     }],
 };
@@ -26187,7 +26187,7 @@ CreatureList["otherworldly steed (4)"] = {
     alignment: "Neutral",
     companion: "mount",
     companionApply: "mount",
-    ac: 12,
+    ac: 14,
     hp: 45,
     hd: [4, 10],
     speed: "60 ft, Fly 60 ft",
@@ -26221,8 +26221,8 @@ CreatureList["otherworldly steed (4)"] = {
         name: "Otherworldly Slam",
         ability: 1,
         damage: [1, 8, "Rad(C)/Psy(Fy)/Nec(Fd)"],
-        modifiers: ["", 4],
-        modToDmg: false,
+        modifiers: ["oCha-Str", 4],
+        abilitytodamage : false,
         range: "Melee (5 ft)",
     }],
 };
@@ -26237,7 +26237,7 @@ CreatureList["otherworldly steed (5)"] = {
     alignment: "Neutral",
     companion: "mount",
     companionApply: "mount",
-    ac: 12,
+    ac: 15,
     hp: 55,
     hd: [5, 10],
     speed: "60 ft, Fly 60 ft",
@@ -26271,8 +26271,8 @@ CreatureList["otherworldly steed (5)"] = {
         name: "Otherworldly Slam",
         ability: 1,
         damage: [1, 8, "Rad(C)/Psy(Fy)/Nec(Fd)"],
-        modifiers: ["", 5],
-        modToDmg: false,
+        modifiers: ["oCha-Str", 5],
+        abilitytodamage : false,
         range: "Melee (5 ft)",
     }],
 };
