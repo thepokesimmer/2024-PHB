@@ -25302,9 +25302,6 @@ CreatureList["skeleton"] = {
     speed: "30 ft",
     scores: [10, 16, 15, 6, 8, 5],
     saves: ["", "", "", "", "", ""],
-    skills: {
-        "stealth": 5,
-    },
     damage_vulnerabilities: "Bludgeoning",
     damage_immunities: "Poison",
     condition_immunities: "Exhausted; Poisoned",
