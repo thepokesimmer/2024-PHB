@@ -13083,7 +13083,7 @@ FeatsList["war caster"] = {
     regExpSearch: /^(?=.*war)(?=.*caster).*$/i,
     action: ["reaction", " (Opportunity Spell)"],
     savetxt: {
-        text: "Adv. on Con (Concentration) saves when damaged"
+        text: "Adv. on Con (Concentration) saves"
     },
     description: "+1 Int/Wis/Cha Advantage on Con saves to maintain concentration on spells when damaged. Perform somatic components even when holding weapons or shield in one or both hands. Cast spell of 1 action casting time that targets only one creature instead of an opportunity attack.",
     descriptionFull: desc([
