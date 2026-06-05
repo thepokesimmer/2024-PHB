@@ -121,7 +121,7 @@ function legacyBackgroundRefactor(bgKey, newBg) {
     BackgroundList[bgKey] = newBg;
 }
 //Species
-RaceList.dhampir = {
+legacyRaceRefactor("dhampir", {
     regExpSearch : /dhampir/i,
     name : "Dhampir",
     source : [["BoH", ""], ["RtHW", ""]],
@@ -159,7 +159,7 @@ RaceList.dhampir = {
 	"\n \u2022 Vampiric Bite: When I hit with the dmg option of an Unarmed Strike, I can bite with my fangs. My Proficiency Bonus per long rest, if the creature wasn't a Construct or Undead, I can also empower myself. I either regain HP or get a bonus to my next ability check or attack roll within 1 minute. Both equal the Piercing damage dealt.",
 	replaces : ["dhampir"],
 });
-RaceList.hexblood = {
+legacyRaceRefactor("hexblood", {
     regExpSearch : /hexblood/i,
     name : "Hexblood",
     source : [["RtHW", 0]],
@@ -249,7 +249,7 @@ RaceList.lupin = {
         "\n \u2022 Howl: PB/Long Rest, as a Bonus Action, chosen creatures in 15 ft make a Wis save (see attack section). On fail, they have Disadvantage on attacks and saves until my next turn starts." +
         "\n \u2022 Werewolf Instincts: I have proficiency in Perception, Stealth, or Survival."
 };
-RaceList.reborn = {
+legacyRaceRefactor("reborn", {
     regExpSearch : /reborn/i,
     name : "Reborn",
     source : [["RtHW", 0]],
@@ -273,7 +273,7 @@ RaceList.reborn = {
         "\n \u2022 Strange Endurance: I have Resistance to Cold, Necrotic, or Poison damage (choose one)."
 });
 //Backgrounds
-BackgroundList["haunted one"] = {
+legacyBackgroundRefactor("haunted one", {
     regExpSearch : /^(?=.*haunted)(?=.*one).*$/i,
     name : "Haunted One",
     source : [["RtHW", 0]],
@@ -308,7 +308,7 @@ BackgroundFeatureList["haunted one"] = {
     },
     source : [["RtHW", 0]]
 };
-BackgroundList["investigator"] = {
+legacyBackgroundRefactor("investigator", {
     regExpSearch : /investigator/i,
     name : "Investigator",
     source : [["RtHW", 0]],
