@@ -1283,7 +1283,6 @@ AddSubClass("bard", "dance", {
     source: [
         ["P24", 64]
     ],
-    replaces: "college of dance",
     features: {
         "subclassfeature3": {
             name: "Dazzling Footwork",
@@ -1799,7 +1798,6 @@ legacySubClassRefactor("cleric", "life", {
         ["P24", 73]
     ],
     replaces: "life domain",
-    spellcastingExtra: ["aid", "bless", "cure wounds", "lesser restoration", "mass healing word", "revivify", "aura of life", "death ward", "greater restoration", "mass cure wounds"],
     features: {
         "subclassfeature3": {
             name: "Disciple of Life",
@@ -1807,6 +1805,7 @@ legacySubClassRefactor("cleric", "life", {
                 ["P24", 73]
             ],
             minlevel: 3,
+			spellcastingExtra: ["aid", "bless", "cure wounds", "lesser restoration", "mass healing word", "revivify", "aura of life", "death ward", "greater restoration", "mass cure wounds"],
             description: desc([
                 "When I cast a spell with a spell slot that gives HP it gives addtl 2 + slot level HP.",
             ]),
@@ -1851,7 +1850,6 @@ legacySubClassRefactor("cleric", "light", {
         ["P24", 74]
     ],
     replaces: "light domain",
-    spellcastingExtra: ["burning hands", "faerie fire", "scorching ray", "see invisibility", "daylight", "fireball", "arcane eye", "wall of fire", "flame strike", "scrying"],
     features: {
         "subclassfeature3": {
             name: "Channel Divinity: Radiance of Dawn",
@@ -1859,6 +1857,7 @@ legacySubClassRefactor("cleric", "light", {
                 ["P24", 74]
             ],
             minlevel: 3,
+			spellcastingExtra: ["burning hands", "faerie fire", "scorching ray", "see invisibility", "daylight", "fireball", "arcane eye", "wall of fire", "flame strike", "scrying"],
             additional: ["", "", "2d10 + 3", "2d10 + 4", "2d10 + 5", "2d10 + 6", "2d10 + 7", "2d10 + 8", "2d10 + 9", "2d10 + 10", "2d10 + 11", "2d10 + 12", "2d10 + 13", "2d10 + 14", "2d10 + 15", "2d10 + 16", "2d10 + 17", "2d10 + 18", "2d10 + 19", "2d10 + 20"],
             description: desc([
                 "As a Magic action I dispel magical Darkness w/in 30 ft Each creature of my choice in that area must pass a Con save for half damage or take Radiant damage.",
@@ -1911,7 +1910,6 @@ legacySubClassRefactor("cleric", "trickery", {
         ["P24", 75]
     ],
     replaces: "trickery domain",
-    spellcastingExtra: ["charm person", "disguise self", "invisibility", "pass without trace", "hypnotic pattern", "nondetection", "confusion", "dimension door", "dominate person", "modify memory"],
     features: {
         "subclassfeature3": {
             name: "Blessing of the Trickster",
@@ -1919,6 +1917,7 @@ legacySubClassRefactor("cleric", "trickery", {
                 ["P24", 75]
             ],
             minlevel: 3,
+			spellcastingExtra: ["charm person", "disguise self", "invisibility", "pass without trace", "hypnotic pattern", "nondetection", "confusion", "dimension door", "dominate person", "modify memory"],
             action: "action",
             description: desc([
                 "As a Magic action I can give a willing creature w/in 30 ft or myself Adv on Dex (Stealth) checks until I finish a Long Rest or use this again.",
@@ -1969,7 +1968,6 @@ legacySubClassRefactor("cleric", "war", {
         ["P24", 76]
     ],
     replaces: "war domain",
-    spellcastingExtra: ["guiding bolt", "magic weapon", "shield of faith", "spiritual weapon", "crusader's mantle", "spirit guardians", "fire shield", "freedom of movement", "hold monster", "steel wind strike"],
     features: {
         "subclassfeature3": {
             name: "Channel Divinity: Guided Strikes",
@@ -1977,6 +1975,7 @@ legacySubClassRefactor("cleric", "war", {
                 ["P24", 77]
             ],
             minlevel: 3,
+			spellcastingExtra: ["guiding bolt", "magic weapon", "shield of faith", "spiritual weapon", "crusader's mantle", "spirit guardians", "fire shield", "freedom of movement", "hold monster", "steel wind strike"],
             action: "reaction",
             description: desc([
                 "I can give a +10 bonus when a creature within 300 ft (Reaction) or I (no action) miss an attack roll.",
@@ -2459,7 +2458,6 @@ legacySubClassRefactor("druid", "moon", {
         ["P24", 86]
     ],
     replaces: "circle of the moon",
-    spellcastingExtra: ["cure wounds", "moonbeam", "starry wisp", "conjure animals", "fount of moonlight", "mass cure wounds"],
     features: {
         "subclassfeature3": {
             name: "Circle Forms",
@@ -2467,6 +2465,7 @@ legacySubClassRefactor("druid", "moon", {
                 ["P24", 86]
             ],
             minlevel: 3,
+			spellcastingExtra: ["cure wounds", "moonbeam", "starry wisp", "conjure animals", "fount of moonlight", "mass cure wounds"],
             additional: ["", "", "CR 1, 9 Temp HP", "CR 1, 12 Temp HP", "CR 1, 15 Temp HP", "CR 2, 18 Temp HP", "CR 2, 21 Temp HP", "CR 2, 24 Temp HP", "CR 3, 27 Temp HP", "CR 3, 30 Temp HP", "CR 3, 33 Temp HP", "CR 4, 36 Temp HP", "CR 4, 39 Temp HP", "CR 4, 42 Temp HP", "CR 5, 45 Temp HP", "CR 5, 48 Temp HP", "CR 5, 51 Temp HP", "CR 6, 54 Temp HP", "CR 6, 57 Temp HP", "CR 6, 60 Temp HP"],
             description: desc([
                 "In Wild Shape: My maximum form's Challenge Rating is my Druid level divided by 3. My AC becomes greatest of 13 plus my Wisdom modifier or the Beast's AC. I also gain Temporary Hit Points equal to three times my Druid level.",
@@ -2547,7 +2546,6 @@ AddSubClass("druid", "sea", {
     source: [
         ["P24", 87]
     ],
-    spellcastingExtra: ["fog cloud", "gust of wind", "ray of frost", "shatter", "thunderwave", "lightning bolt", "water breathing", "control water", "ice storm", "conjure elemental", "hold monster"],
     features: {
         "subclassfeature3": {
             name: "Wrath of the Sea",
@@ -2555,6 +2553,7 @@ AddSubClass("druid", "sea", {
                 ["P24", 87]
             ],
             minlevel: 3,
+			spellcastingExtra: ["fog cloud", "gust of wind", "ray of frost", "shatter", "thunderwave", "lightning bolt", "water breathing", "control water", "ice storm", "conjure elemental", "hold monster"],
             action: "bonus action",
             description: desc([
                 "As a Bonus Action, I can use my Wild Shape to create a 5-foot ocean spray around me for 10 minutes.",
@@ -3760,17 +3759,6 @@ legacySubClassRefactor("fighter", "eldritch knight", {
     source: [
         ["P24", 96]
     ],
-    spellcastingFactor: 3,
-    spellcastingAbility: 4,
-    spellcastingList: {
-        "class": "wizard",
-        level: [0, 4],
-    },
-    spellcastingKnown: {
-        cantrips: [0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
-        spells: [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13],
-        prepared: false,
-    },
     features: {
         "subclassfeature3": {
             name: "Spellcasting",
@@ -3778,6 +3766,17 @@ legacySubClassRefactor("fighter", "eldritch knight", {
                 ["P24", 97]
             ],
             minlevel: 3,
+			spellcastingFactor: 3,
+			spellcastingAbility: 4,
+			spellcastingList: {
+				"class": "wizard",
+				level: [0, 4],
+			},
+			spellcastingKnown: {
+				cantrips: [0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+				spells: [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13],
+				prepared: false,
+			},
             additional: levels.map(function(n, idx) {
                 var cantr = [0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3][idx];
                 var splls = [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13][idx];
@@ -4447,7 +4446,6 @@ legacySubClassRefactor("monk", "shadow", {
         ["P24", 105]
     ],
     replaces: "way of shadow",
-    spellcastingAbility: 5,
     features: {
         "subclassfeature3": {
             name: "Shadow Arts",
@@ -4455,6 +4453,7 @@ legacySubClassRefactor("monk", "shadow", {
                 ["P24", 105]
             ],
             minlevel: 3,
+			spellcastingAbility: 5,
             vision: [
                 ["Darkvision", "+60"]
             ],
@@ -4540,7 +4539,6 @@ legacySubClassRefactor("monk", "elements", {
         ["P24", 106]
     ],
     replaces: "way of the four elements",
-    spellcastingAbility: 5,
     features: {
         "subclassfeature3": {
             name: "Elemental Attunement",
@@ -4548,6 +4546,7 @@ legacySubClassRefactor("monk", "elements", {
                 ["P24", 106]
             ],
             minlevel: 3,
+			spellcastingAbility: 5,
             description: desc([
                 "At the start of my turn, 1 FP for 10 mins of elemental energy. While active:",
                 "My Unarmed Strikes have 10ft extra reach, and deal my choice: Acid, Cold, Fire, Lightning,",
@@ -5332,7 +5331,6 @@ legacySubClassRefactor("paladin", "devotion", {
         ["P24", 113]
     ],
     replaces: "oath of devotion",
-    spellcastingExtra: ["divine smite", "protection from evil and good", "shield of faith", "aid", "zone of truth", "beacon of hope", "dispel magic", "freedom of movement", "guardian of faith", "commune", "flame strike"],
     features: {
         "subclassfeature3": {
             name: "Channel Divinity: Sacred Weapon",
@@ -5340,6 +5338,7 @@ legacySubClassRefactor("paladin", "devotion", {
                 ["P24", 113]
             ],
             minlevel: 3,
+			spellcastingExtra: ["divine smite", "protection from evil and good", "shield of faith", "aid", "zone of truth", "beacon of hope", "dispel magic", "freedom of movement", "guardian of faith", "commune", "flame strike"],
             description: desc([
                 "As part of the attack action, I can imbue 1 held melee weapon for 10 minutes or until I use this feature again. While active, I add my Cha modifier to attacks and choose Radiant or normal damage on each hit. It also emits 20-ft radius bright light and 20-ft more dim light."
             ]),
@@ -5406,7 +5405,6 @@ legacySubClassRefactor("paladin", "glory", {
         ["P24", 114]
     ],
     replaces: "oath of glory",
-    spellcastingExtra: ["divine smite", "guiding bolt", "heroism", "enhance ability", "magic weapon", "haste", "protection from energy", "compulsion", "freedom of movement", "legend lore", "yolande's regal presence"],
     features: {
         "subclassfeature3": {
             name: "Channel Divinity: Inspiring Smite",
@@ -5414,6 +5412,7 @@ legacySubClassRefactor("paladin", "glory", {
                 ["P24", 114]
             ],
             minlevel: 3,
+			spellcastingExtra: ["divine smite", "guiding bolt", "heroism", "enhance ability", "magic weapon", "haste", "protection from energy", "compulsion", "freedom of movement", "legend lore", "yolande's regal presence"],
             description: desc([
                 "Immediately after dealing damage with Divine Smite, I can grant temporary HP",
                 "I distribute the temporary HP how I choose across creatures within 30 ft, including me"
@@ -5496,7 +5495,6 @@ legacySubClassRefactor("paladin", "ancients", {
         ["P24", 115]
     ],
     replaces: "oath of the ancients",
-    spellcastingExtra: ["divine smite", "ensnaring strike", "speak with animals", "misty step", "moonbeam", "plant growth", "protection from energy", "ice storm", "stoneskin", "commune with nature", "tree stride"],
     features: {
         "subclassfeature3": {
             name: "Channel Divinity: Nature's Wrath",
@@ -5504,6 +5502,7 @@ legacySubClassRefactor("paladin", "ancients", {
                 ["P24", 115]
             ],
             minlevel: 3,
+			spellcastingExtra: ["divine smite", "ensnaring strike", "speak with animals", "misty step", "moonbeam", "plant growth", "protection from energy", "ice storm", "stoneskin", "commune with nature", "tree stride"],
             description: "\n   " + "As a magic action, a creature I can see within 15 ft must make a Str save" + "\n   " + "If it fails this save, it is restrained until it succeeds on a save at the end of its turn",
             action: "action",
         },
@@ -5553,7 +5552,6 @@ legacySubClassRefactor("paladin", "vengeance", {
         ["P24", 116]
     ],
     replaces: "oath of vengeance",
-    spellcastingExtra: ["divine smite", "bane", "hunter's mark", "hold person", "misty step", "haste", "protection from energy", "banishment", "dimension door", "hold monster", "scrying"],
     features: {
         "subclassfeature3": {
             name: "Channel Divinity: Vow of Enmity",
@@ -5561,6 +5559,7 @@ legacySubClassRefactor("paladin", "vengeance", {
                 ["P24", 117]
             ],
             minlevel: 3,
+			spellcastingExtra: ["divine smite", "bane", "hunter's mark", "hold person", "misty step", "haste", "protection from energy", "banishment", "dimension door", "hold monster", "scrying"],
             description: desc([
                 "When I Attack I can make a Vow of Enmity against a creature I choose that I can see within 30 ft",
                 "I have Adv on attack rolls against it for 1 min or until I use this feature again.",
@@ -6350,7 +6349,6 @@ legacySubClassRefactor("ranger", "fey wanderer", {
     source: [
         ["P24", 124]
     ],
-    spellcastingExtra: ["charm person", "misty step", "summon fey", "dimension door", "mislead"],
     features: {
         "subclassfeature3": {
             name: "Dreadful Strikes",
@@ -6358,6 +6356,7 @@ legacySubClassRefactor("ranger", "fey wanderer", {
                 ["P24", 124]
             ],
             minlevel: 3,
+			spellcastingExtra: ["charm person", "misty step", "summon fey", "dimension door", "mislead"],
             description: desc([
                 "My weapons deal extra psychic damage, but only once per turn per creature"
             ]),
@@ -6464,7 +6463,6 @@ legacySubClassRefactor("ranger", "gloom stalker", {
     source: [
         ["P24", 125]
     ],
-    spellcastingExtra: ["disguise self", "rope trick", "fear", "greater invisibility", "seeming"],
     features: {
         "subclassfeature3": {
             name: "Dread Ambusher",
@@ -6472,6 +6470,7 @@ legacySubClassRefactor("ranger", "gloom stalker", {
                 ["P24", 125]
             ],
             minlevel: 3,
+			spellcastingExtra: ["disguise self", "rope trick", "fear", "greater invisibility", "seeming"],
             addMod: [{
                 type: "skill",
                 field: "Init",
@@ -7049,17 +7048,6 @@ legacySubClassRefactor("rogue", "arcane trickster", {
     source: [
         ["P24", 132]
     ],
-    spellcastingFactor: 3,
-    spellcastingAbility: 4,
-    spellcastingList: {
-        "class": "wizard",
-        level: [0, 4],
-    },
-    spellcastingKnown: {
-        cantrips: [0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
-        spells: [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 11, 12, 13],
-        prepared: false,
-    },
     features: {
         "subclassfeature3": {
             name: "Spellcasting",
@@ -7067,6 +7055,17 @@ legacySubClassRefactor("rogue", "arcane trickster", {
                 ["P24", 132]
             ],
             minlevel: 3,
+			spellcastingFactor: 3,
+			spellcastingAbility: 4,
+			spellcastingList: {
+				"class": "wizard",
+				level: [0, 4],
+			},
+			spellcastingKnown: {
+				cantrips: [0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+				spells: [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 11, 12, 13],
+				prepared: false,
+			},
             additional: levels.map(function(n, idx) {
                 var cantr = [0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3][idx];
                 var splls = [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13][idx];
@@ -7608,8 +7607,6 @@ legacySubClassRefactor("sorcerer", "aberrant", {
         ["P24", 145]
     ],
     replaces: "aberrant mind",
-    spellcastingExtra: ["arms of hadar", "calm emotions", "detect thoughts", "dissonant whispers", "mind sliver", "hunger of hadar", "sending", "evard's black tentacles", "summon aberration", "rary's telepathic bond", "telekinesis"],
-    spellcastingExtraApplyNonconform: true,
     features: {
         "subclassfeature3": {
             name: "Telepathic Speech",
@@ -7617,6 +7614,8 @@ legacySubClassRefactor("sorcerer", "aberrant", {
                 ["P24", 145]
             ],
             minlevel: 3,
+			spellcastingExtra: ["arms of hadar", "calm emotions", "detect thoughts", "dissonant whispers", "mind sliver", "hunger of hadar", "sending", "evard's black tentacles", "summon aberration", "rary's telepathic bond", "telekinesis"],
+			spellcastingExtraApplyNonconform: true,
             action: "bonus action",
             description: desc([
                 "As a Bonus Action, one creature I can see within 30 ft of myself & I can speak telepathically with each other while within my Cha mod miles (min 1) for my Sorcerer level minutes as long as we share a language. It lasts until I use it with another creature.",
@@ -7717,8 +7716,6 @@ legacySubClassRefactor("sorcerer", "clockwork", {
         ["P24", 146]
     ],
     replaces: "clockwork soul",
-    spellcastingExtra: ["aid", "alarm", "lesser restoration", "protection from evil and good", "dispel magic", "protection from energy", "freedom of movement", "summon construct", "greater restoration", "wall of force"],
-    spellcastingExtraApplyNonconform: true,
     features: {
         "subclassfeature3": {
             name: "Restore Balance",
@@ -7726,6 +7723,8 @@ legacySubClassRefactor("sorcerer", "clockwork", {
                 ["P24", 146]
             ],
             minlevel: 3,
+			spellcastingExtra: ["aid", "alarm", "lesser restoration", "protection from evil and good", "dispel magic", "protection from energy", "freedom of movement", "summon construct", "greater restoration", "wall of force"],
+			spellcastingExtraApplyNonconform: true,
             usages: "Charisma modifier per ",
             usagescalc: "event.value = Math.max(1, What('Cha Mod'));",
             recovery: "long rest",
@@ -7785,8 +7784,6 @@ legacySubClassRefactor("sorcerer", "draconic", {
         ["P24", 148]
     ],
     replaces: "draconic bloodline",
-    spellcastingExtra: ["alter self", "chromatic orb", "command", "dragon's breath", "fear", "fly", "arcane eye", "charm monster", "legend lore", "summon dragon"],
-    spellcastingExtraApplyNonconform: true,
     features: {
         "subclassfeature3": {
             name: "Draconic Resilience",
@@ -7794,6 +7791,8 @@ legacySubClassRefactor("sorcerer", "draconic", {
                 ["P24", 148]
             ],
             minlevel: 3,
+			spellcastingExtra: ["alter self", "chromatic orb", "command", "dragon's breath", "fear", "fly", "arcane eye", "charm monster", "legend lore", "summon dragon"],
+			spellcastingExtraApplyNonconform: true,
             armorOptions: [{
                 regExpSearch: /justToAddToDropDownAndEffectWildShape/,
                 name: "Unarmored Defense (Cha)",
@@ -8869,8 +8868,6 @@ legacySubClassRefactor("warlock", "the archfey", {
     source: [
         ["P24", 159]
     ],
-    spellcastingExtra: ["calm emotions", "faerie fire", "misty step", "phantasmal force", "sleep", "blink", "plant growth", "dominate beast", "greater invisibility", "dominate person", "seeming"],
-    spellcastingExtraApplyNonconform: true,
     features: {
         "subclassfeature3": {
             name: "Steps of the Fey",
@@ -8878,6 +8875,8 @@ legacySubClassRefactor("warlock", "the archfey", {
                 ["P24", 159]
             ],
             minlevel: 3,
+			spellcastingExtra: ["calm emotions", "faerie fire", "misty step", "phantasmal force", "sleep", "blink", "plant growth", "dominate beast", "greater invisibility", "dominate person", "seeming"],
+			spellcastingExtraApplyNonconform: true,
             usages: "Charisma modifier per ",
             usagescalc: "event.value = Math.max(1, What('Cha Mod'));",
             recovery: "long rest",
@@ -8974,8 +8973,6 @@ legacySubClassRefactor("warlock", "the celestial", {
     source: [
         ["P24", 160]
     ],
-    spellcastingExtra: ["aid", "cure wounds", "guiding bolt", "lesser restoration", "light", "sacred flame", "daylight", "revivify", "guardian of faith", "wall of fire", "greater restoration", "summon celestial"],
-    spellcastingExtraApplyNonconform: true,
     features: {
         "subclassfeature3": {
             name: "Healing Light",
@@ -8983,6 +8980,8 @@ legacySubClassRefactor("warlock", "the celestial", {
                 ["P24", 160]
             ],
             minlevel: 3,
+			spellcastingExtra: ["aid", "cure wounds", "guiding bolt", "lesser restoration", "light", "sacred flame", "daylight", "revivify", "guardian of faith", "wall of fire", "greater restoration", "summon celestial"],
+			spellcastingExtraApplyNonconform: true,
             limfeaname: "Healing Light (d6s)",
             usages: [0, 0, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
             recovery: "long rest",
@@ -9031,8 +9030,6 @@ legacySubClassRefactor("warlock", "the celestial", {
 legacySubClassRefactor("warlock", "the fiend", {
     regExpSearch: /^(?=.*(warlock))(?=.*(fiend)).*$/i,
     subname: "Fiend Patron",
-    spellcastingExtra: ["burning hands", "command", "scorching ray", "suggestion", "fireball", "stinking cloud", "fire shield", "wall of fire", "geas", "insect plague"],
-    spellcastingExtraApplyNonconform: true,
     source: [
         ["P24", 161]
     ],
@@ -9043,6 +9040,8 @@ legacySubClassRefactor("warlock", "the fiend", {
                 ["P24", 161]
             ],
             minlevel: 3,
+			spellcastingExtra: ["burning hands", "command", "scorching ray", "suggestion", "fireball", "stinking cloud", "fire shield", "wall of fire", "geas", "insect plague"],
+			spellcastingExtraApplyNonconform: true,
             description: desc([
                 "When I reduce a hostile to 0 HP, I gain Cha mod + Warlock level temp HP (min 1). I also gain this temp HP if an enemy within 10 ft of me is reduced to 0 Hit Points.",
             ]),
@@ -9091,8 +9090,6 @@ legacySubClassRefactor("warlock", "the great old one", {
     source: [
         ["P24", 162]
     ],
-    spellcastingExtra: ["detect thoughts", "dissonant whispers", "phantasmal force", "tasha's hideous laughter", "clairvoyance", "hunger of hadar", "confusion", "summon aberration", "modify memory", "telekinesis"],
-    spellcastingExtraApplyNonconform: true,
     features: {
         "subclassfeature3": {
             name: "Awakened Mind",
@@ -9100,6 +9097,8 @@ legacySubClassRefactor("warlock", "the great old one", {
                 ["P24", 162]
             ],
             minlevel: 3,
+			spellcastingExtra: ["detect thoughts", "dissonant whispers", "phantasmal force", "tasha's hideous laughter", "clairvoyance", "hunger of hadar", "confusion", "summon aberration", "modify memory", "telekinesis"],
+			spellcastingExtraApplyNonconform: true,
             action: "bonus action",
             description: desc([
                 "As a Bonus Action, one creature I can see within 30 ft & I can speak telepathically with each other while within my Cha mod miles (min 1) for my Warlock level minutes as long as we share a language. It lasts until I use it with another creature.",
@@ -15531,7 +15530,7 @@ addEvals({
         function(fields, v) {
             if (v.WeaponName === "shillelagh-club" || v.WeaponName === "shillelagh-quarterstaff") {
                 fields.Damage_Die = function(n) {
-                    return n < 5 ? '1d8' : n < 11 ? '1d10' : n < 17 ? '1d12' : '2d6'
+                    return n < 5 ? '1d8' : n < 11 ? '1d10' : n < 17 ? '1d12' : '2d6';
                 }(classes.totallevel);
             }
         },
@@ -22461,9 +22460,7 @@ legacySpellRefactor("steel wind strike", {
 legacySpellRefactor("stinking cloud", {
     name: "Stinking Cloud",
     classes: ["bard", "sorcerer", "wizard"],
-    source: [
-        ["P24", 321]
-    ],
+    source: ["P24", 321],
     level: 3,
     school: "Conj",
     time: "1 a",
@@ -22478,9 +22475,7 @@ legacySpellRefactor("stinking cloud", {
 legacySpellRefactor("stone shape", {
     name: "Stone Shape",
     classes: ["artificer", "cleric", "druid", "wizard"],
-    source: [
-        ["P24", 321]
-    ],
+    source: ["P24", 321],
     level: 4,
     school: "Trans",
     time: "1 a",
@@ -22494,9 +22489,7 @@ legacySpellRefactor("stone shape", {
 legacySpellRefactor("stoneskin", {
     name: "Stoneskin",
     classes: ["artificer", "druid", "ranger", "sorcerer", "wizard"],
-    source: [
-        ["P24", 321]
-    ],
+    source: ["P24", 321],
     level: 4,
     school: "Trans",
     time: "1 a",
@@ -22510,9 +22503,7 @@ legacySpellRefactor("stoneskin", {
 legacySpellRefactor("storm of vengeance", {
     name: "Storm of Vengeance",
     classes: ["druid"],
-    source: [
-        ["P24", 321]
-    ],
+    source: ["P24", 321],
     level: 9,
     school: "Conj",
     time: "1 a",
@@ -22530,9 +22521,7 @@ legacySpellRefactor("suggestion", {
     name: "Suggestion",
     nameShort: "Suggestion*",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
-    source: [
-        ["P24", 321]
-    ],
+    source: ["P24", 321],
     level: 2,
     school: "Ench",
     time: "1 a",
@@ -22548,9 +22537,7 @@ legacySpellRefactor("summon aberration", {
     name: "Summon Aberration",
     nameShort: "Summon Aberration*",
     classes: ["warlock", "wizard"],
-    source: [
-        ["P24", 322]
-    ],
+    source: ["P24", 322],
     level: 4,
     school: "Conj",
     time: "1 a",
@@ -22565,9 +22552,7 @@ legacySpellRefactor("summon beast", {
     name: "Summon Beast",
     nameShort: "Summon Beast*",
     classes: ["druid", "ranger"],
-    source: [
-        ["P24", 322]
-    ],
+    source: ["P24", 322],
     level: 2,
     school: "Conj",
     time: "1 a",
@@ -22582,9 +22567,7 @@ legacySpellRefactor("summon celestial", {
     name: "Summon Celestial",
     nameShort: "Summon Celestial*",
     classes: ["cleric", "paladin"],
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     level: 5,
     school: "Conj",
     time: "1 a",
@@ -26101,7 +26084,7 @@ CreatureList["otherworldly steed (2)"] = {
     scores: [18, 12, 14, 6, 12, 8],
     senses: "",
     passivePerception: 11,
-    languages: "Telepathy 1 mile (works only with I)",
+    languages: "Telepathy 1 mile (works only with me)",
     challengeRating: 0,
     proficiencyBonus: 2,
     proficiencyBonusLinked: true,
@@ -26128,9 +26111,10 @@ CreatureList["otherworldly steed (2)"] = {
         name: "Otherworldly Slam",
         ability: 1,
         damage: [1, 8, "Rad(C)/Psy(Fy)/Nec(Fd)"],
-        modifiers: ["oCha-Str", 2],
+        modifiers: ["", 2],
         abilitytodamage : false,
         range: "Melee (5 ft)",
+		useSpellMod : ["paladin"],
     }],
 };
 CreatureList["otherworldly steed (3)"] = {
@@ -26151,7 +26135,7 @@ CreatureList["otherworldly steed (3)"] = {
     scores: [18, 12, 14, 6, 12, 8],
     senses: "",
     passivePerception: 11,
-    languages: "Telepathy 1 mile (works only with I)",
+    languages: "Telepathy 1 mile (works only with me)",
     challengeRating: 0,
     proficiencyBonus: 2,
     proficiencyBonusLinked: true,
@@ -26178,9 +26162,10 @@ CreatureList["otherworldly steed (3)"] = {
         name: "Otherworldly Slam",
         ability: 1,
         damage: [1, 8, "Rad(C)/Psy(Fy)/Nec(Fd)"],
-        modifiers: ["oCha-Str", 3],
+        modifiers: ["", 3],
         abilitytodamage : false,
         range: "Melee (5 ft)",
+		useSpellMod : ["paladin"],
     }],
 };
 CreatureList["otherworldly steed (4)"] = {
@@ -26201,7 +26186,7 @@ CreatureList["otherworldly steed (4)"] = {
     scores: [18, 12, 14, 6, 12, 8],
     senses: "",
     passivePerception: 11,
-    languages: "Telepathy 1 mile (works only with I)",
+    languages: "Telepathy 1 mile (works only with me)",
     challengeRating: 0,
     proficiencyBonus: 2,
     proficiencyBonusLinked: true,
@@ -26228,9 +26213,10 @@ CreatureList["otherworldly steed (4)"] = {
         name: "Otherworldly Slam",
         ability: 1,
         damage: [1, 8, "Rad(C)/Psy(Fy)/Nec(Fd)"],
-        modifiers: ["oCha-Str", 4],
+        modifiers: ["", 4],
         abilitytodamage : false,
         range: "Melee (5 ft)",
+		useSpellMod : ["paladin"],
     }],
 };
 CreatureList["otherworldly steed (5)"] = {
@@ -26251,7 +26237,7 @@ CreatureList["otherworldly steed (5)"] = {
     scores: [18, 12, 14, 6, 12, 8],
     senses: "",
     passivePerception: 11,
-    languages: "Telepathy 1 mile (works only with I)",
+    languages: "Telepathy 1 mile (works only with me)",
     challengeRating: 0,
     proficiencyBonus: 2,
     proficiencyBonusLinked: true,
@@ -26278,9 +26264,10 @@ CreatureList["otherworldly steed (5)"] = {
         name: "Otherworldly Slam",
         ability: 1,
         damage: [1, 8, "Rad(C)/Psy(Fy)/Nec(Fd)"],
-        modifiers: ["oCha-Str", 5],
+        modifiers: ["", 5],
         abilitytodamage : false,
         range: "Melee (5 ft)",
+		useSpellMod : ["paladin"],
     }],
 };
 //Giant Insect Stat Blocks
@@ -26323,7 +26310,7 @@ CreatureList["giant insect (4)"] = {
         name: "Poison Jab",
         ability: 1,
         damage: [1, 6, "Piercing"],
-        modifiers: ["", 4],
+        modifiers: ["", "Str+4"],
         range: "Melee (10 ft)",
         description: "+1d4 Poison damage",
         useSpellMod: ["druid"]
@@ -26331,7 +26318,7 @@ CreatureList["giant insect (4)"] = {
         name: "Web Bolt (Spider Only)",
         ability: 1,
         damage: [1, 10, "Bludgeoning"],
-        modifiers: ["", 4],
+        modifiers: ["", "Str+4"],
         range: "Ranged (60 ft)",
         description: "The target's Speed is reduced to 0 until the start of the insect's next turn",
         useSpellMod: ["druid"]
@@ -26376,7 +26363,7 @@ CreatureList["giant insect (5)"] = {
         name: "Poison Jab",
         ability: 1,
         damage: [1, 6, "Piercing"],
-        modifiers: ["", 5],
+        modifiers: ["", "Str+5"],
         range: "Melee (10 ft)",
         description: "+1d4 Poison damage",
         useSpellMod: ["druid"]
@@ -26384,7 +26371,7 @@ CreatureList["giant insect (5)"] = {
         name: "Web Bolt (Spider Only)",
         ability: 1,
         damage: [1, 10, "Bludgeoning"],
-        modifiers: ["", 5],
+        modifiers: ["", "Str+5"],
         range: "Ranged (60 ft)",
         description: "The target's Speed is reduced to 0 until the start of the insect's next turn",
         useSpellMod: ["druid"]
@@ -26429,7 +26416,7 @@ CreatureList["giant insect (6)"] = {
         name: "Poison Jab",
         ability: 1,
         damage: [1, 6, "Piercing"],
-        modifiers: ["", 6],
+        modifiers: ["", "Str+6"],
         range: "Melee (10 ft)",
         description: "+1d4 Poison damage",
         useSpellMod: ["druid"]
@@ -26437,7 +26424,7 @@ CreatureList["giant insect (6)"] = {
         name: "Web Bolt (Spider Only)",
         ability: 1,
         damage: [1, 10, "Bludgeoning"],
-        modifiers: ["", 6],
+        modifiers: ["", "Str+6"],
         range: "Ranged (60 ft)",
         description: "The target's Speed is reduced to 0 until the start of the insect's next turn",
         useSpellMod: ["druid"]
@@ -26482,7 +26469,7 @@ CreatureList["giant insect (7)"] = {
         name: "Poison Jab",
         ability: 1,
         damage: [1, 6, "Piercing"],
-        modifiers: ["", 7],
+        modifiers: ["", "Str+7"],
         range: "Melee (10 ft)",
         description: "+1d4 Poison damage",
         useSpellMod: ["druid"]
@@ -26490,7 +26477,7 @@ CreatureList["giant insect (7)"] = {
         name: "Web Bolt (Spider Only)",
         ability: 1,
         damage: [1, 10, "Bludgeoning"],
-        modifiers: ["", 7],
+        modifiers: ["", "Str+7"],
         range: "Ranged (60 ft)",
         description: "The target's Speed is reduced to 0 until the start of the insect's next turn",
         useSpellMod: ["druid"]
@@ -26535,7 +26522,7 @@ CreatureList["giant insect (8)"] = {
         name: "Poison Jab",
         ability: 1,
         damage: [1, 6, "Piercing"],
-        modifiers: ["", 8],
+        modifiers: ["", "Str+8"],
         range: "Melee (10 ft)",
         description: "+1d4 Poison damage",
         useSpellMod: ["druid"]
@@ -26543,7 +26530,7 @@ CreatureList["giant insect (8)"] = {
         name: "Web Bolt (Spider Only)",
         ability: 1,
         damage: [1, 10, "Bludgeoning"],
-        modifiers: ["", 8],
+        modifiers: ["", "Str+8"],
         range: "Ranged (60 ft)",
         description: "The target's Speed is reduced to 0 until the start of the insect's next turn",
         useSpellMod: ["druid"]
@@ -26588,7 +26575,7 @@ CreatureList["giant insect (9)"] = {
         name: "Poison Jab",
         ability: 1,
         damage: [1, 6, "Piercing"],
-        modifiers: ["", 9],
+        modifiers: ["", "Str+9"],
         range: "Melee (10 ft)",
         description: "+1d4 Poison damage",
         useSpellMod: ["druid"]
@@ -26596,7 +26583,7 @@ CreatureList["giant insect (9)"] = {
         name: "Web Bolt (Spider Only)",
         ability: 1,
         damage: [1, 10, "Bludgeoning"],
-        modifiers: ["", 9],
+        modifiers: ["", "Str+9"],
         range: "Ranged (60 ft)",
         description: "The target's Speed is reduced to 0 until the start of the insect's next turn",
         useSpellMod: ["druid"]
@@ -26606,9 +26593,7 @@ CreatureList["giant insect (9)"] = {
 CreatureList["aberrant spirit (4)"] = {
     name: "Aberrant Spirit (lvl 4)",
     regExpSearch: /^(?=.*aberrant)(?=.*spirit)(?=.*4).*$/i,
-    source: [
-        ["P24", 322]
-    ],
+    source: ["P24", 322],
     size: 3,
     type: "Aberration",
     alignment: "Neutral",
@@ -26642,7 +26627,7 @@ CreatureList["aberrant spirit (4)"] = {
         ability: 1,
         damage: [1, 10, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 4],
+        modifiers: ["", "Str+4"],
         description: "The target can't regain Hit Points until the start of the spirit's next turn.",
         useSpellMod: ["warlock", "wizard"]
     }, {
@@ -26650,7 +26635,7 @@ CreatureList["aberrant spirit (4)"] = {
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "150 ft",
-        modifiers: ["", 4],
+        modifiers: ["", "Int+4"],
         description: "",
         useSpellMod: ["warlock", "wizard"]
     }, {
@@ -26658,7 +26643,7 @@ CreatureList["aberrant spirit (4)"] = {
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "Melee (5 ft)",
-        modifiers: ["", 4],
+        modifiers: ["", "Int+4"],
         description: "",
         useSpellMod: ["warlock", "wizard"]
     }],
@@ -26666,9 +26651,7 @@ CreatureList["aberrant spirit (4)"] = {
 CreatureList["aberrant spirit (5)"] = {
     name: "Aberrant Spirit (lvl 5)",
     regExpSearch: /^(?=.*aberrant)(?=.*spirit)(?=.*5).*$/i,
-    source: [
-        ["P24", 322]
-    ],
+    source: ["P24", 322],
     size: 3,
     type: "Aberration",
     alignment: "Neutral",
@@ -26702,7 +26685,7 @@ CreatureList["aberrant spirit (5)"] = {
         ability: 1,
         damage: [1, 10, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 5],
+        modifiers: ["", "Str+5"],
         description: "The target can't regain Hit Points until the start of the spirit's next turn.",
         useSpellMod: ["warlock", "wizard"]
     }, {
@@ -26710,7 +26693,7 @@ CreatureList["aberrant spirit (5)"] = {
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "150 ft",
-        modifiers: ["", 5],
+        modifiers: ["", "Int+5"],
         description: "",
         useSpellMod: ["warlock", "wizard"]
     }, {
@@ -26718,7 +26701,7 @@ CreatureList["aberrant spirit (5)"] = {
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "Melee (5 ft)",
-        modifiers: ["", 5],
+        modifiers: ["", "Int+5"],
         description: "",
         useSpellMod: ["warlock", "wizard"]
     }],
@@ -26726,9 +26709,7 @@ CreatureList["aberrant spirit (5)"] = {
 CreatureList["aberrant spirit (6)"] = {
     name: "Aberrant Spirit (lvl 6)",
     regExpSearch: /^(?=.*aberrant)(?=.*spirit)(?=.*6).*$/i,
-    source: [
-        ["P24", 322]
-    ],
+    source: ["P24", 322],
     size: 3,
     type: "Aberration",
     alignment: "Neutral",
@@ -26762,7 +26743,7 @@ CreatureList["aberrant spirit (6)"] = {
         ability: 1,
         damage: [1, 10, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 6],
+        modifiers: ["", "Str+6"],
         description: "The target can't regain Hit Points until the start of the spirit's next turn.",
         useSpellMod: ["warlock", "wizard"]
     }, {
@@ -26770,7 +26751,7 @@ CreatureList["aberrant spirit (6)"] = {
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "150 ft",
-        modifiers: ["", 6],
+        modifiers: ["", "Int+6"],
         description: "",
         useSpellMod: ["warlock", "wizard"]
     }, {
@@ -26778,7 +26759,7 @@ CreatureList["aberrant spirit (6)"] = {
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "Melee (5 ft)",
-        modifiers: ["", 6],
+        modifiers: ["", "Int+6"],
         description: "",
         useSpellMod: ["warlock", "wizard"]
     }],
@@ -26786,9 +26767,7 @@ CreatureList["aberrant spirit (6)"] = {
 CreatureList["aberrant spirit (7)"] = {
     name: "Aberrant Spirit (lvl 7)",
     regExpSearch: /^(?=.*aberrant)(?=.*spirit)(?=.*7).*$/i,
-    source: [
-        ["P24", 322]
-    ],
+    source: ["P24", 322],
     size: 3,
     type: "Aberration",
     alignment: "Neutral",
@@ -26822,7 +26801,7 @@ CreatureList["aberrant spirit (7)"] = {
         ability: 1,
         damage: [1, 10, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 7],
+        modifiers: ["", "Str+7"],
         description: "The target can't regain Hit Points until the start of the spirit's next turn.",
         useSpellMod: ["warlock", "wizard"]
     }, {
@@ -26830,7 +26809,7 @@ CreatureList["aberrant spirit (7)"] = {
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "150 ft",
-        modifiers: ["", 7],
+        modifiers: ["", "Int+7"],
         description: "",
         useSpellMod: ["warlock", "wizard"]
     }, {
@@ -26838,7 +26817,7 @@ CreatureList["aberrant spirit (7)"] = {
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "Melee (5 ft)",
-        modifiers: ["", 7],
+        modifiers: ["", "Int+7"],
         description: "",
         useSpellMod: ["warlock", "wizard"]
     }],
@@ -26846,9 +26825,7 @@ CreatureList["aberrant spirit (7)"] = {
 CreatureList["aberrant spirit (8)"] = {
     name: "Aberrant Spirit (lvl 8)",
     regExpSearch: /^(?=.*aberrant)(?=.*spirit)(?=.*8).*$/i,
-    source: [
-        ["P24", 322]
-    ],
+    source: ["P24", 322],
     size: 3,
     type: "Aberration",
     alignment: "Neutral",
@@ -26882,7 +26859,7 @@ CreatureList["aberrant spirit (8)"] = {
         ability: 1,
         damage: [1, 10, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 8],
+        modifiers: ["", "Str+8"],
         description: "The target can't regain Hit Points until the start of the spirit's next turn.",
         useSpellMod: ["warlock", "wizard"]
     }, {
@@ -26890,7 +26867,7 @@ CreatureList["aberrant spirit (8)"] = {
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "150 ft",
-        modifiers: ["", 8],
+        modifiers: ["", "Int+8"],
         description: "",
         useSpellMod: ["warlock", "wizard"]
     }, {
@@ -26898,7 +26875,7 @@ CreatureList["aberrant spirit (8)"] = {
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "Melee (5 ft)",
-        modifiers: ["", 8],
+        modifiers: ["", "Int+8"],
         description: "",
         useSpellMod: ["warlock", "wizard"]
     }],
@@ -26906,9 +26883,7 @@ CreatureList["aberrant spirit (8)"] = {
 CreatureList["aberrant spirit (9)"] = {
     name: "Aberrant Spirit (lvl 9)",
     regExpSearch: /^(?=.*aberrant)(?=.*spirit)(?=.*9).*$/i,
-    source: [
-        ["P24", 322]
-    ],
+    source: ["P24", 322],
     size: 3,
     type: "Aberration",
     alignment: "Neutral",
@@ -26942,7 +26917,7 @@ CreatureList["aberrant spirit (9)"] = {
         ability: 1,
         damage: [1, 10, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 9],
+        modifiers: ["", "Str+9"],
         description: "The target can't regain Hit Points until the start of the spirit's next turn.",
         useSpellMod: ["warlock", "wizard"]
     }, {
@@ -26950,7 +26925,7 @@ CreatureList["aberrant spirit (9)"] = {
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "150 ft",
-        modifiers: ["", 9],
+        modifiers: ["", "Int+9"],
         description: "",
         useSpellMod: ["warlock", "wizard"]
     }, {
@@ -26958,7 +26933,7 @@ CreatureList["aberrant spirit (9)"] = {
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "Melee (5 ft)",
-        modifiers: ["", 9],
+        modifiers: ["", "Int+9"],
         description: "",
         useSpellMod: ["warlock", "wizard"]
     }],
@@ -26967,9 +26942,7 @@ CreatureList["aberrant spirit (9)"] = {
 CreatureList["bestial spirit (lw)(2)"] = {
     name: "Bestial Spirit (Land/Water)(lvl 2)",
     regExpSearch: /^(?=.*bestial)(?=.*spirit)(?=.*landwater)(?=.*2).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 4,
     type: "Beast",
     alignment: "Neutral",
@@ -27003,17 +26976,15 @@ CreatureList["bestial spirit (lw)(2)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 2],
-        description: "The target can't regain Hit Points until the start of the spirit's next turn.",
+        modifiers: ["", "Str+2"],
+        description: "",
         useSpellMod: ["druid", "ranger"]
     }],
 };
 CreatureList["bestial spirit (lw)(3)"] = {
     name: "Bestial Spirit (Land/Water)(lvl 3)",
     regExpSearch: /^(?=.*bestial)(?=.*spirit)(?=.*landwater)(?=.*3).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 4,
     type: "Beast",
     alignment: "Neutral",
@@ -27047,17 +27018,15 @@ CreatureList["bestial spirit (lw)(3)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 3],
-        description: "The target can't regain Hit Points until the start of the spirit's next turn.",
+        modifiers: ["", "Str+3"],
+        description: "",
         useSpellMod: ["druid", "ranger"]
     }],
 };
 CreatureList["bestial spirit (lw)(4)"] = {
     name: "Bestial Spirit (Land/Water)(lvl 4)",
     regExpSearch: /^(?=.*bestial)(?=.*spirit)(?=.*landwater)(?=.*4).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 4,
     type: "Beast",
     alignment: "Neutral",
@@ -27091,17 +27060,15 @@ CreatureList["bestial spirit (lw)(4)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 4],
-        description: "The target can't regain Hit Points until the start of the spirit's next turn.",
+        modifiers: ["", "Str+4"],
+        description: "",
         useSpellMod: ["druid", "ranger"]
     }],
 };
 CreatureList["bestial spirit (lw)(5)"] = {
     name: "Bestial Spirit (Land/Water)(lvl 5)",
     regExpSearch: /^(?=.*bestial)(?=.*spirit)(?=.*landwater)(?=.*5).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 4,
     type: "Beast",
     alignment: "Neutral",
@@ -27135,17 +27102,15 @@ CreatureList["bestial spirit (lw)(5)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 5],
-        description: "The target can't regain Hit Points until the start of the spirit's next turn.",
+        modifiers: ["", "Str+5"],
+        description: "",
         useSpellMod: ["druid", "ranger"]
     }],
 };
 CreatureList["bestial spirit (lw)(6)"] = {
     name: "Bestial Spirit (Land/Water)(lvl 6)",
     regExpSearch: /^(?=.*bestial)(?=.*spirit)(?=.*landwater)(?=.*6).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 4,
     type: "Beast",
     alignment: "Neutral",
@@ -27179,17 +27144,15 @@ CreatureList["bestial spirit (lw)(6)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 6],
-        description: "The target can't regain Hit Points until the start of the spirit's next turn.",
+        modifiers: ["", "Str+6"],
+        description: "",
         useSpellMod: ["druid", "ranger"]
     }],
 };
 CreatureList["bestial spirit (lw)(7)"] = {
     name: "Bestial Spirit (Land/Water)(lvl 7)",
     regExpSearch: /^(?=.*bestial)(?=.*spirit)(?=.*landwater)(?=.*7).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 4,
     type: "Beast",
     alignment: "Neutral",
@@ -27223,17 +27186,15 @@ CreatureList["bestial spirit (lw)(7)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 7],
-        description: "The target can't regain Hit Points until the start of the spirit's next turn.",
+        modifiers: ["", "Str+7"],
+        description: "",
         useSpellMod: ["druid", "ranger"]
     }],
 };
 CreatureList["bestial spirit (lw)(8)"] = {
     name: "Bestial Spirit (Land/Water)(lvl 8)",
     regExpSearch: /^(?=.*bestial)(?=.*spirit)(?=.*landwater)(?=.*8).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 4,
     type: "Beast",
     alignment: "Neutral",
@@ -27267,17 +27228,15 @@ CreatureList["bestial spirit (lw)(8)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 8],
-        description: "The target can't regain Hit Points until the start of the spirit's next turn.",
+        modifiers: ["", "Str+8"],
+        description: "",
         useSpellMod: ["druid", "ranger"]
     }],
 };
 CreatureList["bestial spirit (lw)(9)"] = {
     name: "Bestial Spirit (Land/Water)(lvl 9)",
     regExpSearch: /^(?=.*bestial)(?=.*spirit)(?=.*landwater)(?=.*9).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 4,
     type: "Beast",
     alignment: "Neutral",
@@ -27311,17 +27270,15 @@ CreatureList["bestial spirit (lw)(9)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 9],
-        description: "The target can't regain Hit Points until the start of the spirit's next turn.",
+        modifiers: ["", "Str+9"],
+        description: "",
         useSpellMod: ["druid", "ranger"]
     }],
 };
 CreatureList["bestial spirit (a)(2)"] = {
     name: "Bestial Spirit (Air)(lvl 2)",
     regExpSearch: /^(?=.*bestial)(?=.*spirit)(?=.*air)(?=.*2).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 4,
     type: "Beast",
     alignment: "Neutral",
@@ -27352,16 +27309,14 @@ CreatureList["bestial spirit (a)(2)"] = {
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
         modifiers: ["", "Str+2"],
-        description: "The target can't regain Hit Points until the start of the spirit's next turn.",
+        description: "",
         useSpellMod: ["druid", "ranger"],
     }],
 };
 CreatureList["bestial spirit (a)(3)"] = {
     name: "Bestial Spirit (Air)(lvl 3)",
     regExpSearch: /^(?=.*bestial)(?=.*spirit)(?=.*air)(?=.*3).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 4,
     type: "Beast",
     alignment: "Neutral",
@@ -27392,16 +27347,14 @@ CreatureList["bestial spirit (a)(3)"] = {
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
         modifiers: ["", "Str+3"],
-        description: "The target can't regain Hit Points until the start of the spirit's next turn.",
+        description: "",
         useSpellMod: ["druid", "ranger"]
     }],
 };
 CreatureList["bestial spirit (a)(4)"] = {
     name: "Bestial Spirit (Air)(lvl 4)",
     regExpSearch: /^(?=.*bestial)(?=.*air)(?=.*spirit)(?=.*4).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 4,
     type: "Beast",
     alignment: "Neutral",
@@ -27432,16 +27385,14 @@ CreatureList["bestial spirit (a)(4)"] = {
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
         modifiers: ["", "Str+4"],
-        description: "The target can't regain Hit Points until the start of the spirit's next turn.",
+        description: "",
         useSpellMod: ["druid", "ranger"]
     }],
 };
 CreatureList["bestial spirit (a)(5)"] = {
     name: "Bestial Spirit (Air)(lvl 5)",
     regExpSearch: /^(?=.*bestial)(?=.*spirit)(?=.*air)(?=.*5).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 4,
     type: "Beast",
     alignment: "Neutral",
@@ -27472,16 +27423,14 @@ CreatureList["bestial spirit (a)(5)"] = {
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
         modifiers: ["", "Str+5"],
-        description: "The target can't regain Hit Points until the start of the spirit's next turn.",
+        description: "",
         useSpellMod: ["druid", "ranger"]
     }],
 };
 CreatureList["bestial spirit (a)(6)"] = {
     name: "Bestial Spirit (Air)(lvl 6)",
     regExpSearch: /^(?=.*bestial)(?=.*spirit)(?=.*air)(?=.*6).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 4,
     type: "Beast",
     alignment: "Neutral",
@@ -27512,16 +27461,14 @@ CreatureList["bestial spirit (a)(6)"] = {
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
         modifiers: ["", "Str+6"],
-        description: "The target can't regain Hit Points until the start of the spirit's next turn.",
+        description: "",
         useSpellMod: ["druid", "ranger"]
     }],
 };
 CreatureList["bestial spirit (a)(7)"] = {
     name: "Bestial Spirit (Air)(lvl 7)",
     regExpSearch: /^(?=.*bestial)(?=.*spirit)(?=.*air)(?=.*7).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 4,
     type: "Beast",
     alignment: "Neutral",
@@ -27552,16 +27499,14 @@ CreatureList["bestial spirit (a)(7)"] = {
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
         modifiers: ["", "Str+7"],
-        description: "The target can't regain Hit Points until the start of the spirit's next turn.",
+        description: "",
         useSpellMod: ["druid", "ranger"]
     }],
 };
 CreatureList["bestial spirit (a)(8)"] = {
     name: "Bestial Spirit (Air)(lvl 8)",
     regExpSearch: /^(?=.*bestial)(?=.*spirit)(?=.*air)(?=.*8).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 4,
     type: "Beast",
     alignment: "Neutral",
@@ -27592,16 +27537,14 @@ CreatureList["bestial spirit (a)(8)"] = {
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
         modifiers: ["", "Str+8"],
-        description: "The target can't regain Hit Points until the start of the spirit's next turn.",
+        description: "",
         useSpellMod: ["druid", "ranger"]
     }],
 };
 CreatureList["bestial spirit (a)(9)"] = {
     name: "Bestial Spirit (Air)(lvl 9)",
     regExpSearch: /^(?=.*bestial)(?=.*spirit)(?=.*air)(?=.*9).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 4,
     type: "Beast",
     alignment: "Neutral",
@@ -27632,7 +27575,7 @@ CreatureList["bestial spirit (a)(9)"] = {
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
         modifiers: ["", "Str+9"],
-        description: "The target can't regain Hit Points until the start of the spirit's next turn.",
+        description: "",
         useSpellMod: ["druid", "ranger"]
     }],
 };
@@ -27640,9 +27583,7 @@ CreatureList["bestial spirit (a)(9)"] = {
 CreatureList["celestial spirit (a)(5)"] = {
     name: "Celestial Spirit (Avenger)(lvl 5)",
     regExpSearch: /^(?=.*celestial)(?=.*spirit)(?=.*avenger)(?=.*5).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 2,
     type: "Celestial",
     alignment: "Neutral",
@@ -27673,16 +27614,14 @@ CreatureList["celestial spirit (a)(5)"] = {
         ability: 2,
         damage: [2, 6, "Radiant"],
         range: "Ranged (600 ft)",
-        modifiers: ["", 5],
+        modifiers: ["", "Dex+5"],
         useSpellMod: ["cleric", "paladin"]
     }],
 };
 CreatureList["celestial spirit (a)(6)"] = {
     name: "Celestial Spirit (Avenger)(lvl 6)",
     regExpSearch: /^(?=.*celestial)(?=.*spirit)(?=.*avenger)(?=.*6).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 2,
     type: "Celestial",
     alignment: "Neutral",
@@ -27713,16 +27652,14 @@ CreatureList["celestial spirit (a)(6)"] = {
         ability: 2,
         damage: [2, 6, "Radiant"],
         range: "Ranged (600 ft)",
-        modifiers: ["", 6],
+        modifiers: ["", "Dex+6"],
         useSpellMod: ["cleric", "paladin"]
     }],
 };
 CreatureList["celestial spirit (a)(7)"] = {
     name: "Celestial Spirit (Avenger)(lvl 7)",
     regExpSearch: /^(?=.*celestial)(?=.*spirit)(?=.*avenger)(?=.*7).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 2,
     type: "Celestial",
     alignment: "Neutral",
@@ -27753,16 +27690,14 @@ CreatureList["celestial spirit (a)(7)"] = {
         ability: 2,
         damage: [2, 6, "Radiant"],
         range: "Ranged (600 ft)",
-        modifiers: ["", 7],
+        modifiers: ["", "Dex+7"],
         useSpellMod: ["cleric", "paladin"]
     }],
 };
 CreatureList["celestial spirit (a)(8)"] = {
     name: "Celestial Spirit (Avenger)(lvl 8)",
     regExpSearch: /^(?=.*celestial)(?=.*spirit)(?=.*avenger)(?=.*8).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 2,
     type: "Celestial",
     alignment: "Neutral",
@@ -27793,16 +27728,14 @@ CreatureList["celestial spirit (a)(8)"] = {
         ability: 2,
         damage: [2, 6, "Radiant"],
         range: "Ranged (600 ft)",
-        modifiers: ["", 8],
+        modifiers: ["", "Dex+8"],
         useSpellMod: ["cleric", "paladin"]
     }],
 };
 CreatureList["celestial spirit (a)(9)"] = {
     name: "Celestial Spirit (Avenger)(lvl 9)",
     regExpSearch: /^(?=.*celestial)(?=.*spirit)(?=.*avenger)(?=.*9).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 2,
     type: "Celestial",
     alignment: "Neutral",
@@ -27833,16 +27766,14 @@ CreatureList["celestial spirit (a)(9)"] = {
         ability: 2,
         damage: [2, 6, "Radiant"],
         range: "Ranged (600 ft)",
-        modifiers: ["", 9],
+        modifiers: ["", "Dex+9"],
         useSpellMod: ["cleric", "paladin"]
     }],
 };
 CreatureList["celestial spirit (d)(5)"] = {
     name: "Celestial Spirit (Defender)(lvl 5)",
     regExpSearch: /^(?=.*celestial)(?=.*spirit)(?=.*defender)(?=.*5).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 2,
     type: "Celestial",
     alignment: "Neutral",
@@ -27873,7 +27804,7 @@ CreatureList["celestial spirit (d)(5)"] = {
         ability: 1,
         damage: [1, 10, "Radiant"],
         range: "Melee (5 ft)",
-        modifiers: ["", 5],
+        modifiers: ["", "Str+5"],
         description: "The spirit choose either itself or another creature it can see within 10 ft and grants 1d10 Temp HP.",
         useSpellMod: ["cleric", "paladin"]
     }],
@@ -27881,9 +27812,7 @@ CreatureList["celestial spirit (d)(5)"] = {
 CreatureList["celestial spirit (d)(6)"] = {
     name: "Celestial Spirit (Defender)(lvl 6)",
     regExpSearch: /^(?=.*celestial)(?=.*spirit)(?=.*defender)(?=.*6).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 2,
     type: "Celestial",
     alignment: "Neutral",
@@ -27914,7 +27843,7 @@ CreatureList["celestial spirit (d)(6)"] = {
         ability: 1,
         damage: [1, 10, "Radiant"],
         range: "Melee (5 ft)",
-        modifiers: ["", 5],
+        modifiers: ["", "Str+6"],
         description: "The spirit choose either itself or another creature it can see within 10 ft and grants 1d10 Temp HP.",
         useSpellMod: ["cleric", "paladin"]
     }],
@@ -27922,9 +27851,7 @@ CreatureList["celestial spirit (d)(6)"] = {
 CreatureList["celestial spirit (d)(7)"] = {
     name: "Celestial Spirit (Defender)(lvl 7)",
     regExpSearch: /^(?=.*celestial)(?=.*spirit)(?=.*defender)(?=.*7).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 2,
     type: "Celestial",
     alignment: "Neutral",
@@ -27950,7 +27877,7 @@ CreatureList["celestial spirit (d)(7)"] = {
         ability: 1,
         damage: [1, 10, "Radiant"],
         range: "Melee (5 ft)",
-        modifiers: ["", 5],
+        modifiers: ["", "Str+7"],
         description: "The spirit choose either itself or another creature it can see within 10 ft and grants 1d10 Temp HP.",
         useSpellMod: ["cleric", "paladin"]
     }],
@@ -27958,9 +27885,7 @@ CreatureList["celestial spirit (d)(7)"] = {
 CreatureList["celestial spirit (d)(8)"] = {
     name: "Celestial Spirit (Defender)(lvl 8)",
     regExpSearch: /^(?=.*celestial)(?=.*spirit)(?=.*defender)(?=.*8).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 2,
     type: "Celestial",
     alignment: "Neutral",
@@ -27991,7 +27916,7 @@ CreatureList["celestial spirit (d)(8)"] = {
         ability: 1,
         damage: [1, 10, "Radiant"],
         range: "Melee (5 ft)",
-        modifiers: ["", 5],
+        modifiers: ["", "Str+8"],
         description: "The spirit choose either itself or another creature it can see within 10 ft and grants 1d10 Temp HP.",
         useSpellMod: ["cleric", "paladin"]
     }],
@@ -27999,9 +27924,7 @@ CreatureList["celestial spirit (d)(8)"] = {
 CreatureList["celestial spirit (d)(9)"] = {
     name: "Celestial Spirit (Defender)(lvl 9)",
     regExpSearch: /^(?=.*celestial)(?=.*spirit)(?=.*defender)(?=.*9).*$/i,
-    source: [
-        ["P24", 323]
-    ],
+    source: ["P24", 323],
     size: 2,
     type: "Celestial",
     alignment: "Neutral",
@@ -28032,7 +27955,7 @@ CreatureList["celestial spirit (d)(9)"] = {
         ability: 1,
         damage: [1, 10, "Radiant"],
         range: "Melee (5 ft)",
-        modifiers: ["", 5],
+        modifiers: ["", "Str+9"],
         description: "The spirit choose either itself or another creature it can see within 10 ft and grants 1d10 Temp HP.",
         useSpellMod: ["cleric", "paladin"]
     }],
@@ -28082,8 +28005,8 @@ CreatureList["construct spirit (4)"] = {
         ability: 1,
         damage: [1, 8, "Bludgeoning"],
         range: "Melee (5 ft)",
-        modifiers: ["", 4],
-        useSpellMod: ["wizard"]
+        modifiers: ["", "Str+4"],
+        useSpellMod: ["artificer", "wizard"]
     }],
 };
 CreatureList["construct spirit (5)"] = {
@@ -28130,8 +28053,8 @@ CreatureList["construct spirit (5)"] = {
         ability: 1,
         damage: [1, 8, "Bludgeoning"],
         range: "Melee (5 ft)",
-        modifiers: ["", 5],
-        useSpellMod: ["wizard"]
+        modifiers: ["", "Str+5"],
+        useSpellMod: ["artificer", "wizard"]
     }],
 };
 CreatureList["construct spirit (6)"] = {
@@ -28178,8 +28101,8 @@ CreatureList["construct spirit (6)"] = {
         ability: 1,
         damage: [1, 8, "Bludgeoning"],
         range: "Melee (5 ft)",
-        modifiers: ["", 6],
-        useSpellMod: ["wizard"]
+        modifiers: ["", "Str+6"],
+        useSpellMod: ["artificer", "wizard"]
     }],
 };
 CreatureList["construct spirit (7)"] = {
@@ -28226,8 +28149,8 @@ CreatureList["construct spirit (7)"] = {
         ability: 1,
         damage: [1, 8, "Bludgeoning"],
         range: "Melee (5 ft)",
-        modifiers: ["", 7],
-        useSpellMod: ["wizard"]
+        modifiers: ["", "Str+7"],
+        useSpellMod: ["artificer", "wizard"]
     }],
 };
 CreatureList["construct spirit (8)"] = {
@@ -28274,8 +28197,8 @@ CreatureList["construct spirit (8)"] = {
         ability: 1,
         damage: [1, 8, "Bludgeoning"],
         range: "Melee (5 ft)",
-        modifiers: ["", 8],
-        useSpellMod: ["wizard"]
+        modifiers: ["", "Str+8"],
+        useSpellMod: ["artificer", "wizard"]
     }],
 };
 CreatureList["construct spirit (9)"] = {
@@ -28322,8 +28245,8 @@ CreatureList["construct spirit (9)"] = {
         ability: 1,
         damage: [1, 8, "Bludgeoning"],
         range: "Melee (5 ft)",
-        modifiers: ["", 9],
-        useSpellMod: ["wizard"]
+        modifiers: ["", "Str+9"],
+        useSpellMod: ["artificer", "wizard"]
     }],
 };
 //Draconic Spirit Stat Block
@@ -28363,7 +28286,7 @@ CreatureList["draconic spirit (5)"] = {
         ability: 1,
         damage: [1, 6, "Piercing"],
         range: "Melee (10 ft)",
-        modifiers: ["", 5],
+        modifiers: ["", "Str+5"],
         useSpellMod: ["wizard"]
     }, {
         name: "Breath Weapon",
@@ -28411,7 +28334,7 @@ CreatureList["draconic spirit (6)"] = {
         ability: 1,
         damage: [1, 6, "Piercing"],
         range: "Melee (10 ft)",
-        modifiers: ["", 6],
+        modifiers: ["", "Str+6"],
         useSpellMod: ["wizard"]
     }, {
         name: "Breath Weapon",
@@ -28459,7 +28382,7 @@ CreatureList["draconic spirit (7)"] = {
         ability: 1,
         damage: [1, 6, "Piercing"],
         range: "Melee (10 ft)",
-        modifiers: ["", 7],
+        modifiers: ["", "Str+7"],
         useSpellMod: ["wizard"]
     }, {
         name: "Breath Weapon",
@@ -28507,7 +28430,7 @@ CreatureList["draconic spirit (8)"] = {
         ability: 1,
         damage: [1, 6, "Piercing"],
         range: "Melee (10 ft)",
-        modifiers: ["", 8],
+        modifiers: ["", "Str+8"],
         useSpellMod: ["wizard"]
     }, {
         name: "Breath Weapon",
@@ -28555,7 +28478,7 @@ CreatureList["draconic spirit (9)"] = {
         ability: 1,
         damage: [1, 6, "Piercing"],
         range: "Melee (10 ft)",
-        modifiers: ["", 9],
+        modifiers: ["", "Str+9"],
         useSpellMod: ["wizard"]
     }, {
         name: "Breath Weapon",
@@ -28605,7 +28528,7 @@ CreatureList["elemental spirit (4)"] = {
         ability: 1,
         damage: [1, 10, "Blud(E)/Cd(W)/Li(A)/Fi(F)"],
         range: "Melee (10 ft)",
-        modifiers: ["", 4],
+        modifiers: ["", "Str+4"],
         useSpellMod: ["druid", "ranger", "wizard"]
     }],
 };
@@ -28646,7 +28569,7 @@ CreatureList["elemental spirit (5)"] = {
         ability: 1,
         damage: [1, 10, "Blud(E)/Cd(W)/Li(A)/Fi(F)"],
         range: "Melee (10 ft)",
-        modifiers: ["", 5],
+        modifiers: ["", "Str+5"],
         useSpellMod: ["druid", "ranger", "wizard"]
     }],
 };
@@ -28687,7 +28610,7 @@ CreatureList["elemental spirit (6)"] = {
         ability: 1,
         damage: [1, 10, "Blud(E)/Cd(W)/Li(A)/Fi(F)"],
         range: "Melee (10 ft)",
-        modifiers: ["", 6],
+        modifiers: ["", "Str+6"],
         useSpellMod: ["druid", "ranger", "wizard"]
     }],
 };
@@ -28728,7 +28651,7 @@ CreatureList["elemental spirit (7)"] = {
         ability: 1,
         damage: [1, 10, "Blud(E)/Cd(W)/Li(A)/Fi(F)"],
         range: "Melee (10 ft)",
-        modifiers: ["", 7],
+        modifiers: ["", "Str+7"],
         useSpellMod: ["druid", "ranger", "wizard"]
     }],
 };
@@ -28769,7 +28692,7 @@ CreatureList["elemental spirit (8)"] = {
         ability: 1,
         damage: [1, 10, "Blud(E)/Cd(W)/Li(A)/Fi(F)"],
         range: "Melee (10 ft)",
-        modifiers: ["", 8],
+        modifiers: ["", "Str+8"],
         useSpellMod: ["druid", "ranger", "wizard"]
     }],
 };
@@ -28810,7 +28733,7 @@ CreatureList["elemental spirit (9)"] = {
         ability: 1,
         damage: [1, 10, "Blud(E)/Cd(W)/Li(A)/Fi(F)"],
         range: "Melee (10 ft)",
-        modifiers: ["", 9],
+        modifiers: ["", "Str+9"],
         useSpellMod: ["druid", "ranger", "wizard"]
     }],
 };
@@ -28855,7 +28778,7 @@ CreatureList["fey spirit (3)"] = {
         ability: 2,
         damage: [2, 6, "Force"],
         range: "Melee (5 ft)",
-        modifiers: ["", 3],
+        modifiers: ["", "Dex+3"],
         useSpellMod: ["druid", "ranger", "warlock", "wizard"]
     }],
 };
@@ -28899,7 +28822,7 @@ CreatureList["fey spirit (4)"] = {
         ability: 2,
         damage: [2, 6, "Force"],
         range: "Melee (5 ft)",
-        modifiers: ["", 4],
+        modifiers: ["", "Dex+4"],
         useSpellMod: ["druid", "ranger", "warlock", "wizard"]
     }],
 };
@@ -28943,7 +28866,7 @@ CreatureList["fey spirit (5)"] = {
         ability: 2,
         damage: [2, 6, "Force"],
         range: "Melee (5 ft)",
-        modifiers: ["", 5],
+        modifiers: ["", "Dex+5"],
         useSpellMod: ["druid", "ranger", "warlock", "wizard"]
     }],
 };
@@ -28987,7 +28910,7 @@ CreatureList["fey spirit (6)"] = {
         ability: 2,
         damage: [2, 6, "Force"],
         range: "Melee (5 ft)",
-        modifiers: ["", 6],
+        modifiers: ["", "Dex+6"],
         useSpellMod: ["druid", "ranger", "warlock", "wizard"]
     }],
 };
@@ -29031,7 +28954,7 @@ CreatureList["fey spirit (7)"] = {
         ability: 2,
         damage: [2, 6, "Force"],
         range: "Melee (5 ft)",
-        modifiers: ["", 7],
+        modifiers: ["", "Dex+7"],
         useSpellMod: ["druid", "ranger", "warlock", "wizard"]
     }],
 };
@@ -29075,7 +28998,7 @@ CreatureList["fey spirit (8)"] = {
         ability: 2,
         damage: [2, 6, "Force"],
         range: "Melee (5 ft)",
-        modifiers: ["", 8],
+        modifiers: ["", "Dex+8"],
         useSpellMod: ["druid", "ranger", "warlock", "wizard"]
     }],
 };
@@ -29119,7 +29042,7 @@ CreatureList["fey spirit (9)"] = {
         ability: 2,
         damage: [2, 6, "Force"],
         range: "Melee (5 ft)",
-        modifiers: ["", 9],
+        modifiers: ["", "Dex+9"],
         useSpellMod: ["druid", "ranger", "warlock", "wizard"]
     }],
 };
@@ -29165,7 +29088,7 @@ CreatureList["fiendish spirit (demon)(6)"] = {
         ability: 2,
         damage: [1, 12, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", 6],
+        modifiers: ["", "Dex+6"],
         useSpellMod: ["warlock", "wizard"]
     }],
 };
@@ -29210,7 +29133,7 @@ CreatureList["fiendish spirit (demon)(7)"] = {
         ability: 2,
         damage: [1, 12, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", 7],
+        modifiers: ["", "Dex+7"],
         useSpellMod: ["warlock", "wizard"]
     }],
 };
@@ -29255,7 +29178,7 @@ CreatureList["fiendish spirit (demon)(8)"] = {
         ability: 2,
         damage: [1, 12, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", 8],
+        modifiers: ["", "Dex+8"],
         useSpellMod: ["warlock", "wizard"]
     }],
 };
@@ -29300,7 +29223,7 @@ CreatureList["fiendish spirit (demon)(9)"] = {
         ability: 2,
         damage: [1, 12, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", 9],
+        modifiers: ["", "Dex+9"],
         useSpellMod: ["warlock", "wizard"]
     }],
 };
@@ -29345,7 +29268,7 @@ CreatureList["fiendish spirit (devil)(6)"] = {
         ability: 2,
         damage: [2, 6, "Fire"],
         range: "Melee/Ranged (5 ft/150 ft)",
-        modifiers: ["", 6],
+        modifiers: ["", "Dex+6"],
         useSpellMod: ["warlock", "wizard"]
     }],
 };
@@ -29390,7 +29313,7 @@ CreatureList["fiendish spirit (devil)(7)"] = {
         ability: 2,
         damage: [2, 6, "Fire"],
         range: "Melee/Ranged (5 ft/150 ft)",
-        modifiers: ["", 7],
+        modifiers: ["", "Dex+7"],
         useSpellMod: ["warlock", "wizard"]
     }],
 };
@@ -29435,7 +29358,7 @@ CreatureList["fiendish spirit (devil)(8)"] = {
         ability: 2,
         damage: [2, 6, "Fire"],
         range: "Melee/Ranged (5 ft/150 ft)",
-        modifiers: ["", 8],
+        modifiers: ["", "Dex+8"],
         useSpellMod: ["warlock", "wizard"]
     }],
 };
@@ -29480,7 +29403,7 @@ CreatureList["fiendish spirit (devil)(9)"] = {
         ability: 2,
         damage: [2, 6, "Fire"],
         range: "Melee/Ranged (5 ft/150 ft)",
-        modifiers: ["", 9],
+        modifiers: ["", "Dex+9"],
         useSpellMod: ["warlock", "wizard"]
     }],
 };
@@ -29521,8 +29444,8 @@ CreatureList["fiendish spirit (yugoloth)(6)"] = {
         ability: 2,
         damage: [1, 8, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 6],
-        description: "Immediately after the attack hits or misses, teh spirit can teleport up to 30 feet to an unoccupied space it can see.",
+        modifiers: ["", "Dex+6"],
+        description: "Immediately after the attack hits or misses, the spirit can teleport up to 30 feet to an unoccupied space it can see.",
         useSpellMod: ["warlock", "wizard"]
     }],
 };
@@ -29563,8 +29486,8 @@ CreatureList["fiendish spirit (yugoloth)(7)"] = {
         ability: 2,
         damage: [1, 8, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 7],
-        description: "Immediately after the attack hits or misses, teh spirit can teleport up to 30 feet to an unoccupied space it can see.",
+        modifiers: ["", "Dex+7"],
+        description: "Immediately after the attack hits or misses, the spirit can teleport up to 30 feet to an unoccupied space it can see.",
         useSpellMod: ["warlock", "wizard"]
     }],
 };
@@ -29605,8 +29528,8 @@ CreatureList["fiendish spirit (yugoloth)(8)"] = {
         ability: 2,
         damage: [1, 8, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 8],
-        description: "Immediately after the attack hits or misses, teh spirit can teleport up to 30 feet to an unoccupied space it can see.",
+        modifiers: ["", "Dex+8"],
+        description: "Immediately after the attack hits or misses, the spirit can teleport up to 30 feet to an unoccupied space it can see.",
         useSpellMod: ["warlock", "wizard"]
     }],
 };
@@ -29647,8 +29570,8 @@ CreatureList["fiendish spirit (yugoloth)(9)"] = {
         ability: 2,
         damage: [1, 8, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 9],
-        description: "Immediately after the attack hits or misses, teh spirit can teleport up to 30 feet to an unoccupied space it can see.",
+        modifiers: ["", "Dex+9"],
+        description: "Immediately after the attack hits or misses, the spirit can teleport up to 30 feet to an unoccupied space it can see.",
         useSpellMod: ["warlock", "wizard"]
     }],
 };
@@ -29684,7 +29607,8 @@ CreatureList["undead spirit (skeletal)(3)"] = {
         ability: 2,
         damage: [2, 4, "Necrotic"],
         range: "Ranged (150 ft)",
-        modifiers: ["", 3],
+        modifiers: ["", "Dex+3"],
+		useSpellMod: ["warlock", "wizard"],
     }],
 };
 CreatureList["undead spirit (skeletal)(4)"] = {
@@ -29718,7 +29642,8 @@ CreatureList["undead spirit (skeletal)(4)"] = {
         ability: 2,
         damage: [2, 4, "Necrotic"],
         range: "Ranged (150 ft)",
-        modifiers: ["", 4],
+        modifiers: ["", "Dex+4"],
+		useSpellMod: ["warlock", "wizard"],
     }],
 };
 CreatureList["undead spirit (skeletal)(5)"] = {
@@ -29752,7 +29677,8 @@ CreatureList["undead spirit (skeletal)(5)"] = {
         ability: 2,
         damage: [2, 4, "Necrotic"],
         range: "Ranged (150 ft)",
-        modifiers: ["", 5],
+        modifiers: ["", "Dex+5"],
+		useSpellMod: ["warlock", "wizard"],
     }],
 };
 CreatureList["undead spirit (skeletal)(6)"] = {
@@ -29786,7 +29712,8 @@ CreatureList["undead spirit (skeletal)(6)"] = {
         ability: 2,
         damage: [2, 4, "Necrotic"],
         range: "Ranged (150 ft)",
-        modifiers: ["", 6],
+        modifiers: ["", "Dex+6"],
+		useSpellMod: ["warlock", "wizard"],
     }],
 };
 CreatureList["undead spirit (skeletal)(7)"] = {
@@ -29820,7 +29747,8 @@ CreatureList["undead spirit (skeletal)(7)"] = {
         ability: 2,
         damage: [2, 4, "Necrotic"],
         range: "Ranged (150 ft)",
-        modifiers: ["", 7],
+        modifiers: ["", "Dex+7"],
+		useSpellMod: ["warlock", "wizard"],
     }],
 };
 CreatureList["undead spirit (skeletal)(8)"] = {
@@ -29854,7 +29782,8 @@ CreatureList["undead spirit (skeletal)(8)"] = {
         ability: 2,
         damage: [2, 4, "Necrotic"],
         range: "Ranged (150 ft)",
-        modifiers: ["", 8],
+        modifiers: ["", "Dex+8"],
+		useSpellMod: ["warlock", "wizard"],
     }],
 };
 CreatureList["undead spirit (skeletal)(9)"] = {
@@ -29888,7 +29817,8 @@ CreatureList["undead spirit (skeletal)(9)"] = {
         ability: 2,
         damage: [2, 4, "Necrotic"],
         range: "Ranged (150 ft)",
-        modifiers: ["", 9],
+        modifiers: ["", "Dex+9"],
+		useSpellMod: ["warlock", "wizard"],
     }],
 };
 CreatureList["undead spirit (putrid/ghostly)(3)"] = {
@@ -29931,15 +29861,17 @@ CreatureList["undead spirit (putrid/ghostly)(3)"] = {
         ability: 2,
         damage: [1, 8, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", 3],
+        modifiers: ["", "Dex+3"],
         description: "On a hit, the target has the Frightened condition until the end of its next turn.",
+		useSpellMod: ["warlock", "wizard"],
     }, {
         name: "Rotting Claw (Putrid Only)",
         ability: 2,
         damage: [1, 6, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 3],
+        modifiers: ["", "Dex+3"],
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
+		useSpellMod: ["warlock", "wizard"],
     }],
 };
 CreatureList["undead spirit (putrid/ghostly)(4)"] = {
@@ -29982,14 +29914,16 @@ CreatureList["undead spirit (putrid/ghostly)(4)"] = {
         ability: 2,
         damage: [1, 8, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", 4],
+        modifiers: ["", "Dex+4"],
+		useSpellMod: ["warlock", "wizard"],
         description: "On a hit, the target has the Frightened condition until the end of its next turn.",
     }, {
         name: "Rotting Claw (Putrid Only)",
         ability: 2,
         damage: [1, 6, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 4],
+        modifiers: ["", "Dex+4"],
+		useSpellMod: ["warlock", "wizard"],
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
     }],
 };
@@ -30033,14 +29967,16 @@ CreatureList["undead spirit (putrid/ghostly)(5)"] = {
         ability: 2,
         damage: [1, 8, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", 5],
+        modifiers: ["", "Dex+5"],
+		useSpellMod: ["warlock", "wizard"],
         description: "On a hit, the target has the Frightened condition until the end of its next turn.",
     }, {
         name: "Rotting Claw (Putrid Only)",
         ability: 2,
         damage: [1, 6, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 5],
+        modifiers: ["", "Dex+5"],
+		useSpellMod: ["warlock", "wizard"],
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
     }],
 };
@@ -30084,14 +30020,16 @@ CreatureList["undead spirit (putrid/ghostly)(6)"] = {
         ability: 2,
         damage: [1, 8, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", 6],
+        modifiers: ["", "Dex+6"],
+		useSpellMod: ["warlock", "wizard"],
         description: "On a hit, the target has the Frightened condition until the end of its next turn.",
     }, {
         name: "Rotting Claw (Putrid Only)",
         ability: 2,
         damage: [1, 6, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 6],
+        modifiers: ["", "Dex+6"],
+		useSpellMod: ["warlock", "wizard"],
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
     }],
 };
@@ -30135,14 +30073,16 @@ CreatureList["undead spirit (putrid/ghostly)(7)"] = {
         ability: 2,
         damage: [1, 8, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", 7],
+        modifiers: ["", "Dex+7"],
+		useSpellMod: ["warlock", "wizard"],
         description: "On a hit, the target has the Frightened condition until the end of its next turn.",
     }, {
         name: "Rotting Claw (Putrid Only)",
         ability: 2,
         damage: [1, 6, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 7],
+        modifiers: ["", "Dex+7"],
+		useSpellMod: ["warlock", "wizard"],
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
     }],
 };
@@ -30186,14 +30126,16 @@ CreatureList["undead spirit (putrid/ghostly)(8)"] = {
         ability: 2,
         damage: [1, 8, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", 8],
+        modifiers: ["", "Dex+8"],
+		useSpellMod: ["warlock", "wizard"],
         description: "On a hit, the target has the Frightened condition until the end of its next turn.",
     }, {
         name: "Rotting Claw (Putrid Only)",
         ability: 2,
         damage: [1, 6, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 8],
+        modifiers: ["", "Dex+8"],
+		useSpellMod: ["warlock", "wizard"],
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
     }],
 };
@@ -30237,14 +30179,16 @@ CreatureList["undead spirit (putrid/ghostly)(9)"] = {
         ability: 2,
         damage: [1, 8, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", 9],
+        modifiers: ["", "Dex+9"],
+		useSpellMod: ["warlock", "wizard"],
         description: "On a hit, the target has the Frightened condition until the end of its next turn.",
     }, {
         name: "Rotting Claw (Putrid Only)",
         ability: 2,
         damage: [1, 6, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", 9],
+        modifiers: ["", "Dex+9"],
+		useSpellMod: ["warlock", "wizard"],
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
     }],
 };
