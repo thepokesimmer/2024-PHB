@@ -796,7 +796,7 @@ legacySubClassRefactor("cleric", "grave domain", {
                 "When I or an ally hits the cursed target, I can end the curse early (no action).",
                 "Doing so deals extra Necrotic or Radiant damage (my choice) equal to my Cleric level."
             ]),
-            action : "bonus action",
+            action : ["bonus action", ""],
         },
         "subclassfeature6" : {
             name : "Sentinel at Death's Door",
@@ -806,7 +806,7 @@ legacySubClassRefactor("cleric", "grave domain", {
                 "As a Reaction when me or a Bloodied ally in 60 ft is hit by an attack, I halve its dmg.",
                 "If the attack was a critical hit, any effects triggered by a critical hit are canceled."
             ]),
-            action : "reaction",
+            action : ["reaction", ""],
             usages : "Wisdom modifier per ",
             usagescalc : "event.value = Math.max(1, What('Wis Mod'));",
             recovery : "long rest"
