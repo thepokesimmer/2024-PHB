@@ -1,4 +1,4 @@
-var iFileName = "pub_202512097_EFotA.js";
+var iFileName = "pub_20251209_EFotA.js";
 RequiredSheetVersion("13.2.3", 15);
 SourceList["E:FA"] = {
     name: "Eberron: Forge of the Artificer",
