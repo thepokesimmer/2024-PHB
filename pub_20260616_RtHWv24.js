@@ -1,127 +1,23 @@
 var iFileName = "pub_20260616_RtHW.js";
-RequiredSheetVersion("13.2.3", 15);
-
-SourceList["RtHW"] = {
+RequiredSheetVersion("13.2.3", "24.1.0");
+SourceList.RtHW = {
     name : "Ravenloft: The Horrors Within",
     abbreviation : "RtHW",
     abbreviationSpellsheet : "RH",
-    group : "Settings",
+    group : "Primary Sources",
     url : "https://marketplace.dndbeyond.com/category/6015000",
     date : "2026/06/03"
 };
-SourceList.LEGACYCLASS = {
-    name: "Subclasses Deprecated by 2024 Player's Handbook",
-    abbreviation: "LEGACY",
-    abbreviationSpellsheet: "L",
-    group: "Core Sources",
-    url: "https://marketplace.dndbeyond.com/core-rules/3709000?pid=DB3709000",
-    date: "2014/01/01",
-    defaultExcluded: true,
+SourceList.BoH = {
+  name: "Astarion's Book of Hungers",
+  abbreviation: "BoH",
+  abbreviationSpellsheet: "BH",
+  group : "Primary Sources",
+  url: "https://marketplace.dndbeyond.com/category/DBRWE7DB3",
+  date: "2025/11/11",
 };
-SourceList.LEGACYRACE = {
-    name: "Races Deprecated by 2024 Player's Handbook",
-    abbreviation: "LEGACY",
-    abbreviationSpellsheet: "L",
-    group: "Core Sources",
-    url: "https://marketplace.dndbeyond.com/core-rules/3709000?pid=DB3709000",
-    date: "2014/01/01",
-    defaultExcluded: true,
-};
-SourceList.LEGACYBG = {
-    name: "Backgrounds Deprecated by 2024 Player's Handbook",
-    abbreviation: "LEGACY",
-    abbreviationSpellsheet: "L",
-    group: "Core Sources",
-    url: "https://marketplace.dndbeyond.com/core-rules/3709000?pid=DB3709000",
-    date: "2014/01/01",
-    defaultExcluded: true,
-};
-//Functions
-function escapeRegExp(string) {
-    return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
-}
-function legacyClassRefactor(classKey, newClass) {
-    if (!(classKey in ClassList)) {
-        ClassList[classKey] = newClass;
-    } else {
-        newClass.subclasses = ClassList[classKey].subclasses;
-        ClassList[classKey] = newClass;
-    }
-}
-function archiveSubClass(classKey, subClass, newClassName) {
-    subClass.subname = subClass.subname + " - 2014";
-    if ('fullname' in subClass) {
-        subClass.fullname = subClass.fullname + " - 2014";
-    }
-    subClass.source = [
-        ["LEGACYCLASS", 1]
-    ];
-    for (var i of ClassList[classKey].subclasses[1]) {
-        if (ClassSubList[i].regExpSearch.test(newClassName)) {
-            var regex = "(?=^.*" + subClass.regExpSearch.source + ".*$)(?!^" + escapeRegExp(newClassName) + "$)";
-            ClassSubList[i].regExpSearch = new RegExp(regex, 'i');
-        }
-    }
-}
-function legacySubClassRefactor(classKey, subClassKey, nSC) {
-    var newSubClassName = classKey + "-" + subClassKey;
-    var prv = null;
-    if (newSubClassName in ClassSubList) {
-        prv = ClassSubList[newSubClassName];
-        AddSubClass(classKey, subClassKey + "_2014", prv);
-        ClassSubList[newSubClassName] = nSC;
-    } else {
-        if ('replaces' in nSC && classKey + '-' + nSC.replaces in ClassSubList) {
-            prv = ClassSubList[classKey + '-' + nSC.replaces];
-        }
-        AddSubClass(classKey, subClassKey, nSC);
-    }
-    if (prv != null) {
-        var newRegex = nSC.regExpSearch;
-        var bc = ClassList[classKey];
-        var newClassName = nSC.fullname ? nSC.fullname : bc.name + " (" + nSC.subname + ")";
-        archiveSubClass(classKey, prv, newClassName);
-        nSC.regExpSearch = newRegex;
-    }
-    return nSC;
-}
-function legacyRaceRefactor(raceKey, newRace) {
-    if (newRace.replaces) {
-        for (var replaced of newRace.replaces) {
-            if (replaced in RaceList) {
-                var oldRace = RaceList[replaced];
-                RaceList[replaced + " (L)"] = oldRace;
-                delete RaceList[replaced];
-                oldRace.source = [
-                    ["LEGACYRACE", 1]
-                ];
-                oldRace.name = oldRace.name + " (L)";
-                oldRace.shortname = oldRace.shortname + " (L)";
-            }
-        }
-    }
-    RaceList[raceKey] = newRace;
-}
-function legacyBackgroundRefactor(bgKey, newBg) {
-    if (bgKey in BackgroundList) {
-        var oldBg = BackgroundList[bgKey];
-        BackgroundList[bgKey + " (L)"] = oldBg;
-        oldBg.source = [
-            ["LEGACYBG", 1]
-        ];
-        oldBg.name = oldBg.name + " (L)";
-        for (var i in BackgroundList) {
-            var bg_i = BackgroundList[i];
-            if (bg_i.regExpSearch.test(newBg.name)) {
-                var regex = "(?=^.*" + bg_i.regExpSearch.source + ".*$)(?!^" + escapeRegExp(newBg.name) + "$)";
-                bg_i.regExpSearch = new RegExp(regex, 'i');
-            }
-        }
-    }
-    BackgroundList[bgKey] = newBg;
-}
 //Species
-legacyRaceRefactor("dhampir", {
+RaceList.dhampir = {
     regExpSearch : /dhampir/i,
     name : "Dhampir",
     source : [["BoH", ""], ["RtHW", ""]],
@@ -153,13 +49,14 @@ legacyRaceRefactor("dhampir", {
 		usagescalc : "event.value = How('Proficiency Bonus')",
 		recovery : "long rest"
 	}],
-    trait : "Dhampir" + (typePF ? "\n " : "\t") +
-	"\u2022 Trace of Undeath: I have Resistance to Necrotic damage." +
-	"\n \u2022 Spider Climb: I have a Climb Speed equal to my Speed. When I reach level 3, I can also move up, down, and across vertical surfaces and on ceilings while leaving my hands free." +
-	"\n \u2022 Vampiric Bite: When I hit with the dmg option of an Unarmed Strike, I can bite with my fangs. My Proficiency Bonus per long rest, if the creature wasn't a Construct or Undead, I can also empower myself. I either regain HP or get a bonus to my next ability check or attack roll within 1 minute. Both equal the Piercing damage dealt.",
-	replaces : ["dhampir"],
-});
-legacyRaceRefactor("hexblood", {
+    trait : [
+		"**Dhampir**",
+		"##\u25C6 Trace of Undeath##. I have Resistance to Necrotic damage.",
+		"##\u25C6 Spider Climb##. I have a Climb Speed equal to my Speed. When I reach level 3, I can also move up, down, and across vertical surfaces and on ceilings while leaving my hands free.",
+		"##\u25C6 Vampiric Bite##. When I hit with the dmg option of an Unarmed Strike, I can bite with my fangs. My Proficiency Bonus per long rest, if the creature wasn't a Construct or Undead, I can also empower myself. I either regain HP or get a bonus to my next ability check or attack roll within 1 minute. Both equal the Piercing damage dealt.",
+	].join("\n"),
+};
+RaceList.hexblood = {
     regExpSearch : /hexblood/i,
     name : "Hexblood",
     source : [["RtHW", 0]],
@@ -188,11 +85,13 @@ legacyRaceRefactor("hexblood", {
 		["bonus action", "Eerie Token (create)"],
 		["action", "Eerie Token (Distant Message/Remote Viewing)"],
 	],
-    trait : "Hexblood" + (typePF ? "\n " : "\t") +
-        "\u2022 Creature Type: Fey." +
-        "\n \u2022 Eerie Token: As a Bonus Action 1/Long Rest, I can harmlessly pull off a piece of myself to make a token. While it exists, I can use a Magic action to send a telepathic message (\u226425 words) to its holder if within 10 miles. Alternatively, I can use a Magic action to see/hear through the token for up to 1 minute if within 10 miles (ends early if Incapacitated). Using this remote viewing destroys the token when it ends." +
-        "\n \u2022 Hex Magic: I always have Disguise Self and Hex prepared. I can cast each once per Long Rest without using a spell slot, or by using any spell slots I have."
-});
+    trait : [
+		"**Hexblood**",
+        "##\u25C6 Creature Type##. Fey.",
+        "##\u25C6 Eerie Token##. As a Bonus Action 1/Long Rest, I can harmlessly pull off a piece of myself to make a token. While it exists, I can use a Magic action to send a telepathic message (\u226425 words) to its holder if within 10 miles. Alternatively, I can use a Magic action to see/hear through the token for up to 1 minute if within 10 miles (ends early if Incapacitated). Using this remote viewing destroys the token when it ends.",
+        "##\u25C6 Hex Magic##. I always have Disguise Self and Hex prepared. I can cast each once per Long Rest without using a spell slot, or by using any spell slots I have.",
+	].join("\n"),	
+};
 RaceList.lupin = {
     regExpSearch : /lupin/i,
     name : "Lupin",
@@ -244,12 +143,14 @@ RaceList.lupin = {
             }
         },
     },
-    trait : "Lupin" + (typePF ? "\n " : "\t") +
-        "\u2022 Feral Pounce: My Unarmed Strikes deal Slashing damage. Once per turn, when I hit with an Unarmed Strike during the Attack action, I can use both the Damage and Shove options." +
-        "\n \u2022 Howl: PB/Long Rest, as a Bonus Action, chosen creatures in 15 ft make a Wis save (see attack section). On fail, they have Disadvantage on attacks and saves until my next turn starts." +
-        "\n \u2022 Werewolf Instincts: I have proficiency in Perception, Stealth, or Survival."
+    trait : [
+		"**Lupin**",
+        "##\u25C6 Feral Pounce##. My Unarmed Strikes deal Slashing damage. Once per turn, when I hit with an Unarmed Strike during the Attack action, I can use both the Damage and Shove options.",
+        "##\u25C6 Howl##. PB/Long Rest, as a Bonus Action, chosen creatures in 15 ft make a Wis save (see attack section). On fail, they have Disadvantage on attacks and saves until my next turn starts.",
+        "##\u25C6 Werewolf Instincts##. I have proficiency in Perception, Stealth, or Survival.",
+	].join("\n"),	
 };
-legacyRaceRefactor("reborn", {
+RaceList.reborn = {
     regExpSearch : /reborn/i,
     name : "Reborn",
     source : [["RtHW", 0]],
@@ -265,15 +166,16 @@ legacyRaceRefactor("reborn", {
 	usages : "Proficiency bonus per ",
 	usagescalc : "event.value = How('Proficiency Bonus');",
 	recovery : "long rest",
-    trait : "Reborn" + (typePF ? "\n " : "\t") +
-        "\u2022 Creature Type: Humanoid." +
-        "\n \u2022 Escaped Death: I have Advantage on Death Saving Throws." +
-        "\n \u2022 Everlasting: I don't suffer Exhaustion from dehydration, malnutrition, or suffocation. I don't need to sleep (Long Rest = 4h of motionless inactivity)." +
-        "\n \u2022 Knowledge from a Past Life: Choose one skill to gain proficiency in. PB/Long Rest, when I fail an ability check, I can roll 1d6 and add it to the result." +
-        "\n \u2022 Strange Endurance: I have Resistance to Cold, Necrotic, or Poison damage (choose one)."
-});
+    trait : [
+		"**Reborn**",
+        "##\u25C6 Escaped Death##. I have Advantage on Death Saving Throws.",
+        "##\u25C6 Everlasting##. I don't suffer Exhaustion from dehydration, malnutrition, or suffocation. I don't need to sleep (Long Rest = 4h of motionless inactivity).",
+        "##\u25C6 Knowledge from a Past Life##. Choose one skill to gain proficiency in. PB/Long Rest, when I fail an ability check, I can roll 1d6 and add it to the result.",
+        "##\u25C6 Strange Endurance##. I have Resistance to Cold, Necrotic, or Poison damage (choose one).",
+	].join("\n"),	
+};
 //Backgrounds
-legacyBackgroundRefactor("haunted one", {
+BackgroundList["haunted one"] = {
     regExpSearch : /^(?=.*haunted)(?=.*one).*$/i,
     name : "Haunted One",
     source : [["RtHW", 0]],
@@ -297,7 +199,91 @@ legacyBackgroundRefactor("haunted one", {
         ["Belt pouch (with coins)", "", 1]
     ],
     feature : "Haunted One",
-});
+	// from VRGtR:
+	traitsSourceString: "VRGtR, 34",
+	trait : [
+		"I don't run from evil. Evil runs from me.",
+		"I like to read and memorize poetry. It keeps me calm and brings me fleeting moments of happiness.",
+		"I spend money freely and live life to the fullest, knowing that tomorrow I might die.",
+		"I live for the thrill of the hunt.",
+		"I don't talk about the thing that torments me. I'd rather not burden others with my curse.",
+		"I expect danger around every corner.",
+		"I refuse to become a victim, and I will not allow others to be victimized.",
+		"I put no trust in divine beings.",
+		"I had an encounter that I believe gives me a special affinity with a supernatural creature or event.",
+		"A signature piece of clothing or distinct weapon serves as an emblem of who I am.",
+		"I never accept that I'm out of my depth.",
+		"I must know the answer to every secret. No door remains unopened in my presence.",
+		"I let people underestimate me, revealing my full competency only to those close to me.",
+		"I compulsively seek to collect trophies of my travels and victories.",
+		"It doesn't matter if the whole world's against me. I'll always do what I think is right.",
+		"I have morbid interests and a macabre aesthetic.",
+		"I have a personal ritual, mantra, or relaxation method I use to deal with stress.",
+		"Nothing is more important than life, and I never leave anyone in danger.",
+		"I'm quick to jump to extreme solutions. Why risk a lesser option not working?",
+		"I'm easily startled, but I'm not a coward."
+	],
+	ideal : [
+		["Sacrifice", "Sacrifice: I try to help those in need, no matter what the personal cost. (Good)"],
+		["Desperation", "Desperation: I'll stop the spirits that haunt me or die trying. (Any)"],
+		["Cleansing", "Cleansing: I kill monsters to make the world a safer place, and to exorcise my own demons. (Good)"],
+		["Vigilante", "Vigilante: I have a dark calling that puts me above the law. (Chaotic)"],
+		["Preparation", "Preparation: I like to know my enemy's capabilities and weaknesses before rushing into battle. (Lawful)"],
+		["Destruction", "Destruction: I'm a monster that destroys other monsters, and anything else that gets in my way. (Evil)"],
+		["Adrenaline", "Adrenaline: I've experienced such strangeness that now I feel alive only in extreme situations."],
+		["Balance", "Balance: I strive to counter the deeds of someone for whom I feel responsible."],
+		["Bound", "Bound: I've wronged someone and must work their will to avoid their curse."],
+		["Escape", "Escape: I believe there is something beyond the world I know, and I need to find it."],
+		["Legacy", "Legacy: I must do something great so that I'm remembered, and my time is running out."],
+		["Misdirection", "Misdirection: I work vigorously to keep others from realizing my flaws or misdeeds."],
+		["Obsession", "Obsession: I've lived this way for so long that I can't imagine another way."],
+		["Obligation", "Obligation: I owe it to my people, faith, family, or teacher to continue a vaunted legacy."],
+		["Promise", "Promise: My life is no longer my own. I must fulfill the dream of someone who's gone."],
+		["Revelation", "Revelation: I need to know what lies beyond the mysteries of death, the world, or the Mists."],
+		["Sanctuary", "Sanctuary: I know the forces at work in the world and strive to create islands apart from them."],
+		["Truth", "Truth: I care about the truth above all else, even if it doesn't benefit anyone."]
+	],
+	bond : [
+		"I keep my thoughts and discoveries in a journal. My journal is my legacy.",
+		"I would sacrifice my life and my soul to protect the innocent.",
+		"My torment drove away the person I love. I strive to win back the love I've lost.",
+		"A terrible guilt consumes me. I hope that I can find redemption through my actions.",
+		"There's evil in me, I can feel it. It must never be set free.",
+		"I have a child to protect. I must make the world a safer place for him (or her).",
+		"I desperately need to get back to someone or someplace, but I lost them in the Mists.",
+		"Everything I do is in the service of a powerful master, one I must keep a secret from everyone.",
+		"I owe much to my vanished mentor. I seek to continue their work even as I search to find them.",
+		"I've seen great darkness, and I'm committed to being a light against it\u2014the light of all lights.",
+		"Someone I love has become a monster, murderer, or other threat. It's up to me to redeem them.",
+		"The world has been convinced of a terrible lie. It's up to me to reveal the truth.",
+		"I deeply miss someone and am quick to adopt people who remind me of them.",
+		"A great evil dwells within me. I will fight against it and the world's other evils for as long as I can.",
+		"I'm desperately seeking a cure to an affliction or a curse, either for someone close to me for myself.",
+		"Spirits are drawn to me. I do all I can to help them find peace.",
+		"I use my cunning mind to solve mysteries and find justice for those who've been wronged.",
+		"I lost someone I care about, but I still see them in guilty visions, recurring dreams, or as a spirit."
+	],
+	flaw : [
+		"I have certain rituals that I must follow every day. I can never break them.",
+		"I assume the worst in people.",
+		"I feel no compassion for the dead. They're the lucky ones.",
+		"I have an addiction.",
+		"I am a purveyor of doom and gloom who lives in a world without hope.",
+		"I talk to spirits that no one else can see.",
+		"I believe doom follows me and that anyone who gets close to me will face a tragic end.",
+		"I'm convinced something is after me, appearing in mirrors, dreams, and places where no one could.",
+		"I'm especially superstitious and live life seeking to avoid bad luck, wicked spirits, or the Mists.",
+		"I've done unspeakable evil and will do anything to prevent others from finding out.",
+		"I am exceptionally credulous and believe any story or legend immediately.",
+		"I'm a skeptic and don't believe in the power of rituals, religion, superstition, or spirits.",
+		"I know my future is written and that anything I do will lead to a prophesied end.",
+		"I need to find the best in everyone and everything, even when that means denying obvious malice.",
+		"I've seen the evil of a type of place\u2014like forests, cities, or graveyards\u2014and resist going there.",
+		"I'm exceptionally cautious, planning laboriously and devising countless contingencies.",
+		"I have a reputation for defeating a great evil, but that's a lie and the wicked force knows.",
+		"I know the ends always justify the means and am quick to make sacrifices to attain my goals."
+	],
+};
 BackgroundFeatureList["haunted one"] = {
     description : "I am haunted by the events of my past. Whether it was a lone terrible incident or an accumulation of painful moments, I bear the unshakable weight of what happened to me. I’ve tried to bury it and run away from it, to no avail; it can’t be slain with a sword or banished via magic. Nevertheless, I persist.",
 	eval: function() {
@@ -308,7 +294,7 @@ BackgroundFeatureList["haunted one"] = {
     },
     source : [["RtHW", 0]]
 };
-legacyBackgroundRefactor("investigator", {
+BackgroundList.investigator = {
     regExpSearch : /investigator/i,
     name : "Investigator",
     source : [["RtHW", 0]],
@@ -327,7 +313,65 @@ legacyBackgroundRefactor("investigator", {
         ["Belt pouch (with coins)", "", 1]
     ],
     feature : "Investigator",
-});
+	// from VRGtR:
+	traitsSourceString: "VRGtR, 35",
+	trait : [
+		"I had an encounter that I believe gives me a special affinity with a supernatural creature or event.",
+		"A signature piece of clothing or distinct weapon serves as an emblem of who I am.",
+		"I never accept that I'm out of my depth.",
+		"I must know the answer to every secret. No door remains unopened in my presence.",
+		"I let people underestimate me, revealing my full competency only to those close to me.",
+		"I compulsively seek to collect trophies of my travels and victories.",
+		"It doesn't matter if the whole world's against me. I'll always do what I think is right.",
+		"I have morbid interests and a macabre aesthetic.",
+		"I have a personal ritual, mantra, or relaxation method I use to deal with stress.",
+		"Nothing is more important than life, and I never leave anyone in danger.",
+		"I'm quick to jump to extreme solutions. Why risk a lesser option not working?",
+		"I'm easily startled, but I'm not a coward."
+	],
+	ideal : [
+		["Adrenaline", "Adrenaline: I've experienced such strangeness that now I feel alive only in extreme situations."],
+		["Balance", "Balance: I strive to counter the deeds of someone for whom I feel responsible."],
+		["Bound", "Bound: I've wronged someone and must work their will to avoid their curse."],
+		["Escape", "Escape: I believe there is something beyond the world I know, and I need to find it."],
+		["Legacy", "Legacy: I must do something great so that I'm remembered, and my time is running out."],
+		["Misdirection", "Misdirection: I work vigorously to keep others from realizing my flaws or misdeeds."],
+		["Obsession", "Obsession: I've lived this way for so long that I can't imagine another way."],
+		["Obligation", "Obligation: I owe it to my people, faith, family, or teacher to continue a vaunted legacy."],
+		["Promise", "Promise: My life is no longer my own. I must fulfill the dream of someone who's gone."],
+		["Revelation", "Revelation: I need to know what lies beyond the mysteries of death, the world, or the Mists."],
+		["Sanctuary", "Sanctuary: I know the forces at work in the world and strive to create islands apart from them."],
+		["Truth", "Truth: I care about the truth above all else, even if it doesn't benefit anyone."]
+	],
+	bond : [
+		"I desperately need to get back to someone or someplace, but I lost them in the Mists.",
+		"Everything I do is in the service of a powerful master, one I must keep a secret from everyone.",
+		"I owe much to my vanished mentor. I seek to continue their work even as I search to find them.",
+		"I've seen great darkness, and I'm committed to being a light against it\u2014the light of all lights.",
+		"Someone I love has become a monster, murderer, or other threat. It's up to me to redeem them.",
+		"The world has been convinced of a terrible lie. It's up to me to reveal the truth.",
+		"I deeply miss someone and am quick to adopt people who remind me of them.",
+		"A great evil dwells within me. I will fight against it and the world's other evils for as long as I can.",
+		"I'm desperately seeking a cure to an affliction or a curse, either for someone close to me for myself.",
+		"Spirits are drawn to me. I do all I can to help them find peace.",
+		"I use my cunning mind to solve mysteries and find justice for those who've been wronged.",
+		"I lost someone I care about, but I still see them in guilty visions, recurring dreams, or as a spirit."
+	],
+	flaw : [
+		"I believe doom follows me and that anyone who gets close to me will face a tragic end.",
+		"I'm convinced something is after me, appearing in mirrors, dreams, and places where no one could.",
+		"I'm especially superstitious and live life seeking to avoid bad luck, wicked spirits, or the Mists.",
+		"I've done unspeakable evil and will do anything to prevent others from finding out.",
+		"I am exceptionally credulous and believe any story or legend immediately.",
+		"I'm a skeptic and don't believe in the power of rituals, religion, superstition, or spirits.",
+		"I know my future is written and that anything I do will lead to a prophesied end.",
+		"I need to find the best in everyone and everything, even when that means denying obvious malice.",
+		"I've seen the evil of a type of place\u2014like forests, cities, or graveyards\u2014and resist going there.",
+		"I'm exceptionally cautious, planning laboriously and devising countless contingencies.",
+		"I have a reputation for defeating a great evil, but that's a lie and the wicked force knows.",
+		"I know the ends always justify the means and am quick to make sacrifices to attain my goals."
+	],
+};
 BackgroundFeatureList.investigator = {
     description : "I relentlessly seek the truth. Perhaps I witnessed something remarkable or terrible and now desire to unravel its mystery, or maybe I’m motivated by universal justice and honesty. Whether the cases I’m embroiled in are local crimes or eldritch conspiracies, I’m driven to reveal what others would keep hidden.",
 	eval: function() {
@@ -648,8 +692,8 @@ FeatsList.watchers = {
     }
 };
 //Subclasses
-legacySubClassRefactor("bard", "college of spirits", {
-    regExpSearch : /^(?=.*(bard))(?=.*spirits).*$/i,
+AddSubClass("bard", "college of spirits", {
+    regExpSearch : /^(?=.*(college|bard|minstrel|troubadour|jongleur))(?=.*spirits?).*$/i,
     subname : "College of Spirits",
     source : [["RtHW", 0]],
     features : {
@@ -748,17 +792,16 @@ legacySubClassRefactor("bard", "college of spirits", {
         }
     }
 });
-legacySubClassRefactor("cleric", "grave domain", {
-    regExpSearch : /^(?=.*(cleric))(?=.*grave).*$/i,
+AddSubClass("cleric", "grave domain", {
+    regExpSearch : /^(?=.*(cleric|priest|clergy|acolyte))(?=.*grave).*$/i,
     subname : "Grave Domain",
     source : [["RtHW", 0]],
-    spellcastingExtra : ["detect evil and good", "false life", "gentle repose", "ray of enfeeblement", "revivify", "vampiric touch", "blight", "death ward", "dispel evil and good", "raise dead"],
-	replaces: "grave domain",
     features : {
         "subclassfeature3" : {
             name : "Circle of Mortality",
             source : [["RtHW", 0]],
             minlevel : 3,
+			spellcastingExtra : ["detect evil and good", "false life", "gentle repose", "ray of enfeeblement", "revivify", "vampiric touch", "blight", "death ward", "dispel evil and good", "raise dead"],
             description : desc([
                 "1/turn when I deal damage to a creature missing any HP, it takes extra Necrotic dmg.",
                 "When I heal a 0 HP creature with a spell/Channel Divinity, I maximize the healing dice.",
@@ -832,12 +875,12 @@ AddSubClass("ranger", "hollow warden", {
     regExpSearch : /^(?=.*ranger)((?=.*hollow)(?=.*warden)).*$/i,
     subname : "Hollow Warden",
     source : [["RtHW", 0]],
-    spellcastingExtra : ["wrathful smite", "alter self", "phantom steed", "dominate beast", "steel wind strike"],
     features : {
         "subclassfeature3" : {
             name : "Wrath of the Wild",
             source : [["RtHW", 0]],
             minlevel : 3,
+			spellcastingExtra : ["wrathful smite", "alter self", "phantom steed", "dominate beast", "steel wind strike"],
             description : desc([
                 "As a Bonus Action, I can expend a Favored Enemy use to transform for 1 min.",
                 "It ends early if I'm Incapacitated, die, or end it (no action). While transformed:",
@@ -901,7 +944,7 @@ AddSubClass("ranger", "hollow warden", {
         }
     }
 });
-legacySubClassRefactor("rogue", "phantom", {
+AddSubClass("rogue", "phantom", {
     regExpSearch : /^(?=.*rogue)(?=.*phantom).*$/i,
     subname : "Phantom",
     source : [["RtHW", 0]],
@@ -1010,12 +1053,12 @@ AddSubClass("artificer", "reanimator", {
     regExpSearch : /^(?=.*artificer)(?=.*(reanimator)).*$/i,
     subname : "Reanimator",
     source : [["RtHW", 0]],
-    spellcastingExtra : ["false life", "spare the dying", "witch bolt", "blindness/deafness", "enhance ability", "animate dead", "lightning bolt", "blight", "death ward", "antilife shell", "raise dead"],
     features : {
         "subclassfeature3" : {
             name : "Reanimator's Skill Set",
             source : [["RtHW", 0]],
             minlevel : 3,
+			spellcastingExtra : ["false life", "spare the dying", "witch bolt", "blindness/deafness", "enhance ability", "animate dead", "lightning bolt", "blight", "death ward", "antilife shell", "raise dead"],
             description : desc([
                 "I gain proficiency with Alchemist's Supplies (or another artisan's tools if I already have it).",
                 "***Jolt to Life***: When casting Spare the Dying, I can modify it to revive the target.",
@@ -1184,16 +1227,17 @@ CreatureList["reanimated companion"] = {
         description : "Whenever the companion is subjected to Lightning damage, it regains a number of Hit Points equal to the Lightning damage dealt."
     }]
 };
-legacySubClassRefactor("sorcerer", "shadow sorcery", {
+AddSubClass("sorcerer", "shadow sorcery", {
     regExpSearch : /^(?=.*sorcerer)(?=.*shadow).*$/i,
     subname : "Shadow Sorcery",
     source : [["RtHW", 0]],
-    spellcastingExtra : ["bane", "darkness", "inflict wounds", "pass without trace", "hunger of hadar", "nondetection", "greater invisibility", "phantasmal killer", "contagion", "creation"],
     features : {
         "subclassfeature3" : {
             name : "Power of Shadow",
             source : [["RtHW", 0]],
             minlevel : 3,
+			spellcastingExtra : ["bane", "darkness", "inflict wounds", "pass without trace", "hunger of hadar", "nondetection", "greater invisibility", "phantasmal killer", "contagion", "creation"],
+			spellcastingExtraApplyNonconform: true,
             description : desc([
                 "***Eyes of the Dark***: I gain Darkvision 120 ft and Blindsight 10 ft. I can also see",
                 "normally in darkness created by my own spells.",
@@ -1263,16 +1307,17 @@ legacySubClassRefactor("sorcerer", "shadow sorcery", {
         }
     }
 });
-legacySubClassRefactor("warlock", "undead patron", {
+AddSubClass("warlock", "undead patron", {
     regExpSearch : /^(?=.*warlock)(?=.*undead).*$/i,
     subname : "Undead Patron",
     source : [["RtHW", 0]],
-    spellcastingExtra : ["bane", "blindness/deafness", "phantasmal force", "ray of sickness", "speak with dead", "summon undead", "greater invisibility", "phantasmal killer", "antilife shell", "cloudkill"],
     features : {
         "subclassfeature3" : {
             name : "Form of Dread",
             source : [["RtHW", 0]],
             minlevel : 3,
+			spellcastingExtra : ["bane", "blindness/deafness", "phantasmal force", "ray of sickness", "speak with dead", "summon undead", "greater invisibility", "phantasmal killer", "antilife shell", "cloudkill"],
+			spellcastingExtraApplyNonconform: true,
             description : desc([
                 "As a Bonus Action, I transform for 1 minute (ends early if Incapacitated or ended).",
                 "I gain 1d10 + my Warlock level in Temp HP and Immunity to the Frightened condition.",
@@ -1359,10 +1404,10 @@ MagicItemsList["harkons bite"] = {
     type : "wondrous item",
     rarity : "uncommon",
     attunement : true,
-	cursed : true,
     prerequisite : "Requires attunement by a Humanoid",
     description : "While wearing this necklace, I gain a +1 bonus to ability checks and saving throws. Curse: I am cursed upon attunement (removable only if Harkon Lukas dies). While cursed, I become a Werewolf under the DM's control during the night of a full moon.",
-    descriptionFull : "A dire wolf’s tooth dangles from this simple cord necklace. You gain a +1 bonus to ability checks and saving throws while you wear this necklace.\n\nCurse. This necklace is cursed. Attuning to the necklace curses you; this curse can’t be removed until Harkon Lukas dies. As long as you remain cursed, you become a Werewolf serving Harkon Lukas under the DM’s control during the night of a full moon.",
+    descriptionFull : "A dire wolf’s tooth dangles from this simple cord necklace. You gain a +1 bonus to ability checks and saving throws while you wear this necklace." + 
+	"\n   " + toUni("Curse") + ". This necklace is cursed. Attuning to the necklace curses you; this curse can’t be removed until Harkon Lukas dies. As long as you remain cursed, you become a Werewolf serving Harkon Lukas under the DM’s control during the night of a full moon.",
     addMod : [
         { type : "skill", field : "All", mod : 1, text : "I gain a +1 bonus to all ability checks." },
 		{ type : "save", field : "All", mod : 1, text : "I gain a +1 bonus to all saving throws." },
