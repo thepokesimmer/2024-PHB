@@ -1231,9 +1231,17 @@ FeatsList["living shadow"] = {
     source : [["RtHW", 33]],
     type : "dark gift",
     prerequisite : "Ravenloft Campaign",
-    description : "I learn Mage Hand (cast without components). When I make a melee attack as part of the Attack or Magic action, I can increase my reach for that attack by 10 ft (PB/LR). If I roll a 1 on a D20 Test, I make a Wis save (DC 13+PB). On a fail, I'm Incapacitated until my next turn starts, then I must act per the Shadow's Will table.",
-    descriptionFull : "The shadow you cast is animate and ever-present - sometimes it even acts according to its own will.\nYou gain the following features.\n\nGrasping Shadow. You learn the Mage Hand spell and can cast it without spell components. Intelligence, Wisdom or Charisma is your spellcasting ability for this spell (choose when you select this feat).\n\nLengthened Strike. When you make a melee attack roll as part of the Attack or Magic action on your turn, you can increase your reach for that attack by 10 feet, as your shadow stretches to aid you. You can use this feature a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.\n\nOminous Will. Immediately after you make a D20 Test and roll a 1 on the d20, your shadow attempts to exert its will. Make a Wisdom saving throw (DC 13 plus your Proficiency Bonus). On a failed save, you have the Incapacitated condition until the start of your next turn, at which point you must roll on the Shadow's Will table to determine what you do during that turn.\n\nSHADOW'S WILL (1d8)\n 1 - You don't take any action or a Bonus Action, and you use all your movement to move. Roll 1d4 for the direction: 1, north; 2, east; 3, south; 4, west.\n 2-6 - You don't move or take a Bonus Action, and you take the Attack action to make one melee attack against a random creature within reach. If none are within reach, you take no action.\n 7-8 - You have the Prone condition, and your turn ends.",
-    spellcastingAbility : [4, 5, 6],
+    description : "I learn Mage Hand (cast without components). When I make a melee attack as part of the Attack or Magic action, I can increase my reach for that attack by 10 ft (PB/LR). If I roll a 1 on a D20 Test, I make a Wis save (DC 13+PB). On a fail, I'm Incapacitated until my next turn starts, then I must act per the Shadow's Will table. (See Notes Page)",
+    descriptionFull : "The shadow you cast is animate and ever-present - sometimes it even acts according to its own will.\nYou gain the following features.\n\nGrasping Shadow. You learn the Mage Hand spell and can cast it without spell components. Intelligence, Wisdom or Charisma is your spellcasting ability for this spell (choose when you select this feat).\n\nLengthened Strike. When you make a melee attack roll as part of the Attack or Magic action on your turn, you can increase your reach for that attack by 10 feet, as your shadow stretches to aid you. You can use this feature a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.\n\nOminous Will. Immediately after you make a D20 Test and roll a 1 on the d20, your shadow attempts to exert its will. Make a Wisdom saving throw (DC 13 plus your Proficiency Bonus). On a failed save, you have the Incapacitated condition until the start of your next turn, at which point you must roll on the Shadow's Will table to determine what you do during that turn.(See Notes Page)",
+    toNotesPage : [{
+		name : "SHADOW'S WILL (1d8)",
+		note : [
+			"***1*** - You don't take any action or a Bonus Action, and you use all your movement to move. Roll 1d4 for the direction: 1, north; 2, east; 3, south; 4, west.",
+			"***2-6*** - You don't move or take a Bonus Action, and you take the Attack action to make one melee attack against a random creature within reach. If none are within reach, you take no action.",
+			"***7-8*** - You have the Prone condition, and your turn ends.",
+		],
+	}],		
+	spellcastingAbility : [4, 5, 6],
 	spellcastingBonus : [{
         name : "Grasping Shadow",
         spells : ["mage hand"],
@@ -1280,7 +1288,18 @@ FeatsList["second skin"] = {
     type : "dark gift",
     prerequisite : "Ravenloft Campaign",
     description : "I always have Alter Self prepared. I can cast it 1/Long Rest without a spell slot, components, or Concentration. I can also cast it using slots. Involuntary Change: Upon encountering my catalyst, I make a Cha save (DC 13+PB) or immediately cast Alter Self via this feature (or be Stunned until my next turn starts if already used).",
-    descriptionFull : "There is another side of you that most people never see: a beast, a terrifying avenger, or a walking nightmare. You gain the following features.\n\nAlternate Form. You always have the Alter Self spell prepared. You can cast it without a spell slot or spell components, and you must finish a Long Rest before you can cast it in this way again. You can also cast it using spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).\nWhen you cast Alter Self without a spell slot using this feature, it doesn't require Concentration.\n\nInvoluntary Change. Certain circumstances can involuntarily trigger your transformation. When you select this feat, roll on the Change Catalyst table to determine what triggers your change.\nAfter you experience the catalyst, at the start of your next turn, make a Charisma saving throw (DC 13 plus your Proficiency Bonus). On a failed save, you immediately use Alternate Form to cast Alter Self without a spell slot. If you've already expended the use of that feature, you instead have the Stunned condition until the start of your next turn.\n\nCHANGE CATALYST (1d6)\n 1 - Seeing a particular phase of the moon\n 2 - Smelling the scent of a certain type of flower\n 3 - Hearing temple bells ringing\n 4 - Hearing a particular melody\n 5 - Touching pure silver with your bare skin\n 6 - Seeing someone who resembles a specific individual",
+    descriptionFull : "There is another side of you that most people never see: a beast, a terrifying avenger, or a walking nightmare. You gain the following features.\n\nAlternate Form. You always have the Alter Self spell prepared. You can cast it without a spell slot or spell components, and you must finish a Long Rest before you can cast it in this way again. You can also cast it using spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).\nWhen you cast Alter Self without a spell slot using this feature, it doesn't require Concentration.\n\nInvoluntary Change. Certain circumstances can involuntarily trigger your transformation. When you select this feat, roll on the Change Catalyst table (See Notes Page) to determine what triggers your change.\nAfter you experience the catalyst, at the start of your next turn, make a Charisma saving throw (DC 13 plus your Proficiency Bonus). On a failed save, you immediately use Alternate Form to cast Alter Self without a spell slot. If you've already expended the use of that feature, you instead have the Stunned condition until the start of your next turn.",
+	toNotesPage : [{
+		name : "CHANGE CATALYST (1d6)",
+		note : [
+			"***1*** - Seeing a particular phase of the moon",
+			"***2*** - Smelling the scent of a certain type of flower",
+			"***3*** - Hearing temple bells ringing",
+			"***4*** - Hearing a particular melody",
+			"***5*** - Touching pure silver with your bare skin",
+			"***6*** - Seeing someone who resembles a specific individual",
+		],
+	}],		
     spellcastingAbility : [4, 5, 6],
 	spellcastingBonus : [{
         name : "Alternate Form",
