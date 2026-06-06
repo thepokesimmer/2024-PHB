@@ -91,6 +91,9 @@ AddSubClass("artificer", "reanimator", {
             "bloated" : {
                 name : "Bloated",
                 prerequisite : "Artificer 9",
+				prereqeval: function(v) {
+					return classes.known.artificer.level >= 9;
+				},
                 description : desc([
                     "The companion becomes Large. On a Dreadful Swipe hit, it pushes a Large",
                     "or smaller target up to 10 ft away. I add my Int mod to its Death Burst damage."
@@ -99,6 +102,9 @@ AddSubClass("artificer", "reanimator", {
             "gaunt" : {
                 name : "Gaunt",
                 prerequisite : "Artificer 9",
+				prereqeval: function(v) {
+					return classes.known.artificer.level >= 9;
+				},
                 description : desc([
                     "The companion's Speed and Climb Speed become 45 ft (can spider climb).",
                     "Creatures of my choice starting their turn in a 10-ft Emanation from it",
@@ -108,6 +114,9 @@ AddSubClass("artificer", "reanimator", {
             "moist" : {
                 name : "Moist",
                 prerequisite : "Artificer 9",
+				prereqeval: function(v) {
+					return classes.known.artificer.level >= 9;
+				},
                 description : desc([
                     "The companion gains a Swim Speed equal to its Speed and can squeeze through",
                     "1-inch gaps. Attackers within 10 ft that hit it take Acid damage equal to my Int mod."
@@ -1176,7 +1185,7 @@ FeatsList["echoing soul"] = {
     description : "I gain proficiency in 2 skills and 1 language of my choice. I also choose one skill I'm proficient in to gain Expertise, which I can change at the end of a Long Rest. If I roll a 1 on a D20 Test, I must make a Con save (DC 13 + PB) or be Incapacitated and have my Speed halved until the end of my next turn.",
     descriptionFull : "You experience echoes from a past or alternate life.\nYou gain the following features.\n\nChannelled Prowess. You have proficiency in two skills of your choice.\nIn addition, choose one skill you have proficiency in. You gain Expertise in that skill. Whenever you finish a Long Rest you can change your choice of for this benefit.\n\nInherent Tongues. You know one additional language of your choice, which you choose from the language tables in the Player's Handbook.\n\nIntrusive Echoes. Immediately after you make a D20 Test and roll a 1 on the d20, memories and sensations from your soul's other life threaten to overtake you. Make a Constitution saving throw (DC 13 plus your Proficiency Bonus). On a failed save, you have the Incapacitated condition until the end of your next turn. While you are Incapacitated in this way, your Speed is halved.",
     skillstxt : "Choose two skills to gain proficiency in, and choose one skill you are proficient in to gain Expertise (can be changed on a Long Rest)",
-    languageProfs : [1],
+    languageProfs : ["Inherent Tongues", 1],
     savetxt : {
         text : ["Con save (DC 13+PB) on a D20 Test roll of 1 or Incapacitated (Speed halved)"]
     }
@@ -1331,7 +1340,7 @@ FeatsList["symbiotic being"] = {
     description : "I gain 1 language and 1 skill prof. Reaction: When I fail a save, I can expend 1 Hit Die and add the roll to the save (PB/LR). If I roll a 1 on a D20 Test, I make a Cha save (DC 13 + PB) or become Charmed by my symbiote for 1d12 hrs, forced to follow its commands (save repeats on taking damage).",
     descriptionFull : "A second being resides within your body, offering knowledge and assistance while furthering its own agenda. You gain the following features.\n\nEntwined Existence. The symbiote can’t be targeted. If you die, so does your symbiote. If you are returned to life, your symbiote also revives.\n\nSecond Mind. You gain proficiency in one of the following skills: Arcana, Deception, History, Intimidation, Insight, Investigation, Nature, Religion, Perception, or Persuasion. You also know one additional language of your choice, chosen from the language tables in the Player’s Handbook.\n\nSustained Symbiosis. When you fail a saving throw, you can take a Reaction and expend one of your Hit Dice. Roll the die and add the number rolled to the saving throw, potentially turning the failure into a success.\n\nYou can use this feature a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.\n\nSymbiotic Agenda. Immediately after you make a D20 Test and roll a 1 on the d20, your symbiote attempts to assert control. Make a Charisma saving throw (DC 13 plus your Proficiency Bonus). On a failed save, you have the Charmed condition for 1d12 hours. While Charmed, you must try to follow the symbiote’s commands and further its goals, as determined by the DM. Whenever you take damage, you can repeat this save, ending the effect on a success.\n\nAt the DM’s discretion, you might make this saving throw whenever you act contrary to the symbiote’s agenda.",
     skillstxt : "Choose one from: Arcana, Deception, History, Insight, Intimidation, Investigation, Nature, Perception, Persuasion, or Religion",
-    languageProfs : [1],
+    languageProfs : ["Second Mind", 1],
     action : [["reaction", "Sustained Symbiosis"]],
 	limfeaname : "Sustained Symbiosis",
     usages : "Proficiency bonus per ",
