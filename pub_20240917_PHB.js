@@ -25994,7 +25994,8 @@ CreatureList["animated object (tsm)"] = {
         ability: 1,
         damage: [1, 4, "Force"],
         range: "Melee (5 ft)",
-        useSpellMod: [["bard"], ["sorcerer"], ["wizard"]],
+		modifiers: ["max(oInt|oWis|oCha)-Str", ""],
+		description: "",
     }],
 };
 CreatureList["animated object (l)"] = {
@@ -26027,8 +26028,9 @@ CreatureList["animated object (l)"] = {
         name: "Slam",
         ability: 1,
         damage: [2, 6, "Force"],
+		modifiers: ["max(oInt|oWis|oCha)-Str", "max(oInt|oWis|oCha)"],
         range: "Melee (5 ft)",
-        useSpellMod: [["bard"], ["sorcerer"], ["wizard"]],
+		description: "",
     }],
 };
 CreatureList["animated object (h)"] = {
@@ -26061,8 +26063,9 @@ CreatureList["animated object (h)"] = {
         name: "Slam",
         ability: 1,
         damage: [2, 12, "Force"],
+		modifiers: ["max(oInt|oWis|oCha)-Str", "max(oInt|oWis|oCha)"],
         range: "Melee (5 ft)",
-        useSpellMod: [["bard"], ["sorcerer"], ["wizard"]],
+        description: "",
     }],
 };
 //Otherworldly Steed Stat Blocks
@@ -26111,10 +26114,9 @@ CreatureList["otherworldly steed (2)"] = {
         name: "Otherworldly Slam",
         ability: 1,
         damage: [1, 8, "Rad(C)/Psy(Fy)/Nec(Fd)"],
-        modifiers: ["", 2],
+		modifiers: ["max(oInt|oWis|oCha)-Str", 2],
         abilitytodamage : false,
         range: "Melee (5 ft)",
-		useSpellMod : ["paladin"],
     }],
 };
 CreatureList["otherworldly steed (3)"] = {
@@ -26162,10 +26164,9 @@ CreatureList["otherworldly steed (3)"] = {
         name: "Otherworldly Slam",
         ability: 1,
         damage: [1, 8, "Rad(C)/Psy(Fy)/Nec(Fd)"],
-        modifiers: ["", 3],
+		modifiers: ["max(oInt|oWis|oCha)-Str", 3],
         abilitytodamage : false,
         range: "Melee (5 ft)",
-		useSpellMod : ["paladin"],
     }],
 };
 CreatureList["otherworldly steed (4)"] = {
@@ -26213,10 +26214,9 @@ CreatureList["otherworldly steed (4)"] = {
         name: "Otherworldly Slam",
         ability: 1,
         damage: [1, 8, "Rad(C)/Psy(Fy)/Nec(Fd)"],
-        modifiers: ["", 4],
+		modifiers: ["max(oInt|oWis|oCha)-Str", 4],
         abilitytodamage : false,
         range: "Melee (5 ft)",
-		useSpellMod : ["paladin"],
     }],
 };
 CreatureList["otherworldly steed (5)"] = {
@@ -26264,10 +26264,9 @@ CreatureList["otherworldly steed (5)"] = {
         name: "Otherworldly Slam",
         ability: 1,
         damage: [1, 8, "Rad(C)/Psy(Fy)/Nec(Fd)"],
-        modifiers: ["", 5],
+		modifiers: ["max(oInt|oWis|oCha)-Str", 5],
         abilitytodamage : false,
         range: "Melee (5 ft)",
-		useSpellMod : ["paladin"],
     }],
 };
 //Giant Insect Stat Blocks
@@ -26310,18 +26309,16 @@ CreatureList["giant insect (4)"] = {
         name: "Poison Jab",
         ability: 1,
         damage: [1, 6, "Piercing"],
-        modifiers: ["", "Str+4"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 4],
         range: "Melee (10 ft)",
         description: "+1d4 Poison damage",
-        useSpellMod: ["druid"]
     }, {
         name: "Web Bolt (Spider Only)",
         ability: 1,
         damage: [1, 10, "Bludgeoning"],
-        modifiers: ["", "Str+4"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 4],
         range: "Ranged (60 ft)",
         description: "The target's Speed is reduced to 0 until the start of the insect's next turn",
-        useSpellMod: ["druid"]
     }],
 };
 CreatureList["giant insect (5)"] = {
@@ -26363,18 +26360,16 @@ CreatureList["giant insect (5)"] = {
         name: "Poison Jab",
         ability: 1,
         damage: [1, 6, "Piercing"],
-        modifiers: ["", "Str+5"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 5],
         range: "Melee (10 ft)",
         description: "+1d4 Poison damage",
-        useSpellMod: ["druid"]
     }, {
         name: "Web Bolt (Spider Only)",
         ability: 1,
         damage: [1, 10, "Bludgeoning"],
-        modifiers: ["", "Str+5"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 5],
         range: "Ranged (60 ft)",
         description: "The target's Speed is reduced to 0 until the start of the insect's next turn",
-        useSpellMod: ["druid"]
     }],
 };
 CreatureList["giant insect (6)"] = {
@@ -26416,18 +26411,16 @@ CreatureList["giant insect (6)"] = {
         name: "Poison Jab",
         ability: 1,
         damage: [1, 6, "Piercing"],
-        modifiers: ["", "Str+6"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 6],
         range: "Melee (10 ft)",
         description: "+1d4 Poison damage",
-        useSpellMod: ["druid"]
     }, {
         name: "Web Bolt (Spider Only)",
         ability: 1,
         damage: [1, 10, "Bludgeoning"],
-        modifiers: ["", "Str+6"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 6],
         range: "Ranged (60 ft)",
         description: "The target's Speed is reduced to 0 until the start of the insect's next turn",
-        useSpellMod: ["druid"]
     }],
 };
 CreatureList["giant insect (7)"] = {
@@ -26469,18 +26462,16 @@ CreatureList["giant insect (7)"] = {
         name: "Poison Jab",
         ability: 1,
         damage: [1, 6, "Piercing"],
-        modifiers: ["", "Str+7"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 7],
         range: "Melee (10 ft)",
         description: "+1d4 Poison damage",
-        useSpellMod: ["druid"]
     }, {
         name: "Web Bolt (Spider Only)",
         ability: 1,
         damage: [1, 10, "Bludgeoning"],
-        modifiers: ["", "Str+7"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 7],
         range: "Ranged (60 ft)",
         description: "The target's Speed is reduced to 0 until the start of the insect's next turn",
-        useSpellMod: ["druid"]
     }],
 };
 CreatureList["giant insect (8)"] = {
@@ -26522,18 +26513,16 @@ CreatureList["giant insect (8)"] = {
         name: "Poison Jab",
         ability: 1,
         damage: [1, 6, "Piercing"],
-        modifiers: ["", "Str+8"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 8],
         range: "Melee (10 ft)",
         description: "+1d4 Poison damage",
-        useSpellMod: ["druid"]
     }, {
         name: "Web Bolt (Spider Only)",
         ability: 1,
         damage: [1, 10, "Bludgeoning"],
-        modifiers: ["", "Str+8"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 8],
         range: "Ranged (60 ft)",
         description: "The target's Speed is reduced to 0 until the start of the insect's next turn",
-        useSpellMod: ["druid"]
     }],
 };
 CreatureList["giant insect (9)"] = {
@@ -26575,18 +26564,16 @@ CreatureList["giant insect (9)"] = {
         name: "Poison Jab",
         ability: 1,
         damage: [1, 6, "Piercing"],
-        modifiers: ["", "Str+9"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 9],
         range: "Melee (10 ft)",
         description: "+1d4 Poison damage",
-        useSpellMod: ["druid"]
     }, {
         name: "Web Bolt (Spider Only)",
         ability: 1,
         damage: [1, 10, "Bludgeoning"],
-        modifiers: ["", "Str+9"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 9],
         range: "Ranged (60 ft)",
         description: "The target's Speed is reduced to 0 until the start of the insect's next turn",
-        useSpellMod: ["druid"]
     }],
 };
 //Aberrant Spirit Stat Blocks
@@ -26627,26 +26614,23 @@ CreatureList["aberrant spirit (4)"] = {
         ability: 1,
         damage: [1, 10, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+4"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 4],
         description: "The target can't regain Hit Points until the start of the spirit's next turn.",
-        useSpellMod: [["warlock"], ["wizard"]],
     }, {
         name: "Eye Ray (Beholderkin Only)",
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "150 ft",
-        modifiers: ["", "Int+4"],
+        modifiers: ["max(oInt|oWis|oCha)-Int", 4],
         description: "",
-        useSpellMod: [["warlock"], ["wizard"]],
     }, {
         name: "Psychic Slam (Mind Flayer Only)",
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Int+4"],
+        modifiers: ["max(oInt|oWis|oCha)-Int", 4],
         description: "",
-        useSpellMod: [["warlock"], ["wizard"]],
-    }],
+    }]
 };
 CreatureList["aberrant spirit (5)"] = {
     name: "Aberrant Spirit (lvl 5)",
@@ -26685,26 +26669,23 @@ CreatureList["aberrant spirit (5)"] = {
         ability: 1,
         damage: [1, 10, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+5"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 5],
         description: "The target can't regain Hit Points until the start of the spirit's next turn.",
-        useSpellMod: [["warlock"], ["wizard"]],
     }, {
         name: "Eye Ray (Beholderkin Only)",
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "150 ft",
-        modifiers: ["", "Int+5"],
+        modifiers: ["max(oInt|oWis|oCha)-Int", 5],
         description: "",
-        useSpellMod: [["warlock"], ["wizard"]],
     }, {
         name: "Psychic Slam (Mind Flayer Only)",
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Int+5"],
+        modifiers: ["max(oInt|oWis|oCha)-Int", 5],
         description: "",
-        useSpellMod: [["warlock"], ["wizard"]],
-    }],
+    }]
 };
 CreatureList["aberrant spirit (6)"] = {
     name: "Aberrant Spirit (lvl 6)",
@@ -26743,26 +26724,23 @@ CreatureList["aberrant spirit (6)"] = {
         ability: 1,
         damage: [1, 10, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+6"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 6],
         description: "The target can't regain Hit Points until the start of the spirit's next turn.",
-        useSpellMod: [["warlock"], ["wizard"]],
     }, {
         name: "Eye Ray (Beholderkin Only)",
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "150 ft",
-        modifiers: ["", "Int+6"],
+        modifiers: ["max(oInt|oWis|oCha)-Int", 6],
         description: "",
-        useSpellMod: [["warlock"], ["wizard"]],
     }, {
         name: "Psychic Slam (Mind Flayer Only)",
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Int+6"],
+        modifiers: ["max(oInt|oWis|oCha)-Int", 6],
         description: "",
-        useSpellMod: [["warlock"], ["wizard"]],
-    }],
+    }]
 };
 CreatureList["aberrant spirit (7)"] = {
     name: "Aberrant Spirit (lvl 7)",
@@ -26801,26 +26779,23 @@ CreatureList["aberrant spirit (7)"] = {
         ability: 1,
         damage: [1, 10, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+7"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 7],
         description: "The target can't regain Hit Points until the start of the spirit's next turn.",
-        useSpellMod: [["warlock"], ["wizard"]],
     }, {
         name: "Eye Ray (Beholderkin Only)",
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "150 ft",
-        modifiers: ["", "Int+7"],
+        modifiers: ["max(oInt|oWis|oCha)-Int", 7],
         description: "",
-        useSpellMod: [["warlock"], ["wizard"]],
     }, {
         name: "Psychic Slam (Mind Flayer Only)",
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Int+7"],
+        modifiers: ["max(oInt|oWis|oCha)-Int", 7],
         description: "",
-        useSpellMod: [["warlock"], ["wizard"]],
-    }],
+    }]
 };
 CreatureList["aberrant spirit (8)"] = {
     name: "Aberrant Spirit (lvl 8)",
@@ -26859,26 +26834,23 @@ CreatureList["aberrant spirit (8)"] = {
         ability: 1,
         damage: [1, 10, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+8"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 8],
         description: "The target can't regain Hit Points until the start of the spirit's next turn.",
-        useSpellMod: [["warlock"], ["wizard"]],
     }, {
         name: "Eye Ray (Beholderkin Only)",
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "150 ft",
-        modifiers: ["", "Int+8"],
+        modifiers: ["max(oInt|oWis|oCha)-Int", 8],
         description: "",
-        useSpellMod: [["warlock"], ["wizard"]],
     }, {
         name: "Psychic Slam (Mind Flayer Only)",
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Int+8"],
+        modifiers: ["max(oInt|oWis|oCha)-Int", 8],
         description: "",
-        useSpellMod: [["warlock"], ["wizard"]],
-    }],
+    }]
 };
 CreatureList["aberrant spirit (9)"] = {
     name: "Aberrant Spirit (lvl 9)",
@@ -26917,26 +26889,23 @@ CreatureList["aberrant spirit (9)"] = {
         ability: 1,
         damage: [1, 10, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+9"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 9],
         description: "The target can't regain Hit Points until the start of the spirit's next turn.",
-        useSpellMod: [["warlock"], ["wizard"]],
     }, {
         name: "Eye Ray (Beholderkin Only)",
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "150 ft",
-        modifiers: ["", "Int+9"],
+        modifiers: ["max(oInt|oWis|oCha)-Int", 9],
         description: "",
-        useSpellMod: [["warlock"], ["wizard"]],
     }, {
         name: "Psychic Slam (Mind Flayer Only)",
         ability: 4,
         damage: [1, 8, "Psychic"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Int+9"],
+        modifiers: ["max(oInt|oWis|oCha)-Int", 9],
         description: "",
-        useSpellMod: [["warlock"], ["wizard"]],
-    }],
+    }]
 };
 //Beast Spirit Stat Blocks
 CreatureList["bestial spirit (lw)(2)"] = {
@@ -26976,9 +26945,8 @@ CreatureList["bestial spirit (lw)(2)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+2"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 2],
         description: "",
-        useSpellMod: [["druid"], ["ranger"]],
     }],
 };
 CreatureList["bestial spirit (lw)(3)"] = {
@@ -27018,9 +26986,8 @@ CreatureList["bestial spirit (lw)(3)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+3"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 3],
         description: "",
-        useSpellMod: [["druid"], ["ranger"]],
     }],
 };
 CreatureList["bestial spirit (lw)(4)"] = {
@@ -27060,9 +27027,8 @@ CreatureList["bestial spirit (lw)(4)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+4"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 4],
         description: "",
-        useSpellMod: [["druid"], ["ranger"]],
     }],
 };
 CreatureList["bestial spirit (lw)(5)"] = {
@@ -27102,9 +27068,8 @@ CreatureList["bestial spirit (lw)(5)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+5"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 5],
         description: "",
-        useSpellMod: [["druid"], ["ranger"]],
     }],
 };
 CreatureList["bestial spirit (lw)(6)"] = {
@@ -27144,9 +27109,8 @@ CreatureList["bestial spirit (lw)(6)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+6"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 6],
         description: "",
-        useSpellMod: [["druid"], ["ranger"]],
     }],
 };
 CreatureList["bestial spirit (lw)(7)"] = {
@@ -27186,9 +27150,8 @@ CreatureList["bestial spirit (lw)(7)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+7"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 7],
         description: "",
-        useSpellMod: [["druid"], ["ranger"]],
     }],
 };
 CreatureList["bestial spirit (lw)(8)"] = {
@@ -27228,9 +27191,8 @@ CreatureList["bestial spirit (lw)(8)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+8"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 8],
         description: "",
-        useSpellMod: [["druid"], ["ranger"]],
     }],
 };
 CreatureList["bestial spirit (lw)(9)"] = {
@@ -27270,9 +27232,8 @@ CreatureList["bestial spirit (lw)(9)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+9"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 9],
         description: "",
-        useSpellMod: [["druid"], ["ranger"]],
     }],
 };
 CreatureList["bestial spirit (a)(2)"] = {
@@ -27308,9 +27269,8 @@ CreatureList["bestial spirit (a)(2)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+2"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 2],
         description: "",
-        useSpellMod: ["druid", "ranger"],
     }],
 };
 CreatureList["bestial spirit (a)(3)"] = {
@@ -27346,9 +27306,8 @@ CreatureList["bestial spirit (a)(3)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+3"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 3],
         description: "",
-        useSpellMod: [["druid"], ["ranger"]],
     }],
 };
 CreatureList["bestial spirit (a)(4)"] = {
@@ -27384,9 +27343,8 @@ CreatureList["bestial spirit (a)(4)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+4"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 4],
         description: "",
-        useSpellMod: [["druid"], ["ranger"]],
     }],
 };
 CreatureList["bestial spirit (a)(5)"] = {
@@ -27422,9 +27380,8 @@ CreatureList["bestial spirit (a)(5)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+5"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 5],
         description: "",
-        useSpellMod: [["druid"], ["ranger"]],
     }],
 };
 CreatureList["bestial spirit (a)(6)"] = {
@@ -27460,9 +27417,8 @@ CreatureList["bestial spirit (a)(6)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+6"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 6],
         description: "",
-        useSpellMod: [["druid"], ["ranger"]],
     }],
 };
 CreatureList["bestial spirit (a)(7)"] = {
@@ -27498,9 +27454,8 @@ CreatureList["bestial spirit (a)(7)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+7"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 7],
         description: "",
-        useSpellMod: [["druid"], ["ranger"]],
     }],
 };
 CreatureList["bestial spirit (a)(8)"] = {
@@ -27536,9 +27491,8 @@ CreatureList["bestial spirit (a)(8)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+8"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 8],
         description: "",
-        useSpellMod: [["druid"], ["ranger"]],
     }],
 };
 CreatureList["bestial spirit (a)(9)"] = {
@@ -27574,9 +27528,8 @@ CreatureList["bestial spirit (a)(9)"] = {
         ability: 1,
         damage: [1, 8, "Piercing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+9"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 9],
         description: "",
-        useSpellMod: [["druid"], ["ranger"]],
     }],
 };
 //Celestial Spirit Stat Blocks
@@ -27614,8 +27567,8 @@ CreatureList["celestial spirit (a)(5)"] = {
         ability: 2,
         damage: [2, 6, "Radiant"],
         range: "Ranged (600 ft)",
-        modifiers: ["", "Dex+5"],
-        useSpellMod: [["cleric"], ["paladin"]],
+		modifiers: ["max(oInt|oWis|oCha)-Dex", 5],
+		description: "",
     }],
 };
 CreatureList["celestial spirit (a)(6)"] = {
@@ -27652,8 +27605,8 @@ CreatureList["celestial spirit (a)(6)"] = {
         ability: 2,
         damage: [2, 6, "Radiant"],
         range: "Ranged (600 ft)",
-        modifiers: ["", "Dex+6"],
-        useSpellMod: [["cleric"], ["paladin"]],
+		modifiers: ["max(oInt|oWis|oCha)-Dex", 6],
+		description: "",
     }],
 };
 CreatureList["celestial spirit (a)(7)"] = {
@@ -27690,8 +27643,8 @@ CreatureList["celestial spirit (a)(7)"] = {
         ability: 2,
         damage: [2, 6, "Radiant"],
         range: "Ranged (600 ft)",
-        modifiers: ["", "Dex+7"],
-        useSpellMod: [["cleric"], ["paladin"]],
+		modifiers: ["max(oInt|oWis|oCha)-Dex", 7],
+		description: "",
     }],
 };
 CreatureList["celestial spirit (a)(8)"] = {
@@ -27728,8 +27681,8 @@ CreatureList["celestial spirit (a)(8)"] = {
         ability: 2,
         damage: [2, 6, "Radiant"],
         range: "Ranged (600 ft)",
-        modifiers: ["", "Dex+8"],
-        useSpellMod: [["cleric"], ["paladin"]],
+		modifiers: ["max(oInt|oWis|oCha)-Dex", 8],
+		description: "",
     }],
 };
 CreatureList["celestial spirit (a)(9)"] = {
@@ -27766,8 +27719,8 @@ CreatureList["celestial spirit (a)(9)"] = {
         ability: 2,
         damage: [2, 6, "Radiant"],
         range: "Ranged (600 ft)",
-        modifiers: ["", "Dex+9"],
-        useSpellMod: [["cleric"], ["paladin"]],
+		modifiers: ["max(oInt|oWis|oCha)-Dex", 9],
+		description: "",
     }],
 };
 CreatureList["celestial spirit (d)(5)"] = {
@@ -27804,9 +27757,8 @@ CreatureList["celestial spirit (d)(5)"] = {
         ability: 1,
         damage: [1, 10, "Radiant"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+5"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 5],
         description: "The spirit choose either itself or another creature it can see within 10 ft and grants 1d10 Temp HP.",
-        useSpellMod: [["cleric"], ["paladin"]],
     }],
 };
 CreatureList["celestial spirit (d)(6)"] = {
@@ -27843,9 +27795,8 @@ CreatureList["celestial spirit (d)(6)"] = {
         ability: 1,
         damage: [1, 10, "Radiant"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+6"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 6],
         description: "The spirit choose either itself or another creature it can see within 10 ft and grants 1d10 Temp HP.",
-        useSpellMod: [["cleric"], ["paladin"]],
     }],
 };
 CreatureList["celestial spirit (d)(7)"] = {
@@ -27872,14 +27823,18 @@ CreatureList["celestial spirit (d)(7)"] = {
     proficiencyBonus: 2,
     proficiencyBonusLinked: true,
     attacksAction: 3,
+	actions: [{
+        name: "Healing Touch (1/Day)",
+        description: "The spirit touches another creature. The target regains Hit Points equal to 2d8+6",
+        joinString: "\n   ",
+    }],
     attacks: [{
         name: "Radiant Mace (Defender Only)",
         ability: 1,
         damage: [1, 10, "Radiant"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+7"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 7],
         description: "The spirit choose either itself or another creature it can see within 10 ft and grants 1d10 Temp HP.",
-        useSpellMod: [["cleric"], ["paladin"]],
     }],
 };
 CreatureList["celestial spirit (d)(8)"] = {
@@ -27908,7 +27863,7 @@ CreatureList["celestial spirit (d)(8)"] = {
     attacksAction: 4,
     actions: [{
         name: "Healing Touch (1/Day)",
-        description: "The spirit touches another creature. The target regains Hit Points equal to 2d8+8",
+        description: "The spirit touches another creature. The target regains Hit Points equal to 2d8+6",
         joinString: "\n   ",
     }],
     attacks: [{
@@ -27916,9 +27871,8 @@ CreatureList["celestial spirit (d)(8)"] = {
         ability: 1,
         damage: [1, 10, "Radiant"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+8"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 8],
         description: "The spirit choose either itself or another creature it can see within 10 ft and grants 1d10 Temp HP.",
-        useSpellMod: [["cleric"], ["paladin"]],
     }],
 };
 CreatureList["celestial spirit (d)(9)"] = {
@@ -27947,7 +27901,7 @@ CreatureList["celestial spirit (d)(9)"] = {
     attacksAction: 4,
     actions: [{
         name: "Healing Touch (1/Day)",
-        description: "The spirit touches another creature. The target regains Hit Points equal to 2d8+9",
+        description: "The spirit touches another creature. The target regains Hit Points equal to 2d8+6",
         joinString: "\n   ",
     }],
     attacks: [{
@@ -27955,9 +27909,8 @@ CreatureList["celestial spirit (d)(9)"] = {
         ability: 1,
         damage: [1, 10, "Radiant"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+9"],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 9],
         description: "The spirit choose either itself or another creature it can see within 10 ft and grants 1d10 Temp HP.",
-        useSpellMod: [["cleric"], ["paladin"]],
     }],
 };
 //Construct Spirit Stat Blocks
@@ -28005,8 +27958,8 @@ CreatureList["construct spirit (4)"] = {
         ability: 1,
         damage: [1, 8, "Bludgeoning"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+4"],
-        useSpellMod: [["artificer"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 4],
+		description: "",
     }],
 };
 CreatureList["construct spirit (5)"] = {
@@ -28053,8 +28006,8 @@ CreatureList["construct spirit (5)"] = {
         ability: 1,
         damage: [1, 8, "Bludgeoning"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+5"],
-        useSpellMod: [["artificer"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 5],
+		description: "",
     }],
 };
 CreatureList["construct spirit (6)"] = {
@@ -28101,8 +28054,8 @@ CreatureList["construct spirit (6)"] = {
         ability: 1,
         damage: [1, 8, "Bludgeoning"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+6"],
-        useSpellMod: [["artificer"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 6],
+		description: "",
     }],
 };
 CreatureList["construct spirit (7)"] = {
@@ -28149,8 +28102,8 @@ CreatureList["construct spirit (7)"] = {
         ability: 1,
         damage: [1, 8, "Bludgeoning"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+7"],
-        useSpellMod: [["artificer"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 7],
+		description: "",
     }],
 };
 CreatureList["construct spirit (8)"] = {
@@ -28197,8 +28150,8 @@ CreatureList["construct spirit (8)"] = {
         ability: 1,
         damage: [1, 8, "Bludgeoning"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+8"],
-        useSpellMod: [["artificer"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 8],
+		description: "",
     }],
 };
 CreatureList["construct spirit (9)"] = {
@@ -28245,8 +28198,8 @@ CreatureList["construct spirit (9)"] = {
         ability: 1,
         damage: [1, 8, "Bludgeoning"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Str+9"],
-        useSpellMod: [["artificer"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 9],
+		description: "",
     }],
 };
 //Draconic Spirit Stat Block
@@ -28286,8 +28239,8 @@ CreatureList["draconic spirit (5)"] = {
         ability: 1,
         damage: [1, 6, "Piercing"],
         range: "Melee (10 ft)",
-        modifiers: ["", "Str+5"],
-        useSpellMod: ["wizard"]
+		modifiers: ["max(oInt|oWis|oCha)-Str", 5],
+        description: "",
     }, {
         name: "Breath Weapon",
         ability: 1,
@@ -28295,7 +28248,8 @@ CreatureList["draconic spirit (5)"] = {
         damage: [2, 6, "Ac/Cd/Fi/Li/Po"],
         abilitytodamage: false,
         range: "30 ft Cone",
-        useSpellMod: ["wizard"]
+        modifiers: ["max(oInt|oWis|oCha)-Str", ""],
+        description: "Dex Save, Half dmg on Success",
     }],
 };
 CreatureList["draconic spirit (6)"] = {
@@ -28334,8 +28288,8 @@ CreatureList["draconic spirit (6)"] = {
         ability: 1,
         damage: [1, 6, "Piercing"],
         range: "Melee (10 ft)",
-        modifiers: ["", "Str+6"],
-        useSpellMod: ["wizard"]
+		modifiers: ["max(oInt|oWis|oCha)-Str", 6],
+        description: "",
     }, {
         name: "Breath Weapon",
         ability: 1,
@@ -28343,7 +28297,8 @@ CreatureList["draconic spirit (6)"] = {
         damage: [2, 6, "Ac/Cd/Fi/Li/Po"],
         abilitytodamage: false,
         range: "30 ft Cone",
-        useSpellMod: ["wizard"]
+        modifiers: ["max(oInt|oWis|oCha)-Str", ""],
+        description: "Dex Save, Half dmg on Success",
     }],
 };
 CreatureList["draconic spirit (7)"] = {
@@ -28382,8 +28337,8 @@ CreatureList["draconic spirit (7)"] = {
         ability: 1,
         damage: [1, 6, "Piercing"],
         range: "Melee (10 ft)",
-        modifiers: ["", "Str+7"],
-        useSpellMod: ["wizard"]
+		modifiers: ["max(oInt|oWis|oCha)-Str", 7],
+        description: "",
     }, {
         name: "Breath Weapon",
         ability: 1,
@@ -28391,7 +28346,8 @@ CreatureList["draconic spirit (7)"] = {
         damage: [2, 6, "Ac/Cd/Fi/Li/Po"],
         abilitytodamage: false,
         range: "30 ft Cone",
-        useSpellMod: ["wizard"]
+        modifiers: ["max(oInt|oWis|oCha)-Str", ""],
+        description: "Dex Save, Half dmg on Success",
     }],
 };
 CreatureList["draconic spirit (8)"] = {
@@ -28430,8 +28386,8 @@ CreatureList["draconic spirit (8)"] = {
         ability: 1,
         damage: [1, 6, "Piercing"],
         range: "Melee (10 ft)",
-        modifiers: ["", "Str+8"],
-        useSpellMod: ["wizard"]
+		modifiers: ["max(oInt|oWis|oCha)-Str", 8],
+        description: "",
     }, {
         name: "Breath Weapon",
         ability: 1,
@@ -28439,7 +28395,8 @@ CreatureList["draconic spirit (8)"] = {
         damage: [2, 6, "Ac/Cd/Fi/Li/Po"],
         abilitytodamage: false,
         range: "30 ft Cone",
-        useSpellMod: ["wizard"]
+        modifiers: ["max(oInt|oWis|oCha)-Str", ""],
+        description: "Dex Save, Half dmg on Success",
     }],
 };
 CreatureList["draconic spirit (9)"] = {
@@ -28478,8 +28435,8 @@ CreatureList["draconic spirit (9)"] = {
         ability: 1,
         damage: [1, 6, "Piercing"],
         range: "Melee (10 ft)",
-        modifiers: ["", "Str+9"],
-        useSpellMod: ["wizard"]
+		modifiers: ["max(oInt|oWis|oCha)-Str", 9],
+        description: "",
     }, {
         name: "Breath Weapon",
         ability: 1,
@@ -28487,7 +28444,8 @@ CreatureList["draconic spirit (9)"] = {
         damage: [2, 6, "Ac/Cd/Fi/Li/Po"],
         abilitytodamage: false,
         range: "30 ft Cone",
-        useSpellMod: ["wizard"]
+        modifiers: ["max(oInt|oWis|oCha)-Str", ""],
+        description: "Dex Save, Half dmg on Success",
     }],
 };
 //Elemental Spirit Stat Blocks
@@ -28528,8 +28486,8 @@ CreatureList["elemental spirit (4)"] = {
         ability: 1,
         damage: [1, 10, "Blud(E)/Cd(W)/Li(A)/Fi(F)"],
         range: "Melee (10 ft)",
-        modifiers: ["", "Str+4"],
-        useSpellMod: [["druid"], ["ranger"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 4],
+		description: "",
     }],
 };
 CreatureList["elemental spirit (5)"] = {
@@ -28569,8 +28527,8 @@ CreatureList["elemental spirit (5)"] = {
         ability: 1,
         damage: [1, 10, "Blud(E)/Cd(W)/Li(A)/Fi(F)"],
         range: "Melee (10 ft)",
-        modifiers: ["", "Str+5"],
-        useSpellMod: [["druid"], ["ranger"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 5],
+		description: "",
     }],
 };
 CreatureList["elemental spirit (6)"] = {
@@ -28610,8 +28568,8 @@ CreatureList["elemental spirit (6)"] = {
         ability: 1,
         damage: [1, 10, "Blud(E)/Cd(W)/Li(A)/Fi(F)"],
         range: "Melee (10 ft)",
-        modifiers: ["", "Str+6"],
-        useSpellMod: [["druid"], ["ranger"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 6],
+		description: "",
     }],
 };
 CreatureList["elemental spirit (7)"] = {
@@ -28651,8 +28609,8 @@ CreatureList["elemental spirit (7)"] = {
         ability: 1,
         damage: [1, 10, "Blud(E)/Cd(W)/Li(A)/Fi(F)"],
         range: "Melee (10 ft)",
-        modifiers: ["", "Str+7"],
-        useSpellMod: [["druid"], ["ranger"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 7],
+		description: "",
     }],
 };
 CreatureList["elemental spirit (8)"] = {
@@ -28692,8 +28650,8 @@ CreatureList["elemental spirit (8)"] = {
         ability: 1,
         damage: [1, 10, "Blud(E)/Cd(W)/Li(A)/Fi(F)"],
         range: "Melee (10 ft)",
-        modifiers: ["", "Str+8"],
-        useSpellMod: [["druid"], ["ranger"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 8],
+		description: "",
     }],
 };
 CreatureList["elemental spirit (9)"] = {
@@ -28733,8 +28691,8 @@ CreatureList["elemental spirit (9)"] = {
         ability: 1,
         damage: [1, 10, "Blud(E)/Cd(W)/Li(A)/Fi(F)"],
         range: "Melee (10 ft)",
-        modifiers: ["", "Str+9"],
-        useSpellMod: [["druid"], ["ranger"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Str", 9],
+		description: "",
     }],
 };
 //Fey Spirit Stat Blocks
@@ -28778,8 +28736,8 @@ CreatureList["fey spirit (3)"] = {
         ability: 2,
         damage: [2, 6, "Force"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+3"],
-        useSpellMod: [["druid"], ["ranger"], ["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 3],
+		description: "",
     }],
 };
 CreatureList["fey spirit (4)"] = {
@@ -28822,8 +28780,8 @@ CreatureList["fey spirit (4)"] = {
         ability: 2,
         damage: [2, 6, "Force"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+4"],
-        useSpellMod: [["druid"], ["ranger"], ["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 4],
+		description: "",
     }],
 };
 CreatureList["fey spirit (5)"] = {
@@ -28866,8 +28824,8 @@ CreatureList["fey spirit (5)"] = {
         ability: 2,
         damage: [2, 6, "Force"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+5"],
-        useSpellMod: [["druid"], ["ranger"], ["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 5],
+		description: "",
     }],
 };
 CreatureList["fey spirit (6)"] = {
@@ -28910,8 +28868,8 @@ CreatureList["fey spirit (6)"] = {
         ability: 2,
         damage: [2, 6, "Force"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+6"],
-        useSpellMod: [["druid"], ["ranger"], ["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 6],
+		description: "",
     }],
 };
 CreatureList["fey spirit (7)"] = {
@@ -28954,8 +28912,8 @@ CreatureList["fey spirit (7)"] = {
         ability: 2,
         damage: [2, 6, "Force"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+7"],
-        useSpellMod: [["druid"], ["ranger"], ["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 7],
+		description: "",
     }],
 };
 CreatureList["fey spirit (8)"] = {
@@ -28998,8 +28956,8 @@ CreatureList["fey spirit (8)"] = {
         ability: 2,
         damage: [2, 6, "Force"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+8"],
-        useSpellMod: [["druid"], ["ranger"], ["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 8],
+		description: "",
     }],
 };
 CreatureList["fey spirit (9)"] = {
@@ -29042,8 +29000,8 @@ CreatureList["fey spirit (9)"] = {
         ability: 2,
         damage: [2, 6, "Force"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+9"],
-        useSpellMod: [["druid"], ["ranger"], ["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 9],
+		description: "",
     }],
 };
 //Fiendish Spirit Stat Blocks
@@ -29088,8 +29046,8 @@ CreatureList["fiendish spirit (demon)(6)"] = {
         ability: 2,
         damage: [1, 12, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+6"],
-        useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 6],
+		description: "",
     }],
 };
 CreatureList["fiendish spirit (demon)(7)"] = {
@@ -29133,8 +29091,8 @@ CreatureList["fiendish spirit (demon)(7)"] = {
         ability: 2,
         damage: [1, 12, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+7"],
-        useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 7],
+		description: "",
     }],
 };
 CreatureList["fiendish spirit (demon)(8)"] = {
@@ -29178,8 +29136,8 @@ CreatureList["fiendish spirit (demon)(8)"] = {
         ability: 2,
         damage: [1, 12, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+8"],
-        useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 8],
+		description: "",
     }],
 };
 CreatureList["fiendish spirit (demon)(9)"] = {
@@ -29223,8 +29181,8 @@ CreatureList["fiendish spirit (demon)(9)"] = {
         ability: 2,
         damage: [1, 12, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+9"],
-        useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 9],
+		description: "",
     }],
 };
 CreatureList["fiendish spirit (devil)(6)"] = {
@@ -29268,8 +29226,8 @@ CreatureList["fiendish spirit (devil)(6)"] = {
         ability: 2,
         damage: [2, 6, "Fire"],
         range: "Melee/Ranged (5 ft/150 ft)",
-        modifiers: ["", "Dex+6"],
-        useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 6],
+		description: "",
     }],
 };
 CreatureList["fiendish spirit (devil)(7)"] = {
@@ -29313,8 +29271,8 @@ CreatureList["fiendish spirit (devil)(7)"] = {
         ability: 2,
         damage: [2, 6, "Fire"],
         range: "Melee/Ranged (5 ft/150 ft)",
-        modifiers: ["", "Dex+7"],
-        useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 7],
+		description: "",
     }],
 };
 CreatureList["fiendish spirit (devil)(8)"] = {
@@ -29358,8 +29316,8 @@ CreatureList["fiendish spirit (devil)(8)"] = {
         ability: 2,
         damage: [2, 6, "Fire"],
         range: "Melee/Ranged (5 ft/150 ft)",
-        modifiers: ["", "Dex+8"],
-        useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 8],
+		description: "",
     }],
 };
 CreatureList["fiendish spirit (devil)(9)"] = {
@@ -29403,8 +29361,8 @@ CreatureList["fiendish spirit (devil)(9)"] = {
         ability: 2,
         damage: [2, 6, "Fire"],
         range: "Melee/Ranged (5 ft/150 ft)",
-        modifiers: ["", "Dex+9"],
-        useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 9],
+		description: "",
     }],
 };
 CreatureList["fiendish spirit (yugoloth)(6)"] = {
@@ -29444,9 +29402,8 @@ CreatureList["fiendish spirit (yugoloth)(6)"] = {
         ability: 2,
         damage: [1, 8, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+6"],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 6],
         description: "Immediately after the attack hits or misses, the spirit can teleport up to 30 feet to an unoccupied space it can see.",
-        useSpellMod: [["warlock"], ["wizard"]],
     }],
 };
 CreatureList["fiendish spirit (yugoloth)(7)"] = {
@@ -29486,9 +29443,8 @@ CreatureList["fiendish spirit (yugoloth)(7)"] = {
         ability: 2,
         damage: [1, 8, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+7"],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 7],
         description: "Immediately after the attack hits or misses, the spirit can teleport up to 30 feet to an unoccupied space it can see.",
-        useSpellMod: [["warlock"], ["wizard"]],
     }],
 };
 CreatureList["fiendish spirit (yugoloth)(8)"] = {
@@ -29528,9 +29484,8 @@ CreatureList["fiendish spirit (yugoloth)(8)"] = {
         ability: 2,
         damage: [1, 8, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+8"],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 8],
         description: "Immediately after the attack hits or misses, the spirit can teleport up to 30 feet to an unoccupied space it can see.",
-        useSpellMod: [["warlock"], ["wizard"]],
     }],
 };
 CreatureList["fiendish spirit (yugoloth)(9)"] = {
@@ -29570,9 +29525,8 @@ CreatureList["fiendish spirit (yugoloth)(9)"] = {
         ability: 2,
         damage: [1, 8, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+9"],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 9],
         description: "Immediately after the attack hits or misses, the spirit can teleport up to 30 feet to an unoccupied space it can see.",
-        useSpellMod: [["warlock"], ["wizard"]],
     }],
 };
 //Undead Spirit Stat Blocks
@@ -29607,8 +29561,8 @@ CreatureList["undead spirit (skeletal)(3)"] = {
         ability: 2,
         damage: [2, 4, "Necrotic"],
         range: "Ranged (150 ft)",
-        modifiers: ["", "Dex+3"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 3],
+		description: "",
     }],
 };
 CreatureList["undead spirit (skeletal)(4)"] = {
@@ -29642,8 +29596,8 @@ CreatureList["undead spirit (skeletal)(4)"] = {
         ability: 2,
         damage: [2, 4, "Necrotic"],
         range: "Ranged (150 ft)",
-        modifiers: ["", "Dex+4"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 4],
+		description: "",
     }],
 };
 CreatureList["undead spirit (skeletal)(5)"] = {
@@ -29677,8 +29631,8 @@ CreatureList["undead spirit (skeletal)(5)"] = {
         ability: 2,
         damage: [2, 4, "Necrotic"],
         range: "Ranged (150 ft)",
-        modifiers: ["", "Dex+5"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 5],
+		description: "",
     }],
 };
 CreatureList["undead spirit (skeletal)(6)"] = {
@@ -29712,8 +29666,8 @@ CreatureList["undead spirit (skeletal)(6)"] = {
         ability: 2,
         damage: [2, 4, "Necrotic"],
         range: "Ranged (150 ft)",
-        modifiers: ["", "Dex+6"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 6],
+		description: "",
     }],
 };
 CreatureList["undead spirit (skeletal)(7)"] = {
@@ -29747,8 +29701,8 @@ CreatureList["undead spirit (skeletal)(7)"] = {
         ability: 2,
         damage: [2, 4, "Necrotic"],
         range: "Ranged (150 ft)",
-        modifiers: ["", "Dex+7"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 7],
+		description: "",
     }],
 };
 CreatureList["undead spirit (skeletal)(8)"] = {
@@ -29782,8 +29736,8 @@ CreatureList["undead spirit (skeletal)(8)"] = {
         ability: 2,
         damage: [2, 4, "Necrotic"],
         range: "Ranged (150 ft)",
-        modifiers: ["", "Dex+8"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 8],
+		description: "",
     }],
 };
 CreatureList["undead spirit (skeletal)(9)"] = {
@@ -29817,8 +29771,8 @@ CreatureList["undead spirit (skeletal)(9)"] = {
         ability: 2,
         damage: [2, 4, "Necrotic"],
         range: "Ranged (150 ft)",
-        modifiers: ["", "Dex+9"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 9],
+		description: "",
     }],
 };
 CreatureList["undead spirit (putrid/ghostly)(3)"] = {
@@ -29861,17 +29815,15 @@ CreatureList["undead spirit (putrid/ghostly)(3)"] = {
         ability: 2,
         damage: [1, 8, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+3"],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 3],
         description: "On a hit, the target has the Frightened condition until the end of its next turn.",
-		useSpellMod: [["warlock"], ["wizard"]],
     }, {
         name: "Rotting Claw (Putrid Only)",
         ability: 2,
         damage: [1, 6, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+3"],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 3],
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
-		useSpellMod: [["warlock"], ["wizard"]],
     }],
 };
 CreatureList["undead spirit (putrid/ghostly)(4)"] = {
@@ -29914,16 +29866,14 @@ CreatureList["undead spirit (putrid/ghostly)(4)"] = {
         ability: 2,
         damage: [1, 8, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+4"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 4],
         description: "On a hit, the target has the Frightened condition until the end of its next turn.",
     }, {
         name: "Rotting Claw (Putrid Only)",
         ability: 2,
         damage: [1, 6, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+4"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 4],
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
     }],
 };
@@ -29967,16 +29917,14 @@ CreatureList["undead spirit (putrid/ghostly)(5)"] = {
         ability: 2,
         damage: [1, 8, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+5"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 5],
         description: "On a hit, the target has the Frightened condition until the end of its next turn.",
     }, {
         name: "Rotting Claw (Putrid Only)",
         ability: 2,
         damage: [1, 6, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+5"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 5],
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
     }],
 };
@@ -30020,16 +29968,14 @@ CreatureList["undead spirit (putrid/ghostly)(6)"] = {
         ability: 2,
         damage: [1, 8, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+6"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 6],
         description: "On a hit, the target has the Frightened condition until the end of its next turn.",
     }, {
         name: "Rotting Claw (Putrid Only)",
         ability: 2,
         damage: [1, 6, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+6"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 6],
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
     }],
 };
@@ -30073,16 +30019,14 @@ CreatureList["undead spirit (putrid/ghostly)(7)"] = {
         ability: 2,
         damage: [1, 8, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+7"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 7],
         description: "On a hit, the target has the Frightened condition until the end of its next turn.",
     }, {
         name: "Rotting Claw (Putrid Only)",
         ability: 2,
         damage: [1, 6, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+7"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 7],
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
     }],
 };
@@ -30126,16 +30070,14 @@ CreatureList["undead spirit (putrid/ghostly)(8)"] = {
         ability: 2,
         damage: [1, 8, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+8"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 8],
         description: "On a hit, the target has the Frightened condition until the end of its next turn.",
     }, {
         name: "Rotting Claw (Putrid Only)",
         ability: 2,
         damage: [1, 6, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+8"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 8],
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
     }],
 };
@@ -30179,20 +30121,14 @@ CreatureList["undead spirit (putrid/ghostly)(9)"] = {
         ability: 2,
         damage: [1, 8, "Necrotic"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+9"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 9],
         description: "On a hit, the target has the Frightened condition until the end of its next turn.",
     }, {
         name: "Rotting Claw (Putrid Only)",
         ability: 2,
         damage: [1, 6, "Slashing"],
         range: "Melee (5 ft)",
-        modifiers: ["", "Dex+9"],
-		useSpellMod: [["warlock"], ["wizard"]],
+        modifiers: ["max(oInt|oWis|oCha)-Dex", 9],
         description: "On a hit, if the target has the Poisoned condition, it has the Paralyzed condition until the end of its next turn.",
     }],
 };
-
-
-
-
