@@ -1,5 +1,5 @@
 var iFileName = "pub_20251111_FRHoF.js";
-RequiredSheetVersion("14.0.0", "24.1.0");
+RequiredSheetVersion("24.0.0", "24.1.0");
 SourceList["FR:HoF"] = {
     name: "Forgotten Realms: Heroes of Faerûn",
     abbreviation: "FR:HoF",
