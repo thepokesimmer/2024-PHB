@@ -1,10 +1,11 @@
 var iFileName = "pub_20260616_RtHW.js";
 RequiredSheetVersion("24.0.0", "24.1.0");
-SourceList.RtHW = {
+SourceList["R:tHW"] = {
     name : "Ravenloft: The Horrors Within",
-    abbreviation : "RtHW",
+    abbreviation : "R:tHW",
     abbreviationSpellsheet : "RH",
-    group : "Primary Sources",
+    group: "Campaign Sourcebooks",
+    campaignSetting: "Ravenloft",
     url : "https://marketplace.dndbeyond.com/category/6015000",
     date : "2026/06/03"
 };
@@ -20,11 +21,11 @@ SourceList.BoH = {
 AddSubClass("artificer", "reanimator", {
     regExpSearch : /^(?=.*artificer)(?=.*(reanimator)).*$/i,
     subname : "Reanimator",
-    source : [["RtHW", 15]],
+    source : [["R:tHW", 15]],
     features : {
         "subclassfeature3" : {
             name : "Reanimator's Skill Set",
-            source : [["RtHW", 15]],
+            source : [["R:tHW", 15]],
             minlevel : 3,
 			spellcastingExtra : ["false life", "spare the dying", "witch bolt", "blindness/deafness", "enhance ability", "animate dead", "lightning bolt", "blight", "death ward", "antilife shell", "raise dead"],
             description : desc([
@@ -33,7 +34,7 @@ AddSubClass("artificer", "reanimator", {
                 "The target regains HP equal to my Artificer level. Creatures in a 10-ft Emanation",
                 "around the target must make a Dex save (Spell DC) or take Lightning damage (half on save)."
             ]),
-            toolProfs : [["Alchemist's supplies", "Alch. supplies (or other)"]],
+            toolProfs : [["Alchemist's supplies", "Int"], 1],
             usages : "Intelligence modifier per ",
             usagescalc : "event.value = Math.max(1, What('Int Mod'));",
             recovery : "long rest",
@@ -44,7 +45,7 @@ AddSubClass("artificer", "reanimator", {
         },
         "subclassfeature3.1" : {
             name : "Reanimated Companion",
-            source : [["RtHW", 15]],
+            source : [["R:tHW", 15]],
             minlevel : 3,
             description : desc([
                 "Using artisan's tools, I take a Magic action to create a Reanimated Companion in 5 ft.",
@@ -66,7 +67,7 @@ AddSubClass("artificer", "reanimator", {
         },
         "subclassfeature5" : {
             name : "Strange Modifications",
-            source : [["RtHW", 16]],
+            source : [["R:tHW", 16]],
             minlevel : 5,
             description : desc([
                 "When I create my Reanimated Companion, it gains modifications of my choice.",
@@ -125,7 +126,7 @@ AddSubClass("artificer", "reanimator", {
         },
         "subclassfeature9" : {
             name : "Improved Reanimation",
-            source : [["RtHW", 16]],
+            source : [["R:tHW", 16]],
             minlevel : 9,
             description : desc([
                 "The damage of my companion's Death Burst increases to 4d4.",
@@ -135,7 +136,7 @@ AddSubClass("artificer", "reanimator", {
         },
         "subclassfeature15" : {
             name : "Refined Reanimation",
-            source : [["RtHW", 16]],
+            source : [["R:tHW", 16]],
             minlevel : 15,
             description : desc([
                 "I can cast Raise Dead 1/Long Rest without a slot/Material comps (using artisan's tools).",
@@ -166,11 +167,11 @@ AddSubClass("artificer", "reanimator", {
 });
 CreatureList["reanimated companion"] = {
     name : "Reanimated Companion",
-    source : [["RtHW", 15]],
+    source : [["R:tHW", 15]],
     size : 3,
     type : "Undead",
     alignment : "Neutral",
-    ac : 10,
+    ac : "10+oInt",
     hp : 20,
     hd : [3, 8],
     speed : "30 ft",
@@ -198,7 +199,7 @@ CreatureList["reanimated companion"] = {
     }],
     traits : [{
         name : "Death Burst",
-        description : "When it dies, it explodes. Each creature in a 10-ft Emanation makes a Dex save (Spell DC) or takes 2d6 (4d4 at level 9) Necrotic damage, half on success."
+        description : "When it dies, it explodes. Each creature in a 10-ft Emanation makes a Dex save (Spell DC) or takes 2d4 (4d4 at level 9) Necrotic damage, half on success."
     }, {
         name : "Lightning Absorption",
         description : "Whenever the companion is subjected to Lightning damage, it regains a number of Hit Points equal to the Lightning damage dealt."
@@ -207,11 +208,11 @@ CreatureList["reanimated companion"] = {
 AddSubClass("bard", "college of spirits", {
     regExpSearch : /^(?=.*(college|bard|minstrel|troubadour|jongleur))(?=.*spirits?).*$/i,
     subname : "College of Spirits",
-    source : [["RtHW", 17]],
+    source : [["R:tHW", 17]],
     features : {
         "subclassfeature3" : {
             name : "Channeler",
-            source : [["RtHW", 17]],
+            source : [["R:tHW", 17]],
             minlevel : 3,
             description : desc([
                 "I learn the Guidance cantrip; its range is 60 ft when I cast it.",
@@ -239,7 +240,7 @@ AddSubClass("bard", "college of spirits", {
         },
         "subclassfeature3.1" : {
             name : "Spirits from Beyond",
-            source : [["RtHW", 17]],
+            source : [["R:tHW", 17]],
             minlevel : 3,
             description : desc([
                 "When I use a Bonus Action to give Bardic Inspiration, I can roll the die to channel a spirit.",
@@ -274,7 +275,7 @@ AddSubClass("bard", "college of spirits", {
         },
         "subclassfeature6" : {
             name : "Empowered Channeling",
-            source : [["RtHW", 18]],
+            source : [["R:tHW", 18]],
             minlevel : 6,
             description : desc([
                 "Power from Beyond: 1/turn when I cast a Bard spell (slot) that deals dmg or restores HP,",
@@ -295,7 +296,7 @@ AddSubClass("bard", "college of spirits", {
         },
         "subclassfeature14" : {
             name : "Mystical Connection",
-            source : [["RtHW", 18]],
+            source : [["R:tHW", 18]],
             minlevel : 14,
             description : desc([
                 "Whenever I roll on the Spirits from Beyond table, I can roll the die twice and choose.",
@@ -307,11 +308,11 @@ AddSubClass("bard", "college of spirits", {
 AddSubClass("cleric", "grave domain", {
     regExpSearch : /^(?=.*(cleric|priest|clergy|acolyte))(?=.*grave).*$/i,
     subname : "Grave Domain",
-    source : [["RtHW", 19]],
+    source : [["R:tHW", 19]],
     features : {
         "subclassfeature3" : {
             name : "Circle of Mortality",
-            source : [["RtHW", 19]],
+            source : [["R:tHW", 19]],
             minlevel : 3,
 			spellcastingExtra : ["detect evil and good", "false life", "gentle repose", "ray of enfeeblement", "revivify", "vampiric touch", "blight", "death ward", "dispel evil and good", "raise dead"],
             description : desc([
@@ -343,7 +344,7 @@ AddSubClass("cleric", "grave domain", {
         },
         "subclassfeature3.1" : {
             name : "Channel Divinity: Path to the Grave",
-            source : [["RtHW", 19]],
+            source : [["R:tHW", 19]],
             minlevel : 3,
             description : desc([
                 "As a Bonus Action, I can expend a Channel Divinity to curse a creature in 30 ft.",
@@ -355,7 +356,7 @@ AddSubClass("cleric", "grave domain", {
         },
         "subclassfeature6" : {
             name : "Sentinel at Death's Door",
-            source : [["RtHW", 20]],
+            source : [["R:tHW", 20]],
             minlevel : 6,
             description : desc([
                 "As a Reaction when me or a Bloodied ally in 60 ft is hit by an attack, I halve its dmg.",
@@ -368,7 +369,7 @@ AddSubClass("cleric", "grave domain", {
         },
         "subclassfeature17" : {
             name : "Divine Reaper",
-            source : [["RtHW", 20]],
+            source : [["R:tHW", 20]],
             minlevel : 17,
             description : desc([
                 "***Enhanced Necromancy***: If I cast a \u22645th-lvl Necromancy or Grave Domain spell on",
@@ -386,11 +387,11 @@ AddSubClass("cleric", "grave domain", {
 AddSubClass("ranger", "hollow warden", {
     regExpSearch : /^(?=.*ranger)((?=.*hollow)(?=.*warden)).*$/i,
     subname : "Hollow Warden",
-    source : [["RtHW", 20]],
+    source : [["R:tHW", 20]],
     features : {
         "subclassfeature3" : {
             name : "Wrath of the Wild",
-            source : [["RtHW", 21]],
+            source : [["R:tHW", 21]],
             minlevel : 3,
 			spellcastingExtra : ["wrathful smite", "alter self", "phantom steed", "dominate beast", "steel wind strike"],
             description : desc([
@@ -412,7 +413,7 @@ AddSubClass("ranger", "hollow warden", {
         },
         "subclassfeature7" : {
             name : "Hungering Might",
-            source : [["RtHW", 21]],
+            source : [["R:tHW", 21]],
             minlevel : 7,
             description : desc([
                 "I gain a bonus to my Constitution saving throws equal to my Wis mod (minimum +1).",
@@ -428,7 +429,7 @@ AddSubClass("ranger", "hollow warden", {
         },
         "subclassfeature11" : {
             name : "Rot and Violence",
-            source : [["RtHW", 21]],
+            source : [["R:tHW", 21]],
             minlevel : 11,
             description : desc([
                 "My Wrath of the Wild transformation improves, gaining the following benefits:",
@@ -440,7 +441,7 @@ AddSubClass("ranger", "hollow warden", {
         },
         "subclassfeature15" : {
             name : "Ancient Might",
-            source : [["RtHW", 21]],
+            source : [["R:tHW", 21]],
             minlevel : 15,
             description : desc([
                 "I have Immunity to the Exhaustion condition.",
@@ -459,11 +460,11 @@ AddSubClass("ranger", "hollow warden", {
 AddSubClass("rogue", "phantom", {
     regExpSearch : /^(?=.*rogue)(?=.*phantom).*$/i,
     subname : "Phantom",
-    source : [["RtHW", 21]],
+    source : [["R:tHW", 21]],
     features : {
         "subclassfeature3" : {
             name : "Wails from the Grave",
-            source : [["RtHW", 21]],
+            source : [["R:tHW", 21]],
             minlevel : 3,
             description : desc([
                 "When I deal Sneak Attack damage, I can target a 2nd creature I see in 30 ft.",
@@ -479,7 +480,7 @@ AddSubClass("rogue", "phantom", {
         },
         "subclassfeature3.1" : {
             name : "Whispers of the Dead",
-            source : [["RtHW", 21]],
+            source : [["R:tHW", 21]],
             minlevel : 3,
             description : desc([
                 "After a Short or Long Rest, I gain 1 skill or tool proficiency of my choice.",
@@ -488,7 +489,7 @@ AddSubClass("rogue", "phantom", {
         },
         "subclassfeature9" : {
             name : "Tokens of the Departed",
-            source : [["RtHW", 22]],
+            source : [["R:tHW", 22]],
             minlevel : 9,
             description : desc([
                 "Reaction when a creature in 30 ft dies: gain a soul trinket (Tiny object).",
@@ -509,7 +510,7 @@ AddSubClass("rogue", "phantom", {
         },
         "subclassfeature9.1" : {
             name : "Voice of Death",
-            source : [["RtHW", 22]],
+            source : [["R:tHW", 22]],
             minlevel : 9,
             description : desc([
                 "I can cast Speak with Dead 1/Short or Long Rest without a spell slot/components.",
@@ -537,7 +538,7 @@ AddSubClass("rogue", "phantom", {
         },
         "subclassfeature13" : {
             name : "Ghost Walk",
-            source : [["RtHW", 23]],
+            source : [["R:tHW", 23]],
             minlevel : 13,
             description : desc([
                 "As a Bonus Action, I assume a spectral form for 10 minutes or until ended.",
@@ -551,7 +552,7 @@ AddSubClass("rogue", "phantom", {
         },
         "subclassfeature17" : {
             name : "Death's Friend",
-            source : [["RtHW", 23]],
+            source : [["R:tHW", 23]],
             minlevel : 17,
             description : desc([
                 "***Death's Lament***: When I use Wails from the Grave, I deal its necrotic damage",
@@ -564,11 +565,11 @@ AddSubClass("rogue", "phantom", {
 AddSubClass("sorcerer", "shadow sorcery", {
     regExpSearch : /^(?=.*sorcerer)(?=.*shadow).*$/i,
     subname : "Shadow Sorcery",
-    source : [["RtHW", 23]],
+    source : [["R:tHW", 23]],
     features : {
         "subclassfeature3" : {
             name : "Power of Shadow",
-            source : [["RtHW", 24]],
+            source : [["R:tHW", 24]],
             minlevel : 3,
 			spellcastingExtra : ["bane", "darkness", "inflict wounds", "pass without trace", "hunger of hadar", "nondetection", "greater invisibility", "phantasmal killer", "contagion", "creation"],
 			spellcastingExtraApplyNonconform: true,
@@ -586,7 +587,7 @@ AddSubClass("sorcerer", "shadow sorcery", {
         },
         "subclassfeature6" : {
             name : "Beasts of Ill Omen",
-            source : [["RtHW", 24]],
+            source : [["R:tHW", 24]],
             minlevel : 6,
             description : desc([
                 "For 3 Sorcery Points, I can cast Summon Beast as a Bonus Action without a spell slot",
@@ -617,7 +618,7 @@ AddSubClass("sorcerer", "shadow sorcery", {
         },
         "subclassfeature14" : {
             name : "Shadow Walk",
-            source : [["RtHW", 24]],
+            source : [["R:tHW", 24]],
             minlevel : 14,
             description : desc([
                 "While in Dim Light or Darkness, I can take a Bonus Action to teleport up to 120 ft",
@@ -627,7 +628,7 @@ AddSubClass("sorcerer", "shadow sorcery", {
         },
         "subclassfeature18" : {
             name : "Umbral Form",
-            source : [["RtHW", 24]],
+            source : [["R:tHW", 24]],
             minlevel : 18,
             description : desc([
                 "When I use Innate Sorcery, I can adopt a shadowy form until Innate Sorcery ends.",
@@ -644,11 +645,11 @@ AddSubClass("sorcerer", "shadow sorcery", {
 AddSubClass("warlock", "undead patron", {
     regExpSearch : /^(?=.*warlock)(?=.*undead).*$/i,
     subname : "Undead Patron",
-    source : [["RtHW", 24]],
+    source : [["R:tHW", 24]],
     features : {
         "subclassfeature3" : {
             name : "Form of Dread",
-            source : [["RtHW", 24]],
+            source : [["R:tHW", 24]],
             minlevel : 3,
 			spellcastingExtra : ["bane", "blindness/deafness", "phantasmal force", "ray of sickness", "speak with dead", "summon undead", "greater invisibility", "phantasmal killer", "antilife shell", "cloudkill"],
 			spellcastingExtraApplyNonconform: true,
@@ -666,7 +667,7 @@ AddSubClass("warlock", "undead patron", {
         },
         "subclassfeature6" : {
             name : "Grave Touched",
-            source : [["RtHW", 24]],
+            source : [["R:tHW", 24]],
             minlevel : 6,
             description : desc([
                 "Necrotic damage from my attacks, Warlock spells, and features ignores Resistance.",
@@ -680,7 +681,7 @@ AddSubClass("warlock", "undead patron", {
         },
         "subclassfeature10" : {
             name : "Necrotic Husk",
-            source : [["RtHW", 25]],
+            source : [["R:tHW", 25]],
             minlevel : 10,
             description : desc([
                 "I have Resistance to Necrotic damage; Immunity while in my Form of Dread.",
@@ -696,7 +697,7 @@ AddSubClass("warlock", "undead patron", {
         },
         "subclassfeature14" : {
             name : "Superior Dread",
-            source : [["RtHW", 25]],
+            source : [["R:tHW", 25]],
             minlevel : 14,
             description : desc([
                 "While using my Form of Dread, I gain the following additional benefits:",
@@ -713,7 +714,7 @@ AddSubClass("warlock", "undead patron", {
 BackgroundList["haunted one"] = {
     regExpSearch : /^(?=.*haunted)(?=.*one).*$/i,
     name : "Haunted One",
-    source : [["RtHW", 26]],
+    source : [["R:tHW", 26]],
     scorestxt : "+2 to one and +1 to another -or- +1 to all three: Constitution, Wisdom, and Charisma",
     skills : ["Arcana", "Survival"],
     toolProfs : [["Gaming set", 1]],
@@ -821,18 +822,13 @@ BackgroundList["haunted one"] = {
 };
 BackgroundFeatureList["haunted one"] = {
     description : "I am haunted by the events of my past. Whether it was a lone terrible incident or an accumulation of painful moments, I bear the unshakable weight of what happened to me. I’ve tried to bury it and run away from it, to no avail; it can’t be slain with a sword or banished via magic. Nevertheless, I persist.",
-	eval: function() {
-        AddString('Feat Note 1', 'Survivor or Dark Gift', '; ');
-    },
-    removeeval: function() {
-        RemoveString('Feat Note 1', 'Survivor or Dark Gift');
-    },
-    source : [["RtHW", 26]]
+	featsAdd: ["Survivor"],
+    source : [["R:tHW", 26]]
 };
 BackgroundList.investigator = {
     regExpSearch : /investigator/i,
     name : "Investigator",
-    source : [["RtHW", 26]],
+    source : [["R:tHW", 26]],
     scorestxt : "+2 to one and +1 to another -or- +1 to all three: Intelligence, Wisdom, and Charisma",
     skills : ["Insight", "Investigation"],
     toolProfs : ["Disguise kit"],
@@ -909,18 +905,13 @@ BackgroundList.investigator = {
 };
 BackgroundFeatureList.investigator = {
     description : "I relentlessly seek the truth. Perhaps I witnessed something remarkable or terrible and now desire to unravel its mystery, or maybe I’m motivated by universal justice and honesty. Whether the cases I’m embroiled in are local crimes or eldritch conspiracies, I’m driven to reveal what others would keep hidden.",
-	eval: function() {
-        AddString('Feat Note 1', 'Sharp Eye or Dark Gift', '; ');
-    },
-    removeeval: function() {
-        RemoveString('Feat Note 1', 'Sharp Eye or Dark Gift');
-    },
-    source : [["RtHW", 26]]
+	featsAdd: ["Sharp Eye"],
+    source : [["R:tHW", 26]]
 };
 BackgroundList["mist wanderer"] = {
     regExpSearch : /^(?=.*mist)(?=.*wanderer).*$/i,
     name : "Mist Wanderer",
-    source : [["RtHW", 27]],
+    source : [["R:tHW", 27]],
     scorestxt : "+2 to one and +1 to another -or- +1 to all three: Dexterity, Constitution, and Wisdom",
     skills : ["Stealth", "Survival"],
     toolProfs : [["Artisan's tools", 1]],
@@ -940,18 +931,13 @@ BackgroundList["mist wanderer"] = {
 };
 BackgroundFeatureList["mist wanderer"] = {
     description : "I once knew my home. But one day, the Mists rose and drew me into a Domain of Dread. Ever since, I have wandered between domains, braving the mercurial Mists as I search for a way home. My time in these cursed realms has changed me, yet I find solace in communities of fellow wanderers throughout the Mists.",
-	eval: function() {
-        AddString('Feat Note 1', 'Dark Gift', '; ');
-    },
-    removeeval: function() {
-        RemoveString('Feat Note 1', 'Dark Gift');
-    },
-    source : [["RtHW", 27]]
+	featsAdd: [{ type: "dark gift" }],
+    source : [["R:tHW", 27]]
 };
 BackgroundList["spirit medium"] = {
     regExpSearch : /^(?=.*spirit)(?=.*medium).*$/i,
     name : "Spirit Medium",
-    source : [["RtHW", 27]],
+    source : [["R:tHW", 27]],
     scorestxt : "+2 to one and +1 to another -or- +1 to all three: Constitution, Intelligence, and Wisdom",
     skills : ["Insight", "Religion"],
     toolProfs : [["Gaming set", 1]],
@@ -975,19 +961,14 @@ BackgroundList["spirit medium"] = {
 };
 BackgroundFeatureList["spirit medium"] = {
     description : "Through strange rituals and fateful encounters, I've discovered that I bear a unique connection to the spirits of the dead and damned. My body is a conduit for such spirits, granting me prescient insight from beyond. But these spirits' intentions aren't always innocent, and their gifts come at a haunting cost.",
-	eval: function() {
-        AddString('Feat Note 1', 'Dark Gift', '; ');
-    },
-    removeeval: function() {
-        RemoveString('Feat Note 1', 'Dark Gift');
-    },
-    source : [["RtHW", 27]]
+	featsAdd: [{ type: "dark gift" }],
+    source : [["R:tHW", 27]]
 };
 //Species
 RaceList.dhampir = {
     regExpSearch : /dhampir/i,
     name : "Dhampir",
-    source : [["BoH", ""], ["RtHW", 28]],
+    source : [["BoH", ""], ["R:tHW", 28]],
     plural : "Dhampirs",
     size : [3, 4],
     speed : {
@@ -999,7 +980,7 @@ RaceList.dhampir = {
     weaponOptions : [{
         regExpSearch : /^(?=.*vampiric)(?=.*bite).*$/i,
         name : "Vampiric Bite",
-        source : [["BoH", ""], ["RtHW", 28]],
+        source : [["BoH", ""], ["R:tHW", 28]],
         ability : 3,
         type : "Natural",
         damage : [1, 4, "piercing"],
@@ -1026,7 +1007,7 @@ RaceList.dhampir = {
 RaceList.hexblood = {
     regExpSearch : /hexblood/i,
     name : "Hexblood",
-    source : [["RtHW", 29]],
+    source : [["R:tHW", 29]],
     plural : "Hexbloods",
     size : [3, 4],
     speed : {
@@ -1062,7 +1043,7 @@ RaceList.hexblood = {
 RaceList.lupin = {
     regExpSearch : /lupin/i,
     name : "Lupin",
-    source : [["RtHW", 30]],
+    source : [["R:tHW", 30]],
     plural : "Lupins",
     size : [3, 4],
     speed : {
@@ -1073,7 +1054,7 @@ RaceList.lupin = {
     weaponOptions : [{
         regExpSearch : /howl/i,
         name : "Howl",
-        source : [["RtHW", 30]],
+        source : [["R:tHW", 30]],
         ability : 3,
         type : "Natural",
         damage : ["Wis save", "", "Disadv"],
@@ -1120,7 +1101,7 @@ RaceList.lupin = {
 RaceList.reborn = {
     regExpSearch : /reborn/i,
     name : "Reborn",
-    source : [["RtHW", 31]],
+    source : [["R:tHW", 31]],
     plural : "Reborn",
     size : [3, 4], 
     speed : {
@@ -1145,7 +1126,7 @@ RaceList.reborn = {
 //Origin Feats
 FeatsList["sharp eye"] = {
     name : "Sharp Eye",
-    source : [["RtHW", 32]],
+    source : [["R:tHW", 32]],
     type : "origin",
     description : "When I take the Search or Study action, I can give myself Advantage on any ability check made as part of it. I can use this PB times per Long Rest. If the check fails, the use isn't expended.",
     descriptionFull : "When you take the Search or Study action, you can give yourself Advantage on any ability check made as part of that action. You can use this feature a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest. If the check fails, the use of this feature isn't expended.",
@@ -1155,7 +1136,7 @@ FeatsList["sharp eye"] = {
 };
 FeatsList.survivor = {
     name : "Survivor",
-    source : [["RtHW", 32]],
+    source : [["R:tHW", 32]],
     type : "origin",
     description : "Whenever I roll Initiative, I can reroll the d20 if I roll a 9 or lower, but must use the new roll. When I fail a save to avoid or end the Charmed or Frightened condition, I can take a Reaction to add my PB to the roll (1/Long Rest).",
     descriptionFull : "You gain the following benefits.\n\nHypervigilance. Whenever you roll Initiative, you can reroll the d20 if the number rolled is 9 or lower. You must use the new roll.\n\nSteel Yourself. When you fail a saving throw to avoid or end the Charmed or Frightened condition, you can take a Reaction to add a bonus to the roll potentially causing it to succeed. The bonus is equal to your Proficiency Bonus.\nOnce you take this Reaction, you can't do so again until you finish a Long Rest.",
@@ -1166,7 +1147,7 @@ FeatsList.survivor = {
 //Dark Gift Feats
 FeatsList["aberrant anatomy"] = {
     name : "Aberrant Anatomy",
-    source : [["RtHW", 32]],
+    source : [["R:tHW", 32]],
     type : "dark gift",
     prerequisite : "Ravenloft Campaign",
     description : "I can hold my breath for 1 hour. I gain Blindsight 15 ft, and proficiency and expertise in Perception. If I roll a 1 on a D20 Test, I must make a Con save (DC 13 + PB) or be Stunned until the end of my next turn.",
@@ -1179,20 +1160,20 @@ FeatsList["aberrant anatomy"] = {
 };
 FeatsList["echoing soul"] = {
     name : "Echoing Soul",
-    source : [["RtHW", 33]],
+    source : [["R:tHW", 33]],
     type : "dark gift",
     prerequisite : "Ravenloft Campaign",
     description : "I gain proficiency in 2 skills and 1 language of my choice. I also choose one skill I'm proficient in to gain Expertise, which I can change at the end of a Long Rest. If I roll a 1 on a D20 Test, I must make a Con save (DC 13 + PB) or be Incapacitated and have my Speed halved until the end of my next turn.",
     descriptionFull : "You experience echoes from a past or alternate life.\nYou gain the following features.\n\nChannelled Prowess. You have proficiency in two skills of your choice.\nIn addition, choose one skill you have proficiency in. You gain Expertise in that skill. Whenever you finish a Long Rest you can change your choice of for this benefit.\n\nInherent Tongues. You know one additional language of your choice, which you choose from the language tables in the Player's Handbook.\n\nIntrusive Echoes. Immediately after you make a D20 Test and roll a 1 on the d20, memories and sensations from your soul's other life threaten to overtake you. Make a Constitution saving throw (DC 13 plus your Proficiency Bonus). On a failed save, you have the Incapacitated condition until the end of your next turn. While you are Incapacitated in this way, your Speed is halved.",
     skillstxt : "Choose two skills to gain proficiency in, and choose one skill you are proficient in to gain Expertise (can be changed on a Long Rest)",
-    languageProfs : ["Inherent Tongues", 1],
+    languageProfs : [1],
     savetxt : {
         text : ["Con save (DC 13+PB) on a D20 Test roll of 1 or Incapacitated (Speed halved)"]
     }
 };
 FeatsList["gathered whispers"] = {
     name : "Gathered Whispers",
-    source : [["RtHW", 33]],
+    source : [["R:tHW", 33]],
     type : "dark gift",
     prerequisite : "Ravenloft Campaign",
     description : "I learn Message and always have Augury prepared. I can cast Augury 1/Long Rest without slots/components, or using slots. Reaction: When hit by an attack, I add my PB to my AC vs it (PB/LR). If I roll a 1 on a D20 Test, make a Wis save (DC 13 + PB) or be Deafened (disadv. on checks/attacks) until end of my next turn.",
@@ -1237,7 +1218,7 @@ FeatsList["gathered whispers"] = {
 };
 FeatsList["living shadow"] = {
     name : "Living Shadow",
-    source : [["RtHW", 33]],
+    source : [["R:tHW", 33]],
     type : "dark gift",
     prerequisite : "Ravenloft Campaign",
     description : "I learn Mage Hand (cast without components). When I make a melee attack as part of the Attack or Magic action, I can increase my reach for that attack by 10 ft (PB/LR). If I roll a 1 on a D20 Test, I make a Wis save (DC 13+PB). On a fail, I'm Incapacitated until my next turn starts, then I must act per the Shadow's Will table. (See Notes Page)",
@@ -1277,7 +1258,7 @@ FeatsList["living shadow"] = {
 };
 FeatsList["mist walker"] = {
     name : "Mist Walker",
-    source : [["RtHW", 34]],
+    source : [["R:tHW", 34]],
     type : "dark gift",
     prerequisite : "Ravenloft Campaign",
     description : "I act as having a talisman for a known domain when entering the Mists. Reaction when taking damage or failing a save vs. Grappled/Restrained: teleport up to 15 ft (PB/LR). Poisoned Roots: Short Rests taken within 10 miles of my last Long Rest require a Con save (DC 13 + PB) to gain any benefits.",
@@ -1293,7 +1274,7 @@ FeatsList["mist walker"] = {
 };
 FeatsList["second skin"] = {
     name : "Second Skin",
-    source : [["RtHW", 34]],
+    source : [["R:tHW", 34]],
     type : "dark gift",
     prerequisite : "Ravenloft Campaign",
     description : "I always have Alter Self prepared. I can cast it 1/Long Rest without a spell slot, components, or Concentration. I can also cast it using slots. Involuntary Change: Upon encountering my catalyst, I make a Cha save (DC 13+PB) or immediately cast Alter Self via this feature (or be Stunned until my next turn starts if already used).",
@@ -1334,13 +1315,13 @@ FeatsList["second skin"] = {
 };
 FeatsList["symbiotic being"] = {
     name : "Symbiotic Being",
-    source : [["RtHW", 34]],
+    source : [["R:tHW", 34]],
     type : "dark gift",
     prerequisite : "Ravenloft Campaign",
     description : "I gain 1 language and 1 skill prof. Reaction: When I fail a save, I can expend 1 Hit Die and add the roll to the save (PB/LR). If I roll a 1 on a D20 Test, I make a Cha save (DC 13 + PB) or become Charmed by my symbiote for 1d12 hrs, forced to follow its commands (save repeats on taking damage).",
     descriptionFull : "A second being resides within your body, offering knowledge and assistance while furthering its own agenda. You gain the following features.\n\nEntwined Existence. The symbiote can’t be targeted. If you die, so does your symbiote. If you are returned to life, your symbiote also revives.\n\nSecond Mind. You gain proficiency in one of the following skills: Arcana, Deception, History, Intimidation, Insight, Investigation, Nature, Religion, Perception, or Persuasion. You also know one additional language of your choice, chosen from the language tables in the Player’s Handbook.\n\nSustained Symbiosis. When you fail a saving throw, you can take a Reaction and expend one of your Hit Dice. Roll the die and add the number rolled to the saving throw, potentially turning the failure into a success.\n\nYou can use this feature a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.\n\nSymbiotic Agenda. Immediately after you make a D20 Test and roll a 1 on the d20, your symbiote attempts to assert control. Make a Charisma saving throw (DC 13 plus your Proficiency Bonus). On a failed save, you have the Charmed condition for 1d12 hours. While Charmed, you must try to follow the symbiote’s commands and further its goals, as determined by the DM. Whenever you take damage, you can repeat this save, ending the effect on a success.\n\nAt the DM’s discretion, you might make this saving throw whenever you act contrary to the symbiote’s agenda.",
     skillstxt : "Choose one from: Arcana, Deception, History, Insight, Intimidation, Investigation, Nature, Perception, Persuasion, or Religion",
-    languageProfs : ["Second Mind", 1],
+    languageProfs : [1],
     action : [["reaction", "Sustained Symbiosis"]],
 	limfeaname : "Sustained Symbiosis",
     usages : "Proficiency bonus per ",
@@ -1352,7 +1333,7 @@ FeatsList["symbiotic being"] = {
 };
 FeatsList["touch of death"] = {
     name : "Touch of Death",
-    source : [["RtHW", 35]],
+    source : [["R:tHW", 35]],
     type : "dark gift",
     prerequisite : "Ravenloft Campaign",
     description : "I learn the Chill Touch cantrip and cast it without components. Necrotic damage I deal with this spell ignores Resistance. I also have Disadvantage on Death Saving Throws.",
@@ -1382,7 +1363,7 @@ FeatsList["touch of death"] = {
 };
 FeatsList.watchers = {
     name : "Watchers",
-    source : [["RtHW", 35]],
+    source : [["R:tHW", 35]],
     type : "dark gift",
     prerequisite : "Ravenloft Campaign",
     description : "I always have Beast Sense and Speak with Animals prepared and can cast each 1/Long Rest without a slot. When I take the Search action, I add 1d4 to the ability check. I have Disadvantage on saves vs. Scrying. If I roll a 1 on a D20 Test, I make a Wis save (DC 13+PB) or have Disadvantage on D20 Tests for 1 minute (can repeat save at end of each turn).",
@@ -1408,7 +1389,7 @@ FeatsList.watchers = {
 //Magic Items
 MagicItemsList["harkons bite"] = {
     name : "Harkon's Bite",
-    source : [["RtHW", 126]],
+    source : [["R:tHW", 126]],
     type : "wondrous item",
     rarity : "uncommon",
     attunement : true,
@@ -1424,7 +1405,7 @@ MagicItemsList["harkons bite"] = {
 };
 MagicItemsList.ebonbane = {
     name : "Ebonbane",
-    source : [["RtHW", 152]],
+    source : [["R:tHW", 152]],
     type : "weapon (longsword)",
     rarity : "artifact",
     attunement : true,
@@ -1438,7 +1419,7 @@ MagicItemsList.ebonbane = {
     weaponOptions : [{
         regExpSearch : /ebonbane/i,
         name : "Ebonbane",
-        source : [["RtHW", 152]],
+        source : [["R:tHW", 152]],
         baseWeapon : "longsword",
         modifiers : [3, 3],
         description : "Versatile (1d10); +3d6 Necrotic dmg vs Celestials/Humanoids"
