@@ -15123,7 +15123,7 @@ WeaponsList["vials of acid"] = {
     range: "20 ft",
     weight: 1,
     description: "",
-    abilitytodamage: true,
+    abilitytodamage: false,
     isAlwaysProf: true,
     ammo: "vials of acid",
     isNotWeapon: true,
@@ -15142,7 +15142,7 @@ WeaponsList["alchemist fire"] = {
     range: "20 ft",
     weight: 1,
     description: "Target +1d4 at the start of each of its turns; Can end if target falls prone and uses their action to extinguish.",
-    abilitytodamage: true,
+    abilitytodamage: false,
     isAlwaysProf: true,
     ammo: "alchemist fire",
     isNotWeapon: true,
@@ -15161,7 +15161,7 @@ WeaponsList["holy water"] = {
     range: "20 ft",
     weight: 1,
     description: "Only does damage against fiends and undead; Comes in flasks",
-    abilitytodamage: true,
+    abilitytodamage: false,
     ammo: "holy water",
     isNotWeapon: true
 };
