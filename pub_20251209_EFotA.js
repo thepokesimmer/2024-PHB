@@ -2742,7 +2742,7 @@ FeatsList["mark of healing"] = {
     descriptionFull: "You have manifested a Dragonmark of Healing; determine its appearance. You gain the following benefits:\n \u2022 Medical Intuition. When you make an Intelligence (Herbalism Kit) or Wisdom (Medicine) check, you can roll 1d4 and add the number rolled to the ability check.\n \u2022 Healing Touch. You always have the Cure Wounds spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast it using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).\n When you reach character level 3, you also always have the Lesser Restoration spell prepared and can cast it the same way.\n \u2022 Spells of the Mark. If you have the Spellcasting or Pact Magic feature, the following spells are added to that feature's spell list: False Life, Healing Word, Arcane Vigor, Prayer of Healing, Aura of Vitality, Mass Healing Word, Aura of Life, Aura of Purity, \u0026 Greater Restoration.",
     description: "I can add 1d4 to any Intelligence (Herbalism Kit) or Wisdom (Medicine) checks. At character level 1, I always have the Cure Wounds spell prepared, and can cast it once without a spell slot per Long Rest. I can also cast it with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat). At character level 3, I also always have the Lesser Restoration spell prepared and can cast it the same way. Additionally, if I am a spellcasting class/subclass, I gain additional spells I can cast.",
     spellcastingBonus: [{
-        name: "Finder's Magic",
+        name: "Healing Touch",
         spells: ["cure wounds", "lesser restoration"],
         selection: ["cure wounds", "lesser restoration"],
         firstCol: "oncelr",
@@ -3925,7 +3925,7 @@ function AddArtificerMI() {
             "sending stones", ["shield, +1, +2, or +3", "+1 shield (uncommon)"], "wand of magic detection", "wand of secrets",
             ["wand of the war mage", "+1 to spell attacks (uncommon)"],
             ["weapon, +1, +2, or +3", "+1 weapon (uncommon)"],
-            ["wraps of unarmed power", "+1 to unarmed attacks (uncommon)"]
+            ["wraps of unarmed power", "+1 wraps of unarmed power (uncommon)"]
         ];
 
         var uE6 = [
