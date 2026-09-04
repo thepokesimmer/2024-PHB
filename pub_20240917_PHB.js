@@ -3756,6 +3756,17 @@ legacySubClassRefactor("fighter", "champion", {
 legacySubClassRefactor("fighter", "eldritch knight", {
     regExpSearch: /^(?=.*(fighter))(?=.*(eldritch))(?=.*(knight)).*$/i,
     subname: "Eldritch Knight",
+	spellcastingFactor: 3,
+	spellcastingAbility: 4,
+	spellcastingList: {
+		"class": "wizard",
+		level: [0, 4],
+	},
+	spellcastingKnown: {
+		cantrips: [0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+		spells: [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13],
+		prepared: false,
+	},
     source: [
         ["P24", 96]
     ],
@@ -3766,17 +3777,6 @@ legacySubClassRefactor("fighter", "eldritch knight", {
                 ["P24", 97]
             ],
             minlevel: 3,
-			spellcastingFactor: 3,
-			spellcastingAbility: 4,
-			spellcastingList: {
-				"class": "wizard",
-				level: [0, 4],
-			},
-			spellcastingKnown: {
-				cantrips: [0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
-				spells: [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13],
-				prepared: false,
-			},
             additional: levels.map(function(n, idx) {
                 var cantr = [0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3][idx];
                 var splls = [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13][idx];
@@ -7048,6 +7048,17 @@ legacySubClassRefactor("rogue", "arcane trickster", {
     source: [
         ["P24", 132]
     ],
+	spellcastingFactor: 3,
+	spellcastingAbility: 4,
+	spellcastingList: {
+		"class": "wizard",
+		level: [0, 4],
+	},
+	spellcastingKnown: {
+		cantrips: [0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+		spells: [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 11, 12, 13],
+		prepared: false,
+	},
     features: {
         "subclassfeature3": {
             name: "Spellcasting",
@@ -7055,17 +7066,6 @@ legacySubClassRefactor("rogue", "arcane trickster", {
                 ["P24", 132]
             ],
             minlevel: 3,
-			spellcastingFactor: 3,
-			spellcastingAbility: 4,
-			spellcastingList: {
-				"class": "wizard",
-				level: [0, 4],
-			},
-			spellcastingKnown: {
-				cantrips: [0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
-				spells: [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 11, 12, 13],
-				prepared: false,
-			},
             additional: levels.map(function(n, idx) {
                 var cantr = [0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3][idx];
                 var splls = [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13][idx];
@@ -9899,6 +9899,7 @@ legacyBackgroundRefactor("acolyte", {
     ],
     scorestxt: ["+2 and +1 -or- +1 to each from Intelligence, Wisdom, and Charisma"],
     skills: ["Insight", "Religion"],
+	toolProfs: [["Calligrapher's Supplies"]],
     gold: 8,
     equipleft: [
         ["Book (prayers)", "", 5],
@@ -15123,7 +15124,7 @@ WeaponsList["vials of acid"] = {
     range: "20 ft",
     weight: 1,
     description: "",
-    abilitytodamage: false,
+    abilitytodamage: true,
     isAlwaysProf: true,
     ammo: "vials of acid",
     isNotWeapon: true,
@@ -15142,7 +15143,7 @@ WeaponsList["alchemist fire"] = {
     range: "20 ft",
     weight: 1,
     description: "Target +1d4 at the start of each of its turns; Can end if target falls prone and uses their action to extinguish.",
-    abilitytodamage: false,
+    abilitytodamage: true,
     isAlwaysProf: true,
     ammo: "alchemist fire",
     isNotWeapon: true,
@@ -15161,7 +15162,7 @@ WeaponsList["holy water"] = {
     range: "20 ft",
     weight: 1,
     description: "Only does damage against fiends and undead; Comes in flasks",
-    abilitytodamage: false,
+    abilitytodamage: true,
     ammo: "holy water",
     isNotWeapon: true
 };
