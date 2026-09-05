@@ -1,5 +1,5 @@
-var iFileName = "pub_20251209_EFotA.js";
-RequiredSheetVersion("24.0.0", "24.1.0");
+var iFileName = "pub_202512097_EFotA.js";
+RequiredSheetVersion("14.0.0", "24.1.0");
 
 SourceList["E:FotA"] = {
     name : "Eberron: Forge of the Artificer",
@@ -946,578 +946,55 @@ SpellsList["homunculus servant"] = {
     descriptionFull: "You summon a special homunculus in an unoccupied space within range. This creature uses the Homunculus Servant stat block. If you already have a homunculus from this spell, the homunculus is replaced by the new one." + "\n   " + "You determine the homunculus's appearance, such as a mechanical-looking bird; winged vials; or miniature, animate cauldrons." + "\n   " + "Combat. The homunculus is an ally to you and your allies. In combat, it shares your Initiative count, but it takes its turn immediately after yours. It obeys your commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger." + "\n   " + "At Higher Levels. Use the spell slot's level for the spell’s level in the stat block.",
     ritual: true,
 };
-// Add "Homunculus Servant" companion template
-CompanionList.homunculusservant = {
-    name: "Homunculus Servant",
-    nameMenu: "Homunculus Servant (Homunculus Servant spell)",
-    nameTooltip: "the Homunculus Servant spell",
-    nameOrigin: "2nd-Level Conjuration [ritual] spell",
-    source: ["E:FotA", 21],
-    action: [
-        ["reaction", " command (free)"]
-    ],
-    includeCheck: function(sCrea, objCrea, iCreaCR) {
-        return /^(?=.*homunculus)(?=.*servant).*$/i.test(sCrea);
-    },
-    notes: [{
-        name: "Spell Description",
-        description: "You summon a special homunculus in an unoccupied space within range. This creature uses the Homunculus Servant stat block. If you already have a homunculus from this spell, the homunculus is replaced by the new one." + "\n   " + "You determine the homunculus's appearance, such as a mechanical-looking bird; winged vials; or miniature, animate cauldrons.",
-        joinString: "\n   "
-    }, {
-        name: "Combat",
-        description: "The homunculus is an ally to you and your allies. In combat, it shares your Initiative count, but it takes its turn immediately after yours. It obeys your commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger.",
-        joinString: "\n   "
-    }, {
-        name: "At Higher Levels",
-        description: "Use the spell slot's level for the spell’s level in the stat block." + "\n   " + "The familiar's HP, Skill/Save Bonuses, & Damage change depending on the level the Homunculus Servant spell was cast at:" + "\n      " + "- HP total equals 5 + 5 per spell level; the Otherworldly Familiar has a number of Hit Dice [d4s] equal to the spell's level;" + "\n      " + "- The Homunculus Servant adds the spell level to any ability check or saving throw it makes;" + "\n      " + "- Damage equals 1d6 + the spell's level of Force damage.",
-        joinString: "\n   "
-    }],
-};
-// Add "Homunculus Servant" creatures, one per level
-CreatureList["homunculus servant lvl 2"] = {
-    name: "2nd-Lvl Homunculus Servant",
-    source: ["E:FotA", 21],
-    size: 5,
-    type: "Construct",
-    alignment: "Neutral",
-    ac: 13,
-    hp: 15,
-    hd: [2, 4],
-    hdLinked: ["artificer"],
-    speed: "20 ft, Fly 30 ft",
-    scores: [4, 15, 12, 10, 10, 7],
-    saves: [-1, 4, 3, 2, 2, 0],
-    skills: {
-        "acrobatics": 4,
-        "animal handling": 2,
-        "arcana": 2,
-        "athletics": -1,
-        "deception": 0,
-        "history": 2,
-        "insight": 2,
-        "intimidation": 0,
-        "investigation": 2,
-        "medicine": 2,
-        "nature": 2,
-        "perception": 2,
-        "performance": 0,
-        "persuasion": 0,
-        "religion": 2,
-        "sleight of hand": 4,
-        "stealth": 4,
-        "survival": 2,
-    },
-    damage_immunities: "poison",
-    condition_immunities: "exhaustion, poisoned",
-    passivePerception: 12,
-    languages: "Telepathy 1 mile (works only for you)",
-    challengeRating: "0",
-    proficiencyBonus: 3,
-    proficiencyBonusLinked: true,
-    attacksAction: 1,
-    attacks: [{
-        name: "Force Strike",
-        ability: 4,
-        damage: [1, 6, "force"],
-        range: "30 ft",
-        description: "",
-        modifiers: ["", 2],
-        abilitytodamage: false,
-        useSpellMod: "artificer"
-    }],
-    features: [{
-        name: "Creator",
-        description: "The homunculus obeys the commands of its creator and has the same proficiency bonus. It takes its turn immediately after its creator, on the same initiative count. It can move and take Reactions on its own, but only takes the Dodge action on its turn unless its creator commands it to take another action (no action required by the creator)."
-    }],
-    traits: [{
-        name: "Magic Bond",
-        description: "Add the spell level to any ability check or saving throw the homunculus makes."
-    }, {
-        name: "Evasion",
-        description: "If the homunculus is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails. It can't use this trait if it's incapacitated."
-    }],
-    actions: [{
-        name: "Channel Magic",
-        description: "As a Reaction, the homunculus delivers a spell cast by its creator that has a range of touch. The homunculus must be within 120 ft of its creator to do so."
-    }],
-    header: "Construct",
-};
-CreatureList["homunculus servant lvl 3"] = {
-    name: "3rd-Lvl Homunculus Servant",
-    source: ["E:FotA", 21],
-    size: 5,
-    type: "Construct",
-    alignment: "Neutral",
-    ac: 13,
-    hp: 20,
-    hd: [3, 4],
-    hdLinked: ["artificer"],
-    speed: "20 ft, Fly 30 ft",
-    scores: [4, 15, 12, 10, 10, 7],
-    saves: [0, 5, 4, 3, 3, 1],
-    skills: {
-        "acrobatics": 5,
-        "animal handling": 3,
-        "arcana": 3,
-        "athletics": 0,
-        "deception": 1,
-        "history": 3,
-        "insight": 3,
-        "intimidation": 1,
-        "investigation": 3,
-        "medicine": 3,
-        "nature": 3,
-        "perception": 3,
-        "performance": 1,
-        "persuasion": 1,
-        "religion": 3,
-        "sleight of hand": 5,
-        "stealth": 5,
-        "survival": 3,
-    },
-    damage_immunities: "poison",
-    condition_immunities: "exhaustion, poisoned",
-    passivePerception: 13,
-    languages: "Telepathy 1 mile (works only for you)",
-    challengeRating: "0",
-    proficiencyBonus: 4,
-    proficiencyBonusLinked: true,
-    attacksAction: 1,
-    attacks: [{
-        name: "Force Strike",
-        ability: 4,
-        damage: [1, 6, "force"],
-        range: "30 ft",
-        description: "",
-        modifiers: ["", 3],
-        abilitytodamage: false,
-        useSpellMod: "artificer"
-    }],
-    features: [{
-        name: "Creator",
-        description: "The homunculus obeys the commands of its creator and has the same proficiency bonus. It takes its turn immediately after its creator, on the same initiative count. It can move and take Reactions on its own, but only takes the Dodge action on its turn unless its creator commands it to take another action (no action required by the creator)."
-    }],
-    traits: [{
-        name: "Magic Bond",
-        description: "Add the spell level to any ability check or saving throw the homunculus makes."
-    }, {
-        name: "Evasion",
-        description: "If the homunculus is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails. It can't use this trait if it's incapacitated."
-    }],
-    actions: [{
-        name: "Channel Magic",
-        description: "As a Reaction, the homunculus delivers a spell cast by its creator that has a range of touch. The homunculus must be within 120 ft of its creator to do so."
-    }],
-    header: "Construct",
-};
-CreatureList["homunculus servant lvl 4"] = {
-    name: "4th-Lvl Homunculus Servant",
-    source: ["E:FotA", 21],
-    size: 5,
-    type: "Construct",
-    alignment: "Neutral",
-    ac: 13,
-    hp: 25,
-    hd: [4, 4],
-    hdLinked: ["artificer"],
-    speed: "20 ft, Fly 30 ft",
-    scores: [4, 15, 12, 10, 10, 7],
-    saves: [1, 6, 5, 4, 4, 2],
-    skills: {
-        "acrobatics": 6,
-        "animal handling": 4,
-        "arcana": 4,
-        "athletics": 1,
-        "deception": 2,
-        "history": 4,
-        "insight": 4,
-        "intimidation": 2,
-        "investigation": 4,
-        "medicine": 4,
-        "nature": 4,
-        "perception": 4,
-        "performance": 2,
-        "persuasion": 2,
-        "religion": 4,
-        "sleight of hand": 6,
-        "stealth": 6,
-        "survival": 4,
-    },
-    damage_immunities: "poison",
-    condition_immunities: "exhaustion, poisoned",
-    passivePerception: 14,
-    languages: "Telepathy 1 mile (works only for you)",
-    challengeRating: "0",
-    proficiencyBonus: 5,
-    proficiencyBonusLinked: true,
-    attacksAction: 1,
-    attacks: [{
-        name: "Force Strike",
-        ability: 4,
-        damage: [1, 6, "force"],
-        range: "30 ft",
-        description: "",
-        modifiers: ["", 4],
-        abilitytodamage: false,
-        useSpellMod: "artificer"
-    }],
-    features: [{
-        name: "Creator",
-        description: "The homunculus obeys the commands of its creator and has the same proficiency bonus. It takes its turn immediately after its creator, on the same initiative count. It can move and take Reactions on its own, but only takes the Dodge action on its turn unless its creator commands it to take another action (no action required by the creator)."
-    }],
-    traits: [{
-        name: "Magic Bond",
-        description: "Add the spell level to any ability check or saving throw the homunculus makes."
-    }, {
-        name: "Evasion",
-        description: "If the homunculus is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails. It can't use this trait if it's incapacitated."
-    }],
-    actions: [{
-        name: "Channel Magic",
-        description: "As a Reaction, the homunculus delivers a spell cast by its creator that has a range of touch. The homunculus must be within 120 ft of its creator to do so."
-    }],
-    header: "Construct",
-};
-CreatureList["homunculus servant lvl 5"] = {
-    name: "5th-Lvl Homunculus Servant",
-    source: ["E:FotA", 21],
-    size: 5,
-    type: "Construct",
-    alignment: "Neutral",
-    ac: 13,
-    hp: 30,
-    hd: [5, 4],
-    hdLinked: ["artificer"],
-    speed: "20 ft, Fly 30 ft",
-    scores: [4, 15, 12, 10, 10, 7],
-    saves: [2, 7, 6, 5, 5, 3],
-    skills: {
-        "acrobatics": 7,
-        "animal handling": 5,
-        "arcana": 5,
-        "athletics": 2,
-        "deception": 3,
-        "history": 5,
-        "insight": 5,
-        "intimidation": 3,
-        "investigation": 5,
-        "medicine": 5,
-        "nature": 5,
-        "perception": 5,
-        "performance": 3,
-        "persuasion": 3,
-        "religion": 5,
-        "sleight of hand": 7,
-        "stealth": 7,
-        "survival": 5,
-    },
-    damage_immunities: "poison",
-    condition_immunities: "exhaustion, poisoned",
-    passivePerception: 15,
-    languages: "Telepathy 1 mile (works only for you)",
-    challengeRating: "0",
-    proficiencyBonus: 6,
-    proficiencyBonusLinked: true,
-    attacksAction: 1,
-    attacks: [{
-        name: "Force Strike",
-        ability: 4,
-        damage: [1, 6, "force"],
-        range: "30 ft",
-        description: "",
-        modifiers: ["", 5],
-        abilitytodamage: false,
-        useSpellMod: "artificer"
-    }],
-    features: [{
-        name: "Creator",
-        description: "The homunculus obeys the commands of its creator and has the same proficiency bonus. It takes its turn immediately after its creator, on the same initiative count. It can move and take Reactions on its own, but only takes the Dodge action on its turn unless its creator commands it to take another action (no action required by the creator)."
-    }],
-    traits: [{
-        name: "Magic Bond",
-        description: "Add the spell level to any ability check or saving throw the homunculus makes."
-    }, {
-        name: "Evasion",
-        description: "If the homunculus is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails. It can't use this trait if it's incapacitated."
-    }],
-    actions: [{
-        name: "Channel Magic",
-        description: "As a Reaction, the homunculus delivers a spell cast by its creator that has a range of touch. The homunculus must be within 120 ft of its creator to do so."
-    }],
-    header: "Construct",
-};
-CreatureList["homunculus servant lvl 6"] = {
-    name: "6th-Lvl Homunculus Servant",
-    source: ["E:FotA", 21],
-    size: 5,
-    type: "Construct",
-    alignment: "Neutral",
-    ac: 13,
-    hp: 35,
-    hd: [6, 4],
-    hdLinked: ["artificer"],
-    speed: "20 ft, Fly 30 ft",
-    scores: [4, 15, 12, 10, 10, 7],
-    saves: [3, 8, 7, 6, 6, 4],
-    skills: {
-        "acrobatics": 8,
-        "animal handling": 6,
-        "arcana": 6,
-        "athletics": 3,
-        "deception": 4,
-        "history": 6,
-        "insight": 6,
-        "intimidation": 4,
-        "investigation": 6,
-        "medicine": 6,
-        "nature": 6,
-        "perception": 6,
-        "performance": 4,
-        "persuasion": 4,
-        "religion": 6,
-        "sleight of hand": 8,
-        "stealth": 8,
-        "survival": 6,
-    },
-    damage_immunities: "poison",
-    condition_immunities: "exhaustion, poisoned",
-    passivePerception: 14,
-    languages: "Telepathy 1 mile (works only for you)",
-    challengeRating: "0",
-    proficiencyBonus: 6,
-    proficiencyBonusLinked: true,
-    attacksAction: 1,
-    attacks: [{
-        name: "Force Strike",
-        ability: 4,
-        damage: [1, 6, "force"],
-        range: "30 ft",
-        description: "",
-        modifiers: ["", 6],
-        abilitytodamage: false,
-        useSpellMod: "artificer"
-    }],
-    features: [{
-        name: "Creator",
-        description: "The homunculus obeys the commands of its creator and has the same proficiency bonus. It takes its turn immediately after its creator, on the same initiative count. It can move and take Reactions on its own, but only takes the Dodge action on its turn unless its creator commands it to take another action (no action required by the creator)."
-    }],
-    traits: [{
-        name: "Magic Bond",
-        description: "Add the spell level to any ability check or saving throw the homunculus makes."
-    }, {
-        name: "Evasion",
-        description: "If the homunculus is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails. It can't use this trait if it's incapacitated."
-    }],
-    actions: [{
-        name: "Channel Magic",
-        description: "As a Reaction, the homunculus delivers a spell cast by its creator that has a range of touch. The homunculus must be within 120 ft of its creator to do so."
-    }],
-    header: "Construct",
-};
-CreatureList["homunculus servant lvl 7"] = {
-    name: "7th-Lvl Homunculus Servant",
-    source: ["E:FotA", 21],
-    size: 5,
-    type: "Construct",
-    alignment: "Neutral",
-    ac: 13,
-    hp: 40,
-    hd: [7, 4],
-    hdLinked: ["artificer"],
-    speed: "20 ft, Fly 30 ft",
-    scores: [4, 15, 12, 10, 10, 7],
-    saves: [4, 9, 8, 7, 7, 5],
-    skills: {
-        "acrobatics": 9,
-        "animal handling": 7,
-        "arcana": 7,
-        "athletics": 4,
-        "deception": 5,
-        "history": 7,
-        "insight": 7,
-        "intimidation": 5,
-        "investigation": 7,
-        "medicine": 7,
-        "nature": 7,
-        "perception": 7,
-        "performance": 5,
-        "persuasion": 5,
-        "religion": 7,
-        "sleight of hand": 9,
-        "stealth": 9,
-        "survival": 7,
-    },
-    damage_immunities: "poison",
-    condition_immunities: "exhaustion, poisoned",
-    passivePerception: 14,
-    languages: "Telepathy 1 mile (works only for you)",
-    challengeRating: "0",
-    proficiencyBonus: 6,
-    proficiencyBonusLinked: true,
-    attacksAction: 1,
-    attacks: [{
-        name: "Force Strike",
-        ability: 4,
-        damage: [1, 6, "force"],
-        range: "30 ft",
-        description: "",
-        modifiers: ["", 7],
-        abilitytodamage: false,
-        useSpellMod: "artificer"
-    }],
-    features: [{
-        name: "Creator",
-        description: "The homunculus obeys the commands of its creator and has the same proficiency bonus. It takes its turn immediately after its creator, on the same initiative count. It can move and take Reactions on its own, but only takes the Dodge action on its turn unless its creator commands it to take another action (no action required by the creator)."
-    }],
-    traits: [{
-        name: "Magic Bond",
-        description: "Add the spell level to any ability check or saving throw the homunculus makes."
-    }, {
-        name: "Evasion",
-        description: "If the homunculus is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails. It can't use this trait if it's incapacitated."
-    }],
-    actions: [{
-        name: "Channel Magic",
-        description: "As a Reaction, the homunculus delivers a spell cast by its creator that has a range of touch. The homunculus must be within 120 ft of its creator to do so."
-    }],
-    header: "Construct",
-};
-CreatureList["homunculus servant lvl 8"] = {
-    name: "8th-Lvl Homunculus Servant",
-    source: ["E:FotA", 21],
-    size: 5,
-    type: "Construct",
-    alignment: "Neutral",
-    ac: 13,
-    hp: 45,
-    hd: [8, 4],
-    hdLinked: ["artificer"],
-    speed: "20 ft, Fly 30 ft",
-    scores: [4, 15, 12, 10, 10, 7],
-    saves: [5, 10, 9, 8, 8, 6],
-    skills: {
-        "acrobatics": 10,
-        "animal handling": 8,
-        "arcana": 8,
-        "athletics": 7,
-        "deception": 6,
-        "history": 8,
-        "insight": 8,
-        "intimidation": 6,
-        "investigation": 8,
-        "medicine": 8,
-        "nature": 8,
-        "perception": 8,
-        "performance": 6,
-        "persuasion": 6,
-        "religion": 8,
-        "sleight of hand": 10,
-        "stealth": 10,
-        "survival": 8,
-    },
-    damage_immunities: "poison",
-    condition_immunities: "exhaustion, poisoned",
-    passivePerception: 14,
-    languages: "Telepathy 1 mile (works only for you)",
-    challengeRating: "0",
-    proficiencyBonus: 6,
-    proficiencyBonusLinked: true,
-    attacksAction: 1,
-    attacks: [{
-        name: "Force Strike",
-        ability: 4,
-        damage: [1, 6, "force"],
-        range: "30 ft",
-        description: "",
-        modifiers: ["", 8],
-        abilitytodamage: false,
-        useSpellMod: "artificer"
-    }],
-    features: [{
-        name: "Creator",
-        description: "The homunculus obeys the commands of its creator and has the same proficiency bonus. It takes its turn immediately after its creator, on the same initiative count. It can move and take Reactions on its own, but only takes the Dodge action on its turn unless its creator commands it to take another action (no action required by the creator)."
-    }],
-    traits: [{
-        name: "Magic Bond",
-        description: "Add the spell level to any ability check or saving throw the homunculus makes."
-    }, {
-        name: "Evasion",
-        description: "If the homunculus is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails. It can't use this trait if it's incapacitated."
-    }],
-    actions: [{
-        name: "Channel Magic",
-        description: "As a Reaction, the homunculus delivers a spell cast by its creator that has a range of touch. The homunculus must be within 120 ft of its creator to do so."
-    }],
-    header: "Construct",
-};
-CreatureList["homunculus servant lvl 9"] = {
-    name: "9th-Lvl Homunculus Servant",
-    source: ["E:FotA", 21],
-    size: 5,
-    type: "Construct",
-    alignment: "Neutral",
-    ac: 13,
-    hp: 50,
-    hd: [9, 4],
-    hdLinked: ["artificer"],
-    speed: "20 ft, Fly 30 ft",
-    scores: [4, 15, 12, 10, 10, 7],
-    saves: [6, 11, 10, 9, 9, 7],
-    skills: {
-        "acrobatics": 11,
-        "animal handling": 9,
-        "arcana": 9,
-        "athletics": 6,
-        "deception": 7,
-        "history": 9,
-        "insight": 9,
-        "intimidation": 7,
-        "investigation": 9,
-        "medicine": 9,
-        "nature": 9,
-        "perception": 9,
-        "performance": 7,
-        "persuasion": 7,
-        "religion": 9,
-        "sleight of hand": 11,
-        "stealth": 11,
-        "survival": 9,
-    },
-    damage_immunities: "poison",
-    condition_immunities: "exhaustion, poisoned",
-    passivePerception: 14,
-    languages: "Telepathy 1 mile (works only for you)",
-    challengeRating: "0",
-    proficiencyBonus: 6,
-    proficiencyBonusLinked: true,
-    attacksAction: 1,
-    attacks: [{
-        name: "Force Strike",
-        ability: 4,
-        damage: [1, 6, "force"],
-        range: "30 ft",
-        description: "",
-        modifiers: ["", 9],
-        abilitytodamage: false,
-        useSpellMod: "artificer"
-    }],
-    features: [{
-        name: "Creator",
-        description: "The homunculus obeys the commands of its creator and has the same proficiency bonus. It takes its turn immediately after its creator, on the same initiative count. It can move and take Reactions on its own, but only takes the Dodge action on its turn unless its creator commands it to take another action (no action required by the creator)."
-    }],
-    traits: [{
-        name: "Magic Bond",
-        description: "Add the spell level to any ability check or saving throw the homunculus makes."
-    }, {
-        name: "Evasion",
-        description: "If the homunculus is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails. It can't use this trait if it's incapacitated."
-    }],
-    actions: [{
-        name: "Channel Magic",
-        description: "As a Reaction, the homunculus delivers a spell cast by its creator that has a range of touch. The homunculus must be within 120 ft of its creator to do so."
-    }],
-    header: "Construct",
-};
+for (var i = 1; i <= 9; i++) {
+    var homunculusHP = 5 + (i * 5);
+    
+    CreatureList["homunculus servant (lvl " + i + ")"] = {
+        name: "Homunculus Servant (lvl " + i + ")",
+        regExpSearch: new RegExp("^(?=.*homunculus)(?=.*servant)(?=.*" + i + ").*$", "i"),
+        source: [["E:FA", 21]],
+        size: 5, // Tiny
+        type: "Construct",
+        alignment: "Neutral",
+        companion: "spell_creatures",
+        companionApply: "spell_creatures",
+        spell: "homunculus servant",
+        ac: 13,
+        hp: homunculusHP, // 5 + 5 per spell level
+        hd: [i, 4], // d4s equal to the spell's level
+        speed: "20 ft, Fly 30 ft",
+        scores: [4, 15, 12, 10, 10, 7],
+        immunities: "Poison",
+        condition_immunities: "Exhaustion, Poisoned",
+        senses: "Darkvision 60 ft",
+        passivePerception: 10,
+        languages: "Telepathy 1 mile (works only with you)",
+        challengeRating: "0",
+        proficiencyBonus: 0,
+        proficiencyBonusLinked: true,
+        attacksAction: 1,
+        traits: [{
+            name: "Evasion",
+            description: "If the homunculus is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the save and only half damage if it fails. It can't use this trait if it has the Incapacitated condition."
+        }, {
+            name: "Magic Bond",
+            description: "Add +" + i + " to any ability check or saving throw the homunculus makes."
+        }],
+        actions: [{
+            name: "Channel Magic (Reaction)",
+            description: "Trigger: I cast a spell that has a range of touch while the homunculus is within 120 ft of me. Response: The homunculus delivers the spell through its touch."
+        }],
+        attacks: [{
+            name: "Force Strike",
+            ability: 4, // Intelligence (+0) is used to perfectly hit the '0 + spell level' damage mod
+            damage: [1, 6, "force"],
+            range: "5 ft or 30 ft",
+            modifiers: ["max(oInt|oWis|oCha)-Int", i], // Replaces Int mod with Spellcasting mod for attack, adds spell level to damage
+            abilitytodamage: true,
+            description: ""
+        }]
+    };
+}
 // Backgrounds
 BackgroundList["aberrant heir"] = {
     regExpSearch: /^(?=.*aberrant)(?=.*heir).*$/i,
@@ -2306,7 +1783,7 @@ FeatsList["mark of handling"] = {
     source: ["E:FotA", 39],
     type: "dragonmark",
     prerequisite: "Eberron Campaign Setting, No other Dragonmark",
-    descriptionFull: "You have manifested a Dragonmark of Handling; determine its appearance. You gain the following benefits:\n \u2022 Wild Intuition. When you make an Intelligence (Nature) or Wisdom (Animal Handling) check, you can roll 1d4 and add the number rolled to the ability check.\n \u2022 Finder's Magic. You always have the Animal Friendship \u0026 Speak with Animals spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast these using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).\n \u2022 Monstrous Connection. When you reach character level 3, you can target a Monstrosity when you cast Animal Friendship or Speak with Animals if the creature's Intelligence score is 3 or lower.\n \u2022 Spells of the Mark. If you have the Spellcasting or Pact Magic feature, the following spells are added to that feature's spell list: Command, Find Familiar, Beast Sense, Calm Emotions, Beacon of Hope, Conjure Animals, Aura of Life, Dominate Beast, \u0026 Awaken.",
+    descriptionFull: "You have manifested a Dragonmark of Handling; determine its appearance. You gain the following benefits:\n \u2022 Wild Intuition. When you make an Intelligence (Nature) or Wisdom (Animal Handling) check, you can roll 1d4 and add the number rolled to the ability check.\n \u2022 Primal Connection. You always have the Animal Friendship \u0026 Speak with Animals spells prepared. You can cast each once without a spell slot, and you regain the ability to cast them in that way when you finish a Long Rest. You can also cast these using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).\n \u2022 Monstrous Connection. When you reach character level 3, you can target a Monstrosity when you cast Animal Friendship or Speak with Animals if the creature's Intelligence score is 3 or lower.\n \u2022 Spells of the Mark. If you have the Spellcasting or Pact Magic feature, the following spells are added to that feature's spell list: Command, Find Familiar, Beast Sense, Calm Emotions, Beacon of Hope, Conjure Animals, Aura of Life, Dominate Beast, \u0026 Awaken.",
     description: "I can add 1d4 to any Intelligence (Nature) or Wisdom (Animal Handling) checks. At character level 1, I always have the Animal Friendship \u0026 Speak with Animals spells prepared, and can cast each once without a spell slot per Long Rest. I can also cast these with any spell slots I have. Intelligence, Wisdom, or Charisma is my spellcasting ability for this spell (chosen when I select this feat). At character level 3, I can target a Monstrosity when I cast Animal Friendship or Speak with Animals if the creature's Intelligence score is 3 or lower. Additionally, if I am a spellcasting class/subclass, I gain additional spells I can cast.",
     spellcastingBonus: [{
         name: "Primal Connection",
