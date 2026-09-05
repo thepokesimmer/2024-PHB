@@ -45,3 +45,9 @@ Currently, this script does not offer "Legacy" compatibility for monsters and be
 - When adding this source - For the 2025-MM to properly integrate with other scripts and overwrite the 2014-MM please add this script last
 - add this script after the 2024-PHB
 - either before or after the 2024-DMG script.
+
+# Spell_Creatures_v24
+Java Script file, for MorePurpleMoreBetter's D&amp;D 5.5e Digital Character Sheet.
+This script adds Creature Statblocks for Spell summoned creatures.
+This script is Designed to work with the latest Beta v24 version of the sheet.
+- This script may be added at any point to the v24 sheet, but if you are using EFotA or AU it is best added before them as it has the CompanionList for additional Spell Creatures in those sources.
