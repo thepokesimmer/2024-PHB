@@ -3324,8 +3324,39 @@ MagicItemsList["potion of dragon's breath"] = {
     source: [["AU", 121]],
     type: "potion",
     rarity: "uncommon",
-    description: "When I drink this potion, I gain the effect of the Dragon's Breath spell for 1 minute (save DC 13, no Concentration). The damage type is based on the potion's color: Black (Acid), Blue (Lightning), Green (Poison), Red (Fire), or White (Cold).",
-    descriptionFull: "When you drink this potion, you gain the effect of the Dragon's Breath spell for 1 minute (save DC 13, no Concentration required). The damage type associated with that spell is determined by the color of the potion when the potion was created, as shown in the table below.\n   Light catches off the glittery liquid inside this potion, which is made from the pulverized scale of a chromatic dragon.\n   Color - Damage Type: Black (Acid), Blue (Lightning), Green (Poison), Red (Fire), White (Cold)."
+    magicItemTable: "B",
+    description: "When I drink this potion, I gain the effect of the Dragon's Breath spell (save DC 13) for 1 minute. No concentration is required. Use the 'Choose Feature' button to select the damage type.",
+    descriptionFull: "When you drink this potion, you gain the effect of the dragon's breath spell (save DC 13) for 1 minute. The damage type is chosen when the potion is created.",
+    weight: 0.5,
+    allowDuplicates: true,
+    fixedDC: 13,
+    spellcastingBonus: [{
+        name: "Potion of Dragon's Breath",
+        spells: ["dragon's breath"],
+        selection: ["dragon's breath"]
+		times: 1,
+    }],
+    choices: ["Acid", "Cold", "Fire", "Lightning", "Poison"],
+    "acid": {
+        name: "Potion of Dragon's Breath (Acid)",
+        description: "When I drink this potion, I gain the effect of the Dragon's Breath spell (Acid, save DC 13) for 1 minute. No concentration is required."
+    },
+    "cold": {
+        name: "Potion of Dragon's Breath (Cold)",
+        description: "When I drink this potion, I gain the effect of the Dragon's Breath spell (Cold, save DC 13) for 1 minute. No concentration is required."
+    },
+    "fire": {
+        name: "Potion of Dragon's Breath (Fire)",
+        description: "When I drink this potion, I gain the effect of the Dragon's Breath spell (Fire, save DC 13) for 1 minute. No concentration is required."
+    },
+    "lightning": {
+        name: "Potion of Dragon's Breath (Lightning)",
+        description: "When I drink this potion, I gain the effect of the Dragon's Breath spell (Lightning, save DC 13) for 1 minute. No concentration is required."
+    },
+    "poison": {
+        name: "Potion of Dragon's Breath (Poison)",
+        description: "When I drink this potion, I gain the effect of the Dragon's Breath spell (Poison, save DC 13) for 1 minute. No concentration is required."
+    }
 };
 MagicItemsList["potion of tirelessness"] = {
     name: "Potion of Tirelessness",
