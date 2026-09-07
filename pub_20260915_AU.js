@@ -7,12 +7,11 @@ SourceList["AU"] = {
     abbreviationSpellsheet: "AU",
     group: "Primary Sources"
 };
-var AtHigherLevels = "\n   ***At Higher Levels***. ";
-var UsingHigherLvl = "***Using a Higher-Level Spell Slot***. ";
-var CantripUpgrade = "***Cantrip Upgrade***. ";
-var SpellRitualTag = "\xAE"; // registered trademark symbol
-var SpellRitualTagNonUnicode = "(R)";
-var SpellReqLosTag = "\u25C9";
+if (!tDoc.UsingHigherLvl) {
+  var fromBefore14 = semVersToNmbr(tDoc.info.SheetVersion) < semVersToNmbr(14);
+  var UsingHigherLvl = fromBefore14 ? toUni("Using a Higher-Level Spell Slot. ") : "***Using a Higher-Level Spell Slot***. ";
+  var CantripUpgrade = fromBefore14 ? toUni("Cantrip Upgrade. ") : "***Cantrip Upgrade***. ";
+}
 //Character Options
 	//Subclasses
 AddSubClass("cleric", "arcana domain", {
