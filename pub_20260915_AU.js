@@ -2330,7 +2330,7 @@ SpellsList["uncertain footing"] = {
     name: "Uncertain Footing",
     classes: ["artificer", "bard", "warlock", "wizard"],
     source: [["AU", 44]],
-    reqLoS: true,
+    
     level: 2,
     school: "Illus",
     time: "Act",
@@ -2380,10 +2380,10 @@ SpellsList["catnap"] = {
     ].join("\n   ")
 };
 SpellsList["inflict doubt"] = {
-    name: "Inflict Doubt",
+    name: "Inflict Doubt \u25C9",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 40]],
-    reqLoS: true,
+    
     level: 3,
     school: "Ench",
     time: "Act",
@@ -2447,10 +2447,10 @@ SpellsList["zone of amicability"] = {
 };
 	//5th-level
 SpellsList["enervation"] = {
-    name: "Enervation",
+    name: "Enervation \u25C9",
     classes: ["sorcerer", "warlock", "wizard"],
     source: [["AU", 38]],
-    reqLoS: true,
+    
     level: 5,
     school: "Necro",
     time: "Act",
@@ -2503,10 +2503,10 @@ SpellsList["mordenkainen's lucubration"] = {
     ].join("\n   ")
 };	
 SpellsList["negative energy flood"] = {
-    name: "Negative Energy Flood",
+    name: "Negative Energy Flood \u25C9",
     classes: ["warlock", "wizard"],
     source: [["AU", 42]],
-    reqLoS: true,
+    
     level: 5,
     school: "Necro",
     time: "Act",
@@ -2543,10 +2543,10 @@ SpellsList["spirit lantern"] = {
     ].join("\n   ")
 };
 SpellsList["summon plant"] = {
-    name: "Summon Plant",
+    name: "Summon Plant \u25C9",
     classes: ["druid", "ranger"],
     source: [["AU", 44]],
-    reqLoS: true,
+    
     level: 5,
     school: "Conj",
     time: "Act",
@@ -2581,10 +2581,10 @@ SpellsList["waves of exhaustion"] = {
 };
 	//6th-level
 SpellsList["summon dinosaur"] = {
-    name: "Summon Dinosaur",
+    name: "Summon Dinosaur \u25C9",
     classes: ["druid"],
     source: [["AU", 43]],
-    reqLoS: true,
+    
     level: 6,
     school: "Conj",
     time: "Act",
@@ -2614,10 +2614,10 @@ SpellsList["aura of evasion"] = {
     descriptionFull: "An aura of alacrity radiates from you in a 30-foot Emanation for the duration. While in the aura, you and your allies have Advantage on Dexterity saving throws. When an affected creature is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it takes no damage if it succeeds on the save and only half damage if it fails. A creature with the Incapacitated condition doesn't gain any benefit from being in the aura."
 };
 SpellsList["fractured awareness"] = {
-    name: "Fractured Awareness",
+    name: "Fractured Awareness \u25C9",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 40]],
-    reqLoS: true,
+    
     level: 7,
     school: "Div",
     time: "Act",
@@ -2632,10 +2632,10 @@ SpellsList["fractured awareness"] = {
     ].join("\n   ")
 };
 SpellsList["power word pain"] = {
-    name: "Power Word Pain",
+    name: "Power Word Pain \u25C9",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 42]],
-    reqLoS: true,
+    
     level: 7,
     school: "Ench",
     time: "Act",
@@ -2651,10 +2651,10 @@ SpellsList["power word pain"] = {
     ].join("\n   ")
 };
 SpellsList["reweave fate"] = {
-    name: "Reweave Fate",
+    name: "Reweave Fate \u25C9",
     classes: ["bard", "cleric", "warlock", "wizard"],
     source: [["AU", 42]],
-    reqLoS: true,
+    
     level: 7,
     school: "Div",
     time: "React",
@@ -2665,10 +2665,10 @@ SpellsList["reweave fate"] = {
     descriptionFull: "You untangle a single thread of fate to encourage a different result. The creature that failed the D20 Test can reroll it with Advantage, and the creature must use the new roll. If the D20 Test is successful, the creature gains 6d10 Temporary Hit Points from its strengthened fate."
 };
 SpellsList["transfix"] = {
-    name: "Transfix",
+    name: "Transfix \u25C9",
     classes: ["bard", "warlock", "wizard"],
     source: [["AU", 44]],
-    reqLoS: true,
+    
     level: 7,
     school: "Ench",
     time: "Act",
@@ -2687,10 +2687,10 @@ SpellsList["transfix"] = {
 };	
 	//8th-level
 SpellsList["entrancing mirrors"] = {
-    name: "Entrancing Mirrors",
+    name: "Entrancing Mirrors \u25C9",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 39]],
-    reqLoS: true,
+    
     level: 8,
     school: "Illus",
     time: "Act",
@@ -2707,10 +2707,10 @@ SpellsList["entrancing mirrors"] = {
     ].join("\n   ")
 };
 SpellsList["illusory dragon"] = {
-    name: "Illusory Dragon",
+    name: "Illusory Dragon \u25C9",
     classes: ["wizard"],
     source: [["AU", 40]],
-    reqLoS: true,
+    
     level: 8,
     school: "Illus",
     time: "Act",
@@ -2773,10 +2773,10 @@ SpellsList["moment of prescience"] = {
 };	
 	//9th-level
 SpellsList["detonate"] = {
-    name: "Detonate",
+    name: "Detonate \u25C9",
     classes: ["sorcerer", "warlock", "wizard"],
     source: [["AU", 38]],
-    reqLoS: true,
+    
     level: 9,
     school: "Evoc",
     time: "Act",
@@ -2821,10 +2821,10 @@ SpellsList["invulnerability"] = {
     descriptionFull: "You have Immunity to all damage until the spell ends."
 };
 SpellsList["vision of elapsing eons"] = {
-    name: "Vision of Elapsing Eons",
+    name: "Vision of Elapsing Eons \u25C9",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 45]],
-    reqLoS: true,
+    
     level: 9,
     school: "Illus",
     time: "Act",
