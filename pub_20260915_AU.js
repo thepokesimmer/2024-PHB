@@ -2276,12 +2276,12 @@ SpellsList["battle familiar"] = {
     source: [["AU", 35]],
     level: 2,
     school: "Conj",
-    time: "Act",
+    time: "1 a",
     range: "10 ft",
     components: "V,S,M\u0192",
     compMaterial: "A diamond worth 25+ GP",
     duration: "1 h",
-    description: "Summon/empower familiar (Celestial/Fey/Fiend); Brute/Flyer/Stalker form; acts on its turn (25+ GP)",
+    description: "Summon/empower familiar (Celestial/Fey/Fiend); Brute/Flyer/Stalker form; acts on own turn (25+ gp)",
     descriptionFull: [
         "You conjure a familiar imbued with magical might. The familiar appears in an unoccupied space within range; resembles an animal of your choice but is a Celestial, Fey, or Fiend (your choice); and uses the Battle Familiar stat block. When you cast this spell, choose the Brute, Flyer, or Stalker form. The choice determines certain details in the stat block.",
         "Combat. The familiar is an ally to you and your allies. It rolls its own Initiative and acts on its own turn.",
@@ -2297,12 +2297,12 @@ SpellsList["disruptive tune"] = {
     source: [["AU", 38]],
     level: 2,
     school: "Abjur",
-    time: "Act",
+    time: "1 a",
     range: "120 ft",
     components: "V,S",
     duration: "Conc, 1 min",
     save: "Con",
-    description: "20-ft rad all save or lose Conc and have Disadv. on Conc saves for duration",
+    description: "20-ft rad all save or lose Concentration and have Disadvantage on Concentration saves for duration",
     descriptionFull: "A distracting melody momentarily fills a 20-foot-radius Sphere centered on a point you choose within range. Each creature in the Sphere makes a Constitution saving throw. On a failed save, a target loses Concentration, and it has Disadvantage on Constitution saving throws to maintain Concentration for the spell's duration."
 };
 SpellsList["dueling ground"] = {
@@ -2317,7 +2317,7 @@ SpellsList["dueling ground"] = {
     components: "V,S,M\u0192",
     compMaterial: "A silk flag worth 100+ GP",
     duration: "1 h",
-    description: "15-ft rad bounds 2 willing crea (1+/SL); 0 HP stabilized & teleports out; ends if outsider enters",
+    description: "15-ft rad binds 2 willing crea (1+/SL); at 0 HP stabilize & teleport out; ends if another enters (100+ gp)",
     descriptionFull: [
         "You create a magical dueling ground bounded by a glowing, rune-scribed circle in a 15-foot-radius Sphere centered on a point on the ground you touch.",
         "As part of creating the dueling ground, you designate two willing creatures within the Sphere as the targets. The spell ends early if a creature other than one of the targets enters the Sphere.",
@@ -2328,18 +2328,18 @@ SpellsList["dueling ground"] = {
 };
 SpellsList["uncertain footing"] = {
     name: "Uncertain Footing",
+	  nameShort: "Uncertain Footing \u25C9 ",
     classes: ["artificer", "bard", "warlock", "wizard"],
     source: [["AU", 44]],
-    
     level: 2,
     school: "Illus",
-    time: "Act",
+    time: "1 a",
     range: "120 ft",
     components: "V,S,M",
     compMaterial: "A distorted lens",
     duration: "Conc, 1 min",
     save: "Int",
-    description: "Up to 3 crea save or Speed halved & can't Dash; repeat save at end of its turns",
+    description: "Up to 3 creatures save or Speed halved and can't Dash; affected targets repeat save at end of turn",
     descriptionFull: "You create illusory obstacles such as rocks or spikes in an attempt to confuse up to three creatures you can see within range, affecting their ability to move. Each target makes an Intelligence saving throw. On a failed save, a target's Speed is halved, and it can't take the Dash action. A hampered target repeats the save at the end of each of its turns, ending the spell on itself on a success."
 };
 SpellsList["wither and bloom"] = {
@@ -2348,13 +2348,13 @@ SpellsList["wither and bloom"] = {
     source: [["AU", 45]],
     level: 2,
     school: "Necro",
-    time: "Act",
+    time: "1 a",
     range: "60 ft",
     components: "V,S,M",
     compMaterial: "A withered vine twisted into a loop",
     duration: "Instantaneous",
     save: "Con",
-    description: "10-ft rad 3d6+1d6/SL Necro dmg, save half; 1 ally spends 1+1/SL HD to heal roll + spell mod",
+    description: "10-ft rad any 3d6+1d6/SL Necrotic; save halves; 1 crea can spend 1+1/SL HD to heal roll + spell mod",
     descriptionFull: [
         "You invoke both death and life in a 10-foot-radius Sphere centered on a point within range. Each creature of your choice in that area makes a Constitution saving throw, taking 3d6 Necrotic damage on a failed save or half as much damage on a successful one. Nonmagical plants in that area that aren't creatures, such as trees and shrubs, wither.",
         "In addition, one creature of your choice in that area can roll one of its unexpended Hit Point Dice and regain a number of Hit Points equal to the roll plus your spellcasting ability modifier. That die is then expended.",
@@ -2364,49 +2364,51 @@ SpellsList["wither and bloom"] = {
 	//3rd-level
 SpellsList["catnap"] = {
     name: "Catnap",
+	nameShort: "Catnap \u25C9 ",
     classes: ["artificer", "bard", "sorcerer", "wizard"],
     source: [["AU", 37]],
     level: 3,
     school: "Ench",
-    time: "Act",
+    time: "1 a",
     range: "30 ft",
     components: "S,M",
     compMaterial: "A pinch of sand",
     duration: "10 min",
-    description: "3+1/SL willing crea Unconscious; if lasts 10 min gain Short Rest, can't benefit again till Long Rest",
+    description: "Up to 3+1/SL willing crea Unconscious; end on dmg/Action; if full 10 min gain SR, can't redo till LR",
     descriptionFull: [
         "You make a calming gesture, and up to three willing creatures of your choice that you can see within range have the Unconscious condition for the spell's duration. The spell ends on a target if it takes damage or another creature takes an action to shake it awake. If a target has the Unconscious condition from this spell for the full duration, that target gains the benefits of finishing a Short Rest, and it can't be affected by this spell again until it finishes a Long Rest.",
         UsingHigherLvl + "You can target one additional willing creature for each spell slot level above 3."
     ].join("\n   ")
 };
 SpellsList["inflict doubt"] = {
-    name: "Inflict Doubt \u25C9",
+    name: "Inflict Doubt",
+	  nameShort: "Inflict Doubt \u25C9 ",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 40]],
-    
     level: 3,
     school: "Ench",
-    time: "Act",
+    time: "1 a",
     range: "120 ft",
     components: "V,S",
     duration: "Conc, 1 min",
     save: "Wis",
-    description: "1 crea save or Disadv. on D20 Tests for duration; repeat save at end of its turns",
+    description: "1 crea save or Disadvantage on D20 Tests for duration; repeat save at end of each turn",
     descriptionFull: "You inflict self-doubt on a creature you can see within range. The target must succeed on a Wisdom saving throw or have Disadvantage on D20 Tests for the duration. At the end of each of its turns, the target repeats the save, ending the spell on itself on a success."
 };
 	//4th-level
 SpellsList["distorted distance"] = {
     name: "Distorted Distance",
+	nameShort: "Distorted Distance \u25C9 ",
     classes: ["artificer", "bard", "warlock", "wizard"],
     source: [["AU", 38]],
     level: 4,
     school: "Illus",
-    time: "Act",
+    time: "1 a",
     range: "120 ft",
     components: "V,S",
     duration: "Conc, 10 min",
     save: "Int",
-    description: "60-ft rad apply effect 1/turn to seen crea (enter/end): Int save or 2d10 Psychic \x26 Dif.Ter; OR +20ft Spd",
+    description: "60-ft rad; all cast/enter/end: save or 2d10 Psychic \x26 area Dif. Ter., or +20ft Spd (1 effect/turn/crea)",
     descriptionFull: [
         "You create an illusory spatial dilation that fills a 60-foot-radius Sphere centered on a point within range. For each creature you can see in the Sphere, you can choose one of the following effects for it:",
         "\u2022 Dizzying Elongation: The creature makes an Intelligence saving throw. On a failed save, the creature takes 2d10 Psychic damage, and the Sphere is Difficult Terrain for it until the end of its turn.",
@@ -2420,12 +2422,12 @@ SpellsList["festering blast"] = {
     source: [["AU", 39]],
     level: 4,
     school: "Necro",
-    time: "Act",
+    time: "1 a",
     range: "S:60-ft line",
     components: "V,S",
     duration: "1 min",
     save: "Con",
-    description: "60\xD710 ft line save or 4d10+1d10/SL Necro dmg \x26 Poisoned; Poisoned takes 2d10 Poison at SoT \x26 save EoT",
+    description: "60\xD710 ft line save or Poisoned \x26 4d10+1d10/SL Necro; if Poisoned, 2d10 Poison at SoT \x26 resave EoT",
     descriptionFull: [
         "A 60-foot-long, 10-foot-wide Line of miasma blasts from you in a direction you choose. Each creature in the Line must make a Constitution saving throw. On a failed save, a target takes 4d10 Necrotic damage and has the Poisoned condition for the duration.",
         "A creature Poisoned by this spell takes 2d10 Poison damage at the start of each of its turns. At the end of each of its turns, a Poisoned target repeats the save, ending the spell on itself on a success.",
@@ -2438,27 +2440,27 @@ SpellsList["zone of amicability"] = {
     source: [["AU", 45]],
     level: 4,
     school: "Ench",
-    time: "Act",
+    time: "1 a",
     range: "S:60-ft rad",
     components: "V,S",
     duration: "10 min",
-    description: "60-ft Emanation; treat \u22649 on d20 as 10 for ability checks to influence creatures in area",
+    description: "I can treat \u22649 on my d20 as a 10 for ability checks to influence creatures in area",
     descriptionFull: "A magical zone of amicability radiates from you in a 60-foot Emanation for the duration. When you make an ability check to influence a creature in that area, you can treat a d20 roll of 9 or lower as a 10."
 };
 	//5th-level
 SpellsList["enervation"] = {
-    name: "Enervation \u25C9",
+    name: "Enervation",
+	  nameShort: "Enervation \u25C9 ",
     classes: ["sorcerer", "warlock", "wizard"],
     source: [["AU", 38]],
-    
     level: 5,
     school: "Necro",
-    time: "Act",
+    time: "1 a",
     range: "60 ft",
     components: "V,S",
     duration: "Conc, 1 min",
     save: "Dex",
-    description: "1 crea 6d8+1d8/SL Necrotic \x26 I can use Bns each turn for 2d8 dmg; heal \xBD dmg dealt; save \xBD \x26 ends",
+    description: "1 crea 6d8+1d8/SL Necro; Bns later turns deal 2d8 Necro; heal \xBD all dmg dealt; save \xBD 1st dmg only",
     descriptionFull: [
         "A tendril of inky darkness reaches out from you to drain life from a creature you can see within range.",
         "The target makes a Dexterity saving throw. On a failed save, the target takes 6d8 Necrotic damage. On each of your subsequent turns, you can take a Bonus Action to deal 2d8 Necrotic damage to the target automatically. The spell ends if the target is ever outside the spell's range or it has Total Cover from you.",
@@ -2473,13 +2475,13 @@ SpellsList["grave ground"] = {
     source: [["AU", 40]],
     level: 5,
     school: "Necro",
-    time: "Act",
+    time: "1 a",
     range: "120 ft",
     components: "V,S,M",
     compMaterial: "A handful of grave dirt",
     duration: "Conc, 1 min",
     save: "Str",
-    description: "Four 10-ft squares dif. ter.; enemy cast/enter/end turn save or 6d6+1d6/SL Necro \x26 -1d6 dmg rolls",
+    description: "4 10-ft sqs. enemies Dif. Ter. \x26 cast/enter/end save or 6d6+1d6/SL Necro \x26 -1d6 on dmg rolls (1/t/c)",
     descriptionFull: [
         "Skeletal hands burst from an area on the ground within range. The area consists of up to four 10-foot squares, which you arrange as you like. Each square must be contiguous with at least one other square. That area is Difficult Terrain for your enemies.",
         "Any enemy in that area when the skeletal hands appear makes a Strength saving throw. On a failed save, a creature takes 6d6 Necrotic damage, and until the end of its next turn, the creature subtracts 1d6 from all its damage rolls. An enemy also makes this save if it enters the area or ends its turn there. A creature makes this save only once per turn.",
@@ -2488,34 +2490,35 @@ SpellsList["grave ground"] = {
 };
 SpellsList["mordenkainen's lucubration"] = {
     name: "Mordenkainen's Lucubration",
+	nameShort: "M's Lucubration",
     classes: ["wizard"],
     source: [["AU", 42]],
     level: 5,
     school: "Div",
-    time: "Act",
+    time: "1 a",
     range: "Self",
     components: "V,S",
     duration: "Instantaneous",
-    description: "Recover up to 2 expended spell slots of level 2 or lower; increases if upcast",
+    description: "Recover up to 2 expended spell slots of level 2 or lower; SL 6/7: lvl 3 or lower; SL8+: lvl 4 or lower",
     descriptionFull: [
         "You recover up to two expended spell slots of level 2 or lower.",
         UsingHigherLvl + "The maximum level of spell slots you can recover increases to level 3 (if cast with a level 6-7 spell slot) or level 4 (if cast with a level 8+ spell slot)."
     ].join("\n   ")
 };	
 SpellsList["negative energy flood"] = {
-    name: "Negative Energy Flood \u25C9",
+    name: "Negative Energy Flood",
+	  nameShort: "Negative Energy Flood \u25C9 ",
     classes: ["warlock", "wizard"],
     source: [["AU", 42]],
-    
     level: 5,
     school: "Necro",
-    time: "Act",
+    time: "1 a",
     range: "60 ft",
     components: "V,M",
     compMaterial: "A broken bone and a square of black silk",
     duration: "Instantaneous",
     save: "Con",
-    description: "1 crea save or 3d10+25+1d10/SL Necro (save \xBD); killed Humanoid rises as Zombie; Undead gain THP",
+    description: "1 crea 3d10+25+1d10/SL Necro (save \xBD); Undead 3d10 THP instead; killed Humanoid into Zombie ally",
     descriptionFull: [
         "You send ribbons of negative energy at one creature you can see within range. If the target isn't Undead, it makes a Constitution saving throw, taking 3d10 + 25 Necrotic damage on a failed save or half as much damage on a successful one. A Humanoid killed by this spell rises at the start of your next turn as a Zombie that follows your verbal orders for 24 hours, after which it acts according to its nature.",
         "If the target is Undead, it gains 3d10 Temporary Hit Points.",
@@ -2528,12 +2531,12 @@ SpellsList["spirit lantern"] = {
     source: [["AU", 43]],
     level: 5,
     school: "Necro",
-    time: "Act",
+    time: "1 a",
     range: "Self",
     components: "V,S,M",
     compMaterial: "A black lantern",
     duration: "10 min",
-    description: "Lantern emits 60-ft Dim Light; collects souls of dead enemies; Bns spend soul to heal, harm, or ward",
+    description: "Lantern emits 60-ft Dim Light; collects enemy soul if dies (max spell mod); Bns use soul for effect; see B",
     descriptionFull: [
         "You conjure a floating, ghostly black lantern that hovers above you and sheds Dim Light in a 60-foot radius. When an enemy dies within this Dim Light, a fragment of the creature's soul flies into the lantern. The lantern can hold a number of soul fragments equal to your spellcasting ability modifier, and those fragments dissipate when the spell ends.",
         "As a Bonus Action, you can expend a soul fragment to create one of the following effects.",
@@ -2543,18 +2546,18 @@ SpellsList["spirit lantern"] = {
     ].join("\n   ")
 };
 SpellsList["summon plant"] = {
-    name: "Summon Plant \u25C9",
+    name: "Summon Plant",
+	  nameShort: "Summon Plant \u25C9 ",
     classes: ["druid", "ranger"],
     source: [["AU", 44]],
-    
     level: 5,
     school: "Conj",
-    time: "Act",
+    time: "1 a",
     range: "90 ft",
     components: "V,S,M\u0192",
     compMaterial: "Herbs worth 500+ GP",
     duration: "Conc, 1 h",
-    description: "Chosen Plant Spirit; obeys verbal commands; takes turn after mine; vanishes at 0 HP (500gp)",
+    description: "Summon chosen Plant Spirit; obeys verbal commands; takes turn after mine; vanishes at 0 HP (500gp)",
     descriptionFull: [
         "You call forth the spirit of an animated plant. It manifests in an unoccupied space that you can see within range and uses the Plant Spirit stat block. When you cast the spell, choose Fungus, Tree, or Vine. The creature resembles a plant of the chosen type, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.",
         "The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger.",
@@ -2573,7 +2576,7 @@ SpellsList["waves of exhaustion"] = {
     compMaterial: "A piece of dried meat",
     duration: "Conc, 1 min",
     save: "Con",
-    description: "For duration, Magic action to emit 60-ft cone; all in area save or gain 1 Exhaustion level (max 4)",
+    description: "Magic action to emit 60-ft cone; all in area save or gain 1 Exhaustion level (max 4); lasts for duration",
     descriptionFull: [
         "You evoke a nimbus of flickering gray light around your body. For the duration, you can take a Magic action to emit a wave of gray light in a 60-foot Cone. Creatures in that area must succeed on a Constitution saving throw or gain 1 Exhaustion level. This spell can't increase a creature's Exhaustion level above 4.",
         "Exhaustion levels gained from this spell are removed when the spell ends."
@@ -2581,18 +2584,18 @@ SpellsList["waves of exhaustion"] = {
 };
 	//6th-level
 SpellsList["summon dinosaur"] = {
-    name: "Summon Dinosaur \u25C9",
+    name: "Summon Dinosaur",
+	  nameShort: "Summon Dinosaur \u25C9 ",
     classes: ["druid"],
     source: [["AU", 43]],
-    
     level: 6,
     school: "Conj",
-    time: "Act",
+    time: "1 a",
     range: "90 ft",
     components: "V,S,M\u0192",
     compMaterial: "Polished scale worth 600+ GP",
     duration: "Conc, 1 h",
-    description: "Chosen Dinosaur Spirit; obeys verbal commands; takes turn after mine; vanishes at 0 HP (600gp)",
+    description: "Summon Dinosaur Spirit; obeys verbal commands; takes turn after mine; vanishes at 0 HP (600gp)",
     descriptionFull: [
         "You call forth the spirit of a primeval dinosaur. It manifests in an unoccupied space that you can see within range and uses the Dinosaur Spirit stat block. When you cast the spell, choose Ankylosaur, Triceratops, or Tyrannosaur. The creature resembles a dinosaur of the chosen type, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.",
         "The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, the creature takes the Dodge action and uses its movement to avoid danger.",
@@ -2606,44 +2609,44 @@ SpellsList["aura of evasion"] = {
     source: [["AU", 35]],
     level: 7,
     school: "Abjur",
-    time: "Act",
+    time: "1 a",
     range: "S:30-ft rad",
     components: "V,S",
     duration: "Conc, 1 min",
-    description: "30-ft Emanation; me & allies Adv on Dex saves and take 0 dmg on pass, half on fail",
+    description: "Me and allies in area have Advantage on Dex saves and take 0 dmg on a pass, half dmg on a fail",
     descriptionFull: "An aura of alacrity radiates from you in a 30-foot Emanation for the duration. While in the aura, you and your allies have Advantage on Dexterity saving throws. When an affected creature is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it takes no damage if it succeeds on the save and only half damage if it fails. A creature with the Incapacitated condition doesn't gain any benefit from being in the aura."
 };
 SpellsList["fractured awareness"] = {
-    name: "Fractured Awareness \u25C9",
+    name: "Fractured Awareness",
+	  nameShort: "Fractured Awareness \u25C9 ",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 40]],
-    
     level: 7,
     school: "Div",
-    time: "Act",
+    time: "1 a",
     range: "120 ft",
     components: "V,S",
     duration: "Conc, 1 min",
     save: "Int",
-    description: "1 crea save or 12d10 Psychic dmg & Disadv. on D20 Tests; save halves & ends; repeat save EoT",
+    description: "1 crea save or 12d10 Psychic dmg & Disadv. on D20 Tests; save half dmg only; repeat save EoT to end",
     descriptionFull: [
         "You cause a creature to receive conflicting visions of multiple possible futures. Choose a creature you can see within range. The target makes an Intelligence saving throw. On a failed save, the target takes 12d10 Psychic damage and has Disadvantage on D20 Tests for the duration. On a successful save, the target takes half as much damage only, and the spell ends.",
         "At the end of each of its turns, an affected target repeats the save, ending the spell on a success."
     ].join("\n   ")
 };
 SpellsList["power word pain"] = {
-    name: "Power Word Pain \u25C9",
+    name: "Power Word Pain",
+	  nameShort: "Power Word Pain \u25C9 ",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 42]],
-    
     level: 7,
     school: "Ench",
-    time: "Act",
+    time: "1 a",
     range: "60 ft",
     components: "V",
     duration: "1 min",
     save: "Con",
-    description: "1 crea 6d8 Force dmg; if \u2264100 HP, Charmed (Spd \u226410, Dis on D20s, Con save to cast); save EoT",
+    description: "1 crea 6d8 Force; Charmed if \u2264100 HP (Spd \u226410 ft, Dis. non Con save D20s, Con save to cast); save EoT",
     descriptionFull: [
         "You speak a word of power that causes waves of intense pain to assail one creature you can see within range. If the target has 100 Hit Points or fewer, it takes 6d8 Force damage and has the Charmed condition for the duration. Otherwise, it takes 6d8 Force damage only.",
         "While the target is Charmed, its Speed can be no more than 10 feet, and it has Disadvantage on D20 Tests except Constitution saving throws. In addition, when the target tries to cast a spell, it must first succeed on a Constitution saving throw, or the spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn't expended.",
@@ -2651,32 +2654,33 @@ SpellsList["power word pain"] = {
     ].join("\n   ")
 };
 SpellsList["reweave fate"] = {
-    name: "Reweave Fate \u25C9",
+    name: "Reweave Fate",
+	  nameShort: "Reweave Fate \u25C9 ",
     classes: ["bard", "cleric", "warlock", "wizard"],
     source: [["AU", 42]],
-    
     level: 7,
     school: "Div",
-    time: "React",
+    time: "1 rea",
+	  timeFull: "Reaction, which you take when a creature you can see within 60 feet of you fails a D20 Test",
     range: "60 ft",
     components: "S",
     duration: "Instantaneous",
-    description: "When seen crea fails D20 Test, it rerolls with Adv; if success, it gains 6d10 Temp HP",
+    description: "Visible crea that failed D20 Test rerolls with Adv; if reroll is a success, crea gains 6d10 Temp HP",
     descriptionFull: "You untangle a single thread of fate to encourage a different result. The creature that failed the D20 Test can reroll it with Advantage, and the creature must use the new roll. If the D20 Test is successful, the creature gains 6d10 Temporary Hit Points from its strengthened fate."
 };
 SpellsList["transfix"] = {
-    name: "Transfix \u25C9",
+    name: "Transfix",
+	  nameShort: "Transfix \u25C9 ",
     classes: ["bard", "warlock", "wizard"],
     source: [["AU", 44]],
-    
     level: 7,
     school: "Ench",
-    time: "Act",
+    time: "1 a",
     range: "Self",
     components: "V,S",
     duration: "Conc, 1 min",
     save: "Cha",
-    description: "1 crea in 60ft save or Charmed (Incapacitated, moves to \u22645ft of me); ends turn in 5ft: 4d8+1d8/SL Psych. dmg",
+    description: "1 crea in 60ft save or Charmed: Incapac., move to me; if end in 5ft, 4d8+1d8/SL Psychic; 1 a new target",
     descriptionFull: [
         "For the duration, your appearance becomes otherworldly and alluring. One creature of your choice that you can see within 60 feet of you must succeed on a Charisma saving throw or have the Charmed condition for the duration.",
         "While Charmed, the target has the Incapacitated condition, and if the target is more than 5 feet away from you, it moves on its turn toward you by the most direct route, trying to get within 5 feet of you. If the Charmed creature ends its turn within 5 feet of you, it takes 4d8 Psychic damage.",
@@ -2687,19 +2691,19 @@ SpellsList["transfix"] = {
 };	
 	//8th-level
 SpellsList["entrancing mirrors"] = {
-    name: "Entrancing Mirrors \u25C9",
+    name: "Entrancing Mirrors",
+	  nameShort: "Entrancing Mirrors \u25C9 ",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 39]],
-    
     level: 8,
     school: "Illus",
-    time: "Act",
+    time: "1 a",
     range: "90 ft",
     components: "V,S,M",
     compMaterial: "A mirror shard",
     duration: "Conc, 1 min",
     save: "Int",
-    description: "Up to 3 crea save or 7d6 Psychic dmg & Stunned (Spd halved); save halves & no Stun; save EoT",
+    description: "Up to 3 creatures 7d6 Psychic dmg \x26 Stunned (Speed also halved); save half dmg only; resave at EoT",
     descriptionFull: [
         "You create dozens of illusory mirrors to confuse up to three creatures of your choice that you can see within range.",
         "Each target makes an Intelligence saving throw. On a failed save, a target takes 7d6 Psychic damage and has the Stunned condition. While the target is Stunned, its Speed is halved. On a successful save, a target takes half as much damage only.",
@@ -2707,18 +2711,18 @@ SpellsList["entrancing mirrors"] = {
     ].join("\n   ")
 };
 SpellsList["illusory dragon"] = {
-    name: "Illusory Dragon \u25C9",
+    name: "Illusory Dragon",
+	  nameShort: "Illusory Dragon \u25C9 ",
     classes: ["wizard"],
     source: [["AU", 40]],
-    
     level: 8,
     school: "Illus",
-    time: "Act",
+    time: "1 a",
     range: "120 ft",
     components: "S",
     duration: "Conc, 1 min",
     save: "Wis",
-    description: "Huge invulnerable dragon; enemies Wis save or drop items & Frightened; Bns move 60ft/exhale cone",
+    description: "Huge shadow dragon; if see save or drop \x26 Frightened; Bns move/cone 60ft, 7d6 dmg; save \xBD; see B",
     descriptionFull: [
         "By gathering threads of shadow material from the Shadowfell, you create a Huge shadowy dragon in an unoccupied space that you can see within range. The illusion lasts for the spell's duration and occupies its space as if it were a creature. The illusion is tangible because of the shadow material used to create it but has Immunity to all damage and conditions.",
         "When the illusion appears, any enemy that can see it makes a Wisdom saving throw. On a failed save, the creature drops whatever it's holding and has the Frightened condition for the duration. If a creature Frightened in this way ends its turn in a space where it doesn't have line of sight to the illusion, the creature repeats the saving throw, ending the condition on itself on a success.",
@@ -2732,12 +2736,12 @@ SpellsList["iron body"] = {
     source: [["AU", 41]],
     level: 8,
     school: "Trans",
-    time: "Act",
+    time: "1 a",
     range: "Touch",
     components: "V,S,M\u2020",
     compMaterial: "Diamond dust worth 250+ GP, which the spell consumes",
     duration: "Conc, 1 h",
-    description: "1 willing crea Exhaustion won't inc; Resist Bludg/Fire/Pierc/Slash; Immune Pois dmg, Para, Petri, Pois cond",
+    description: "1 willing crea no Exhaust. gain; Resist Bludg, Fire, Pierc, Slash; Immune Pois. dmg \x26 cond, Paralyz., Petri.",
     descriptionFull: "One willing creature you touch transforms into living metal. Until the spell ends, the target's Exhaustion level can't increase; the target has Resistance to Bludgeoning, Fire, Piercing, and Slashing damage; and it has Immunity to Poison damage and the Paralyzed, Petrified, and Poisoned conditions. If the target is Paralyzed, Petrified, or Poisoned when you cast the spell, those conditions immediately end for the target."
 };
 SpellsList["lightning ring"] = {
@@ -2747,12 +2751,12 @@ SpellsList["lightning ring"] = {
     level: 8,
     school: "Evoc",
     time: "Bns",
-    range: "Self",
+    range: "S:10-ft rad",
     components: "V,S,M",
     compMaterial: "A bit of fur and a glass ring",
     duration: "Conc, 10 min",
     save: "Con",
-    description: "10-ft Emanation; enter/end save or 3d6 Lightning+3d6 Thunder dmg & Deaf; Act to shoot 60-ft line",
+    description: "Any cover/enter/end 3d6 Lghtn, 3d6 Thdr, \x26 Deaf; 1 a for 60\xD75ft line, all 6d6 Lghtn; save \xBD dmg both",
     descriptionFull: [
         "A ring of crackling electricity fills a 10-foot Emanation originating from you. Whenever the Emanation enters a creature's space and whenever a creature enters the Emanation or ends its turn there, you can force that creature to make a Constitution saving throw. On a failed save, the creature takes 3d6 Lightning damage plus 3d6 Thunder damage, and it has the Deafened condition for 1 minute. On a successful save, the creature takes half as much damage only.",
         "As a Magic action while the spell is active, you can emit a 60-foot-long, 5-foot-wide Line out from you in a direction you choose. Each creature in the Line makes a Dexterity saving throw, taking 6d6 Lightning damage on a failed save or half as much damage on a successful one."
@@ -2764,28 +2768,29 @@ SpellsList["moment of prescience"] = {
     source: [["AU", 42]],
     level: 8,
     school: "Div",
-    time: "React",
+    time: "1 rea",
+	timeFull : "1 reaction, which you take when you fail a D20 Test or when a creature hits you with an attack roll",
     range: "Self",
     components: "V,S",
     duration: "Instantaneous",
-    description: "Change my failed D20 Test into a 20, or a triggering attack roll against me into a 1",
+    description: "Change my failed D20 Test into a natural 20, or turn a hit against me into a 1",
     descriptionFull: "You have a powerful sixth sense that guides you at just the right time. Turn the roll of your failed D20 Test into a 20, or turn the roll of the triggering attack roll into a 1."
 };	
 	//9th-level
 SpellsList["detonate"] = {
-    name: "Detonate \u25C9",
+    name: "Detonate",
+	  nameShort: "Detonate \u25C9 ",
     classes: ["sorcerer", "warlock", "wizard"],
     source: [["AU", 38]],
-    
     level: 9,
     school: "Evoc",
-    time: "Act",
+    time: "1 a",
     range: "500 ft",
     components: "V,S,M",
     compMaterial: "A piece of tinder",
     duration: "Instantaneous",
     save: "Con",
-    description: "1 crea 10d10 Fire dmg (save \xBD); 60-ft Emanation all save (Disadv. if target died) or 10d10 Fire dmg",
+    description: "1 crea 10d10 Fire (save \xBD); 60-ft Emanation all others 10d10 Fire; save \xBD (Disadv. if 1st target died)",
     descriptionFull: [
         "You create a magical, explosive seed inside a creature you can see within range. The target makes a Constitution saving throw, taking 10d10 Fire damage on a failed save or half as much damage on a successful one.",
         "An explosion then originates from the target. Each creature in a 60-foot Emanation originating from the target (not including the target) makes a Dexterity saving throw, with Disadvantage if this spell reduced the target to 0 Hit Points. A creature takes 10d10 Fire damage on a failed save or half as much damage on a successful one.",
@@ -2803,7 +2808,7 @@ SpellsList["hindsight"] = {
     components: "V,S,M\u2020",
     compMaterial: "A tiny hourglass worth 500+ GP, which the spell consumes",
     duration: "Conc, 1 h",
-    description: "View visions of events in range from the past 10 years (1 day/sec); can pause, rewind, fast-forward",
+    description: "View events in range from past 10 yrs (1 day/sec); can slow, pause, rewind, fast-forward (500gp cons.)",
     descriptionFull: "You peer backward through the fabric of time. You see visions of events that occurred within range throughout the past 10 years, racing by at approximately 1 day per second. Throughout the spell's duration, you can freely slow down, pause, rewind, or fast-forward through these visions."
 };
 SpellsList["invulnerability"] = {
@@ -2812,27 +2817,27 @@ SpellsList["invulnerability"] = {
     source: [["AU", 41]],
     level: 9,
     school: "Abjur",
-    time: "Act",
+    time: "1 a",
     range: "Self",
     components: "V,S,M\u2020",
     compMaterial: "A piece of adamantine worth 500+ GP, which the spell consumes",
     duration: "Conc, 1 min",
-    description: "I have Immunity to all damage until the spell ends",
+    description: "I have Immunity to all damage until the spell ends (500gp cons.)",
     descriptionFull: "You have Immunity to all damage until the spell ends."
 };
 SpellsList["vision of elapsing eons"] = {
-    name: "Vision of Elapsing Eons \u25C9",
+    name: "Vision of Elapsing Eons",
+	  nameShort: "Vision of Elapsing Eons \u25C9 ",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 45]],
-    
     level: 9,
     school: "Illus",
-    time: "Act",
+    time: "1 a",
     range: "120 ft",
     components: "V,S",
     duration: "1 min",
     save: "Int",
-    description: "1 crea save or 10d12 Psychic dmg & Paralyzed; save EoT or 1 Exhaustion (ends on pass)",
+    description: "1 crea save or Paralyzed \x26 10d12 Psychic; if Paraly. save EoT or 1 lvl Exhaust.; pass/other crea 1 a to end",
     descriptionFull: [
         "You trick a creature you can see within range into believing it is watching itself and its surroundings crumble away, as if eons were passing in moments. The target must succeed on an Intelligence saving throw or take 10d12 Psychic damage and have the Paralyzed condition for the duration.",
         "While Paralyzed, the target repeats the save at the end of each of its turns. On a failed save, it gains 1 Exhaustion level. On a successful save, the spell ends. The spell ends early if someone within 5 feet of the target takes an action to shake it free from the illusion."
@@ -2844,12 +2849,12 @@ SpellsList["wail of the banshee"] = {
     source: [["AU", 45]],
     level: 9,
     school: "Necro",
-    time: "Act",
+    time: "1 a",
     range: "60 ft",
     components: "V",
     duration: "Instantaneous",
     save: "Con",
-    description: "Up to 10 crea; if \u226450 HP die; if >50 HP save or 12d10 Psychic dmg & Deafened 1 hr (save \xBD)",
+    description: "Any 10 crea: if \u226450 HP die; if >50 HP save or 12d10 Psychic dmg & Deafened 1 hr (save \xBD dmg only)",
     descriptionFull: "You emit a terrible scream that can kill those who hear it. Choose up to ten creatures within range. Each target with 50 Hit Points or fewer dies. Targets with more than 50 Hit Points make a Constitution saving throw. On a failed save, a target takes 12d10 Psychic damage and has the Deafened condition for 1 hour. On a successful save, a target takes half as much damage only. A target is unaffected by the spell if it can't hear you."
 };	
 // Battle Familiar Creature Stat Block
