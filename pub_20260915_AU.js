@@ -2328,7 +2328,7 @@ SpellsList["dueling ground"] = {
 };
 SpellsList["uncertain footing"] = {
     name: "Uncertain Footing",
-	nameShort: "Uncertain Footing \u25C9 ",
+	  nameShort: "Uncertain Footing \u25C9 ",
     classes: ["artificer", "bard", "warlock", "wizard"],
     source: [["AU", 44]],
     level: 2,
@@ -2382,7 +2382,7 @@ SpellsList["catnap"] = {
 };
 SpellsList["inflict doubt"] = {
     name: "Inflict Doubt",
-	nameShort: "Inflict Doubt \u25C9 ",
+	  nameShort: "Inflict Doubt \u25C9 ",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 40]],
     level: 3,
@@ -2450,7 +2450,7 @@ SpellsList["zone of amicability"] = {
 	//5th-level
 SpellsList["enervation"] = {
     name: "Enervation",
-	nameShort: "Enervation \u25C9 ",
+	  nameShort: "Enervation \u25C9 ",
     classes: ["sorcerer", "warlock", "wizard"],
     source: [["AU", 38]],
     level: 5,
@@ -2507,7 +2507,7 @@ SpellsList["mordenkainen's lucubration"] = {
 };	
 SpellsList["negative energy flood"] = {
     name: "Negative Energy Flood",
-	nameShort: "Negative Energy Flood \u25C9 ",
+	  nameShort: "Negative Energy Flood \u25C9 ",
     classes: ["warlock", "wizard"],
     source: [["AU", 42]],
     level: 5,
@@ -2547,7 +2547,7 @@ SpellsList["spirit lantern"] = {
 };
 SpellsList["summon plant"] = {
     name: "Summon Plant",
-	nameShort: "Summon Plant \u25C9 ",
+	  nameShort: "Summon Plant \u25C9 ",
     classes: ["druid", "ranger"],
     source: [["AU", 44]],
     level: 5,
@@ -2585,7 +2585,7 @@ SpellsList["waves of exhaustion"] = {
 	//6th-level
 SpellsList["summon dinosaur"] = {
     name: "Summon Dinosaur",
-	nameShort: "Summon Dinosaur \u25C9 ",
+	  nameShort: "Summon Dinosaur \u25C9 ",
     classes: ["druid"],
     source: [["AU", 43]],
     level: 6,
@@ -2618,7 +2618,7 @@ SpellsList["aura of evasion"] = {
 };
 SpellsList["fractured awareness"] = {
     name: "Fractured Awareness",
-	nameShort: "Fractured Awareness \u25C9 ",
+	  nameShort: "Fractured Awareness \u25C9 ",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 40]],
     level: 7,
@@ -2636,7 +2636,7 @@ SpellsList["fractured awareness"] = {
 };
 SpellsList["power word pain"] = {
     name: "Power Word Pain",
-	nameShort: "Power Word Pain \u25C9 ",
+	  nameShort: "Power Word Pain \u25C9 ",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 42]],
     level: 7,
@@ -2655,13 +2655,13 @@ SpellsList["power word pain"] = {
 };
 SpellsList["reweave fate"] = {
     name: "Reweave Fate",
-	nameShort: "Reweave Fate \u25C9 ",
+	  nameShort: "Reweave Fate \u25C9 ",
     classes: ["bard", "cleric", "warlock", "wizard"],
     source: [["AU", 42]],
     level: 7,
     school: "Div",
     time: "1 rea",
-	timeFull: "Reaction, which you take when a creature you can see within 60 feet of you fails a D20 Test",
+	  timeFull: "Reaction, which you take when a creature you can see within 60 feet of you fails a D20 Test",
     range: "60 ft",
     components: "S",
     duration: "Instantaneous",
@@ -2670,7 +2670,7 @@ SpellsList["reweave fate"] = {
 };
 SpellsList["transfix"] = {
     name: "Transfix",
-	nameShort: "Transfix \u25C9 ",
+	  nameShort: "Transfix \u25C9 ",
     classes: ["bard", "warlock", "wizard"],
     source: [["AU", 44]],
     level: 7,
@@ -2692,7 +2692,7 @@ SpellsList["transfix"] = {
 	//8th-level
 SpellsList["entrancing mirrors"] = {
     name: "Entrancing Mirrors",
-	nameShort: "Entrancing Mirrors \u25C9 ",
+	  nameShort: "Entrancing Mirrors \u25C9 ",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 39]],
     level: 8,
@@ -2712,7 +2712,7 @@ SpellsList["entrancing mirrors"] = {
 };
 SpellsList["illusory dragon"] = {
     name: "Illusory Dragon",
-	nameShort: "Illusory Dragon \u25C9 ",
+	  nameShort: "Illusory Dragon \u25C9 ",
     classes: ["wizard"],
     source: [["AU", 40]],
     level: 8,
@@ -2779,7 +2779,7 @@ SpellsList["moment of prescience"] = {
 	//9th-level
 SpellsList["detonate"] = {
     name: "Detonate",
-	nameShort: "Detonate \u25C9 ",
+	  nameShort: "Detonate \u25C9 ",
     classes: ["sorcerer", "warlock", "wizard"],
     source: [["AU", 38]],
     level: 9,
@@ -2827,7 +2827,7 @@ SpellsList["invulnerability"] = {
 };
 SpellsList["vision of elapsing eons"] = {
     name: "Vision of Elapsing Eons",
-	nameShort: "Vision of Elapsing Eons \u25C9 ",
+	  nameShort: "Vision of Elapsing Eons \u25C9 ",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 45]],
     level: 9,
