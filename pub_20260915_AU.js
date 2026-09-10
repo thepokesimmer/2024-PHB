@@ -276,31 +276,38 @@ AddSubClass("fighter", "arcane archer", {
         }
     }
 });
+var AU_MysticArts = {
+	cantrips: levels.map(function (n) {
+		return n < 3 ? 0 : n < 10 ? 2 : 3;
+	}),
+	spells: [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13],
+};
 AddSubClass("monk", "warrior of the mystic arts", {
     regExpSearch : /^(?=.*mystic)(?=.*arts).*$/i,
     subname : "Warrior of the Mystic Arts",
     source : [["AU", 0]],
+	abilitySave: 5,
+	spellcastingAbility : 5,
+	spellcastingFactor: 3,
+	spellcastingList: {
+		class: "sorcerer",
+		level: [0, 4],
+	},
+	spellcastingKnown: {
+		cantrips: AU_MysticArts.cantrips,
+		spells: AU_MysticArts.spells,
+	},
     features : {
         "subclassfeature3" : {
             name : "Spellcasting",
             source : [["AU", 0]],
             minlevel : 3,
+			additional: levels.map(function (n, i) {
+				return n < 3 ? "" : AU_MysticArts.cantrips[i] + " cantrips \x26 " + AU_MysticArts.spells[i] + " spells known";
+			}),
             description : desc([
-                "I can cast Sorcerer spells using Wisdom as my spellcasting ability.",
-                "I can use an Arcane Focus as a spellcasting focus for these spells.",
-                "I know a number of cantrips and prepare spells based on my Monk level.",
-                "Whenever I gain a Monk level, I can replace one cantrip or prepared spell."
+                "I can cast Sorcerer cantrips/spells I know, using Wisdom as spellcasting ability. I can use Arcane Focus as Spellcasting Focus for them. I can swap 1 spell when I gain a Monk level."
             ]),
-            spellcastingFactor : 3,
-            spellcastingAbility : 5, // Wisdom
-            spellcastingList : {
-                "class" : "sorcerer",
-                level : [1, 4]
-            },
-            spellcastingKnown : {
-                cantrips : [0, 0, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
-                spells :   [0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13]
-            }
         },
         "subclassfeature6" : {
             name : "Mystic Fighting Style",
@@ -2328,7 +2335,7 @@ SpellsList["dueling ground"] = {
 };
 SpellsList["uncertain footing"] = {
     name: "Uncertain Footing",
-	  nameShort: "Uncertain Footing \u25C9 ",
+	nameShort: "Uncertain Footing \u25C9 ",
     classes: ["artificer", "bard", "warlock", "wizard"],
     source: [["AU", 44]],
     level: 2,
@@ -2382,7 +2389,7 @@ SpellsList["catnap"] = {
 };
 SpellsList["inflict doubt"] = {
     name: "Inflict Doubt",
-	  nameShort: "Inflict Doubt \u25C9 ",
+	nameShort: "Inflict Doubt \u25C9 ",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 40]],
     level: 3,
@@ -2450,7 +2457,7 @@ SpellsList["zone of amicability"] = {
 	//5th-level
 SpellsList["enervation"] = {
     name: "Enervation",
-	  nameShort: "Enervation \u25C9 ",
+	nameShort: "Enervation \u25C9 ",
     classes: ["sorcerer", "warlock", "wizard"],
     source: [["AU", 38]],
     level: 5,
@@ -2507,7 +2514,7 @@ SpellsList["mordenkainen's lucubration"] = {
 };	
 SpellsList["negative energy flood"] = {
     name: "Negative Energy Flood",
-	  nameShort: "Negative Energy Flood \u25C9 ",
+	nameShort: "Negative Energy Flood \u25C9 ",
     classes: ["warlock", "wizard"],
     source: [["AU", 42]],
     level: 5,
@@ -2547,7 +2554,7 @@ SpellsList["spirit lantern"] = {
 };
 SpellsList["summon plant"] = {
     name: "Summon Plant",
-	  nameShort: "Summon Plant \u25C9 ",
+	nameShort: "Summon Plant \u25C9 ",
     classes: ["druid", "ranger"],
     source: [["AU", 44]],
     level: 5,
@@ -2585,7 +2592,7 @@ SpellsList["waves of exhaustion"] = {
 	//6th-level
 SpellsList["summon dinosaur"] = {
     name: "Summon Dinosaur",
-	  nameShort: "Summon Dinosaur \u25C9 ",
+	nameShort: "Summon Dinosaur \u25C9 ",
     classes: ["druid"],
     source: [["AU", 43]],
     level: 6,
@@ -2618,7 +2625,7 @@ SpellsList["aura of evasion"] = {
 };
 SpellsList["fractured awareness"] = {
     name: "Fractured Awareness",
-	  nameShort: "Fractured Awareness \u25C9 ",
+	nameShort: "Fractured Awareness \u25C9 ",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 40]],
     level: 7,
@@ -2636,7 +2643,7 @@ SpellsList["fractured awareness"] = {
 };
 SpellsList["power word pain"] = {
     name: "Power Word Pain",
-	  nameShort: "Power Word Pain \u25C9 ",
+	nameShort: "Power Word Pain \u25C9 ",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 42]],
     level: 7,
@@ -2655,7 +2662,7 @@ SpellsList["power word pain"] = {
 };
 SpellsList["reweave fate"] = {
     name: "Reweave Fate",
-	  nameShort: "Reweave Fate \u25C9 ",
+	nameShort: "Reweave Fate \u25C9 ",
     classes: ["bard", "cleric", "warlock", "wizard"],
     source: [["AU", 42]],
     level: 7,
@@ -2670,7 +2677,7 @@ SpellsList["reweave fate"] = {
 };
 SpellsList["transfix"] = {
     name: "Transfix",
-	  nameShort: "Transfix \u25C9 ",
+	nameShort: "Transfix \u25C9 ",
     classes: ["bard", "warlock", "wizard"],
     source: [["AU", 44]],
     level: 7,
@@ -2692,7 +2699,7 @@ SpellsList["transfix"] = {
 	//8th-level
 SpellsList["entrancing mirrors"] = {
     name: "Entrancing Mirrors",
-	  nameShort: "Entrancing Mirrors \u25C9 ",
+	nameShort: "Entrancing Mirrors \u25C9 ",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 39]],
     level: 8,
@@ -2712,7 +2719,7 @@ SpellsList["entrancing mirrors"] = {
 };
 SpellsList["illusory dragon"] = {
     name: "Illusory Dragon",
-	  nameShort: "Illusory Dragon \u25C9 ",
+	nameShort: "Illusory Dragon \u25C9 ",
     classes: ["wizard"],
     source: [["AU", 40]],
     level: 8,
@@ -2779,7 +2786,7 @@ SpellsList["moment of prescience"] = {
 	//9th-level
 SpellsList["detonate"] = {
     name: "Detonate",
-	  nameShort: "Detonate \u25C9 ",
+	nameShort: "Detonate \u25C9 ",
     classes: ["sorcerer", "warlock", "wizard"],
     source: [["AU", 38]],
     level: 9,
@@ -2827,7 +2834,7 @@ SpellsList["invulnerability"] = {
 };
 SpellsList["vision of elapsing eons"] = {
     name: "Vision of Elapsing Eons",
-	  nameShort: "Vision of Elapsing Eons \u25C9 ",
+	nameShort: "Vision of Elapsing Eons \u25C9 ",
     classes: ["bard", "sorcerer", "warlock", "wizard"],
     source: [["AU", 45]],
     level: 9,
