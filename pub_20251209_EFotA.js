@@ -2069,6 +2069,7 @@ FeatsList["aberrant dragonmark"] = {
     descriptionFull: "You have manifested an Aberrant Dragonmark; determine its appearance. You gain the following benefits:\n \u2022 Aberrant Fortitude. When you fail a Constitution saving throw, you can take a Reaction to roll 1d4 and add the number rolled to the save, potentially turning the failure into a success. Once you’ve used this benefit, you can’t use it again until you finish a Long Rest.\n \u2022 Aberrant Magic. You know one cantrip of your choice from the Sorcerer spell list. Also, choose a level 1 spell from that spell list. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Short or Long Rest. You can also cast this spell using any spell slots you have. Constitution is your spellcasting ability for this spell.\n \u2022 Aberrant Surge. When you cast the level 1 spell from this feat, you can expend one of your Hit Point Dice and roll it. If you roll an even number, you gain a number of Temporary Hit Points equal to the number rolled. If you roll an odd number, one creature within 30 feet of you (not including you) takes Force damage equal to the number rolled. If no other creatures are in range, you take the damage.",
     description: "I can add 1d4 to a failed Constitution saving throw once per Long Rest. I learn a Sorcerer cantrip, and a 1st-level Sorcerer spell that I can cast once per Short Rest. They use Con as spellcasting ability. I can expend and roll a HD when I cast the level 1 spell. If even, I gain it in Temp HP. If odd, a random target in 30 ft takes it in force damage.",
     usages: 1,
+	recovery: "long rest",
     action: [
         ["reaction", "Aberrant Fortitude"]
     ],
@@ -2078,13 +2079,13 @@ FeatsList["aberrant dragonmark"] = {
         'class': 'sorcerer',
         level: [0, 0],
         times: 1,
-        firstCol: 'atwill'
+        firstCol: "atwill"
     }, {
         name: "Sorcerer 1st-level spell",
         'class': 'sorcerer',
         level: [1, 1],
         times: 1,
-        firstCol: 'oncesr'
+        firstCol: "oncesr"
     }]
 };
 FeatsList["mark of detection"] = {
