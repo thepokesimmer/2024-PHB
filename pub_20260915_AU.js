@@ -115,7 +115,6 @@ AddSubClass("fighter", "arcane archer", {
             skillstxt : "Arcana and Nature (or choose another from the Fighter list if already proficient)",
             spellcastingBonus : {
                 name : "Arcane Archer Lore",
-                "class" : "fighter",
                 spells : ["druidcraft", "prestidigitation"],
                 selection : ["druidcraft", "prestidigitation"],
                 times : 1,
