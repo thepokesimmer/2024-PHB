@@ -1,19 +1,19 @@
 var iFileName = "Spell Creatures.js";
 RequiredSheetVersion("13.2.3", 26);
-SourceList.P24 = {
-    name: "2024 Player's Handbook",
-    abbreviation: "P24",
-    abbreviationSpellsheet: "P4",
-    group: "Core Sources",
-    url: "https://marketplace.dndbeyond.com/core-rules/3709000?pid=DB3709000",
-    date: "2024/09/17",
+SourceList["PHB24"] = {
+	name: "2024 Player's Handbook",
+	abbreviation: "PHB'24",
+	abbreviationSpellsheet: "PH",
+	group: "Primary Sources",
+	url: "https://marketplace.dndbeyond.com/core-rules/3709000",
+	date: "2024/09/17",
 };
 CompanionList["spell_creatures"] = {
     name: "Spell Creatures",
     nameMenu: "Spell Creatures (Creatures Created/Summoned by a Spell)",
     nameOrigin: "Spell Creatures Created by spell effects of conjuration or transmutation spells",
     source: [
-        ["P24", 234]
+        ["PHB'24", 234]
     ],
         notes: [{
         name: "Creature Recalculation",
@@ -30,7 +30,7 @@ for (var i = 2; i <= 9; i++) {
     CreatureList["otherworldly steed (lvl " + i + ")"] = {
         name: "Otherworldly Steed (lvl " + i + ")",
         regExpSearch: new RegExp("^(?=.*otherworldly)(?=.*steed)(?=.*" + i + ").*$", "i"),
-        source: [["P24", 273]],
+        source: [["PHB'24", 273]],
         size: 2, // Large
         type: "Celestial, Fey, or Fiend",
         alignment: "Neutral",
@@ -80,7 +80,7 @@ for (var i = 4; i <= 9; i++) {
     CreatureList["giant insect (lvl " + i + ")"] = {
         name: "Giant Insect (lvl " + i + ")",
         regExpSearch: new RegExp("^(?=.*giant)(?=.*insect)(?=.*" + i + ").*$", "i"),
-        source: [["P24", 279]],
+        source: [["PHB'24", 279]],
         size: 2, // Large
         type: "Beast",
         alignment: "Unaligned",
@@ -136,7 +136,7 @@ for (var i = 4; i <= 9; i++) {
     CreatureList["aberrant spirit (lvl " + i + ")"] = {
         name: "Aberrant Spirit (lvl " + i + ")",
         regExpSearch: new RegExp("^(?=.*aberrant)(?=.*spirit)(?=.*" + i + ").*$", "i"),
-        source: [["P24", 322]],
+        source: [["PHB'24", 322]],
         size: 3, // Medium
         type: "Aberration",
         alignment: "Neutral",
@@ -201,7 +201,7 @@ for (var i = 2; i <= 9; i++) {
     CreatureList["bestial spirit (air, lvl " + i + ")"] = {
         name: "Bestial Spirit - Air (lvl " + i + ")",
         regExpSearch: new RegExp("^(?=.*bestial)(?=.*spirit)(?=.*air)(?=.*" + i + ").*$", "i"),
-        source: [["P24", 323]],
+        source: [["PHB'24", 323]],
         size: 4, // Small
         type: "Beast",
         alignment: "Neutral",
@@ -243,7 +243,7 @@ for (var i = 2; i <= 9; i++) {
     CreatureList["bestial spirit (land/water, lvl " + i + ")"] = {
         name: "Bestial Spirit - Land/Water (lvl " + i + ")",
         regExpSearch: new RegExp("^(?=.*bestial)(?=.*spirit)(?=.*(land|water))(?=.*" + i + ").*$", "i"),
-        source: [["P24", 323]],
+        source: [["PHB'24", 323]],
         size: 4, // Small
         type: "Beast",
         alignment: "Neutral",
@@ -292,7 +292,7 @@ for (var i = 5; i <= 9; i++) {
     CreatureList["celestial spirit (avenger, lvl " + i + ")"] = {
         name: "Celestial Spirit - Avenger (lvl " + i + ")",
         regExpSearch: new RegExp("^(?=.*celestial)(?=.*spirit)(?=.*avenger)(?=.*" + i + ").*$", "i"),
-        source: [["P24", 323]],
+        source: [["PHB'24", 323]],
         size: 2, // Large
         type: "Celestial",
         alignment: "Neutral",
@@ -335,7 +335,7 @@ for (var i = 5; i <= 9; i++) {
     CreatureList["celestial spirit (defender, lvl " + i + ")"] = {
         name: "Celestial Spirit - Defender (lvl " + i + ")",
         regExpSearch: new RegExp("^(?=.*celestial)(?=.*spirit)(?=.*defender)(?=.*" + i + ").*$", "i"),
-        source: [["P24", 323]],
+        source: [["PHB'24", 323]],
         size: 2, // Large
         type: "Celestial",
         alignment: "Neutral",
@@ -381,7 +381,7 @@ for (var i = 4; i <= 9; i++) {
     CreatureList["construct spirit (lvl " + i + ")"] = {
         name: "Construct Spirit (lvl " + i + ")",
         regExpSearch: new RegExp("^(?=.*construct)(?=.*spirit)(?=.*" + i + ").*$", "i"),
-        source: [["P24", 324]],
+        source: [["PHB'24", 324]],
         size: 3, // Medium
         type: "Construct",
         alignment: "Neutral",
@@ -434,7 +434,7 @@ for (var i = 5; i <= 9; i++) {
     CreatureList["draconic spirit (lvl " + i + ")"] = {
         name: "Draconic Spirit (lvl " + i + ")",
         regExpSearch: new RegExp("^(?=.*draconic)(?=.*spirit)(?=.*" + i + ").*$", "i"),
-        source: [["P24", 325]],
+        source: [["PHB'24", 325]],
         size: 2, // Large
         type: "Dragon",
         alignment: "Neutral",
@@ -490,7 +490,7 @@ for (var i = 4; i <= 9; i++) {
     CreatureList["elemental spirit (lvl " + i + ")"] = {
         name: "Elemental Spirit (lvl " + i + ")",
         regExpSearch: new RegExp("^(?=.*elemental)(?=.*spirit)(?=.*" + i + ").*$", "i"),
-        source: [["P24", 325]],
+        source: [["PHB'24", 325]],
         size: 3, // Medium
         type: "Elemental",
         alignment: "Neutral",
@@ -538,7 +538,7 @@ for (var i = 3; i <= 9; i++) {
     CreatureList["fey spirit (lvl " + i + ")"] = {
         name: "Fey Spirit (lvl " + i + ")",
         regExpSearch: new RegExp("^(?=.*fey)(?=.*spirit)(?=.*" + i + ").*$", "i"),
-        source: [["P24", 326]],
+        source: [["PHB'24", 326]],
         size: 4, // Small
         type: "Fey",
         alignment: "Neutral",
@@ -583,7 +583,7 @@ for (var i = 6; i <= 9; i++) {
     CreatureList["fiendish spirit (demon, lvl " + i + ")"] = {
         name: "Fiendish Spirit - Demon (lvl " + i + ")",
         regExpSearch: new RegExp("^(?=.*fiendish)(?=.*spirit)(?=.*demon)(?=.*" + i + ").*$", "i"),
-        source: [["P24", 327]],
+        source: [["PHB'24", 327]],
         size: 2, // Large
         type: "Fiend",
         alignment: "Neutral",
@@ -631,7 +631,7 @@ for (var i = 6; i <= 9; i++) {
     CreatureList["fiendish spirit (devil, lvl " + i + ")"] = {
         name: "Fiendish Spirit - Devil (lvl " + i + ")",
         regExpSearch: new RegExp("^(?=.*fiendish)(?=.*spirit)(?=.*devil)(?=.*" + i + ").*$", "i"),
-        source: [["P24", 327]],
+        source: [["PHB'24", 327]],
         size: 2, 
         type: "Fiend",
         alignment: "Neutral",
@@ -679,7 +679,7 @@ for (var i = 6; i <= 9; i++) {
     CreatureList["fiendish spirit (yugoloth, lvl " + i + ")"] = {
         name: "Fiendish Spirit - Yugoloth (lvl " + i + ")",
         regExpSearch: new RegExp("^(?=.*fiendish)(?=.*spirit)(?=.*yugoloth)(?=.*" + i + ").*$", "i"),
-        source: [["P24", 327]],
+        source: [["PHB'24", 327]],
         size: 2, 
         type: "Fiend",
         alignment: "Neutral",
@@ -727,7 +727,7 @@ for (var i = 3; i <= 9; i++) {
     CreatureList["undead spirit (ghostly/putrid, lvl " + i + ")"] = {
         name: "Undead Spirit - Ghostly/Putrid (lvl " + i + ")",
         regExpSearch: new RegExp("^(?=.*undead)(?=.*spirit)(?=.*(ghostly|putrid))(?=.*" + i + ").*$", "i"),
-        source: [["P24", 328]],
+        source: [["PHB'24", 328]],
         size: 3, // Medium
         type: "Undead",
         alignment: "Neutral",
@@ -782,7 +782,7 @@ for (var i = 3; i <= 9; i++) {
     CreatureList["undead spirit (skeletal, lvl " + i + ")"] = {
         name: "Undead Spirit - Skeletal (lvl " + i + ")",
         regExpSearch: new RegExp("^(?=.*undead)(?=.*spirit)(?=.*skeletal)(?=.*" + i + ").*$", "i"),
-        source: [["P24", 328]],
+        source: [["PHB'24", 328]],
         size: 3, 
         type: "Undead",
         alignment: "Neutral",
@@ -813,6 +813,72 @@ for (var i = 3; i <= 9; i++) {
             damage: [2, 4, "necrotic"],
             range: "150 ft",
             modifiers: ["max(oInt|oWis|oCha)-Dex", i], 
+            abilitytodamage: true,
+            description: ""
+        }]
+    };
+}
+SourceList.T = {
+	name: "Tasha's Cauldron of Everything (incomplete)",
+	abbreviation: "TCoE",
+	abbreviationSpellsheet: "T",
+	group: "Legacy Sources",
+	url: "https://dnd.wizards.com/products/tashas-cauldron-everything",
+	date: "2020/11/17",
+	defaultExcluded: true,
+};
+// TCoE Spell Creatures (Shadow Spirit)
+for (var i = 3; i <= 9; i++) {
+    var multiAtks = Math.floor(i / 2);
+    var shadowHP = 35 + ((i - 3) * 15);
+    
+    CreatureList["shadow spirit (lvl " + i + ")"] = {
+        name: "Shadow Spirit (lvl " + i + ")",
+        regExpSearch: new RegExp("^(?=.*shadow)(?=.*spirit)(?=.*" + i + ").*$", "i"),
+        source: [["TCoE", 114]],
+        size: 3, // Medium
+        type: "Monstrosity",
+        alignment: "Unaligned",
+        companion: "spell_creatures",
+        companionApply: "spell_creatures",
+        spell: "summon shadowspawn",
+        ac: 11 + i, // Base 11 + Spell Level
+        hp: shadowHP, // Base 35 + 15 per level above 3
+        hd: [0, 0],
+        speed: "40 ft",
+        scores: [13, 16, 15, 4, 10, 16],
+        resistances: "Necrotic",
+        condition_immunities: "Frightened",
+        senses: "Darkvision 120 ft",
+        passivePerception: 10,
+        languages: "Understands the languages you speak",
+        challengeRating: "0",
+        proficiencyBonus: 0,
+        proficiencyBonusLinked: true,
+        attacksAction: multiAtks,
+        traits: [{
+            name: "Terror Frenzy (Fury Only)",
+            description: "The spirit has advantage on attack rolls against frightened creatures."
+        }, {
+            name: "Weight of Sorrow (Despair Only)",
+            description: "Any creature, other than me, that starts its turn within 5 feet of the spirit has its speed reduced by 20 feet until the start of that creature's next turn."
+        }],
+        actions: [{
+            name: "Multiattack",
+            description: "The spirit makes " + multiAtks + " attack" + (multiAtks > 1 ? "s" : "") + "."
+        }, {
+            name: "Dreadful Scream (1/Day)",
+            description: "The spirit screams. Each creature within 30 ft of it must succeed on a Wisdom save against my spell save DC or be Frightened for 1 minute. The creature can repeat the save at the end of each of its turns, ending the effect on itself on a success."
+        }, {
+            name: "Shadow Stealth (Fear Only, Bonus Action)",
+            description: "While in dim light or darkness, the spirit takes the Hide action."
+        }],
+        attacks: [{
+            name: "Chilling Rend",
+            ability: 2, // Dexterity (+3) is used to perfectly hit the '3 + spell level' damage mod
+            damage: [1, 12, "cold"],
+            range: "Melee (5 ft)",
+            modifiers: ["max(oInt|oWis|oCha)-Dex", i], // Replaces Dex mod with Spellcasting mod for attack, adds spell level to damage
             abilitytodamage: true,
             description: ""
         }]
