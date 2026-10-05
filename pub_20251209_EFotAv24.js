@@ -42,7 +42,7 @@ ClassList.artificer = {
 		equipright: [
 			["Studded leather armor", "", 13],
 			["Dagger", "", 1],
-			["Thieve's tools", "", 1],
+			["Thieves' tools", "", 1],
 			["Tinker's tools", "", 10],
 		],
 		equip1stPage: {
