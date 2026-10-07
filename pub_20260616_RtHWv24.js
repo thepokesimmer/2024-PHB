@@ -251,8 +251,8 @@ AddSubClass("bard", "college of spirits", {
                 "Any saving throw required uses my Bard spell save DC."
             ]),
 			toNotesPage : [{
+				name : "SPIRITS FROM BEYOND",
 				note : [
-					"SPIRITS FROM BEYOND",
 					" 1. Beloved: Target regains HP = 1 roll of BI die + Cha mod.",
 					" 2. Sharpshooter: Target takes Force dmg = 1 roll of BI die + Cha mod.",
 					" 3. Avenger: Until end of your next turn, any creature that hits target with a melee attack takes Force dmg = 1 roll of BI die.",
