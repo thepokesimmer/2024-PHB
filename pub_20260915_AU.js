@@ -15,7 +15,7 @@ if (!tDoc.UsingHigherLvl) {
 //Character Options
 	//Subclasses
 AddSubClass("cleric", "arcana domain", {
-    regExpSearch : /^(?=.*(cleric|priest|clergy|acolyte))(?=.*\barcana\b).*$/i,
+    regExpSearch: /^(?=.*(cleric|priest|clergy|acolyte))(?=.*(arcana|magic|wizardry)).*$/i,
     subname : "Arcana Domain",
     source : [["AU", 0]],
     features : {
