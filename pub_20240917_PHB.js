@@ -19392,7 +19392,7 @@ legacySpellRefactor("flaming sphere", {
         ["P24", 275]
     ],
     level: 2,
-    school: "Conj",
+    school: "Evoc",
     time: "1 a",
     range: "60 ft",
     components: "V,S,M",
@@ -25049,7 +25049,7 @@ CreatureList["pseudodragon"] = {
         damage: [2, 4, "poison"],
         range: "Melee (5 ft)",
         dc: true,
-        description: "Con save, Fail: Dmg + Poisoned 1 hour, Fail by 5+, Dmg + Poisoned + Unconscious(Until shaken awake)",
+        description: "Con save, Fail: Dmg + Poisoned 1 hour + Unconscious(Until shaken awake)",
     }],
 };
 CreatureList["quasit"] = {
