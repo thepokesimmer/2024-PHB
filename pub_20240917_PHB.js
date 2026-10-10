@@ -18066,7 +18066,7 @@ legacySpellRefactor("conjure elemental", {
     range: "60 ft",
     components: "V,S",
     duration: "Conc, 10 min",
-    description: "10ft cu; no R enter/SoT 5ft 8d8+2d8/SL Lightn./Thdr/Fire/Cold + Restrain; S:1/2 only; SoT R save or 4d8",
+    description: "10ft cu; no R enter/SoT 5ft 8d8+1d8/SL Lightn./Thdr/Fire/Cold + Restrain; S:1/2 only; SoT R save or 4d8",
     descriptionFull: "You conjure a Large, intangible spirit from the Elemental Planes that appears in an unoccupied space within range. Choose the spirit's element, which determines its damage type: air (Lightning), earth (Thunder), fire (Fire), or water (Cold), the spirit lasts for the duration." + "\n   " + "Whenever a creature you can see enters the spirit's space or starts its turn within 5 feet of the spirit, you can force that creature to make a Dexterity saving throw if the spirit has no creature Restrained. On failed save, the target takes 8d8 damage of the spirit's type, and the target has the Restrained condition until the spell ends. At the start of each of its turns, the Restrained target repeats the save. On a failed save, the target takes 4d8 damage of the spirit's type. On a successful save, the target isn't Restrained by the spirit." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 5.",
 });
 legacySpellRefactor("conjure fey", {
@@ -18082,7 +18082,7 @@ legacySpellRefactor("conjure fey", {
     range: "60 ft",
     components: "V,S",
     duration: "Conc, 10 min",
-    description: "Med. fey; spell atk any 1 in 5ft; 3d12+2d12/SL+mod Psychic \u0026 Frightened 1 rnd; bns teleport 30ft \u0026 atk",
+    description: "Med. fey; spell atk any 1 in 5ft; 3d12+1d12/SL+mod Psychic \u0026 Frightened 1 rnd; bns teleport 30ft \u0026 atk",
     descriptionFull: "You conjure a Medium spirit from the Feywild in an unoccupied space you can see within range. The spirit lasts for the duration, and it looks like a Fey creature of your choice. When the spirit appears, you can make one melee spell attack against a creature within 5 feet of it. On a hit, the target takes Psychic damage equal to 3d12 plus your spellcasting ability modifier, and the target has the Frightened condition until the start of your next turn, with both you and the spirit as the source of the fear." + "\n   " + "As a Bonus Action on your later turns, you can teleport the spirit to an unoccupied space you can see within 30 feet of the space it left and make the attack against a creature within 5 feet of it." + AtHigherLevels + "The damage increases by 1d12 for each spell slot level above 6."
 });
 legacySpellRefactor("conjure minor elementals", {
@@ -18098,7 +18098,7 @@ legacySpellRefactor("conjure minor elementals", {
     range: "S:15-ft rad",
     components: "V,S",
     duration: "Conc, 10 min",
-    description: "Atks at targets in area deal +2d8+2d8/SL Acid/Cold/Fire/Lightn. (choice); area is dif. ter. for enemies",
+    description: "Atks at targets in area deal +2d8+1d8/SL Acid/Cold/Fire/Lightn. (choice); area is dif. ter. for enemies",
     descriptionFull: "You conjure spirits from the Elemental Plans that flit around you in a 15-foot Emanation for the duration. Until the spell ends, any attack you make deals an extra 2d8 damage when you hit a creature in the Emanation. This damage is Acid, Cold, Fire, or Lightning (your choice when you make the attack)." + "\n   " + "In addition, the ground in the Emanation is Difficult Terrain for your enemies." + AtHigherLevels + "The damage increases by 1d8 for each spell slot level above 4."
 });
 legacySpellRefactor("conjure volley", {
