@@ -1,5 +1,5 @@
 var iFileName = "pub_202512097_EFotA.js";
-RequiredSheetVersion("14.0.0", "24.1.0");
+RequiredSheetVersion("24.1.0");
 
 SourceList["E:FotA"] = {
     name : "Eberron: Forge of the Artificer",
@@ -532,84 +532,133 @@ AddSubClass("artificer", "artillerist", {
             weaponProfs : [false, false, ["blowgun", "hand crossbow", "heavy crossbow", "longbow", "musket", "pistol"]],
             toolProfs : [["Woodcarver's tools"], 1]
         },
-        "subclassfeature3.1" : {
-            name : "Eldritch Cannon",
-            source : ["E:FotA", 16],
-            minlevel : 3,
-            description : desc([
-                "As an Action with Smith's/Woodcarver's tools, I can create an Eldritch Cannon.",
-                "It lasts 1 hr, until destroyed, or dismissed (Action). I can have 1 cannon at a time.",
-                "It is Small/Tiny, has 18 AC, HP equal to 5x my level, and immune to Poison/Psychic.",
-                "Mending restores 2d6 HP to it. I can direct it to move 15 ft as part of activating it.",
-                "As a Bonus Action, if I am within 60 ft, I can activate it:"
+        "subclassfeature3.1": {
+            name: "Eldritch Cannon",
+            source: ["E:FotA", 16],
+            minlevel: 3,
+            description: desc([
+                "As a Magic action, I can use Woodcarver's or Smith's Tools to create an Eldritch Cannon in 5 ft",
+                "I can do this once per Long Rest, or by expending a spell slot (SS 1+) to create one cannon",
+                "I decide its size (Small/Tiny) and appearance",
+                "It disappears after 1 hour, when reduced to 0 HP, or if I dismiss it as a Magic action",
+                "As a Bonus Action when within 60 ft of it, I can activate it to move and do its action",
+                "I can't have multiple cannons; Select \"Eldritch Cannon\" on a companion page for its stats"
             ]),
-            usages : 1,
-            recovery : "long rest",
-            additional : "or expend a spell slot",
-            action : [
-                ["action", "Create Eldritch Cannon (1st is free)"], 
-                ["action", "Dismiss Eldritch Cannon"],
-                ["bonus action", "Activate Eldritch Cannon"]
+            usages: 1,
+            recovery: "long rest",
+            altResource: "SS 1+",
+            additional: levels.map(function(n) {
+                return n < 3 ? "" : n < 15 ? "create 1 cannon" : "create 2 cannons";
+            }),
+            action: [
+                ["action", " (summon/dismiss)"],
+                ["bonus action", " (activate)"]
             ],
-            creaturesAdd : [["Eldritch Cannon", true]],
-            creatureOptions : [{
-                name : "Eldritch Cannon",
-                source : ["E:FotA", 16],
-                size : 4,
-                type : "Object",
-                alignment : "Unaligned",
-                ac : 18,
-                hp : 15,
-                hd : [0, 0],
-                speed : "15 ft",
-                scores : [10, 10, 10, 10, 10, 10],
-                saves : ["", "", "", "", "", ""],
-                condition_immunities : "poisoned",
-                damage_immunities : "poison, psychic",
-                passivePerception : 0,
-                challengeRating : "0",
-                proficiencyBonus : 0,
-                attacksAction : 0,
-                attacks : [],
-                features : [{
-                    name : "Creator",
-                    description : "The cannon is a magical object. It has HP equal to 5 times the Artificer's level. It can be healed for 2d6 HP using the Mending cantrip."
+            creaturesAdd: [
+                ["Eldritch Cannon"]
+            ],
+            creatureOptions: [{
+                name: "Eldritch Cannon",
+                source: ["E:FotA", 10],
+                size: [4, 5],
+                type: "Object",
+                alignment: "",
+                ac: 18,
+                hp: 5,
+                hd: ["", ""],
+                speed: "15 ft, climb 15 ft",
+                scores: [10, 10, 10, 10, 10, 10],
+                damage_immunities: "poison, psychic",
+                passivePerception: 10,
+                senses: "",
+                challengeRating: "1",
+                proficiencyBonus: 2,
+                proficiencyBonusLinked: true,
+                attacksAction: 0,
+                attacks: [{
+                    name: "Flamethrower",
+                    ability: 4,
+                    damage: [2, 8, "fire"],
+                    range: "15-ft cone",
+                    description: "Dex save, success - half damage; Unattended flammable objects ignite",
+                    dc: true,
+                    useSpellMod: "artificer",
+                    abilitytodamage: false,
+                    tooltip: "The cannon exhales fire in an adjacent 15-ft Cone that its creator designates. Each creature in that area must make a Dexterity saving throw against its creator's artificer spell save DC, taking 2d8 Fire damage on a failed save or half as much damage on a successful one. The fire ignites any flammable objects in the area that aren't being worn or carried."
+                }, {
+                    name: "Force Ballista",
+                    ability: 4,
+                    damage: [2, 8, "force"],
+                    range: "120 ft",
+                    description: "Creature hit is pushed 5 ft away",
+                    useSpellMod: "artificer",
+                    abilitytodamage: false,
+                    tooltip: "The cannon's creator makes a ranged spell attack, originating from the cannon, at one creature or object within 120 ft of it. On a hit, the target takes 2d8 Force damage, and if the target is a creature, it is pushed up to 5 ft away from the cannon."
+                }, {
+                    name: "Detonate",
+                    ability: 4,
+                    damage: [3, 10, "force"],
+                    range: "20-ft radius",
+                    description: "Dex save, success - half damage; Destroys cannon",
+                    dc: true,
+                    useSpellMod: "artificer",
+                    abilitytodamage: false,
+                    tooltip: "As an Reaction, its creator can command the cannon to deto­nate if its creator is within 60 ft of it. Doing so destroys the cannon and forces each creature within 20 ft of it to make a Dexterity saving throw against its creator's artificer spell save DC, taking 3d10 Force damage on a failed save or half as much damage on a successful one."
                 }],
-                calcChanges : {
-                    hp : function (totalHD, HDobj, prefix) {
+                features: [{
+                    name: "Healing",
+                    description: "The cannon regains 2d6 HP whenever Mending is cast on it."
+                }, {
+                    name: "Protector",
+                    description: "The cannon emits a burst of positive energy that grants itself and each creature of its creator's choice within 10 ft of it a number of temporary hit points equal to 1d8 + its creator's Intelligence modifier (minimum of +1)."
+                }],
+                traits: [{
+                    name: "Creator",
+                    description: "As an Object, the cannon only acts when activated by its creator, uses its creator's artificer spell attack and save DC, and has five times the artificer level in HP. It disappears after 1 hour, when reduced to 0 HP, or when its creator dismisses it as a Magic action."
+                }, {
+                    name: "Activation",
+                    description: "The creator of the cannon can activate it as a Bonus Action while within 60 ft of it. Once activated, the cannon does as instructed, moves and uses the action associated with the command: flamethrower attack, force ballista attack, or protector feature."
+                }, {
+                    name: "Detonate (Artillerist 9)",
+                    minlevel: 9,
+                    description: "The creator of the cannon, can use an action to detonate the cannon when within 60 ft of it, see the attack section. The cannon's attacks now deal 3d8 damage.",
+                    eval: function(prefix, lvl) {
+                        // add the Detonate attack entry
+                        Value(prefix + "Comp.Use.Attack.3.Weapon Selection", "Detonate");
+                        // Upgrade the damage for the attacks
+                        for (var i = 1; i <= 2; i++) {
+                            Value(prefix + "BlueText.Comp.Use.Attack." + i + ".Damage Die", "3d8");
+                        }
+                    },
+                    removeeval: function(prefix, lvl) {
+                        // remove the Detonate attack entry
+                        Value(prefix + "Comp.Use.Attack.3.Weapon Selection", "");
+                        // Reset the damage for the attacks
+                        for (var i = 1; i <= 2; i++) {
+                            Value(prefix + "BlueText.Comp.Use.Attack." + i + ".Damage Die", "2d8");
+                        }
+                    }
+                }, {
+                    name: "Shimmering Field (Artillerist 15)",
+                    minlevel: 15,
+                    description: "The creator of the cannon and their allies have Half Cover while within 10 ft of the cannon."
+                }],
+                minlevelLinked: ["artificer"],
+                header: "Object",
+                calcChanges: {
+                    hp: function(totalHD, HDobj, prefix) {
                         if (!classes.known.artificer) return;
                         var artLvl = classes.known.artificer.level;
-                        HDobj.alt.push(artLvl * 5);
-                        HDobj.altStr.push("5 \xD7 Artificer level");
-                    }
+                        HDobj.alt.push(5 * artLvl);
+                        HDobj.altStr.push(" = 5 \xD7 " + artLvl + " from five times its creator's artificer level");
+                    },
+                    setAltHp: true
+                },
+                eval: function(prefix, lvl) {
+                    // remove the Detonate attack if adding this creature before artificer level 9
+                    if (lvl[0] < 9) Value(prefix + "Comp.Use.Attack.3.Weapon Selection", "");
                 }
-            }],
-            weaponsAdd : ["Flamethrower", "Force Ballista"],
-            weaponOptions : {
-                baseWeapon : "unarmed strike",
-                regExpSearch : /flamethrower/i,
-                name : "Flamethrower",
-                source : ["E:FotA", 16],
-                ability : 4,
-                type : "Spell",
-                damage : [2, 8, "fire"],
-                range : "15-ft cone",
-                description : "Dex save, half dmg on success; Ignites objects",
-                abilitytodamage : false,
-                dc : true
-            },
-            "force ballista" : {
-                baseWeapon : "unarmed strike",
-                regExpSearch : /force ballista/i,
-                name : "Force Ballista",
-                source : ["E:FotA", 17],
-                ability : 4,
-                type : "Spell",
-                damage : [2, 8, "force"],
-                range : "120 ft",
-                description : "Target pushed 5 ft away from cannon",
-                abilitytodamage : false
-            }
+            }]
         },
         "subclassfeature5" : {
             name : "Arcane Firearm",
