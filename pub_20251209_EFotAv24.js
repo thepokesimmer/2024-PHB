@@ -17,6 +17,7 @@ ClassList.artificer = {
     source : ["E:FotA", 7],
     primaryAbility : "Intelligence",
     prereqs : "Intelligence 13", 
+	abilitySave: 4,
     die : 8,
     improvements : [0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5],
     saves : ["Con", "Int"],
