@@ -1,6 +1,6 @@
 var iFileName = "Spell Creatures.js";
-RequiredSheetVersion("13.2.3", 26);
-SourceList["PHB24"] = {
+RequiredSheetVersion("24.1.0");
+SourceList["PHB'24"] = {
 	name: "2024 Player's Handbook",
 	abbreviation: "PHB'24",
 	abbreviationSpellsheet: "PH",
@@ -23,6 +23,7 @@ CompanionList["spell_creatures"] = {
         joinString: ", "
     }],
 };
+// PHB'24 Spell Creatures (Otherworldly Steed)
 for (var i = 2; i <= 9; i++) {
     // The steed only gains a Fly Speed if cast with a level 4+ spell slot
     var steedSpeed = i >= 4 ? "60 ft, Fly 60 ft" : "60 ft";
@@ -38,8 +39,8 @@ for (var i = 2; i <= 9; i++) {
         companionApply: "spell_creatures",
         spell: "find steed",
         ac: 10 + i, // Base 10 + Spell Level
-        hp: 5 + (10 * i), // Base 5 + 10 per Spell Level
-        hd: [i, 10], // d10s equal to the Spell Level
+        hp: 5 + (10 * i),
+        hd: [i, 10],
         speed: steedSpeed,
         scores: [18, 12, 14, 6, 12, 8],
         passivePerception: 11,
@@ -64,11 +65,11 @@ for (var i = 2; i <= 9; i++) {
         }],
         attacks: [{
             name: "Otherworldly Slam",
-            ability: 1, // Strength
+            ability: 1,
             damage: [1, 8, "Rad/Psy/Nec"],
             range: "Melee (5 ft)",
-            modifiers: ["max(oInt|oWis|oCha)-Str", i], // Replaces Str mod with Spellcasting mod for attack, adds spell level to damage
-            abilitytodamage: true,
+            modifiers: ["max(oInt|oWis|oCha)-Str", i],
+            abilitytodamage: false,
             description: "Radiant (Celestial), Psychic (Fey), or Necrotic (Fiend) dmg"
         }]
     };
@@ -819,13 +820,12 @@ for (var i = 3; i <= 9; i++) {
     };
 }
 SourceList.T = {
-	name: "Tasha's Cauldron of Everything (incomplete)",
-	abbreviation: "TCoE",
-	abbreviationSpellsheet: "T",
-	group: "Legacy Sources",
-	url: "https://dnd.wizards.com/products/tashas-cauldron-everything",
-	date: "2020/11/17",
-	defaultExcluded: true,
+	name : "Tasha's Cauldron of Everything",
+	abbreviation : "TCoE",
+	abbreviationSpellsheet : "T",
+	group : "Primary Sources",
+	url : "https://dnd.wizards.com/products/tashas-cauldron-everything",
+	date : "2020/11/17"
 };
 // TCoE Spell Creatures (Shadow Spirit)
 for (var i = 3; i <= 9; i++) {
