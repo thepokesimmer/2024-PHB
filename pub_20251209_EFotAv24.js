@@ -1729,7 +1729,7 @@ RaceList.warforged = {
     savetxt: {
         adv_vs: ["avoiding or ending the Poisoned condition"]
     },
-    skillstxt: ["Specialized Design: any 1 skill"],
+    skillstxt: "Specialized Design: any 1 skill",
     toolProfs: [["Specialized Design Tool", 1]],
     age: "",
     extraAC: {
