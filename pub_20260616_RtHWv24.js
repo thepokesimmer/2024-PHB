@@ -1,5 +1,5 @@
 var iFileName = "pub_20260616_RtHW.js";
-RequiredSheetVersion("24.0.0", "24.1.0");
+RequiredSheetVersion("24.1.0");
 SourceList["R:tHW"] = {
     name : "Ravenloft: The Horrors Within",
     abbreviation : "R:tHW",
