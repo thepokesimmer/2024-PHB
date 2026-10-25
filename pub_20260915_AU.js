@@ -1,5 +1,5 @@
 var iFileName = "pub_20260915_AU.js";
-RequiredSheetVersion("13.2.3", "24.2.0");
+RequiredSheetVersion("13.2.3", "24.5.0");
 
 SourceList["AU"] = {
     name: "Arcana Unleashed",
