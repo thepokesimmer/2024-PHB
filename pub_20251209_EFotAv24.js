@@ -119,27 +119,29 @@ ClassList.artificer = {
                 ]
             }]
         },
-		"replicate magic item" : {
-            name : "Replicate Magic Item",
-            source : ["E:FotA", 8],
-            minlevel : 2,
-            description : desc([
-                "I can create magic items using plans I know when I finish a long rest",
-                "I must have Tinker's Tools in hand; I can instantly attune to an item created this way",
-                "Items function as normal, but vanish 1d4 days after my death or if I replace their plan",
-                "If I exceed my max active items, the oldest one vanishes",
-                "I can use any wand or weapon created this way as a spellcasting focus"
-            ]),
-            additional : levels.map(function(n) {
-                var items = n < 2 ? 0 : n < 6 ? 2 : n < 10 ? 3 : n < 14 ? 4 : n < 18 ? 5 : 6;
-                return items > 0 ? items + " active item" + (items > 1 ? "s" : "") : "";
-            }),
-            usages : [0, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6],
-            recovery : "long rest",
-            extraTimes : [0, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8],
-            extrachoices : [],
-            extraname : "Magic Item Plan"
-        },
+		"replicate magic item": {
+			name: "Replicate Magic Item",
+			source: [["EFA", 8]],
+			minlevel: 2,
+			description: desc([
+				'Use the "Choose Feature" button above to select the Magic Item Plans I know.',
+				"When I gain an Artificer level, I can replace one plan I know with another I qualify for.",
+				"After a Long Rest with Tinker's Tools in hand, I can create different items from my known plans.",
+				"I can attune to a created item immediately upon creation; if I exceed my max, the oldest vanishes.",
+				"Items vanish 1d4 days after I die or immediately if I replace their plan (container contents spill safely).",
+				"I can use any Wand or Weapon created by this feature as a Spellcasting Focus."
+			]),
+			additional: levels.map(function (n) {
+				var plans = n < 2 ? 0 : n < 6 ? 4 : n < 10 ? 5 : n < 14 ? 6 : n < 18 ? 7 : 8;
+				var items = n < 2 ? 0 : n < 6 ? 2 : n < 10 ? 3 : n < 14 ? 4 : n < 18 ? 5 : 6;
+				return n < 2 ? "" : plans + " plans known; " + items + " active items";
+			}),
+			extraTimes: levels.map(function (n) {
+				return n < 2 ? 0 : n < 6 ? 4 : n < 10 ? 5 : n < 14 ? 6 : n < 18 ? 7 : 8;
+			}),
+			extraname: "Magic Item Plan",
+			extrachoices: [],
+		},
 		"subclassfeature3" : {
             name : "Artificer Subclass",
             source : ["E:FotA", 10],
@@ -284,14 +286,19 @@ AddSubClass("artificer", "alchemist", {
                 "As a bonus action, I can drink one or administer it to a creature within 5 ft.",
                 "As a magic action, I can expend a spell slot to create one elixir with a chosen effect."
             ]),
-            usages : "1 + Int mod per ",
-            usagescalc : "event.value = 1 + Math.max(1, What('Int Mod'));",
-            recovery : "long rest",
-            action : [["bonus action", "Drink/Administer Elixir"], ["action", "Create Extra Elixir"]],
+            usages: levels.map(function (n) {
+				return n < 3 ? 0 : n < 5 ? 2 : n < 9 ? 3 : n < 15 ? 4 : 5;
+			}),
+			recovery: "long rest",
+			altResource: "SS 1+",
+			action: [
+				["action", " (create with spell slot)"],
+				["bonus action", " (drink/administer)"]
+			],
             toNotesPage : [{
                 name : "Experimental Elixir Effects (1d6)",
                 note : [
-                    "   1: Healing (2d8+Int, +1d8 at lv 9/15)",
+                    "1: Healing (2d8+Int, +1d8 at lv 9/15)",
                     "2: Swiftness (+10 ft speed, +5 at lv 9/15)",
                     "3: Resilience (+1 AC, 10 min, 1h at lv 9, 8h at lv 15)",
                     "4: Boldness (+1d4 to atk/saves, 1 min, 10m at lv 9, 1h at lv 15)",
@@ -828,8 +835,8 @@ AddSubClass("artificer", "battle smith", {
                     },
                     setAltHp : true,
                     skills : function (skills, prefix) {
-                        skills["perception"] = Math.max(0, What('Int Mod')) * 2;
-                        skills["athletics"] = Math.max(0, What('Proficiency Bonus')); 
+                        skills.perception = Math.max(0, What('Int Mod')) * 2;
+                        skills.athletics = Math.max(0, What('Proficiency Bonus')); 
                     },
                     atkAdd : [
                         function (fields, v) {
@@ -1729,7 +1736,7 @@ RaceList.warforged = {
     savetxt: {
         adv_vs: ["avoiding or ending the Poisoned condition"]
     },
-    skillstxt: "Specialized Design: any 1 skill",
+    skillstxt: ["Specialized Design: any 1 skill"],
     toolProfs: [["Specialized Design Tool", 1]],
     age: "",
     extraAC: {
@@ -2972,51 +2979,218 @@ MagicItemsList["spell-refueling ring"] = {
     recovery: "dawn"
 };
 //Replicate Magic Item Function
-RunFunctionAtEnd(function() {
-    var rmiFeat = ClassList.artificer.features["replicate magic item"];
-    if (!rmiFeat) return;
+RunFunctionAtEnd(function () {
+	if (!ClassList.artificer || !ClassList.artificer.features || !ClassList.artificer.features["replicate magic item"]) return;
+	var rmiFea = ClassList.artificer.features["replicate magic item"];
+	if (!rmiFea.extrachoices) rmiFea.extrachoices = [];
+	var getValidSource = function () {
+		var candidates = [rmiFea.source, ClassList.artificer.source];
+		for (var s = 0; s < candidates.length; s++) {
+			var src = candidates[s];
+			if (!src || !src.length) continue;
+			var key = Array.isArray(src[0]) ? src[0][0] : src[0];
+			if (typeof SourceList !== "undefined" && SourceList[key]) {
+				return src;
+			}
+		}
+		return [["HB", 0]];
+	};
+	var planSource = getValidSource();
+	var getText = function (val) {
+		if (!val) return "";
+		if (Array.isArray(val)) return val.join(" ");
+		return String(val);
+	};
+	var makePrereq = function (reqLvl) {
+		return function (v) {
+			return classes.known.artificer && classes.known.artificer.level >= reqLvl;
+		};
+	};
+	var isCursed = function (mi, sub) {
+		if ((mi && mi.cursed) || (sub && sub.cursed)) return true;
+		var rxCurse = /\bcursed\b|(^|\n|\r|\s)curse[.:]/i;
+		var combined = getText(mi && mi.description) + " " + getText(mi && mi.descriptionFull) + " " +
+			getText(sub && sub.description) + " " + getText(sub && sub.descriptionFull);
+		return rxCurse.test(combined);
+	};
+	var buildDesc = function (mi, sub, fallbackAttune) {
+		var raw = (sub && (sub.description || sub.descriptionLong)) ||
+			(mi && (mi.description || mi.descriptionLong)) || "";
+		var attune = (sub && typeof sub.attunement !== "undefined") ? sub.attunement :
+			(mi && typeof mi.attunement !== "undefined") ? mi.attunement : fallbackAttune;
+		if (raw) {
+			var suffix = (attune && !/attunement/i.test(raw)) ? " [Requires Attunement]" : "";
+			return desc(raw + suffix);
+		}
+		return desc("Replicate this magic item" + (attune ? " (requires attunement)" : "") + ". See DMG / E:FotA for full rules.");
+	};
+	var addedMIKeys = {};
+	var addPlan = function (displayName, lvl, submenuName, sourceArr, descText) {
+		var key = displayName.toLowerCase();
+		if (rmiFea[key]) return; // Skip duplicates
+		rmiFea.extrachoices.push(displayName);
+		rmiFea[key] = {
+			name: displayName,
+			source: sourceArr || planSource,
+			submenu: submenuName,
+			description: descText,
+			prereqeval: makePrereq(lvl)
+		};
+	};
+	var tablePlans = [
+		// Artificer Level 2+
+		{ name: "Alchemy Jug", lvl: 2, attune: false, keys: ["alchemy jug"] },
+		{ name: "Bag of Holding", lvl: 2, attune: false, keys: ["bag of holding"] },
+		{ name: "Cap of Water Breathing", lvl: 2, attune: false, keys: ["cap of water breathing"] },
+		{ name: "Goggles of Night", lvl: 2, attune: false, keys: ["goggles of night"] },
+		{ name: "Manifold Tool", lvl: 2, attune: true, keys: ["manifold tool"] },
+		{ name: "Repeating Shot", lvl: 2, attune: true, keys: ["repeating shot"] },
+		{ name: "Returning Weapon", lvl: 2, attune: false, keys: ["returning weapon"] },
+		{ name: "Rope of Climbing", lvl: 2, attune: false, keys: ["rope of climbing"] },
+		{ name: "Sending Stones", lvl: 2, attune: false, keys: ["sending stones"] },
+		{ name: "Shield +1", lvl: 2, attune: false, keys: ["shield, +1, +2, or +3", "shield", "shield, +1", "shield +1"], choice: "+1" },
+		{ name: "Wand of Magic Detection", lvl: 2, attune: false, keys: ["wand of magic detection"] },
+		{ name: "Wand of Secrets", lvl: 2, attune: false, keys: ["wand of secrets"] },
+		{ name: "Wand of the War Mage +1", lvl: 2, attune: true, keys: ["wand of the war mage, +1, +2, or +3", "wand of the war mage", "wand of the war mage, +1", "wand of the war mage +1"], choice: "+1" },
+		{ name: "Weapon +1", lvl: 2, attune: false, keys: ["weapon, +1, +2, or +3", "weapon", "weapon, +1", "weapon +1"], choice: "+1" },
+		{ name: "Wraps of Unarmed Power, +1", lvl: 2, attune: false, keys: ["wraps of unarmed power", "wraps of unarmed power, +1, +2, or +3", "wraps of unarmed power, +1", "wraps of unarmed prowess"], choice: "+1" },
 
-    if (!rmiFeat.extrachoices) rmiFeat.extrachoices = [];
+		// Artificer Level 6+
+		{ name: "Armor +1", lvl: 6, attune: false, keys: ["armor, +1, +2, or +3", "armor", "armor, +1", "armor +1"], choice: "+1" },
+		{ name: "Boots of Elvenkind", lvl: 6, attune: false, keys: ["boots of elvenkind"] },
+		{ name: "Boots of the Winding Path", lvl: 6, attune: true, keys: ["boots of the winding path"] },
+		{ name: "Cloak of Elvenkind", lvl: 6, attune: true, keys: ["cloak of elvenkind"] },
+		{ name: "Cloak of the Manta Ray", lvl: 6, attune: true, keys: ["cloak of the manta ray"] },
+		{ name: "Dazzling Weapon", lvl: 6, attune: true, keys: ["dazzling weapon"] },
+		{ name: "Eyes of Charming", lvl: 6, attune: true, keys: ["eyes of charming"] },
+		{ name: "Eyes of Minute Seeing", lvl: 6, attune: false, keys: ["eyes of minute seeing"] },
+		{ name: "Gloves of Thievery", lvl: 6, attune: false, keys: ["gloves of thievery"] },
+		{ name: "Helm of Awareness", lvl: 6, attune: false, keys: ["helm of awareness"] },
+		{ name: "Lantern of Revealing", lvl: 6, attune: false, keys: ["lantern of revealing"] },
+		{ name: "Mind Sharpener", lvl: 6, attune: true, keys: ["mind sharpener"] },
+		{ name: "Necklace of Adaptation", lvl: 6, attune: true, keys: ["necklace of adaptation"] },
+		{ name: "Pipes of Haunting", lvl: 6, attune: false, keys: ["pipes of haunting"] },
+		{ name: "Repulsion Shield", lvl: 6, attune: false, keys: ["repulsion shield"] },
+		{ name: "Ring of Swimming", lvl: 6, attune: false, keys: ["ring of swimming"] },
+		{ name: "Ring of Water Walking", lvl: 6, attune: false, keys: ["ring of water walking"] },
+		{ name: "Sentinel Shield", lvl: 6, attune: false, keys: ["sentinel shield"] },
+		{ name: "Spell-Refueling Ring", lvl: 6, attune: true, keys: ["spell-refueling ring"] },
+		{ name: "Wand of Magic Missiles", lvl: 6, attune: false, keys: ["wand of magic missiles"] },
+		{ name: "Wand of Web", lvl: 6, attune: true, keys: ["wand of web"] },
+		{ name: "Weapon of Warning", lvl: 6, attune: true, keys: ["weapon of warning"] },
 
-    var itemLevels = {
-        "alchemy jug": 2, "armblade": 2, "bag of holding": 2, "cap of water breathing": 2, "goggles of night": 2, "prosthetic limb": 2, "rope of climbing": 2, "sending stones": 2, "wand of magic detection": 2, "wand of secrets": 2, "wand of the war mage (+1)": 2,
-        "boots of elvenkind": 6, "cloak of elvenkind": 6, "cloak of the manta ray": 6, "eyes of charming": 6, "gloves of thievery": 6, "lantern of revealing": 6, "pipes of haunting": 6, "ring of water walking": 6, "wand of the war mage (+2)": 6,
-        "boots of striding and springing": 10, "boots of the winterlands": 10, "bracers of archery": 10, "brooch of shielding": 10, "cloak of protection": 10, "eyes of the eagle": 10, "gauntlets of ogre power": 10, "gloves of missile snaring": 10, "gloves of swimming and climbing": 10, "hat of disguise": 10, "headband of intellect": 10, "helm of telepathy": 10, "medallion of thoughts": 10, "necklace of adaptation": 10, "periapt of wound closure": 10, "pipes of the sewers": 10, "quiver of ehlonna": 10, "ring of jumping": 10, "ring of mind shielding": 10, "slippers of spider climbing": 10, "wand of the war mage (+3)": 10, "winged boots": 10,
-        "amulet of health": 14, "belt of hill giant strength": 14, "boots of levitation": 14, "boots of speed": 14, "bracers of defense": 14, "cloak of the bat": 14, "dimensional shackles": 14, "gem of seeing": 14, "horn of blasting": 14, "ring of free action": 14, "ring of protection": 14, "ring of the ram": 14
-    };
+		// Artificer Level 10+
+		{ name: "Armor of Resistance", lvl: 10, attune: true, keys: ["armor of resistance"] },
+		{ name: "Dagger of Venom", lvl: 10, attune: false, keys: ["dagger of venom"] },
+		{ name: "Elven Chain", lvl: 10, attune: false, keys: ["elven chain"] },
+		{ name: "Ring of Feather Falling", lvl: 10, attune: true, keys: ["ring of feather falling"] },
+		{ name: "Ring of Jumping", lvl: 10, attune: true, keys: ["ring of jumping"] },
+		{ name: "Ring of Mind Shielding", lvl: 10, attune: true, keys: ["ring of mind shielding"] },
+		{ name: "Shield, +2", lvl: 10, attune: false, keys: ["shield, +1, +2, or +3", "shield", "shield, +2", "shield +2"], choice: "+2" },
+		{ name: "Wand of the War Mage, +2", lvl: 10, attune: true, keys: ["wand of the war mage, +1, +2, or +3", "wand of the war mage", "wand of the war mage, +2", "wand of the war mage +2"], choice: "+2" },
+		{ name: "Weapon, +2", lvl: 10, attune: false, keys: ["weapon, +1, +2, or +3", "weapon", "weapon, +2", "weapon +2"], choice: "+2" },
+		{ name: "Wraps of Unarmed Power, +2", lvl: 10, attune: false, keys: ["wraps of unarmed power", "wraps of unarmed power, +1, +2, or +3", "wraps of unarmed power, +2", "wraps of unarmed prowess"], choice: "+2" },
 
-    for (var mi in MagicItemsList) {
-        var item = MagicItemsList[mi];
-        if (!item || !item.name) continue;
-
-        var reqLvl = itemLevels[mi] || 0;
-        
-        if (reqLvl === 0 && item.rarity && item.rarity.toLowerCase() === "common" && !(/potion|scroll|tattoo/i).test(item.type)) {
-            reqLvl = 2;
-        }
-
-        if (reqLvl > 0) {
-            var choiceKey = item.name.toLowerCase();
-            var submenuName = "Level " + reqLvl + " Items";
-            
-            if (rmiFeat.extrachoices.indexOf(item.name) === -1) {
-                rmiFeat.extrachoices.push(item.name);
-            }
-            
-
-            rmiFeat[choiceKey] = {
-                name : item.name,
-                source : item.source || ["E:FotA", 8],
-                submenu : submenuName, 
-                description : "Replicate magic item: " + item.name,
-                prereqeval : function(lvl) {
-                    return function(v) { 
-                        return classes.known.artificer ? classes.known.artificer.level >= lvl : false; 
-                    };
-                }(reqLvl)
-            };
-        }
-    }
-    
-    rmiFeat.extrachoices.sort();
+		// Artificer Level 14+
+		{ name: "Armor, +2", lvl: 14, attune: false, keys: ["armor, +1, +2, or +3", "armor", "armor, +2", "armor +2"], choice: "+2" },
+		{ name: "Arrow-Catching Shield", lvl: 14, attune: true, keys: ["arrow-catching shield"] },
+		{ name: "Flame Tongue", lvl: 14, attune: true, keys: ["flame tongue"] },
+		{ name: "Ring of Free Action", lvl: 14, attune: true, keys: ["ring of free action"] },
+		{ name: "Ring of Protection", lvl: 14, attune: true, keys: ["ring of protection"] },
+		{ name: "Ring of the Ram", lvl: 14, attune: true, keys: ["ring of the ram"] }
+	];
+	var lvlLabels = {
+		2: "[Lvl 2+] Table Plans",
+		6: "[Lvl 6+] Table Plans",
+		10: "[Lvl 10+] Table Plans",
+		14: "[Lvl 14+] Table Plans"
+	};
+	for (var i = 0; i < tablePlans.length; i++) {
+		var plan = tablePlans[i];
+		var matchedMI = null;
+		var matchedSub = null;
+		var matchedKey = "";
+		var matchedChoiceKey = "";
+		for (var k = 0; k < plan.keys.length; k++) {
+			var candidateKey = plan.keys[k];
+			if (MagicItemsList[candidateKey] && typeof MagicItemsList[candidateKey] === "object") {
+				matchedMI = MagicItemsList[candidateKey];
+				matchedKey = candidateKey;
+				if (plan.choice) {
+					var lcChoice = plan.choice.toLowerCase();
+					if (matchedMI[lcChoice]) {
+						matchedSub = matchedMI[lcChoice];
+						matchedChoiceKey = lcChoice;
+					} else if (Array.isArray(matchedMI.choices)) {
+						for (var ch = 0; ch < matchedMI.choices.length; ch++) {
+							var chKey = String(matchedMI.choices[ch]).toLowerCase();
+							if (chKey.indexOf(lcChoice) !== -1 && matchedMI[chKey]) {
+								matchedSub = matchedMI[chKey];
+								matchedChoiceKey = chKey;
+								break;
+							}
+						}
+					}
+				}
+				break;
+			}
+		}
+		if (matchedKey) {
+			addedMIKeys[matchedKey + (matchedChoiceKey ? "|" + matchedChoiceKey : "")] = true;
+		}
+		addedMIKeys[plan.name.toLowerCase()] = true;
+		addPlan(
+			plan.name,
+			plan.lvl,
+			lvlLabels[plan.lvl],
+			planSource,
+			buildDesc(matchedMI, matchedSub, plan.attune)
+		);
+	}
+	var evalWildcard = function (miKey, mi, subKey, sub) {
+		var name = (sub && sub.name) ? sub.name : (mi.name + (subKey ? " (" + subKey + ")" : ""));
+		var rarity = String((sub && sub.rarity) || mi.rarity || "").toLowerCase();
+		var type = String((sub && sub.type) || mi.type || "").toLowerCase();
+		var src = (sub && sub.source) || mi.source || planSource;
+		if (!rarity || !name) return;
+		if (addedMIKeys[miKey] || addedMIKeys[name.toLowerCase()]) return;
+		if (subKey && addedMIKeys[miKey + "|" + subKey.toLowerCase()]) return;
+		if (isCursed(mi, sub)) return;
+		var isPotionOrScroll = /potion|scroll/i.test(type) || /^(potion|spell scroll|scroll) of\b/i.test(name);
+		var isWondrous = /wondrous/i.test(type);
+		if (rarity === "common" && !isPotionOrScroll) {
+			addPlan(name, 2, "[Lvl 2+] Common Magic Items", src, buildDesc(mi, sub, false));
+		} else if (rarity === "uncommon" && isWondrous) {
+			addPlan(name, 10, "[Lvl 10+] Uncommon Wondrous Items", src, buildDesc(mi, sub, false));
+		} else if (rarity === "rare" && isWondrous) {
+			addPlan(name, 14, "[Lvl 14+] Rare Wondrous Items", src, buildDesc(mi, sub, false));
+		}
+	};
+	for (var miKey in MagicItemsList) {
+		if (!MagicItemsList.hasOwnProperty(miKey)) continue;
+		var mi = MagicItemsList[miKey];
+		if (!mi || typeof mi !== "object" || !mi.name) continue;
+		var hasVaryingChoices = false;
+		if (Array.isArray(mi.choices) && mi.choices.length) {
+			for (var c = 0; c < mi.choices.length; c++) {
+				var cObj = mi[String(mi.choices[c]).toLowerCase()];
+				if (cObj && cObj.rarity) {
+					hasVaryingChoices = true;
+					break;
+				}
+			}
+		}
+		if (hasVaryingChoices) {
+			for (var j = 0; j < mi.choices.length; j++) {
+				var choiceName = String(mi.choices[j]);
+				var choiceObj = mi[choiceName.toLowerCase()];
+				if (choiceObj && typeof choiceObj === "object") {
+					evalWildcard(miKey, mi, choiceName, choiceObj);
+				}
+			}
+		} else {
+			evalWildcard(miKey, mi, null, null);
+		}
+	}
+	rmiFea.extrachoices.sort();
 });
