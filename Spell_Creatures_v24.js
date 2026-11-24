@@ -884,3 +884,54 @@ for (var i = 3; i <= 9; i++) {
         }]
     };
 }
+// BMT Spell Creatures (Reaper Spirit)
+for (var i = 4; i <= 9; i++) {
+    var multiAtks = Math.floor(i / 2);
+    var reaperHP = 40 + ((i - 4) * 10);
+
+    CreatureList["reaper spirit (lvl " + i + ")"] = {
+        name: "Reaper Spirit (lvl " + i + ")",
+        regExpSearch: new RegExp("^(?=.*reaper)(?=.*spirit)(?=.*" + i + ").*$", "i"),
+        source: [["BoMT", 50]],
+        size: 3, // Medium
+        type: "Undead",
+        alignment: "Neutral",
+        companion: "spell_creatures",
+        companionApply: "spell_creatures",
+        spell: "spirit of death",
+        ac: 11 + i, // Base 11 + Spell Level
+        hp: reaperHP, // Base 40 + 10 per level above 4
+        hd: [0, 0],
+        speed: "30 ft, Fly 30 ft (hover)",
+        scores: [16, 16, 16, 16, 16, 16],
+        immunities: "Necrotic, Poison",
+        condition_immunities: "Charmed, Exhaustion, Frightened, Paralyzed, Poisoned",
+        senses: "Darkvision 60 ft",
+        passivePerception: 13,
+        languages: "Understands the languages you speak",
+        challengeRating: "0",
+        proficiencyBonus: 0,
+        proficiencyBonusLinked: true,
+        attacksAction: multiAtks,
+        traits: [{
+            name: "Incorporeal Movement",
+            description: "The spirit can move through other creatures and objects as if they were difficult terrain. If it ends its turn inside an object, it is shunted to the nearest unoccupied space and takes 1d10 force damage for every 5 feet shunted."
+        }],
+        actions: [{
+            name: "Multiattack",
+            description: "The spirit makes " + multiAtks + " Reaping Scythe attack" + (multiAtks > 1 ? "s" : "") + "."
+        }, {
+            name: "Haunt Creature (Bonus Action)",
+            description: "The spirit haunts 1 creature it can see within 10 ft. While haunted, we sense the direction and distance to it on the same plane. If it starts its turn within 10 ft of the spirit, it must make a Wisdom save vs my spell save DC or be Frightened until the start of its next turn. Lasts until it dies, the spirit disappears, or this action is used again."
+        }],
+        attacks: [{
+            name: "Reaping Scythe",
+            ability: 1, // Strength (+3) is used to hit the '3 + spell level' damage mod
+            damage: [1, 8, "necrotic"],
+            range: "Melee (5 ft)",
+            modifiers: ["max(oInt|oWis|oCha)-Str", i], // Replaces Str mod with Spellcasting mod for attack, adds spell level to damage
+            abilitytodamage: true,
+            description: "Attack with advantage; targets only the creature haunted by Haunt Creature"
+        }]
+    };
+}
